@@ -1,0 +1,10 @@
+lu_vp_detect/__init__.py,sha256=HfT2AYqBL61nlOEep6ePex8njcmvdxaguhaLANtYiUc,52
+lu_vp_detect/__version__.py,sha256=zmb1wFiE1F7HgoVW-N_kxu-3_y1Xz8CgPUjz-A0M5Z8,63
+lu_vp_detect/run_vp_detect.py,sha256=_Lk4v5lWMsM7OkW819tgyYAQ2WdEE7Y_p-imZIFTQrk,3149
+lu_vp_detect/vp_detection.py,sha256=J6dXVtYyq0PRdjTp7asbYzTwbsIg19nWHNob8aqQyRE,21299
+lu_vp_detect-1.0.3.dist-info/LICENSE,sha256=3LCxuAE1hchrbunzpGYDMzmNF38ERe5PjWWCvFvBkm4,1069
+lu_vp_detect-1.0.3.dist-info/METADATA,sha256=chgp2THpND1DZldPFgw-PCZZlE1kzdXBrXC-Fpn79gA,8643
+lu_vp_detect-1.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+lu_vp_detect-1.0.3.dist-info/entry_points.txt,sha256=AGixTRW3NVJJDwRcv8FDD448FJYB3uUlUrzxSzt3qvE,66
+lu_vp_detect-1.0.3.dist-info/top_level.txt,sha256=x5AXEO4B4TTrKL2LbUbtTya5b7bS3RprevTxX7v6__M,13
+lu_vp_detect-1.0.3.dist-info/RECORD,,
