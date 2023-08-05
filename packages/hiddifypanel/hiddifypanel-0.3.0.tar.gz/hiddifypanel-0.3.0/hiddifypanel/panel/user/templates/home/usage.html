@@ -1,0 +1,50 @@
+<div class="card-deck">
+    
+
+        <div class="card small-box bg-info ">
+            <div class="card-body">
+            <div class="inner">
+                <h3>{{_('user.home.usage.title')}}</h3>
+                <div class="info-box-content">
+                    <span class="info-box-text">{{user.current_usage_GB}}GB <b>{{_('user.home.usage.from')}}</b>
+                            {{user.monthly_usage_limit_GB}}GB  {{_('user.home.usage.monthly')}}</span> 
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-warning"
+                            style="width: {{user.current_usage_GB*10000/user.monthly_usage_limit_GB}}%"></div>
+                    </div>
+                    <span class="progress-description">
+                        <i class="fa-solid fa-calendar-days fa-margin"></i> <b>{{_('user.home.usage.expire')}}</b> {{expire_days}} {{_('days')}}                     </span>
+                </div>
+            </div>
+            <div class="icon">
+                <i class="fas fa-chart-pie"></i>
+            </div>
+        </div>
+            <a href="#" class="card-footer">
+                <i class="fas fa-chart-pie"></i> {{_('user.home.usage.details')}}
+            </a>
+        </div>
+
+
+
+
+
+        <div  class="card small-box bg-warning">
+            <div class="card-body">
+            <div class="inner">
+                <h3>{{_('QR code')}}</h3>
+                <p>{{_('user.home.qr-code.description')}}</p>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-qrcode fa-margin"></i>
+            </div>
+        </div>
+            <a href="https://{{domain}}/{{hconfigs[ConfigEnum.proxy_path]}}/{{user.uuid}}/"
+             class="card-footer share-link">
+                <i class="fas fa-qrcode"></i> {{_('user.home.qr-code.display')}}
+            </a>
+
+        </div>
+    </div>
+
+
