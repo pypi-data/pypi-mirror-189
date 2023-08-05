@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: riccati
+Version: 0.1.0
+Summary: adaptive Riccati defect correction solver
+Home-page: UNKNOWN
+Author: Fruzsina J Agocs and Alex H Barnett
+Author-email: 
+License: Apache 2.0
+Platform: UNKNOWN
+Provides-Extra: all
+Provides-Extra: docs
+Provides-Extra: tests
+Provides-Extra: plots
+License-File: LICENSE
+
+adaptive Riccati defect correction solver
+
