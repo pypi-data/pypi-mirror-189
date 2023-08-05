@@ -1,0 +1,8 @@
+README.md
+setup.py
+tremolo/__init__.py
+tremolo/tremolo.py
+tremolo.egg-info/PKG-INFO
+tremolo.egg-info/SOURCES.txt
+tremolo.egg-info/dependency_links.txt
+tremolo.egg-info/top_level.txt
