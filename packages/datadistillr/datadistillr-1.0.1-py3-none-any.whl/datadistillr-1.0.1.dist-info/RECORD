@@ -1,0 +1,14 @@
+datadistillr/__init__.py,sha256=f9yacgIedfqCGOa5N9cVWb72MjQcxBkEGXU42WHoNJc,187
+datadistillr/auth_exceptions.py,sha256=xQ8hU09UFl2bZEGTWhXnyCOD7Qlhqf13fRKSgQ8YUDY,1162
+datadistillr/datadistillr.py,sha256=5n1bfy38iEeX004Vp5uNojf9MZtBm9fDpz7XEJetCBw,7888
+datadistillr/datadistillr_account.py,sha256=Do6dCigHpcYZHNXKWxBfjVuISm9LtgAUGoUf8T2Cy4M,5745
+datadistillr/project.py,sha256=2XU4i-VOFpNTABpbu-4AeDAe8eEDsPxdmWUWr412cvU,11695
+datadistillr/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datadistillr/tests/test_datadistillr_account.py,sha256=b6-lA04hOr_2NFRQ5D-NYlRx-chWcWTbEXsMsVyL8To,6064
+datadistillr/tests/test_datadistillr_api.py,sha256=KUH8jwRNWQQd2APVeskslnx9mS0vZQpWGBGNu8mDU2Q,1457
+datadistillr/tests/test_project.py,sha256=uD4tLBObQKYrxe5t4Y4SCd_0qphjyYjdSqNmYSzsBTc,11915
+datadistillr-1.0.1.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+datadistillr-1.0.1.dist-info/METADATA,sha256=KidQC_gW1Xw7z0lcFMNuSi75kMunjZXDna6vFieRL0c,4775
+datadistillr-1.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+datadistillr-1.0.1.dist-info/top_level.txt,sha256=j3dGJm_tY8YW4YE-9w_WpwBZ9dVnF3Z_uMoq6MOmCd4,13
+datadistillr-1.0.1.dist-info/RECORD,,
