@@ -1,0 +1,13 @@
+numpy
+matplotlib
+scipy
+scipy
+pandas
+webcolors
+qpsolvers
+seaborn
+colormap
+sklearn
+dill
+mat73
+easydev
