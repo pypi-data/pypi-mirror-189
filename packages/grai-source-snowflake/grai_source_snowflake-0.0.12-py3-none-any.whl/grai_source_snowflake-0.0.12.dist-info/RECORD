@@ -1,0 +1,9 @@
+grai_source_snowflake/__init__.py,sha256=FE0ZAO6xdJH_OkBalG2zcvYEhAA-Zs3lVLBBlJ3v9EI,147
+grai_source_snowflake/adapters.py,sha256=6cuwoWNKPFwVJy4Mr9aPFrIAFFo-_yQcCcZRnnull8o,6081
+grai_source_snowflake/base.py,sha256=99rzoT3038F1dC-_sXoCYwITtx0ToH5T3c22TTkSDMs,1416
+grai_source_snowflake/loader.py,sha256=DuxGB1P8ifAaVNh87HYm05K3USam6PvoTV2er3KT1x4,7492
+grai_source_snowflake/models.py,sha256=KY3BK9X8QLizDnA_xJwnkmNXbzhYUEfdEbI2e53WEug,4720
+grai_source_snowflake/package_definitions.py,sha256=VpHy6ybsfqOrzsjyxECSzylKHsTWCW-bzWSkwYS_3qA,188
+grai_source_snowflake-0.0.12.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+grai_source_snowflake-0.0.12.dist-info/METADATA,sha256=CzWZ5LGMNPuqAVP_2h1GX-tBQ0T0elyG6QJ_5Yqb41M,727
+grai_source_snowflake-0.0.12.dist-info/RECORD,,
