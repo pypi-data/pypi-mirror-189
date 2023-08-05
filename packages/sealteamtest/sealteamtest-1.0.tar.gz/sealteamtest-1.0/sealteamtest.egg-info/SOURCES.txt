@@ -1,0 +1,9 @@
+LICENSE.txt
+pyproject.toml
+setup.cfg
+setup.py
+sealteamtest/__init__.py
+sealteamtest.egg-info/PKG-INFO
+sealteamtest.egg-info/SOURCES.txt
+sealteamtest.egg-info/dependency_links.txt
+sealteamtest.egg-info/top_level.txt
