@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: revsymg
+Version: 0.3.0
+Summary: A python package to efficiently store oriented DNA fragments succession relationships in a directed graph. For example, succession relationships can be overlaps between two reads.
+Home-page: https://gitlab.com/vepain/pyrevsymg
+Author: vepain
+Author-email: victor.epain@laposte.net
+Keywords: Directed graph,Overlaps graph,Assembly graph
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# Reverse Symmetric Graph
+
+[![pipeline status](https://gitlab.com/vepain/pyrevsymg/badges/master/pipeline.svg)](https://gitlab.com/vepain/pyrevsymg/-/commits/master)
+[![coverage report](https://gitlab.com/vepain/pyrevsymg/badges/master/coverage.svg)](https://gitlab.com/vepain/pyrevsymg/-/commits/master)
+[![Latest Release](https://gitlab.com/vepain/pyrevsymg/-/badges/release.svg)](https://gitlab.com/vepain/pyrevsymg/-/releases)
+
+ <img src="docs/img/revsymg_logo_transp.png" alt="revsymg logo"
+width="200" height="200">
+
+
+## Installation
+
+See [INSTALL.md](docs/INSTALL.md) for more details.
+
+
+## Usage
+
+* [ ] DOC: usage and docs
+
+
+## Changelog
+
+See [CHANGELOG.md](docs/CHANGELOG.md) for details.
+
+
+## Next
+
+See [TODO.md](docs/TODO.md) for details.
+
+
+## Contributing
+
+See [CONTRIBUTING.md](docs/CONTRIBUTING.md) file.
+
+
+## References
+
+* Inspired by [graph-tool](https://graph-tool.skewed.de/)
+
+
+## Licence
+
+This work is licensed under a GNU-GPLv3 licence
+
+See [LICENCE](LICENCE)
