@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+qwhatyTuring/__init__.py
+qwhatyTuring/exceptions.py
+qwhatyTuring/graphicsDisplay.py
+qwhatyTuring/interpreter.py
+qwhatyTuring.egg-info/PKG-INFO
+qwhatyTuring.egg-info/SOURCES.txt
+qwhatyTuring.egg-info/dependency_links.txt
+qwhatyTuring.egg-info/requires.txt
+qwhatyTuring.egg-info/top_level.txt
