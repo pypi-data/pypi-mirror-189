@@ -1,0 +1,17 @@
+docsetviz/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docsetviz/main.py,sha256=fNSxZ35O6XwauOAI89_D4gKuwmbnNqf3m7YAGweqdOA,24150
+docsetviz/libs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docsetviz/libs/canvas.py,sha256=eJ15i7h_iNt-8itlKHHkFinXD7CIzS98yv-5aB92FVs,10097
+docsetviz/libs/docset_scaner.py,sha256=QW5hrAnshBUIDqdOn78uoWExEKp5SJ-ZDlLrHHOee-M,2706
+docsetviz/libs/hashable_qlist_widget_item.py,sha256=Lj9h4-HVUH-Ay41ncDlW47m8itt-gjK21lTneSznvh0,238
+docsetviz/libs/remote_dialog.py,sha256=PsqSE5RXKEhonqZB2varqCP7RBvQOn8JIjbeMzhADL4,7755
+docsetviz/libs/shape.py,sha256=QXV4OS3Pn7f9dN1s5BLSqmJ1TOLgU4Kst_myFB7udP8,4708
+docsetviz/libs/tool_bar.py,sha256=b7dvhAfjlMqcJRTlGLCYAMGu2DkWju6e67SPB334sKg,1158
+docsetviz/libs/utils.py,sha256=5zhUbuYtVCey6vP9TUM5AiTJefoO8YU9IPpj94BFrdE,2087
+docsetviz/libs/zoom_widget.py,sha256=i-0RW-VsxFe2JVuowXat3KQyMZxa7kByPEtdq2KZBbM,704
+docsetviz-1.0.9.dist-info/LICENSE,sha256=DBzTn_UnRoaFNz6sNwb81vcM4C_Ui9r0ODwW7llZwCg,26956
+docsetviz-1.0.9.dist-info/METADATA,sha256=YEiH6f8VRL3QpWjY09hN2bhD9oLJAOoq88vd1Dxw5ek,435
+docsetviz-1.0.9.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+docsetviz-1.0.9.dist-info/entry_points.txt,sha256=acJJ93C4Jy4FxrkB7xSkSwBXniUMy2AZJ32nuWN27HQ,50
+docsetviz-1.0.9.dist-info/top_level.txt,sha256=vo0cnn62OQMrAM5AUsiX6zlMUNAgE7fT6jBjsx1ZQME,10
+docsetviz-1.0.9.dist-info/RECORD,,
