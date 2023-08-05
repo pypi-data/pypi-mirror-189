@@ -1,0 +1,12 @@
+mt/iio/__init__.py,sha256=EqGagZkVypSdxXpARpz7jco0R_-IH9YOmbEBPmJl5vk,162
+mt/imageio/__init__.py,sha256=lUXEdtMwN2YBWCoNu82YeTe_YHUL9ZsvW-Qd_F06iQ8,194
+mt/imageio/immview.py,sha256=Xw_IcG0ZL6jTsMPsev24t9F9TpK3PU24dymBQzWkwr0,3605
+mt/imageio/imread.py,sha256=iWRoFnpD-WxtTT5Gwp8FrPdDa2vJwWEtp3v6zJfbKnI,9821
+mt/imageio/imwrite.py,sha256=kErXRt1R_JE4-o7yRL3QisVvdRy-lboYh9MEjIshG9s,6664
+mt/imageio/version.py,sha256=HbiQalth-zS48qY5myhnvI39sAmA4YrN-7AGJ4T897Q,396
+mtimageio-0.2.202302011742.data/scripts/immview,sha256=5N4zFtr2NtR2p23VWEWCRq2s3asG50R4FxHM3dfoP2o,1003
+mtimageio-0.2.202302011742.dist-info/LICENSE,sha256=k16lM0fLB6Uu6qiyvogvT22QGfqaJSE7PmVWdXm452A,1500
+mtimageio-0.2.202302011742.dist-info/METADATA,sha256=izejUFUctvhwYyiUV0S3GAteO-AD7A95IxDcVVpGGcg,290
+mtimageio-0.2.202302011742.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mtimageio-0.2.202302011742.dist-info/top_level.txt,sha256=WcqGFu9cV7iMZg09iam8eNxUvGpLSKKF2Iubf6SJVOo,3
+mtimageio-0.2.202302011742.dist-info/RECORD,,
