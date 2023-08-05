@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: babble-cloud-cli
+Version: 0.1.11
+Summary: serverless applications made easy
+Author: mkearney2023
+Author-email: mkearney2023@gmail.com
+Requires-Python: >=3.5,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: simple-term-menu (==1.6.1)
+Description-Content-Type: text/markdown
+
+# babble-cloud-cli
