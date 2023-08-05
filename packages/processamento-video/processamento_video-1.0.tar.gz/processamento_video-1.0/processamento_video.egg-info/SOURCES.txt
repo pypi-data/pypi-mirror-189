@@ -1,0 +1,10 @@
+README.md
+licence.txt
+setup.py
+processamento_video/__init__.py
+processamento_video/camera.py
+processamento_video/video.py
+processamento_video.egg-info/PKG-INFO
+processamento_video.egg-info/SOURCES.txt
+processamento_video.egg-info/dependency_links.txt
+processamento_video.egg-info/top_level.txt
