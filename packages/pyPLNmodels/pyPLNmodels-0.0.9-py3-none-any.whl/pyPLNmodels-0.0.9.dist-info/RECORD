@@ -1,0 +1,11 @@
+pyPLNmodels/VEM.py,sha256=TxWsrqbJLZHL0LFjAB--86MA-fQnGr6pfbjzxHPvQh0,9948
+pyPLNmodels/__init__.py,sha256=pbr6YFUpC_OuHH9RUCzwzTZun3MAFR-9Hbf7UBDhzKA,24
+pyPLNmodels/closedForms.py,sha256=Jq5-AHLaUNzVlu3YbQwEM-IJDVsZxQibJKGQNaq-UQU,796
+pyPLNmodels/elbos.py,sha256=7HkdXlS2BQVGr7RXNRrrBz_8Znaez-ZcFA-kg5mb1aQ,3101
+pyPLNmodels/test.py,sha256=zlU0VTgwQWUX_4rKuXUNvcC1TYJ1CjlSFK47srnNqUk,603
+pyPLNmodels/utils.py,sha256=FYojrbt9WUKvmwKJeCi3NthLmGTm4whXqVzw83-znNE,14176
+pyPLNmodels-0.0.9.dist-info/LICENSE.txt,sha256=Iuvcel5xZq4-Y-mACpsK_tdbU3TqQ0ZorRUBtbvqkcA,1058
+pyPLNmodels-0.0.9.dist-info/METADATA,sha256=ukOhUdCZeWwyq78M91QgWARCRStu2nUvPlKVwx9E4rM,17613
+pyPLNmodels-0.0.9.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pyPLNmodels-0.0.9.dist-info/top_level.txt,sha256=wQs5igdrE-HT1rxarKd6zHh5FHtY-oY34g_dMz7gIu8,81
+pyPLNmodels-0.0.9.dist-info/RECORD,,
