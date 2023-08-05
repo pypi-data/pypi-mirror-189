@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: calco_prueba
+Version: 1.0.0
+Summary: Calco_prueba
+Author: Kirill
+Author-email: analyst1@calconut.es
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Ejemplo modulos CALCONUT
+=========================
+
+Esto es un ejemplo de modulo para calconut
