@@ -1,0 +1,11 @@
+recite/__init__.py,sha256=ZgIumPl7gX4fKyB9Ij76vistZjH1J_WPEG5LL117czA,95
+recite/console.py,sha256=wzYpaqXuQyTWh8EgsC2VlpBaGQ7K0c9_r3l9DezyMEo,2235
+recite/main.py,sha256=WvdG7c6xi1BtNf2yMORYtGuacFHYW6XXUFSX6xb3ngw,2383
+recite/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+recite/runner.py,sha256=WmHFf04lkUCF2vsOrUDait0ArFg0ngokOFYcB06-aWw,2785
+recite/step.py,sha256=k9mDpqhsxL9wgWiZ6_Mk7yk3SmisnqFyp2RPEBiM-eY,8333
+recite-0.1.1.dist-info/entry_points.txt,sha256=J51csRS7rvFcPPPTauuUElMWkDvST7RknsrpS9u7x2Q,42
+recite-0.1.1.dist-info/LICENSE,sha256=LWCJtOAecAP-i0yYHsN8TYSs5hWPPC5kUbT7cz7Jj18,1072
+recite-0.1.1.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+recite-0.1.1.dist-info/METADATA,sha256=8ULPhonJGpm2MG4rgjGzVur5HYaM1ESU_xcqNaQR7KA,4450
+recite-0.1.1.dist-info/RECORD,,
