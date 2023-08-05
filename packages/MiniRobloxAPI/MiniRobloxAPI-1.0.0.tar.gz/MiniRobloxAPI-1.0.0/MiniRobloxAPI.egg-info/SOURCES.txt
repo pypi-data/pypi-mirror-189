@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+MiniRobloxAPI/__init__.py
+MiniRobloxAPI.egg-info/PKG-INFO
+MiniRobloxAPI.egg-info/SOURCES.txt
+MiniRobloxAPI.egg-info/dependency_links.txt
+MiniRobloxAPI.egg-info/requires.txt
+MiniRobloxAPI.egg-info/top_level.txt
