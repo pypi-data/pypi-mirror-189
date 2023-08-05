@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pluto_drone_pkg
+Version: 0.0.1.4
+Summary: Pluto drone
+Home-page: UNKNOWN
+Author: Aman Singh, Ayush Singh, Raj Surya
+Author-email: ayush.lively2001@gmail.com
+License: UNKNOWN
+Keywords: python,video,stream,video stream,camera stream,sockets
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+UNKNOWN
+

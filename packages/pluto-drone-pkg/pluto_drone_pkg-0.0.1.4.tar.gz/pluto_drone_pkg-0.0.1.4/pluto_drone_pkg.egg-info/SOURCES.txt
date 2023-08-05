@@ -1,0 +1,13 @@
+setup.py
+pluto_drone_pkg/__init__.py
+pluto_drone_pkg/hover.py
+pluto_drone_pkg/hover_and_rect.py
+pluto_drone_pkg/plutodrone.py
+pluto_drone_pkg/pose_est.py
+pluto_drone_pkg/quadControl.py
+pluto_drone_pkg/task1_keyboard.py
+pluto_drone_pkg.egg-info/PKG-INFO
+pluto_drone_pkg.egg-info/SOURCES.txt
+pluto_drone_pkg.egg-info/dependency_links.txt
+pluto_drone_pkg.egg-info/requires.txt
+pluto_drone_pkg.egg-info/top_level.txt
