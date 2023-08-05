@@ -1,0 +1,3 @@
+[console_scripts]
+blacklight=src.example:run
+
