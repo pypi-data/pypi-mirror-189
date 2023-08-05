@@ -1,0 +1,9 @@
+include bycon/config/*.yaml
+include bycon/rsrc/genomes/*/*.txt
+include bycon/schemas/*/*/*/*/*/*
+include bycon/schemas/*/*/*/*/*
+include bycon/schemas/*/*/*/*
+include bycon/schemas/*/*/*
+include bycon/schemas/*/*
+include *.txt
+include *.yaml
