@@ -1,0 +1,11 @@
+proxytv/__init__.py,sha256=NrIdrb5fBVl28I8yVZrLF9PNexuHDk6NIXZ8SRDjvQM,3405
+proxytv/__main__.py,sha256=kcpY-91xOMCTzms6gNsLJaguwlmL6qGEe28-FEj3f3I,3412
+proxytv/extinf.py,sha256=hZPA7SI09Mz476yX6U8CzmoWOrESRvqb7zU-pErPlYk,6854
+proxytv/search.py,sha256=QQWhXesOQzO0rhG87rz-VDGMu94tAlzCdS2nr-2rlBw,3591
+proxytv/static.py,sha256=GFJP5zJ-8D_ONoTlUOvSF-s0P-Syn5gJn3zOaPHqiaQ,1210
+proxytv/types.py,sha256=aAG5h1ktibgQwvOXdTeXJNU-rd-eIOQuRP8nJ9NvC3k,416
+proxytv-1.0.0.dist-info/LICENSE,sha256=Eef7V1nFGLe_ZZAnztt68MR9M13XGMvSkVRw2kOtsiI,1122
+proxytv-1.0.0.dist-info/METADATA,sha256=K5uEXVvzsXdT4SQ1gNZEJKL4hxIr-71zyeAGtVooTvM,8703
+proxytv-1.0.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+proxytv-1.0.0.dist-info/top_level.txt,sha256=bRZwz_lMxn9y_fG5Ys_XpswOocB7hcp6R-G5HZ6uPOc,8
+proxytv-1.0.0.dist-info/RECORD,,
