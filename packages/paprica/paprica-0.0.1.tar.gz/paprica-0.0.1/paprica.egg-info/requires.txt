@@ -1,0 +1,16 @@
+numpy
+scipy
+pyapr
+tqdm
+pandas
+scikit-image
+scikit-learn
+opencv-contrib-python-headless
+dill
+matplotlib
+napari
+allensdk
+sparse
+brainreg
+joblib
+pytest

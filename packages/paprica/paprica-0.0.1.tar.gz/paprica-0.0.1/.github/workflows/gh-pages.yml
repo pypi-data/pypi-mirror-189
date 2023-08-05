@@ -1,0 +1,39 @@
+
+name: "Build and deploy documentation"
+on:
+  push:
+    branches:
+      - master  # run on push to master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: "Checkout"
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      - name: "Install package"
+        run: |
+          pip install --upgrade pip
+          pip install .
+
+      - name: "Build Sphinx Doc"
+        run: |
+          pip install sphinx sphinx-rtd-theme myst_nb
+          cd doc
+          make html
+
+      - name: "Deploy to Github pages"
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: doc/build/html/
