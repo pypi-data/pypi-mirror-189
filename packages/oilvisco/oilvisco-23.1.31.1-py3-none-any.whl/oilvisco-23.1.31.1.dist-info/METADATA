@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: oilvisco
+Version: 23.1.31.1
+Summary: Calculates the blended viscosity of different motor oils, when mixed together.
+Project-URL: Homepage, https://github.com/Exsplendor/oilvisco
+Project-URL: Bug Tracker, https://github.com/Exsplendor/oilvisco/issues
+Author-email: splendor <splendor@tuta.io>
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+OilVisco
+========
+
+Calculates the blended viscosity of different motor oils, when mixed together.
+
+
+## Example:
+
+```bash
+# the script itself is called mische (german for: to mix).
+$ mische
+Which oil? : 0w20
+How many (in l)? : 3
+Which oil? : 10w40x1
+Which oil? : q
+Done (y/n) ? : y
+The resulting oil of 4 liters has the tyoe: 2.5W25.0
+
+```
+
+[//]: #( vi: set et sw=4 ts=4 ft=markdown ai : )
