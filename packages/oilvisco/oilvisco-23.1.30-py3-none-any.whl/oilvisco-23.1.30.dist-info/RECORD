@@ -1,0 +1,9 @@
+oilvisco/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oilvisco/__main__.py,sha256=4v1rw5p4j5iG7UfXIChahRrkT89nF_yaQeNlqmZku-8,344
+oilvisco/calc.py,sha256=HXDTuwzoHcdjQWgVgUs58Tf5bfhM-6puCcUl1HuKf-U,826
+oilvisco/datatypes.py,sha256=F0T4gSEwZDLOP7nBefN6NLUxT9EPy6Nz9Lty9TcFd58,168
+oilvisco/ui.py,sha256=XQgG0dcwu797fw-KHFPR4h7xKRIvOnc5hKwiOhKdGpE,1504
+oilvisco-23.1.30.dist-info/METADATA,sha256=6DpEjlkGDi8PZjKnqUq9W5z20nnoaklUCzYLaaO4UnU,711
+oilvisco-23.1.30.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+oilvisco-23.1.30.dist-info/entry_points.txt,sha256=7eZllWb5tOOXwm-3nki2VZZULsS35HFLkvfSNHVtZaw,51
+oilvisco-23.1.30.dist-info/RECORD,,
