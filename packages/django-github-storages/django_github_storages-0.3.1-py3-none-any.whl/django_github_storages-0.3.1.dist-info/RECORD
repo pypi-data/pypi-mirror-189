@@ -1,0 +1,9 @@
+github_storage/__init__.py,sha256=r4xAFihOf72W9TD-lpMi6ntWSTKTP2SlzKP1ytkjRbI,22
+github_storage/apps.py,sha256=lJZUG-nFM_0hBm6g8mWRQNCdkYzGQi7PQaM2oqDEr_I,159
+github_storage/backends.py,sha256=-BMsnYQb_jIRxuj4FV640AcczvqQncBFkJzhmOloyS4,6598
+github_storage/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+github_storage/utils.py,sha256=4Z-87jD9XGk6CNqTA11tWaIGFwnGFg3lePQq5TbiDJA,508
+django_github_storages-0.3.1.dist-info/METADATA,sha256=D2tg5_XFDLZwzlnu_N9vij_IHjlPZUfa6r03xAno-ro,4563
+django_github_storages-0.3.1.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+django_github_storages-0.3.1.dist-info/LICENSE,sha256=so7mBORCGP4RRDNTodsMiHM8OmEmS_rMmSEIFzl0Nuo,1527
+django_github_storages-0.3.1.dist-info/RECORD,,
