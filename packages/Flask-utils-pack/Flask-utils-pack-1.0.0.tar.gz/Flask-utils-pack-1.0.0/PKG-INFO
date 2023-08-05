@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: Flask-utils-pack
+Version: 1.0.0
+Summary: Flask utils library
+Home-page: https://github.com/TheArtur128/Flask-utils-pack
+Download-URL: https://github.com/TheArtur128/Flask-utils-pack/archive/refs/tags/v1.0.0.zip
+Author: Arthur
+Author-email: s9339307190@gmail.com
+License: GNU General Public License v3.0
+Keywords: library,utils,flask
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Flask-pack
+Flask utils library
