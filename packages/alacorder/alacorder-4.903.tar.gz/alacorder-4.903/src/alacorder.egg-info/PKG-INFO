@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: alacorder
+Version: 4.903
+Summary: beta
+Author-email: Sam Robson <sbrobson@crimson.ua.edu>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# alacorder beta 4.903
+
+Runs on Python >=3.7
+Preferred installation via pip in virtual environment
+Recommended setup in iPython terminal in Anaconda virtual environment
+
+Dependencies:
+	 *	cython			https://pypi.org/project/Cython/
+	 *  PyPDF2			https://pypi.org/project/PyPDF2/
+	 *	pandas			https://pypi.org/project/pandas/
+	 *  xlrd			https://pypi.org/project/xlrd/
+	 *  openpyxl		https://pypi.org/project/openpyxl/
+	 *  xlwt			https://pypi.org/project/xlwt/
+	 	 
+For command line interface:
+	import alacorder
+	
+
