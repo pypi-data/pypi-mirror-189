@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+v0.9.4
+------
+
+* chore(deps): update dependency ansible.utils to v2.9.0 (#334)
