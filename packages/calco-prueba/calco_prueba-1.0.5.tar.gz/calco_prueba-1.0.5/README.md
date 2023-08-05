@@ -1,0 +1,173 @@
+# Libreria Calconut
+#
+#
+#
+[![N|Solid](https://www.calconut.com/wp-content/uploads/2020/09/logo.svg)](https://calconut.com)
+
+
+Esta es la libreria de Calconut, creada para uso propio de integraciones y automatizaciones.
+
+## Indice
+- `CodeDecode( )`
+- `conectar_MariaDB( )`
+- `conectar_HanaDB( )`
+- `SAPContextManager( )`
+- `enviarCorreo( )`
+- `mail_send( )`
+
+## requirements.txt
+Para instalar todas las dependencias copia y pega estas librerias en un archivo requiremens.txt y luego ejecutalo con pip.
+```sh
+calco-prueba == 1.0.4
+certifi == 2022.12.7
+cffi == 1.15.1
+charset-normalizer == 3.0.1
+cryptography == 39.0.0
+hdbcli == 2.15.19
+idna == 3.4
+mariadb == 1.1.5.post3
+numpy == 1.24.1
+packaging == 23.0
+pycparser == 2.21
+python-dateutil == 2.8.2
+pytz == 2022.7.1
+requests == 2.28.2
+six == 1.16.0
+urllib3 == 1.26.14
+```
+
+## - CodeDecode( )
+
+Este es el modulo que usamos para codificar, descodificar o parsear archivos .ini
+
+#### Para codificar:
+```sh
+import configparser
+
+parser = configparser.ConfigParser()
+parser.read("./config.ini")
+code = cm.CodeDecode()
+code.encriptar_items(parser, code.cargar_clave())
+```
+
+#### Para descodificar:
+```sh
+import configparser
+
+parser = configparser.ConfigParser()
+parser.read("./config_code.ini")
+code = cm.CodeDecode()
+mail = code.parserReader('mail', parser)
+```
+
+## - conectar_MariaDB( )
+#### Atributos
+`host`: ip del host
+`user`: usuario
+`password`: contraseña
+`database`: nombre de la base de datos
+`port`: puerto de conexión (por defecto 3306)
+#### Crear conexión:
+Ejemplo de como establece conexión a base de datos de mariaDB.
+```sh
+import calco_prueba as cm
+
+with cm.conectar_MariaDB(host=credencialesDB['host'],
+                         port=int(credencialesDB['port']),
+                         user=credencialesDB['user'],
+                         password=credencialesDB['password'],
+                         database=credencialesDB['db']) as conn:
+    trabajadores = getEmpleadosFromDB(conn)
+```
+
+## - conectar_HanaDB( )
+#### Atributos
+`host`: ip del host
+`user`: usuario
+`password`: contraseña
+`port`: puerto de conexión (por defecto 3306)
+#### Crear conexión:
+Ejemplo de como establece conexión a base de datos de mariaDB.
+```sh
+import calco_prueba as cm
+
+with cm.conectar_HanaDB(db['host'], db['user'], db['pass'],
+                        db['port']) as conn:
+    ej = ejemplo(conn)
+```
+
+## - SAPContextManager( )
+#### Atributos
+`ip`: Dirección IP de SAP
+`CompanyDB`: Nombre de la base de datos de SAP
+`UserName`: Nombre de usuario de SAP
+`password`: Contraseña de usuario de SAP
+
+#### Crear conexión:
+Ejemplo de como establece conexión a base de datos de mariaDB.
+```sh
+import calco_prueba as cm
+
+with cm.SAPContextManager(ip=sap_data['ip'], CompanyDB=sap_data['companydb'],
+                          UserName=sap_data['username'],
+                          password=sap_data['password']) as conn: 
+```
+
+
+## - enviarCorreo( )
+Esta función sirve para mandar un correo usando el hosting de dynaserver.
+#### Atributos
+`mensaje`: mensaje a enviar
+`destino`: correo de destino
+`origen`: correo de origen
+`asunto`: asunto del correo
+`server`: servidor smtp del correo
+`puerto`: puerto del servidor smtp
+`password`: contraseña del correo
+`isFile`: True o False
+`fileName`: ruta local al archivo
+
+#### Crear conexión:
+Ejemplo de como establece conexión a base de datos de mariaDB.
+```sh
+import calco_prueba as cm
+
+cm.enviarCorreo(msg,
+                mail['destinatario'],
+                mail['remitente'],
+                mail['asunto'],
+                mail['server'],
+                mail['port'],
+                mail['pass']
+                )
+```
+
+## - mail_send( )
+Esta función sirve para mandar un correo usando el hosting de dynaserver.
+#### Atributos
+`mensaje`: mensaje a enviar
+`destino`: correo de destino (Si es mas de uno ponerlo en una)
+`origen`: correo de origen
+`asunto`: asunto del correo
+`server`: servidor smtp del correo
+`puerto`: puerto del servidor smtp
+`password`: contraseña del correo
+`isFile`: True o False
+`fileName`: ruta local al archivo
+`copia`: lista de personas que van en copia
+
+#### Crear conexión:
+Ejemplo de como establece conexión a base de datos de mariaDB.
+```sh
+import calco_prueba as cm
+
+cm.mail_send(msg,
+             mail['destinatario'],
+             mail['remitente'],
+             mail['asunto'],
+             mail['server'],
+             mail['port'],
+             mail['pass']
+             )
+```
+
