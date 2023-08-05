@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: bacalhau_apiclient
+Version: 0.3.18.post2
+Summary: A Python client for the Bacalhau public API - https://github.com/filecoin-project/bacalhau/tree/main/clients/python
+Project-URL: Homepage, https://github.com/filecoin-project/bacalhau/
+Project-URL: Bug Tracker, https://github.com/filecoin-project/bacalhau/issues
+Author-email: Enrico Rotundo <enrico.rotundo@gmail.com>
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6.2
