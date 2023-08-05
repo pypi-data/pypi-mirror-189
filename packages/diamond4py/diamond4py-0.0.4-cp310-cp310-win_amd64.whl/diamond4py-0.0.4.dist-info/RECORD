@@ -1,0 +1,8 @@
+diamond4py/__init__.py,sha256=QqEBqrHVohTqY_mcqXphSTGJ7zZXz84V91RnSiqCUy4,5152
+diamond4py/_version.py,sha256=hhl_NHU0z5L1jjXNFGGB9lDXkweAiB6DPNYUvFSt9bE,518
+diamond4py/libdiamond.cp310-win_amd64.pyd,sha256=hOyPX-nwnbCjtW29deb1WkW4bw1RS1ekB5U_iIu03r4,5436928
+diamond4py-0.0.4.dist-info/LICENSE,sha256=Y_zDMUosI56de95GVglpC19GilDg_0qu5kgmy4XiwKE,33092
+diamond4py-0.0.4.dist-info/METADATA,sha256=wBPEpR7WIYGy8R65aqVCTwz375eRLed_cjdqJ1BuYFk,1779
+diamond4py-0.0.4.dist-info/WHEEL,sha256=7nAbFpDLIi5JKVAaeLpyxLfgWLF1xn7xXmbT7o5gULg,96
+diamond4py-0.0.4.dist-info/top_level.txt,sha256=P3TaLblLb2bfvDmq-7xsWDA2IuZ60XaYndHvpxrBbO0,11
+diamond4py-0.0.4.dist-info/RECORD,,
