@@ -1,0 +1,13 @@
+importmap/__init__.py,sha256=5-EoD2H9wMBQGi7qSzpndFFNyXccXe0OWIby7KLho58,28
+importmap/apps.py,sha256=-fBdNAz9rvOzxWeGgdJsM1NCKBh5YJKnZULYvR-hjGw,150
+importmap/core.py,sha256=i-vEmt7sYBXpWwkvCpMHsYIqImMSoi1bN2S1KFqoJJ4,3627
+importmap/generator.py,sha256=-06tjTn6_HW2cr311bUlHH-filOzPKlMRfhCmKeK_q8,1191
+importmap/management/commands/importmap_generate.py,sha256=bmOKQMzxl5Id-9piB6dZgwXhuadWjWFL_5HYrdRnZBM,386
+importmap/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+importmap/templates/importmap/scripts.html,sha256=R4mwO7_MFNxFGFyzCORn4bszou4HIAFwoiBRlS1WpHE,187
+importmap/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+importmap/templatetags/importmap.py,sha256=k8K81Gg5GKUUYFuxMsmkDfGxHpuI6Rm-Sx6TBvsXr_w,361
+django_importmap-0.2.0.dist-info/METADATA,sha256=Ze3Ncw9-xt1bQVy9JfZ7eesKMaQDj3rzwtV5LEBgLBo,7906
+django_importmap-0.2.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+django_importmap-0.2.0.dist-info/LICENSE,sha256=HmivhD-sq9a2tPLDyK3kVpGOB1gSjqYliHPV2SkPlfI,1065
+django_importmap-0.2.0.dist-info/RECORD,,
