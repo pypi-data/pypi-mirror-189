@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: idrac-ctl
+Version: 1.0
+Summary: Standalone command line tool to interact with Dell iDRAC via Redfish REST API.
+Home-page: https://github.com/spyroot/idrac_ctl
+Author: Mustafa Bayramov
+Author-email: spyroot@gmail.com
+Requires-Python: >=3
+Provides-Extra: dev
+License-File: LICENSE
