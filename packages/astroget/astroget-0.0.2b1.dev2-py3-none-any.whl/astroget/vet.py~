@@ -1,0 +1,177 @@
+from math import cos,sqrt,radians,isclose
+from collections import defaultdict
+
+
+wcskeys = ['CTYPE1', 'CTYPE2', 'CRVAL1', 'CRVAL2', 'CRPIX1', 'CRPIX2',
+           'CD1_1', 'CD1_2', 'CD2_1', 'CD2_2',
+           'NAXIS', 'NAXIS1', 'NAXIS2']
+
+
+# for Hdu (slightly different names for FitsFile)
+cornerkeys = ['CENRA1',   'CENDEC1',
+              'COR1RA1', 'COR1DEC1',
+              'COR2RA1', 'COR2DEC1',
+              'COR3RA1', 'COR3DEC1',
+              'COR4RA1', 'COR4DEC1']
+hducornerkeys = [f'hdu:{k}' for k in cornerkeys] # rename for use in find()
+
+dbboundskeys = ['ra_min', 'ra_max',
+                'dec_min', 'dec_max', 'ra_center', 'dec_center']
+hdudbboundskeys = [f'hdu:{k}' for k in dbboundskeys] # rename for use in find()
+
+def center2range(ra, dec, size):
+    fudge = 1e-10  # to avoid divide by zero where dec=90
+    width = height = size
+    w2 = (width/2.0) / (fudge + cos(radians(dec)) )
+    h2 = height/2.0
+    extreme_ra = [ra - w2, ra + w2]
+    min_ra = min(extreme_ra)
+    max_ra = max(extreme_ra)
+    extreme_dec = [dec - h2, dec + h2]
+    min_dec = min(extreme_dec)
+    max_dec = max(extreme_dec)
+    return ((min_ra,max_ra),(min_dec,max_dec))
+
+# NAT-699
+md5 = '013e55fa35798e0d46f02eeebb64b730'; hduidx=34
+def dbbounds_hducorners(client, ra, dec,
+                            search_size, # diameter in degrees
+                            instrument='decam',
+                            obs_type='object',
+                            proc_type='instcal',
+                            limit=9,
+                            verbose=False,
+                            ):
+    target_extremes = center2range(ra, dec, search_size)
+
+    out = ['md5sum', 'hdu:hdu_idx'] + hducornerkeys + hdudbboundskeys
+    cons = {'instrument': [instrument],
+            'obs_type': [obs_type],
+            'proc_type': [proc_type],
+            }
+    if ra is not None:
+        cons['hdu:ra_center'] = list(target_extremes[0])
+        cons['hdu:dec_center'] = list(target_extremes[1])
+    #!print(f'out={out}')
+    #!print(f'cons={cons}')
+    found = client.find(outfields=out, constraints=cons, limit=limit)
+    print(f'VET {found.count} records')
+
+    if verbose and found.count > 0:
+        r = found.records[0]
+        hdu_extremes = ((r['hdu:ra_min'],r['hdu:ra_max']),
+                        (r['hdu:dec_min'],r['hdu:dec_max']))
+
+        ra_corners = [r['hdu:COR4RA1'],r['hdu:COR3RA1'],
+                       r['hdu:COR2RA1'],r['hdu:COR1RA1']]
+        dec_corners = [r['hdu:COR4DEC1'],r['hdu:COR3DEC1'],
+                       r['hdu:COR2DEC1'],r['hdu:COR1DEC1']]
+        corner_extremes = ((min(ra_corners), max(ra_corners)),
+                           (min(dec_corners), max(dec_corners)) )
+        print(f'Extremes:'
+              f'\n HDU Database rec[0] = {hdu_extremes}'
+              f'\n HDU Corners  rec[0] = {corner_extremes}'
+              f'\n Search Target       = {target_extremes}'
+              )
+
+    status = defaultdict(list)
+    for r in found.records:
+        if r['hdu:ra_min'] is None:
+            continue
+        if r['hdu:COR1RA1'] is None:
+            continue
+
+        md5 = r['md5sum']
+        idx = r['hdu:hdu_idx']
+        ra_corners = [r['hdu:COR4RA1'],r['hdu:COR3RA1'],
+                       r['hdu:COR2RA1'],r['hdu:COR1RA1']]
+        dec_corners = [r['hdu:COR4DEC1'],r['hdu:COR3DEC1'],
+                       r['hdu:COR2DEC1'],r['hdu:COR1DEC1']]
+
+
+        if not isclose(r['hdu:ra_min'], min(ra_corners)):
+            msg = (f"Minimum RA for"
+                   f" Database {r['hdu:ra_min']} and"
+                   f" Corners {min(ra_corners)} are not nearly equal."
+                   )
+            status[(md5,idx)] = msg
+
+        # rap equality around circle. i.e.  359.99 ~= 0.01
+        if not isclose(r['hdu:ra_max'], max(ra_corners)):
+            if not isclose(360+r['hdu:ra_max'], max(ra_corners),abs_tol=1e-5):
+                msg = (f"Maximum RA for"
+                       f" Database {r['hdu:ra_max']} and"
+                       f" Corners {max(ra_corners)} are not nearly equal."
+                       )
+                status[(md5,idx)] = msg
+
+
+        if not isclose(r['hdu:dec_min'], min(dec_corners)):
+            msg = (f"Minimum DEC for"
+                   f" Database {r['hdu:dec_min']} and"
+                   f" Corners {min(dec_corners)} are not nearly equal."
+                   )
+            status[(md5,idx)] = msg
+
+
+        if not isclose(r['hdu:dec_max'], max(dec_corners)):
+            msg = (f"Maximum DEC for"
+                   f" Database {r['hdu:dec_max']} and"
+                   f" Corners {max(dec_corners)} are not nearly equal."
+                   )
+            status[(md5,idx)] = msg
+
+
+    return found,status
+
+def wcs_hducorners(client, md5, hduidx,
+                   ra, dec, search_size, # diameter in degrees
+                   instrument='decam',
+                   obs_type='object',
+                   proc_type='instcal',
+                   limit=9, verbose=True, tol=1e-03
+                   ):
+    target_extremes = center2range(ra, dec, search_size)
+
+    out = ['md5sum', 'hdu:hdu_idx']
+    cons = {'md5sum': [md5],
+            'hdu:hdu_idx': [hduidx],
+            #! 'instrument': [instrument],
+            #! 'obs_type': [obs_type],
+            #! 'proc_type': [proc_type],
+            }
+    if ra is not None:
+        cons['hdu:ra_center'] = list(target_extremes[0])
+        cons['hdu:dec_center'] = list(target_extremes[1])
+    found = client.find(outfields=out, constraints=cons, limit=limit)
+    print(f'VET {found.count} records')
+
+    status = defaultdict(list)
+    for r in found.records:
+        if verbose:
+            print(f"md5sum={r['md5sum']}  hdu:hdu_idx={r['hdu:hdu_idx']}")
+
+        r['_bounds'] = client.hdu_bounds(r['md5sum'], r['hdu:hdu_idx'])
+        ((min_ra_c,max_ra_c),(min_dec_c,max_dec_c)) = r['_bounds']['corners']
+        ((min_ra_d,max_ra_d),(min_dec_d,max_dec_d)) = r['_bounds']['db']
+        ((min_ra_w,max_ra_w),(min_dec_w,max_dec_w)) = r['_bounds']['wcs']
+
+        # is DB range good? (compare to WCS)
+        if not (isclose(min_ra_d, min_ra_w, abs_tol=tol)
+                and isclose(max_ra_d, max_ra_w, abs_tol=tol)
+                and isclose(min_dec_d, min_dec_w, abs_tol=tol)
+                and isclose(max_dec_d, max_dec_w, abs_tol=tol)
+                ):
+            msg = (f'Database RA/DEC bounds do not match correspond WCS bounds'
+                   f' within {tol}.'
+                   f' DB ={((min_ra_d,max_ra_d),(min_dec_d,max_dec_d))}'
+                   f' WCS={((min_ra_d,max_ra_d),(min_dec_d,max_dec_d))}')
+            status[(md5,hduidx)] = msg
+
+        if verbose:
+            print(f'DBG: '
+                  f'\n  Corners {((min_ra_c,max_ra_c),(min_dec_c,max_dec_c))}'
+                  f'\n  DB      {((min_ra_d,max_ra_d),(min_dec_d,max_dec_d))}'
+                  f'\n  WCS     {((min_ra_w,max_ra_w),(min_dec_w,max_dec_w))}'
+                  )
+    return found,dict(status)
