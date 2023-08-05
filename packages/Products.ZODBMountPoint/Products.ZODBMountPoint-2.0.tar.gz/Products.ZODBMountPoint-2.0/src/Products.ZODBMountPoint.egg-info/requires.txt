@@ -1,0 +1,5 @@
+setuptools
+AccessControl
+Acquisition
+ZODB
+Zope>=4.0b5
