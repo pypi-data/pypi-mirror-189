@@ -1,0 +1,16 @@
+readimc/__init__.py,sha256=2EK4g1VmMlpENj4zVz6PtuPpfI8ME0tdRAboETIN3rY,308
+readimc/_version.py,sha256=nXrmRQ2r9pdMfZI6-I4xXO0FwLRf7CaiFMsiibxx5jY,160
+readimc/imc_file.py,sha256=3SVUoz6NBB9_iQMc41vST7yLjxtkvgeNx7GmOHPv9_Y,817
+readimc/mcd_file.py,sha256=PM56L7AUyv3CMPWwvgC58XM3FVdcHFWFamPlvxBf_JY,13069
+readimc/mcd_parser.py,sha256=f9ZLGr7j_PqL8SUnOuyxefoX3OCIGJGUQuYSNiz5bLg,9794
+readimc/txt_file.py,sha256=Ijhv46Ik1MGaMZrH0wEtztpyKuXyFnICMPJAc3cK2s8,5728
+readimc/data/__init__.py,sha256=P_B1FkCvuz0cTWem8U8XmDhNnMT-YjMIIhMUHz4hzGo,266
+readimc/data/acquisition.py,sha256=B-Kb5evXpVbvFgXrHQkftvacBUl55huhT1rC64yIC7I,6391
+readimc/data/panorama.py,sha256=tHOocjDseXXQwYKcnE2JBeaW_phSzRd_qPSnSpFe4f4,3068
+readimc/data/slide.py,sha256=zCJfQD4CESXBSS4POU_T77q6JeApA7mt0Db9HydtN6s,1168
+readimc-0.6.2.dist-info/LICENSE,sha256=0hARXvjhC7hCmYhN3WTWRx2reNdLlGy6YJAu7sckPxM,1077
+readimc-0.6.2.dist-info/METADATA,sha256=DK-yqoPZB5DDoXXgrj-bQZe0SuGMiALR0fN-bbUQ6og,2245
+readimc-0.6.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+readimc-0.6.2.dist-info/top_level.txt,sha256=hRNtYdrqnWyXfcZPlQZbKtUxTlfZakST9bXWj3KKR9E,8
+readimc-0.6.2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+readimc-0.6.2.dist-info/RECORD,,
