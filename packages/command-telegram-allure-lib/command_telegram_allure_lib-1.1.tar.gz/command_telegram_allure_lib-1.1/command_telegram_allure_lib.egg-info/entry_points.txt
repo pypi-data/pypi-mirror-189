@@ -1,0 +1,3 @@
+[console_scripts]
+create_notify_dir = command_telegram_allure_lib.Start:startapp
+get_allure_report = command_telegram_allure_lib.Start:messege

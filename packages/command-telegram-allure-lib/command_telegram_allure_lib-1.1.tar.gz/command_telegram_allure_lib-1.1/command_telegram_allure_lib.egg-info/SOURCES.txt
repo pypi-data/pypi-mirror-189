@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+command_telegram_allure_lib/Start.py
+command_telegram_allure_lib/__init__.py
+command_telegram_allure_lib.egg-info/PKG-INFO
+command_telegram_allure_lib.egg-info/SOURCES.txt
+command_telegram_allure_lib.egg-info/dependency_links.txt
+command_telegram_allure_lib.egg-info/entry_points.txt
+command_telegram_allure_lib.egg-info/top_level.txt
