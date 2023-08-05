@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: PewPew-10-Emulator
+Version: 0.3
+Summary: A emulator for the console pewpew
+Author: Dima Marhitych
+Author-email: uzhdimka@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENCE
+Requires-Dist: pygame
+
+A emulator for a console named pewpew. It's made so you can run your pewpew games directly on your pc and no need to use the pewpew it self. The documentation is avalible at pew.readthedocs.io
