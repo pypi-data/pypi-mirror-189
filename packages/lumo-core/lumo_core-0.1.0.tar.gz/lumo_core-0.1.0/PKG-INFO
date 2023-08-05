@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: lumo_core
+Version: 0.1.0
+Summary: library to manage your pytorch experiments.
+Home-page: https://github.com/pytorch-lumo/lumo-core
+Author: sailist
+Author-email: sailist@outlook.com
+Keywords: lumo_core
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
