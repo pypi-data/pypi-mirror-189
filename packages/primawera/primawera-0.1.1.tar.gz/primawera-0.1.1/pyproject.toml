@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "primawera"
+authors = [
+    { name = "Bruno Petrus", email = "xpetrus@fi.muni.cz" },
+]
+description = "Simple image viewer with 3D, complex and floating images support."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+# TODO: dynamic metadata
+version = "0.1.1"
+dependencies = [
+    "numpy>=1.23",
+    "Pillow>=9.2",
+    "PyQt5>=5.15.7",
+    "h5py>=3.7",
+]
+
+[project.gui-scripts]
+primawera = "primawera:start"
