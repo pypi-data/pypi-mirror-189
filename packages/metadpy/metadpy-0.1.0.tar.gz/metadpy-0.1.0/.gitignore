@@ -1,0 +1,8 @@
+*.ipynb_checkpoints
+*.pyc
+mypyreports/
+.coverage
+build
+*egg-info
+docs/source/generated/*
+dist/

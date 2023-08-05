@@ -1,0 +1,64 @@
+.flake8
+.gitignore
+.isort.cfg
+.pre-commit-config.yaml
+LICENSE
+MANIFEST.in
+README.md
+codecov.yml
+requirements-docs.txt
+requirements-tests.txt
+requirements.txt
+setup.py
+.github/workflows/docs.yml
+.github/workflows/linting.yml
+.github/workflows/test.yml
+docs/source/api.rst
+docs/source/cite.md
+docs/source/conf.py
+docs/source/index.ipynb
+docs/source/index.md
+docs/source/references.md
+docs/source/refs.bib
+docs/source/tutorials.md
+docs/source/examples/1-What metacognition looks like.ipynb
+docs/source/examples/1-What metacognition looks like.md
+docs/source/examples/2-Fitting the model-MLE.ipynb
+docs/source/examples/2-Fitting the model-MLE.md
+docs/source/examples/3-Comparison with the hmeta-d toolbox.ipynb
+docs/source/examples/3-Comparison with the hmeta-d toolbox.md
+docs/source/examples/Example 1 - Fitting MLE - Subject and group level.ipynb
+docs/source/examples/Example 1 - Fitting MLE - Subject and group level.md
+docs/source/examples/Example 2 - Fitting Bayesian - Subject level (pymc).ipynb
+docs/source/examples/Example 2 - Fitting Bayesian - Subject level (pymc).md
+docs/source/examples/README.md
+docs/source/examples/hmetad/Bayes_metad_indiv_R.txt
+docs/source/examples/hmetad/example_metad_indiv.R
+docs/source/examples/hmetad/metad_indiv.txt
+docs/source/images/AU.png
+docs/source/images/LabLogo.png
+docs/source/images/confidence_ROCAUC.png
+docs/source/images/logo.png
+docs/source/images/logo.svg
+docs/source/images/subjectLevel.png
+docs/source/images/trace.png
+metadpy/__init__.py
+metadpy/bayesian.py
+metadpy/mle.py
+metadpy/plotting.py
+metadpy/sdt.py
+metadpy/utils.py
+metadpy.egg-info/PKG-INFO
+metadpy.egg-info/SOURCES.txt
+metadpy.egg-info/dependency_links.txt
+metadpy.egg-info/requires.txt
+metadpy.egg-info/top_level.txt
+metadpy/datasets/__init__.py
+metadpy/datasets/rm.txt
+metadpy/models/subject_level_pymc.py
+metadpy/tests/__init__.py
+metadpy/tests/test_bayesian.py
+metadpy/tests/test_mle.py
+metadpy/tests/test_plotting.py
+metadpy/tests/test_sdt.py
+metadpy/tests/test_utils.py

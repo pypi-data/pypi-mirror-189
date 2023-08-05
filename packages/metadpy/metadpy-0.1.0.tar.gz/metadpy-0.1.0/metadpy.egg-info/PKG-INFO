@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: metadpy
+Version: 0.1.0
+Summary: metadpy: Metacognitive efficiency modelling in Python
+Author: Nicolas Legrand
+Author-email: nicolas.legrand@cas.au.dk
+Maintainer: Nicolas Legrand
+Maintainer-email: nicolas.legrand@cas.au.dk
+License: GPL-3.0
+License-File: LICENSE
+
+Fitting behavioural and cognitive models of metacognitive efficiency in Python.
