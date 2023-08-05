@@ -1,0 +1,16 @@
+{% load static %}
+
+<div class="card">
+    <h5 class="card-header">EoL Report</h5>
+    <div class="card-body">
+      <div id="report-chart" 
+      data-devicetypeid="{{device_type_id}}"
+      data-devapiurl="{% url 'plugins-api:netos_core-api:netoshardwaredevice-list' %}"
+      ></div>
+    </div>
+  </div>
+
+{% block javascript %}
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="{% static 'netos_core/js/eol_report.js' %}"></script>
+{% endblock javascript %}
