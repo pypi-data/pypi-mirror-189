@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: lexsetAPI
+Version: 3.1.2
+Author: F. Bitonti
+Author-email: Francis@lexset.ai
+License: Apache 2.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: pyjson
+Requires-Dist: PyYAML
+Requires-Dist: pyBase64
+Requires-Dist: twdm
+Requires-Dist: concurrent.futures
+Requires-Dist: time
+Requires-Dist: subprocess
+Requires-Dist: os
+Requires-Dist: threading
+Requires-Dist: requests
+
