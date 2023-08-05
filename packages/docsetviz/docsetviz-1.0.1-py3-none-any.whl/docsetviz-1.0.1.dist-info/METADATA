@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: docsetviz
+Version: 1.0.1
+Summary: Docset Visualization Tool
+Author: yanaenen
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: docset
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: paramiko
+Requires-Dist: PyQt5
+
+UNKNOWN
+
