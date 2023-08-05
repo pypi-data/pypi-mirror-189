@@ -1,0 +1,10 @@
+slutil/CsvRepository.py,sha256=PMdvsh7lXlNGVFyAd6uE3fZf1JZEGDXhs8eVoMQrCEI,1220
+slutil/CsvUow.py,sha256=oLgoO-tY-ZCD-nWezoyILbGMl9nt4bnRPTlckX2lvt0,875
+slutil/Record.py,sha256=Ed0m3uCcWLGpWdXla0rXlPpPGzRf-t7sLWVxllwjB_U,1452
+slutil/__init__.py,sha256=LyVsN6QRbZCjxbel-HtG6unyJHf29KfzURL0WnqwB_I,21
+slutil/main.py,sha256=GXvIFxQj4Ab5SAlapoEjzZGVzlbZ7w_3xP4bwkyc_Oo,3740
+slutil/services.py,sha256=zJphd5JksPs0CndqMpDI7NV0peci7tRvGn0F3IXbUTg,1775
+slutil/slurm.py,sha256=fn_8z1JBsVqlMFDe_eZX28rmre5HbBFgBANJtTFyqdA,1279
+slutil-0.5.0.dist-info/METADATA,sha256=ZEpto_YUKC2EKXzqushGfL8EIjqdtFR7gdk8ZPd1wXI,1906
+slutil-0.5.0.dist-info/WHEEL,sha256=SlW3K6T2LNPbN9-QzFT1pS72PIuYOJEoe_9_lIJkxrk,92
+slutil-0.5.0.dist-info/RECORD,,
