@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: aiko-kernel
+Version: 1.0.1
+Summary: A small kernel to using in Python or MicroPython
+Author-email: Cixo <cixolaptop@gmail.com>
+Project-URL: Homepage, https://github.com/CixoDevelop/aiko_python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Aiko Python
+
+## What is it?
+This is Aiko (very simple operating system) port for Python and MicroPython. 
+It is very light, simple and effective. You can use it like standard Aiko, but
+in MicroPython, to make build projects on ESP or RPi pico very very simple.

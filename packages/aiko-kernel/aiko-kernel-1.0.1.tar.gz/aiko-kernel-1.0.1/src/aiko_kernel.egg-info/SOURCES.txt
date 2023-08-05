@@ -1,0 +1,11 @@
+LICENSE
+ReadMe.md
+pyproject.toml
+src/aiko/__init__.py
+src/aiko/kernel.py
+src/aiko/message_box.py
+src/aiko/process.py
+src/aiko_kernel.egg-info/PKG-INFO
+src/aiko_kernel.egg-info/SOURCES.txt
+src/aiko_kernel.egg-info/dependency_links.txt
+src/aiko_kernel.egg-info/top_level.txt
