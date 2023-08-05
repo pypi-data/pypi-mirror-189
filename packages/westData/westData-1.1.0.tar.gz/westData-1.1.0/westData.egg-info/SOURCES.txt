@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+README.rst
+pyproject.toml
+setup.py
+westData/__init__.py
+westData/modelTools.py
+westData/riskControl.py
+westData.egg-info/PKG-INFO
+westData.egg-info/SOURCES.txt
+westData.egg-info/dependency_links.txt
+westData.egg-info/requires.txt
+westData.egg-info/top_level.txt
