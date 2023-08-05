@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: contract-nli
+Version: 1.0.0
+Summary: Text Classifier to access compliance
+Home-page: https://github.com/sgudiduri/CSE-6748/tree/main/production
+Author: Siddharth Gudiduri
+Author-email: siddu.gemeni@gmail.com
+License: BSD-3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9.16
+Description-Content-Type: text/markdown
+
+Text Classifier to access compliance
