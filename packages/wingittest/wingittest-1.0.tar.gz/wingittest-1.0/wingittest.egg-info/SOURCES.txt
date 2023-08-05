@@ -1,0 +1,9 @@
+LICENSE.txt
+pyproject.toml
+setup.cfg
+setup.py
+wingittest/__init__.py
+wingittest.egg-info/PKG-INFO
+wingittest.egg-info/SOURCES.txt
+wingittest.egg-info/dependency_links.txt
+wingittest.egg-info/top_level.txt
