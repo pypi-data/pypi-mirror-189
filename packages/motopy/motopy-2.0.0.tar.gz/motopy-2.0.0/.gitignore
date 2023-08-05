@@ -1,0 +1,5 @@
+__pycache__
+dist
+tests/out
+tests/*.json
+*.log
