@@ -1,0 +1,10 @@
+website:
+  sidebar:
+    contents:
+      - index.ipynb
+      - 00_mountainise.ipynb
+      - belgium.qmd
+      - brusssels.ipynb
+      - examples.ipynb
+      - talk.ipynb
+      - talk.slides.html
