@@ -1,0 +1,263 @@
+{
+    "queries": [
+        {
+            "id": "912c6672-129f-4800-bb07-73df43dbcdfd",
+            "name": "Churn - Subscriptions based on Internet Service - Universal",
+            "description": null,
+            "query": "select platform, churn, count(*) as event_count from lakehouse_churn.churn_app_events inner join lakehouse_churn.churn_users using (user_id) where platform is not null\ngroup by platform, churn",
+            "options": {
+                "parent": "folders/2963708295078839",
+                "apply_auto_limit": false,
+                "folder_node_status": "ACTIVE",
+                "folder_node_internal_name": "tree/2963708295078840",
+                "parameters": [],
+                "schema": null,
+                "catalog": null
+            },
+            "visualizations": [
+                {
+                    "id": "c7026696-e967-4d84-af93-5c17ff63692e",
+                    "type": "CHART",
+                    "name": "Chart",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "column",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal",
+                            "enabled": true,
+                            "placement": "auto"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            },
+                            "title": {
+                                "text": "platforms"
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "linear",
+                                "title": {
+                                    "text": "in-app events"
+                                }
+                            },
+                            {
+                                "type": "linear",
+                                "opposite": true,
+                                "title": {
+                                    "text": "streaming_movies_count"
+                                }
+                            }
+                        ],
+                        "alignYAxesAtZero": false,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": "",
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "0": {
+                                "color": "#87BFE0"
+                            },
+                            "1": {
+                                "color": "#AB506F"
+                            },
+                            "event_count": {
+                                "yAxis": 0
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": false,
+                        "swappedAxes": true,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "platform"
+                            },
+                            "y": [
+                                {
+                                    "column": "event_count"
+                                }
+                            ],
+                            "series": {
+                                "column": "churn"
+                            },
+                            "yError": {
+                                "column": "platform"
+                            }
+                        },
+                        "showPlotlyControls": true,
+                        "condensed": true,
+                        "withRowNumber": true,
+                        "isAggregationOn": false
+                    },
+                    "query_plan": null
+                },
+                {
+                    "id": "cf1b69fe-305f-4c29-b666-1ac1347abb95",
+                    "type": "TABLE",
+                    "name": "Table",
+                    "description": "",
+                    "options": {
+                        "version": 2
+                    },
+                    "query_plan": null
+                }
+            ]
+        },
+        {
+            "id": "10a6cb0e-4693-4a88-925e-435e3f5d0439",
+            "name": "Churn - Total MRR - Universal",
+            "description": null,
+            "query": "SELECT sum(amount)/100 as MRR FROM lakehouse_churn.churn_orders o WHERE month(to_timestamp(transaction_date, 'MM-dd-yyyy HH:mm:ss')) = \n      (select max(month(to_timestamp(transaction_date, 'MM-dd-yyyy HH:mm:ss'))) from lakehouse_churn.churn_orders);",
+            "options": {
+                "parent": "folders/2963708295078839",
+                "apply_auto_limit": false,
+                "folder_node_status": "ACTIVE",
+                "folder_node_internal_name": "tree/2963708295078841",
+                "parameters": [],
+                "schema": null,
+                "catalog": null
+            },
+            "visualizations": [
+                {
+                    "id": "1ef87f57-ed18-48f0-916b-210066be0e8d",
+                    "type": "COUNTER",
+                    "name": "MRR ($)",
+                    "description": "",
+                    "options": {
+                        "counterLabel": "",
+                        "counterColName": "MRR",
+                        "rowNumber": 1,
+                        "targetRowNumber": 1,
+                        "stringDecimal": 0,
+                        "stringDecChar": ".",
+                        "stringThouSep": ",",
+                        "tooltipFormat": "0,0.000",
+                        "showPlotlyControls": true,
+                        "condensed": true,
+                        "withRowNumber": true,
+                        "stringPrefix": "$"
+                    },
+                    "query_plan": null
+                },
+                {
+                    "id": "95b6b48b-1a0f-4a43-9643-3183d24ca369",
+                    "type": "TABLE",
+                    "name": "Table",
+                    "description": "",
+                    "options": {
+                        "version": 2
+                    },
+                    "query_plan": null
+                }
+            ]
+        }
+    ],
+    "dashboard": {
+        "id": "19394330-2274-4b4b-90ce-d415a7ff2130",
+        "name": "Customer Churn - Universal",
+        "widgets": [
+            {
+                "id": "285eb8f4-66dc-44b9-8c82-37d37ae5af9e",
+                "width": 1,
+                "options": {
+                    "parameterMappings": {},
+                    "title": "Total MRR",
+                    "description": "",
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 1,
+                        "sizeY": 4,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 1,
+                        "maxSizeY": 1000,
+                        "col": 0,
+                        "row": 0
+                    },
+                    "overrideColors": false
+                },
+                "dashboard_id": "19394330-2274-4b4b-90ce-d415a7ff2130",
+                "text": "",
+                "visualization_id": "1ef87f57-ed18-48f0-916b-210066be0e8d"
+            },
+            {
+                "id": "b91a1c3e-a344-4f8a-97f1-715b9176a63a",
+                "width": 1,
+                "options": {
+                    "parameterMappings": {},
+                    "title": "Subscriptions based on Internet Service",
+                    "description": "",
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 3,
+                        "sizeY": 8,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 5,
+                        "maxSizeY": 1000,
+                        "col": 1,
+                        "row": 0
+                    }
+                },
+                "dashboard_id": "19394330-2274-4b4b-90ce-d415a7ff2130",
+                "text": "",
+                "visualization_id": "c7026696-e967-4d84-af93-5c17ff63692e"
+            },
+            {
+                "id": "ca00e0f2-4c35-4aa5-8bca-6e379e1562dc",
+                "width": 1,
+                "options": {
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 6,
+                        "sizeY": 1,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 1,
+                        "maxSizeY": 1000,
+                        "col": 0,
+                        "row": 15
+                    },
+                    "parameterMappings": {}
+                },
+                "dashboard_id": "19394330-2274-4b4b-90ce-d415a7ff2130",
+                "text": "Field Demo dashboard. Please do not edit\n![tracking_img](https://www.google-analytics.com/collect?v=1&gtm=GTM-NKQ8TT7&tid=UA-163989034-1&cid=555&aip=1&t=event&ec=field_demos&ea=display&dp=%2F42_field_demos%2Ffeatures%2Fmlops%2Fchurn&dt=DASHBOARD_CHURN)"
+            }
+        ],
+        "tags": [
+            "mlops_field_demos",
+            "field_demos",
+            "field_demos_retail"
+        ],
+        "color_palette": null,
+        "dashboard_filters_enabled": false,
+        "is_archived": false
+    },
+    "version": "1.0"
+}
