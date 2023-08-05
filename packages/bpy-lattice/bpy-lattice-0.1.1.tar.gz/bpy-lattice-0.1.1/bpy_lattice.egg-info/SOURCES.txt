@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+versioneer.py
+bpy_lattice/__init__.py
+bpy_lattice/_version.py
+bpy_lattice/camera.py
+bpy_lattice/lattice.py
+bpy_lattice/materials.py
+bpy_lattice/orbit.py
+bpy_lattice/slicer.py
+bpy_lattice.egg-info/PKG-INFO
+bpy_lattice.egg-info/SOURCES.txt
+bpy_lattice.egg-info/dependency_links.txt
+bpy_lattice.egg-info/requires.txt
+bpy_lattice.egg-info/top_level.txt
