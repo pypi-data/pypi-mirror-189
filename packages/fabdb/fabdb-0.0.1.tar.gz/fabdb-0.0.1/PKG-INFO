@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: fabdb
+Version: 0.0.1
+Summary: CLI and Utility for fabdb.net
+Project-URL: Homepage, https://github.com/dorthu/fabdb-python
+Project-URL: Bug Tracker, https://github.com/dorthu/fabdb-python/issues
+Author-email: dorthu <dorthu2+fabdb-python@gmail.com>
+License: Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+        list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+        this list of conditions and the following disclaimer in the documentation
+        and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its contributors
+        may be used to endorse or promote products derived from this software without
+        specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+        ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+        WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# fabdb-cli
+
+A Command Line Interface and general-purpose library for querying [fabdb](https://fabdb.net)
+in python.
+
+## Usage
+
+:warning: Currently under construction :warning:
+
+```python3
+from fabdb.client import FabDBClient
+
+client = FabDBClient()
+
+print("Single card by ID:")
+nimblism = client.get_card("nimblism-yellow")
+print(nimblism.name)
+print()
+
+
+print("Search Cards:")
+ranger_cards = client.search_cards(class_="ranger", pitch=2)
+for c in ranger_cards:
+  # automatically handles requesting additional pages as needed
+  print(c)
+print()
+
+
+print("Find a deck:")
+deck = client.get_deck("bYDmozyB")
+print(deck.name)
+print(deck.cards[0])
+```
+
+## Coming Soon
+
+* CLI interface
+* Textual output formatters
+* Interactive/expanded search
+* Local card cache
