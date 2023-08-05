@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+# This file is placed in the Public Domain.
+
+
+"write your own commands"
+
+
+import inspect
+import os
+import sys
+
+
+from opr.hdl import Command, Handler
+from opr.run import Cfg, command, parse
+from opr.scn import scancmd
+from opr.tbl import Wd
+
+
+from operbot import cmd, irc, rss
+
+
+import operbot
+
+
+Cfg.name = "operbot"
+Wd.workdir = "/var/lib/operbot/"
+
+
+class CLI(Handler):
+
+    @staticmethod
+    def raw(txt):
+        print(txt)
+        sys.stdout.flush()
+
+
+
+def main():
+    parse(' '.join(sys.argv[1:]))
+    scancmd(cmd)
+    scancmd(irc)
+    scancmd(rss)
+    cli = CLI()
+    command(Cfg.prs.otxt, cli)
+    
+
+main()
