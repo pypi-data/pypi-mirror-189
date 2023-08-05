@@ -1,0 +1,2 @@
+[console_scripts]
+concierge-cli = concierge_cli.cli:main
