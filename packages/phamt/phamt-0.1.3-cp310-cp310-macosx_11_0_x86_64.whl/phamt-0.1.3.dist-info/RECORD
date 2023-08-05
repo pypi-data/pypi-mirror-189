@@ -1,0 +1,12 @@
+phamt/__init__.py,sha256=ENPjqBwDBBlWPAaRfRhEaTYxg0szpdY3JDEZX_SB8h0,407
+phamt/c_core.cpython-310-darwin.so,sha256=6oXs5f96SUEzHlY2guQq46_4XUOsYtmcO2h_s2kGMVU,75008
+phamt/phamt.c,sha256=F-qK7mwAkIDcW2CUPgTPfPesu2LwFOgPC6vqut0q49c,28935
+phamt/phamt.h,sha256=fH456xp--M0pyoLxoauMs6p9bTxJs4rtyKFeCniF0WM,75748
+phamt/py_core.py,sha256=b3DMczIprP5I66ZEemHuY0qYMl0XnIozRGcmET5Me7o,20027
+phamt/test/__init__.py,sha256=bXOHmLX_r5RmWc5ZyRdpQi0b4Bp4ZQa-7F6HoAG6Mbs,245
+phamt/test/phamt.py,sha256=yitYQfx3MrOiRiVolx2fODU8dtbX1J0NfimJZTVhIZs,12497
+phamt-0.1.3.dist-info/LICENSE,sha256=txh5kek_HdkpjZptSwqg2g2tmTShCD1cN1dLYtxreSE,1071
+phamt-0.1.3.dist-info/METADATA,sha256=BQ3JdLYG2O5XF3Z2RENX5MXC6AE7HVHqBMYHiN6gkOg,1174
+phamt-0.1.3.dist-info/WHEEL,sha256=xqPktfbMcRP5QxLmFLhrMmPREVXJMjALWzg8FFwO5Cw,111
+phamt-0.1.3.dist-info/top_level.txt,sha256=30AiRBP_e0__jm44xqIFo6xEg3FVlrUzQax1yKUmc0c,6
+phamt-0.1.3.dist-info/RECORD,,
