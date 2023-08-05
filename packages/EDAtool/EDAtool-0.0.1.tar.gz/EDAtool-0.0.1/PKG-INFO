@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: EDAtool
+Version: 0.0.1
+Summary: EDA_TOOL
+Home-page: UNKNOWN
+Author: Ketto
+Author-email: analytics@ketto.org
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# eda
+
+Under construction! Not ready for use yet! Currently experimenting and planning!
+
+Developed by ketto (c) 2023
+
+## Examples of How To Use (Buggy Alpha Version)
+
+Creating A Server
+
+```python
+# hello world
+print("Hello World")
+
+```
+
