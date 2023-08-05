@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+TSPLvidstream/__init__.py
+TSPLvidstream/audio.py
+TSPLvidstream/streaming.py
+TSPLvidstream.egg-info/PKG-INFO
+TSPLvidstream.egg-info/SOURCES.txt
+TSPLvidstream.egg-info/dependency_links.txt
+TSPLvidstream.egg-info/requires.txt
+TSPLvidstream.egg-info/top_level.txt
