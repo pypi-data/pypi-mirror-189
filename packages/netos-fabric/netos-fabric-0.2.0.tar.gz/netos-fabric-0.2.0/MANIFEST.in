@@ -1,0 +1,3 @@
+recursive-include netos_fabric/templates *.html
+recursive-include netos_fabric/static *.js
+recursive-include netos_fabric/static *.jpeg
