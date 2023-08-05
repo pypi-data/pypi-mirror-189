@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: nttt
+Version: 0.5.3
+Summary: A utility for Nina to clean up translated projects
+Home-page: https://github.com/raspberrypilearning/nttt
+Author: Raspberry Pi Foundation
+Author-email: web@raspberrypi.org
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: nttt,pypi,package
+Platform: UNKNOWN
+Requires-Python: >=3.7
