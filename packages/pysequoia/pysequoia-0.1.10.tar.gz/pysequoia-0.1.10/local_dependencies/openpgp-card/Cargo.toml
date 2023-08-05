@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: 2021-2022 Heiko Schaefer <heiko@schaefer.name>
+# SPDX-License-Identifier: MIT OR Apache-2.0
+
+[package]
+name = "openpgp-card"
+description = "A client implementation for the OpenPGP card specification"
+license = "MIT OR Apache-2.0"
+version = "0.3.3"
+authors = ["Heiko Schaefer <heiko@schaefer.name>"]
+edition = "2018"
+repository = "https://gitlab.com/openpgp-card/openpgp-card"
+documentation = "https://docs.rs/crate/openpgp-card"
+
+[dependencies]
+blanket = "0.2.0"
+nom = "7"
+hex-slice = "0.1"
+thiserror = "1"
+log = "0.4"
+chrono = "0.4"
+
+[dev-dependencies]
+hex-literal = "0.3"
