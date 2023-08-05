@@ -1,0 +1,10 @@
+absl-py
+ml-collections
+wandb
+gcsfs
+cloudpickle
+
+[jax]
+jax
+flax
+optax
