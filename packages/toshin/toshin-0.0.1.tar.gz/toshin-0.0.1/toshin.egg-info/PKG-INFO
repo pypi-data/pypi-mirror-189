@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: toshin
+Version: 0.0.1
+Summary: describing about Chelsea football club!
+Home-page: https://github.com/Robotboy007/
+Download-URL: https://github.com/Robotboy007/
+Author: Mudrik
+Author-email: loong.wissawakorn@gmail.com
+License: MIT
+Keywords: Chelsea,football
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+License-File: LICENSE.txt
+
+this package was make for fun, package’s owner is Chelsea fans.
+===============================================================
+
+PyPi: https://pypi.org/project/toshin/
+
+Hello evryone this package is about Chelsea football club!
+
+How to setup
+~~~~~~~~~~~~
+
+เปิด CMD / Terminal
+
+.. code:: python
+
+   pip install toshin
+
+How to use
+~~~~~~~~~~
+
+-  open IDLE and tyoe…
+
+.. code:: python
+
+   from toshin import Chelsea
+
+       chelsea = Chelsea()
+       chelsea.showLegend()
+       chelsea.showLegendMove()
+       chelsea.showInfo()
+       chelsea.showFootball()
+
+developer : anonymous
+
+YouTube: https://www.youtube.com

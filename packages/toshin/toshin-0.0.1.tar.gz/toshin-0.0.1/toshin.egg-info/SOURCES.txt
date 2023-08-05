@@ -1,0 +1,11 @@
+LICENSE
+LICENSE.txt
+README.rst
+setup.cfg
+setup.py
+toshin/__init__.py
+toshin/chelsea.py
+toshin.egg-info/PKG-INFO
+toshin.egg-info/SOURCES.txt
+toshin.egg-info/dependency_links.txt
+toshin.egg-info/top_level.txt
