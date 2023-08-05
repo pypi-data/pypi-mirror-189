@@ -1,0 +1,10 @@
+README.md
+setup.py
+vizzy_doc.py
+vizzy_sentence.py
+vizzy_token.py
+vizzy.egg-info/PKG-INFO
+vizzy.egg-info/SOURCES.txt
+vizzy.egg-info/dependency_links.txt
+vizzy.egg-info/requires.txt
+vizzy.egg-info/top_level.txt
