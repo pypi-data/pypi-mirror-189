@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/jellml-lightning/JellyMLLightningPlugin.py
+src/jellml-lightning/__init__.py
+src/jellyml_lightning.egg-info/PKG-INFO
+src/jellyml_lightning.egg-info/SOURCES.txt
+src/jellyml_lightning.egg-info/dependency_links.txt
+src/jellyml_lightning.egg-info/requires.txt
+src/jellyml_lightning.egg-info/top_level.txt
