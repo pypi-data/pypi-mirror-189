@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/eda_tool_ketto.egg-info/PKG-INFO
+src/eda_tool_ketto.egg-info/SOURCES.txt
+src/eda_tool_ketto.egg-info/dependency_links.txt
+src/eda_tool_ketto.egg-info/top_level.txt
+src/mypackage/__init__.py
+src/mypackage/main.py
