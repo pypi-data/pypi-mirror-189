@@ -1,0 +1,12 @@
+LICENSE
+README.md
+quasar_unred_demo.ipynb
+setup.cfg
+setup.py
+src/__init__.py
+src/quasar_unred.py
+src/quasar_unred.egg-info/PKG-INFO
+src/quasar_unred.egg-info/SOURCES.txt
+src/quasar_unred.egg-info/dependency_links.txt
+src/quasar_unred.egg-info/requires.txt
+src/quasar_unred.egg-info/top_level.txt
