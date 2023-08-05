@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "cpmax-toolbox"
+version = "0.0.18.20230201"
+description = "Toolbox for cpmax"
+authors = ["JRoseCPMax <j.rose@cpmax.com>"]
+license = "CC BY-NC-SA 4.0"
+readme = "README.md"
+packages = [{include = "cpmax_toolbox"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.23.0"
+pytz = "^2022.7.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
