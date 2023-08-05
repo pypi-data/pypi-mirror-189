@@ -1,0 +1,17 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+__init__.py
+requirements.txt
+setup.py
+core/sigma_dq_check_ends_with.py
+core/sigma_dq_check_field_compare_with_value.py
+core/sigma_dq_check_is_in_list.py
+core/sigma_dq_check_is_null.py
+helper/sigma_dq_generate_dq_report.py
+sigma_dq.egg-info/PKG-INFO
+sigma_dq.egg-info/SOURCES.txt
+sigma_dq.egg-info/dependency_links.txt
+sigma_dq.egg-info/requires.txt
+sigma_dq.egg-info/top_level.txt
