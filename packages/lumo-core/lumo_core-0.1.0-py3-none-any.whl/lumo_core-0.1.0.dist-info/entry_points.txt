@@ -1,0 +1,2 @@
+[console_scripts]
+lumo_core = lumo_core.cli.cli:main
