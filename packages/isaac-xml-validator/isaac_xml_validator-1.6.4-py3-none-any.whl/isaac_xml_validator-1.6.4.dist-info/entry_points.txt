@@ -1,0 +1,2 @@
+[console_scripts]
+isaac-xml-validator = isaac_xml_validator:main
