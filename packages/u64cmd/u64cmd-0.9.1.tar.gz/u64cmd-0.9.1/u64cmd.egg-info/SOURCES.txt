@@ -1,0 +1,16 @@
+.gitignore
+Makefile
+README.md
+dev_req.txt
+pyproject.toml
+u64cmd/__init__.py
+u64cmd/__main__.py
+u64cmd/cli.py
+u64cmd/socket.py
+u64cmd/util.py
+u64cmd.egg-info/PKG-INFO
+u64cmd.egg-info/SOURCES.txt
+u64cmd.egg-info/dependency_links.txt
+u64cmd.egg-info/entry_points.txt
+u64cmd.egg-info/requires.txt
+u64cmd.egg-info/top_level.txt
