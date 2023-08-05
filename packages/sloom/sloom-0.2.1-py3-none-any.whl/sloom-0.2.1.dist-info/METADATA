@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: sloom
+Version: 0.2.1
+Summary: Webscraper
+Home-page: https://github.com/ReedHunsaker/Webscraper
+Author: Reed Hunsaker
+Author-email: reed.hunsaker@gmail.com
+License: Apache License 2.0
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: bs4
+Requires-Dist: pytest
+
+# sloom
+
+UNDER DEVELOPMENT v 0.2.0
+
+Sloom is a webscrapper / crawling library
+
+## Setup
+
+to get use 
+```
+pip install sloom
+```
+
+to update use
+```
+ pip install sloom --upgrade
+ ```
+
+ ## Documentation
+
+ Simple program to run sloom:
+
+ ```python
+ import sloom
+
+ sloom.run("https://example.com")
+
+ ```
