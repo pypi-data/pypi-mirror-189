@@ -1,0 +1,2 @@
+[girder.plugin]
+ninjato_api = girder_ninjato_api:NinjatoPlugin
