@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+dmerk/__init__.py
+dmerk/cli.py
+dmerk/compare.py
+dmerk/dmerk.py
+dmerk/utils.py
+dmerk.egg-info/PKG-INFO
+dmerk.egg-info/SOURCES.txt
+dmerk.egg-info/dependency_links.txt
+dmerk.egg-info/entry_points.txt
+dmerk.egg-info/top_level.txt
