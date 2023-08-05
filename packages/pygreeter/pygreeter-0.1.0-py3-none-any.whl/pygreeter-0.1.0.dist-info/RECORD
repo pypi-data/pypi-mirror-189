@@ -1,0 +1,8 @@
+pygreeter/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+pygreeter/__main__.py,sha256=TBnhM0W-dlSznHUtrwwhtTmSiEhVOYpCT-XX2DAjR1Q,135
+pygreeter/greet/__init__.py,sha256=EsSlwcDq3UOzxP_DVDie8Tyfg5L7D6gyEG3qEXxoAMQ,310
+pygreeter/greet/_utils.py,sha256=uJAeo1C1GgwuQX2febSVUSncToGWdkBpNnsXdt_PwqM,205
+pygreeter-0.1.0.dist-info/METADATA,sha256=T-CuB_7bPClLJKfuB5EWd2tzod5Wy3OGfzA74CcPxvg,603
+pygreeter-0.1.0.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+pygreeter-0.1.0.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+pygreeter-0.1.0.dist-info/RECORD,,
