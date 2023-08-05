@@ -1,0 +1,7 @@
+setup.py
+amgxp/__init__.py
+amgxp.egg-info/PKG-INFO
+amgxp.egg-info/SOURCES.txt
+amgxp.egg-info/dependency_links.txt
+amgxp.egg-info/requires.txt
+amgxp.egg-info/top_level.txt
