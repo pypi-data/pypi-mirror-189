@@ -1,0 +1,7 @@
+numpy
+tabulate
+scikit-learn
+
+[dev]
+twine
+build
