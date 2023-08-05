@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: argparge
+Version: 0.1.0
+Summary: A very simple tool to create beautiful console application by using native argparse.
+License: MIT
+Author: Ozcan Yarimdunya
+Author-email: ozcan.yarimdunya@sahibinden.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
