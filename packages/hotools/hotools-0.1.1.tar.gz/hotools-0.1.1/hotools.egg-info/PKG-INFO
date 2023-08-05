@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: hotools
+Version: 0.1.1
+Summary: hotools: Tools for Python made by Hosoi.
+Home-page: https://github.com/hosson/hotools
+Author: HOSOI Hiroyuki
+Author-email: hosoi0410@gmail.com
+Maintainer: HOSOI Hiroyuki
+Maintainer-email: hosoi0410@gmail.com
+License: MIT
+Download-URL: https://github.com/hosson/hotools
+Keywords: tool
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# hotools
+A python tools created by Hosoi.
+
+# History
+## v.0.1.1 2023-02-01
+Updated the graph tools.
+- Supported the logarithmic Y axis.
+- Changed not to display unnecessary legends.
+## v.0.1.0 2022-11-10
+An initial release.
+
+
