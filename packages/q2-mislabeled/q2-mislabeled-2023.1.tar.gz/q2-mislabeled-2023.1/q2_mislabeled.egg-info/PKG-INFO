@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: q2-mislabeled
+Version: 2023.1
+Summary: q2-mislabeled: a QIIME 2 plugin to check sample mislabeling and contamination
+Home-page: 
+Author: Daniel McDonald
+Author-email: d3mcdonald@eng.ucsd.edu
+Maintainer: Daniel McDonald
+Maintainer-email: d3mcdonald@eng.ucsd.edu
+License: BSD-3-Clause
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+License-File: LICENSE
+
+q2-mislabeled is a QIIME 2 plugin that facilitates detection of mislabeled and contaminated samples. It does so by using q2-sample-classifier, and SourceTracker2.

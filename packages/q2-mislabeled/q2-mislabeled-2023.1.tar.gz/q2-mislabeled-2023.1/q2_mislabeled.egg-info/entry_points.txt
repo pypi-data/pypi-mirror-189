@@ -1,0 +1,2 @@
+[qiime2.plugins]
+q2-mislabeled = q2_mislabeled.plugin_setup:plugin
