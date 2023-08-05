@@ -1,0 +1,121 @@
+[build-system]
+requires = ["setuptools", "wheel", "cython"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pubpypack-harmony-udny-yule"
+version = "0.0.2"
+authors = [
+    { name = "Udny Yule", email = "udny.yule+1@gmail.com" }
+]
+description = "This package demonstrates the use of pyproject.toml."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = [
+    "termcolor>=1.1.0,<2",
+]
+
+[project.urls]
+homepage = "https://github.com/udny-yule/first-python-package"
+documentation = "https://github.com/udny-yule/first-python-package"
+repository = "https://github.com/udny-yule/first-python-package"
+
+# https://setuptools.pypa.io/en/latest/userguide/entry_point.html
+[project.scripts]
+harmony = "imppkg.harmony:main"
+
+# https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+[tool.setuptools.package-data]
+imppkg = ["*.json", "*.pyx"]
+
+# https://docs.pytest.org/en/6.2.x/customize.html#pyproject-toml
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "--cov --strict-markers"
+xfail_strict = true
+testpaths = [
+    "test",
+]
+
+# https://coverage.readthedocs.io/en/latest/config.html
+[tool.coverage.run]
+branch = true
+source = ["imppkg"]
+
+# https://coverage.readthedocs.io/en/latest/config.html#report
+[tool.coverage.report]
+show_missing = true
+
+# https://tox.wiki/en/4.3.5/config.html#pyproject-toml
+[tool.tox]
+legacy_tox_ini = """
+    [tox]
+    min_version = 4.0
+    isolated_build = True
+    env_list =
+        py310
+        py39
+
+    [testenv] # specify deps and commands that will serve as the base for any run-by-default environments specified in env_list
+    deps =
+        pytest
+        pytest-cov
+        hypothesis
+        pytest-randomly
+    commands = pytest
+
+    [testenv:get_my_ip] # a "test environment" that will not be run by default
+    deps = requests
+    commands =
+        python -c "import requests; print(requests.get('https://canhazip.com').text)"
+    skip_install = True
+
+    [testenv:typecheck]
+    deps = # implicitly, the package first-python-package is a dependency
+        pytest
+        mypy
+        types-termcolor
+
+    commands =
+        mypy --ignore-missing-imports {posargs:src test}
+
+    [testenv:format]
+    skip_install = True
+    deps =
+        black
+    commands =
+        black {posargs:--check --diff src test}
+
+    [testenv:lint]
+    skip_install = True
+    deps =
+        flake8
+        flake8-bugbear
+        flake8-pyproject
+    commands =
+        flake8 {posargs: src test}
+"""
+
+# https://mypy.readthedocs.io/en/stable/config_file.html
+[tool.mypy]
+check_untyped_defs = true
+namespace_packages = true
+pretty = true
+python_version = "3.9"
+show_error_context = true
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.black]
+line-length = 120
+target-version = ['py39', 'py310']
+
+# https://pypi.org/project/Flake8-pyproject/
+[tool.flake8]
+max-line-length = 120
+

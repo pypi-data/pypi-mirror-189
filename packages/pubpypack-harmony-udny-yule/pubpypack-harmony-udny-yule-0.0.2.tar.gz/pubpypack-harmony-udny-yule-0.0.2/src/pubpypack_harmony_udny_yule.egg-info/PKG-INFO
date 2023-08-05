@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pubpypack-harmony-udny-yule
+Version: 0.0.2
+Summary: This package demonstrates the use of pyproject.toml.
+Author-email: Udny Yule <udny.yule+1@gmail.com>
+License: MIT
+Project-URL: homepage, https://github.com/udny-yule/first-python-package
+Project-URL: documentation, https://github.com/udny-yule/first-python-package
+Project-URL: repository, https://github.com/udny-yule/first-python-package
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# first-python-package
+
+This package demonstrates the use of pyproject.toml.
+
+## Installation
+
+```shell
+$ python -m pip install first-python-package
+```
