@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: 2021-2022 Heiko Schaefer <heiko@schaefer.name>
+# SPDX-License-Identifier: MIT OR Apache-2.0
+
+[package]
+name = "openpgp-card-sequoia"
+description = "Wrapper of openpgp-card for use with Sequoia PGP"
+license = "MIT OR Apache-2.0"
+version = "0.1.0"
+authors = ["Heiko Schaefer <heiko@schaefer.name>"]
+edition = "2018"
+repository = "https://gitlab.com/openpgp-card/openpgp-card"
+documentation = "https://docs.rs/crate/openpgp-card-sequoia"
+
+[dependencies]
+sequoia-openpgp = { version = "1.4", default-features = false }
+nettle = "7"
+openpgp-card = { path = "../openpgp-card", version = "0.3.3" }
+chrono = "0.4"
+anyhow = "1"
+thiserror = "1"
+log = "0.4"
+
+[dev-dependencies]
+openpgp-card-pcsc = { path = "../openpgp-card-pcsc", version = "0.3" }
+#openpgp-card-scdc = { path = "../scdc", version = "0.3" }
+env_logger = "0.9"
+
+[[example]]
+name = "test"
+
+[features]
+default = ["crypto-nettle"]
+crypto-nettle = ["sequoia-openpgp/crypto-nettle"]
