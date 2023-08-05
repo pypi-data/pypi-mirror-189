@@ -1,0 +1,12 @@
+cherrypy
+configargparse
+mako
+numpy
+passlib
+psycopg2
+requests
+scikit-learn
+scipy
+setuptools
+sqlalchemy
+twiget
