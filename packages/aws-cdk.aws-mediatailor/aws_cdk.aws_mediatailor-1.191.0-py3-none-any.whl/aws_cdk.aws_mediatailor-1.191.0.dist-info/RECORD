@@ -1,0 +1,10 @@
+aws_cdk/aws_mediatailor/__init__.py,sha256=7HdhhhMXPRMMA-_oNxF6vCAW_D_SnPujVBLJyYGa-1U,104261
+aws_cdk/aws_mediatailor/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_mediatailor/_jsii/__init__.py,sha256=v0kiN2aN307I-1d6EYb6ADaJ_QmM3x-9zFxw0suSe-Q,404
+aws_cdk/aws_mediatailor/_jsii/aws-mediatailor@1.191.0.jsii.tgz,sha256=PFb67KXmPUeI35N9Hezi58q4Oo4uvNagql1YIfkyBbw,52195
+aws_cdk.aws_mediatailor-1.191.0.dist-info/LICENSE,sha256=YA6CL2YE08NgoURWXRTrec3mNy-KAR-_UNdiMqgNVMI,11391
+aws_cdk.aws_mediatailor-1.191.0.dist-info/METADATA,sha256=BJpoyhcPR38EnpliITZbm8p4YS6E0Qq1XnFdiVJ36tA,3152
+aws_cdk.aws_mediatailor-1.191.0.dist-info/NOTICE,sha256=XtGET2JQh3C41orQUenLTefWItOqLmu2N-mGwW7t3Fo,113
+aws_cdk.aws_mediatailor-1.191.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+aws_cdk.aws_mediatailor-1.191.0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_mediatailor-1.191.0.dist-info/RECORD,,
