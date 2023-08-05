@@ -1,0 +1,3 @@
+prune tests
+exclude	token_login_api/app.py
+exclude token_login_api/repositories.py
