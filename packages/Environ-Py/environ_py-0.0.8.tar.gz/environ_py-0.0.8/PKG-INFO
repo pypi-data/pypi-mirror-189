@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: Environ-Py
+Version: 0.0.8
+Summary: A Package made for you to make your project even BETTER! (VERSION 0.0.7 OUT!)
+Project-URL: Homepage, https://github.com/OpenStudioX/Environ
+Project-URL: Bug Tracker, https://github.com/OpenStudioX/Environ/issues/choose
+Project-URL: Examples, https://github.com/OpenStudioX/Environ/tree/main/examples
+Project-URL: Guide, https://github.com/OpenStudioX2/Environ/wiki/guide
+Author: Rayaan khan
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: pycolortools==0.0.2
+Description-Content-Type: text/markdown
+
+# Environ
+Environ is a **python** framework built for you to manage your project in a few clicks, it creates an integrated file environment so your project can be awesome, a shell called EnvironShell which you can use to manage your project ALL IN ONE!
+
+
+How to access environshell:
+` python -m environ shell `
+
+
+A few EnvironShell commands:
+` help `,
+` crfile [FILENAME] [CONTENTS] `
+"Contents can contain \n to declare newlines"
+
+
+
+CHANGELOG 0.0.8:
+* fixed issue with `index.html` creation
+
+
+
+**Please try our module and report issues at our [bugtracker](https://github.com/OpenStudioX/Environ/issues/choose)**
+
+**We are happy to say that our module has been emptied of bugs!**
