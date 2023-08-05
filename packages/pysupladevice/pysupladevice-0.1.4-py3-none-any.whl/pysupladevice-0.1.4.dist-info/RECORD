@@ -1,0 +1,9 @@
+pysupladevice/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pysupladevice/channels.py,sha256=0G8mCHdv_M-b8UEbJxm7JO14YtWOucQ45dfQBCWU78U,5822
+pysupladevice/device.py,sha256=NHoU5yWjqh8qkt9Lb9mp-kp2wFL9jTvGTj39AUH6yNY,11667
+pysupladevice/network.py,sha256=42CB-HwMAiCrc3fjm6SksWloN-u21NfnS0z1Qlb0Z2w,1780
+pysupladevice/proto.py,sha256=UOA2arjsAr57yvTz64FpX32lKY2gNmsOtSplwHMmByk,6349
+pysupladevice-0.1.4.dist-info/METADATA,sha256=Xn4CICWzfr_hRmI4jjuY5JHCNo8VILadRPvukKX0hGo,1045
+pysupladevice-0.1.4.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+pysupladevice-0.1.4.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+pysupladevice-0.1.4.dist-info/RECORD,,
