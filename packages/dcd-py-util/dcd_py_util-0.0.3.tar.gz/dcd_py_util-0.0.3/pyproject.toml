@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dcd_py_util"
+version = "0.0.3"
+authors = [
+    { name = "Daniel Carvalho Dias", email = "daniel.dias@gmail.com" },
+]
+description = "Module that brings together useful tools for Python applications."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/danielcdias/dcd_py_util"
+"Bug Tracker" = "https://github.com/danielcdias/dcd_py_util/issues"
