@@ -1,0 +1,14 @@
+spyderml/__init__.py,sha256=N6iGRiWSTsHJenumnHasTgVs7fBOFOKiR7a72Nqkxy0,73
+spyderml/bin/spyderml,sha256=jFeqqD2nEROGi7fy0aKNEpF9xl4C8wGpOsobb2GBM3s,93
+spyderml/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spyderml/lib/asciiarts.py,sha256=wCKJxa9j-TpSqQtHYpSFdKf5DaG-4Xly7xSxdNs1ttE,3038
+spyderml/lib/cache_manipulator.py,sha256=u3dtnJZlk5pyK9mFHvM2No5hbYAu5HYUG1tAf5Ji5gE,1388
+spyderml/lib/detectos.py,sha256=fwP69n-X30jLnSlSCsX0ZgKuiIByNsLf_2ft4KRfBmw,234
+spyderml/lib/file.py,sha256=gINhL5OburBCrV6uRl422Vc8XUSnD1X1CAZkk8RcJcI,620
+spyderml/lib/utils.py,sha256=YwV4gI1oEP9aacPi16To9cShYyNXySbO7hrQdObZgT0,5965
+spyderml/main.py,sha256=NuHZGys3-1ULzxpnjN6OuK1tXfThdTEek80hho0D_8U,5067
+spyder_ml-1.2.2.dist-info/LICENSE,sha256=n-Ie7ac0LzaWopBNx_fFwhj6IiBNwcs82kL1EI3nEPQ,1077
+spyder_ml-1.2.2.dist-info/METADATA,sha256=IvEFP6RYbIxVtXeRicMx0aG_BN3g1cs8VmXcckmvdyo,2778
+spyder_ml-1.2.2.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+spyder_ml-1.2.2.dist-info/entry_points.txt,sha256=Cjawctj5IlMKB2zZe0JOxXqlKuFkuf0FhtYBxOXKviE,38
+spyder_ml-1.2.2.dist-info/RECORD,,
