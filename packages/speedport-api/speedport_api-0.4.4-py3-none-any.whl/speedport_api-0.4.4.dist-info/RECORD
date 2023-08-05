@@ -1,0 +1,10 @@
+speedport/__init__.py,sha256=T5s7D9RQq2YG2-5fzkkxG5SXwXHfL9OEcNnijO2ZYXQ,33
+speedport/__main__.py,sha256=4IPxf4cBKR6M4fC8FEvqzf86PGQnrJw-LFF1svQzVnM,5844
+speedport/device.py,sha256=n5YJZgyql50uDMF7rnq06kD27pxWinE6dWqSBLemW6I,2074
+speedport/speedport.py,sha256=rwj_rs90s6K-ayH0-72klaNR8SMiaDvC7lSeQUn_LXY,10248
+speedport_api-0.4.4.dist-info/LICENSE,sha256=T9j9Tvo3CZ0qPHaQ9YWTooemmBLJwY7qCTbpvxRMozk,1069
+speedport_api-0.4.4.dist-info/METADATA,sha256=9pQ7Q4Yolppo7ZFlLjsIdfKHK-a5cP5cQfuJLS1pQBU,2232
+speedport_api-0.4.4.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+speedport_api-0.4.4.dist-info/entry_points.txt,sha256=iMYZzg3YJVhauEu-I6QC8lQHvQEdueA4gjwriyHDYnY,55
+speedport_api-0.4.4.dist-info/top_level.txt,sha256=9AObLD9lR2H0X-nJfCceDaKNdR5y2PV55HveX05H-b8,10
+speedport_api-0.4.4.dist-info/RECORD,,
