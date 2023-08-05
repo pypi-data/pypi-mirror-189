@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+data/data_file
+src/deposit_contract.egg-info/PKG-INFO
+src/deposit_contract.egg-info/SOURCES.txt
+src/deposit_contract.egg-info/dependency_links.txt
+src/deposit_contract.egg-info/entry_points.txt
+src/deposit_contract.egg-info/requires.txt
+src/deposit_contract.egg-info/top_level.txt
