@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/tomlini/__init__.py
+src/tomlini/example.py
+src/tomlini.egg-info/PKG-INFO
+src/tomlini.egg-info/SOURCES.txt
+src/tomlini.egg-info/dependency_links.txt
+src/tomlini.egg-info/top_level.txt
