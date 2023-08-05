@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hypergrad"
+description = 'Simple and extensible hypergradient for PyTorch'
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = []
+authors = [
+    { name = "Ryuichiro Hataya", email = "hataya@nlab.ci.i.u-tokyo.ac.jp" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
+dependencies = [
+    "torch",
+    "torchvision",
+    "rich",
+]
+dynamic = ["version"]
+
+[project.urls]
+Documentation = "https://github.com/moskomule/hypergrad"
+Issues = "https://github.com/moskomule/hypergrad/issues"
+Source = "https://github.com/moskomule/hypergrad"
+
+[tool.hatch.version]
+path = "hypergrad/__about__.py"
+
+[tool.hatch.envs.tests]
+dependencies = [
+    "pytest",
+]
+
+[[tool.hatch.envs.test.matrix]]
+python = ["310", "311"]
+
+[tool.hatch.envs.docs]
+extra-dependencies = [
+    "mkdocs-material"
+]
+[tool.hatch.envs.docs.scripts]
+build = "mkdocs build --clean --strict"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "/.github",
+    "/docs",
+    "/tests",
+    "/examples"
+]
