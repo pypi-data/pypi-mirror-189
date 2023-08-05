@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: roleplaycog
+Version: 1.0.0
+Summary: Roleplay cog for py-cord
+Home-page: https://github.com/mariohero24/roleplaycog
+Author: Guard Boi
+Author-email: guard@cowbot.xyz
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENCE.md
+
+# Roleplay Cog
+This package is a cog edition of [my roleplay bot repository](https://github.com/mariohero24/Roleplay-Bot) that has been heavily modified
+## Installation
+```cs
+pip install roleplaycog
+```
+## Setup
+```py
+import discord
+bot = discord.Bot()
+
+# Loading via the setup function
+bot.load_extension("roleplaycog")
+
+# Loading directly (why would you do this)
+from roleplaycog import Roleplay
+bot.add_cog(Roleplay(bot))
+
+bot.run("Token")
+```
