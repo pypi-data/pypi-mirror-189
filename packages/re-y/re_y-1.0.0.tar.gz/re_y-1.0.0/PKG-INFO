@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: re-y
+Version: 1.0.0
+Summary: 
+Author: skphilipp
+Author-email: philipp@release-engineers.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: lark (==1.1.5)
+Requires-Dist: ruamel.yaml (==0.17.21)
