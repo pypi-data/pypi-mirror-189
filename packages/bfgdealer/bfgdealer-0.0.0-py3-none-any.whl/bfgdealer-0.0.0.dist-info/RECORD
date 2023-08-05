@@ -1,0 +1,13 @@
+bfgdealer/__init__.py,sha256=NULXQfdhB_I02QMK5EY7m4AQWHWroQCNIaHYjeHoo9c,395
+bfgdealer/_version.py,sha256=Srbdbb__VSoMTrTwJbBoKmnA_ji4TtKKeni0to0Q4_c,31
+bfgdealer/source/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bfgdealer/source/board.py,sha256=0KFn2EPcCWaa5IPeYe5mkRYQHQVYtWtMMw-BQVhPBw0,19826
+bfgdealer/source/dealer.py,sha256=KDE_cw1EdaqJ6JI5GGxcjazXAkvRdo0hGjFcOLjG9gU,10494
+bfgdealer/source/dealer_duo.py,sha256=5aVDHQHVvwzXCUPKpU8bQty9IKO6aHXupuRfRUOv8ok,28108
+bfgdealer/source/dealer_engine.py,sha256=siNdTuPCphbk-RQf-xZa6PnUbFAIxDwBk7H9GhCJsqE,17454
+bfgdealer/source/dealer_solo.py,sha256=MmuBTWHeZ72Qw3ZhK6HSfjrUP_8WhQTg-PSCL0hiwoU,15702
+bfgdealer-0.0.0.dist-info/LICENSE.txt,sha256=4h0e1iLfuruOGdqDfs8-aua1e_Ma97UnS8ZfwAau8aE,33889
+bfgdealer-0.0.0.dist-info/METADATA,sha256=KZWHJBjWkfnfvM0iwR6-Qb0oJoFFsClBNKPu1jNlAlc,651
+bfgdealer-0.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+bfgdealer-0.0.0.dist-info/top_level.txt,sha256=oVlcSg5lwCvuiAupy4blHtft3O9yLaeHURbCW7BnbBs,10
+bfgdealer-0.0.0.dist-info/RECORD,,
