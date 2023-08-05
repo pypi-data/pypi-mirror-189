@@ -1,0 +1,6 @@
+example_package_yumna/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+example_package_yumna/example.py,sha256=CK3ovKRNoI0uWURFQimPfCjr2ORFmBQhNAGzuLWPcrE,37
+example_package_yumna-0.0.1.dist-info/METADATA,sha256=DIdhE9Y_3US7agaxv-nB7qdOKP8nusr7f7TWI6CUR_E,677
+example_package_yumna-0.0.1.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+example_package_yumna-0.0.1.dist-info/licenses/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+example_package_yumna-0.0.1.dist-info/RECORD,,
