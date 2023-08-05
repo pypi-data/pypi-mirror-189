@@ -1,0 +1,2 @@
+include auto_od/core/*
+include object_detection.ini
