@@ -1,0 +1,2 @@
+[console_scripts]
+pyseqrna = pyseqrna.__main__:main
