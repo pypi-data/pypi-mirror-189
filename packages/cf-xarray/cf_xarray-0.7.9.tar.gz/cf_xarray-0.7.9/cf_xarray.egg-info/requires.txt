@@ -1,0 +1,7 @@
+xarray
+
+[all]
+matplotlib
+pint
+shapely
+regex
