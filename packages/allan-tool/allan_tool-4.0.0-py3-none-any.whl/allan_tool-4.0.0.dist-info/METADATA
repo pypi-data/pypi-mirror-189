@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: allan-tool
+Version: 4.0.0
+Summary: p function and t function
+Home-page: https://github.com/iwanglei1
+Author: Allan Wang
+Author-email: lawther@mails.cust.edu.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# A Sample p and t function
+## you can use like : 
+### from allan_tool import *
+### p('hellowrd')
+### p(t())
+
+## I still like you very much, like the wind gone thousands of miles, do not ask the return date.
