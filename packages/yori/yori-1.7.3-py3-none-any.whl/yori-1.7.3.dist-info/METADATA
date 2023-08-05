@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: yori
+Version: 1.7.3
+Summary: Set of tools to grid satellite data
+Home-page: https://gitlab.ssec.wisc.edu/pveglio/yori
+Author: Paolo Veglio
+Author-email: paolo.veglio@ssec.wisc.edu
+Requires-Python: >=3.9
+License-File: LICENSE
+
