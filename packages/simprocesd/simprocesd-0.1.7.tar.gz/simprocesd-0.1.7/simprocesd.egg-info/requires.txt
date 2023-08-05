@@ -1,0 +1,6 @@
+matplotlib>=3.5
+dill
+
+[examples]
+numpy>=1.21
+scipy>=1.7
