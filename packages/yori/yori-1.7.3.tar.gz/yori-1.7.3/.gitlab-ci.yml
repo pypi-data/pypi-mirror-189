@@ -1,0 +1,8 @@
+
+before_script:
+  - source tests/ci_init.sh
+
+
+test:
+  script:
+    - py.test -xv 

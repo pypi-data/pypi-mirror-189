@@ -1,0 +1,1122 @@
+grid_settings:
+  gridsize: 1
+  projection: conformal
+  lat_in: latitude
+  lon_in: longitude
+  lat_out: latitude
+  lon_out: longitude
+  fill_value: -9999
+
+variable_settings:
+
+  - name_in: Solar_Zenith
+    name_out: Solar_Zenith
+    attributes: 
+    - name: long_name
+      value: Solar Zenith Angle (Cell to Sun) for Daytime Scenes
+    - name: units
+      value: degrees
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 180.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    masks:
+    - Mask_Day
+    - Mask_VZA_65p5
+
+  - name_in: Solar_Azimuth
+    name_out: Solar_Azimuth
+    attributes: 
+    - name: long_name
+      value: Solar Azimuth Angle (Cell to Sun) for Daytime Scenes
+    - name: units
+      value: degrees
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: -180.0
+    - name: valid_max
+      value: 180.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    masks:
+    - Mask_Day
+    - Mask_VZA_65p5
+
+  - name_in: Sensor_Zenith
+    name_out: Sensor_Zenith
+    attributes: 
+    - name: long_name
+      value: Sensor Zenith Angle (Cell to Sensor) for Daytime Scenes
+    - name: units
+      value: degrees
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 180.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    masks:
+    - Mask_Day
+    - Mask_VZA_65p5
+
+  - name_in: Sensor_Azimuth
+    name_out: Sensor_Azimuth
+    attributes: 
+    - name: long_name
+      value: Sensor Azimuth Angle (Cell to Sensor) for Daytime Scenes
+    - name: units
+      value: degrees
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: -180.0
+    - name: valid_max
+      value: 180.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    masks:
+    - Mask_Day
+    - Mask_VZA_65p5
+
+
+  - name_in: Cloud_Top_Pressure
+    name_out: Cloud_Top_Pressure
+    attributes: 
+    - name: long_name
+      value: Cloud Top Pressure 
+    - name: units
+      value: mb
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 1.0
+    - name: valid_max
+      value: 1100.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [0, 80, 200, 320, 440, 560, 680,  800, 920, 1040, 1100]
+    2D_histograms:
+    - name_out: JHisto_vs_Emissivity
+      primary_var:
+        edges: [0, 120, 200, 280, 360, 440, 520, 600, 680, 760, 840, 920, 1000, 1080, 1120]
+      joint_var:
+        name_in: Cloud_Effective_Emissivity
+        edges: [0, 0.2, 0.4, 0.6, 0.8, 0.95, 1.00]
+    - name_out: JHisto_vs_Uncertainty
+      primary_var:
+        edges: [0, 120, 200, 280, 360, 440, 520, 600, 680, 760, 840, 920, 1000, 1080, 1120]
+      joint_var:
+        name_in: Cloud_Top_Pressure_Uncertainty
+        edges: [0, 2, 4, 6, 8, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 150, 200]
+    masks:
+    - Mask_DayNight
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Top_Pressure
+    name_out: Cloud_Top_Pressure_Day
+    attributes: 
+    - name: long_name
+      value: Cloud Top Pressure for Daytime Scenes
+    - name: units
+      value: mb
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 1.0
+    - name: valid_max
+      value: 1100.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [0, 80, 200, 320, 440, 560, 680,  800, 920, 1040, 1100]
+    2D_histograms:
+    - name_out: JHisto_vs_Emissivity
+      primary_var:
+        edges: [0, 120, 200, 280, 360, 440, 520, 600, 680, 760, 840, 920, 1000, 1080, 1120]
+      joint_var:
+        name_in: Cloud_Effective_Emissivity
+        edges: [0, 0.2, 0.4, 0.6, 0.8, 0.95, 1.00]
+    - name_out: JHisto_vs_Uncertainty
+      primary_var:
+        edges: [0, 120, 200, 280, 360, 440, 520, 600, 680, 760, 840, 920, 1000, 1080, 1120]
+      joint_var:
+        name_in: Cloud_Top_Pressure_Uncertainty
+        edges: [0, 2, 4, 6, 8, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 150, 200]
+    masks:
+    - Mask_Day
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Top_Pressure
+    name_out: Cloud_Top_Pressure_Night
+    attributes: 
+    - name: long_name
+      value: Cloud Top Pressure for Nighttime Scenes
+    - name: units
+      value: mb
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 1.0
+    - name: valid_max
+      value: 1100.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [0, 80, 200, 320, 440, 560, 680,  800, 920, 1040, 1100]
+    2D_histograms:
+    - name_out: JHisto_vs_Emissivity
+      primary_var:
+        edges: [0, 120, 200, 280, 360, 440, 520, 600, 680, 760, 840, 920, 1000, 1080, 1120]
+      joint_var:
+        name_in: Cloud_Effective_Emissivity
+        edges: [0, 0.2, 0.4, 0.6, 0.8, 0.95, 1.00]
+    - name_out: JHisto_vs_Uncertainty
+      primary_var:
+        edges: [0, 120, 200, 280, 360, 440, 520, 600, 680, 760, 840, 920, 1000, 1080, 1120]
+      joint_var:
+        name_in: Cloud_Top_Pressure_Uncertainty
+        edges: [0, 2, 4, 6, 8, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 150, 200]
+    masks:
+    - Mask_Night
+    - Mask_VZA_65p5
+
+
+
+  - name_in: Cloud_Top_Temperature
+    name_out: Cloud_Top_Temperature
+    attributes: 
+    - name: long_name
+      value: Cloud Top Temperature
+    - name: units
+      value: K
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 150.0
+    - name: valid_max
+      value: 350.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [150, 180, 190, 200, 210, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 320]
+    2D_histograms:
+    - name_out: JHisto_vs_Pressure
+      primary_var:
+        edges: [150, 180, 190, 200, 210, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 320]
+      joint_var:
+        name_in: Cloud_Top_Pressure
+        edges: [0, 440, 680, 1100]
+    - name_out: JHisto_vs_Uncertainty
+      primary_var:
+        edges: [150, 180, 190, 200, 210, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 320]
+      joint_var:
+        name_in: Cloud_Top_Temperature_Uncertainty
+        edges: [0, 2, 4, 6, 8, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 150, 200]
+    masks:
+    - Mask_DayNight
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Top_Temperature
+    name_out: Cloud_Top_Temperature_Day
+    attributes: 
+    - name: long_name
+      value: Cloud Top Temperature for Daytime Scenes
+    - name: units
+      value: K
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 150.0
+    - name: valid_max
+      value: 350.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [150, 180, 190, 200, 210, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 320]
+    2D_histograms:
+    - name_out: JHisto_vs_Pressure
+      primary_var:
+        edges: [150, 180, 190, 200, 210, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 320]
+      joint_var:
+        name_in: Cloud_Top_Pressure
+        edges: [0, 440, 680, 1100]
+    - name_out: JHisto_vs_Uncertainty
+      primary_var:
+        edges: [150, 180, 190, 200, 210, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 320]
+      joint_var:
+        name_in: Cloud_Top_Temperature_Uncertainty
+        edges: [0, 2, 4, 6, 8, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 150, 200]
+    masks:
+    - Mask_Day
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Top_Temperature
+    name_out: Cloud_Top_Temperature_Night
+    attributes: 
+    - name: long_name
+      value: Cloud Top Temperature for Nighttime Scenes
+    - name: units
+      value: K
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 150.0
+    - name: valid_max
+      value: 350.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [150, 180, 190, 200, 210, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 320]
+    2D_histograms:
+    - name_out: JHisto_vs_Pressure
+      primary_var:
+        edges: [150, 180, 190, 200, 210, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 320]
+      joint_var:
+        name_in: Cloud_Top_Pressure
+        edges: [0, 440, 680, 1100]
+    - name_out: JHisto_vs_Uncertainty
+      primary_var:
+        edges: [150, 180, 190, 200, 210, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 320]
+      joint_var:
+        name_in: Cloud_Top_Temperature_Uncertainty
+        edges: [0, 2, 4, 6, 8, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 150, 200]
+    masks:
+    - Mask_Night
+    - Mask_VZA_65p5
+
+
+  - name_in: Cloud_Effective_Emissivity
+    name_out: Cloud_Effective_Emissivity
+    attributes: 
+    - name: long_name
+      value: Cloud Effective Emissivity
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 1.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 1.0]
+    2D_histograms:
+    - name_out: JHisto_vs_Pressure
+      primary_var:
+        edges: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 1.0]
+      joint_var:
+        name_in: Cloud_Top_Pressure
+        edges: [0, 80, 200, 320, 440, 560, 680, 800, 920, 1040, 1100]
+    masks:
+    - Mask_DayNight
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Effective_Emissivity
+    name_out: Cloud_Effective_Emissivity_Day
+    attributes: 
+    - name: long_name
+      value: Cloud Effective Emissivity for Daytime Scenes
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 1.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 1.0]
+    2D_histograms:
+    - name_out: JHisto_vs_Pressure
+      primary_var:
+        edges: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 1.0]
+      joint_var:
+        name_in: Cloud_Top_Pressure
+        edges: [0, 80, 200, 320, 440, 560, 680, 800, 920, 1040, 1100]
+    masks:
+    - Mask_Day
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Effective_Emissivity
+    name_out: Cloud_Effective_Emissivity_Night
+    attributes: 
+    - name: long_name
+      value: Cloud Effective Emissivity for Nighttime Scenes
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 1.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 1.0]
+    2D_histograms:
+    - name_out: JHisto_vs_Pressure
+      primary_var:
+        edges: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 1.0]
+      joint_var:
+        name_in: Cloud_Top_Pressure
+        edges: [0, 80, 200, 320, 440, 560, 680, 800, 920, 1040, 1100]
+    masks:
+    - Mask_Night
+    - Mask_VZA_65p5
+
+
+
+  - name_in: Cloud_Mask_Cloudiness
+    name_out: Cloud_Fraction
+    attributes: 
+    - name: long_name
+      value: Cloud Fraction (Cloud Mask)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 1.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    masks:
+    - Mask_DayNight
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Mask_Cloudiness
+    name_out: Cloud_Fraction_Day
+    attributes: 
+    - name: long_name
+      value: Cloud Fraction (Cloud Mask) for Daytime Scenes
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 1.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    masks:
+    - Mask_Day
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Mask_Cloudiness
+    name_out: Cloud_Fraction_Night
+    attributes: 
+    - name: long_name
+      value: Cloud Fraction (Cloud Mask) for Nighttime Scenes 
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 1.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    masks:
+    - Mask_Night
+    - Mask_VZA_65p5
+
+
+
+
+
+  - name_in: Cloud_Mask
+    name_out: Cloud_Mask
+    only_histograms:
+    attributes: 
+    - name: long_name
+      value: Cloud Mask Cloudiness Flag (0=Conf.Cloudy, 1=Prob.Cloudy, 2=Prob.Clear, 3=Conf.Clear)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 3.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [-0.5, 0.5, 1.5, 2.5, 3.5]
+    masks:
+    - Mask_DayNight
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Mask
+    name_out: Cloud_Mask_Day
+    only_histograms:
+    attributes: 
+    - name: long_name
+      value: Cloud Mask Cloudiness Flag for Daytime Scenes (0=Conf.Cloudy, 1=Prob.Cloudy, 2=Prob.Clear, 3=Conf.Clear)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 3.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [-0.5, 0.5, 1.5, 2.5, 3.5]
+    masks:
+    - Mask_Day
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Mask
+    name_out: Cloud_Mask_Night
+    only_histograms:
+    attributes: 
+    - name: long_name
+      value: Cloud Mask Cloudiness Flag for Nighttime Scenes (0=Conf.Cloudy, 1=Prob.Cloudy, 2=Prob.Clear, 3=Conf.Clear)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 3.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [-0.5, 0.5, 1.5, 2.5, 3.5]
+    masks:
+    - Mask_Night
+    - Mask_VZA_65p5
+
+
+
+  - name_in: CTP_Phase
+    name_out: CTP_Phase
+    only_histograms:
+    attributes: 
+    - name: long_name
+      value: Cloud Top Properties Cloud Phase Flag (0=Clear, 1=Liq.Water, 2=Ice, 3=Mixed Phase, 6=Undetermined Phase)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 6.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [-0.5, 0.5, 1.5, 2.5, 3.5, 6.5]
+    masks:
+    - Mask_DayNight
+    - Mask_CloudMaskDetermined
+    - Mask_VZA_65p5
+
+  - name_in: CTP_Phase
+    name_out: CTP_Phase_Day
+    only_histograms:
+    attributes: 
+    - name: long_name
+      value: Cloud Top Properties Cloud Phase Flag for Daytime Scenes (0=Clear, 1=Liq.Water, 2=Ice, 3=Mixed Phase, 6=Undetermined Phase)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 6.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [-0.5, 0.5, 1.5, 2.5, 3.5, 6.5]
+    masks:
+    - Mask_Day
+    - Mask_CloudMaskDetermined
+    - Mask_VZA_65p5
+
+  - name_in: CTP_Phase
+    name_out: CTP_Phase_Night
+    only_histograms:
+    attributes: 
+    - name: long_name
+      value: Cloud Top Properties Cloud Phase Flag for Nighttime Scenes (0=Clear, 1=Liq.Water, 2=Ice, 3=Mixed Phase, 6=Undetermined Phase)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 6.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [-0.5, 0.5, 1.5, 2.5, 3.5, 6.5]
+    masks:
+    - Mask_Night
+    - Mask_CloudMaskDetermined
+    - Mask_VZA_65p5
+
+
+
+
+
+
+  - name_in: Cloud_Optical_Thickness
+    name_out: Cloud_Optical_Thickness_Liquid
+    attributes: 
+    - name: long_name
+      value: Cloud Optical Thickness for Liquid Water Clouds (Primary Retrieval for Cloudy Scenes)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 150.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 60, 70, 80, 90, 100, 150]
+    2D_histograms:
+    - name_out: JHisto_vs_Eff_Radius
+      primary_var:
+        edges: [0, 2, 4, 6, 8, 10, 15, 20, 30, 40, 50, 100, 150]
+      joint_var:
+        name_in: Cloud_Effective_Radius
+        edges: [4, 6, 8, 10, 12.5, 15, 17.5, 20, 25, 30]
+    - name_out: JHisto_vs_Pressure
+      primary_var:
+        edges: [0, 2, 4, 6, 8, 10, 15, 20, 30, 40, 50, 100, 150]
+      joint_var:
+        name_in: Cloud_Top_Pressure
+        edges: [50, 250, 300, 350, 400, 450, 500, 550, 600, 700, 800, 900, 1000, 1100]
+    - name_out: JHisto_vs_Temperature
+      primary_var:
+        edges: [0, 2, 4, 6, 8, 10, 15, 20, 30, 40, 50, 100, 150]
+      joint_var:
+        name_in: Cloud_Top_Temperature
+        edges: [190, 230, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 310]
+    - name_out: JHisto_vs_Uncertainty
+      primary_var:
+        edges: [0, 2, 4, 6, 8, 10, 15, 20, 30, 40, 50, 100, 150]
+      joint_var:
+        name_in: Cloud_Optical_Thickness_Uncertainty
+        edges: [0, 2, 4, 6, 8, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 150, 200]
+    masks:
+    - Mask_Liquid_Water_Phase_Clouds
+    - Mask_Valid_Range_CER
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Optical_Thickness
+    name_out: Cloud_Optical_Thickness_Ice
+    attributes: 
+    - name: long_name
+      value: Cloud Optical Thickness for Ice Clouds (Primary Retrieval for Cloudy Scenes)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 150.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 150]
+    2D_histograms:
+    - name_out: JHisto_vs_Eff_Radius
+      primary_var:
+        edges: [0, 0.5, 1, 2.5, 5, 7.5, 10, 15, 20, 30, 50, 100, 150]
+      joint_var:
+        name_in: Cloud_Effective_Radius
+        edges: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+    - name_out: JHisto_vs_Pressure
+      primary_var:
+        edges: [0, 0.5, 1, 2.5, 5, 7.5, 10, 15, 20, 30, 50, 100, 150]
+      joint_var:
+        name_in: Cloud_Top_Pressure
+        edges: [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 700, 800, 900, 1000, 1100]
+    - name_out: JHisto_vs_Temperature
+      primary_var:
+        edges: [0, 0.5, 1, 2.5, 5, 7.5, 10, 15, 20, 30, 50, 100, 150]
+      joint_var:
+        name_in: Cloud_Top_Temperature
+        edges: [190, 200, 210, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270]
+    - name_out: JHisto_vs_Emissivity
+      primary_var:
+        edges: [0, 0.5, 1, 2.5, 5, 7.5, 10, 15, 20, 30, 50, 100, 150]
+      joint_var:
+        name_in: Cloud_Effective_Emissivity
+        edges: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+    - name_out: JHisto_vs_Uncertainty
+      primary_var:
+        edges: [0, 0.5, 1, 2.5, 5, 7.5, 10, 15, 20, 30, 50, 100, 150]
+      joint_var:
+        name_in: Cloud_Optical_Thickness_Uncertainty
+        edges: [0, 2, 4, 6, 8, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 150, 200]
+    masks:
+    - Mask_Ice_Phase_Clouds
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Optical_Thickness
+    name_out: Cloud_Optical_Thickness_Undetermined
+    attributes: 
+    - name: long_name
+      value: Cloud Optical Thickness for Undetermined Phase Clouds (Primary Retrieval for Cloudy Scenes)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 150.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 60, 70, 80, 90, 100, 150]
+    masks:
+    - Mask_Undetermined_Phase_Clouds
+    - Mask_Valid_Range_CER
+    - Mask_VZA_65p5
+      
+  - name_in: Cloud_Optical_Thickness
+    name_out: Cloud_Optical_Thickness_Combined
+    attributes: 
+    - name: long_name
+      value: Cloud Optical Thickness for Combined Phase Clouds (Primary Retrieval for Cloudy Scenes)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 150.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 150]
+    masks:
+    - Mask_Combined_Phase_Clouds
+    - Mask_Valid_Range_CER
+    - Mask_VZA_65p5
+    
+    
+
+  - name_in: Cloud_Effective_Radius
+    name_out: Cloud_Effective_Radius_Liquid
+    attributes: 
+    - name: long_name
+      value: Cloud Effective Radius for Liquid Water Clouds (Primary Retrieval for Cloudy Scenes)
+    - name: units
+      value: microns
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 4.0
+    - name: valid_max
+      value: 30.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30]
+    2D_histograms: 
+    - name_out: JHisto_vs_Pressure
+      primary_var:
+        edges: [4, 6, 8, 10, 12.5, 15, 17.5, 20, 25, 30]
+      joint_var:
+        name_in: Cloud_Top_Pressure
+        edges: [50, 250, 300, 350, 400, 450, 500, 550, 600, 700, 800, 900, 1000, 1100]
+    - name_out: JHisto_vs_Temperature
+      primary_var:
+        edges: [4, 6, 8, 10, 12.5, 15, 17.5, 20, 25, 30]
+      joint_var:
+        name_in: Cloud_Top_Temperature
+        edges: [190, 230, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 310]
+    - name_out: JHisto_vs_Uncertainty
+      primary_var:
+        edges: [4, 6, 8, 10, 12.5, 15, 17.5, 20, 25, 30]
+      joint_var:
+        name_in: Cloud_Effective_Radius_Uncertainty
+        edges: [0, 2, 4, 6, 8, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 150, 200]
+    masks:
+    - Mask_Liquid_Water_Phase_Clouds
+    - Mask_Valid_Range_CER
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Effective_Radius
+    name_out: Cloud_Effective_Radius_Ice
+    attributes: 
+    - name: long_name
+      value: Cloud Effective Radius for Ice Clouds (Primary Retrieval for Cloudy Scenes)
+    - name: units
+      value: microns
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 5.0
+    - name: valid_max
+      value: 60.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+    2D_histograms: 
+    - name_out: JHisto_vs_Pressure
+      primary_var:
+        edges: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+      joint_var:
+        name_in: Cloud_Top_Pressure
+        edges: [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 700, 800, 900, 1000, 1100]
+    - name_out: JHisto_vs_Temperature
+      primary_var:
+        edges: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+      joint_var:
+        name_in: Cloud_Top_Temperature
+        edges: [190, 200, 210, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270]
+    - name_out: JHisto_vs_Uncertainty
+      primary_var:
+        edges: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+      joint_var:
+        name_in: Cloud_Effective_Radius_Uncertainty
+        edges: [0, 2, 4, 6, 8, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 150, 200]
+    masks:
+    - Mask_Ice_Phase_Clouds
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Effective_Radius
+    name_out: Cloud_Effective_Radius_Undetermined
+    attributes: 
+    - name: long_name
+      value: Cloud Effective Radius for Undetermined Phase Clouds (Primary Retrieval for Cloudy Scenes)
+    - name: units
+      value: microns
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 4.0
+    - name: valid_max
+      value: 30.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30]
+    masks:
+    - Mask_Undetermined_Phase_Clouds
+    - Mask_Valid_Range_CER
+    - Mask_VZA_65p5
+
+
+
+  - name_in: Cloud_Water_Path
+    name_out: Cloud_Water_Path_Liquid
+    attributes: 
+    - name: long_name
+      value: Cloud Water Path for Liquid Water Clouds (Primary Retrieval for Cloudy Scenes)
+    - name: units
+      value: g/m^2  
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 3000.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [0, 10, 20, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 1000, 2000, 3000]
+    2D_histograms: 
+    - name_out: JHisto_vs_Uncertainty
+      primary_var:
+        edges: [0, 10, 20, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 1000, 2000, 3000]
+      joint_var:
+        name_in: Cloud_Water_Path_Uncertainty
+        edges: [0, 2, 4, 6, 8, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 150, 200]
+    masks:
+    - Mask_Liquid_Water_Phase_Clouds
+    - Mask_Valid_Range_CER
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Water_Path
+    name_out: Cloud_Water_Path_Ice
+    attributes: 
+    - name: long_name
+      value: Cloud Water Path for Ice Clouds (Primary Retrieval for Cloudy Scenes)
+    - name: units
+      value: g/m^2
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 6000.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [0, 10, 20, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 1000, 2000, 4000, 6000]
+    2D_histograms: 
+    - name_out: JHisto_vs_Uncertainty
+      primary_var:
+        edges: [0, 10, 20, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 1000, 2000, 4000, 6000]
+      joint_var:
+        name_in: Cloud_Water_Path_Uncertainty
+        edges: [0, 2, 4, 6, 8, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 150, 200]
+    masks:
+    - Mask_Ice_Phase_Clouds
+    - Mask_VZA_65p5
+
+  - name_in: Cloud_Water_Path
+    name_out: Cloud_Water_Path_Undetermined
+    attributes: 
+    - name: long_name
+      value: Cloud Water Path for Undetermined Phase Clouds (Primary Retrieval for Cloudy Scenes)
+    - name: units
+      value: g/m^2
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 3000.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [0, 10, 20, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 1000, 2000, 3000]
+    masks:
+    - Mask_Undetermined_Phase_Clouds
+    - Mask_Valid_Range_CER
+    - Mask_VZA_65p5
+
+
+
+
+
+
+  - name_in: COP_Phase
+    name_out: Cloud_Phase_Optical_Properties
+    only_histograms:
+    attributes: 
+    - name: long_name
+      value: Cloud Optical Properties Cloud Phase (0=Cloud Mask Undetermined, 1=Clear, 2=Liquid Water, 3=Ice, 4=Undetermined Phase but retrieval attempted as Liquid Water)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 0.0
+    - name: valid_max
+      value: 4.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    2D_histograms:
+    - name_out: JHisto_vs_Temperature
+      primary_var:
+        edges: [1.5, 2.5, 3.5, 4.5]
+      joint_var:
+        name_in: Cloud_Top_Temperature
+        edges: [190, 200, 210, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 310]
+    masks:
+    - Mask_VZA_65p5
+
+
+
+
+
+  - name_in: COP_Phase
+    name_out: COP_Phase_Cloudy
+    only_histograms:
+    attributes: 
+    - name: long_name
+      value: Cloud Optical Properties Cloud Phase (Cloudy, Not Restored to Clear, CSR=0), Pixel Counts in 3 categories, Liquid Water (1st bin), Ice (2nd bin), Undetermined Phase (3rd bin)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 2.0
+    - name: valid_max
+      value: 4.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [1.5, 2.5, 3.5, 4.5]
+    masks:
+    - Mask_CSR_0
+    - Mask_VZA_65p5
+
+
+  - name_in: COP_Phase
+    name_out: COP_Phase_Partly_Cloudy
+    only_histograms:
+    attributes: 
+    - name: long_name
+      value: Cloud Optical Properties Cloud Phase (Partly Cloudy, CSR=1 or CSR=3), Pixel Counts in 3 categories, Liquid Water (1st bin), Ice (2nd bin), Undetermined Phase (3rd bin)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 2.0
+    - name: valid_max
+      value: 4.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [1.5, 2.5, 3.5, 4.5]
+    masks:
+    - Mask_CSR_13
+    - Mask_VZA_65p5
+
+  - name_in: COP_Phase
+    name_out: COP_Phase_CloudMaskClear
+    only_histograms:
+    attributes: 
+    - name: long_name
+      value: Cloud Optical Properties Cloud Phase (Clear, CloudMaskClear, CSR=0), Pixel Counts in 1 category, CloudMaskClear (1st bin)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 1.0
+    - name: valid_max
+      value: 1.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [0.5, 1.5]
+    masks:
+    - Mask_CSR_0
+    - Mask_VZA_65p5
+
+  - name_in: COP_Phase
+    name_out: COP_Phase_RestoredToClear
+    only_histograms:
+    attributes: 
+    - name: long_name
+      value: Cloud Optical Properties Cloud Phase (Clear, RestoredToClear, CSR=2), Pixel Counts in 1 category, RestoredToClear (1st bin)
+    - name: units
+      value: none
+    - name: _FillValue
+      value: -9999.0
+    - name: valid_min
+      value: 1.0
+    - name: valid_max
+      value: 1.0
+    - name: scale_factor
+      value: 1.0
+    - name: add_offset
+      value: 0.0
+    histograms: 
+      edges: [0.5, 1.5]
+    masks:
+    - Mask_CSR_2
+    - Mask_VZA_65p5
+
+
+
+
+
+
+
+
+
+
+
+
