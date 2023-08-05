@@ -1,0 +1,9 @@
+modelicalang/__init__.py,sha256=idhzZWOapar8k7VmocVBv9Rec5tisetxVa8gdexlE7Q,1337
+modelicalang/_backend.py,sha256=pG3B5yKFl3Gg5j6oO19kzu4_pUbAUA-luOWUGqY_qsk,2272
+modelicalang/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+modelicalang/v3_4.py,sha256=rVQ9HLhCM0sEx_4bDrr69hlUmePh0lGWz1KvSyownN0,56944
+modelicalang/v3_5.py,sha256=_gQ4CAyMEgNw4k90-_tZrUr_PnQyxE7idhjuol0XYOc,58157
+modelicalang-0.1.0a0.dist-info/METADATA,sha256=_oM-P6ApDIi0qJwb7wZzZnFxfE6UVdhMoEqO4hZUUog,1192
+modelicalang-0.1.0a0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+modelicalang-0.1.0a0.dist-info/LICENSE,sha256=Gdn0STV7P-tc9S8r3AOn8G4nwLbvmI5vO4US6KNT0Rc,1065
+modelicalang-0.1.0a0.dist-info/RECORD,,
