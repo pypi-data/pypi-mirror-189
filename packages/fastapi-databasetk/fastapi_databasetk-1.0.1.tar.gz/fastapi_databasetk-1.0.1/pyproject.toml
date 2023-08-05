@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "fastapi_databasetk"
+version = "1.0.1"
+description = ""
+authors = ["wayfaring-stranger <zw6p226m@duck.com>"]
+packages = [
+    { include = "fastapi_databasetk" }
+]
+
+
+license = "mit"
+readme = "README.md"
+[tool.poetry.dependencies]
+python = "^3.8"
+databases = "^0.6.0"
+fastapi = "^0.89.1"
+pydantic = "^1.10.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
