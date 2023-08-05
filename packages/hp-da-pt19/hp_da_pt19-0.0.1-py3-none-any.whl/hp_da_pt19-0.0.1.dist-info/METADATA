@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: hp-da-pt19
+Version: 0.0.1
+Summary: Package contaning python wrapper for supporting pitch,roll,yaw, swarms, and more
+Home-page: https://github.com/da-vidi21/HP_DA_PT19
+Author: Anonymous
+Author-email: vidit21srivastava@gmail.com
+License: MIT
+Keywords: drone,sdk,python
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: av
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: pillow
+
+# HP_DA_PT19
+
+
