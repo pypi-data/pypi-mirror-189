@@ -1,0 +1,15 @@
+pubtools/__init__.py,sha256=sNtbxFIa4RDomMe3hGhhhxhIHbLKCtdEXY-nun4r-q8,85
+pubtools/_content_gateway/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pubtools/_content_gateway/cgw_authentication.py,sha256=mfIir6i3VUsFP0TCD-JqeFtPe_YWadTAGTcZd0uFVWo,1362
+pubtools/_content_gateway/cgw_client.py,sha256=_PrJ16yjy2klrsNVSsQk1LEnmyG_CtJzTXZRrbgx910,16302
+pubtools/_content_gateway/cgw_session.py,sha256=0GFycHryNJfdA1bisKKELMgynz9RiFmjE-oqLvT_dCs,2883
+pubtools/_content_gateway/push_base.py,sha256=2Wy-UgD_cvwn852F0kXsXw-6c6S1VeagXzx52htLx_A,29843
+pubtools/_content_gateway/push_cgw.py,sha256=s_6-LtAK7Bx7ibwS8rPfCH79MhCuN-PphZ8siUko9AQ,2929
+pubtools/_content_gateway/push_staged_cgw.py,sha256=EIBm1NwL-RPQv1SbZ5acnGkZCFBKA_FeDjQ9-A9K0xQ,5820
+pubtools/_content_gateway/utils.py,sha256=Sr81BjeUCeqDDUq8rqd-q5WixHc9XKcqRkd7iOzWxak,11867
+pubtools_content_gateway-0.4.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pubtools_content_gateway-0.4.0.dist-info/METADATA,sha256=ZygOMyGYeF6pxOUZAtw78hexf50ufZ6qbrsR6pp2sNM,1198
+pubtools_content_gateway-0.4.0.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
+pubtools_content_gateway-0.4.0.dist-info/entry_points.txt,sha256=7g5Dbz9JDvSPVHzU0fpb5eEyx3RfYo8Kyv0vh1QFCo4,160
+pubtools_content_gateway-0.4.0.dist-info/top_level.txt,sha256=OojGd4bFkXX5XG4HOnyDjk9j-gLOzB0AOBI8msYhmdY,9
+pubtools_content_gateway-0.4.0.dist-info/RECORD,,
