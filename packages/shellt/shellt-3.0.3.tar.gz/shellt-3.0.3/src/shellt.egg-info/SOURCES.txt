@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/shellt/__init__.py
+src/shellt/shellt.py
+src/shellt.egg-info/PKG-INFO
+src/shellt.egg-info/SOURCES.txt
+src/shellt.egg-info/dependency_links.txt
+src/shellt.egg-info/entry_points.txt
+src/shellt.egg-info/requires.txt
+src/shellt.egg-info/top_level.txt
