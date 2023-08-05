@@ -1,0 +1,7 @@
+setup.py
+newnx1/__init__.py
+newnx1/test.py
+newnx1.egg-info/PKG-INFO
+newnx1.egg-info/SOURCES.txt
+newnx1.egg-info/dependency_links.txt
+newnx1.egg-info/top_level.txt
