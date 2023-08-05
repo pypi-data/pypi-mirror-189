@@ -1,0 +1,17 @@
+aiofile
+aiohttp
+aiomysql
+aioredis
+argparse
+codefast
+endlessh
+joblib
+knivesout
+loguru
+matplotlib
+pandas
+psutil
+pymysql
+redis
+rich
+uuidentifier
