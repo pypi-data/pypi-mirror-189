@@ -1,0 +1,12 @@
+dash_autocomplete/DashAutocomplete.py,sha256=pwxhKhNowKTpw62AWXRU-GXdeMRXUIDgwyTCBDAAqgw,5041
+dash_autocomplete/__init__.py,sha256=u91o84toN2cgj5WLlX2p5sY-yOquRiZEkwByAH1jfSs,2263
+dash_autocomplete/_imports_.py,sha256=jLu7wcv6WbgbNPAg4no-MmWxyMM1YXExM5tOs7sa40c,84
+dash_autocomplete/dash_autocomplete.min.js,sha256=cK9vW8P-mE3ADn-w9SpGVVnD3dcK4eixfONI10EBg3Q,93829
+dash_autocomplete/dash_autocomplete.min.js.map,sha256=dCDBaDWZ8myDSYRAADpNyq2YG9nzqBQ2rnkPA6JRRY4,101
+dash_autocomplete/metadata.json,sha256=WxBjctT2lgnrDTjJV5mD41wp4TN4CXRaafj-GsFtA48,10062
+dash_autocomplete/package-info.json,sha256=Nxrt9jutnej8FfPuHbci7gpXRPGK_PX4VzKd7isvX1k,1890
+dash_autocomplete-0.1.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dash_autocomplete-0.1.0.dist-info/METADATA,sha256=MChQVO22zoluOuVw-4O39ymIOSZ1UrgGMm8eAnHuReY,248
+dash_autocomplete-0.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+dash_autocomplete-0.1.0.dist-info/top_level.txt,sha256=bbPsc5xcS5j4A4vSommpbq6mxghZmxkF7wOGG2JlOmk,18
+dash_autocomplete-0.1.0.dist-info/RECORD,,
