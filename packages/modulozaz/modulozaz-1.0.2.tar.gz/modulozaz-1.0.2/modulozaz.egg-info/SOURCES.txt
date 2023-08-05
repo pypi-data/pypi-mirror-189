@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+modulozaz.egg-info/PKG-INFO
+modulozaz.egg-info/SOURCES.txt
+modulozaz.egg-info/dependency_links.txt
+modulozaz.egg-info/top_level.txt

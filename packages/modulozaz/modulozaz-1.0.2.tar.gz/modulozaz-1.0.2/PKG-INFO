@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: modulozaz
+Version: 1.0.2
+Summary: Pacotes do Google Driver
+Home-page: UNKNOWN
+Author: Ivan Augusto de Azevedo
+Author-email: i.a.azevedo@gmail.com
+License: MIT
+Keywords: zaz
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+License-File: LICENSE.txt
+
+Manipulação de arquivos com o Google Driver
+
