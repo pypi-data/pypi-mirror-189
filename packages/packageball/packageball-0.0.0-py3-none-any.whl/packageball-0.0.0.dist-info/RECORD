@@ -1,0 +1,8 @@
+mySubPackage1/__init__.py,sha256=pNWlhxNFrj34pGddIIfte6xNRVJPj4WefMVTjgyfTrw,19
+mySubPackage1/basic.py,sha256=6GFuW9QshjHYwZ8SdCWLaGz5GeegFOG6_aGXgDAE6aI,68
+mySubPackage2/__init__.py,sha256=qPQVsmQmvgXFMG7UkGpo4qYawQEGU2T2OpgCIgtCxBg,20
+mySubPackage2/basic.py,sha256=swBenE4NlvHVCCJ_ce8gW-sJvXQBNHLr0vIr1lDbW3s,71
+packageball-0.0.0.dist-info/METADATA,sha256=Dt4TGxC5fKM_Utxh4RzZA7JfN3eZljNEslT-2850a1k,117
+packageball-0.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+packageball-0.0.0.dist-info/top_level.txt,sha256=IF_Wjfg-tEWsWclxMX-byx7G0VV2a2QKQo8q-zY7OJE,28
+packageball-0.0.0.dist-info/RECORD,,
