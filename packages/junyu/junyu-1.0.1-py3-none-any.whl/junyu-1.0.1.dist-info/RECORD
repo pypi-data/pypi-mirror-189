@@ -1,0 +1,10 @@
+cnn/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cnn/efficientNet.py,sha256=HkNHvlWFbJJwoYdgR4VBfDnHQt8PwgExhDKt06jXZ-s,12647
+cnn/jy.py,sha256=RC48CLGB9ji8yoFQLhZBa59an9pMl2VOKZi0MuzkEXk,34
+cnn/resNet.py,sha256=bN7cOrfNLsg5zzBhvvuqpmyCJMQn5aGj_93GNB99AsI,11245
+cnn/utils.py,sha256=afNNXvzuxmcZbXF3O5Ewwi86ZdNhACgeXvyAS7GGjWQ,7316
+junyu-1.0.1.dist-info/LICENSE,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+junyu-1.0.1.dist-info/METADATA,sha256=pvD5Q2VuPGTcbEezCGkFBDjsfkb9hKsP4ZKDDcIgsTw,1127
+junyu-1.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+junyu-1.0.1.dist-info/top_level.txt,sha256=WIMze6HEIFcdXzD5kX6_wDLEJl9k5jcr4M5Y6salfRU,4
+junyu-1.0.1.dist-info/RECORD,,
