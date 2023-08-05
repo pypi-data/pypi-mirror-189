@@ -1,0 +1,22 @@
+[project]
+name = "retarus_common"
+dynamic = ["readme", "dependencies"]
+version = "0.1.1"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name="Retarus GmbH", email = "Developers@retarus.com"},
+]
+description=  ""
+
+[project.urls]
+repository = "https://github.com/retarus/retarus-python"
+
+[tool.setuptools.dynamic]
+#version = {file = "VERSION"}
+readme = {file = ["README.md"]}
+dependencies = {file = "requirements.txt"}
+
+[build-system]
+requires = ["setuptools-scm", "setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
