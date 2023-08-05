@@ -1,0 +1,11 @@
+pythonRSCdev/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pythonRSCdev/assembler.py,sha256=uhmFRNusYZGT1U_Mt8MDZfMb_NUxSl0v4qMzPNe8k_w,3622
+pythonRSCdev/classes.py,sha256=g6UCehAyxKd2d0YdkeGPThJI8ESDU1q029D2b45PuO4,1707
+pythonRSCdev/cli.py,sha256=AtXj1SVb8cthfdxl2q1PCgG5Htbr3CM0O2gf-TGEc3I,1126
+pythonRSCdev/emulator.py,sha256=Otq-GPM8oTBRN1B0ovlU6ZAc6puYIOFzNoXjqJn6xrM,17965
+pythonRSC_dev-1.1.3.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+pythonRSC_dev-1.1.3.dist-info/METADATA,sha256=p2OkTHuIUG_xQcNZHnECFdG34_KvtdkcG340SXod4WQ,3930
+pythonRSC_dev-1.1.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+pythonRSC_dev-1.1.3.dist-info/entry_points.txt,sha256=T4Lj3kefOhGjhlJdTq6O65t90gP3uJdhX5Hl9Tf9DxU,55
+pythonRSC_dev-1.1.3.dist-info/top_level.txt,sha256=a_w7ETznzyHfftbp5-_LMc0fQ1sjCts1qfmlS535lI4,13
+pythonRSC_dev-1.1.3.dist-info/RECORD,,
