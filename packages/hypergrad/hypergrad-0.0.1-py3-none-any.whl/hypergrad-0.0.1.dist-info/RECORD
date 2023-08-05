@@ -1,0 +1,10 @@
+hypergrad/__about__.py,sha256=DsAHdxLC16H2VjdFOU5tBx2xT9VnNQ-XbTS24fRCa_w,22
+hypergrad/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hypergrad/approx_hypergrad.py,sha256=VereOsQzLYwvIex6sN4PLkLjBsHVMEb37WIJPUwKnxM,5061
+hypergrad/optimizers.py,sha256=v-_TG4aEAunxnLErkzK5blI2SQTUeRGb-nBpEe5IbV0,1035
+hypergrad/solver.py,sha256=uSChK1Lx_aJykkBQYg5VBTaJBkpsHczFNolN_7p0eGE,7004
+hypergrad/utils.py,sha256=Q0FNauUctE5vUtKxz_Y8JD8K8Iw4yYSi8hUKew0owyk,1381
+hypergrad-0.0.1.dist-info/METADATA,sha256=ScaGvDnqZ6ZoNQCetzIBAGtvPocBkUp5qghYrV3M7hk,2175
+hypergrad-0.0.1.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+hypergrad-0.0.1.dist-info/licenses/LICENSE.txt,sha256=6qmN45MhLzMd7gv04esB8sWNPv77P4qajcVlZAs-BK8,1114
+hypergrad-0.0.1.dist-info/RECORD,,
