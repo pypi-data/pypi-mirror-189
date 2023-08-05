@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+basic_func/__init__.py
+basic_func/basic_functions.py
+basic_functions.egg-info/PKG-INFO
+basic_functions.egg-info/SOURCES.txt
+basic_functions.egg-info/dependency_links.txt
+basic_functions.egg-info/requires.txt
+basic_functions.egg-info/top_level.txt
