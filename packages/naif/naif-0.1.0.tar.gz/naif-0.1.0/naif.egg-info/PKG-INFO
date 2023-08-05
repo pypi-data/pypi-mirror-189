@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: naif
+Version: 0.1.0
+Summary: Numerical Analysis and Integer combinations of Frequencies
+Home-page: UNKNOWN
+Author: Leandro Beraldo e Silva
+Author-email: lberaldoesilva@gmail.com
+License: MIT
+Description: $\texttt{naif}$ is a pure-python package for numerical analysis of
+        frequencies for orbits. It is based on the NAFF algorithm originally
+        proposed by Laskar (1990, 1993), and further developed by Valluri &
+        Merritt (1998). It is specially based on, and improves on, the Fortran
+        code developed by Valluri & Merritt (1998). Besides extracting the
+        frequencies with largest amplitudes in the spectrum, the package also
+        has tools to print the spectra before extraction of each frequency and
+        to "debug" the frequency identification around a specific peak.
+        
+Platform: UNKNOWN
+Requires-Python: >=3
+Description-Content-Type: text/markdown
