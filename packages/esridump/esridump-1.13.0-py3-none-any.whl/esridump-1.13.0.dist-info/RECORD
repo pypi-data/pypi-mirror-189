@@ -1,0 +1,11 @@
+esridump/__init__.py,sha256=iYFq0lQxZCylCtA76rQiNvMbLV6xpmGVHlHK6cPbWJI,86
+esridump/cli.py,sha256=i4_YKzF_LniXxNzGqMJLWXcerhrlWRoXBlYrXvzqtSY,4208
+esridump/dumper.py,sha256=dVIQcvy1V8-JFm_N4FUmGrMFi5ShCFP4a2Z16MZgAIA,19925
+esridump/errors.py,sha256=T5f69NfJUBnAmJboSjb_xBKRId8DcFqpJpyc8ok5zVM,45
+esridump/esri2geojson.py,sha256=O2aPXckOWgu22zIUhKUTl9hfaRMaX9DfK71jNlmaoTU,3927
+esridump-1.13.0.dist-info/LICENSE,sha256=6A2EFYshkucGXrehfBc11FAvWMnql5H25olGtiOdxQw,1064
+esridump-1.13.0.dist-info/METADATA,sha256=Mb936bT-NMzGqvJvv4STeGEGPbC2q2kp4-WZ7ri7-q8,4919
+esridump-1.13.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+esridump-1.13.0.dist-info/entry_points.txt,sha256=NICIpUu4y7ih1WQszh4SbM_VKQ1D41f1kTgxipRB7RA,51
+esridump-1.13.0.dist-info/top_level.txt,sha256=mGcXkFdhwnxjvfvcrsA9lCt2uZuQB4dDv9VW5q2AA4E,9
+esridump-1.13.0.dist-info/RECORD,,
