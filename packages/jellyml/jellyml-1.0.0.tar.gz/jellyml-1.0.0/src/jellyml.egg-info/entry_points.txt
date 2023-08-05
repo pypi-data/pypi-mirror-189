@@ -1,0 +1,4 @@
+[console_scripts]
+jelly = jellyml.cli:main
+jellyml = jellyml.cli:main
+jly = jellyml.cli:main
