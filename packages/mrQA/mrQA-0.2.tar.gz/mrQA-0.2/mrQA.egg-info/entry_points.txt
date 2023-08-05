@@ -1,0 +1,4 @@
+[console_scripts]
+mr_proto_compl = mrQA.cli:main
+mrpc_subset = mrQA.run_subset:main
+protocol_compliance = mrQA.cli:main
