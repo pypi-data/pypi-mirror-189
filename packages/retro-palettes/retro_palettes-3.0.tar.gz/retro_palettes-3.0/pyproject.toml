@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retro_palettes"
+version = "3.0"
+authors = [
+  { name="Habu", email="lksai.kanesa2023@gmail.com" },
+]
+description = "Custom Palette For Visualization"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]

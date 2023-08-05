@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+retro_palettes/__init__.py
+retro_palettes.egg-info/PKG-INFO
+retro_palettes.egg-info/SOURCES.txt
+retro_palettes.egg-info/dependency_links.txt
+retro_palettes.egg-info/top_level.txt
