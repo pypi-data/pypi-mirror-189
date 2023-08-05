@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pygreeter
+Version: 0.1.1
+Summary: A small greeter package with urwid
+Project-URL: Source Code, https://github.com/NabilNYMansour/pygreeter
+Project-URL: My Website, https://nabilmansour.com/
+Author-email: Nabil Mansour <nabil@email.com>
+Maintainer-email: Yousif Mansour <yousif@email.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10.6
+Requires-Dist: urwid==2.1.2
+Description-Content-Type: text/markdown
+
+# pygreeter
+This is a testing python package that greets the universe using urwid library.
+
+The aim of this package is to learn how to use python packaging and PYPI.
