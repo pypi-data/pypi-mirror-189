@@ -1,0 +1,108 @@
+# AML Pipeline Local Run Guide
+
+This repository contains sdk code to run aml pipeline locally.
+So far there are 2 job running modes supported in pipeline local run:
+
+* Native:  this mode means run the job in native process
+* Container:  this mode the local pipeline executor will help building the container based on the environment defined in pipeline job component.
+
+**limitations:**
+* Only support CommandJob (SweepJob and DistributedJob are not supported)
+* Pure local run with local metrics/UI support (need to run local server container if want to see ui)
+
+## project structure
+
+- piprunengine: main pkg for pipeline local executor
+- tests:  unit test to run all sample pipelines (defined in notebookxx)
+- notebookxx: unit test pipeline definition and related resources. 
+
+## prerequisites
+
+* Docker
+* azure ml devplat-v2 sdk
+* python version > 3.7
+
+
+## How to run it
+
+### 1.1 clone this repo to local
+
+### 1.2 create a new python env with conda
+
+```shell
+conda create -n <local_run_env> python=3.9
+```
+
+### 1.3 install the local run sdk
+
+find the latest wheel in release folder and install it in the new created env
+
+```shell
+pip install pipelinelocalrun==0.1.9
+```
+
+### 1.4 install jupyter if want to run in notebook
+
+```shell
+pip install jupyter
+```
+
+### 1.5 start local web server if want to try local ui & mlflow (optional)
+
+```shell
+docker run -e AML_LOCAL_RUN_DB_PATH="/metadata/localrun.db" -e LOCALUI_START=true -p 127.0.0.1:4999:80/tcp -p 127.0.0.1:8080:8080/tcp -p 127.0.0.1:3001:3001/tcp -p 127.0.0.1:5000:5000/tcp --mount type=bind,source='<current-user-home-path>\.azureml\piprun',target=/metadata <image_name:tag>
+```
+
+ `<current-user-home-path>`:   
+ * for windows: `C:\Users\<username>`
+ * for linux: `/home/<username>`
+
+`<image_name:tag>` is the image built in step 2.4
+
+### 1.6 how to use in code/notebook
+
+* import the local run func from the install pkg
+  
+  ```python
+  from piprunengine import run
+  ```
+
+* following the normal steps in the notebook to build your pipeline(you can ignore all steps which need interaction with aml workspace)
+
+* start pipeline local run
+  
+  ```python
+  output_root_dir = "./local-run-output/notebook_1a_native"
+  # set pipeline name
+  pipeline.name="test-pipeline"
+  run(output_root_dir=output_root_dir, job=pipeline, experiment_name="test")
+  ```
+
+  `note`: by default it runs in CONTAINER mode and it will build the curated container locally and run in container mode.
+
+### 1.7 try with notebook demo
+* [notebook1a/pipeline_with_components_from_yaml.ipynb](./notebook1a/pipeline_with_components_from_yaml.ipynb)
+* [notebook1b/pipeline_with_python_function_components.ipynb](./notebook1b/pipeline_with_python_function_components.ipynb)
+* [notebook2c/nyc_taxi_data_regression.ipynb](./notebook2c/nyc_taxi_data_regression.ipynb)
+* [notebook1d/pipeline_with_non_python_components.ipynb](./notebook1d/pipeline_with_non_python_components.ipynb)
+## Contributing
+
+This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
+the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+
+When you submit a pull request, a CLA bot will automatically determine whether you need to provide
+a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
+provided by the bot. You will only need to do this once across all repos using our CLA.
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
+contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+## Trademarks
+
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
+trademarks or logos is subject to and must follow 
+[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
+Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
+Any use of third-party trademarks or logos are subject to those third-party's policies.
