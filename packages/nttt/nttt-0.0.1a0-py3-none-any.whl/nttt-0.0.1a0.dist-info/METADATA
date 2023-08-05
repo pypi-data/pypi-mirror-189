@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: nttt
+Version: 0.0.1a0
+Summary: A utility for Nina to clean up translated projects
+Home-page: https://github.com/raspberrypilearning/nttt
+Author: Martin O'Hanlon
+Author-email: martin.ohanlon@raspberrypi.org
+Keywords: nttt,pypi,package
+Requires-Python: >=3.7
+Requires-Dist: pandas
+Requires-Dist: eol
+Requires-Dist: ruamel.yaml
+
