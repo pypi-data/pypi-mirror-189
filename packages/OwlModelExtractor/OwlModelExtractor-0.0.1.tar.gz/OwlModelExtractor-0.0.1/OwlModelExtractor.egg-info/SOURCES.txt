@@ -1,0 +1,7 @@
+README.md
+setup.py
+OwlModelExtractor.egg-info/PKG-INFO
+OwlModelExtractor.egg-info/SOURCES.txt
+OwlModelExtractor.egg-info/dependency_links.txt
+OwlModelExtractor.egg-info/requires.txt
+OwlModelExtractor.egg-info/top_level.txt
