@@ -1,0 +1,11 @@
+pdbinf/__init__.py,sha256=IFVUHHcfIqWDrd5GHbeScSc4YX0zyaDKFk73YSzwcuc,339
+pdbinf/_pdbinf.py,sha256=YlUM5agQbzzhMMArRoIUsxmO5J4FAh1Tf38PAfTpZ1c,10560
+pdbinf/_standard_AAs.py,sha256=PX0XYFUqSB_6yF63KShuc_ugOjkJoBD2D-svT0mf3cU,24109
+pdbinf/tests/test_nonstandard.py,sha256=f997wTwRlZTUBXVDoqW8SZojhsWVdC6X2c7nUTwYQPE,10220
+pdbinf/tests/test_standard_AAs.py,sha256=01go6u0QVVk2H4Ej1p8wSCh-RcVIoKJWQJIOCDvsT4k,99144
+pdbinf/tests/test_thrombin.py,sha256=DbDf21o-v-TFrb2Q9kvpifBNNP5Mj3j_8dvnjUhCE5Q,392401
+pdbinf-0.0.1.dist-info/LICENSE,sha256=mB55oS90yCHDt3mLF4T69DTVXWwlIhYmzOtdUG-qjog,1073
+pdbinf-0.0.1.dist-info/METADATA,sha256=ehXpnlDPC6Pfna3hzCmYfFNhx0mQ3uVGRdlPtEgnEAE,1400
+pdbinf-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+pdbinf-0.0.1.dist-info/top_level.txt,sha256=7PnmwllhTpu41YXWkc04TVVWX0YkN2zi-SCQbmudXqQ,7
+pdbinf-0.0.1.dist-info/RECORD,,
