@@ -1,0 +1,13 @@
+LICENSE
+README.rst
+pyproject.toml
+consolidatewheels/__init__.py
+consolidatewheels/__main__.py
+consolidatewheels/consolidatewheels.py
+consolidatewheels/main.py
+consolidatewheels.egg-info/PKG-INFO
+consolidatewheels.egg-info/SOURCES.txt
+consolidatewheels.egg-info/dependency_links.txt
+consolidatewheels.egg-info/entry_points.txt
+consolidatewheels.egg-info/requires.txt
+consolidatewheels.egg-info/top_level.txt
