@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pyNebula
+Version: 0.6.1
+Summary: A Powerfull Encryptor For Encrypt Python Code. It Has No Decode Function. It Directly Exicute Your Encrypted Code
+Home-page: https://github.com/cracker911181/pyNebula
+Author: cracker911181
+License: GNU General Public License v3.0
+License-File: LICENSE
+
+# pynebula
+A Powerfull Python Code Rncryptor
