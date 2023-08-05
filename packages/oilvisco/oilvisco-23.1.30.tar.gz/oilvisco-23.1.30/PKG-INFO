@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: oilvisco
+Version: 23.1.30
+Summary: Converts text to html. Text muste be in t5html form.
+Project-URL: Homepage, https://github.com/Exsplendor/oilvisco
+Project-URL: Bug Tracker, https://github.com/Exsplendor/oilvisco/issues
+Author-email: splendor <splendor@tuta.io>
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+OilVisco
+========
+
+Example:
+
+	0W20 x 3 + 10W40 x 1 = 2.5W25
+
+[//]: ( vi: set et sw=4 ts=4 ft=markdown ai : )
