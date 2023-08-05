@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+data/data_file
+src/beatrix_jupyterlab.egg-info/PKG-INFO
+src/beatrix_jupyterlab.egg-info/SOURCES.txt
+src/beatrix_jupyterlab.egg-info/dependency_links.txt
+src/beatrix_jupyterlab.egg-info/entry_points.txt
+src/beatrix_jupyterlab.egg-info/requires.txt
+src/beatrix_jupyterlab.egg-info/top_level.txt
