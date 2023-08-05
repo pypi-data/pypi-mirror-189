@@ -1,0 +1,12 @@
+chatGPT_debugger/__init__.py,sha256=zyNHmmtBqOlN1ZmeNoNBoEsTWUefszgQgJYLmu4i4pI,15
+chatGPT_debugger/callAPI.py,sha256=2KJHe1pBr2TM3H6BZkT5kOdCG84myR5YI_EdolAG9N0,1604
+chatGPT_debugger/chatGPT_debugger.py,sha256=CswVGp0qnDYp-ob4UtwOU3RojThU-CQx49lpIqmZPk8,2182
+chatGPT_debugger/engine.py,sha256=JqvjBd26UpzZiAhIG8sngZRbcM20CjbfRIX2woGEM6M,1472
+chatGPT_debugger/is_local.py,sha256=3SdwQx3WzvaCPB5T2juW2dhYIdIRxPqM0UtuqP8fODQ,438
+chatGPT_debugger/is_wrapped.py,sha256=2NRbvinfj0ncNc2kisidDArdPfdCC4ZLa1FVr9WskIw,335
+chatGPT_debugger/store_api_key.py,sha256=1nwV9Bi3o2uWbk1o4ohsq0Gozvspr683M9VLu5rUMkw,953
+chatGPT_debugger-0.1.1.dist-info/LICENSE,sha256=IOm16V_pZ7hYz6ed-yaQjy8MrHCpTrq_VdQRwp-1npQ,1070
+chatGPT_debugger-0.1.1.dist-info/METADATA,sha256=imr4Jj0-LHxvGOl5uUJZrdjMUrEsM29mQHrc1owi5PI,2794
+chatGPT_debugger-0.1.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+chatGPT_debugger-0.1.1.dist-info/top_level.txt,sha256=ndTn_6InOYC5PlZUs_rLIQGFm2hAUVEBfCtrYgBkl50,17
+chatGPT_debugger-0.1.1.dist-info/RECORD,,
