@@ -1,0 +1,19 @@
+[project]
+name = "EMS_analyzer"
+version = "0.0.1"
+authors = [
+  { name="Yonghoon Kim", email="kimyhjava@pukyong.ac.kr" },
+  { name="Taehoon Koh", email="thkoh@suncom.co.kr" },
+]
+description = "Electric Monitoring System Analyzer"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pypa/sampleproject"
+"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
