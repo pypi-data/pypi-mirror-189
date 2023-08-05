@@ -1,0 +1,7 @@
+README.md
+setup.py
+nectarchain.egg-info/PKG-INFO
+nectarchain.egg-info/SOURCES.txt
+nectarchain.egg-info/dependency_links.txt
+nectarchain.egg-info/requires.txt
+nectarchain.egg-info/top_level.txt
