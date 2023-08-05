@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/rickquests/__init__.py
+src/rickquests/request_util.py
+src/rickquests.egg-info/PKG-INFO
+src/rickquests.egg-info/SOURCES.txt
+src/rickquests.egg-info/dependency_links.txt
+src/rickquests.egg-info/top_level.txt
