@@ -1,0 +1,2 @@
+[console_scripts]
+mische = oilvisco.__main__:start
