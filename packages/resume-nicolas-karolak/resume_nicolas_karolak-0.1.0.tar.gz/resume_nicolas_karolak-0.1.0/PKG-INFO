@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: resume-nicolas-karolak
+Version: 0.1.0
+Summary: CV de Nicolas Karolak
+Home-page: https://cv.karolak.fr
+License: Proprietary
+Keywords: cv,nicolas karolak,resume
+Author: Nicolas Karolak
+Author-email: cv@karolak.fr
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: resume-pycli
+Project-URL: Repository, https://github.com/nikaro/resume
+Description-Content-Type: text/markdown
+
+

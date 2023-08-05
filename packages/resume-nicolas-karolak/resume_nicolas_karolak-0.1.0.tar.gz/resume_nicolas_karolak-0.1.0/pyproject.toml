@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "resume-nicolas-karolak"
+version = "0.1.0"
+description = "CV de Nicolas Karolak"
+license = "Proprietary"
+authors = ["Nicolas Karolak <cv@karolak.fr>"]
+readme = "README.md"
+homepage = "https://cv.karolak.fr"
+repository = "https://github.com/nikaro/resume"
+keywords = ["cv", "nicolas karolak", "resume"]
+packages = [
+  {include = "pkg"},
+]
+include = [
+  {path = "public"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+resume-pycli = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
