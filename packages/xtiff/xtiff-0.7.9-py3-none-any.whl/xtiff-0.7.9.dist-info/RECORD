@@ -1,0 +1,11 @@
+xtiff/__init__.py,sha256=ZtYQZhaJmePhoGbJyTyZgRgXxF1Y7wZ8xD-wL39myxU,131
+xtiff/_version.py,sha256=aIPYH_sXgrRzQY4Flt736c9wBpyrFWJo-GXoWgbWI7A,160
+xtiff/ome.py,sha256=O1SfEoYGqCCgWJIyEC1yMZDZBJAJJLYZz_c9t9CiW0Q,3263
+xtiff/tiff.py,sha256=Q54m_mfnXlVRL3oKd896xZwcP3tj-UZ2t4YsyfyuEQs,16293
+xtiff-0.7.9.dist-info/AUTHORS.md,sha256=ezNjIpKxfEboUF_LIDfLq7c_2ZkfuK6ABKZyaMsZthU,60
+xtiff-0.7.9.dist-info/LICENSE,sha256=ykkeI4yixIRYFi0cUZo--xAaQdUJho_YdkAK-El1MrY,1077
+xtiff-0.7.9.dist-info/METADATA,sha256=5HA-18Ns23lvOcbHNqUI2tXEpf9lwMWgBB8qGeIvp4Q,9189
+xtiff-0.7.9.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+xtiff-0.7.9.dist-info/top_level.txt,sha256=LySjW2Hv_ncsn_qRMmyAtIVbydOEXZAhmLiupAXvoFs,6
+xtiff-0.7.9.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+xtiff-0.7.9.dist-info/RECORD,,
