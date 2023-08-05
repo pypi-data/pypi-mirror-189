@@ -1,0 +1,10 @@
+plotly
+plotly_express
+
+[dev]
+build
+jupyter
+kaleido
+numpy
+pre-commit
+pytest
