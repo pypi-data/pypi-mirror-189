@@ -1,0 +1,14 @@
+requests
+uvicorn
+fastapi
+aiofiles
+Jinja2
+humanize
+python-dotenv
+SQLAlchemy>=2.0.0b4
+psycopg2-binary
+
+[dev]
+bumpver
+pre-commit
+pytest
