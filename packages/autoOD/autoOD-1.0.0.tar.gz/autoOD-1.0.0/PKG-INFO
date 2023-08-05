@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: autoOD
+Version: 1.0.0
+Summary: Module to automate object detection process.
+Author: Elina Chertova
+Author-email: elas.2015@mail.ru
+Keywords: ObjectDetection,autoML
+
+# autoOD
+
+## Конфигурация проекта
+В корне рабочей директории необходимо создать файл `object_detection.ini`. Пример:
+
+
+Replace params from `object_detection.ini` with your data.
+
+## Docker
+
+## Augmentation
+Available augmentations' methods: [link](docs/augmentation/Документация_по_аугментации.pdf)
+
+## Tutorial
+
