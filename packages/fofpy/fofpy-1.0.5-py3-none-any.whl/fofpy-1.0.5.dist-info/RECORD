@@ -1,0 +1,16 @@
+pyFoF/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyFoF/data_handling.py,sha256=Ih2iGWT1m1kuMM1osfOAkirK7zxgaxVMjcekS_9CkdA,2564
+pyFoF/experiment.py,sha256=dWsD0HbjlW3W0vwOGCxmANIKT_Ae8PS1sqaGq0N5PcA,8159
+pyFoF/fof.py,sha256=stYwwho675cGFifhJEJXRlPp4XtT6avTs1OU6FPg9SU,11407
+pyFoF/galaxy_catalog.fits,sha256=II2_LujMGmEJWfpA5biBm-Tta75dHJie8js1nwRvSyY,4190400
+pyFoF/graph_theory.py,sha256=ANyUwEoawYsxrdEzk2DRafg87u2mza59CYe3fhi-_Sw,5931
+pyFoF/group.py,sha256=lbwB_K8mJdOxbYdJqyCOLwNevyYdjSDo0KDD-L6AYkY,3014
+pyFoF/group_catalog.fits,sha256=V6QjWbMssg-1vQHDbNDJtG-DPB1ZsLuoVIqlFzpvll4,195840
+pyFoF/metrics.py,sha256=FA90NG1ioH-quyqqcCuKuACbzA8BvsX1IYbjb1SwyI0,17399
+pyFoF/report.py,sha256=Ip-ROBNrup297UCIgxPa0BQy_DRtEZvZ2UTuqrslmnk,7143
+pyFoF/survey.py,sha256=X9PJektZ1-xq-WITdZmrIL_1P61tlcI68WiDjHYTZXo,2466
+pyFoF/utils.py,sha256=fl_DVww4X2e_tndeZcVHA5fkR7S5g6YEKqlBNRuZH0c,3918
+fofpy-1.0.5.dist-info/METADATA,sha256=XYdLtQ49xr2QzsosTDmuaEobREE2w8qe-IWwc0zx8Os,6622
+fofpy-1.0.5.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+fofpy-1.0.5.dist-info/LICENSE,sha256=-OJwac56rJ4Kari_N6j24zvPt_4WCFeNfzy3FJzEftM,1078
+fofpy-1.0.5.dist-info/RECORD,,
