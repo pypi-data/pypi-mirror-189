@@ -1,0 +1,3 @@
+recursive-include netos_inventory/templates *.html
+recursive-include netos_inventory/static *.js
+recursive-include netos_inventory/static *.jpeg

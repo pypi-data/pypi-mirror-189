@@ -1,0 +1,45 @@
+{% extends 'base/layout.html' %}
+{% load helpers %}
+{% load render_table from django_tables2 %}
+
+{% comment %}
+Blocks:
+message_extra: Supplementary warning message content
+
+Context:
+model: The model class of the objects being reconciled
+form: The bulk edit form class
+table: The table class for rendering list of objects being reconciled
+return_url: The URL to which the user is redirected after submitting the form
+{% endcomment %}
+
+{% block title %}Reconcile {{ table.rows|length }} {{ model|meta:"verbose_name_plural"|bettertitle }}?{% endblock %}
+
+{% block content %}
+<div class="container-md px-0">
+  <div class="alert alert-info mb-3" role="alert">
+    <h4 class="alert-heading">Confirm Bulk Reconciliation</h4>
+    <hr />
+    <strong>Warning:</strong> The following operation will update <strong>{{ table.rows|length }}</strong>
+    {{ model|meta:"verbose_name_plural" }}. Please carefully review detected fields if they should replace current ones
+    {% block message_extra %}{% endblock %}
+  </div>
+</div>
+<div class="container-xl px-0">
+  <div class="table-responsive">
+    {% render_table table 'inc/table.html' %}
+  </div>
+  <div class="row mt-3">
+    <form action="" method="post">
+      {% csrf_token %}
+      {% for field in form.hidden_fields %}
+      {{ field }}
+      {% endfor %}
+      <div class="text-end">
+        <button type="submit" name="_confirm" class="btn btn-info">Reconcile {{ table.rows|length }} {{model|meta:"verbose_name_plural" }}</button>
+        <a href="{{ return_url }}" class="btn btn-outline-dark">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock content %}

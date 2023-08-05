@@ -1,0 +1,183 @@
+{% extends 'base/layout.html' %}
+{% load buttons %}
+{% load recon_buttons %}
+{% load helpers %}
+{% load render_table from django_tables2 %}
+{% load static %}
+
+{% comment %}
+Blocks:
+  extra_controls: Additional action buttons
+  bulk_buttons: Additional bulk action buttons to display beneath the objects
+    list
+
+Context:
+  model: The model class being listed
+  table: The table class used for rendering the list of objects
+  actions: A list of buttons to display. This template checks for add, import,
+    export, bulk_edit, and bulk_delete.
+  filter_form: The bound filterset form for filtering the objects list (optional)
+  return_url: Return URL to use for bulk actions (optional)
+{% endcomment %}
+
+
+{% block title %}{{ model|meta:"verbose_name_plural"|bettertitle }}{% endblock %}
+
+{% block controls %}
+  <div class="controls">
+    <div class="control-group">
+
+      {% block extra_controls %}{% endblock %}
+      {% if 'add' in actions %}
+          {% add_button model %}
+      {% endif %}
+      {% if 'import' in actions %}
+          {% import_button model %}
+      {% endif %}
+      {% if 'export' in actions %}
+          {% export_button model %}
+      {% endif %}
+    </div>
+  </div>
+{% endblock controls %}
+
+{% block tabs %}
+  <ul class="nav nav-tabs px-3">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link  {% if filter_form.changed_data|length == 0 %}active{% endif %}" id="object-summary-tab" data-bs-toggle="tab" data-bs-target="#object-summary" type="button" role="tab" aria-controls="edit-form" aria-selected="true">
+        Summary
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link {% if filter_form.changed_data|length > 0 %}active{% endif %}" id="object-list-tab" data-bs-toggle="tab" data-bs-target="#object-list" type="button" role="tab" aria-controls="edit-form" aria-selected="false">
+        Results {% badge table.page.paginator.count %}
+      </button>
+    </li>
+    {% if filter_form %}
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="filters-form-tab" data-bs-toggle="tab" data-bs-target="#filters-form" type="button" role="tab" aria-controls="object-list" aria-selected="false">
+          Filters
+          {% if filter_form %}{% badge filter_form.changed_data|length bg_color="primary" %}{% endif %}
+        </button>
+      </li>
+    {% endif %}
+  </ul>
+{% endblock tabs %}
+
+{% block content-wrapper %}
+  <div class="tab-content">
+    {# Object list #}
+    <div class="tab-pane {% if filter_form.changed_data|length > 0 %}show active{% endif %}" id="object-list" role="tabpanel" aria-labelledby="object-list-tab">
+
+      {# Applied filters #}
+      {% if filter_form %}
+        {% applied_filters model filter_form request.GET %}
+      {% endif %}
+
+      {# "Select all" form #}
+      {% if table.paginator.num_pages > 1 %}
+        <div id="select-all-box" class="d-none card noprint">
+          <form method="post" class="form col-md-12">
+            {% csrf_token %}
+            <div class="card-body">
+              <div class="float-end">
+                {% if 'bulk_edit' in actions %}
+                  {% bulk_edit_button model query_params=request.GET %}
+                {% endif %}
+                {% if 'bulk_delete' in actions %}
+                  {% bulk_delete_button model query_params=request.GET %}
+                {% endif %}
+                {% if 'bulk_recon' in actions %}
+                  {% bulk_recon_button model query_params=request.GET %}
+                {% endif %}
+              </div>
+              <div class="form-check">
+                <input type="checkbox" id="select-all" name="_all" class="form-check-input" />
+                <label for="select-all" class="form-check-label">
+                  Select <strong>all {{ table.rows|length }} {{ table.data.verbose_name_plural }}</strong> matching query
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      {% endif %}
+
+      {# Object table controls #}
+      {% include 'inc/table_controls_htmx.html' with table_modal="ObjectTable_config" %}
+      <form method="post" class="form form-horizontal">
+        {% csrf_token %}
+        <input type="hidden" name="return_url" value="{% if return_url %}{{ return_url }}{% else %}{{ request.path }}{% if request.GET %}?{{ request.GET.urlencode }}{% endif %}{% endif %}" />
+
+        {# Object table #}
+
+            {% if prerequisite_model %}
+              {% include 'inc/missing_prerequisites.html' %}
+            {% endif %}
+
+        <div class="card">
+          <div class="card-body" id="object_list">
+            {% include 'htmx/table.html' %}
+          </div>
+        </div>
+
+        {# Form buttons #}
+        <div class="noprint bulk-buttons">
+          <div class="bulk-button-group">
+            {% bulk_recon_button model query_params=request.GET %}
+            {% block bulk_buttons %}
+              {% if 'bulk_edit' in actions %}
+                {% bulk_edit_button model query_params=request.GET %}
+              {% endif %}
+              {% if 'bulk_delete' in actions %}
+                {% bulk_delete_button model query_params=request.GET %}
+              {% endif %}
+            {% endblock %}
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+    {# Filter form #}
+    {% if filter_form %}
+      <div class="tab-pane show" id="filters-form" role="tabpanel" aria-labelledby="filters-form-tab">
+        {% include 'inc/filter_list.html' %}
+      </div>
+    {% endif %}
+
+    {# Summary tab #}
+      <div class="tab-pane {% if filter_form.changed_data|length == 0 %}show active{% endif %}" id="object-summary" role="tabpanel" aria-labelledby="object-summary-tab">
+        <ul id="summary-data" class="visually-hidden">
+          {% for recon_name, recon_count in recon_report.items %}
+          <li>{{ recon_name }};{{ recon_count }}</li>
+          {% endfor %}
+        </ul>
+        <ul id="site-data" class="visually-hidden">
+          {% for site_id, site_values in sites.items %}
+          <li>{{ site_id }};{{ site_values.0 }};{{ site_values.1 }};{{ site_values.2 }}</li>
+          {% endfor %}
+        </ul>
+        <ul id="region-data" class="visually-hidden">
+          {% for region_id, region_values in regions.items %}
+          <li>{{ region_id }};{{ region_values.0 }};{{ region_values.1 }};{{ region_values.2 }}</li>
+          {% endfor %}
+        </ul>
+        <h2 class="mt-2">Fields Match&nbsp;<i title="Shows if the given field on model match latest detected one" class="mdi mdi-information-outline text-primary fs-3" data-bs-placement="right" data-bs-toggle="tooltip"></i></h2>
+        <div id="chart-list" class="row"></div>
+        <h2 class="mt-4">Site&nbsp;<i title="Shows if all fields match group by site" class="mdi mdi-information-outline text-primary fs-3" data-bs-placement="right" data-bs-toggle="tooltip"></i></h2>
+        <div id="site-chart-list" class="row"></div>
+        <h2 class="mt-4">Region&nbsp;<i title="Shows if all fields match group by region" class="mdi mdi-information-outline text-primary fs-3" data-bs-placement="right" data-bs-toggle="tooltip"></i></h2>
+        <div id="region-chart-list" class="row"></div>
+      </div>
+  </div>
+
+{% endblock content-wrapper %}
+
+{% block javascript %}
+<script src="{% static 'netos_inventory/js/bundle.js' %}?version=0.1.12"></script>
+{% endblock javascript %}
+
+{% block modals %}
+  {% table_config_form table table_name="ObjectTable" %}
+{% endblock modals %}
