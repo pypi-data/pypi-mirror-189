@@ -1,0 +1,9 @@
+plotly_football_pitch/__init__.py,sha256=dfPqCtJH0wYwJ2ALPQuYYYCWSAvOagfc7W-KtqhQ4Bg,651
+plotly_football_pitch/pitch_background.py,sha256=qzAQs9ZMvQtDzFodm7LgksTPd4H-H_3WzqoDNjXT5Z4,9183
+plotly_football_pitch/pitch_dimensions.py,sha256=xzVJj9lwbi8eJ73eMgA4rr5Z0BzAMGWn8Pljg_FsBS8,2893
+plotly_football_pitch/pitch_plot.py,sha256=e8QVVG8nx2C5JUMsTQSPK3xNND9rAXYiU4EFXmW2qc8,10298
+plotly_football_pitch-0.0.2.dist-info/LICENSE.txt,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+plotly_football_pitch-0.0.2.dist-info/METADATA,sha256=dH3489YD1NoDwoeovyOWZFkrLRPN-1NmWm0wjipLm9w,4216
+plotly_football_pitch-0.0.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+plotly_football_pitch-0.0.2.dist-info/top_level.txt,sha256=eURqA4d5kh9mT2LRdkl0FNCahHHGefi5jck331g5Rac,22
+plotly_football_pitch-0.0.2.dist-info/RECORD,,
