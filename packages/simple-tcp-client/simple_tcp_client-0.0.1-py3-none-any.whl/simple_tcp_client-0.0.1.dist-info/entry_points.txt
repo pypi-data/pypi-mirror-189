@@ -1,0 +1,2 @@
+[console_scripts]
+pycat = pycat.__main__:main
