@@ -1,0 +1,10 @@
+super_cereal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+super_cereal/cerealizer/__init__.py,sha256=FX6biEPM96QKwrY0wAYgF_wPktvdSs-fOJsqIhhFfMc,1943
+super_cereal/cerealizer/avro.py,sha256=H1OwD2nEgsodfZ1xg8ajghmDSPwGaSrBStEc02vTlZA,3891
+super_cereal/cerealizer/builtins.py,sha256=wDlU8FWK9ZsF-7pNZhzaGiE29VmO989dvKZhqrd8SOI,3143
+super_cereal/cerealizer/encryption.py,sha256=OnbK8TmI3Bpsv6g9C5lFtJBiFrSh9nklM94odx5icDk,2319
+super_cereal/cerealizer/json.py,sha256=kSMbF8qgI2zflEqzfQoLvrxHgsPPlQyifbUAUH2TkxM,2333
+super_cereal-0.1.3.dist-info/METADATA,sha256=HsiZYjwoy_v0vmL1naJSEAmjkHQ0iDm_mk3MDA-qERk,960
+super_cereal-0.1.3.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+super_cereal-0.1.3.dist-info/LICENSE,sha256=yVuuHRzgI17MzTVgt3LsHvuX80innw--CmNPDCzO_iw,11358
+super_cereal-0.1.3.dist-info/RECORD,,
