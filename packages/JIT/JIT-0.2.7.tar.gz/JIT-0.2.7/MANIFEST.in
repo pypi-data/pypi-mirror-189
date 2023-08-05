@@ -1,0 +1,3 @@
+include *.txt *.pyd
+recursive-include JIT *.py *.so *.pyd
+prune JIT dog.py robotic_arm.py login_quanxian.pyc
