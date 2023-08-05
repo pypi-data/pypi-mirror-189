@@ -1,0 +1,9 @@
+homelypy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+homelypy/devices.py,sha256=09n9s__CCXCfAZ64-uGJQ6dRS0l6dBv5qf2ELVwMOv8,6601
+homelypy/homely.py,sha256=9Oy_ZfhpniP_6GuT3hqRjmolSP4Ju-4JIk5j9cvZNks,10300
+homelypy/location_Avskåkålia.json,sha256=kjnMNk2EyrfZdwMrqKptFudAsrIlYiSZ9BpYuRHrN5o,6694
+homelypy/states.py,sha256=JdUVgETk9NDS0R7EX-7Hz6Y7eMRtyt1qw5mfSZm6Jmo,5931
+homelypy-0.1.15.dist-info/METADATA,sha256=AxaocS2JfEJgjEe0FSLkviIa-9Nk7Ls_CmhfbUr_daY,1171
+homelypy-0.1.15.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+homelypy-0.1.15.dist-info/licenses/LICENCE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+homelypy-0.1.15.dist-info/RECORD,,
