@@ -1,0 +1,11 @@
+exampleapp2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+exampleapp2/divide/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+exampleapp2/divide/divide_by_three.py,sha256=9_xsPB6I3EIGv32x6M8_Kh7R1b7mqbHESYnG35r6J2Y,42
+exampleapp2/multiply/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+exampleapp2/multiply/multiply_by_three.py,sha256=Ign2fHoJ-bOVteHAVvhSMwHBqZDTc621lXFRDB4dNkk,44
+exampleapp2-0.0.3.dist-info/AUTHORS,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+exampleapp2-0.0.3.dist-info/LICENCE,sha256=vWcyNdhdchceEpeuNAe3Pkv-R16bUeo5OMVZkw2wcJQ,1094
+exampleapp2-0.0.3.dist-info/METADATA,sha256=_b6fg8Yx8hGODa2DK-rDvi-pjiiK_Bs8alES5mq2img,3317
+exampleapp2-0.0.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+exampleapp2-0.0.3.dist-info/top_level.txt,sha256=p5ylmOBkQA7p5hnl13MsAzWxaR29yIu_q78zeNsXZ7g,12
+exampleapp2-0.0.3.dist-info/RECORD,,
