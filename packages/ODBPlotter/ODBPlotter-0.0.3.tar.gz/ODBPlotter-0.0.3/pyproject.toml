@@ -1,0 +1,31 @@
+[project]
+name = "ODBPlotter"
+version = "0.0.3"
+description = "TODO"
+readme = "README.md"
+license = {file = "LICENSE.md"}
+keywords = ["TODO"]
+authors = [{name = "Clark Hensley", email = "clarkhensley@duck.com"}]
+maintainers = [{name = "Clark Hensley", email = "clarkhensley@duck.com"}]
+dependencies = [
+"h5py",
+"numpy",
+"pandas",
+"matplotlib",
+]
+
+[project.urls]
+"Homepage" = "https://www.cmml.me.msstate.edu"
+"Bug Reports" = "https://www.github.com/mwpriddy/ODBPlotter/issues"
+"Source" = "https://www.github.com/mwpriddy/ODBPlotter"
+
+[project.scripts]
+odbplotter = "odb_plotter:main"
+
+[tool.setuptools]
+package-data = {"odb_plotter_static" = ["*"]}
+
+[build-system]
+# TODO setuptools version?
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
