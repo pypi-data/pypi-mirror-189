@@ -1,0 +1,2 @@
+pywin32>=305
+SpeechRecognition>=3.9.0
