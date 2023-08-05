@@ -1,0 +1,9 @@
+pycode128/__init__.py,sha256=hyN7NyUgWOXOn1jrMYeEfcEgthWzrChn2h1RGv-CB9I,245
+pycode128/cli_tools/__init__.py,sha256=lMKIr347WXnbhXvVusiQwaZQnlIH8azbpdHcUJPc0tI,131
+pycode128/cli_tools/cli.py,sha256=8ChTWmFnXtQbwvHUpd83QQer41gpUT30ZeSLw890pGA,451
+pycode128/pycode128.c,sha256=kRmGn73yGEVTHEow62Z5OGd9n_VTWlxE5R600UPzi-c,13873
+pycode128-0.1.2.dist-info/LICENSES/MIT.txt,sha256=Rm-NfhsWjdshEE6Z6lQOshW6nqgnvc2VLokuAqqjjFU,1074
+pycode128-0.1.2.dist-info/METADATA,sha256=cqU8oa9ctLX8wqG9_pNCOes4F6g7DcIXWDKpqwvXJX0,2147
+pycode128-0.1.2.dist-info/WHEEL,sha256=NEKZ_b2RT5cD-ifSZezy0UkR92_CFmvsxHOCcdkUKyw,110
+pycode128-0.1.2.dist-info/entry_points.txt,sha256=xyTrDoyDqOPI1rPMjgn1zyMy504v2r8nLhWWdVv2Jck,58
+pycode128-0.1.2.dist-info/RECORD,,
