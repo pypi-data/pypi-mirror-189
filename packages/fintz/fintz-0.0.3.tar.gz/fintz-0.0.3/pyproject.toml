@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "fintz"
+version = "0.0.3"
+description = "Python client to interact with Fintz API"
+authors = ["João Vicente Meyer <1994meyer@gmail.com>"]
+readme = "README.md"
+packages = [{include = "fintz"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+httpx = "^0.23.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+"Homepage" = "https://fintz.com.br/"
+"Bug Tracker" = "https://github.com/thefintz/sdk/issues"
