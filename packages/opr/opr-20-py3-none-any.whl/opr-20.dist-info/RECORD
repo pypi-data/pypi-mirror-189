@@ -1,0 +1,16 @@
+opr/__init__.py,sha256=UgG30xzb54O7YwPmK0st7ijNSoNs9XQN9gR_BahZc-0,770
+opr/dbs.py,sha256=MOp3ZRe4REiSAeD02zfhn_NR8zpjgkgyP007rs-jpRU,4097
+opr/hdl.py,sha256=A4AFCS2iKWiR4QUGzIuj33CNoJ6XenI7W-ve_ivpJOE,2598
+opr/jsn.py,sha256=RUEjeij_Lw_Ul_KOuZNZF1RnCubyn6otUpi676DBJV0,3050
+opr/obj.py,sha256=IZlARZgiPPF7AiDiZnuqNZi3jDHShSG_F6hb2VR68zg,3457
+opr/prs.py,sha256=f-h0XOFeNhJ0QsQOvTmyAzc1bp9NKQlnxuhqJqNOcIA,1769
+opr/run.py,sha256=DQYwArAvkCTuqPMbMRrNUo00peIdsR7jQe7we9gqaXw,1064
+opr/scn.py,sha256=zywmRtA-VnHkiw0sV2TyC_vyD2DrEAp5XdW1IN3WOG0,2420
+opr/tbl.py,sha256=ufS0U__mEjhSEfyzRxaoOwpTU3vXzEjbwlLko7kAvjM,4272
+opr/thr.py,sha256=iLoQRXGopkiONOCZ-QA0cUZhuDkiDYH4E-K-HQ_qPqs,1225
+opr/tmr.py,sha256=1z088kpa5CP9n1Q6OH3qIH9ZkD77Nk_AQjpin84A75o,1322
+opr/utl.py,sha256=2A37zSrpCErFZJZxUBNFbHmu9nJpZ549jiHLc-gqmyc,3127
+opr-20.dist-info/METADATA,sha256=4KFjBhgQGdLFwNlvCtfVInOA9SbtoHeaw8lxrzy2weE,2956
+opr-20.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+opr-20.dist-info/top_level.txt,sha256=8r5uOiRf8Eq5eVo2Z0Z_f0HIy7hfrOpXUxpdWBeypYk,4
+opr-20.dist-info/RECORD,,
