@@ -1,0 +1,6 @@
+setup.py
+osszex/code.py
+osszex.egg-info/PKG-INFO
+osszex.egg-info/SOURCES.txt
+osszex.egg-info/dependency_links.txt
+osszex.egg-info/top_level.txt
