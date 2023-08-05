@@ -1,0 +1,11 @@
+README.md
+setup.py
+manga_livre_dl/__init__.py
+manga_livre_dl/__main__.py
+manga_livre_dl/manga_livre_dl.py
+manga_livre_dl.egg-info/PKG-INFO
+manga_livre_dl.egg-info/SOURCES.txt
+manga_livre_dl.egg-info/dependency_links.txt
+manga_livre_dl.egg-info/entry_points.txt
+manga_livre_dl.egg-info/requires.txt
+manga_livre_dl.egg-info/top_level.txt
