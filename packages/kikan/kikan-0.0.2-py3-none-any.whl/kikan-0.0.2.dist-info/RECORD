@@ -1,0 +1,12 @@
+kikan/__init__.py,sha256=C53g1NP86cBph1IU8iw_jYwhNBl3p9CHwyP1kmI7ePw,86
+kikan/engine.py,sha256=RvUKm7keO83VtJ6RUmcFWpvmimhnjjIFrLoxAhbpgqI,2507
+kikan/entity.py,sha256=AeMFNtglvn7EPcUs2b1cXXN7qmWwSKBGxmQ8wbD3dgY,490
+kikan/events.py,sha256=OYTXsd1Q0835-461yt602S4u5Nti05cLZDanqdDIpCM,2336
+kikan/main.py,sha256=SMrWw_TOMspVZYwqbK7O8Lwn7capAdxGwydhryU9A8k,214
+kikan/math.py,sha256=cmg7G74hO1vOESOQ9sSMi2GIf3gjnWN2A3RwOcy97yE,1772
+kikan/screen.py,sha256=JouT8OLocw82uqqgvwNolQlLuOdNIwEnIlUTxMUstcM,2601
+kikan/utils.py,sha256=6O0RVActkj9s52jOyjBM_50aLF5d8_MOyXlGgHqVHqU,217
+kikan-0.0.2.dist-info/METADATA,sha256=sZZ-e8CYf7m6qSEHXvfvJwv1zqtfoPOdmCVSz5zOHCE,545
+kikan-0.0.2.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+kikan-0.0.2.dist-info/licenses/LICENSE,sha256=kI7jKJGBVOZyjRhzEzZmB6Y242WM2AonxixWsLK-N4I,1067
+kikan-0.0.2.dist-info/RECORD,,
