@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: uca-apollo
+Version: 1.0
+Summary: UniCourt API v2 - Beta APIs
+Home-page: UNKNOWN
+Author: OpenAPI Generator community
+Author-email: team@openapitools.org
+License: UNKNOWN
+Description:     &lt;button&gt;&lt;a href&#x3D;\&quot;/apiv2/download/UniCourt-APIv2-Spec.yaml\&quot; &gt;Download Legal Analytics API Specification&lt;/a&gt;&lt;/button&gt;   # noqa: E501
+            
+Keywords: OpenAPI,OpenAPI-Generator,UniCourt API v2 - Beta APIs
+Platform: UNKNOWN
+Requires-Python: >=3.6
