@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pg_stage
+Version: 0.1.4
+Summary: Anonymization of data in pg_dump
+Project-URL: Homepage, https://github.com/froOzzy/pg_stage
+Author-email: froOzzy <ieme5gll6u78@mail.ru>
+License-File: LICENSE.txt
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: faker>=16.6.0
+Description-Content-Type: text/markdown
+
+# pg_stage
+
