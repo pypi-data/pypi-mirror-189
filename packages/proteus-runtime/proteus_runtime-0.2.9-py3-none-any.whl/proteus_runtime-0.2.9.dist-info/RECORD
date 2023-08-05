@@ -1,0 +1,15 @@
+proteus/__init__.py,sha256=Bild9Galq-OgE09mYa2vipNk6KjG6NYTIC6YSFjK7rs,2851
+proteus/api.py,sha256=_heiabQ-_0iAZHTkdeiF8or3vnDODr3ocTy_6CXLdTc,7519
+proteus/calculator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+proteus/calculator/calculator.py,sha256=6xnUox6YonlLcOuWuXObZHsDwnCfQaNsvsmj_4iWS8s,258
+proteus/calculator/grammar.py,sha256=9ff0V7qnGQDhLV_VanZHXARH409sNHNIO9cw1IGm_pY,518
+proteus/calculator/operations.py,sha256=FP8BBLZ5pEy-83MTCG-Jlkecr9-UiNTYo-_Iyfg4eWI,2150
+proteus/calculator/parser.py,sha256=y6z8qNFIBULgPYHGcwMzEXcmpksbubN2cvgzV51aQN8,371
+proteus/config.py,sha256=DyznnAA0Dz7Xm0aTawisdKmkUZdoW6wksgNH6J8aMCs,507
+proteus/logger.py,sha256=8rWV48pmpykizzM9yeqeHLWNB06jmWOHdlbqq_E_n7Y,1109
+proteus/oidc.py,sha256=N0fUub9Eet9Ugi_FAn4yvz34FBTf6dE0fJAZXc9D-0Y,6652
+proteus/reporting.py,sha256=aoj-WMYgRuwT5sBLmXqlz5JkM8J9-Ks-gE9cIWqX0uU,2595
+proteus_runtime-0.2.9.dist-info/METADATA,sha256=eNJggqRvAEoytucLSIsdCmX3SZ6M2OQBMtZr7o4xkus,711
+proteus_runtime-0.2.9.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+proteus_runtime-0.2.9.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+proteus_runtime-0.2.9.dist-info/RECORD,,
