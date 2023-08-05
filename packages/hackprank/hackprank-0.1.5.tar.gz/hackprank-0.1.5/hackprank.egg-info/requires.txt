@@ -1,0 +1,9 @@
+rich
+flask
+pyfiglet
+array
+flask
+random
+os
+time
+colorama
