@@ -1,0 +1,32 @@
+# package distribution files
+fiqus.egg-info/*
+build/*
+dist/*
+
+# IDE specific
+.vscode/*
+fiqus/*/__pycache__/*
+fiqus/__pycache__/*
+fiqus/*/*/__pycache__/*
+fiqus/_run
+.idea/
+.pytest_cache/
+venv/*
+tests/*/__pycache__/*
+tests/__pycache__/*
+tests/_outputs/*
+tests/settings.*.yaml
+!tests/settings.SYSTEM.yaml
+*.code-workspace
+
+# GetDP specific
+*.res
+*.pre
+*.db*
+
+# Gmsh specific
+*.opt
+tmp.geo
+
+# doc specific
+public/

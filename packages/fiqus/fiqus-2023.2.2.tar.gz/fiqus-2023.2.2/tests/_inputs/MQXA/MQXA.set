@@ -1,0 +1,14 @@
+Model_Data_GS:
+  general_parameters:
+    I_ref: [7149.0]
+  conductors:
+    KEKI3RD2:
+      cable:
+        type: Rutherford
+        bare_cable_width: 0.011
+        bare_cable_height_mean: 0.001487
+    KEKO3RD2:
+      cable:
+        type: Rutherford
+        bare_cable_width: 0.011
+        bare_cable_height_mean: 0.00134

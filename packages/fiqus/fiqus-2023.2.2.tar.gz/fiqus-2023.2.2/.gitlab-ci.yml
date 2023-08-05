@@ -1,0 +1,107 @@
+# ------
+# Stages
+# ------
+
+stages:
+  - build_docker_image
+  - static_analysis
+  - test
+  - deploy
+
+# ---------------------
+# Docker image creation
+# ---------------------
+# following https://gitlab.cern.ch/strigazi/build_docker_image/-/blob/master/.gitlab-ci.yml
+build_image:
+    rules:
+      - if: $CI_PIPELINE_SOURCE == "schedule"
+    stage:
+      build_docker_image
+    image:
+     name: gitlab-registry.cern.ch/ci-tools/docker-image-builder
+     entrypoint: [""]
+    script:
+     # Prepare Kaniko configuration file
+       - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+       # Build and push the image from the Dockerfile at the root of the project.
+       # To push to a specific docker tag, amend the --destination parameter, e.g. --destination $CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
+       # See https://docs.gitlab.com/ee/ci/variables/predefined_variables.html#variables-reference for available variables
+       - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/Dockerfile --destination $CI_REGISTRY_IMAGE
+
+
+# --------------------
+# Static code analysis
+# --------------------
+
+# include code quality test by Gitlab, see
+# https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html
+include:
+  - template: Code-Quality.gitlab-ci.yml
+
+# run Gitlab inbuilt code quality (rather slow, hence only once a day)
+code_quality:
+  stage:
+    static_analysis
+  tags:
+  - docker-privileged
+  rules:
+  - if: $CI_PIPELINE_SOURCE == "schedule"
+
+# run linter flake8
+flake8:
+  stage: static_analysis
+  image: $CI_REGISTRY_IMAGE
+  allow_failure: true
+  script:
+    - flake8 --max-line-length=220 fiqus/
+
+# ----------
+# Code tests
+# ----------
+
+# This job runs all the tests.
+unit-test-job:
+  stage: test
+  image: $CI_REGISTRY_IMAGE
+  allow_failure: false
+  script:
+    # Run tests
+    - echo "Running unit tests."
+    - coverage run --source fiqus/ -m pytest --cov-report=html --junitxml=report.xml -v tests/
+    - coverage report  # this allows displaying the coverage percentage in the "Jobs" page on Gitlab
+ #   - coverage xml
+    - coverage html
+  artifacts:
+    reports:
+  #      cobertura: coverage.xml # this can be used to display the coverage report for merge requests
+        junit: report.xml
+
+    paths:
+#      - coverage
+      - htmlcov
+      - /builds/steam/fiqus/tests/_outputs
+
+    when: always  # this makes sure artifacts are always generated (useful for debugging)
+    expire_in: 7 days
+
+  coverage: '/TOTAL.*\s+(\d+\%)/'
+
+# -----------
+# Deploy docs
+# -----------
+
+# following https://gitlab.com/pages/sphinx to setup sphinx
+# to setup the website, follow https://how-to.docs.cern.ch/
+pages:
+  stage: deploy
+  image: $CI_REGISTRY_IMAGE
+  script:
+  - mkdocs build --clean --site-dir public
+  - cp -r htmlcov public/htmlcov
+  artifacts:
+    paths:
+    - public
+    # - docs/source
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+

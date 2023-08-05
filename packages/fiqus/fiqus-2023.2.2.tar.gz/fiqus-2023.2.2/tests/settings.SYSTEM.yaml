@@ -1,0 +1,2 @@
+# Settings file for user named "SYSTEM"
+GetDP_path: getdp                                                                      # full path to GetDP executable, this is user dependent. For users running on windows this could be for example: C:\getdp-3.5.0-Windows64\getdp.exe

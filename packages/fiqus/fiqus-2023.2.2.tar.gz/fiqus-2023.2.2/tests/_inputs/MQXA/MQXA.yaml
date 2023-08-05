@@ -1,0 +1,42 @@
+general:
+  magnet_name: MQXA
+run:
+  type: start_from_yaml # start_from_yaml | geometry_only | mesh_only | mesh_and_solve_with_post_process_python | solve_with_pp | solve_only | post_process_getdp_only | post_process_python_only
+  geometry: 1
+  mesh: null
+  solution: null
+  launch_gui: false
+  overwrite: true
+magnet:
+  type: multipole
+  geometry:
+    with_iron_yoke: true
+  mesh:
+    default_mesh: true
+    mesh_iron:
+      SizeMin: 0.005
+      SizeMax: 0.05
+      DistMin: 0.01
+      DistMax: 0.01
+    mesh_coil:
+      SizeMin: 0.001
+      SizeMax: 0.05
+      DistMin: 0.002
+      DistMax: 0.23478714
+    MeshSizeMin: 0.0001
+    MeshSizeMax: 0.05
+    MeshSizeFromCurvature: 20.0
+    Algorithm: 6
+    AngleToleranceFacetOverlap: 0.1
+    ElementOrder: 2
+    Optimize: 1
+  solve:
+    I_initial: [7180.0]
+    pro_template: Multipole_template.pro
+  postproc:
+    compare_to_ROXIE: null
+    plot_all: false
+    variables: [b]
+    volumes: [powered]
+    file_exts: [pos]
+    additional_outputs: null

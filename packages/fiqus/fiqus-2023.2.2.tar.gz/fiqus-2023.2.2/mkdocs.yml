@@ -1,0 +1,47 @@
+site_name: FiQuS
+site_description: Documentation for STEAM FiQuS
+site_author: STEAM Team
+site_url: https://steam-fiqus.docs.cern.ch/
+repo_name: GitLab
+repo_url: https://gitlab.cern.ch/steam/fiqus
+edit_uri: -/tree/master/docs
+theme:
+  name: material
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+plugins:
+  - git-revision-date-localized
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            docstring_style: sphinx
+
+markdown_extensions:
+  - markdown_include.include
+nav:
+    - 'Introduction': index.md
+    - 'Source code':
+      - 'Main FiQuS': modules/mainfiqus.md
+      - 'Main Magnets':
+          - 'Multipole': modules/mains/mainmultipole.md
+      - 'Geometry Generators': 
+        - 'Multipole': modules/geom_generators/geometryMultipole.md
+      - ' Templates for .pro files':
+        - 'Overview': modules/pro_templates/overview.md
+        - 'Combined templates':
+          - 'Multipole': modules/pro_templates/combined/multipole_template.md
+        - 'Separated templates':
+          - 'Readme': modules/pro_templates/separated/separated_readme.md
