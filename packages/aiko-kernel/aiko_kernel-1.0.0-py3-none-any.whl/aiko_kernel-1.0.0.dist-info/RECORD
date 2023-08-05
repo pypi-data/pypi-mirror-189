@@ -1,0 +1,9 @@
+aiko/__init__.py,sha256=UHTPCee0VFq-Nrc7tNNX1EuoXWb23UQRC3mogp3p4OY,208
+aiko/kernel.py,sha256=Dwpzm1aWnwkdjjKdYxVTKRjOSinOisxZksb7NDB3pBs,6054
+aiko/message_box.py,sha256=q8JEGdTiEcesHgEwCUi6025rPosA-urqytf3y2jHwkY,1618
+aiko/process.py,sha256=Mv1B681ggZoM2Ko98NIqYZ26543CSe43Y3KE5uKGRV0,1986
+aiko_kernel-1.0.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiko_kernel-1.0.0.dist-info/METADATA,sha256=SpA6HjK5eYP5DGZdoBrcb-CMXkhag-OSgP6KJwg_x-4,716
+aiko_kernel-1.0.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+aiko_kernel-1.0.0.dist-info/top_level.txt,sha256=miEgoxWZaYnDiahIL1wkmgvh6boDuFQQsuKcNeA9G5I,5
+aiko_kernel-1.0.0.dist-info/RECORD,,
