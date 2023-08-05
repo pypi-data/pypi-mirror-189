@@ -1,0 +1,9 @@
+pip_split_requirements/__init__.py,sha256=j9Y5l2UJhV-YxEpmOnqcQhYwegt8obuCVr46yx3tZI8,392
+pip_split_requirements/__main__.py,sha256=h_HmliAqwi0xXdhxwwHaskdXJJRmTpGN8H82rUJ3mbY,1835
+pip_split_requirements/_compat.py,sha256=5kumEL_Eod7g2rhzdGpqibvTevDkHgpT0_Smk4jLz0g,265
+pip_split_requirements/_split_requirements.py,sha256=hxKrC9PkqYwSK_rFC1nOmdLhcbMPkQjr3tOLitCsMDI,2589
+pip_split_requirements-0.3.0.dist-info/METADATA,sha256=QT3BHcA1FdX1lCWk93UOMcLZzyoq2SSixYIOG5LaRhw,3948
+pip_split_requirements-0.3.0.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+pip_split_requirements-0.3.0.dist-info/entry_points.txt,sha256=MnB9BS82W5DVAoX8GETJnsl8FK7T-m9obCLhv24ArtE,80
+pip_split_requirements-0.3.0.dist-info/licenses/LICENSE.txt,sha256=JCFt7FHcAi6QFGH_OZI79o6fmWtm2yBvfa_L_6XhODg,1109
+pip_split_requirements-0.3.0.dist-info/RECORD,,
