@@ -1,0 +1,17 @@
+app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/menu.py,sha256=XnmdoFniTFYxxAqg9sCD3CoNypcCysf23EaeZSR7zBQ,1131
+app/Address_book/AdressBook.py,sha256=2UO8wanuJ_fAD8MVW_OJ9pYcovHiq2_IQ2Es7zK-pt8,5189
+app/Address_book/Class.py,sha256=BJxxzNHzD4aEXnGcDtWh_bcdytB42AZaRiDTwHjcvh4,4770
+app/Address_book/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/Notebook/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/Notebook/decorator.py,sha256=FI9rwBRXYPiZoGqyzszG_bX4_3_7B7vD9AtqbNWCiTw,544
+app/Notebook/notes.py,sha256=HjFNbSc7m4f3SAud2faP4X7tvUgBlX1uoqYYseeGg24,6134
+app/Notebook/notesclass.py,sha256=OSzoxrCJFzE5nD-t8E-oFti8bQkLn_B9ONNaRinf_Wo,6015
+app/Sorter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/Sorter/sort.py,sha256=OiVFJEJOQv7AcAzxiqRnSZ1c2p0St3MTlOh0aqUlTxE,6831
+Apllepy_personal_assistant-0.1.6.dist-info/LICENSE,sha256=WxYpj8t7gNEz1de65GrztFvHxIqSsjqSYYG7BqF74Gg,1068
+Apllepy_personal_assistant-0.1.6.dist-info/METADATA,sha256=Q_Se-jcZLpFODHASGfykuaMn-dL5ODJlqgSIk8Am3_I,279
+Apllepy_personal_assistant-0.1.6.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+Apllepy_personal_assistant-0.1.6.dist-info/entry_points.txt,sha256=j-Cie1P1qjs8lTGSIG-vacgODEjHY64q8AiQj9wwG7w,46
+Apllepy_personal_assistant-0.1.6.dist-info/top_level.txt,sha256=io9g7LCbfmTG1SFKgEOGXmCFB9uMP2H5lerm0HiHWQE,4
+Apllepy_personal_assistant-0.1.6.dist-info/RECORD,,
