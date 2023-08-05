@@ -1,0 +1,8 @@
+aiohttp
+Pillow
+
+[docs]
+sphinx
+sphinx-rtd-theme
+sphinx-prompt
+autodocsumm

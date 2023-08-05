@@ -1,0 +1,16 @@
+LICENSE.txt
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+MinePI.egg-info/PKG-INFO
+MinePI.egg-info/SOURCES.txt
+MinePI.egg-info/dependency_links.txt
+MinePI.egg-info/requires.txt
+MinePI.egg-info/top_level.txt
+minepi/__init__.py
+minepi/errors.py
+minepi/player.py
+minepi/skin.py
+minepi/skin_render.py
+minepi/utils.py
