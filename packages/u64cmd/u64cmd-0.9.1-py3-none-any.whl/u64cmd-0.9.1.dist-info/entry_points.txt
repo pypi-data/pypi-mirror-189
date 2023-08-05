@@ -1,0 +1,2 @@
+[console_scripts]
+u64cmd = u64cmd.cli:cli

@@ -1,0 +1,10 @@
+u64cmd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+u64cmd/__main__.py,sha256=oJcmYKXWLAINfJJVmWjn3LLFZ2i31zS1k22318lyUvg,34
+u64cmd/cli.py,sha256=yRMytfp2nDGvgbwi5dpuX9KTKyXRoqZ4JqTiDyygDmI,7828
+u64cmd/socket.py,sha256=1WXTkyGFx_fbwb5BX4C12Oaf_LmRAXKO6bX72Znqa9w,3901
+u64cmd/util.py,sha256=W_KMZ1Y41uYbr90_bpMay1OtRUK0Z4cksues99AWwZs,2374
+u64cmd-0.9.1.dist-info/METADATA,sha256=buup20wtbU42PC4AOTK0IQAJTFdFCol8CqymLLWarLY,5915
+u64cmd-0.9.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+u64cmd-0.9.1.dist-info/entry_points.txt,sha256=zT_HGMtpeRrzViOt6aNB9-_p9BNA4A0L3nvovOsrvqY,42
+u64cmd-0.9.1.dist-info/top_level.txt,sha256=aRKhkD01QYt-reOjs4lADYcVKLs9-zlmK3vYaGltzdo,7
+u64cmd-0.9.1.dist-info/RECORD,,
