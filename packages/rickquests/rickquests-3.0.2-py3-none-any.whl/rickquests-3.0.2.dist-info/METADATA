@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: rickquests
+Version: 3.0.2
+Summary: Typosquatting talk example, do not use.
+Home-page: https://github.com/psf/requests
+Author: Not. A. RealPackage
+Author-email: fake.package@dont.use
+License: Apache
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+
