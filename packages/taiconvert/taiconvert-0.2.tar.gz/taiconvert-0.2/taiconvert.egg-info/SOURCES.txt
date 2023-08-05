@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+taiconvert/__init__.py
+taiconvert/__main__.py
+taiconvert/cli.py
+taiconvert/utils.py
+taiconvert.egg-info/PKG-INFO
+taiconvert.egg-info/SOURCES.txt
+taiconvert.egg-info/dependency_links.txt
+taiconvert.egg-info/entry_points.txt
+taiconvert.egg-info/requires.txt
+taiconvert.egg-info/top_level.txt
+taiconvert/commands/__init__.py
+taiconvert/commands/convert.py
+taiconvert/commands/extract.py
