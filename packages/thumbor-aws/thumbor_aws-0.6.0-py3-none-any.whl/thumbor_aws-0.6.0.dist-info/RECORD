@@ -1,0 +1,11 @@
+thumbor_aws/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+thumbor_aws/config.py,sha256=Cd-_iaDP8KtdCBLl70zghu1EiMjWwEhe0iY-roa8Gbg,2955
+thumbor_aws/loader.py,sha256=Z5YNVBtDXqb568zHVHk-Af-WEpnnj_AA4YJk8UdHXYU,3088
+thumbor_aws/result_storage.py,sha256=ZEz3B3bJwXrc1f_W1GGIPKN_ky2JY5SZ23ZgVQNBxSM,6362
+thumbor_aws/s3_client.py,sha256=VOlSlhfvXj-8w-kO4yHe46-DPRIGKHp0ahjhQ7C9woM,7489
+thumbor_aws/storage.py,sha256=sSp4F8bVT7CiQVpuOY2cseBG6nnIohpsJnevrtiDx7I,5653
+thumbor_aws/utils.py,sha256=DCVgVZLbxvO5EatKQ9NMKdL4YsuvEz8R0TYAzxCx-ZM,583
+thumbor_aws-0.6.0.dist-info/METADATA,sha256=IWfIObS0xpUTUW-jpsj-63VujiluMPhWfT0hr4UCaV8,12679
+thumbor_aws-0.6.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+thumbor_aws-0.6.0.dist-info/LICENSE,sha256=J1vhJT-tMWqzvqmflo0YnKHK6jpSwMOMNo57m1vC5NE,1084
+thumbor_aws-0.6.0.dist-info/RECORD,,
