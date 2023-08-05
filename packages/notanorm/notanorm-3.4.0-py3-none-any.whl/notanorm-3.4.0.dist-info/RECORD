@@ -1,0 +1,13 @@
+notanorm/__init__.py,sha256=zJtPR8PtoIAUa46Bl_jsJO7LNU72mPesRG_7m3WqQik,1149
+notanorm/base.py,sha256=uAKVuHOh8M3uWgrKNoxOI8TOs7rVWh5G0ueooRjF_3k,45417
+notanorm/connparse.py,sha256=zV4L61zNnkWA8EkeIchqmNZKHb-3XQFtuek6FUIx36c,3848
+notanorm/ddl_helper.py,sha256=u6I5yBWIaFFg_uJMz90tnwKq8JH5A1Jz8bF90EcX1KA,10463
+notanorm/errors.py,sha256=kCJbw4_FvbnErASp9siZnDcj6gafv420JDfjqmRKwrs,715
+notanorm/model.py,sha256=cSYIQVYJrHdd2pZaqts60icjGwJJpCeDCb6uS1mtH-c,2826
+notanorm/mysql.py,sha256=F8iyPzLQQHcJJICxxasWcKIgqWKb-YAscuFNwKWtjGE,12467
+notanorm/sqlite.py,sha256=kvID8aeUgEIjesDVg1L4aTDSmx9aitRtwugTe8scPXQ,13347
+notanorm-3.4.0.dist-info/LICENSE,sha256=KyM35QGcm5RBRFYKSf7HoJmoMSE1-VJJ4oQykfhALYo,8021
+notanorm-3.4.0.dist-info/METADATA,sha256=dI4N8e875qMDdRDNMJHjrYAY3i4WK-bzuU5hMVu2fBs,4134
+notanorm-3.4.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+notanorm-3.4.0.dist-info/top_level.txt,sha256=qH8fjkQmmRl509pI6WEPGl8urUHuNWSiL8ItMmsmDUM,9
+notanorm-3.4.0.dist-info/RECORD,,
