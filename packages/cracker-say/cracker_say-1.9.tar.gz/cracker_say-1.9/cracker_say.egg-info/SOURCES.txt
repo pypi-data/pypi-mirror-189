@@ -1,0 +1,9 @@
+README
+setup.py
+cracker_say/__init__.py
+cracker_say/cracker_say.py
+cracker_say.egg-info/PKG-INFO
+cracker_say.egg-info/SOURCES.txt
+cracker_say.egg-info/dependency_links.txt
+cracker_say.egg-info/not-zip-safe
+cracker_say.egg-info/top_level.txt
