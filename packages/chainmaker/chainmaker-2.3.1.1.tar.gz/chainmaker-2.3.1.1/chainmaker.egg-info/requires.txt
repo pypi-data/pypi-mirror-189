@@ -1,0 +1,10 @@
+protobuf
+grpcio
+pyyaml
+cryptography
+pysha3
+pymysql
+eth-abi
+asn1
+pyasn1
+pyasn1-modules
