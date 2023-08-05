@@ -1,0 +1,4 @@
+[console_scripts]
+resume=resume_pycli.script:app
+resumepy=resume_pycli.script:app
+
