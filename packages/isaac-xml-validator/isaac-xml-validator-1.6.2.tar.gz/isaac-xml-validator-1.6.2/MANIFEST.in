@@ -1,0 +1,1 @@
+include xsd/*.xsd isaac_xml_validator.py
