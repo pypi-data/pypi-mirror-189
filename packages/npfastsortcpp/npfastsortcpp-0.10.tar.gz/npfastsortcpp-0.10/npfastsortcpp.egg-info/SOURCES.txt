@@ -1,0 +1,15 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+npfastsortcpp/LICENSE
+npfastsortcpp/README.MD
+npfastsortcpp/__init__.py
+npfastsortcpp/requirements.txt
+npfastsortcpp/thirdparty.json
+npfastsortcpp.egg-info/PKG-INFO
+npfastsortcpp.egg-info/SOURCES.txt
+npfastsortcpp.egg-info/dependency_links.txt
+npfastsortcpp.egg-info/requires.txt
+npfastsortcpp.egg-info/top_level.txt

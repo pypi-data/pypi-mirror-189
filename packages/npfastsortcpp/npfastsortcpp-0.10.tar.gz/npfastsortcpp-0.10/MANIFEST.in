@@ -1,0 +1,4 @@
+include npfastsortcpp/requirements.txt
+include npfastsortcpp/thirdparty.json
+include npfastsortcpp/README.MD
+include npfastsortcpp/LICENSE
