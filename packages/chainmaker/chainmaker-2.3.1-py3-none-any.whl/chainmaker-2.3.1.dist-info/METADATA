@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: chainmaker
+Version: 2.3.1
+Summary: ChainMaker Python SDK
+Home-page: https://git.chainmaker.org.cn/chainmaker/chainmaker-sdk-python.git
+Author: The THL chainmaker developers
+Author-email: operation@chainmaker.org
+License: Apache-2.0
+Platform: UNKNOWN
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: protobuf
+Requires-Dist: grpcio
+Requires-Dist: pyyaml
+Requires-Dist: cryptography
+Requires-Dist: pysha3
+Requires-Dist: pymysql
+Requires-Dist: eth-abi
+Requires-Dist: asn1
+Requires-Dist: pyasn1
+Requires-Dist: pyasn1-modules
+
+UNKNOWN
+
