@@ -1,0 +1,32 @@
+#!python
+# This file is placed in the Public Domain.
+
+
+"write your own commands"
+
+
+import inspect
+
+
+from opr.hdl import Command
+from opr.scn import scan
+from opr.tbl import Wd
+from opr.utl import wait
+
+
+from operbot import cmd, irc, rss
+
+
+Wd.workdir = "/var/lib/operbot/"
+
+
+def main():
+    scan(cmd)
+    scan(irc)
+    scan(rss)
+    irc.init()
+    rss.init()
+    wait()
+
+
+main()
