@@ -1,0 +1,9 @@
+LICENSE,sha256=ZVetxLwdWSMuJ1Z6GF3XDPLsyjFUAYsL5h6inPnoFOI,7633
+j_pandas_datalib/__init__.py,sha256=Uv82X_G5FQEnfRADTwIcdmIUxWpLWnOelQKOtjeSO7U,179
+j_pandas_datalib/csv_tools.py,sha256=ooR73z89NmYumCDv7-UCbYL1POfW6FDVKZP4REfwpCA,2665
+j_pandas_datalib/dataset.py,sha256=1c_JamcUUKE13ASB0e8Ae5xLQA1-pddx4GEEXX4yL30,5102
+j_pandas_datalib/env_vars.py,sha256=o250cr8IrtjP0G_haoSIVvR5DqEmEx1qYeSColMLmOc,494
+j_pandas_datalib-0.1.0.dist-info/METADATA,sha256=Qu_pH0_a7UZmqqdvrolNXlbCOEpPkhEPRmuWW1EWMfc,1362
+j_pandas_datalib-0.1.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+j_pandas_datalib-0.1.0.dist-info/LICENSE,sha256=ZVetxLwdWSMuJ1Z6GF3XDPLsyjFUAYsL5h6inPnoFOI,7633
+j_pandas_datalib-0.1.0.dist-info/RECORD,,
