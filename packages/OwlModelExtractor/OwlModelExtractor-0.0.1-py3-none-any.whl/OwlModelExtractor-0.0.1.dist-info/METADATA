@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: OwlModelExtractor
+Version: 0.0.1
+Summary: Librería que nos permite acceder a un fichero OWL tanto local como remoto y modelar la información que contiene
+Home-page: https://umane.everis.com/git/KFSEMBU/initiatives/fairify/owlmodelextractor.git
+Author: KnowledgeFactory
+Author-email: 
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: importlib-resources (==5.10.2)
+Requires-Dist: isodate (==0.6.1)
+Requires-Dist: numpy (==1.24.1)
+Requires-Dist: Owlready2 (==0.39)
+Requires-Dist: pandas (==1.5.3)
+Requires-Dist: pyparsing (==3.0.9)
+Requires-Dist: python-dateutil (==2.8.2)
+Requires-Dist: pytz (==2022.7.1)
+Requires-Dist: rdflib (==6.2.0)
+Requires-Dist: six (==1.16.0)
+
