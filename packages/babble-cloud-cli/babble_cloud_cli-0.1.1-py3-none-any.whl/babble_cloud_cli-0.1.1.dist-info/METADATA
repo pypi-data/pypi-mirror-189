@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: babble-cloud-cli
+Version: 0.1.1
+Summary: serverless programming made easy
+Author: mkearney2023
+Author-email: mkearney2023@gmail.com
+Requires-Python: ==3.10.9
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# babble-cloud-cli

@@ -1,0 +1,3 @@
+[console_scripts]
+babble=package.entry:main
+
