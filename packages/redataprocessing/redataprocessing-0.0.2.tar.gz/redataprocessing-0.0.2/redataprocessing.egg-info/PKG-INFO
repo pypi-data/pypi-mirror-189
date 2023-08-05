@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: redataprocessing
+Version: 0.0.2
+Summary: A download of real estate offers from Sreality.cz
+Author: Vojtěch Kania, Lukáš Novotný
+Author-email: vojtech.kania@gmail.com, 30702889@fsv.cuni.cz
+License: MIT
+Keywords: real estate
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+
+A package that downloads and decodes real estate data from Sreality API
