@@ -1,0 +1,5 @@
+setup.py
+datachannel.egg-info/PKG-INFO
+datachannel.egg-info/SOURCES.txt
+datachannel.egg-info/dependency_links.txt
+datachannel.egg-info/top_level.txt
