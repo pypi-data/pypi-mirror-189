@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: EMS-analyzer
+Version: 0.0.1
+Summary: Electric Monitoring System Analyzer
+Author-email: Yonghoon Kim <kimyhjava@pukyong.ac.kr>, Taehoon Koh <thkoh@suncom.co.kr>
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
