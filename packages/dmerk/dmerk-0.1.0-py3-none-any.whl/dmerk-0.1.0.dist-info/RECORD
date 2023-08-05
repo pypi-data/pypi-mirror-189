@@ -1,0 +1,11 @@
+dmerk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dmerk/cli.py,sha256=owIXrvM7yoI64Fcr4U_LOSUwTAxTgY5adyfl2CiqI4I,4513
+dmerk/compare.py,sha256=rY09_66R9l0l29la2omWVKwba4Aqm7UihN8afIQqLEY,3518
+dmerk/dmerk.py,sha256=0KSnc8bWGLTySp98stFeqv2fhMjehjLDqaibZBxQBSM,4455
+dmerk/utils.py,sha256=LPNnC2s8j5WVrjYAZjQLAGGGnHhvhtb5OnuyMtM38eU,4015
+dmerk-0.1.0.dist-info/LICENSE,sha256=t4brbJcku0j5Tn_PzdRhlQwLNkFBT2yz1kcyzNQh0p4,1077
+dmerk-0.1.0.dist-info/METADATA,sha256=dsac8258OVMXmlexrBFU5o_E8zZwkwlGZDPZ1wtrj-I,3564
+dmerk-0.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+dmerk-0.1.0.dist-info/entry_points.txt,sha256=-A14y4rjMK-ZSEhHLY9Ou_UCD_1W7s9FAWHhfMcT_TA,41
+dmerk-0.1.0.dist-info/top_level.txt,sha256=kFOy0tzuAMbmQOsve9gQFBBwifYgV0ieBiH6IrBgE98,6
+dmerk-0.1.0.dist-info/RECORD,,
