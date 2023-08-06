@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/albanian_lang/__init__.py
+src/albanian_lang/gjuha.py
+src/albanian_lang.egg-info/PKG-INFO
+src/albanian_lang.egg-info/SOURCES.txt
+src/albanian_lang.egg-info/dependency_links.txt
+src/albanian_lang.egg-info/top_level.txt
