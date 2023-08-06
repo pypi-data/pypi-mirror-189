@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+src/calco_prueba/__init__.py
+src/calco_prueba.egg-info/PKG-INFO
+src/calco_prueba.egg-info/SOURCES.txt
+src/calco_prueba.egg-info/dependency_links.txt
+src/calco_prueba.egg-info/top_level.txt
