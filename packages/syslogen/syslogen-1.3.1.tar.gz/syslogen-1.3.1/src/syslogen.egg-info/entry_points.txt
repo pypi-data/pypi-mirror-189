@@ -1,0 +1,2 @@
+[console_scripts]
+syslogen = syslogen.__main__:main
