@@ -1,0 +1,4 @@
+termcolor
+click
+pathlib
+sqlite-integrated
