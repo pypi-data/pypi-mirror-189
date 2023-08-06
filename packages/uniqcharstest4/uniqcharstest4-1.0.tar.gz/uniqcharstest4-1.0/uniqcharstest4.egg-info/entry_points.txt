@@ -1,0 +1,3 @@
+[console_scripts]
+main = src.uniqcharstest4.app.app:main
+
