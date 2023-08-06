@@ -1,0 +1,9 @@
+cdk_cloudformation_tf_aws_s3bucketobject/__init__.py,sha256=6L8I-dDQQb4vOAFMnttrZPszM74LON9p5iTmj5uCPSk,48727
+cdk_cloudformation_tf_aws_s3bucketobject/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cdk_cloudformation_tf_aws_s3bucketobject/_jsii/__init__.py,sha256=tlbWxsYjBXGAA2XCZLtE1cFzLcHpFS0a9KsJV2WVBrA,458
+cdk_cloudformation_tf_aws_s3bucketobject/_jsii/tf-aws-s3bucketobject@1.0.0-alpha.7.jsii.tgz,sha256=H7eCYF1_yGDWarYwexkXyJl_4eE6Qk4fTIdg5h2xduo,28289
+cdk_cloudformation_tf_aws_s3bucketobject-1.0.0a7.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+cdk_cloudformation_tf_aws_s3bucketobject-1.0.0a7.dist-info/METADATA,sha256=4jGRsZs4vNFrR6aStygEHNJs4dPrLuSRIan0L1l3NHk,3254
+cdk_cloudformation_tf_aws_s3bucketobject-1.0.0a7.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+cdk_cloudformation_tf_aws_s3bucketobject-1.0.0a7.dist-info/top_level.txt,sha256=2GlOtsipyrXpzO1NebFA6LB7wp8vaeFtk-M-Tbm3qXY,41
+cdk_cloudformation_tf_aws_s3bucketobject-1.0.0a7.dist-info/RECORD,,
