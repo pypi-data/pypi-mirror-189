@@ -1,0 +1,5 @@
+#!/usr/bin/python3 -u
+
+import rollin_lxd
+
+rollin_lxd.main()

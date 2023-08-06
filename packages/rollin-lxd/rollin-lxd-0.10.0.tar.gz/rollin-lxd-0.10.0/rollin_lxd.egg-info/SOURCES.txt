@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+rollin_lxd/__init__.py
+rollin_lxd.egg-info/PKG-INFO
+rollin_lxd.egg-info/SOURCES.txt
+rollin_lxd.egg-info/dependency_links.txt
+rollin_lxd.egg-info/requires.txt
+rollin_lxd.egg-info/top_level.txt
+scripts/rollin-lxd
