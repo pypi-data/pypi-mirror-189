@@ -1,0 +1,2 @@
+[console_scripts]
+earth-view = earth_view.earth_view:get_image
