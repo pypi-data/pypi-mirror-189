@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: torippy
+Version: 0.1.4
+Summary: 
+Author: torippy
+Author-email: 47879788+torippy1024@users.noreply.github.com
+Requires-Python: >=3.10,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pillow (>=9.4.0,<10.0.0)
+Requires-Dist: pyautogui (>=0.9.53,<0.10.0)
+Description-Content-Type: text/markdown
+
+# poetry-template
+
+
+## 概要
+自分用のpoetryプロジェクトのテンプレート。
+
+
+## つかいかた
+cloneしてよしなに。
+
+以下のようなシェルスクリプトを作ってPathを通しておくと、`poetry-template [project-name]` で「templateのclone」・「フォルダのrename」・「vscodeで開く」までできて楽。
+```ps1
+# poetry-template.ps1
+Param ([string]$projectName)
+
+git clone https://github.com/torippy1024/poetry-template
+Rename-Item poetry-template $projectName
+code $projectName
+```
+
+## 機能
+* vscodeでファイル保存時、自動フォーマット (black)
+* `task run`: src/main.py を実行
+* `task lint`: flake8 で lint
+* `task build`: pyinstaller で exe化
+* `task build-one`: pyinstaller で exe化 (＋ 1つのファイルにまとめる) 
+* `task test`: pytest 実行
+
+
