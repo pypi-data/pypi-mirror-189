@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+code_tokenizers/__init__.py
+code_tokenizers/_modidx.py
+code_tokenizers/cli.py
+code_tokenizers/core.py
+code_tokenizers/helpers.py
+code_tokenizers.egg-info/PKG-INFO
+code_tokenizers.egg-info/SOURCES.txt
+code_tokenizers.egg-info/dependency_links.txt
+code_tokenizers.egg-info/entry_points.txt
+code_tokenizers.egg-info/not-zip-safe
+code_tokenizers.egg-info/requires.txt
+code_tokenizers.egg-info/top_level.txt

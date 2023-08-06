@@ -1,0 +1,2 @@
+[nbdev]
+code_tokenizers = code_tokenizers._modidx:d
