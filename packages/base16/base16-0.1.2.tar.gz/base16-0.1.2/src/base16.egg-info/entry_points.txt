@@ -1,0 +1,2 @@
+[console_scripts]
+base16 = base16.__main__:main

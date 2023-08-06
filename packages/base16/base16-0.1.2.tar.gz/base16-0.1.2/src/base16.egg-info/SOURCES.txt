@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+src/base16/__init__.py
+src/base16/__main__.py
+src/base16/base16.py
+src/base16.egg-info/PKG-INFO
+src/base16.egg-info/SOURCES.txt
+src/base16.egg-info/dependency_links.txt
+src/base16.egg-info/entry_points.txt
+src/base16.egg-info/top_level.txt
+test/__init__.py
+test/test_base16.py
