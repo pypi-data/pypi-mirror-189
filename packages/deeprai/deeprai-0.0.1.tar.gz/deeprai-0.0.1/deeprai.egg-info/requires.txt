@@ -1,0 +1,5 @@
+Cython
+alive_progress
+colorama
+numpy
+pyndb
