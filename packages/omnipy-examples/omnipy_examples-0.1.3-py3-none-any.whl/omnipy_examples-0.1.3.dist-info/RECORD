@@ -1,0 +1,11 @@
+omnipy_examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+omnipy_examples/dagsim.py,sha256=_UjmQsjBw7Jn8IxJAxwT6lx5ZDR4OzyBqcSwWmn564c,1567
+omnipy_examples/encode.py,sha256=KFrJxgSai-3KGWA16dDlG7hDj5Q2VTuxg9UPxxAvmQY,2111
+omnipy_examples/gff.py,sha256=WJNlDttHNPXPHYzZ2GgP8aNxZ6B6hZ9Qpb-x6JCy-Dw,5511
+omnipy_examples/isajson.py,sha256=OgAK_HYBFZwwbsLAHfaW9C-TDKwaZl3GN7GomC4TmDw,767
+omnipy_examples/table_tasks.py,sha256=-ClF0b-BSalKAdwNXWAVBIwvXVNcNCeHBEvIj5cjJyk,608
+omnipy_examples/uniprot.py,sha256=XgrXTHoc-TPnsEovsWt9SJzL7AujFVrN6W6y85Yhxxk,5362
+omnipy_examples-0.1.3.dist-info/LICENSE,sha256=_b0dFRvTtVZhEPPTFWLekyykhMGdObTBRRg_95mPAuo,1091
+omnipy_examples-0.1.3.dist-info/WHEEL,sha256=gSF7fibx4crkLz_A-IKR6kcuq0jJ64KNCkG8_bcaEao,88
+omnipy_examples-0.1.3.dist-info/METADATA,sha256=FYa0A68c9EKUTog7gxZwqXLr3xqp_ztJX5upvrwf9P0,1871
+omnipy_examples-0.1.3.dist-info/RECORD,,
