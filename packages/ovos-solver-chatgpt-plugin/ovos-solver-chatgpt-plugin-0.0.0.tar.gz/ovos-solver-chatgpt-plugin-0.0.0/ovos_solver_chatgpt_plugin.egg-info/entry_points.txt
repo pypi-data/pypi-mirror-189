@@ -1,0 +1,2 @@
+[neon.plugin.solver]
+ovos-solver-chatgpt-plugin = ovos_solver_chatgpt_plugin:ChatGPTSolver
