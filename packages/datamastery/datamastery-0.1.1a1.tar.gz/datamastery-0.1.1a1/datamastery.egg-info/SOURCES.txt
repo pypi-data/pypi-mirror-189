@@ -1,0 +1,11 @@
+LICENCE
+README.md
+setup.py
+datamastery/__init__.py
+datamastery/chart.py
+datamastery/preprocessing.py
+datamastery.egg-info/PKG-INFO
+datamastery.egg-info/SOURCES.txt
+datamastery.egg-info/dependency_links.txt
+datamastery.egg-info/requires.txt
+datamastery.egg-info/top_level.txt
