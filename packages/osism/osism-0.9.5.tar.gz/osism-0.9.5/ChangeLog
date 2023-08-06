@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+v0.9.5
+------
+
+* Make opentack-image-manager an optional dependency (#341)
