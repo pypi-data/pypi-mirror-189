@@ -1,0 +1,9 @@
+kartograph/__init__.py,sha256=YQhNuMTSaPJ8uF1oP9q1i2QXxRg7nhC0LmIuThaVGDA,134
+kartograph/_version.py,sha256=TpwdbCDpLQLM1lGrzbR6cN82GX03pwv2FcBms-P5NJU,23185
+kartograph/atom_mapping/__init__.py,sha256=CiuVn0ZfDBAPTBdlN_5whgwtZTjlfRLCEdV6WI_WgLY,46
+kartograph/atom_mapping/geom_mapper.py,sha256=QlNGHfQof2Uum4eJEgVaV0Wf_yxhY0Sni9qOK-Uh2YI,19758
+kartograf-0.0.1.dist-info/LICENSE,sha256=mB55oS90yCHDt3mLF4T69DTVXWwlIhYmzOtdUG-qjog,1073
+kartograf-0.0.1.dist-info/METADATA,sha256=LKip9zEslE0RoKR3wVvJN9poxMbdcGa6fcXR-B7a_bE,737
+kartograf-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+kartograf-0.0.1.dist-info/top_level.txt,sha256=oqV_0z7PKFfcFYUfrMe0KMg7S0UzO2vjQSJxBJ6C7zQ,11
+kartograf-0.0.1.dist-info/RECORD,,
