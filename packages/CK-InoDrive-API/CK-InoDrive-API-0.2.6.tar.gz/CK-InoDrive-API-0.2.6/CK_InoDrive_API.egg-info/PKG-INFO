@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: CK-InoDrive-API
+Version: 0.2.6
+Summary: InoDrive API library
+Home-page: https://cardinalkinetic.com
+Author: Cardinal Kinetic
+Author-email: support@cardinalkinetic.com
+License: https://www.cardinalkinetic.com/terms-of-service
+Keywords: InoWorx InoDrive InoSync MotionControl ServoControl
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+
+#### **Installation**
+
+```
+pip install CK-InoDrive-API
+```
+
+#### **Usage**
+
+Import
+
+```python
+# Import InoDrive API library
+import CkInoDriveAPI
+```
+
+Create InoDrive using WebSocket
+
+```python
+# Create instance to InoDrive module object
+# Connect by name
+drive = CkInoDriveAPI.InoDrive(target='Name')
+# Connect by serial number
+drive = CkInoDriveAPI.InoDrive(target='SN')
+# Connect by IP Address
+drive = CkInoDriveAPI.InoDrive(target='IPv4 Address')
+# Auto connect
+drive = CkInoDriveAPI.InoDrive(target='IPv4 Address', autoConnect=True)
+```
+
+```python
+# Connect to the drive
+drive.connect()
+# Read variable with name 'VariableName'
+drive.read_var('VariableName')
+# Write variable with name 'VariableName' and value equal to 1
+drive.write_var('VariableName', 1)
+# Disconnect from the drive
+drive.disconnect()
+# Drive object cleanup
+drive.destroy()
+```
