@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: fluxgate-ctl
+Version: 1.0.1
+Summary: fluxgate_ctl package for TUCAN
+Author-email: Bryerton Shaw <bryerton@triumf.ca>
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: zmq
+Requires-Dist: matplotlib
+Provides-Extra: dev
+Requires-Dist: tox ; extra == 'dev'
+
+# FLUXGATE-CTL
+
+## Overview
+
+A python-based command line utility for accessing the TUCAN Fluxgate Magnetometer module
+
+The tool allows for the plotting of one or all channels, capturing channel data to a file, and setting (or getting) the configuration of the module
+
+The available subcommands are:
+
+- `data`
+- `plot`
+- `status`
+- `read`
+- `write`
+- `set-config`
+- `get-config`
+
+## Installation
+
+The recommended installation method is via pip
+
+  To install:
+    `pip install fluxgate-ctl`
+
+  To upgrade:
+    `pip install -U fluxgate-ctl`
+
+  To run it locally from the source:
+    `python -m fluxgate_ctl`
+
+## Interactive
+
+ Command:
+  `fluxgate-ctl [-h] [-i INI_FILE] [-l LOGFILE] [data|plot|status|read|write|set-config|get-config]`
+
+ Purpose:
+  Connects to an esper service located at `url` and opens an interactive shell
+
+ Options:
+
+  `-h` or `--help`
+  Print out help for this subcommand
+
+  `-u USER` or  `--user USER`
+   User to use for HTTP basic authentication
+
+  `-p PASS` or `--password PASS`
+   Password to use for HTTP basic authentication. If `-u` is specified, but `-p` is not, the user will be prompted for a password
+
+  `-t TIMEOUT` or `--timeout TIMEOUT`
+   Time to wait for response before timing out. Can be given in fractions of a second. Defaults to 5 seconds.
