@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: basic-package-lol
+Version: 1.0.4
+Summary: A test package to demonstrate pip packages
+Home-page: https://www.knowledgehut.com/blog/programming/how-to-publish-python-package-to-pypi
+Author: Unknown
+Author-email: Unknown@example.com
+Project-URL: Bug Tracker, https://www.knowledgehut.com/blog/programming/how-to-publish-python-package-to-pypi
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+long description
