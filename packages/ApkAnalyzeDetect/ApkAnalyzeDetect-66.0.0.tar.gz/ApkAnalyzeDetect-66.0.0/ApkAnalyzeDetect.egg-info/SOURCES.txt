@@ -1,0 +1,5 @@
+setup.py
+ApkAnalyzeDetect.egg-info/PKG-INFO
+ApkAnalyzeDetect.egg-info/SOURCES.txt
+ApkAnalyzeDetect.egg-info/dependency_links.txt
+ApkAnalyzeDetect.egg-info/top_level.txt
