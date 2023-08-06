@@ -1,0 +1,9 @@
+awk_dataframe/__init__.py,sha256=7xe2vrDRFpQ9iMHHDlCS0fn9zuo7VjSNwgharuBpzJA,159
+awk_dataframe/awk_dataframe.py,sha256=WQvhhLdcP1GFMhpLpmSQvQ0mW6hThjbN0z9PKM9p4EY,104273
+awk_dataframe/read_file_direct_output.cpp,sha256=PMsJSScoRKHe4FEVTW8KgwiE5T15vPJwgKksgPS1Jk4,21068
+awk_dataframe/write_to_file.cpp,sha256=i8zUJZ7oJ321Fw86FfmcFQNvPFhj6zKZJPNQUD8t5R8,3638
+awk_dataframe-0.2.11.dist-info/LICENSE,sha256=J_ejRwrkbfKowlFy8BYcZXZRZVYwUYlMq14DhDo9V6M,1094
+awk_dataframe-0.2.11.dist-info/METADATA,sha256=NNT5tjQ52-5BFnovLIsrNBJ7T-pUWNlVShezAKaHl84,39529
+awk_dataframe-0.2.11.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+awk_dataframe-0.2.11.dist-info/top_level.txt,sha256=0ACeayAEaU7CLy6r0xJd_i53hqwUP8hODSZDVZWI7rs,14
+awk_dataframe-0.2.11.dist-info/RECORD,,
