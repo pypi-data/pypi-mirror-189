@@ -1,0 +1,6 @@
+deepr/engine/cython/activation
+deepr/engine/cython/dense_operations
+deepr/engine/cython/dense_train_loop
+deepr/engine/cython/loss
+deepr/engine/cython/optimizers
+deeprai
