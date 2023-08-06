@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: webspot
+Version: 0.0.1
+Summary: A smart web content identification tool
+Home-page: https://github.com/tikazyq/webspot
+Author: tikazyq
+Author-email: tikazyq@163.com
+License: BSD-3-Clause
+Description: # auto-html
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
