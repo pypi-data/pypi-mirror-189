@@ -1,0 +1,13 @@
+apollo/UI.py,sha256=6MtJay1tKAHymiyerUBmCbPCC5R6rrRUIx2o7eaHFxw,8942
+apollo/__init__.py,sha256=LpKbBgkqlpjgMIazrkSv3Cu7doDNlRWYqL-OnuwNT-c,205
+apollo/analysis.py,sha256=XL3iN4EIG2fpjNwB5z92YHJyOEiNbPN2Kh9rnu1zANo,3986
+apollo/config.py,sha256=1FDJkuWJ3Cq76XuZq-JHU13lLNUoomWUhJ51n7G5pfk,1322
+apollo/crater_predictor.py,sha256=gl7ofSNXVgj7IDG2y4ja5XV-cKNLFoYPaU56ad3rjQ8,25058
+apollo/data_processor.py,sha256=EOV7TIbqojaG9or11KFXrEidFrZnt_9Ljr1rNQFxIqg,4842
+apollo/download_models.py,sha256=O3WDxgWuas_lOO0eRtjkIL3TAmExv5RNm9H1GxefO38,1523
+ApolloCraterDetectionTool-1.0.dist-info/AUTHORS.txt,sha256=0Ajsq9ezK27XX4oKDfk9O426aT6MIW39qOmuyh51OE0,113
+ApolloCraterDetectionTool-1.0.dist-info/LICENSE.txt,sha256=hovGz7aoQ34PNcteK2o_J4exEZic35D3rPualt5EVk8,1140
+ApolloCraterDetectionTool-1.0.dist-info/METADATA,sha256=ZzEGdufrvbjVI28CDlig03giGWk7fg2ghpNNtxQ1weQ,227
+ApolloCraterDetectionTool-1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+ApolloCraterDetectionTool-1.0.dist-info/top_level.txt,sha256=q2RhKSzMzXAtBa3SXLNN56X8drDyPzEjfVgLFiHHRKI,7
+ApolloCraterDetectionTool-1.0.dist-info/RECORD,,
