@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "datapack_generator"
+version = "2023.02.04.dev3"
+authors = [
+    { name = "copecone", email = "controld3785@gmail.com" }
+]
+description = "Simple and Fast MC Datapack Generator"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/copecone/datapack-generator"

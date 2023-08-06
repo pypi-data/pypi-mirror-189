@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: datapack-generator
+Version: 2023.2.4.dev3
+Summary: Simple and Fast MC Datapack Generator
+Author-email: copecone <controld3785@gmail.com>
+Project-URL: Homepage, https://github.com/copecone/datapack-generator
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Datapack Generator
+
+This Library is still in Development

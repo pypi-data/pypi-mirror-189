@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/datapack_generator/__init__.py
+src/datapack_generator/generator.py
+src/datapack_generator/lib.py
+src/datapack_generator.egg-info/PKG-INFO
+src/datapack_generator.egg-info/SOURCES.txt
+src/datapack_generator.egg-info/dependency_links.txt
+src/datapack_generator.egg-info/top_level.txt
+src/datapack_generator/error/__init__.py
+src/datapack_generator/error/file_format_error.py
+src/datapack_generator/parser/__init__.py
+src/datapack_generator/parser/meta.py
