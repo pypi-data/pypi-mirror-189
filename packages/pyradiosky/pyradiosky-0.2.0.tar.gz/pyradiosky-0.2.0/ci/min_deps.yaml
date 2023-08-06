@@ -1,0 +1,14 @@
+name: min_deps
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - astropy>=5.2
+  - numpy
+  - h5py
+  - scipy
+  - coverage
+  - pytest
+  - pytest-cov
+  - pyuvdata>=2.2.10
+  - setuptools_scm

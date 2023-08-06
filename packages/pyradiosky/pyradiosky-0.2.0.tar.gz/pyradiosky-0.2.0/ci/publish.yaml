@@ -1,0 +1,14 @@
+name: publish
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - astropy>=5.2
+  - numpy
+  - h5py
+  - scipy
+  - pyuvdata>=2.2.10
+  - setuptools_scm
+  - pip
+  - pip:
+     - build
