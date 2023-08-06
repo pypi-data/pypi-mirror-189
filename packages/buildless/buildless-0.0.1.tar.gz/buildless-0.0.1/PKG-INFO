@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: buildless
+Version: 0.0.1
+Summary: Coming soon
+Author-email: Elide <libs@elide.dev>
+License: Coming soon
+Project-URL: Homepage, https://elide.dev
+Keywords: buildtools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+
+# buildless - coming soon

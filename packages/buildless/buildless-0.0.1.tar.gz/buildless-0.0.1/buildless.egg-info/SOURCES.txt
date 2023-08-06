@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+buildless.egg-info/PKG-INFO
+buildless.egg-info/SOURCES.txt
+buildless.egg-info/dependency_links.txt
+buildless.egg-info/requires.txt
+buildless.egg-info/top_level.txt
