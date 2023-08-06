@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+LRFutils/color.py
+LRFutils/progress.py
+LRFutils.egg-info/PKG-INFO
+LRFutils.egg-info/SOURCES.txt
+LRFutils.egg-info/dependency_links.txt
+LRFutils.egg-info/requires.txt
+LRFutils.egg-info/top_level.txt
