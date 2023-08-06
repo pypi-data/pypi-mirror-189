@@ -1,0 +1,6 @@
+# Packages required to build the documentation.
+sphinx
+sphinx-immaterial
+jsonschema
+pyyaml
+markupsafe
