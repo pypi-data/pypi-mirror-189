@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: omnipy-example-data
+Version: 0.1.0
+Summary: Example data files for use in the `omnipy_examples` package
+Author: Sveinung Gundersen
+Author-email: sveinugu@gmail.com
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# omnipy_example_data
+
+Example data files for use in the `omnipy_examples` package. 
+License info available under each subdirectory.

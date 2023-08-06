@@ -1,0 +1,11 @@
+[tool.poetry]
+name = "omnipy-example-data"
+version = "0.1.0"
+description = "Example data files for use in the `omnipy_examples` package"
+authors = ["Sveinung Gundersen <sveinugu@gmail.com>"]
+readme = "README.md"
+packages = [{include = "omnipy_example_data"}]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
