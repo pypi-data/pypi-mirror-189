@@ -1,0 +1,9 @@
+LICENSE
+README.md
+degrotesque.py
+setup.py
+degrotesque.egg-info/PKG-INFO
+degrotesque.egg-info/SOURCES.txt
+degrotesque.egg-info/dependency_links.txt
+degrotesque.egg-info/entry_points.txt
+degrotesque.egg-info/top_level.txt
