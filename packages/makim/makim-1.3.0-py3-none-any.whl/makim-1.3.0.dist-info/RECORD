@@ -1,0 +1,15 @@
+.gitignore,sha256=ebb4BU-O9ennjBgXS_V8rymxFBAWa5Jo1pI-h1IOuI8,1799
+.makim.yaml,sha256=TQTx3OyLw-WAmCJ4jgAD-dKiTT80OIC863zHMmzI8WQ,1707
+.pre-commit-config.yaml,sha256=4jNQ7j5xCsFxK90sMMTV4rAKiu2xKd9NbaolcFmfTgc,1095
+.releaserc.json,sha256=SErPcn9JC7wkRRahFMS1fvzldHbFYohsdc2ThssYnTk,1854
+README.md,sha256=ZnLt6V_ih5JhId5vjJPwSiuPF1Ojmjou3dtoq7hqnh0,2789
+makim/__init__.py,sha256=GW4wEnVfFDX2Ac219I_RXD3hSAmabettO2nCofD1qv8,194
+makim/__main__.py,sha256=oGUfjIWTn-N1mkjejnlpB7Gs9stUWSlx6XAC_dDMr3M,4697
+makim/makim.py,sha256=XNxL1nd0gWVjUVMFwEZYnQXu6FtOwfuKeEE5Bo1HAVY,8378
+poetry.lock,sha256=n1JHTiwVgYZo6QOJE7j8ezPdgjz0rkVo_4ow9QIfzmE,142467
+pyproject.toml,sha256=odZ5RAwYhEmp1ZSJd1OHrHDTB5k03ussOBVRhTRrbEw,1459
+makim-1.3.0.dist-info/METADATA,sha256=XxZ77_4GlTRfr_DpQf0WmkQnJ5J93hBGLKla3I5An-A,638
+makim-1.3.0.dist-info/entry_points.txt,sha256=VL8M421mjo4zBnIhc1Zwp36CE11sBWtOLD5iVv179Zw,44
+makim-1.3.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+makim-1.3.0.dist-info/LICENSE,sha256=VdNe-RCjB8ySHZb0705-5jspey66C9W1Fj5-cJ2Vfjo,1514
+makim-1.3.0.dist-info/RECORD,,
