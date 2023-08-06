@@ -1,0 +1,7 @@
+scheduler:
+  name: Default
+  library: Schedulers
+  version: 1.0
+  creator: François Demoulin
+  date_creation: 2021-11-24
+  scheduler_method: _default_scheduler_method
