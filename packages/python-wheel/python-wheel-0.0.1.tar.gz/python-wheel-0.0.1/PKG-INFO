@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: python-wheel
+Version: 0.0.1
+Summary: A punk test. Please don't work.
+Author-email: Kale Franz <eetygr@gmail.com>
+Project-URL: Homepage, https://github.com/kalefranz/python-wheel
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/plain
+License-File: LICENSE
+
+# ## using $ conda create -n py39 python=3.9 twine
+# ##       $ conda active py39
+
+### gosh I really hope once I upload this to PyPI that it doesn't work
