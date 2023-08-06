@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+tests/__init__.py
+uniqcharstest8.egg-info/PKG-INFO
+uniqcharstest8.egg-info/SOURCES.txt
+uniqcharstest8.egg-info/dependency_links.txt
+uniqcharstest8.egg-info/entry_points.txt
+uniqcharstest8.egg-info/requires.txt
+uniqcharstest8.egg-info/top_level.txt
