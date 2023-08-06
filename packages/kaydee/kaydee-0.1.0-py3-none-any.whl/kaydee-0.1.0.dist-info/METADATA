@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: kaydee
+Version: 0.1.0
+Summary: Bounded kernel density estimation.
+Home-page: https://github.com/mdmould/kaydee
+Author: Matthew Mould
+Author-email: mattdmould@gmail.com
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+# kaydee
+
+Bounded kernel density estimation.
