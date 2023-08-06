@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: ipsocgen
+Version: 0.0.11
+Summary: Generic SoC builder in HDL
+Author: aignacio (Anderson Ignacio)
+Author-email: <anderson@aignacio.com>
+Keywords: soc,hdl,builder
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytest
+Requires-Dist: argparse
+
+
+## Instructions
+
+```bash
+python3 -m venv venv
+source venv/bin/activate 
+pip install -Ur requirements.txt
+```
