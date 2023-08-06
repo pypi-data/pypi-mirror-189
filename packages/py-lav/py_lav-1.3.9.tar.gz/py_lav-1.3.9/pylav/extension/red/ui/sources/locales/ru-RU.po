@@ -1,0 +1,324 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pylav\n"
+"POT-Creation-Date: 2023-02-02 22:15+0000\n"
+"PO-Revision-Date: 2023-02-02 22:33\n"
+"Last-Translator: \n"
+"Language-Team: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
+"X-Crowdin-Project: pylav\n"
+"X-Crowdin-Project-ID: 535244\n"
+"X-Crowdin-Language: ru\n"
+"X-Crowdin-File: /lib/pylav/extension/red/ui/sources/locales/messages.pot\n"
+"X-Crowdin-File-ID: 3663\n"
+"Language: ru_RU\n"
+
+#: pylav/extension/red/ui/sources/equalizer.py:32
+msgid "Preset Name"
+msgstr "Имя шаблона"
+
+#: pylav/extension/red/ui/sources/equalizer.py:33
+msgid "Author"
+msgstr "Автор"
+
+#: pylav/extension/red/ui/sources/equalizer.py:39
+msgid "Bundled with PyLav"
+msgstr "В комплекте с PyLav"
+
+#: pylav/extension/red/ui/sources/generic.py:94
+#: pylav/extension/red/ui/sources/nodes.py:56
+msgid "Page {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} entries"
+msgstr "Страница {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} Записи"
+
+#: pylav/extension/red/ui/sources/generic.py:102
+#: pylav/extension/red/ui/sources/nodes.py:64
+msgid "Page 1 / 1 | 1 entry"
+msgstr "Страница 1 / 1 | 1 запись"
+
+#: pylav/extension/red/ui/sources/generic.py:104
+#: pylav/extension/red/ui/sources/nodes.py:66
+msgid "Page 1 / 1 | 0 entries"
+msgstr "Страница 1 / 1 | 0 записей"
+
+#: pylav/extension/red/ui/sources/nodes.py:106
+#: pylav/extension/red/ui/sources/nodes.py:260
+msgid "No"
+msgstr "Нет"
+
+#: pylav/extension/red/ui/sources/nodes.py:107
+#: pylav/extension/red/ui/sources/nodes.py:261
+msgid "Yes"
+msgstr "Да"
+
+#: pylav/extension/red/ui/sources/nodes.py:153
+#: pylav/extension/red/ui/sources/nodes.py:307
+msgid "None / Unknown"
+msgstr "Нет / Неизвестен"
+
+#: pylav/extension/red/ui/sources/nodes.py:155
+#: pylav/extension/red/ui/sources/nodes.py:309
+msgid "Property"
+msgstr "Свойства"
+
+#: pylav/extension/red/ui/sources/nodes.py:156
+#: pylav/extension/red/ui/sources/nodes.py:310
+msgid "Value"
+msgstr "Ценность"
+
+#: pylav/extension/red/ui/sources/nodes.py:157
+msgid "Latitude: {lat}\n"
+"Longitude: {lon}"
+msgstr "Широта: {lat}\n"
+"Долгота: {lon}"
+
+#: pylav/extension/red/ui/sources/nodes.py:163
+#: pylav/extension/red/ui/sources/nodes.py:317
+msgid "Region"
+msgstr "Регион"
+
+#: pylav/extension/red/ui/sources/nodes.py:163
+#: pylav/extension/red/ui/sources/nodes.py:317
+msgid "N/A"
+msgstr "Н/Д"
+
+#: pylav/extension/red/ui/sources/nodes.py:164
+#: pylav/extension/red/ui/sources/nodes.py:318
+msgid "Coordinates"
+msgstr "Координаты"
+
+#: pylav/extension/red/ui/sources/nodes.py:165
+#: pylav/extension/red/ui/sources/nodes.py:319
+msgid "Host"
+msgstr "Хост"
+
+#: pylav/extension/red/ui/sources/nodes.py:166
+#: pylav/extension/red/ui/sources/nodes.py:320
+msgid "Port"
+msgstr "Порт"
+
+#: pylav/extension/red/ui/sources/nodes.py:167
+#: pylav/extension/red/ui/sources/nodes.py:321
+msgid "Password"
+msgstr "Пароль"
+
+#: pylav/extension/red/ui/sources/nodes.py:170
+#: pylav/extension/red/ui/sources/nodes.py:324
+msgid "SSL"
+msgstr "SSL"
+
+#: pylav/extension/red/ui/sources/nodes.py:171
+#: pylav/extension/red/ui/sources/nodes.py:325
+msgid "Available"
+msgstr "Доступно"
+
+#: pylav/extension/red/ui/sources/nodes.py:172
+#: pylav/extension/red/ui/sources/nodes.py:326
+msgid "Search Only"
+msgstr "Только поиск"
+
+#: pylav/extension/red/ui/sources/nodes.py:173
+#: pylav/extension/red/ui/sources/nodes.py:327
+msgid "Players\n"
+"Connected\n"
+"Active"
+msgstr "Игроки\n"
+"Подключены к\n"
+"Активно"
+
+#: pylav/extension/red/ui/sources/nodes.py:177
+#: pylav/extension/red/ui/sources/nodes.py:331
+msgid "Frames Lost"
+msgstr "Кадров потеряно"
+
+#: pylav/extension/red/ui/sources/nodes.py:182
+#: pylav/extension/red/ui/sources/nodes.py:336
+msgid "Uptime"
+msgstr "Время работы"
+
+#: pylav/extension/red/ui/sources/nodes.py:183
+#: pylav/extension/red/ui/sources/nodes.py:337
+msgid "CPU Load\n"
+"Lavalink\n"
+"System"
+msgstr "Загрузка процессора\n"
+"Lavalink\n"
+"система"
+
+#: pylav/extension/red/ui/sources/nodes.py:186
+#: pylav/extension/red/ui/sources/nodes.py:340
+msgid "Penalty"
+msgstr "Штраф"
+
+#: pylav/extension/red/ui/sources/nodes.py:187
+#: pylav/extension/red/ui/sources/nodes.py:341
+msgid "Memory\n"
+"Used\n"
+"Free\n"
+"Allocated\n"
+"Reservable"
+msgstr "Память\n"
+"Используется\n"
+"Бесплатно\n"
+"Выделено\n"
+"Зарезервировано"
+
+#: pylav/extension/red/ui/sources/nodes.py:190
+#: pylav/extension/red/ui/sources/nodes.py:344
+msgid "Features"
+msgstr "Возможности"
+
+#: pylav/extension/red/ui/sources/nodes.py:203
+msgid "Page {page_num_value}/{total_pages_value} | {num_value} {plural_value}"
+msgstr "Страница {page_num_value}/{total_pages_value} | {num_value} {plural_value}"
+
+#: pylav/extension/red/ui/sources/nodes.py:207
+msgid "nodes"
+msgstr "Узлов"
+
+#: pylav/extension/red/ui/sources/nodes.py:207
+msgid "node"
+msgstr "узел"
+
+#: pylav/extension/red/ui/sources/nodes.py:311
+msgid "Latitude: {lat_value}\n"
+"Longitude: {lon_value}"
+msgstr "Широта: {lat_value}\n"
+"Долгота: {lon_value}"
+
+#: pylav/extension/red/ui/sources/nodes.py:362
+msgid "Page {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} nodes"
+msgstr "Страница {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} Узлов"
+
+#: pylav/extension/red/ui/sources/nodes.py:370
+msgid "Page 1 / 1 | 1 node"
+msgstr "Страница 1 / 1 | 1 узел"
+
+#: pylav/extension/red/ui/sources/nodes.py:372
+msgid "Page 1 / 1 | 0 nodes"
+msgstr "Страница 1 / 1 | 0 узлов"
+
+#: pylav/extension/red/ui/sources/player.py:64
+msgid "I am not currently playing anything on this server."
+msgstr "В настоящее время я ничего не играю на этом сервере."
+
+#: pylav/extension/red/ui/sources/player.py:76
+msgid "Server Owner"
+msgstr "Владелец сервера"
+
+#: pylav/extension/red/ui/sources/player.py:77
+msgid "Connected"
+msgstr "Подключено"
+
+#: pylav/extension/red/ui/sources/player.py:78
+msgid "Users in Voice Channel"
+msgstr "Пользователи в голосовом канале"
+
+#: pylav/extension/red/ui/sources/player.py:80
+msgid "Queue Length"
+msgstr "Длина очереди"
+
+#: pylav/extension/red/ui/sources/player.py:82
+#: pylav/extension/red/ui/sources/player.py:89
+msgid "track"
+msgstr "дорожка"
+
+#: pylav/extension/red/ui/sources/player.py:82
+#: pylav/extension/red/ui/sources/player.py:89
+msgid "tracks"
+msgstr "Треков"
+
+#: pylav/extension/red/ui/sources/player.py:86
+msgid "Queue History Length"
+msgstr "Длина истории очереди"
+
+#: pylav/extension/red/ui/sources/player.py:105
+msgid "Page {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} servers"
+msgstr "Страница {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} Серверов"
+
+#: pylav/extension/red/ui/sources/player.py:113
+msgid "Page 1 / 1 | 1 server"
+msgstr "Страница 1 / 1 | 1 сервер"
+
+#: pylav/extension/red/ui/sources/player.py:115
+msgid "Page 1 / 1 | 0 servers"
+msgstr "Страница 1 / 1 | 0 серверов"
+
+#: pylav/extension/red/ui/sources/playlist.py:58
+#: pylav/extension/red/ui/sources/playlist.py:207
+msgid "Page {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} playlists"
+msgstr "Страница {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} плейлисты"
+
+#: pylav/extension/red/ui/sources/playlist.py:66
+#: pylav/extension/red/ui/sources/playlist.py:215
+msgid "Page 1 / 1 | 1 playlist"
+msgstr "Страница 1 / 1 | 1 плейлист"
+
+#: pylav/extension/red/ui/sources/playlist.py:68
+#: pylav/extension/red/ui/sources/playlist.py:217
+msgid "Page 1 / 1 | 0 playlists"
+msgstr "Страница 1 / 1 | 0 плейлистов"
+
+#: pylav/extension/red/ui/sources/playlist.py:131
+msgid "Tracks in"
+msgstr "Треки в"
+
+#: pylav/extension/red/ui/sources/playlist.py:143
+msgid "Page {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} tracks"
+msgstr "Страница {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} Треков"
+
+#: pylav/extension/red/ui/sources/playlist.py:151
+msgid "Page 1 / 1 | 1 track"
+msgstr "Страница 1 / 1 | 1 трек"
+
+#: pylav/extension/red/ui/sources/playlist.py:153
+msgid "Page 1 / 1 | 0 tracks"
+msgstr "Страница 1 / 1 | 0 треков"
+
+#: pylav/extension/red/ui/sources/playlist.py:181
+msgid "Unknown"
+msgstr "Неизвестен"
+
+#: pylav/extension/red/ui/sources/playlist.py:186
+msgid "Identifier: {id_value}"
+msgstr "Идентификатор: {id_value}"
+
+#: pylav/extension/red/ui/sources/playlist.py:187
+msgid "Tracks: {num_value}"
+msgstr "Треков: {num_value}"
+
+#: pylav/extension/red/ui/sources/playlist.py:188
+msgid "Author: {name_value}"
+msgstr "Автор: {name_value}"
+
+#: pylav/extension/red/ui/sources/playlist.py:189
+msgid "Scope: {scope_value}\n"
+msgstr "Размах: {scope_value}\n"
+
+#: pylav/extension/red/ui/sources/playlist.py:197
+msgid "Playlists you can access in this server:"
+msgstr "Плейлисты для доступа на этом сервере:"
+
+#: pylav/extension/red/ui/sources/queue.py:96
+msgid "I am not currently playing anything in this server."
+msgstr "В настоящее время я ничего не играю на этом сервере."
+
+#: pylav/extension/red/ui/sources/queue.py:110
+msgid "There is nothing in recently played."
+msgstr "В недавно сыгранном ничего нет."
+
+#: pylav/extension/red/ui/sources/queue.py:112
+msgid "There is nothing currently being played"
+msgstr "В настоящее время ничего не воспроизводится"
+
+#: pylav/extension/red/ui/sources/queue.py:142
+msgid "No active player found in server."
+msgstr "На сервере не найдено активного проигрывателя."
+
+#: pylav/extension/red/ui/sources/queue.py:155
+msgid "There is nothing currently being played."
+msgstr "В настоящее время ничего не разыгрывается."
+
