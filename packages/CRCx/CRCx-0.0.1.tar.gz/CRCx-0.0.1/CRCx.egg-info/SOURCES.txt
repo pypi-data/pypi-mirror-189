@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+CRCx.egg-info/PKG-INFO
+CRCx.egg-info/SOURCES.txt
+CRCx.egg-info/dependency_links.txt
+CRCx.egg-info/top_level.txt
+crcx/__init__.py
+crcx/main.py
