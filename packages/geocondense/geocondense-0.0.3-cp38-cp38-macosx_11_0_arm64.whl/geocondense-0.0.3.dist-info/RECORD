@@ -1,0 +1,12 @@
+pybind11_geocondense.cpython-38-darwin.so,sha256=-wjp4Hd2MFzZQq0Ntd2ID7WRArO7h-uZiHcAlnBjvOw,549528
+geocondense/__init__.py,sha256=kRSkipLMz23mUvuCl5dY0gpBJBaB5sLZ_RjaCQr_250,96
+geocondense/condense.py,sha256=3KR-1-bh7ynir9FxmODdTYljIVaMNLIu2Rbvku8Q89g,8183
+geocondense/condense_geojson.py,sha256=w-6Coi1t9tWMdF1KXr6M0LObhdp8LhHm5uGtGJYQ91Q,1823
+geocondense/condense_pointcloud.py,sha256=ANTN2viTq9tTptw417xqSdTiPIrFzsPF5bnEFVs1nCo,7556
+geocondense/dissect_geojson.py,sha256=8ymXsIL-R8vPJM80L5jvTSzusiTf0w3y7R5PUu_mCSs,1261
+geocondense/utils.py,sha256=2PWsmGWHJq6PhWjFwQuWc6U3Z9tto9W42FJFgalTV4g,1495
+geocondense-0.0.3.dist-info/LICENSE,sha256=SBNiCMUPOkN74CrKaGEJk1CNXzPemZ76Qsm106kwI1E,2182
+geocondense-0.0.3.dist-info/METADATA,sha256=3uAPgyWgZQZsoy0cQ-v6QJmtY7BK9i2bPpjxHTYGHd0,509
+geocondense-0.0.3.dist-info/WHEEL,sha256=u895uB4FIjm1puccTaPTl57dorjncEYygQxItKHr_T0,108
+geocondense-0.0.3.dist-info/top_level.txt,sha256=bYmcpZ6zpjFz8_ImtYl1CMF7vw5ZyX1MYHrxKpt01d0,33
+geocondense-0.0.3.dist-info/RECORD,,
