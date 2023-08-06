@@ -1,0 +1,11 @@
+equal_odds/__init__.py,sha256=QRYPVh98denbLJxGOJjzYc_HzWozUZ61D3E6ddo1Ni4,41
+equal_odds/_version.py,sha256=5OMutO6emvjS4ia-3HZdKYvU0Of98vxsRMdq1N3IH3o,123
+equal_odds/classifiers.py,sha256=Jg-qHzRyT2uWmphCCZK42pQ8l_tRGR64LyU0T73dId8,15988
+equal_odds/cvxpy_utils.py,sha256=-n2EhOzTae6-UlAliMDtKjHtolHrxcZIorutupjQQ-E,10949
+equal_odds/equal_odds.py,sha256=n8X4C-nTUGyhmciNRZ5wmrCy2kDZeHoQbBQbQ4uiktU,14039
+equal_odds/roc_utils.py,sha256=is4u98gzTq-Tw1_6sS8Pi7uJm6zuv0ldVCOmYHnssGQ,5209
+equal_odds-0.0.2.dist-info/LICENSE,sha256=Qq7uL_8RRSMqUP1LyaVx4oNzg_zNU5LuGpNgZoZpda0,1068
+equal_odds-0.0.2.dist-info/METADATA,sha256=MwEqry3d_d_q_cMyz0QeBrHkfiIjqLxThiK3mIlIT3M,2061
+equal_odds-0.0.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+equal_odds-0.0.2.dist-info/top_level.txt,sha256=DdUZ9Gn1qVRC0H5YY4LBBWbUhLVsfslv-z6zAmtsDBY,11
+equal_odds-0.0.2.dist-info/RECORD,,
