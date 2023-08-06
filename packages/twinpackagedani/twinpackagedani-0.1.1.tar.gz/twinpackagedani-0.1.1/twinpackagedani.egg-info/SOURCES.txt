@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+twinpackage/__init__.py
+twinpackage/twinpackagedani.py
+twinpackagedani.egg-info/PKG-INFO
+twinpackagedani.egg-info/SOURCES.txt
+twinpackagedani.egg-info/dependency_links.txt
+twinpackagedani.egg-info/requires.txt
+twinpackagedani.egg-info/top_level.txt

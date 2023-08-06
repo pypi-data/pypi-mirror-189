@@ -1,0 +1,4 @@
+matplotlib
+numpy
+pandas
+wfdanielpackagetest==0.2.4
