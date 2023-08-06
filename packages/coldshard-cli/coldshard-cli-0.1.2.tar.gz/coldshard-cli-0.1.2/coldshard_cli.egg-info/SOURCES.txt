@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+cli/main.py
+cli/utils/__init__.py
+coldshard_cli.egg-info/PKG-INFO
+coldshard_cli.egg-info/SOURCES.txt
+coldshard_cli.egg-info/dependency_links.txt
+coldshard_cli.egg-info/entry_points.txt
+coldshard_cli.egg-info/requires.txt
+coldshard_cli.egg-info/top_level.txt
