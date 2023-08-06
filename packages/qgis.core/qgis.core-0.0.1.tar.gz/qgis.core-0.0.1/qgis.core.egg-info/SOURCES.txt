@@ -1,0 +1,5 @@
+setup.py
+qgis.core.egg-info/PKG-INFO
+qgis.core.egg-info/SOURCES.txt
+qgis.core.egg-info/dependency_links.txt
+qgis.core.egg-info/top_level.txt
