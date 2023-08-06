@@ -1,0 +1,5 @@
+setup.py
+nova.openstack.common.egg-info/PKG-INFO
+nova.openstack.common.egg-info/SOURCES.txt
+nova.openstack.common.egg-info/dependency_links.txt
+nova.openstack.common.egg-info/top_level.txt
