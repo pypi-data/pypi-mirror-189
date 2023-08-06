@@ -1,0 +1,8 @@
+from regressionlib.experiments.univariate_linear_regression_experiment import \
+    UnivariateLinearRegressionExperimentException
+from regressionlib.experiments.multivariate_linear_regression_experiment import \
+    MultivariateLinearRegressionExperimentException
+from regressionlib.experiments.univariate_polynomial_regression_experiment import \
+    UnivariatePolynomialRegressionExperimentException
+from regressionlib.experiments.forsythe_polynomial_experiment import ForsythePolynomialExperimentException
+from regressionlib.experiments.forsythe_virtual_to_real_experiment import ForsytheVirtualToRealExperimentException
