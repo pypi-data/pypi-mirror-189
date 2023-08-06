@@ -1,0 +1,26 @@
+box:
+  name: Addition
+  library: Boxes.Math
+  version: 1.0
+  creator: François Demoulin
+  date_creation: 2021-11-24
+  icon: "packages/interface/assets/BoxIcons/addition.svg"
+  type: code
+  box_init_method: None
+  box_function: _function_addition_box
+  box_end_method: None
+  wait_for_events: True
+  wait_for_all_signal_events: True
+
+  inputs: 
+    - name: Term
+      type: float
+      isInfinite: True # default count value = 2
+
+  outputs: 
+    - name: Sum
+      type: float
+      value: 0.0
+      count: 1
+     
+  params: None
