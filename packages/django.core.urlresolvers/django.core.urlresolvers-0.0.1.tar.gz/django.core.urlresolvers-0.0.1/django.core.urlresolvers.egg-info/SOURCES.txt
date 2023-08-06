@@ -1,0 +1,5 @@
+setup.py
+django.core.urlresolvers.egg-info/PKG-INFO
+django.core.urlresolvers.egg-info/SOURCES.txt
+django.core.urlresolvers.egg-info/dependency_links.txt
+django.core.urlresolvers.egg-info/top_level.txt
