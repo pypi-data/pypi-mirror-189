@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scm-wrap"
+version = "1.1.8"
+authors = [
+    { name="Marco Bascetta", email="m.bascetta@zohomail.eu" },
+    { name="Matteo Martelli", email="matteomartelli3@gmail.com" },
+    { name="Marco Melletti", email="melletti.marco@gmail.com" },
+]
+description = "Source Code Management module wrapper. This module aims to wrap access to Git, Subversion and other SCMs repositories"
+requires-python = ">=3.7"
+classifiers = [
+   "Programming Language :: Python :: 3",
+   "Operating System :: OS Independent",
+]
+
+[tool.setuptools.package-data]
+"scmwrap" = ["py.typed"]
