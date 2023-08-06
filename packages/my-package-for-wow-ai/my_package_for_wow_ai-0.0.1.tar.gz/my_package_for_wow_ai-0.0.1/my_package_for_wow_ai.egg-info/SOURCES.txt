@@ -1,0 +1,6 @@
+setup.py
+my_package_for_wow_ai/__init__.py
+my_package_for_wow_ai.egg-info/PKG-INFO
+my_package_for_wow_ai.egg-info/SOURCES.txt
+my_package_for_wow_ai.egg-info/dependency_links.txt
+my_package_for_wow_ai.egg-info/top_level.txt
