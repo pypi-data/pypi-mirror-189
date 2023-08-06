@@ -1,0 +1,11 @@
+CnkiSpider/__init__.py,sha256=aX3MhHL8UPHNoj4PSmsh28MDUE_oBzPYWFzvMx5vc80,55
+CnkiSpider/Author/AuthorSpider.py,sha256=fSWINXpswW0543d54zUfyDUJxg8iP3XZ2Mp__RTXJL4,13318
+CnkiSpider/Author/__init__.py,sha256=AEjf1fa2hCpTeLioxb9lKqIT2-NWMeXkf1zkpDKxXJ0,39
+CnkiSpider/Author/author_function.py,sha256=_dhDXuA3nQyUKo78OXrzTnIjGn5aGp5DEnL4lFbP8tQ,5338
+CnkiSpider/Author/main.py,sha256=Z6t406k9ErUlAlZYkdqzHjKmeSfTgsDRTV8qx5Fhgv0,382
+CnkiSpider/Author/para.py,sha256=9tIuh6XuuqCIq6L2g6nIl9Etys70eoiNy20pk01gnBk,1064
+CnkiSpider-1.0.6.dist-info/LICENSE,sha256=cNirhDBbWrc8L18JgSoBSN4oZzY58ODzFh0_vARyrBE,1087
+CnkiSpider-1.0.6.dist-info/METADATA,sha256=DMC9qeqnkREWsyNJOIsXLrg1HnsJ7q1Vdk8cyuucN8M,7747
+CnkiSpider-1.0.6.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+CnkiSpider-1.0.6.dist-info/top_level.txt,sha256=xwB8WQmwqi4U8n0dhQCa1_Xr_KZgnYiANcsEU5YOwHI,11
+CnkiSpider-1.0.6.dist-info/RECORD,,
