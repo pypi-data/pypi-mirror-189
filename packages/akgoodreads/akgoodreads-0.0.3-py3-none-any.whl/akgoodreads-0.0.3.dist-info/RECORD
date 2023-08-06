@@ -1,0 +1,10 @@
+akgoodreads/__init__.py,sha256=e1In8i5w6A9O0aA38hK82_F8oWiRk-38ftENX41VEcU,101
+akgoodreads/credentials.py,sha256=LhBJd8VpnQugAfQe2UsphR29Ux_z43ZQYg6kd_duChM,872
+akgoodreads/definitions.py,sha256=uGbidWu1ONMzgSCF0Gse35xB3KRECk23btI4pE1vu1c,440
+akgoodreads/gr_parser.py,sha256=LI0CWeJO_Z2X8QNChOPkhppwV3FzDglOLZdEwRX5YeY,3176
+akgoodreads/log.py,sha256=l9H6yiAer-V3lCwPgAPE9K5YhejEkbOHLLNzYvpEhvI,1465
+akgoodreads/main.py,sha256=gfX4508IgrpJ-GpJRxwicSJQhHveMGAicx_4Q9XvIJ4,3398
+akgoodreads-0.0.3.dist-info/LICENSE,sha256=sHOBmrMwc7ayYTppcEXEmfXI9n8c6Ix0epH9APstXVQ,1100
+akgoodreads-0.0.3.dist-info/WHEEL,sha256=rSgq_JpHF9fHR1lx53qwg_1-2LypZE_qmcuXbVUq948,81
+akgoodreads-0.0.3.dist-info/METADATA,sha256=Kk5G1027AcCqml0Pyc69XVpT-Cg_31a_sdTJdlGuDjA,3215
+akgoodreads-0.0.3.dist-info/RECORD,,
