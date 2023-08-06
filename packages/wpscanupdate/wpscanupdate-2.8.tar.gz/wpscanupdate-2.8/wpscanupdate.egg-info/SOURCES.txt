@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+wpscanupdate/__init__.py
+wpscanupdate.egg-info/PKG-INFO
+wpscanupdate.egg-info/SOURCES.txt
+wpscanupdate.egg-info/dependency_links.txt
+wpscanupdate.egg-info/top_level.txt
