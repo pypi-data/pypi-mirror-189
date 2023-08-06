@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: TheRuffianReport
+Version: 1.0.0
+Summary: test
+Home-page: https://github.com/the-ruffian/TheRuffianReport
+Author: TheRuffian
+Author-email: bugpz2779@gmail.com
+License: MIT License
+Download-URL: https://codeload.github.com/the-ruffian/TheRuffianReport/zip/refs/heads/master
+Keywords: the-ruffian,ruffianTest,ruffian,TheRuffian,TheRuffianReport
+Platform: all
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Testing
+Classifier: Development Status :: 5 - Production/Stable
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+b"#Introduction\n```shell\n    Based on TheRuffianReport development,\n     new assertion failure screenshot,\n      screenshot display and DingTalk function\n```    \n\n#Installing\n    pip install TheRuffianReport\n    python\xe2\x89\xa53.0\n\n#Author\n    bugpz2779@gmail.com\n\n#Function Introduction\n\n```python\n # screenshot\nimport unittest\nfrom selenium import webdriver\n\nfrom TheRuffianReport.HTMLTestRunner import failure_monitor\n\n\nclass Test_demo(unittest.TestCase):\n    def setUp(self) -> None:\n        self.driver = webdriver.Chrome()\n        self.failureException = failure_monitor(self, 'images')\n        self.driver.get('https://www.baidu.com')\n\n    def test_baidu(self):\n        self.driver.find_element('id', 'kw').send_keys('python')\n        self.driver.find_element('id', 'su').click()\n        self.assertEqual(self.driver.find_element('id', 'kw').get_attribute('value'), 'selenium')\n```"
+
