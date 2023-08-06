@@ -1,0 +1,53 @@
+import sys
+
+from imxdparser import ChildParser, MainParser
+
+from .clone import clone
+from .validate import validate
+
+
+def parser_error(parser, argv, *_args):
+    # Reparse with an additional parameter to force an error
+    argv += [""]
+    parser.parse_args(argv)
+
+
+def options(argv=None):
+    if argv is None:
+        argv = sys.argv[1:]
+
+    def error(*_args):
+        parser_error(parser, argv)
+
+    parser = MainParser(description="Lorem ipsum sit dolor amet")
+    parser.add_argument("--version", action="version", version="0.9.0")
+    parser.attach()
+    parser.set_defaults(func=error)
+
+    subparser = ChildParser(parser, "version")
+    subparser.attach()
+    subparser.set_defaults(func=lambda *_: print("0.9.0"))
+
+    subparser = ChildParser(parser, "validate")
+    # fmt: off
+    subparser.add_argument("template", metavar="TEMPLATE", help="Path of a 'project-press.yml' template file")
+    # fmt: on
+    subparser.attach()
+    subparser.set_defaults(func=validate)
+
+    subparser = ChildParser(parser, "clone")
+    # fmt: off
+    subparser.add_argument("-o", "--output-dir", default=".", metavar="PATH", help="Where to output the generated files")
+    subparser.add_argument("template", metavar="TEMPLATE", help="Path of a 'project-press.yml' template file")
+    # fmt: on
+    subparser.attach()
+    subparser.set_defaults(func=clone)
+
+    return vars(parser.parse_args(argv))
+
+
+def main():
+    args = options()
+    if args.get("func"):
+        func = args.pop("func")
+        func(args)
