@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-02 07:19-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: api/services/oasis_certs.py:45
+msgid "The user is not registered."
+msgstr "El usuario no se encuentra registrado."
+
+#: api/services/oasis_certs.py:67
+msgid "Data required not found"
+msgstr "Los datos requeridos no se encuentran."
+
+#: api/services/oasis_certs.py:69
+msgid "Company has not been defined."
+msgstr "La compañía no ha sido definida."
+
+#: apps.py:22
+msgid "Oasis4 Certificates Generator"
+msgstr "Generador de Certificados Oasis 4"
+
+#: lib/cursors/tax_certs.py:28
+msgid "The arguments required for the query were not received."
+msgstr "Los argumentos requeridos para el query no han sido recibidos."
+
+#: lib/cursors/tax_certs.py:33
+msgid "The query text must be string type."
+msgstr "El texto del query debe ser de tipo cadena."
+
+#: lib/cursors/tax_certs.py:54
+msgid "The key of certificate does not exists."
+msgstr "La llave del certificado no existe."
+
+#: models.py:20
+msgid "Certificate name"
+msgstr "Nombre del certificado."
+
+#: models.py:21
+msgid "Name that appears as the title of the certificate"
+msgstr "Nombre que aparece como título del certificado"
+
+#: models.py:22
+msgid "Key to call back"
+msgstr "Llave para invocar el certificado"
+
+#: models.py:23
+msgid "Key that identifies the certificate for its execution"
+msgstr "Llave que identifica el certificado para su ejecución"
+
+#: models.py:24
+msgid "Certificate text"
+msgstr "Texto del certificado"
+
+#: models.py:25
+msgid "Text that goes inside the body of the certificate"
+msgstr "Texto que va dentro del cuerpo del certificado"
+
+#: models.py:26 templates/oasis_certs/certs_base_template.html:78
+msgid "Issue date"
+msgstr "Fecha de Expedición"
+
+#: models.py:27
+msgid "Query text"
+msgstr "Texto del Query"
+
+#: models.py:28
+msgid "Text used to execute the query"
+msgstr "Texto usado para ejecutar el query"
+
+#: models.py:29
+msgid "Template to use"
+msgstr "Plantilla para utilizar"
+
+#: models.py:30
+msgid "Template used to generate the certificate"
+msgstr "Plantilla que se utiliza para generar el certificado"
+
+#: models.py:31 models.py:32
+msgid "Enabled"
+msgstr "Habilitado"
+
+#: models.py:33
+msgid "Footer text"
+msgstr "Texto del pie"
+
+#: models.py:34
+msgid "Text that is located in the footer of the certificate"
+msgstr "Texto que es utilizado para el pie de página del certificado"
+
+#: models.py:43
+msgid "Certificate"
+msgstr "Certificado"
+
+#: models.py:44
+msgid "Certificates"
+msgstr "Certificados"
+
+#: templates/oasis_certs/certs_base_template.html:25
+msgid "Tax Id"
+msgstr "NIT/CC"
+
+#: templates/oasis_certs/certs_base_template.html:33
+#: templates/oasis_certs/wh_source_template.html:30
+msgid "Address"
+msgstr "Dirección"
+
+#: templates/oasis_certs/certs_base_template.html:41
+#: templates/oasis_certs/wh_source_template.html:36
+msgid "Phone"
+msgstr "Teléfono"
+
+#: templates/oasis_certs/certs_base_template.html:66
+msgid "Taxable year"
+msgstr "Año gravable"
+
+#: templates/oasis_certs/certs_base_template.html:72
+msgid "Place of issuance"
+msgstr "Lugar de expedición"
+
+#: templates/oasis_certs/certs_base_template.html:104
+msgid "This certificate has been printed at "
+msgstr "Este certificado ha sido impreso el "
+
+#: templates/oasis_certs/wh_source_template.html:16
+msgid "Name"
+msgstr "Nombre"
+
+#: templates/oasis_certs/wh_source_template.html:47
+msgid "Account Id"
+msgstr "Cuenta No"
+
+#: templates/oasis_certs/wh_source_template.html:50
+msgid "Account Name"
+msgstr "Nombre Cuenta"
+
+#: templates/oasis_certs/wh_source_template.html:53
+msgid "Percentage"
+msgstr "Porcentaje"
+
+#: templates/oasis_certs/wh_source_template.html:56
+msgid "Base Value"
+msgstr "Valor Base"
+
+#: templates/oasis_certs/wh_source_template.html:59
+msgid "Withholding Value"
+msgstr "Valor Retenido"
+
+#: templates/oasis_certs/wh_source_template.html:86
+msgid "Totals"
+msgstr "Totales"
