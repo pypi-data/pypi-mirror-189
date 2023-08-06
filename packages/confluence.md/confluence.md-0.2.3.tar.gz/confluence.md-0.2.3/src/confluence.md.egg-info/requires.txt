@@ -1,0 +1,7 @@
+atlassian-python-api>=3.18.1
+coloredlogs>=15.0.1
+markdown2>=2.4.1
+termcolor>=1.1.1
+
+[:python_version == "3.7"]
+importlib
