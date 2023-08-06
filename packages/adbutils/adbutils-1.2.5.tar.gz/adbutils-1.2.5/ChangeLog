@@ -1,0 +1,18 @@
+CHANGES
+=======
+
+1.2.5
+-----
+
+* change version\_name optional
+* change version\_code to optional
+* add path to AppInfo
+* fix #79
+* add get\_free\_port for manjaro
+* add docs
+* make it possible to pass flags to \`install\`
+* limit python min version to 3.7, ref #82
+* change back screenshot method
+* update tests
+* add appinfo
+* fix logcat
