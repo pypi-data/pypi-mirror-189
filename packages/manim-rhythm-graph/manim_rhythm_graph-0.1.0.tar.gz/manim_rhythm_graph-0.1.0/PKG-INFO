@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: manim-rhythm-graph
+Version: 0.1.0
+Summary: A manim plugin for creating various shapes to demonstrate musical rhythm.
+Author: RCJacH
+Author-email: RCJacH@outlook.com
+Requires-Python: >=3.11,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: manim (>=0.17.2,<0.18.0)
+Description-Content-Type: text/markdown
+
+
