@@ -1,0 +1,9 @@
+docker_parser/__init__.py,sha256=lp-HlGEjD6gnelkZMLIQzNPZ0FPYWCpLuy1xHdssjOc,116
+docker_parser/bashlex_utils.py,sha256=bi1qDEfYj8gIwLq3eqfjUfDVvoXzZJmb7HEhzFQE8k4,1346
+docker_parser/classess.py,sha256=oXyBdk7ihYHRJYEVJ67osMvcxgd1kVTpViBwqeoUWlg,2474
+docker_parser/dependencies.py,sha256=HgC4tSU4RvZdvTgDchlI-RxKYdRlyTogGJMoXy6jp74,5351
+docker_parser/parser.py,sha256=Vwh-soM-Uk6t-ZTfEg9xRfoAdBQRk6Ld7tkP5sljqfo,12674
+docker_parser-0.0.8.dist-info/METADATA,sha256=i6xqsCMkOFo1BiM-RB27RBKDlXZcKW9xWvFth3Watl0,1768
+docker_parser-0.0.8.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+docker_parser-0.0.8.dist-info/licenses/LICENSE,sha256=pGM_kn4zUv_PvuHf6n9pkgB8Aj5_G6KGz5WOSUFHBBc,1072
+docker_parser-0.0.8.dist-info/RECORD,,
