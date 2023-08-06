@@ -1,0 +1,12 @@
+timeseries_exam/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+timeseries_exam/arch.py,sha256=y0S5D1UTzeXTQVr_5bndikHo4Kt2X2gjmRme_iNTdc8,4089
+timeseries_exam/content.py,sha256=Ho6hbTstXtNZpbjAklIUpY7JLsZFoHDJUP87HHUbnMU,21970
+timeseries_exam/model.py,sha256=fcpIdVXTZKmT49Wa4w5ymU9lYWUso0rdzbn1Yvy8Zf8,6223
+timeseries_exam/number.py,sha256=GS1vdqB8KUfsMRQygvBfP5h4WIbOEd0aLoaMeShyjjM,560
+timeseries_exam/syntax.py,sha256=5r-ZY9PsMVCL0q7LsPjY06YvZOBOC-ZEsSUroAC3WhM,1718
+timeseries_exam/syntax2.py,sha256=2tOKPaQ-UmLTJzwsCdNrtyqc5upu6buNEHj1I6mPdAU,6781
+timeseries_exam-0.0.1.dist-info/LICENSE,sha256=2sjqNg2xu3uyl-ZqDtbR4YwJkIOIAB5uKmXWWREmaGU,1049
+timeseries_exam-0.0.1.dist-info/METADATA,sha256=K0O-KFPIKe0-nMxXj6TLlEKy51hDCvZQZEWueP7X8l0,525
+timeseries_exam-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+timeseries_exam-0.0.1.dist-info/top_level.txt,sha256=1bvlLl8UgEYeaHRLZ8cRcQX1iNGnKFyMuxUWep3L8Nk,16
+timeseries_exam-0.0.1.dist-info/RECORD,,
