@@ -1,0 +1,9 @@
+socceranalysis/__init__.py,sha256=SZ9FTgkYPf3o1RiSXpnEPFrWroTIEhInuvYwpIVueiI,118
+socceranalysis/find_team_stat.py,sha256=ip1yOXhTr4NF0Z-SR8GfqZxHhjc0o-OL0jK0zBsoRHg,2143
+socceranalysis/outlier_identification.py,sha256=Hw7TQd1rh1j1uJKQUrUDVsukHxw3TPePXwFT7zLWCnQ,2084
+socceranalysis/playerranking.py,sha256=ZQ-q-O6TQ52h75_KpzbEvkRoblrnMidgj3br8x22w3A,935
+socceranalysis/viz_stats.py,sha256=2xJuvDbI9UrJp_0T05bQSg_Tvf93jpuh76mVvj-M-HQ,2893
+socceranalysis-0.1.6.dist-info/METADATA,sha256=XPGDfE7bBBO4CjremkJsZtf1YUf4BoggxGhn6YGJ1cY,5905
+socceranalysis-0.1.6.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+socceranalysis-0.1.6.dist-info/LICENSE,sha256=U4tSXKwk54ClPut4A3IaDRwbqijJN_B8KLgecdHodp4,1090
+socceranalysis-0.1.6.dist-info/RECORD,,
