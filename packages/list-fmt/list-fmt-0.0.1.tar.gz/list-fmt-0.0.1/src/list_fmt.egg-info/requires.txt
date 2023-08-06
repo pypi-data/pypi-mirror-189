@@ -1,0 +1,10 @@
+b26
+roman
+
+[docs]
+furo
+matplotlib
+Sphinx
+sphinx-copybutton
+sphinxcontrib-repl
+sphinxcontrib-trio
