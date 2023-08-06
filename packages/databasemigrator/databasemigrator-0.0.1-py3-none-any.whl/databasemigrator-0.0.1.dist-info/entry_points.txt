@@ -1,0 +1,3 @@
+[console_scripts]
+databasemigrator = migrator.configure:main
+

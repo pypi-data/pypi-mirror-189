@@ -1,0 +1,7 @@
+migrator/__init__.py,sha256=R3hfMkJqPk0zfmmqkwb7jCdmbX26QlmzecwGG8AQ6rU,25
+migrator/configure.py,sha256=Dn64OfjjUdwKBX_I1Qb3o0LRDgEPfVeGNdYBOXnQw0s,6401
+databasemigrator-0.0.1.dist-info/METADATA,sha256=urfplMlEkh9d_QhC4csTihyUotfuowks8zaW2RS1Uas,1269
+databasemigrator-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+databasemigrator-0.0.1.dist-info/entry_points.txt,sha256=kebqo612oqDo-iUuCpeoxVaAieUQwXt0AWBi9uFnBho,62
+databasemigrator-0.0.1.dist-info/top_level.txt,sha256=OA_3fxjfdAtjoHmPa8p3l2ABAFHzyHfLLthWKFd30Bo,9
+databasemigrator-0.0.1.dist-info/RECORD,,

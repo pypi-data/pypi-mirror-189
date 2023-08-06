@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: databasemigrator
+Version: 0.0.1
+Summary: Utility to help migration database, common use for docker containers
+Home-page: UNKNOWN
+Author: rafaelscone (Rafael Schneider)
+Author-email: <databasemigrator@impaire.com>
+License: UNKNOWN
+Keywords: database,mysql,migrator
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: dotenv
+Requires-Dist: mysql.connector (==2.2.9)
+
+
+## This is a utility to help migrator in database
+
+How to run correctly use docker  container. 
+
+https://hub.docker.com/r/rafaelscone/databasemigrator
+
+To see more about this code go to github
+https://github.com/rafaelscone/databasemigrator
+
+
+You must set the enviroments vars
+```
+MYSQL_HOST: {url_to_host}
+MYSQL_DATABASE: {database_name}
+MYSQL_USER: {user}
+MYSQL_PASSWORD: {password}
+MYSQL_PORT: 3306
+ADDITIONAL: {optional_database@password§other_database@password}
+```
+
+### Feel free to send me news, bugs and suggestions to this package
+Rafael Schneider - rafaelscone
+
+
+
+
