@@ -1,0 +1,5 @@
+gdown
+aiohttp
+hachoir
+cloudscraper
+beautifulsoup4
