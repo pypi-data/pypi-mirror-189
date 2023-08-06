@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "rpdb2"
+version = "2.0.0.1.2"
+description = "rpdb2 module extracted from winpdb pacage."
+authors = ["Philippe Fremy, Nir Aides"]
+license = "GNU GPL"
+readme = "README.md"
+packages = [
+    { include = "rpdb" },
+    { include = "rpdb2.py" },
+]
+
+[tool.poetry.scripts]
+rpdb2 = 'rpdb2:run_rpdb2'
+
+[tool.poetry.dependencies]
+python = "^3.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
