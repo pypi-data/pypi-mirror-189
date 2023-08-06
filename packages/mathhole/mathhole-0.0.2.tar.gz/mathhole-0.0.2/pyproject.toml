@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "mathhole"
+version = "0.0.2"
+description = "An extremely bad, unintelligent math library for a moron to learn. Please don't use and if you do, it is at your own risk."
+readme = "README.md"
+homepage = "https://github.com/aaronclong/mathhole"
+repository = "https://github.com/aaronclong/mathhole"
+authors = ["Aaron Long <aaron.long.c@gmail.com>"]
+license =  "DBAD"
+include = [
+    "LICENSE.md",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pytest-cov = "^4.0.0"
+
+
+[tool.coverage.run]
+branch = true
+source = ['mathhole']
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.coverage.lcov]
+directory = ['testcov']
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
