@@ -1,0 +1,186 @@
+Metadata-Version: 2.1
+Name: mrtoolstheme
+Version: 0.5.1
+Summary: mrtoolstheme: a Sphinx theme
+Home-page: https://gitlab.com/anatas_ch/pyl_mrtoolstheme
+Author: Michael Rippstein
+Author-email: info@anatas.ch
+License: AGPL-3.0
+Project-URL: Documentation, https://mrtoolstheme.readthedocs.io/
+Project-URL: Bug Tracker, https://gitlab.com/anatas_ch/pyl_mrtoolstheme/-/issues
+Project-URL: Source Code, https://gitlab.com/anatas_ch/pyl_mrtoolstheme
+Keywords: syntax highlighting,sphinx doc theme
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Framework :: Sphinx :: Theme
+Classifier: Topic :: Documentation
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Text Processing :: Filters
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+mrtoolstheme - A Sphinx HTML Theme
+==================================
+
+A Sphinx HTML Theme based on the `arctic, north-bluish colour palette <https://www.nordtheme.com/>`_.
+
+Usage
+-----
+
+On Sphinx project’s ``conf.py``: set the theme name to ``mrtools``.
+
+.. code:: python
+
+   html_theme = "mrtools"
+
+See details on `Sphinx theming docs <http://www.sphinx-doc.org/en/master/theming.html#using-a-theme>`_.
+
+License
+-------
+
+GNU AFFERO GENERAL PUBLIC LICENSE Version 3
+
+Developer guide
+---------------
+
+Upgrade your setup tools and pip.
+They are needed for development and testing only:
+
+.. code:: bash
+
+   pip install --upgrade setuptools pip wheel
+
+Development steps for code changes
+
+.. code:: bash
+
+   git clone https://gitlab.com/anatas_ch/pyl_mrtoolstheme.git
+   cd pyl_mrtoolstheme
+   pip install -e .
+
+Then install relevant development requirements:
+
+.. code:: bash
+
+   pip install -r requirements_rnd.txt
+
+`docs` folder contains theme's own documentation.
+
+.. code:: bash
+
+   cd docs
+   make clean; make html
+
+Once you have finished your changes, please provide test case(s) and relevant documentation.
+
+=========
+Changelog
+=========
+
+All notable changes to this project will be documented in this file.
+
+The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`__,
+and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`__.
+
+
+[Unreleased]
+============
+
+Added
+-----
+
+Changed
+-------
+
+Fixed
+-----
+
+
+[0.5.0] - 2023-02-04
+====================
+
+Fixed
+-----
+- description on PyPi
+
+
+[0.5.0] - 2023-02-04
+====================
+
+Changed
+-------
+- minimal Python version: 3.9
+- formatting long index entries
+
+Fixed
+-----
+- #3: Numbered lists in admonitions
+- #4: Spacing around figure caption
+- #5: Spacing around table captions
+- #6: Harmonize horizontal spacing lists
+
+
+[0.4.0] - 2022-02-18
+====================
+
+Added
+-----
+- formats for `versionadded`, `versionchanged` and `deprecated`
+
+Changed
+-------
+- formats for the python domain
+
+
+[0.3.0] - 2021-11-05
+====================
+
+Changed
+-------
+- Table format: add top and bottom borders
+- minimal Python version: 3.6
+
+Fixed
+-----
+- Doc: wrong version print out
+- #2: Text as code formatted in a ``code-block`` ``caption``
+
+
+[0.2.0] - 2021-06-14
+====================
+
+Added
+-----
+- This CHANGELOG file.
+
+Changed
+-------
+- Documentation: Link to Read the Docs
+
+Fixed
+-----
+- #1: ``code-block`` in a ``admonition`` is not rendered properly
+
+
+[0.1.0] - 2021-06-04
+====================
+
+Added
+-----
+- first public release.
