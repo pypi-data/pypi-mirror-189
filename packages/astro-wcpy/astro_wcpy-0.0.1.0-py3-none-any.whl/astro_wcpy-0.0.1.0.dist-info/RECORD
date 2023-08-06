@@ -1,0 +1,14 @@
+wcpy/__init__.py,sha256=VjT5vUTPoNjgsoibb2IFw6vZC3Rrz5uvSNR9NO5caDY,49
+wcpy/command_line.py,sha256=34exATFIINiK_8e6BRw4jt3EVMEOTJJ9g4AlORacmyQ,1286
+wcpy/mainwindow.py,sha256=eoFFL7JEKvabh7m7EX38xS6K5qZfvF9z8fwmGkl9diY,27265
+wcpy/utils.py,sha256=uxdBfE5A1IYClszoWn3WIwtfNXF532nWnmW1ZLIMz9U,4159
+wcpy/ui/__init__.py,sha256=6vuDYNZ3b4hiaynvVnT5hgg9qXcn7S83UXSSdh02cAc,222
+wcpy/ui/fonts.py,sha256=C3frZQKVp5MblMwXu_iijNcRY5AZnSs9RTRNGJkTxHs,124
+wcpy/ui/mainwindow.py,sha256=Fx9LHYzqpDXw77ljFWf84lh_v4QQzyx0DCQmqeIHrCQ,42848
+wcpy/ui/widgets.py,sha256=v5Es75BhnBNX-IiWOUNudkfeRNhFldExWnVEaHJioRg,6160
+astro_wcpy-0.0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+astro_wcpy-0.0.1.0.dist-info/METADATA,sha256=0TERXxUOXWCRpLdcyao-ry-i1GzhjiszKBLzQeJbBIo,847
+astro_wcpy-0.0.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+astro_wcpy-0.0.1.0.dist-info/entry_points.txt,sha256=TV82HBZfbTC19Ii6r1P6mFDXdv59aZBYsI4-mvr7c0M,65
+astro_wcpy-0.0.1.0.dist-info/top_level.txt,sha256=cTEIVm3itHYcjljnpHy6KoyJBZbtApcUKr-GOMl6utc,5
+astro_wcpy-0.0.1.0.dist-info/RECORD,,
