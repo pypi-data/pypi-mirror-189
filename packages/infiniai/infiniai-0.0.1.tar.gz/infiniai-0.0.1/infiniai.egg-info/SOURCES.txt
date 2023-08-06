@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+infiniai/FaceDetectionModule.py
+infiniai/FaceMeshModule.py
+infiniai/HandTrackingModule.py
+infiniai/PoseEstimationModule.py
+infiniai/Utils.py
+infiniai/__init__.py
+infiniai/faceMeshExample.py
+infiniai.egg-info/PKG-INFO
+infiniai.egg-info/SOURCES.txt
+infiniai.egg-info/dependency_links.txt
+infiniai.egg-info/requires.txt
+infiniai.egg-info/top_level.txt
