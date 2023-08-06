@@ -1,0 +1,17 @@
+gqlient/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gqlient/cli.py,sha256=PfkPyQkGUfRrTZOXZlDEZdHHneq5wwu2oDB1eHBohBg,1323
+gqlient/generator.py,sha256=Iahga_UWz_0qI6PJOnjaURP_gt2jC_7ZNJpk7tVVXGA,5666
+gqlient/templates/all_types.py.jinja2,sha256=QAYGuKsNlWMvvieXHGcFMpAcN9bK7kgesIdLmsMh3pU,5729
+gqlient/templates/client.py.jinja2,sha256=3hIMDhWEbwAsUsJAr5VcRRbtqylAWMjueLKULRzqNtc,1356
+gqlient/templates/common.py.jinja2,sha256=_9Oj-JcvybRqWy1pHCPz9JyHeaD4Dj5aTF-yFBpaK00,3027
+gqlient/templates/enum_types.py.jinja2,sha256=ijy5ZB4r5N2EiB4V7h94pHGyrQcMGe_qJmkhi5yuvSo,438
+gqlient/templates/input_types.py.jinja2,sha256=nMuulkhPEsBjsjKDOR4mkJWgvksOjREFLVFkIQo-HOw,701
+gqlient/templates/mutation.py.jinja2,sha256=4hnlXLuz8Z1In-p2zke12923NxWFfrBhRHrMKV6FU_8,1331
+gqlient/templates/pyproject.toml.jinja2,sha256=gBf36nOIE-bDNuK34bswk8dHsKIpi2aGolYXpOCEdv8,449
+gqlient/templates/query.py.jinja2,sha256=RAcFQ055YGcy7GZCZaVPS7mhFmVGW2hR3rb3jm3TaQM,1305
+gqlient/templates/queryable_types.py.jinja2,sha256=XqCjzcbLolKAlKLytyhLNElsa9Gg3cGjRHSdg_UNacI,4223
+gqlient/templates/result_types.py.jinja2,sha256=13Lsr7Rj6OF3s1RGVI1203eLyCFYModopuM5lbiSeA8,4416
+gqlient/type_utils.py,sha256=tbCQXNs1k1xb06lPv3SkD4yvpTcLJZxY42SxqiPYOPY,9715
+graphqlient-0.0.1a3.dist-info/METADATA,sha256=Jg6t_32PXek7NZS4UoYV9-k8loPXQpOzRHNM4aTTc9U,526
+graphqlient-0.0.1a3.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+graphqlient-0.0.1a3.dist-info/RECORD,,
