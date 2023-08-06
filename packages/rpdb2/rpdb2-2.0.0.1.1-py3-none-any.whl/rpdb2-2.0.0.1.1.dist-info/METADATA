@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: rpdb2
+Version: 2.0.0.1.1
+Summary: rpdb2 module extracted from winpdb pacage.
+License: GNU GPL
+Author: Philippe Fremy, Nir Aides
+Requires-Python: >=3.4,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# rpdb2
+
+rpdb2 module extracted from winpdb package.
+
+In contrast to winpdb, this module can be installed without wxpython.
+
+Note that it contain rpdb module with may conflict with the one that comes with rpdb package.
+
+Version of this package is the same as version of winpdb that rpdb2 was stolen from.
+
+
