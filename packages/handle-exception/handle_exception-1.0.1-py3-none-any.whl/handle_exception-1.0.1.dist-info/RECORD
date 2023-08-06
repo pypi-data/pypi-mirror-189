@@ -1,0 +1,8 @@
+handle_exception/__init__.py,sha256=yxoT9gKJgx74AGJRCsA9WqQ_A07hCEjF-ZSiBNcG3eg,83
+handle_exception/handle_exception.py,sha256=lChchOM7iE-l8PddEzagPlMe8K8KK3F-L6p2dG_Zbog,1278
+tests/__init__.py,sha256=wePx1KNPy6fINxKNmoSthtoBSW8hYRBtxbrVweh0TPE,37
+tests/test_handle_exception.py,sha256=YC2L5QlJ21CWHCLAI6jOo0MHZ0VWjiK3ImLr1eJ6kz8,353
+handle_exception-1.0.1.dist-info/METADATA,sha256=nE6eAK5S1Bc7voR-2ZS6ItmvIT35a7f8yVrXaCq4oKI,3306
+handle_exception-1.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+handle_exception-1.0.1.dist-info/top_level.txt,sha256=82FJva1heVbojnU-rc3AT-Ujog7JnyonPkCmDAIu3eE,23
+handle_exception-1.0.1.dist-info/RECORD,,
