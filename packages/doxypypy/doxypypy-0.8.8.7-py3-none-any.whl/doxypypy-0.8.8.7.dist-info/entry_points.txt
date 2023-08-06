@@ -1,0 +1,2 @@
+[console_scripts]
+doxypypy = doxypypy.doxypypy:main
