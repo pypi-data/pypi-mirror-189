@@ -1,0 +1,11 @@
+rssgen/__init__.py,sha256=fxAKhMgcrC23byJJJLz8koJQ_b74YVm-jYtPkrx7Rqw,5209
+rssgen/__main__.py,sha256=me5KIMkix8-_scf9FdiMILNoW2gWCON9oPRprOMODhM,2471
+rssgen/compat.py,sha256=b1QghUt40l3-UnBkZdWK8tr9utvgAhvegS4Zm_07unE,139
+rssgen/entry.py,sha256=9LfmmAWD2reHiCc6ZVKYU_IcHerCDSibX7ngpZPQXJo,27570
+rssgen/feed.py,sha256=sM6rSdA-d8vowtzz1zMCHPJKPdVRjhZgCuLEJ_lPGnM,44547
+rssgen/util.py,sha256=4kD0sqvXGRlKPAYfTkfskuJcaayUV3b0Paq1JkedEEE,2825
+rssgen/version.py,sha256=gSl23uckT7m_V4Fq1zaGeK-BYZOZtka5tjzAjb3lo-w,629
+rssgen-0.9.0.dist-info/METADATA,sha256=42Ku43edp6rmARgq7g_BKh7Irp82n-05rtbpGtl14T8,1358
+rssgen-0.9.0.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
+rssgen-0.9.0.dist-info/top_level.txt,sha256=Ted98CSnUU2r0pYB3HwcqFPB6ekdfW3xZKpmw0nNdwk,7
+rssgen-0.9.0.dist-info/RECORD,,
