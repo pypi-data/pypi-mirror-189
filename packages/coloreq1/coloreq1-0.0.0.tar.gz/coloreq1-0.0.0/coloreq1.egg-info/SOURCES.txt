@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+coloreq1/__init__.py
+coloreq1/color.py
+coloreq1.egg-info/PKG-INFO
+coloreq1.egg-info/SOURCES.txt
+coloreq1.egg-info/dependency_links.txt
+coloreq1.egg-info/top_level.txt
+coloreq1/pytransform/__init__.py
