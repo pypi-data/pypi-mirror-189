@@ -1,0 +1,17 @@
+previs/__init__.py,sha256=JIkzEEgoFY6AsmNgSfKTEIEJUDo1ddoVvz9WJk5f5jw,286
+previs/core.py,sha256=C-DicpS6S5urHknKR2AQoZxlzRH1713NzuJsMcC_rGY,12281
+previs/display.py,sha256=BnMFJNZ8lZE65yxhRvS7EiCDD5l3K0aEkHAk1DCTOQk,56548
+previs/instr.py,sha256=LVY9nsHvLFKqnhnI_vcPgoxMbun69wNUHvHIMKlNduM,17339
+previs/sed.py,sha256=ldZobN7N6P33r_VeQwwEglJHUN79lFWq3ss7W_iTk5g,5464
+previs/utils.py,sha256=tTsm45Wn94MP5E5h40ZLIeWpSTo0d8h_j2706oITHqI,10083
+previs/_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+previs/_cli/commands.py,sha256=Cz9kRl1AsPqjJkafiepeJxI7wVGF-Bl8Bclr3REDiUs,1326
+previs/_cli/main.py,sha256=WNs2QeiZyfGcgFqZAf8FR_K9ChDqWkqKhkzVYINE3S8,2161
+previs/data/eso_limits_matisse.json,sha256=5lnUT5N559HgFP3lOvZMFFnIf67FA-3lG4-38d_0bI4,856
+previs/data/vizier_catalog_references.json,sha256=2PmjuklhLNcwqNdot4N6wkMg55gzcgN7aBNL9o9FwxY,11621
+previs_astro-1.0.post0.dist-info/LICENSE,sha256=wbQbfuFFD_FCB287k-gWC15jrSz5oEI_f3sjWA82khQ,1072
+previs_astro-1.0.post0.dist-info/METADATA,sha256=N3WbKtZNZESHyOquDdUuPFHw1MB0o21B-Lta9EZb-kQ,8417
+previs_astro-1.0.post0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+previs_astro-1.0.post0.dist-info/entry_points.txt,sha256=MJ_C8dWDtYDCUSTiwYC87i0AWCjzPyCYuhTUIsbjtGQ,49
+previs_astro-1.0.post0.dist-info/top_level.txt,sha256=IIKIlZHq8fzcOi8ET50QfGLPWxf5JbxG_s7u0q0HXaA,7
+previs_astro-1.0.post0.dist-info/RECORD,,
