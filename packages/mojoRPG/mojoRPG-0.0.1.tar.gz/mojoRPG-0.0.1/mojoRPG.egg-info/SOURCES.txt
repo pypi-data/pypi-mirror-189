@@ -1,0 +1,12 @@
+README.md
+setup.py
+mojo/__init__.py
+mojo/character.py
+mojo/game.py
+mojo/mojo.py
+mojo/mojo1.py
+mojo/mojocore.py
+mojoRPG.egg-info/PKG-INFO
+mojoRPG.egg-info/SOURCES.txt
+mojoRPG.egg-info/dependency_links.txt
+mojoRPG.egg-info/top_level.txt
