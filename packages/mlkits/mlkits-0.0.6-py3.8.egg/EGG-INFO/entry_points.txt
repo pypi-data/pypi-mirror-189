@@ -1,0 +1,4 @@
+[console_scripts]
+mlkits-predict = mlkits.cli.predict:main
+mlkits-train = mlkits.cli.train:main
+
