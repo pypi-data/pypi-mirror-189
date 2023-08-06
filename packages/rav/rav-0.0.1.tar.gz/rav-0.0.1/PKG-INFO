@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: rav
+Version: 0.0.1
+Summary: A simple way to shortcut calling your various scripts. Inspired by npm scripts and make but simpler.
+Home-page: https://github.com/jmitchel3/rav
+Author: Justin Mitchel
+Author-email: Justin Mitchel <hello@teamcfe.com>
+Project-URL: Homepage, https://github.com/jmitchel3/rev
+Project-URL: Bug Tracker, https://github.com/jmitchel3/rev/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# rav
+
+A cross-platform approach to executing shortcut commands.
+
+
+## Create a `rav.yaml` file
+
+`rav.yaml`
+```
+scripts:
+    echo: echo "this is awesome"
+    server: venv/bin/python -m http.server
+```
+
+
+## Run a script
+
+```
+rav echo
+```
+
+or
+    
+```
+rav server
+```
