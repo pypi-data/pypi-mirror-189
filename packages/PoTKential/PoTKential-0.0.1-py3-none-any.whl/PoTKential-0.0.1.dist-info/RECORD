@@ -1,0 +1,15 @@
+PoTKential/__init__.py,sha256=NYl9syCiR9nyBcmP5rLQX9CAvlrRparsZ1IVaChkzYk,159
+PoTKential/abstractClasses.py,sha256=AJHk-0XpnzbUtRq2oa8zxGnTs9DjcYF00KdH1a2crfg,543
+PoTKential/clustering.py,sha256=CkYKBTU-RWemC6wKQhGChvlrF3lDvlMkqlzm-J06GnY,1172
+PoTKential/matrix.py,sha256=pO7fJ9m2wxTsec6Cq4vF72qGAHmHqqhkXNCFrmdylZU,3820
+PoTKential/sgd.py,sha256=J3naL6LnJRoZvHClYlfCguSeAPyX0EtHKsPzRXZYwjI,1655
+PoTKential/testClustering.py,sha256=XELQqhOHMdV-6wq7eWnfpiriTe7hkl0pgJU7iStftRw,1371
+PoTKential/testMatrix.py,sha256=bPdxAhWhGHdmVu6ueu0PV_q71jTJlhHc994OAJnPxUE,949
+PoTKential/testSGD.py,sha256=sGanSwpV-gE3aI-CkkI63RCJpn4PUUezHiDv-OjnoGw,538
+PoTKential/testVector.py,sha256=mcMaBB6Ga4K5cwMwejdWECO60Sc7AY1SqrqdS-a79H0,4514
+PoTKential/vector.py,sha256=OeFnQuXbYscwtNslVGV0lL5mvtrTfrmeYevfq1TnM3M,5303
+PoTKential-0.0.1.dist-info/LICENSE,sha256=uBr-ac1MfmxnzaovoKntc1ElNSIBVYTy5ogR3PpKzT0,1070
+PoTKential-0.0.1.dist-info/METADATA,sha256=i0vAHBydV3ya1ukJL9nYBtURP0eMQKag4TitzFyg45s,3687
+PoTKential-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+PoTKential-0.0.1.dist-info/top_level.txt,sha256=QNFd0kNi5cOZQgd3qEGfM4912lERi9Tq_nJVoBF_nTo,11
+PoTKential-0.0.1.dist-info/RECORD,,
