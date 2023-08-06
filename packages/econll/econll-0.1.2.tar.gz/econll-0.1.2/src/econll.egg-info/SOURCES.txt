@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+src/econll/__init__.py
+src/econll/__main__.py
+src/econll/chunks.py
+src/econll/reader.py
+src/econll/report.py
+src/econll/scorer.py
+src/econll/tokens.py
+src/econll.egg-info/PKG-INFO
+src/econll.egg-info/SOURCES.txt
+src/econll.egg-info/dependency_links.txt
+src/econll.egg-info/top_level.txt
