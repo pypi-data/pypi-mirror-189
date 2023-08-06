@@ -1,0 +1,30 @@
+[package]
+name = "exchange_worker"
+version = "0.1.1"
+edition = "2021"
+
+[lib]
+name = "exchange_worker"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[[bin]]
+name = "exchange_worker_cli"
+path = "src/main.rs"
+
+[[bin]]
+name = "some"
+path = "src/some.rs"
+
+[target.x86_64-apple-darwin]
+rustflags = [
+  "-C", "link-arg=-undefined",
+  "-C", "link-arg=dynamic_lookup",
+]
+
+[dependencies]
+pyo3 = { version = "0.18.0", features = ["extension-module"] }  # for python bindings
+binance = { git = "https://github.com/wisespace-io/binance-rs.git" }
+redis = "*"
+serde = "1.0.152"
+serde_json = "1.0.91"
