@@ -1,0 +1,59 @@
+[tool.poetry]
+name = "daffy"
+version = "0.6.0"
+description = "Function decorators for Pandas Dataframe column name and data type validation"
+authors = ["Janne Sinivirta <janne.sinivirta@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/fourkind/daffy"
+repository = "https://github.com/fourkind/daffy.git"
+keywords = ["pandas", "dataframe", "typing", "validation"]
+classifiers = [
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License"
+]
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0.0"
+pandas = "^1.5.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.2.0"
+isort = "^5.10.1"
+black = "^22.10.0"
+flake8 = "^5.0.4"
+pre-commit = "^2.20.0"
+mypy = "^0.982"
+pytest-mock = "^3.10.0"
+pytest-cov = "^4.0.0"
+coverage = {extras = ["toml"], version = "^6.5.0"}
+pydocstyle = "^6.1.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.coverage.run]
+branch = true
+source = ["daffy"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 95
+
+[tool.black]
+line-length = 120
