@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/provision/__init__.py
+src/provision/py.typed
+src/provision_ai.egg-info/PKG-INFO
+src/provision_ai.egg-info/SOURCES.txt
+src/provision_ai.egg-info/dependency_links.txt
+src/provision_ai.egg-info/requires.txt
+src/provision_ai.egg-info/top_level.txt
