@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: littlefieldpy
+Version: 0.0.4
+Summary: API for the Littlefield simulation
+Home-page: http://github.com/AndrewKahr/littlefieldpy
+Author: Andrew Kahr
+License: MIT
+Keywords: littlefield
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Education
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+
+# LittlefieldPy
+SDK to interact with the Littlefield Simulation.
+
+
