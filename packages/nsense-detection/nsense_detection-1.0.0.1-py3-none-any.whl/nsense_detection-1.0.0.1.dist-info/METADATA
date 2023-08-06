@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: nsense-detection
+Version: 1.0.0.1
+Summary: detection package
+Home-page: https://github.com/nsense-ptas/deephuman
+Author: gutaeu
+Author-email: taewoo.g@nsensecorp.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: pytorch
+Requires-Dist: openvino
+Requires-Dist: tensorrt
+Requires-Dist: onnxruntime-gpu
+Requires-Dist: glob2
+Requires-Dist: pycocotools
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
