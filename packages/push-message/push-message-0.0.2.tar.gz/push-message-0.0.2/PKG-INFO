@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: push-message
+Version: 0.0.2
+Summary: Push messages via multiple ways
+Author-email: Ma Xiaowei <maxiaowei0216@gmail.com>
+Project-URL: Homepage, https://github.com/maxiaowei0216/push-message-pypi
+Project-URL: Bug Tracker, https://github.com/maxiaowei0216/push-message-pypi/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Push message
+
+This package can push messages to specified users through different servers.
+
+# Supported servers
+
+- [x] QYWX(企业微信)
+- [ ] webhook
+
+# Usage
+
+## QYWX
+
+使用企业微信推送消息，需要获取corpid和secret，获取方式请参考：[https://developer.work.weixin.qq.com/document/path/90665](https://developer.work.weixin.qq.com/document/path/90665)
+
