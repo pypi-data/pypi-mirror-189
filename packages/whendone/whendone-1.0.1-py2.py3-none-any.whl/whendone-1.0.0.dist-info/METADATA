@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: whendone
+Version: 1.0.0
+Summary: Python package to notify you when your function is done through Telegram and/or Slack.
+Home-page: https://github.com/sabribarac/whendone
+Author: Sabri Barac
+Author-email: sabribarac@gmail.com
+License: MIT license
+Keywords: whendone
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: slack-sdk
+
+========
+WhenDone
+========
+
+
+.. image:: https://img.shields.io/pypi/v/whendone.svg
+        :target: https://pypi.python.org/pypi/whendone
+
+.. image:: https://img.shields.io/travis/sabribarac/whendone.svg
+        :target: https://travis-ci.com/sabribarac/whendone
+
+.. image:: https://readthedocs.org/projects/whendone/badge/?version=latest
+        :target: https://whendone.readthedocs.io/en/latest/?version=latest
+        :alt: Documentation Status
+
+
+
+
+Python package to notify you when your function is done through Telegram and/or Slack.
+
+
+* Free software: MIT license
+* Documentation: https://whendone.readthedocs.io.
+
+
+=======
+History
+=======
+
+0.1.0 (2023-02-03)
+------------------
+
+* First release on PyPI.
+
+1.0.1 (2023-02-03)
+------------------
+
+* First release on PyPI.
+
