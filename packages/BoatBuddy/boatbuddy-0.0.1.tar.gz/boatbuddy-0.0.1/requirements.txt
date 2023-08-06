@@ -1,0 +1,6 @@
+geopy~=2.3.0
+gpxpy~=1.5.0
+latloncalc~=1.5.3
+openpyxl~=3.0.10
+pyModbusTCP~=0.2.0
+Events~=0.4
