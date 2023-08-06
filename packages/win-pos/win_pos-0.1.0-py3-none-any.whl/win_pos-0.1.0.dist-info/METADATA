@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: win-pos
+Version: 0.1.0
+Summary: Add utility methods that allow you to easily grab the position of a window
+Home-page: https://github.com/liam-edwards/python-window-positions
+Author: Liam Edwards
+Author-email: me@liamedwards.dev
+License: LICENSE.txt
+Project-URL: Documentation, https://github.com/liam-edwards/python-window-positions
+Project-URL: Source, https://github.com/liam-edwards/python-window-positions
+Project-URL: Tracker, https://github.com/liam-edwards/python-window-positions/issues
+Keywords: windows,window,position,helpers,human friendly,python
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Typing :: Typed
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pywin32
+
+A tiny Python utility library used to get the bounds of an application window.
+
+The `get_window_pos` function takes either a string, or a callable
+where the first argument is a string and that returns a boolean.
+
+As an example, we'll get the position of Discord. As Discord's window title
+can vary depending on what server and channel you're in, we'll take advantage
+of the expected callable and pass a lambda to see if the window ends with `'Discord'`.
+
+```python
+from WinPos import get_window_pos
+
+get_window_pos(lambda title: title.endswith('Discord'))
+# (619, 473, 1624, 716)
+```
+
+Not all windows are as complicated as Discord, fortunately. If the window you're
+trying to get the position of is static and never changes, you can simply pass
+a string through and get your value.
+
+```python
+from WinPos import get_window_pos
+
+get_window_pos('Task Manager')
+# (125, 117, 895, 726)
+```
+
+If for whatever reason you need to repeatedly get the position of the same window,
+you can import `get_window_hwnd` and `get_window_pos_from_hwnd` functions. This will
+save some time from not having to iterate over every application to check the title.
+
+```python
+from WinPos import get_window_hwnd, get_window_pos_from_hwnd
+
+hwnd = get_window_hwnd('Task Manager')
+get_window_pos_from_hwnd(hwnd)
+# (125, 117, 895, 726)
+```
