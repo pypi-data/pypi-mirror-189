@@ -1,0 +1,12 @@
+django-auditlog
+django-braces
+
+[dev]
+bandit~=1.7
+black~=22.3
+build~=0.8
+flake9
+mypy
+pylint~=2.14
+pytest-cov~=3.0
+pytest~=7.1

@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+.github/workflows/publish.yaml
+src/djangoaddicts.egg-info/PKG-INFO
+src/djangoaddicts.egg-info/SOURCES.txt
+src/djangoaddicts.egg-info/dependency_links.txt
+src/djangoaddicts.egg-info/requires.txt
+src/djangoaddicts.egg-info/top_level.txt
+src/djangoaddicts.egg-info/zip-safe

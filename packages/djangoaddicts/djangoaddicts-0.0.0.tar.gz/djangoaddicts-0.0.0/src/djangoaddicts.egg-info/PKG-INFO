@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: djangoaddicts
+Version: 0.0.0
+Summary: UNKNOWN
+Home-page: https://github.com/davidslusser/djangoaddicts
+Author: David Slusser
+Author-email: dbslusser@gmail.com
+License: GNU
+Platform: any
+Provides-Extra: dev
+License-File: LICENSE
+
+UNKNOWN
+
