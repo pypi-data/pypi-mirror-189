@@ -1,0 +1,5 @@
+setup.py
+homeassistant.core.egg-info/PKG-INFO
+homeassistant.core.egg-info/SOURCES.txt
+homeassistant.core.egg-info/dependency_links.txt
+homeassistant.core.egg-info/top_level.txt
