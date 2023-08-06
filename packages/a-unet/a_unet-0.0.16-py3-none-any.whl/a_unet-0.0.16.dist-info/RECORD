@@ -1,0 +1,8 @@
+a_unet/__init__.py,sha256=xncpH7huzAlIOlewNLGSSLjV8zbJxbpH2LkKA_sRkVY,30
+a_unet/apex.py,sha256=smbGe1or1n5bOR5V-KpiOpq4VQsJNJu4pmRUQqAVIcM,12491
+a_unet/blocks.py,sha256=iBBKQsfh-eCnrMo2AfpMpVC3qqgemNIpMD7U6JJH-GY,20378
+a_unet-0.0.16.dist-info/LICENSE,sha256=7JTNKIh3GWz7t4VR6FMVGqfFP55UvmWbOFqF3qOd-q0,1068
+a_unet-0.0.16.dist-info/METADATA,sha256=aHk--KyYwDTUfGiSN-EzYkQQX469OaIQsplGkxeSWWs,666
+a_unet-0.0.16.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+a_unet-0.0.16.dist-info/top_level.txt,sha256=9sDttjyK2PBO-traYqqUs2-8c7LNIJpF0uoL_fx8tDg,7
+a_unet-0.0.16.dist-info/RECORD,,
