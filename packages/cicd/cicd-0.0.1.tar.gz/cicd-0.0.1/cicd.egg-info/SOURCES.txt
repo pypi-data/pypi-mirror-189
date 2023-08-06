@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+cicd/__init__.py
+cicd.egg-info/PKG-INFO
+cicd.egg-info/SOURCES.txt
+cicd.egg-info/dependency_links.txt
+cicd.egg-info/requires.txt
+cicd.egg-info/top_level.txt
