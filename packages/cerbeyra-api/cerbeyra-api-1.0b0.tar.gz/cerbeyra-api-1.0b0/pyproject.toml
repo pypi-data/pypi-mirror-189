@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cerbeyra-api"
+version = "1.0b0"
+authors = [
+    { name = "Cerbeyra Dev Team", email = "supporto@cerbeyra.com" },
+]
+description = "The Ultimate Client for the Cerbeyra's API. Ubiqum's too."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://cerbeyra.com"
