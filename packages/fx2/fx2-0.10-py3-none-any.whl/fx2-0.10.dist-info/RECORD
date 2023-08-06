@@ -1,0 +1,9 @@
+fx2/__init__.py,sha256=fknnjGAfLuWF28uru85slP1nc0pgaA2VBZkPQ2OShOY,12313
+fx2/boot-cypress.ihex,sha256=Piv-TUD78CzWh8w2q3uP89ScY5IsR6SGCriv_WqwW5U,11586
+fx2/format.py,sha256=_E_O67-SMhZCPChO1Fa_FHHZWxCBQ8w64tKtvkore_Q,8195
+fx2/fx2tool.py,sha256=YDBglv_s9vqL317E6oU0iXoNe6jXhG2qrV2aIsxEhc0,22832
+fx2-0.10.dist-info/METADATA,sha256=vorGRQGfqpMy68GPUBKoibCmjEJPuWqwBrcF1xumAhU,952
+fx2-0.10.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+fx2-0.10.dist-info/entry_points.txt,sha256=ORO-vv1USsJznCaruiZJlbgCdCgGYCzu2bYUVuLFGMk,45
+fx2-0.10.dist-info/top_level.txt,sha256=5uSiHzvumEIKMCG531FZfpgD023kCL90a_BNSTK-qnU,4
+fx2-0.10.dist-info/RECORD,,
