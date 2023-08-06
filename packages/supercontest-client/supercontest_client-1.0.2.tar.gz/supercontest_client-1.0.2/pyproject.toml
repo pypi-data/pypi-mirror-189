@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "supercontest-client"
+version = "1.0.2"
+description = "Client for fetching supercontest data via graphql"
+authors = ["Brian Mahlstedt <brian.mahlstedt@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [{include = "supercontest-client"}]
+homepage = "https://southbaysupercontest.com/graphql"
+repository = "https://gitlab.com/brianmahlstedt/supercontest/tree/master/client"
+keywords = ["supercontest", "football", "nfl"]
+
+[tool.poetry.dependencies]
+python = "~3"
+requests = "~2"
+bs4 = "~0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
