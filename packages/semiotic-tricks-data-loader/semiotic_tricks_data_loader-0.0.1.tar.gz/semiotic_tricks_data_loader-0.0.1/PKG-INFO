@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: semiotic-tricks-data-loader
+Version: 0.0.1
+Summary: 
+Author: Denis Shchtskyi
+Author-email: denis.shchutskyi@branderstudio.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: click (>=8.1.2,<9.0.0)
+Description-Content-Type: text/markdown
+
+# semiotic_tricks_data_loader
