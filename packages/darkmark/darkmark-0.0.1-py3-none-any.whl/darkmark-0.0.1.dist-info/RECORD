@@ -1,0 +1,13 @@
+darkmark/__about__.py,sha256=ZE22V_GF0WXkmTV5ch9hAuHYe86au1S7aj2vLpIaQNI,155
+darkmark/__init__.py,sha256=W_DTctwUhpgwCl2go8mFYWrDc6fFAGtmAsRfRlyK3uw,115
+darkmark/__main__.py,sha256=PKQRB-kY1Vf0zxLduXc9-z9UtdPcyD7eq1dGIdSezv4,210
+darkmark/console.py,sha256=WIBO3XIir6nRR8YmdjYq5y5Z_Mr6gqQ8LodS4_-tNQU,75
+darkmark/darkmark.py,sha256=K_k7Xw3p3zNweVLHy-As4utW6xiMSdv84r8OOvF_5PI,3402
+darkmark/replacer.py,sha256=b29usxl9Y9jgiEIgqQGrZRzAWyRzXdrGDfsfv35n0WA,1774
+darkmark/cli/__init__.py,sha256=A6ctfr4WA5kVNlsC6gdoYiQevUpleTDSqElnaaxaEIQ,2040
+darkmark/cli/common.py,sha256=JnzuOd6Ha-zv9bUXLjOpjXlJXmtfGBl7VflaMrzFVaU,126
+darkmark-0.0.1.dist-info/METADATA,sha256=NtltvqB2dKstRf-5YJF-4ZBB44dnz5k8IapD7zgQE9E,1572
+darkmark-0.0.1.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+darkmark-0.0.1.dist-info/entry_points.txt,sha256=yQEFgL_On5p7d_ggz-zYFU4hUNRwMADfIyVCWHlsejA,46
+darkmark-0.0.1.dist-info/licenses/LICENSE.txt,sha256=g7deme9mAHEhHTbKy4eitlFHhvVxWDQXgus0dKFrYEA,1107
+darkmark-0.0.1.dist-info/RECORD,,
