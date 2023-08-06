@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: python-wheel
+Version: 0.0.2
+Summary: This is a sham PyPI package creation. In fact, it should be considered malicious. It was a naive
+Author-email: Kale Franz <eetygr@gmail.com>
+Project-URL: Homepage, https://github.com/kalefranz/python-wheel
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## Truly innocent little test
+
+This is a sham PyPI package creation. In fact, it should be considered malicious. It was a naive
+test that I thought would have never succeeded. Although, in fact, it did succeed.
+For PyPA members: Please take note of what I just out-of-curiosity did here and consider guarding 
+against like attacks. Also delete this package / dist-name.
