@@ -1,0 +1,12 @@
+docmodel/__init__.py,sha256=eiMf-q1wW7-OpfFUFc1t3sidbHV_iJJZ9fOhL271fso,130
+docmodel/docmodel.py,sha256=YP-COjn2y6O4c0yHbNj-L1qoQsGbXiPwBKMCNpEJW-k,3612
+docmodel/example.py,sha256=fwacUo5W56wXZJd8YiMzxn4_XUA8NyLidjzV8dJStrA,659
+docmodel/exceptions.py,sha256=2xKk8Plq-USG64-7JE0Tuqj6WSOGh5EVT4F8oNFG1rk,97
+docmodel/fields.py,sha256=6eWN50wIqMrN_Ll7LMyTvoxNVgi9SPvpJUMscDoD_DU,5453
+docmodel/texttools.py,sha256=H6-s9WmwYtDnNseZxMACYJxZnXa1Xh2mzTCgkP-BODE,1816
+docmodel/urls.py,sha256=dTtHkpEU6C-trksqya8Kt9Len3RIB3RevYcf4UeJSSs,2865
+docmodel/xpaths.py,sha256=EzzrVHZceeq5sAinwDewzZR1C7QS8XkOAxo2fnEEurQ,190
+docmodel-0.1.0.dist-info/METADATA,sha256=sL55EZdYYaxffiIhbDKDWP7-ZA-CANprRL__B6aZpek,584
+docmodel-0.1.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+docmodel-0.1.0.dist-info/LICENSE,sha256=54jAf5ae3RKtHUobUyo2m_FwH2TMjAObjikeDHRp-Ao,1069
+docmodel-0.1.0.dist-info/RECORD,,
