@@ -1,0 +1,56 @@
+name: github-actions
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python3.8
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+          cache: "pip"
+          cache-dependency-path: "pyproject.toml"
+
+      - name: Install library
+        run: |
+          pip install .[ci]
+
+      - name: Run flake8
+        run: |
+          python3 -m flake8
+
+      - name: Run isort
+        run: |
+          python3 -m isort . --check-only
+
+      - name: Run unit test
+        run: |
+          python3 -m unittest discover -v ./test/
+
+  test_with_qiskit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python3.8
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+          cache: "pip"
+          cache-dependency-path: "pyproject.toml"
+
+      - name: Install library
+        run: |
+          pip install .[qiskit]
+
+      - name: Run unit test
+        run: |
+          python3 -m unittest discover -v ./test/with_qiskit/
