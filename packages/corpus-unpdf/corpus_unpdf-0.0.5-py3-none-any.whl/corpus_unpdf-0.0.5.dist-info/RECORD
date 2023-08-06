@@ -1,0 +1,15 @@
+corpus_unpdf/__init__.py,sha256=2Mll-cxb0CjdH1VIfhmQFNCqeZugr0SxqQaP36ohDIY,96
+corpus_unpdf/decision.py,sha256=csXECQOhE1jhIsBam4fTr601DzPi3d1-eOGv3dlIsmw,8426
+corpus_unpdf/src/__init__.py,sha256=oS9t2sI2V7tOQ7ORwUZ9tTkB1WaV-zFaaENOQeyzWro,581
+corpus_unpdf/src/common/__init__.py,sha256=_OLq_oY-vrdk21DziJO9R2I8szN7yXI0E_7DPL-b8QM,267
+corpus_unpdf/src/common/extract.py,sha256=r81847oDYwngWQ5lg1gE0BVVoYJ4ihF4y3mnBYQb6CM,2495
+corpus_unpdf/src/common/fetch.py,sha256=Iv4AkBug4h5Nt16F9bTFUs64F78QDQ5W5d45BWjsuGM,3289
+corpus_unpdf/src/common/slice.py,sha256=zfEHXrmz5zg3k7M3d8hQEJzXH6bGb-5BvX13IiWrMj8,6893
+corpus_unpdf/src/content_ender.py,sha256=M82zzqmGNLFVfjUCrBMfVLF1Y3QcHe48Tf9mjVKNXiQ,2374
+corpus_unpdf/src/content_markers.py,sha256=v_Eec1PEAeamTZAiOIUc-noTvVP9-i9ZofUi84uRJ18,3119
+corpus_unpdf/src/content_starter.py,sha256=xUHeHrLGNRNXFayceKvydWV8n4hvQS-GKWpgwSViyUI,2348
+corpus_unpdf/src/page_footer.py,sha256=c5ylazHAw3HaLB84Qt4J9_Lw78iZvUXYIeuteBL3xCI,2641
+corpus_unpdf/src/page_header.py,sha256=3HkvG-RqvgHzMdSerCBENpTaWoRL-eyMnBSlJD-8Ogo,3913
+corpus_unpdf-0.0.5.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+corpus_unpdf-0.0.5.dist-info/METADATA,sha256=wdnecUaMmhAVngPZhNPiPuU3kEjOahousyJqzqZdrgY,1750
+corpus_unpdf-0.0.5.dist-info/RECORD,,
