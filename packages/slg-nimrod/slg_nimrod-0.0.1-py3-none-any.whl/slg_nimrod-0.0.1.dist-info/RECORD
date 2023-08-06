@@ -1,0 +1,15 @@
+nimrod/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+nimrod/_modidx.py,sha256=G7bZoA5Z7dW9cwvIHOoVW_MVZQwKz753h-ibey3LD9I,8985
+nimrod/core.py,sha256=q1xgFW7yRbdezJua85PSkFhe30Q3Rh18YMYn5rqIqtY,200
+nimrod/models.py,sha256=wuyfOsKmiSIypiTMaYV250_9_tOpUrJXhiSDEJJpu7c,2777
+nimrod/modules.py,sha256=HZFUlho6hR52szEb44NCKyKJ8MdLsreyPeuVZdAFx_o,637
+nimrod/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nimrod/data/datasets.py,sha256=2XlBS_tkQBv5OTQKcB7TdhQqQp0f1LzA1lvY_jqiJp4,2792
+nimrod/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nimrod/models/autoencoders.py,sha256=OdqQHELuTmrXr3B1iBPUoOxg2A7vYC6dg_GeUWawX64,2298
+slg_nimrod-0.0.1.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+slg_nimrod-0.0.1.dist-info/METADATA,sha256=IV6yo2qWc5DDaXPfUEQvNImeuxVoKEQKdTN67AQKjv0,2258
+slg_nimrod-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+slg_nimrod-0.0.1.dist-info/entry_points.txt,sha256=PkncRXWyZ4fsiOhvp6zrA5al33DLsWcEP4Q245UQN0c,34
+slg_nimrod-0.0.1.dist-info/top_level.txt,sha256=LJ30eBWsjzBfwXl5aIm_9St5xo4GAvQeEEJhp-k5y1s,7
+slg_nimrod-0.0.1.dist-info/RECORD,,
