@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: dockerode_api_proxy_client
+Version: 3.0.3
+Summary: Dockerode API proxy client enables communication with the side-car service Dockerode API proxy
+Author: Thim Lohse
+Author-email: thim.lohse@caesari.se
+License: MIT
+Platform: unix
+Platform: linux
+Platform: osx
+Platform: cygwin
+Platform: win32
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+Provides-Extra: testing
+License-File: LICENSE
+
+# Dockerode API proxy for python
