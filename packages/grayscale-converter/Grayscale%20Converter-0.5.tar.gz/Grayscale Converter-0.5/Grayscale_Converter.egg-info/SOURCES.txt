@@ -1,0 +1,9 @@
+README.md
+setup.py
+Grayscale_Converter.egg-info/PKG-INFO
+Grayscale_Converter.egg-info/SOURCES.txt
+Grayscale_Converter.egg-info/dependency_links.txt
+Grayscale_Converter.egg-info/entry_points.txt
+Grayscale_Converter.egg-info/requires.txt
+Grayscale_Converter.egg-info/top_level.txt
+greyscale_pack/greyscale.py
