@@ -1,0 +1,6 @@
+numpy
+camb
+glass>=2023.1
+
+[test]
+pytest
