@@ -1,0 +1,14 @@
+subgit/__init__.py,sha256=FGbHZkfy60q0Ul9R47LVA-xvo-qnFZC2vn_R4ECq3hc,1384
+subgit/cli.py,sha256=ElWMAXiALyme8AHqV7oZ3vBir0-rkbDET7ZwWX6T0ME,10255
+subgit/constants.py,sha256=CnQ72CGGGAHbxLLZLGlGgHwQ64aQveW5e-I8yb3RM2Q,136
+subgit/core.py,sha256=n9Rk0V4G2Zlh9FdLhZqN0cTiRemfCTAM6DfSVNYcbR8,36350
+subgit/enums.py,sha256=4ThB-0LgOPssur_jgDYql0uMXfnKDpdHJA_b7FNiY38,231
+subgit/exceptions.py,sha256=aVSkAE9sYr0PGLoNi_0O1XxyTPQUUeAnNM0FeiuDvVg,510
+subgit/importer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+subgit/importer/git_importer.py,sha256=iNgIgN5J5a7EzvpQyXZzplVIzKmnCuTlp-LvU8hwcP0,6199
+subgit-0.6.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+subgit-0.6.1.dist-info/METADATA,sha256=u6UoQ84CNAEPjaL4mIPTrrIS5Oe2v7hMaFiHMmfN5vo,16094
+subgit-0.6.1.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
+subgit-0.6.1.dist-info/entry_points.txt,sha256=0NAYFy5BYhAMy5RoCeSO8a-hMdOVbr8237Y56PgzNTk,122
+subgit-0.6.1.dist-info/top_level.txt,sha256=6nBQggnKEvP8HNFTxr-XlpFExji652CPa8rON7Q8j2w,7
+subgit-0.6.1.dist-info/RECORD,,
