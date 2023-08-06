@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: kaspian
+Version: 0.0.1
+Summary: Python SDK for Kaspian
+Project-URL: Homepage, https://github.com/Kaspian-Inc/kaspian
+Project-URL: Bug Tracker, https://github.com/Kaspian-Inc/kaspian/issues
+Author-email: Kaspian Team <dev@kaspian.io>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+# kaspian
