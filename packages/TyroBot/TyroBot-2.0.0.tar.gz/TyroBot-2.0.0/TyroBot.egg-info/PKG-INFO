@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: TyroBot
+Version: 2.0.0
+Summary: This is a powerful library for building self robots in Rubika
+Home-page: https://github.com/mrsalari/TyroBot
+Author: mohammad saeed salari
+Author-email: salari601601@gmail.com
+Keywords: rubika,rubino,tyrobot,pyrubika,rubika bot,rubika library,rubx,rubika-bot,rubika-lib,bot,self bot,rubika.ir,asyncio
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<h1>TyroBot 1.0.0</h1>
+
+        
+        TyroBot is a powerful library for building self robots in Rubika
+
+    python : 
+    from TyroBot import Bot
+    
+    bot = Bot('TOKEN')
+    bot.get_me()
+
+
+
+    Installing:
+        python -m pip install -U TyroBot
