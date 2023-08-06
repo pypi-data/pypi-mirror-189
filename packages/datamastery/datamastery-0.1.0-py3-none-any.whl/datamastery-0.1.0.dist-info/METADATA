@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: datamastery
+Version: 0.1.0
+Summary: Datamastery is a Python package for data preprocessing and visualisation.
+Author: Baran Kutluay
+Author-email: barankutluay19@gmail.com
+Classifier: Development Status :: 1 - Planning
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE
+Requires-Dist: setuptools (>=65.5.0)
+Requires-Dist: matplotlib (>=3.6.3)
+Requires-Dist: numpy (>=1.24.1)
+Requires-Dist: seaborn (>=0.12.2)
+Requires-Dist: pandas (>=1.5.3)
+
+Datamastery is a Python package for data preprocessing and visualisation. It provides a set of functions to make it easier to work with data.
