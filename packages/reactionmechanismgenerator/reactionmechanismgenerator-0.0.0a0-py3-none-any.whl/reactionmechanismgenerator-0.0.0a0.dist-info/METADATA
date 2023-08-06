@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: reactionmechanismgenerator
+Version: 0.0.0a0
+Summary: Reaction Mechanism Generator
+Home-page: http://reactionmechanismgenerator.github.io
+Author: William H. Green and the RMG Team
+Author-email: rmg_dev@mit.edu
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# ATTENTION:
+## This is an alpha release of ReactionMechanismGenerator and is NOT suitable for general use NOR development.
+To install RMG, follow the install instructions on [the Official RMG page](https://reactionmechanismgenerator.github.io/RMG-Py/users/rmg/installation/index.html).
