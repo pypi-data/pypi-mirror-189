@@ -1,0 +1,11 @@
+datasette_parquet/__init__.py,sha256=qjceN_PYQ5hlU3eK7npSuhNA4soT7_OC40ycQbu9kF4,607
+datasette_parquet/ddl.py,sha256=JV7auDPbO64HgS43EHvplW8lqsPwJrOiAHrwv1w86sk,1628
+datasette_parquet/ducky.py,sha256=971wmtDI9PIz0i8JfLgocpYu-ciRJ_zvpGI0mLBDFaU,4521
+datasette_parquet/patches.py,sha256=tAsc2VVvjKdg2mWyQ6s5NnQQD48vGxs1JPKYiWdrXNg,590
+datasette_parquet/rewrite.py,sha256=tz3z6lfpOO1ADcLrYzPXsNIbqwn-ZadmE40dboouUQc,2806
+datasette_parquet-0.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+datasette_parquet-0.2.dist-info/METADATA,sha256=VCA1hj9ox4FKXoolncbvZ5Ak3prwG-R7QdjP2NS_cnw,7443
+datasette_parquet-0.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+datasette_parquet-0.2.dist-info/entry_points.txt,sha256=kirQGSDx5w-hDfu5Dl9UDd7QlEhmZDaUIBdC1nKivps,40
+datasette_parquet-0.2.dist-info/top_level.txt,sha256=kQqbRYQ1aprLX3ynnGNZHvPAY4RN0DhAJ2It1vla8lk,18
+datasette_parquet-0.2.dist-info/RECORD,,
