@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: apiflows
+Version: 1.0.0
+Summary: A yaml data-drive HTTP API testing tools.
+Author-email: Allen <aiddroid@gmail.com>
+Project-URL: Homepage, https://github.com/aiddroid/apiflows
+Project-URL: Bug Tracker, https://github.com/aiddroid/apiflows
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+### apiflows testing
+- A yaml data-drive HTTP API testing tools.
+
+### usage
+```
+pip3 install apiflows
+python3 -m apiflows -c config.py  -t testcases/github.yaml
+```
+
+### testcase yaml example
+```
+---
+apicases:
+- name: 获取GitHub API列表(Get Github API list)
+  url: https://api.github.com
+  method: GET
+  headers:
+    x-token: 5678
+  data: '{"username":"apiflows"}'
+  extracts:
+    RATE_LIMIT_URL: $.rate_limit_url
+    PUBLIC_GISTS_URL: $.public_gists_url
+    ENCODING:
+      in: headers
+      exp: "$.Content-Encoding"
+  assertions:
+  - exp1: "$.hub_url"
+    comparator: neq
+    exp2: ""
+```
+
+### test result
+```
+0:testcases/github.yaml
+[获取GitHub API列表(Get Github API list)]: https://api.github.com/?username=allen
+	EXTRACTOR:
+		EXTRACT [RATE_LIMIT_URL]=https://api.github.com/rate_limit
+		EXTRACT [PUBLIC_GISTS_URL]=https://api.github.com/gists/public
+		EXTRACT [ENCODING]=gzip
+	ASSERTIONS:
+		$.hub_url = https://api.github.com/hub [neq]
+```
