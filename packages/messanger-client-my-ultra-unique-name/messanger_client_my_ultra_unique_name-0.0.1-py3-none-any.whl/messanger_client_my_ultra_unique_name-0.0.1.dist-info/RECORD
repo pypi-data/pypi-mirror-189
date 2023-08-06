@@ -1,0 +1,9 @@
+unit_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unit_tests/client.py,sha256=yNIhgx1h9AcYRYT_wBNiHjpXoqXLR3HMm6kfxXwHRI8,12367
+unit_tests/test_client.py,sha256=eWMtQlJUYqz3hfb1-8ouQOV82wrW-mwM5Z4foRzVRlA,808
+unit_tests/test_server.py,sha256=CvngT6MOvMN0PkMDdjDwjVfHqqmXAOGpmdawaRUJWwQ,1500
+unit_tests/test_utils.py,sha256=itRrWBwO3DdJ5wCmvk8iDzRZu0mBmjXCB4Apm-w8Q9U,1760
+messanger_client_my_ultra_unique_name-0.0.1.dist-info/METADATA,sha256=fob1jYz7kJoGACbSw2CbCSxw0FmQmqoid1QI9OdOZBw,297
+messanger_client_my_ultra_unique_name-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+messanger_client_my_ultra_unique_name-0.0.1.dist-info/top_level.txt,sha256=r7jWbApCM-SVgzRsCIlnKHcuIeDcwjfTIPTj92Lo4S8,11
+messanger_client_my_ultra_unique_name-0.0.1.dist-info/RECORD,,
