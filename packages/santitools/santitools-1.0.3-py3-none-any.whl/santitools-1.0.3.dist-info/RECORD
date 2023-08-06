@@ -1,0 +1,11 @@
+santitools/__deprecated__.py,sha256=y7bvMvODOlvx-UFXotL01lSYPeAy8N39N-bIad70FVY,5201
+santitools/__init__.py,sha256=SJJQxfXDJfd2KBVrjdMjWKh6e9FSmCYhRJUvZJcFp3o,452
+santitools/colors.py,sha256=EmqH7e-v7Gl0UZreSpwP8quppgPeT1jjgWtPAiM86JY,1970
+santitools/filesystem.py,sha256=1XH6cKlybKJTd9EtXD2rQFlZ9MvnGhH76RjX9skLKBs,3179
+santitools/iter.py,sha256=7J7h3urHE3VRnrd7jQm6RtQtOTBaB9UZx05Qy9HVIhY,604
+santitools/math.py,sha256=QEy9OwDsxlhM0Lq0isA_sLN5Ol_BmVcbZbdNniz1GkA,6228
+santitools/time.py,sha256=ZgCtWJGp58eJ9drTqM_jivGP-kHg0mG0msFh8E5Q9zQ,2092
+santitools-1.0.3.dist-info/METADATA,sha256=IHTTETMpvrYuQJhfNT87LaXXlEsSNceQJ-pTP8tZrGQ,1642
+santitools-1.0.3.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+santitools-1.0.3.dist-info/licenses/LICENSE,sha256=_Pg6X0hugucr6qDXt4vYlXeOl--i3whTP6ixoPOPAfM,1070
+santitools-1.0.3.dist-info/RECORD,,
