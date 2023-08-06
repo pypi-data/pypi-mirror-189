@@ -1,0 +1,11 @@
+LICENSE
+setup.py
+sphinx_plantuml.egg-info/PKG-INFO
+sphinx_plantuml.egg-info/SOURCES.txt
+sphinx_plantuml.egg-info/dependency_links.txt
+sphinx_plantuml.egg-info/namespace_packages.txt
+sphinx_plantuml.egg-info/requires.txt
+sphinx_plantuml.egg-info/top_level.txt
+sphinxcontrib/plantuml/__init__.py
+sphinxcontrib/plantuml/encode.py
+sphinxcontrib/plantuml/plantuml.py
