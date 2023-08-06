@@ -1,0 +1,3 @@
+[console_scripts]
+stot = stot.__main__:main
+
