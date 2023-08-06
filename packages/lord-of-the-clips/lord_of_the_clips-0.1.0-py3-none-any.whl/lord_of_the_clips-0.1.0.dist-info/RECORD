@@ -1,0 +1,10 @@
+commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+commands/download.py,sha256=hS8iV76P455g2p4UenD1gKaqMlVaLdOGNqBtzgyLHkM,3321
+commands/merge.py,sha256=FS3PLq-2UcUwNtKQH2ld2SH-eqm1qVWeT7kQJOFOiEk,1089
+commands/trim.py,sha256=2dY6P0nyOHCVSmlJEKttTn_a6UpITQ7GrzIPbKkBqV8,1641
+lord_of_the_clips-0.1.0.dist-info/LICENSE,sha256=XcYx0RjcIVCLc5xP4xlXBB-WqYs7CLcxC0FYtyfuXLg,1067
+lord_of_the_clips-0.1.0.dist-info/METADATA,sha256=p10SwGmbWL5fLLjeMhgym_fk-s8EoABVRt1h6KQi4sg,1624
+lord_of_the_clips-0.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+lord_of_the_clips-0.1.0.dist-info/entry_points.txt,sha256=oaq92Sl5G7LZ0vQzy7zWXpC3_bNrBmThF4KdsOE3Sbs,34
+lord_of_the_clips-0.1.0.dist-info/top_level.txt,sha256=6dNUbRvZAy7fLWNbD4YeUosLYwGk-SVew-Swd5CfFkg,9
+lord_of_the_clips-0.1.0.dist-info/RECORD,,
