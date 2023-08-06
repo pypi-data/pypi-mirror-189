@@ -1,0 +1,6 @@
+numpy
+scikit-image
+ffmpeg-python
+setuptools
+setuptools-scm
+black
