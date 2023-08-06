@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modules &mdash; Django Identity and Access Management  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contrib module" href="contrib/index.html" />
+    <link rel="prev" title="Advanced Setup" href="advanced_tutorial.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Django Identity and Access Management
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_tutorial.html">Advanced Setup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-iam.models">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#iam.models.UserProfileModel"><code class="docutils literal notranslate"><span class="pre">UserProfileModel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#iam.models.UserProfileModel.get_for_user"><code class="docutils literal notranslate"><span class="pre">UserProfileModel.get_for_user()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-iam.registry">Registry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#iam.registry.RolesRegistry"><code class="docutils literal notranslate"><span class="pre">RolesRegistry</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iam.registry.register_role"><code class="docutils literal notranslate"><span class="pre">register_role()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iam.registry.get_registered_roles"><code class="docutils literal notranslate"><span class="pre">get_registered_roles()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-iam.mixins">Mixins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#iam.mixins.RolePredicateMixin"><code class="docutils literal notranslate"><span class="pre">RolePredicateMixin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#iam.mixins.RolePredicateMixin.get_predicate"><code class="docutils literal notranslate"><span class="pre">RolePredicateMixin.get_predicate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#iam.mixins.IAMUserMixin"><code class="docutils literal notranslate"><span class="pre">IAMUserMixin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#iam.mixins.IAMUserMixin.get_or_set_role"><code class="docutils literal notranslate"><span class="pre">IAMUserMixin.get_or_set_role()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iam.mixins.IAMUserMixin.load_roles"><code class="docutils literal notranslate"><span class="pre">IAMUserMixin.load_roles()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-iam.predicates">Predicates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#iam.predicates.is_owner"><code class="docutils literal notranslate"><span class="pre">is_owner()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iam.predicates.is_user"><code class="docutils literal notranslate"><span class="pre">is_user()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-iam.utils">Utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#iam.utils.lazy_get_predicate"><code class="docutils literal notranslate"><span class="pre">lazy_get_predicate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iam.utils.override_perms"><code class="docutils literal notranslate"><span class="pre">override_perms()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contrib/index.html">Contrib module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Django Identity and Access Management</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Modules</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="modules">
+<h1>Modules<a class="headerlink" href="#modules" title="Permalink to this heading"></a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#module-iam.models" id="id1">Models</a></p></li>
+<li><p><a class="reference internal" href="#module-iam.registry" id="id2">Registry</a></p></li>
+<li><p><a class="reference internal" href="#module-iam.mixins" id="id3">Mixins</a></p></li>
+<li><p><a class="reference internal" href="#module-iam.predicates" id="id4">Predicates</a></p></li>
+<li><p><a class="reference internal" href="#module-iam.utils" id="id5">Utils</a></p></li>
+</ul>
+</div>
+<section id="module-iam.models">
+<span id="models"></span><h2><a class="toc-backref" href="#id1">Models</a><a class="headerlink" href="#module-iam.models" title="Permalink to this heading"></a></h2>
+<p>This module contains an abstract model <cite>UserProfileModel</cite> to be used as a mixin for any profile model class</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="iam.models.UserProfileModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iam.models.</span></span><span class="sig-name descname"><span class="pre">UserProfileModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iam.models.UserProfileModel" title="Permalink to this definition"></a></dt>
+<dd><p>Abstract model for profile models to inherit from. Provides a one-to-one user field that points to the owner of a
+profile.
+Override the user field, if you’d like to set its <cite>related_name</cite> or set it to optional (e.g. for bot profiles)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user</strong> – The user this profile belongs to</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="iam.models.UserProfileModel.get_for_user">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_for_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#iam.models.UserProfileModel" title="iam.models.UserProfileModel"><span class="pre">UserProfileModel</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#iam.models.UserProfileModel.get_for_user" title="Permalink to this definition"></a></dt>
+<dd><p>Check if a user has a profile denoted by this class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user</strong> – the user to check</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The profile instance belonging to the user or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-iam.registry">
+<span id="registry"></span><h2><a class="toc-backref" href="#id2">Registry</a><a class="headerlink" href="#module-iam.registry" title="Permalink to this heading"></a></h2>
+<p>Contains a class <cite>RolesRegistry</cite>, which serves as the central repository for all the roles in a particular app. This
+module also instantiates a registry, which is available through the variable <cite>registry</cite> (<cite>iam.registry.registry</cite>). Also
+exports functions <cite>register_role</cite> and <cite>get_registered_roles</cite>, which are the equivalent of <cite>registry.register()</cite> and
+<cite>registry.get_registered_roles()</cite></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="iam.registry.RolesRegistry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iam.registry.</span></span><span class="sig-name descname"><span class="pre">RolesRegistry</span></span><a class="headerlink" href="#iam.registry.RolesRegistry" title="Permalink to this definition"></a></dt>
+<dd><p>A central registry to keep track of all different roles in the application.
+Register your profile models with &#64;register decorator.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="iam.registry.register_role">
+<span class="sig-prename descclassname"><span class="pre">iam.registry.</span></span><span class="sig-name descname"><span class="pre">register_role</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iam.registry.register_role" title="Permalink to this definition"></a></dt>
+<dd><p>Decorator to register a profile model as a role in the application</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_cls</strong> – The profile model class. Passed through the decorator</p></li>
+<li><p><strong>conf</strong> – optional configuration, attributes and tags for the role to be registered.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>model_cls</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="iam.registry.get_registered_roles">
+<span class="sig-prename descclassname"><span class="pre">iam.registry.</span></span><span class="sig-name descname"><span class="pre">get_registered_roles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iam.registry.get_registered_roles" title="Permalink to this definition"></a></dt>
+<dd><p>Return a set off all registered profile model classes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filter_func</strong> – Optionally pass in a function that takes a profile class as an argument, and returns True
+or False depending on whether the class should be included in the return value or not.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Set off all registered profile model classes, optionally filtered by <cite>filter_func</cite> logic.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-iam.mixins">
+<span id="mixins"></span><h2><a class="toc-backref" href="#id3">Mixins</a><a class="headerlink" href="#module-iam.mixins" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="iam.mixins.RolePredicateMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iam.mixins.</span></span><span class="sig-name descname"><span class="pre">RolePredicateMixin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iam.mixins.RolePredicateMixin" title="Permalink to this definition"></a></dt>
+<dd><p>Mixin used on profile classes. Provides class method <cite>get_predicate</cite> to create rules predicates to check if a user
+has a profile or not.
+Provides <cite>parent</cite> attribute. If a role has a parent, and a user has the parent profile, the user will have all
+permissions associated with the child role too.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>parent</strong> – A role could be a specific subset of another parent role. Set parent to that. If a user has a role
+that is the child of another roles, they automatically get all the permissions for the parent role too.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="iam.mixins.RolePredicateMixin.get_predicate">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_predicate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extra_check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iam.mixins.RolePredicateMixin.get_predicate" title="Permalink to this definition"></a></dt>
+<dd><p>Return a rules predicate that checks if a user has a corresponding profile thus having that role.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>extra_check</strong> – Optionally check extra parameters on the user’s profile instance.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Predicate</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="iam.mixins.IAMUserMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iam.mixins.</span></span><span class="sig-name descname"><span class="pre">IAMUserMixin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iam.mixins.IAMUserMixin" title="Permalink to this definition"></a></dt>
+<dd><p>Mixin used on custom user models that use IAM for their permission management. Provides interfaces to the user model
+to interact with the IAM, and cache permissions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="iam.mixins.IAMUserMixin.get_or_set_role">
+<span class="sig-name descname"><span class="pre">get_or_set_role</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_cls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iam.mixins.IAMUserMixin.get_or_set_role" title="Permalink to this definition"></a></dt>
+<dd><p>Check if this user has a particular profile denoted by <cite>model_cls</cite>.</p>
+<p>First hit the cache. If there is no value
+in the cache, hit the database. If the user has the profile, cache the profile instance. If
+not, cache a False value, so we don’t need to hit the database again for this check.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model_cls</strong> – The model class of the profile to be checked.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The profile instance belonging to the user or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iam.mixins.IAMUserMixin.load_roles">
+<span class="sig-name descname"><span class="pre">load_roles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iam.mixins.IAMUserMixin.load_roles" title="Permalink to this definition"></a></dt>
+<dd><p>Load all the roles (and profiles) this user has in their cache.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-iam.predicates">
+<span id="predicates"></span><h2><a class="toc-backref" href="#id4">Predicates</a><a class="headerlink" href="#module-iam.predicates" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="iam.predicates.is_owner">
+<span class="sig-prename descclassname"><span class="pre">iam.predicates.</span></span><span class="sig-name descname"><span class="pre">is_owner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iam.predicates.is_owner" title="Permalink to this definition"></a></dt>
+<dd><p>Rules predicate to determine whether a user is the owner of an object or not.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="iam.predicates.is_user">
+<span class="sig-prename descclassname"><span class="pre">iam.predicates.</span></span><span class="sig-name descname"><span class="pre">is_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iam.predicates.is_user" title="Permalink to this definition"></a></dt>
+<dd><p>Rules predicate to determine whether a profile belongs to a user or not.</p>
+</dd></dl>
+
+</section>
+<section id="module-iam.utils">
+<span id="utils"></span><h2><a class="toc-backref" href="#id5">Utils</a><a class="headerlink" href="#module-iam.utils" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="iam.utils.lazy_get_predicate">
+<span class="sig-prename descclassname"><span class="pre">iam.utils.</span></span><span class="sig-name descname"><span class="pre">lazy_get_predicate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iam.utils.lazy_get_predicate" title="Permalink to this definition"></a></dt>
+<dd><p>Return a lazy predicate that checks whether a user has a profile or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_path</strong> – dot path to the model, used to lazily load the model, without referencing it directly.</p></li>
+<li><p><strong>extra_check</strong> – Extra check on the profile instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Predicate</p>
+</dd>
+</dl>
+<dl>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">is_author</span> <span class="o">=</span> <span class="n">lazy_get_predicate</span><span class="p">(</span><span class="s1">&#39;blog.AuthorProfile&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_super_author</span> <span class="o">=</span> <span class="n">lazy_get_predicate</span><span class="p">(</span><span class="s1">&#39;blog.AuthorProfile&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">p</span><span class="o">.</span><span class="n">is_super_author</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="iam.utils.override_perms">
+<span class="sig-prename descclassname"><span class="pre">iam.utils.</span></span><span class="sig-name descname"><span class="pre">override_perms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_rules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iam.utils.override_perms" title="Permalink to this definition"></a></dt>
+<dd><p>Override <cite>rules_permissions</cite> for the class with new rules.
+:param cls: The model class where we want to override permissions.
+:param new_rules: The new set of rules.</p>
+<dl>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">override_perms</span><span class="p">(</span><span class="n">SomeModel</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;add&#39;</span><span class="p">:</span> <span class="n">is_owner</span><span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="advanced_tutorial.html" class="btn btn-neutral float-left" title="Advanced Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="contrib/index.html" class="btn btn-neutral float-right" title="Contrib module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kaos Labs Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
