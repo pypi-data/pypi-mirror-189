@@ -1,0 +1,16 @@
+#!/Users/bobronium/dev/py/duper/.venv/bin/python
+from pygments.styles.monokai import MonokaiStyle
+from pygments import highlight
+from pygments.formatters import Terminal256Formatter
+from pygments.lexers import PythonLexer
+
+
+
+def colorize(*code, sep=""):
+    return highlight(
+        sep.join(code), PythonLexer(), Terminal256Formatter(style=MonokaiStyle)
+    ).removesuffix("\n")
+import sys
+
+from pathlib import Path
+print(colorize(Path(sys.argv[1]).read_text()))
