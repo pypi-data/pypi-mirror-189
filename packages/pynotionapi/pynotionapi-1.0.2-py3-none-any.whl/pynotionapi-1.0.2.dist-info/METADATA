@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pynotionapi
+Version: 1.0.2
+Summary: Notion API client for Python
+Home-page: https://github.com/andrewyazura/pynotion
+License: MIT
+Keywords: notion,api
+Author: Andrew Yatsura
+Author-email: andrewyazura203@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: marshmallow (>=3.19.0,<4.0.0)
+Requires-Dist: requests (>=2.28.2,<3.0.0)
+Project-URL: Repository, https://github.com/andrewyazura/pynotion
+Description-Content-Type: text/markdown
+
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
+
+# Python Notion API
+
+Notion API client in Python.
+
