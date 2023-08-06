@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pymaterial
+Version: 0.1.0
+Summary: pyMaterial, library for material and failure modeling.
+Author-Email: Willi Zschiebsch <willi.zschiebsch@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Requires-Dist: numpy>=1.24.1
+Requires-Dist: coverage>=7.1.0; extra == "test"
+Requires-Dist: pytest>=7.2.1; extra == "test"
+Requires-Dist: pytest-cov>=4.0.0; extra == "test"
+Requires-Dist: coverage>=7.1.0; extra == "pytest"
+Requires-Dist: coverage>=7.1.0; extra == "pytest-cov"
+Provides-Extra: test
+Provides-Extra: pytest
+Provides-Extra: pytest-cov
+Description-Content-Type: text/markdown
+
+# pyMaterial
+
+[![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![codecov](https://codecov.io/github/Modular-Design/pyMaterial/branch/master/graph/badge.svg?token=DMR46WJCVP)](https://codecov.io/github/Modular-Design/pyMaterial)
+
+---
+
+A Python library for material and failure modeling.
