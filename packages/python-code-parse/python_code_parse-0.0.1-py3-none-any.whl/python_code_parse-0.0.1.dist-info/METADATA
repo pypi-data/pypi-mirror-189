@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: python-code-parse
+Version: 0.0.1
+Summary: Parse code to get information about functions, etc.
+Author: Jake Cyr
+Author-email: cyrjake@gmail.com
+License: MIT
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+
+# Python Code Parser
+
+Parse Python code to extract information about functions, classes, methods, etc.
+
+## Upload to PyPi
+
+First you have to build the wheel file:
+
+```bash
+python setup.py bdist_wheel
+```
+
+Then the wheel file can be uploaded to PyPi with:
+
+```bash
+twine upload --skip-existing dist/*
+```
