@@ -1,0 +1,2 @@
+nonebot.adapters.onebot
+nonebot2
