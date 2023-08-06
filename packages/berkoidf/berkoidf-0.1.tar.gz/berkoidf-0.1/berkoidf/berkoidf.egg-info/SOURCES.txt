@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+berkoidf/berkoidf.egg-info/PKG-INFO
+berkoidf/berkoidf.egg-info/SOURCES.txt
+berkoidf/berkoidf.egg-info/dependency_links.txt
+berkoidf/berkoidf.egg-info/requires.txt
+berkoidf/berkoidf.egg-info/top_level.txt
+berkoidf/feature_extraction/__init__.py
+berkoidf/feature_extraction/vectorizer.py
+berkoidf/tests/__init__.py
+berkoidf/tests/vectorizer_test.py
