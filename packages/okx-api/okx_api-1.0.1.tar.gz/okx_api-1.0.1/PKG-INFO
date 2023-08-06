@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: okx_api
+Version: 1.0.1
+Summary: Python OKX API interface
+Home-page: https://github.com/pyted/okx_api
+Author: pyted
+Author-email: pyted@outlook.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+
+Python OKX API interface
