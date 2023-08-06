@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-xiuxian-GCDI
+Version: 1.0.0
+Summary: 修仙插件，QQ群与QQ频道均可使用，并且数据互通
+Home-page: https://github.com/QingMuCat/nonebot_plugin_xiuxian_GCDI
+Author: QingmuCat
+Author-email: 1242550160@qq.com
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
