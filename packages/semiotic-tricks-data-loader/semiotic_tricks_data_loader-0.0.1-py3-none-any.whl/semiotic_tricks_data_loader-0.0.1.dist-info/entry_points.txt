@@ -1,0 +1,3 @@
+[console_scripts]
+stdl=semiotic_tricks_data_loader.commands:entry_point
+
