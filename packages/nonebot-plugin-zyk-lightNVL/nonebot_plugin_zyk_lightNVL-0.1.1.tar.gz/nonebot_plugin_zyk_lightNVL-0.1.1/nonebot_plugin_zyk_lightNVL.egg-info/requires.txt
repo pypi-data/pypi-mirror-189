@@ -1,0 +1,7 @@
+httpx
+colorama
+lxml
+fake_useragent
+nonebot2
+nonebot_plugin_htmlrender
+nonebot_adapter_onebot
