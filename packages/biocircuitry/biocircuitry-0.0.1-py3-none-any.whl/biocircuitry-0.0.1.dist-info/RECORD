@@ -1,0 +1,15 @@
+biocircuitry/__init__.py,sha256=NYl9syCiR9nyBcmP5rLQX9CAvlrRparsZ1IVaChkzYk,159
+biocircuitry/abstractClasses.py,sha256=AJHk-0XpnzbUtRq2oa8zxGnTs9DjcYF00KdH1a2crfg,543
+biocircuitry/clustering.py,sha256=CkYKBTU-RWemC6wKQhGChvlrF3lDvlMkqlzm-J06GnY,1172
+biocircuitry/matrix.py,sha256=pO7fJ9m2wxTsec6Cq4vF72qGAHmHqqhkXNCFrmdylZU,3820
+biocircuitry/sgd.py,sha256=J3naL6LnJRoZvHClYlfCguSeAPyX0EtHKsPzRXZYwjI,1655
+biocircuitry/testClustering.py,sha256=XELQqhOHMdV-6wq7eWnfpiriTe7hkl0pgJU7iStftRw,1371
+biocircuitry/testMatrix.py,sha256=bPdxAhWhGHdmVu6ueu0PV_q71jTJlhHc994OAJnPxUE,949
+biocircuitry/testSGD.py,sha256=sGanSwpV-gE3aI-CkkI63RCJpn4PUUezHiDv-OjnoGw,538
+biocircuitry/testVector.py,sha256=mcMaBB6Ga4K5cwMwejdWECO60Sc7AY1SqrqdS-a79H0,4514
+biocircuitry/vector.py,sha256=OeFnQuXbYscwtNslVGV0lL5mvtrTfrmeYevfq1TnM3M,5303
+biocircuitry-0.0.1.dist-info/LICENSE,sha256=uBr-ac1MfmxnzaovoKntc1ElNSIBVYTy5ogR3PpKzT0,1070
+biocircuitry-0.0.1.dist-info/METADATA,sha256=_Pe7r7anHi-hLEbet7RL4yWate5is9pmyK90XBsZgHY,3689
+biocircuitry-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+biocircuitry-0.0.1.dist-info/top_level.txt,sha256=z59jHYXvMsPmAhqc8N3rNgDo7oPsHjeoEjDHAW6R4JY,13
+biocircuitry-0.0.1.dist-info/RECORD,,
