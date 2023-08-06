@@ -1,0 +1,8 @@
+biopython<=1.79
+gff2bed
+newick
+pandas
+pyfaidx
+scipy
+seaborn
+urllib3
