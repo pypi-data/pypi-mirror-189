@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "optipack"
+version = "0.0.5"
+description = "The optimal package for ML at OM"
+authors = ["indigoYoshimaru"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typer = "^0.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+optipack = "optipack.__main__:run"
+
