@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "hintedtext"
+version = "0.4.0"
+description = "Tkinter Text widget with an extra hint attribute."
+authors = ["Billy <billydevbusiness@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/billyeatcookies/hintedtext"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
