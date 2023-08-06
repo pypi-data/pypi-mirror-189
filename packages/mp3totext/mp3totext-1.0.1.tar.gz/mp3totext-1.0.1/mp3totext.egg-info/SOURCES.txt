@@ -1,0 +1,7 @@
+README.md
+setup.py
+mp3totext.egg-info/PKG-INFO
+mp3totext.egg-info/SOURCES.txt
+mp3totext.egg-info/dependency_links.txt
+mp3totext.egg-info/requires.txt
+mp3totext.egg-info/top_level.txt
