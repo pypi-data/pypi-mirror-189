@@ -1,0 +1,10 @@
+isONform-0.1.0.data/scripts/isONform_parallel.py,sha256=qey9Ch3l6ioY9KEVsf1sMiZnGW6ioS6Ojt2f9pN0bPM,18498
+modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+modules/correct_seqs.py,sha256=B2gnPuz1hoFleo2BK-xgHlWQRtvxQD9PSBji3zMgd7g,36327
+modules/create_augmented_reference.py,sha256=n9jA-8pGzt-6p7SGcuLl5BfUkbuEREhLHeOiZ-x_Jsw,11228
+modules/help_functions.py,sha256=c2DRHDLRgbTy_TVWZNcihPAJV2DcaKlLK1qgOtE3294,3380
+isONform-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+isONform-0.1.0.dist-info/METADATA,sha256=kJ7nLhLnnwsKoNEDIJWyaT6MWa4lgyQr2xVpyymhu7I,3920
+isONform-0.1.0.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+isONform-0.1.0.dist-info/top_level.txt,sha256=F7U4jdIxH3MVMmyX9rbajWuG0bj5tcZN4L1DZSxW72E,8
+isONform-0.1.0.dist-info/RECORD,,
