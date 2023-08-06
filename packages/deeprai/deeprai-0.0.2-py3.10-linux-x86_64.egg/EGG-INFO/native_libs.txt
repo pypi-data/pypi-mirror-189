@@ -1,0 +1,10 @@
+activation.cpython-310-x86_64-linux-gnu.so
+conv1d.cpython-310-x86_64-linux-gnu.so
+conv2d.cpython-310-x86_64-linux-gnu.so
+cython_optimizers.cpython-310-x86_64-linux-gnu.so
+dense_operations.cpython-310-x86_64-linux-gnu.so
+dense_train_loop.cpython-310-x86_64-linux-gnu.so
+loss.cpython-310-x86_64-linux-gnu.so
+optimizers.cpython-310-x86_64-linux-gnu.so
+pool1d.cpython-310-x86_64-linux-gnu.so
+pool2d.cpython-310-x86_64-linux-gnu.so
