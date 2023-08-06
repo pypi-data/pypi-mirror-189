@@ -1,0 +1,10 @@
+numpy
+typing_extensions
+sanic>=22.0.0
+msgpack
+spatialmath-python
+bdsim@ git+https://github.com/petercorke/bdsim@e9b5691c5f2c43ec0f7759268c9d00da4af8adfd#egg=bdsim
+flask
+
+[opencv]
+opencv-python>=2.0.0
