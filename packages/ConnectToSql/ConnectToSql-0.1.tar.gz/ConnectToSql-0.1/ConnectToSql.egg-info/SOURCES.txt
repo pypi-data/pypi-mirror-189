@@ -1,0 +1,6 @@
+setup.py
+ConnectToSql.egg-info/PKG-INFO
+ConnectToSql.egg-info/SOURCES.txt
+ConnectToSql.egg-info/dependency_links.txt
+ConnectToSql.egg-info/requires.txt
+ConnectToSql.egg-info/top_level.txt
