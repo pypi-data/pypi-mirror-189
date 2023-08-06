@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: mlsgraphcreator
+Version: 1.0.4
+Summary: graphCreator creates a graph from CSV file.
+Author-email: Chirag Modi <kolbenkraft.kk@gmail.com>
+Keywords: graph,creator
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: contourpy (==1.0.7)
+Requires-Dist: cycler (==0.11.0)
+Requires-Dist: fonttools (==4.38.0)
+Requires-Dist: kiwisolver (==1.4.4)
+Requires-Dist: matplotlib (==3.6.3)
+Requires-Dist: numpy (==1.24.1)
+Requires-Dist: packaging (==23.0)
+Requires-Dist: pandas (==1.5.3)
+Requires-Dist: Pillow (==9.4.0)
+Requires-Dist: pyparsing (==3.0.9)
+Requires-Dist: python-dateutil (==2.8.2)
+Requires-Dist: pytz (==2022.7.1)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: tomli ; python_version < "3.11"
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: bumpver ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+
+## Install the package
+```
+pip install mlsgraphcreator
+```
+Make sure that your file is in CSV format.
+
+## Usage xample
+``` python
+from mlsgraphcreator import graphcreator
+graphcreator.createGraph('path/to/csv/file')
+```
