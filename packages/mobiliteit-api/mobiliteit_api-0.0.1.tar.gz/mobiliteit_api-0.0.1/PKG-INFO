@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: mobiliteit_api
+Version: 0.0.1
+Summary: Allows making calls to the Mobiliteit.lu API from python.
+Author-email: Felix3qH4 <weiterleitung4@gmail.com>
+Project-URL: Homepage, http://github.com/Felix3qH4/Mobiliteit.lu-Python-API
+Project-URL: Bug Tracker, http://github.com/Felix3qH4/Mobiliteit.lu-Python-API/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Mobiliteit.lu API Package
+
+This is a very small package allowing you to access the HAFAS API endpoint to access the realtime data for all Luxembourgish busses, trains and trams which Mobiliteit.lu provides to the public. <br>
+All you need is an API key. <br>
+For more details about the API or on how to get a key, check out the API documentation on github: https://github.com/Felix3qH4/Mobiliteit.lu-API-documentation

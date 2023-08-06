@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mobiliteit_api"
+version = "0.0.1"
+authors = [
+  { name="Felix3qH4", email="weiterleitung4@gmail.com" },
+]
+description = "Allows making calls to the Mobiliteit.lu API from python."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "http://github.com/Felix3qH4/Mobiliteit.lu-Python-API"
+"Bug Tracker" = "http://github.com/Felix3qH4/Mobiliteit.lu-Python-API/issues"
