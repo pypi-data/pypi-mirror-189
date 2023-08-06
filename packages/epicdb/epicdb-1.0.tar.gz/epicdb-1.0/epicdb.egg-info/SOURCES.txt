@@ -1,0 +1,7 @@
+README.md
+setup.py
+epicdb.egg-info/PKG-INFO
+epicdb.egg-info/SOURCES.txt
+epicdb.egg-info/dependency_links.txt
+epicdb.egg-info/requires.txt
+epicdb.egg-info/top_level.txt
