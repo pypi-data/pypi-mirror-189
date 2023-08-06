@@ -1,0 +1,11 @@
+swaggergen_api/__init__.py,sha256=Wa3133GahrvGsAEKAjhns8zEDc2_k5YpiLT6P3-z_RM,197
+swaggergen_api/__main__.py,sha256=2CT73BtxoSTa5Pr0Kqet2NU39omDNBhD4y1a8vLt3sM,172
+swaggergen_api/_version.py,sha256=uln6q7tm0sASuwPTpTlTNIyxtLvYWS9XOPdR9_zkhXc,127
+swaggergen_api/loader_swagger.py,sha256=YiLqIokCEeh7t5aE-hcF4sGfdH3UhGLbOFXJSvIVgS0,2587
+swaggergen_api/swagger_generate.py,sha256=NKm3ElQvjKXaRQ6tSbBCQEQCrmMOgCIvW8hs5r7HjyU,4239
+swaggergen_api/templates/api.tpl,sha256=a4aQzoUDJhp002b48y-lD3yKlym7DZrDh9De9HVyBXA,1650
+swaggergen_api_object-1.0.0.dist-info/METADATA,sha256=64wjP75jK6Rjfj0hWLRgLXH9ZP2HTQKNNZOKT_Gmh_w,382
+swaggergen_api_object-1.0.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+swaggergen_api_object-1.0.0.dist-info/entry_points.txt,sha256=qpUhD7TKymm2mHdoFFHu0WoNtZQ6ZT8py4mfs_sKJZU,60
+swaggergen_api_object-1.0.0.dist-info/top_level.txt,sha256=qHKLT5wNJt5mxjntrg-IzUrRY9v3k7dk2WVgQo4nRg0,15
+swaggergen_api_object-1.0.0.dist-info/RECORD,,
