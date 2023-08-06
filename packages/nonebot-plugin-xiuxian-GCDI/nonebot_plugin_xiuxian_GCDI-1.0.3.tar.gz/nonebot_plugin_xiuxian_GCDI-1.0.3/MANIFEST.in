@@ -1,0 +1,2 @@
+recursive-include nonebot_plugin_xiuxian_GCDI/xiuxian_info/terture2d *.png
+recursive-include nonebot_plugin_xiuxian_GCDI/xiuxian_info *.ttf
