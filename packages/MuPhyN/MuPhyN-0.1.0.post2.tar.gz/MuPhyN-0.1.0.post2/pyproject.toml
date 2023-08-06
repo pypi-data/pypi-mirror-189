@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MuPhyN"
+version = "0.1.0-2"
+authors = [
+  { name="CeREF Technique", email="contact.tech@ceref.be" },
+  { name="Dylan Fievez", email="fievezd@ceref.be" },
+  { name="Francois Demoulin", email="francois.demoulin@outlook.be" },
+  { name="Thomas Herpoel", email="herpoelt@ceref.be"},  
+]
+description = "A graphical tool for modeling and simulating multi-physical systems."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "cycler==0.11.0",
+    "fonttools==4.33.3",
+    "lxml==4.9.1",
+    "matplotlib==3.5.2",
+    "numpy==1.23.0",
+    "OMPython==3.4.0",
+    "opcua==0.98.13",
+    "pandas==1.5.0",
+    "packaging==21.3",
+    "Pillow==9.1.1",
+    "pyparsing==3.0.9",
+    "PyQt5==5.15.7",
+    "PyQt5-Qt5==5.15.2",
+    "PyQt5-sip==12.11.0",
+    "python-dateutil==2.8.2",
+    "PyYAML==6.0",
+    "scipy==1.8.1",
+    "six==1.16.0",
+    "ipython>=7.31.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+    "muphyn*",
+]
+
+[project.urls]
+"Homepage" = "https://gitlab.com/CeREF/muphyn"
