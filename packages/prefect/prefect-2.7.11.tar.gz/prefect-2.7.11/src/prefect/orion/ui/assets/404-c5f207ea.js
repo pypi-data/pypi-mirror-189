@@ -1,0 +1,1 @@
+import{d as e,a,u as o,o as s,c0 as t}from"./index-7e95d846-e701538a.js";import{u as r}from"./usePageTitle-3d045253.js";const m=e({__name:"404",setup(n){return r("Page Not Found"),(c,u)=>(s(),a(o(t)))}});export{m as default};
