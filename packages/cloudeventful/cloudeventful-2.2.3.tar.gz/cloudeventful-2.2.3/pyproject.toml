@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "cloudeventful"
+version = "2.2.3"
+description = "Broker agnostic library to associate JSON Schemas to message broker topics."
+readme = "README.md"
+repository = "https://gitlab.com/mburkard/cloud-eventful"
+homepage = "https://gitlab.com/mburkard/cloud-eventful"
+license = "MIT"
+authors = ["Matthew Burkard <matthewjburkard@gmail.com>"]
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development",
+    "Typing :: Typed",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydantic = "^1.10.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.2.1"
+coverage = "^7.1.0"
+mypy = "^0.991"
+flake8 = "^6.0.0"
+black = "^23.1.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
