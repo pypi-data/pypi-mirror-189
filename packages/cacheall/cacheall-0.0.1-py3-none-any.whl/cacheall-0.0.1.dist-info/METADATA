@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: cacheall
+Version: 0.0.1
+Summary: Library that implements thread safe cache using python
+Author: Parth saini
+Author-email: parth08.saini@gmail.com
+Keywords: python,video,stream,video stream,camera stream,sockets
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: threading
+
+
+Package that implements thread safe cache in python
