@@ -1,0 +1,9 @@
+igl/__init__.py,sha256=LI3KBk-BGPmyguuzAaLRBgtCypprxBNuR55BS3-J--Y,107
+igl/_version.py,sha256=LgDSW5laOqA_7i2VW0cZ9QumZREigUxs3ZCBzJ1EG0o,22
+igl/helpers.py,sha256=z5pVFTx4kzfF_FrrgEeGHa2-jjGSR4RU62LmYAUwQX8,2026
+igl/pyigl.cpython-36m-darwin.so,sha256=3TamO2F-lNFszYodrTo8_ylfg-Fo9EB6CUPw02R8JGI,49045744
+igl/pyigl_classes.cpython-36m-darwin.so,sha256=tHpSPUc6T1niia4HIzo_on0gPZvY6WJaaDiIYqq7NQg,1150512
+libigl-2.4.1.dist-info/METADATA,sha256=1iZICeEyB4DELhqqb9UlhQNNb_gH3DgwRgc489-5zXc,2139
+libigl-2.4.1.dist-info/WHEEL,sha256=ye8A2lA8pjGNe7-ueOpggarJAhczq3EZGqnLZzzfQYQ,110
+libigl-2.4.1.dist-info/top_level.txt,sha256=TF1tYDKDOv891WW8VMKHYFbUMW0bi_1a2OKWpZzoVUQ,10
+libigl-2.4.1.dist-info/RECORD,,
