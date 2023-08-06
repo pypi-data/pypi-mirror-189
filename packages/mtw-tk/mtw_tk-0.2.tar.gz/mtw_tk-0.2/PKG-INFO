@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mtw_tk
+Version: 0.2
+Summary: A Tkinter module that allows text widgets to be moved
+Home-page: https://github.com/Imperial-py/mtw_tk
+Author: Imperial-py
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+License-File: LICENSE.txt
+
+UNKNOWN
+
