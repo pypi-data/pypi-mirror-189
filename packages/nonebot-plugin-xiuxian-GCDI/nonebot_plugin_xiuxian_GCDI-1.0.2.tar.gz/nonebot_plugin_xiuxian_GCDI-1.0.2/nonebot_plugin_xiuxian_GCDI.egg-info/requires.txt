@@ -1,0 +1,7 @@
+httpx
+wcwidth
+nonebot-adapter-onebot
+nonebot_plugin_apscheduler
+Pillow
+nonebot_plugin_guild_patch
+snoop
