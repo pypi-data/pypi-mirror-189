@@ -1,0 +1,11 @@
+geomagdata/__init__.py,sha256=CIWjarCROrjNeJlrvn6fSU1XEC5-F68Ug-ePGMXjcrg,120
+geomagdata/base.py,sha256=hkwl4ZuYw66FM_2wjH3hHQbxXrvVXFA55mIHGwdi1V4,3810
+geomagdata/io.py,sha256=P3ZoRYSft-1IXmTwAOBuOY6BROmzpQQFZOvzHURgIJs,6453
+geomagdata/utils.py,sha256=_Ywa1MNv6wECfzyVFe6Z4TtqL9dIQflkbPTll2Xh684,872
+geomagdata/web.py,sha256=2ex7hkcI14HpnMIiZXlqBITuTjNdh2vKUjyMqbAXUVo,4661
+geomagdata/data/May2016Rpt.txt,sha256=gEpatGRoDFrXW9UnYh_4cFrsy2kwtf2tA4S7ZlZUArc,15235
+geomagdata-1.6.1.dist-info/LICENSE.txt,sha256=ssQqImPL_jSR626FOoEhYkci81bzq4ky34d71qfxib4,1107
+geomagdata-1.6.1.dist-info/METADATA,sha256=xmFbGhi2eSMHzzho50xtHi6k51YPIwp2ooU3RzwGvTs,2468
+geomagdata-1.6.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+geomagdata-1.6.1.dist-info/top_level.txt,sha256=Vwh1gRb9tcP6oflYvLGP1FmflDHTFAZsVI-4H5iQKa8,11
+geomagdata-1.6.1.dist-info/RECORD,,

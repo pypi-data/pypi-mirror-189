@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: geomagdata
+Version: 1.6.1
+Summary: Download and parse geomagnetic indices
+Home-page: https://github.com/sunipkm/geomagdata
+Author: Sunip K. Mukherjee, Michael Hirsch, Ph.D.
+Author-email: sunipkmukherjee@gmail.com
+Keywords: aeronomy,aurora,ionosphere
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: python-dateutil
+Requires-Dist: requests
+Requires-Dist: numpy
+Requires-Dist: pandas (>=0.23.0)
+Provides-Extra: lint
+Requires-Dist: flake8 ; extra == 'lint'
+Requires-Dist: flake8-bugbear ; extra == 'lint'
+Requires-Dist: flake8-builtins ; extra == 'lint'
+Requires-Dist: flake8-blind-except ; extra == 'lint'
+Requires-Dist: mypy ; extra == 'lint'
+Provides-Extra: plot
+Requires-Dist: matplotlib ; extra == 'plot'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+
+# Geomagnetic Data Indices
+
+Geomagnetic indices downloader and parser, returns Ap, F10.7 (unsmoothed and smoothed) and Kp.
+
+This is derived from [geomagindices](https://pypi.org/project/geomagindices/), and has been modified to:
+
+- Support the new [post-SWPC data sources for all data dating back to 1932](ftp://ftp.gfz-potsdam.de/pub/home/obs/Kp_ap_Ap_SN_F107/).
+- Fix a bug where averaging would not cross year boundaries.
+
+It is a drop-in replacement for [geomagindices](https://pypi.org/project/geomagindices/).
+
+Output datatype is
+[pandas.DataFrame](http://pandas.pydata.org/pandas-docs/stable/reference/frame.html)
+(for multiple times)
+
+internally, uses
+[pandas.Index.get_loc](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Index.get_loc.html)
+to find nearest time to request.
+
+Missing data is returned as `NaN` (Not a Number floating point value).
+
+## Installation
+```sh
+$ git clone https://github.com/sunipkm/geomagdata
+$ cd geomagdata
+$ pip install .
+```
+
+## Examples
+
+use from other programs like
+
+```python
+import geomagdata as gi
+
+inds = gi.get_indices(date)
+```
+
+where date is Python
+[datetime.date, datetime.datetime](https://docs.python.org/3/library/datetime.html), etc.
+
+---
+
+```sh
+python Examples/PlotIndices.py 2015-01-01 2016-01-01
+```
+
+![2015 Ap F10.7](./tests/2015.png)
