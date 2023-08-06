@@ -1,0 +1,5 @@
+setup.py
+django.core.exceptions.egg-info/PKG-INFO
+django.core.exceptions.egg-info/SOURCES.txt
+django.core.exceptions.egg-info/dependency_links.txt
+django.core.exceptions.egg-info/top_level.txt
