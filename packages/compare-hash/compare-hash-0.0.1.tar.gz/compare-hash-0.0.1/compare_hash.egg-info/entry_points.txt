@@ -1,0 +1,2 @@
+[console_scripts]
+compare-hashes = compare_hashes.main:main
