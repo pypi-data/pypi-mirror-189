@@ -1,0 +1,10 @@
+LICENSE
+README
+setup.py
+cracker_say/__init__.py
+cracker_say/cracker_say.py
+hgftg.egg-info/PKG-INFO
+hgftg.egg-info/SOURCES.txt
+hgftg.egg-info/dependency_links.txt
+hgftg.egg-info/not-zip-safe
+hgftg.egg-info/top_level.txt
