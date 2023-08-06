@@ -1,0 +1,12 @@
+obs_picamera/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+obs_picamera/api.py,sha256=Bz6znhrz5w4nJ1eTW0TorA4RGUX60E4n2Imz5g7qEh8,2682
+obs_picamera/bluetooth.py,sha256=hCfBbYi7ZJAGJkolxsdYDNhjsbC-9b4wVHD00cJxM_o,6349
+obs_picamera/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+obs_picamera/recorder.py,sha256=JLzd7f1mxj-eBvl8YIbZDimk7yqL-XAK1CY9DUEBGwA,1567
+obs_picamera/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+obs_picamera/scripts/obs_picamera.py,sha256=QKrsCfhV7Y6O5efM-o78Lpz6Kz69UH9K0p4WGociBjU,121
+obs_picamera/scripts/ui.py,sha256=KqHMGF2yu8ex0hViqmxJW74NdFIVuL9k5_R66MEvSqE,17601
+obs_picamera-0.2.0.dist-info/METADATA,sha256=aPex5WKwGjImuHV6gx1FLTeiryAsk8tBeXIP6NHbRec,6331
+obs_picamera-0.2.0.dist-info/entry_points.txt,sha256=uXNstaOQLXz9PZao4OGgcz4Utj3uqvSvYLw2AigU37s,114
+obs_picamera-0.2.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+obs_picamera-0.2.0.dist-info/RECORD,,

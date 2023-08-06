@@ -1,0 +1,4 @@
+[console_scripts]
+obs_picamera=obs_picamera.scripts.obs_picamera:run
+obs_picamera_ui=obs_picamera.scripts.ui:run
+
