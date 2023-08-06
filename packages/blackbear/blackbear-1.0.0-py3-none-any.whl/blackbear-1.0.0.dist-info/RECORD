@@ -1,0 +1,10 @@
+blackbear/__init__.py,sha256=vK2BYBixzN_CFGdfpL69TK3LwE5Pv2g6dn8_U3jrycY,40
+blackbear/core.py,sha256=_UbXmwPn9RVVfaqG9WQOx3zirj29f6DmPp_aoZlAYDo,6175
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_methods.py,sha256=mjR29_6MT1RqqI_KEcBGCahIt2_yMN_v4L0IDeX2RKY,3824
+blackbear-1.0.0.dist-info/AUTHORS.rst,sha256=xdTeCkNkiVyiLoQd9szdYPoUqXdh4jApZ1vUV6rzhTM,167
+blackbear-1.0.0.dist-info/LICENSE,sha256=Ogi7ei4Qc3AskLyl9kSpSAHqFIZP8VkcS9qaLnKVcos,1070
+blackbear-1.0.0.dist-info/METADATA,sha256=XN9oFIMeyPOHszZA1gOYKA8IYYbMIY3CBYTBkjz27ic,4832
+blackbear-1.0.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+blackbear-1.0.0.dist-info/top_level.txt,sha256=q6ebhZlgQlxmHTeK7IW4kQZ2ZNFenJKdLN6pdhxQhqk,16
+blackbear-1.0.0.dist-info/RECORD,,
