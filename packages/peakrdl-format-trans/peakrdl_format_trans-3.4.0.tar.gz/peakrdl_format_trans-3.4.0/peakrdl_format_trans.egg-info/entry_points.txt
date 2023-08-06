@@ -1,0 +1,5 @@
+[peakrdl.exporters]
+formattrans = peakrdl_format_trans.__peakrdl__:MyExporterDescriptor
+
+[peakrdl.importers]
+formattrans = peakrdl_format_trans.__peakrdl__:MyImporterDescriptor
