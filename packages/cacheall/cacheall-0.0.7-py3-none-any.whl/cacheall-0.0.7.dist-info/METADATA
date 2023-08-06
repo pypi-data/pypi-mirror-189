@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: cacheall
+Version: 0.0.7
+Summary: Library that implements thread safe cache using python
+Author: Parth saini
+Author-email: parth08.saini@gmail.com
+Keywords: python,cache,thread-safe
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+
+Package that implements thread safe cache in python
