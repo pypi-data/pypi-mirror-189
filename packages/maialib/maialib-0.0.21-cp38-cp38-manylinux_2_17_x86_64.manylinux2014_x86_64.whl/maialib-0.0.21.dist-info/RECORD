@@ -1,0 +1,15 @@
+maialib/setup.py,sha256=krF5Ido8Aw-3HHTQqFMIA6fVIrJNC_AKNkU1P5f4Lko,1516
+maialib/__init__.py,sha256=ucTKs3hyzq3TO9I0tfxZwySBpK6GzQixkSl5qwVrIeo,46
+maialib/maiapy/plots.py,sha256=LBGCRYnJ7I-ncs0u9ggvzxhdl4Xjz9WT9jo2s5rbEOI,526
+maialib/maiapy/plotPartsActivity.py,sha256=Owfs0q9zZZXMS-eTPF6XfHAgsnNSeGdhQSUD6w_GJi0,7772
+maialib/maiapy/other.py,sha256=tMhEpMJcfpMP_mda9dhVK568_edG0WmqMUai7l9QXeQ,1203
+maialib/maiapy/__init__.py,sha256=JtI2tjylUyUk6m578uYxjkvyQQj7NTQVrWgnttVPV7A,91
+maialib/maiacore/__init__.py,sha256=IW7E0LuzAttsn0b37SEthCA0LKuzSgkepSpq8DWExYQ,77
+maialib/maiacore/maiacore.cpython-38-x86_64-linux-gnu.so,sha256=CQALNllmd53_ucK9HAnLimZtlRdGd6PA_ooEftmIv0I,3798824
+maialib/xml-scores-examples/Symphony_5th_1Mov.xml,sha256=h2m06x_dZ8rFZHklYKYOUWJn4Ip-0D8sXtSAROMJr8I,5769139
+maialib/xml-scores-examples/cello_suite_1_violin.xml,sha256=4RiWjP4ufkJmMhKIFRPGIy2i9ddjfOasD-v9p4TQk3E,243253
+maialib-0.0.21.dist-info/METADATA,sha256=Zwf-t0R3Cgy1H-ofXxif4JT7rpG7oG3baKmEmFvml9A,5287
+maialib-0.0.21.dist-info/WHEEL,sha256=82Wkr2Lag2dORBGM375Z9_JVKxb2Fhvp7wOacHsh7mU,148
+maialib-0.0.21.dist-info/RECORD,,
+maialib-0.0.21.dist-info/top_level.txt,sha256=sZWQaa-Up2ba00WpAxBhOLKM6qQYTpUKJMXgSE0Nc48,17
+maialib-0.0.21.dist-info/LICENSE.txt,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
