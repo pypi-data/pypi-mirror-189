@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+tinypy/__init__.py
+tinypy/main.py
+tinypy/t_csv.py
+tinypy/t_json.py
+tinypy/terminal.py
+tinypy.egg-info/PKG-INFO
+tinypy.egg-info/SOURCES.txt
+tinypy.egg-info/dependency_links.txt
+tinypy.egg-info/entry_points.txt
+tinypy.egg-info/top_level.txt
