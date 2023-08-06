@@ -1,0 +1,11 @@
+embestore/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+embestore/store/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+embestore/store/base.py,sha256=aygZ9Mq_DtCXO9gccyXFBv9lt9sskbdCVp1QYGO0D0M,6833
+embestore/store/jina.py,sha256=RW3ulONmSdOveJIDs196Zzam7wVv75lULwLFnaPHSVY,1421
+embestore/store/torch.py,sha256=JfXKgOu_JQPIwr34aCL1L7kNQ5OTKbnfCSKZP5ieV3E,420
+embestore/utils.py,sha256=H-iga0r4RJLaXQ0cMYKdN0vGWjU4ParzDdO1GnXxMQI,265
+embestore/version.py,sha256=ymVOMPrN2jYaTMvWC1h3Fv23ttzKY1cBmZNEbCU_Iv4,116
+embestore-0.2.0.dist-info/LICENSE,sha256=rrG39eIVpNeV7xqpT6-AFHNb3HwXEGvq4mjVcS8nko8,1069
+embestore-0.2.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+embestore-0.2.0.dist-info/METADATA,sha256=poJF8ZO6gXuTMuav-TE45SnrYCzkxftfAwoGfAc9Uy8,3764
+embestore-0.2.0.dist-info/RECORD,,
