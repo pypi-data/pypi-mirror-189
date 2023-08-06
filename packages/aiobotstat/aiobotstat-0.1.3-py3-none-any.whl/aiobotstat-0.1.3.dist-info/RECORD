@@ -1,0 +1,15 @@
+aiobotstat/__init__.py,sha256=xh5PABnGmTvMVh2TgG3B5o20TU15mZyRRkzYUjXheqo,49
+aiobotstat/api.py,sha256=wpua3EsU8S7XVxkj_QPXDTASvmAAqILm4OIhBM4bDyg,5054
+aiobotstat/base.py,sha256=7tPBIYVO1x9xTHmqcOlqDLKYdKeN0CmFQdZ-V2xumQo,3872
+aiobotstat/const.py,sha256=Phsy7svlI6bz1CEhJW--KHLxFk8ZIUc-EE6hw6cDNi0,174
+aiobotstat/exceptions.py,sha256=MDk1jmXxC7htypK1bemyrhruespKjYnuTaIps6svBYo,101
+aiobotstat/models/__init__.py,sha256=sUypXGkgmHDZbbjwMui00QHuObq2sLqki-pE0B2dQtI,117
+aiobotstat/models/base.py,sha256=uNtq7kCw94TNbmkGcFCA6_4C8gmRgUc83Lf4oRuYoe0,94
+aiobotstat/models/bot_info.py,sha256=rv1-QgsfRbKJpHQW2KkFQL0ZbEnIT7VWwjWHm5NIwH0,524
+aiobotstat/models/id.py,sha256=iQC9nBe8cWGKl9DLz5N1nXTrQrDNn0yugLpMMQRanEk,70
+aiobotstat/models/progress.py,sha256=oRGzMQ91PBULD5oBRdR4C_M0i4SUI3es4Lhp1UfiqZM,80
+aiobotstat-0.1.3.dist-info/LICENSE,sha256=gPGj36M2Mq08mBOz_2uNtCon2fclpIw9ciuX7J2IUls,1075
+aiobotstat-0.1.3.dist-info/METADATA,sha256=5EQN-Ni_NnXGInrff8zIBCcc-FlWA2ZH_59rSzvhNM8,1087
+aiobotstat-0.1.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+aiobotstat-0.1.3.dist-info/top_level.txt,sha256=83qiMgyYT59K27VRpx4nstfeduogCeEdlIfeS5lkpfc,11
+aiobotstat-0.1.3.dist-info/RECORD,,
