@@ -1,0 +1,4 @@
+typer
+pysnooper
+icecream
+q
