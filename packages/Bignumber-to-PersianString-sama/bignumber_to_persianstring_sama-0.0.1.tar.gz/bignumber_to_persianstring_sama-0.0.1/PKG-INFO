@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: Bignumber_to_PersianString_sama
+Version: 0.0.1
+Summary: A small package to cnvert big numbers to Persian
+Author-email: sama <samaj.aut@gmail.com>
+License-File: Licence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Big Number to Persian Package
+
+This is a simple example package to Convert Big numbers to Persian String.
