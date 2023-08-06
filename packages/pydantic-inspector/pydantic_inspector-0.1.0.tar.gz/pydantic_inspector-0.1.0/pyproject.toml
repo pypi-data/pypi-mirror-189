@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pydantic_inspector"
+version = "0.1.0"
+description = ""
+authors = ["Stanislav Zmiev <szmiev2000@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+pyupgrade = "*"
+black = "*"
+autoflake = "*"
+pytest = "*"
+pytest-cov = "*"
+isort = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
