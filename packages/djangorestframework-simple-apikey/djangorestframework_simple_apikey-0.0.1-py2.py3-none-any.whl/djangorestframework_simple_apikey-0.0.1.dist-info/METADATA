@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: djangorestframework-simple-apikey
+Version: 0.0.1
+Summary: API Key authentication and permissions for Django REST.
+Home-page: https://github.com/koladev32/djangorestframework-simple-apikey
+Author: Kolawole Mangabo
+Author-email: onaelmangabo@gmail.com
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django (>=4.1)
+Requires-Dist: djangorestframework (>=3.14.0)
+Requires-Dist: cryptography (>=38.0.4)
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: pytest-django ; extra == 'test'
+Provides-Extra: tooling
+Requires-Dist: black (==22.3.0) ; extra == 'tooling'
+Requires-Dist: pylint ; extra == 'tooling'
+
+# Simple API Key
+
+Simple API Key is an API Key authentication plugin for REST API built with [Django Rest Framework](https://www.django-rest-framework.org/). 
+
+For the full documentation, visit https://djangorestframework-simple-apikey.readthedocs.io/en/latest/.
