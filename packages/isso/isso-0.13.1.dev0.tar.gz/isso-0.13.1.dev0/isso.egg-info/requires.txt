@@ -1,0 +1,9 @@
+Jinja2
+bleach
+html5lib
+itsdangerous
+misaka<3.0,>=2.0
+werkzeug>=1.0
+
+[doc]
+Sphinx
