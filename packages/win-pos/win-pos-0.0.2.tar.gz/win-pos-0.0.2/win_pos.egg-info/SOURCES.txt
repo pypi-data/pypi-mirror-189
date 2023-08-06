@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+WinPos/__init__.py
+WinPos/win_pos.py
+win_pos.egg-info/PKG-INFO
+win_pos.egg-info/SOURCES.txt
+win_pos.egg-info/dependency_links.txt
+win_pos.egg-info/requires.txt
+win_pos.egg-info/top_level.txt
