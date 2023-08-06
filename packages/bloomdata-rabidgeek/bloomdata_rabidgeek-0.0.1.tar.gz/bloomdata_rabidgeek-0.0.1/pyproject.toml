@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bloomdata-rabidgeek"
+version = "0.0.1"
+authors = [
+  { name="RabidGeek", email="admin@jesseragsdale.com" },
+]
+description = "My First Package - BloomTech"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/rabidgeek/bloomdata-rabidgeek"
+"Bug Tracker" = "https://github.com/rabidgeek/bloomdata-rabidgeek/issues"
