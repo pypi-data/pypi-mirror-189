@@ -1,0 +1,6 @@
+pyproject.toml
+setup.cfg
+src/Fatalscraper.egg-info/PKG-INFO
+src/Fatalscraper.egg-info/SOURCES.txt
+src/Fatalscraper.egg-info/dependency_links.txt
+src/Fatalscraper.egg-info/top_level.txt
