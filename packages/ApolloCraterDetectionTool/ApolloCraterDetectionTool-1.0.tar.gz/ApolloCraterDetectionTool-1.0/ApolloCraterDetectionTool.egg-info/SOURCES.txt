@@ -1,0 +1,15 @@
+AUTHORS.txt
+LICENSE.txt
+README.md
+setup.py
+ApolloCraterDetectionTool.egg-info/PKG-INFO
+ApolloCraterDetectionTool.egg-info/SOURCES.txt
+ApolloCraterDetectionTool.egg-info/dependency_links.txt
+ApolloCraterDetectionTool.egg-info/top_level.txt
+apollo/UI.py
+apollo/__init__.py
+apollo/analysis.py
+apollo/config.py
+apollo/crater_predictor.py
+apollo/data_processor.py
+apollo/download_models.py
