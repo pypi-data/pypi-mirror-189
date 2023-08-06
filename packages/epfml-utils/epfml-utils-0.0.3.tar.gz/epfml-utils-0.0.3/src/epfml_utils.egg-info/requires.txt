@@ -1,0 +1,6 @@
+typing_extensions>4
+toml
+pathspec
+
+[test]
+pytest
