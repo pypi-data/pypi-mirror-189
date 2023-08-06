@@ -1,0 +1,13 @@
+RobotRaconteur/Client.py,sha256=5Kpbnj0GkCCBLTU8TGIoDDEG7GGdproCHM5AuJm-bkg,918
+RobotRaconteur/NamedClient.py,sha256=6zitWztq-NWvTXAPpJkYVNE5RAS30dDxP3YTqIZRtkU,1039
+RobotRaconteur/RobotRaconteurPython.py,sha256=ZJ2Vy7hopr-fDNcSA1Sz_tAhMQf-K4-McxovH_mTY00,464640
+RobotRaconteur/RobotRaconteurPythonDataTypes.py,sha256=wa73RfYA_AET4pbG2dQSY7YQCZWRuQn2KjuSlPDd-BY,7510
+RobotRaconteur/RobotRaconteurPythonError.py,sha256=et_wEta8cfIQaF51vF2e1DlISaHAPJwffgxuMB5OpV4,24108
+RobotRaconteur/RobotRaconteurPythonUtil.py,sha256=SjB3BvcUFSFDPyBANczzaF91dE8LmVDFfHPlnQnjKYg,211331
+RobotRaconteur/_RobotRaconteurPython.so,sha256=fGzNvxOUMEoYtQoKgiHpjLrY7kZydRnopkeprqagTkI,19676000
+RobotRaconteur/__init__.py,sha256=wmFt0ZAsV8DPyddE0dJLxLNp8Qa4Pt22CfOhooAnYF0,666
+RobotRaconteur/classproperty.py,sha256=8wvWMSEXfvGe3zmE5EGeInsAE69Ul0QAkG8icFntKxw,783
+RobotRaconteur-0.16.0.dist-info/METADATA,sha256=9mLeLpZl2ApMPZyT2aUJdhC4odwyNBsuAmYWBETLyTI,404
+RobotRaconteur-0.16.0.dist-info/WHEEL,sha256=Tb_t7JGjS9UNO7L5mRtd9E9oLUA9YQccQulkdRossZI,109
+RobotRaconteur-0.16.0.dist-info/top_level.txt,sha256=yM8iiWGm2vRxDNYmyfdWTPVGIegIkrqXKkc-XzppezA,15
+RobotRaconteur-0.16.0.dist-info/RECORD,,
