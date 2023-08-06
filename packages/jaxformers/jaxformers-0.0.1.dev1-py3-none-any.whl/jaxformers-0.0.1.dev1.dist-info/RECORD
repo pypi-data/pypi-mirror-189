@@ -1,0 +1,14 @@
+jaxformers/__init__.py,sha256=E3vSDG2vzhz7TwQ2Ev0HmrRHtlobDAiv4Z_VCahj5FM,147
+jaxformers/attention.py,sha256=5YUEMGfUNXPoB0lg4aj9GAzM1h69t45XdEL_55rCQEI,4397
+jaxformers/blocks.py,sha256=O0OMQkrULqdYhmznZu8FCN-YWU6zP_uyNVvaODS0wxQ,3997
+jaxformers/decoder.py,sha256=Kdx6BlWei6iNYi0UnIP360nuIeHRHcvdZMfvbpxwFvg,1741
+jaxformers/encoder.py,sha256=diKj4G6SMpBfmi8Nbnk76shloV2qX_Ev6WpcsYnBo0U,926
+jaxformers/encoding.py,sha256=o9hN6AQEZ4E63cUSVKR5Y6tmhP6q5UG9u1CkhJCqDu4,1357
+jaxformers/normalization.py,sha256=a76l_dG5jHnWjXXjFuqZLU4noAfkBX3Ux5SI6-9h5C8,601
+jaxformers/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jaxformers/transformer.py,sha256=2ztLw6_U23htftdSU71CZgxZTSdp6T0xs-aSx3nRc7Q,2673
+jaxformers/utils.py,sha256=7drTqwCx3ATQX-2Tb3TxKN5FancqVYfFPQwgbGsM3QA,169
+jaxformers-0.0.1.dev1.dist-info/METADATA,sha256=XZBAwpwEVSfLdk9ObWB4ij9JaONAqUdGTCbmKhbJqcQ,1611
+jaxformers-0.0.1.dev1.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+jaxformers-0.0.1.dev1.dist-info/licenses/LICENSE,sha256=pHCbcfMj4Zai8CwBPbjpRztb93igu9pZdCj_CdYYGr8,1104
+jaxformers-0.0.1.dev1.dist-info/RECORD,,
