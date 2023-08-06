@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: psychopy-crs
+Version: 0.0.2
+Summary: Extension package for PsychoPy which adds support for various hardware devices by Cambridge Research Systems.
+Author-email: Jon Peirce <jon@opensceincetools.org>, Matthew Cutone <mcutone@opensceincetools.org>
+License: GNU General Public License v3 (GPLv3)
+Project-URL: homepage, https://github.com/psychopy/psychopy-crs
+Project-URL: changelog, https://github.com/psychopy/psychopy-crs/blob/main/CHANGELOG.txt
+Project-URL: documentation, https://pages.github.com/psychopy/psychopy-crs
+Project-URL: repository, https://github.com/psychopy/psychopy-crs
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyserial
+Requires-Dist: numpy
+
+# psychopy-crs
+
+Extension package for PsychoPy which adds support for various hardware devices by 
+[Cambridge Research Systems Ltd.](https://www.crsltd.com/). 
+
+## Supported Devices
+
+Installing this package alongside PsychoPy will enable support for the following devices:
+
+* Bits# and Bits++ Stimulus Processors
+* Display++ and Display++ Touch LCD Monitors
+* ColorCAL Colorimeters
+    
+## Installing
+
+Install this package with the following shell command:: 
+
+    pip install psychopy-crs
+
+You may also use PsychoPy's builtin package manager to install this package.
+
+## Usage
+
+Once the package is installed, PsychoPy will automatically load it when started and make objects available within the
+`psychopy.hardware.crs` namespace.
