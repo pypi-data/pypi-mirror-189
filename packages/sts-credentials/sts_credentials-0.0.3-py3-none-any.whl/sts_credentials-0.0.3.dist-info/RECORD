@@ -1,0 +1,10 @@
+sts_credentials/__init__.py,sha256=PUVIOBwzS2Z9-56GC6AiCY5Q0iz12Q11JK6Na5a4i74,305
+sts_credentials/credentials/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sts_credentials/credentials/cos.py,sha256=NXAuPmZpyq6ZwInbLXpVeMnM-dvNg9RhNTshZrhkHwE,2344
+sts_credentials/credentials/oss.py,sha256=Pqv3bA5JEXGBMkTaFJn1XtNqsUm_0E7FuuoIx2qBeYI,1989
+sts_credentials/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sts_credentials/utils/decorators.py,sha256=6xwmUwCxx9A8aT0pE-Zujgl1Y7nZb-wLsNgbAlSN1WU,651
+sts_credentials-0.0.3.dist-info/METADATA,sha256=OpD4_p_n3a_K5lXlihSWVqZwTVQ6BwI_DKqK4ZzDwKs,2754
+sts_credentials-0.0.3.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+sts_credentials-0.0.3.dist-info/licenses/LICENSE,sha256=w61tDw3L767Wrzdjsw4M-Jcgn8tjjDBoU24fjbuMfCM,1085
+sts_credentials-0.0.3.dist-info/RECORD,,
