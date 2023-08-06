@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: messanger-server-my-ultra-unique-name
+Version: 0.0.1
+Summary: server_side_of_messanger
+Author: Maxim
+Author-email: 
+Requires-Dist: PyQt5
+Requires-Dist: tabulate
+Requires-Dist: sqlalchemy
+Requires-Dist: sphinx
+Requires-Dist: wheel
+Requires-Dist: cx-Freeze
+
