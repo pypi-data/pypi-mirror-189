@@ -1,0 +1,2 @@
+[console_scripts]
+wes = wes:main
