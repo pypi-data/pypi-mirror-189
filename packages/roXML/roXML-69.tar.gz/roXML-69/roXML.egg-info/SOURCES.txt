@@ -1,0 +1,6 @@
+setup.py
+roXML.egg-info/PKG-INFO
+roXML.egg-info/SOURCES.txt
+roXML.egg-info/dependency_links.txt
+roXML.egg-info/requires.txt
+roXML.egg-info/top_level.txt
