@@ -1,0 +1,9 @@
+cdk_cloudformation_snowflake_role_grant/__init__.py,sha256=EvC-6KZEWn8LIXBCq0nBbIyCTz3qvLSre91qb6maTa4,6651
+cdk_cloudformation_snowflake_role_grant/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cdk_cloudformation_snowflake_role_grant/_jsii/__init__.py,sha256=b-5AqFW9FBKucNKvqML94sZsjF8JSFMMOTb8n2VNjtw,456
+cdk_cloudformation_snowflake_role_grant/_jsii/snowflake-role-grant@1.0.0-alpha.5.jsii.tgz,sha256=mDodbGgY3WNnlhmPS0PEQLOZPjsQtPqY-MC4RFmT-3E,114023
+cdk_cloudformation_snowflake_role_grant-1.0.0a5.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+cdk_cloudformation_snowflake_role_grant-1.0.0a5.dist-info/METADATA,sha256=UYTYCUHYulXeGsSjXcUz7F8Pb0wWrAHLcIDFZlaXYFY,3319
+cdk_cloudformation_snowflake_role_grant-1.0.0a5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+cdk_cloudformation_snowflake_role_grant-1.0.0a5.dist-info/top_level.txt,sha256=ZsYiF65yOUm7TVeKGpfr8ludQplMP0d0iZtICHukQ3o,40
+cdk_cloudformation_snowflake_role_grant-1.0.0a5.dist-info/RECORD,,
