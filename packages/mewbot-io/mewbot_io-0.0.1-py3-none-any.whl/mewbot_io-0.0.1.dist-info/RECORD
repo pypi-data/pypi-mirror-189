@@ -1,0 +1,12 @@
+mewbot/io/__init__.py,sha256=30SkM7UYY5zaRx-Dh1HiSwNjnOWKKLg8AnfM7N9KXBU,132
+mewbot/io/desktop_notification.py,sha256=_lL7YWPDgN7Bguqmaa--yoMfnx8my2OgQ3ObRQkCgsI,8897
+mewbot/io/discord.py,sha256=lMQ1SPfeZElFc8LL_sHKZirC5Rg-gNibn50ir6ir2V4,9806
+mewbot/io/http.py,sha256=yxPbwaH93mdGuNO0r69OlNK1SEkNTFk80r0ORXEV0xk,2636
+mewbot/io/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mewbot/io/rss.py,sha256=rXSM9EvrR8RNj4jcRGCfQ9g-RGC1vsR9eZgENdbLtL0,21196
+mewbot/io/socket.py,sha256=q2sq-ulW_5_MPAFu9N7wtPdbgzU2D2rZSlqOipLQycc,3333
+mewbot_io-0.0.1.dist-info/LICENSE.md,sha256=5ahkWtlKqyTjEt0Ma-KqVCNuuTdEgLGxTqXGFZiHT9U,1287
+mewbot_io-0.0.1.dist-info/METADATA,sha256=LYTJep1sGJBR6ct_UDhvblxT0UDdybYXw8leXA_GOEQ,4987
+mewbot_io-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+mewbot_io-0.0.1.dist-info/top_level.txt,sha256=PevFtRfqeuN7_I12tyEOvXXFa571U4EpZnVD2zZPWjA,7
+mewbot_io-0.0.1.dist-info/RECORD,,
