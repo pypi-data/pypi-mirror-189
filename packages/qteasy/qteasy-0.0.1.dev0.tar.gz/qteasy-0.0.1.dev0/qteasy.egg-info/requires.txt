@@ -1,0 +1,16 @@
+pandas>=0.25
+numpy>=1.18
+numba>=0.47
+ta-lib==0.4.18
+tushare>=1.2.89
+mplfinance>=0.11
+
+[database]
+pymysql>=1.0.0
+sqlalchemy>=1.4.18
+
+[feather]
+pyarrow>=3
+
+[hdf]
+pytables>=3.6.1
