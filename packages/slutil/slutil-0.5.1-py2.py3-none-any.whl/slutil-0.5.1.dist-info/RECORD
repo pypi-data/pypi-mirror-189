@@ -1,0 +1,15 @@
+slutil/CsvRepository.py,sha256=WiMELBibZA4FP3BjCLkr2hMnPZTqgY4O6-NNhcqHwS8,1319
+slutil/CsvUow.py,sha256=B4YPICVGAEl2tZ3JigENBYt_HR74cOVVMTuGc6T_Wjs,897
+slutil/Record.py,sha256=P_ODvcFIryNtWc__xHaSFnwdRLs9KIfaCjXd2A_57IU,446
+slutil/__init__.py,sha256=ot38MXI2Gybe8uk3SHIeU9fHN_Tj1M_NBr9vSEDzz0o,21
+slutil/abstract_repository.py,sha256=BOKkE6ZuvhKRvA-HYssBxuBVoe3zbpJclHUiqiVCSu0,374
+slutil/abstract_slurm_service.py,sha256=nZIhm2DdzCbugzPTCz7nANxnz0LAyy0XcgVLAplf1vE,412
+slutil/abstract_uow.py,sha256=n1TIBDuMI47Mv8sWI4Zbuao4JAXQ7NEL0H8LLfNMNws,460
+slutil/fake_slurm.py,sha256=nWHZRZqEbDRslYZus3HxhqRezUjc_X-a2IiYr9omFKA,511
+slutil/main.py,sha256=pwhFM1EvSqrP2RCKWOCmLJ54hKnSvy7_6cSuzd5nJzU,5278
+slutil/services.py,sha256=hl1T2kdvl4kTnJsr2-cMMLe4IRnLdaKSWx1nn1dOq5A,2079
+slutil/slurm.py,sha256=Rop9MJZKf5xwuWROSberJDYPzpnYqSXOYiZa3XeAhYs,1562
+slutil-0.5.1.dist-info/METADATA,sha256=IMpi5hhxZUy9kFZLAzOQhWhWHTcb-vHsfqJaYPXFGCw,1906
+slutil-0.5.1.dist-info/entry_points.txt,sha256=RDyKcEosPc7RVS0rsxFPTEelzcGJJJsNxO1utxKDBfg,48
+slutil-0.5.1.dist-info/WHEEL,sha256=SlW3K6T2LNPbN9-QzFT1pS72PIuYOJEoe_9_lIJkxrk,92
+slutil-0.5.1.dist-info/RECORD,,
