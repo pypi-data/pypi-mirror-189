@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: gmi-utils
+Version: 0.1.5
+Summary: Utils used by GetMoney Inc.
+Home-page: https://github.com/get-money-inc/utils-py
+Author: GetMoney Inc.
+Author-email: get.money.inc.official@gmail.com
+License: UNKNOWN
+Description: # GetMoney Inc. Utils
+        
+        ## gmi_exception
+        Exceptions caused by GMI must be instances of `GmiException`:
+        ```python
+        # using plain GmiException
+        if is_something_bad_happened:
+            raise GmiException('something bad happened!')
+        
+        # using child of GmiException
+        class MyGmiException(GmiException):
+            # your code...
+            pass
+        
+        if is_something_bad_happened_inside_lib:
+            raise MyGmiException('something bad happened inside my lib!')
+        
+        ```
+        
+        ## interval
+        
+        ### call_repeatedly
+        `stop_func = call_repeatedly(timeout, func, *args)` starts calling
+        `func(*args)` every `timeout` seconds in different thread. It also
+        returns func that will stop this behaviour.
+        ```python
+        def bla_bla(last_bla: str):
+            print(f"bla bla {last_bla}")
+        
+        stop_func = call_repeatedly(1., bla_bla, "BLA!")
+        time.sleep(2.5)
+        stop_func()
+        
+        # will print:
+        # bla bla BLA!
+        # bla bla BLA!
+        ```
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
