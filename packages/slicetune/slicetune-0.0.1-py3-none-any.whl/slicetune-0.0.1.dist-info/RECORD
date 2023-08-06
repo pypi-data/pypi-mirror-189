@@ -1,0 +1,7 @@
+slicetune/__init__.py,sha256=gMX-j2HVUAEvVoiUPmoV_OD1WkL6f-YwY0d13AuTT_U,384
+slicetune/model.py,sha256=w8LtPKZcxs57_RkKr5HZsY2-PF6EJ742KoCRtEWX-Qc,8884
+slicetune/nn.py,sha256=6fdYwJlpPGcRvRE4ZsBejxFUpIvPJAy09Z4TdIqrXwI,11315
+slicetune/utils.py,sha256=HImHi2rrmymD-jwVnxUZzsCQOGXbG6ttwlN2NelxCh0,875
+slicetune-0.0.1.dist-info/METADATA,sha256=4MkxeG_T2GVWF9890J7hySl8B2eCDfrgCSUEX5Egyu8,10210
+slicetune-0.0.1.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+slicetune-0.0.1.dist-info/RECORD,,
