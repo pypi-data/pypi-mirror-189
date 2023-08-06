@@ -1,0 +1,14 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+break_out_nested/LICENSE
+break_out_nested/README.MD
+break_out_nested/__init__.py
+break_out_nested/requirements.txt
+break_out_nested/thirdparty.json
+break_out_nested.egg-info/PKG-INFO
+break_out_nested.egg-info/SOURCES.txt
+break_out_nested.egg-info/dependency_links.txt
+break_out_nested.egg-info/top_level.txt

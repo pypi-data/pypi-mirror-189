@@ -1,0 +1,4 @@
+include break_out_nested/requirements.txt
+include break_out_nested/thirdparty.json
+include break_out_nested/README.MD
+include break_out_nested/LICENSE
