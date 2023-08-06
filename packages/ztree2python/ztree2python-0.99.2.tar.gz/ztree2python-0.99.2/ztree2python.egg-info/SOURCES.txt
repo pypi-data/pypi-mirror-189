@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+ztree2python/__init__.py
+ztree2python/ztree2python.py
+ztree2python.egg-info/PKG-INFO
+ztree2python.egg-info/SOURCES.txt
+ztree2python.egg-info/dependency_links.txt
+ztree2python.egg-info/requires.txt
+ztree2python.egg-info/top_level.txt
