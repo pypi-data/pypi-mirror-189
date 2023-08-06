@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: streamlit-lchart-card
+Version: 0.0.2
+Summary: Chart card component
+Home-page: https://github.com/victorC97/streamlit_graphic_card
+Author: victorC97
+Author-email: victor.cour@telecomnancy.net
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/plain
+Requires-Dist: streamlit (>=0.63)
+
+Given a dataframe and two column of it, display a card with a line chart dataviz and statistics over it.
+
+
