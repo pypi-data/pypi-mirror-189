@@ -1,0 +1,4 @@
+nonebot.adapters.onebot
+nonebot2
+sqlite3
+pathlib
