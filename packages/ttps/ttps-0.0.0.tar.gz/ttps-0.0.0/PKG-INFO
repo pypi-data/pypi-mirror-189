@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ttps
+Version: 0.0.0
+Summary: A example demo package
+Home-page: UNKNOWN
+Author: xuewei.chao
+Author-email: xuewei.chao@momenta.ai
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# ttps - pip demo package
+
+# create package work directory and tools work directory
+
+# add __init__.py and __main__.py file of 
+ 
+# write code
+

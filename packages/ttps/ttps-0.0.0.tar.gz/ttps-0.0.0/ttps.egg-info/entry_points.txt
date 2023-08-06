@@ -1,0 +1,3 @@
+[console_scripts]
+ttps-cli = ttps:my_function
+
