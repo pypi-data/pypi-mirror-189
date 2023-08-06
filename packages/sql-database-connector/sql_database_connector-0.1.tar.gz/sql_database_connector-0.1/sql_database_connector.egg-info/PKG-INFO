@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: sql-database-connector
+Version: 0.1
+Summary: A package to simplify the process of connecting to and executing queries on SQL databases
+Author: Sakib
+Author-email: datasec@yopmail.com
