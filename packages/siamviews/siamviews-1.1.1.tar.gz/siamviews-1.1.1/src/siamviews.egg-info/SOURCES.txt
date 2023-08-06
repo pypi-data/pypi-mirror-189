@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/siamviews.egg-info/PKG-INFO
+src/siamviews.egg-info/SOURCES.txt
+src/siamviews.egg-info/dependency_links.txt
+src/siamviews.egg-info/top_level.txt
+src/view/__init__.py
+src/view/bomber.py
+src/view/view.py
