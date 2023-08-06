@@ -1,0 +1,7 @@
+requests[socks]
+tqdm
+pathvalidate
+packaging
+pyjwt
+requests-doh==0.2.3
+beautifulsoup4
