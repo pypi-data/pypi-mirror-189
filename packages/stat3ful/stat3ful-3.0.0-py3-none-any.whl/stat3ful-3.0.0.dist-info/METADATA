@@ -1,0 +1,195 @@
+Metadata-Version: 2.1
+Name: stat3ful
+Version: 3.0.0
+Summary: Property-like classes with expiration/change monitoring
+Home-page: 
+Author: aachn3
+Author-email: n45t31@protonmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.5
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+# STATEFUL
+
+## Maintainer: aachn3 <n45t31@protonmail.com>
+## Site: <https://gitlab.com/pyutil/stateful>
+## Version: 3.0.1
+
+### About
+
+This package provides a property-like class exposing two additional methods:
+**refresh** and **commit**. Both are hooked into the GET/SET descriptors to constantly
+monitor for changes made on object fields and either persist or reload the values
+manually or on a per-call basis.
+
+### Table of Contents
+
+- [structure](#project-structure)
+- [usage](#usage)
+  - [examples](#code-samples)
+- [tests](#testing-library-functionality)
+  - [unit](#unit-tests)
+  - [integration](#integration-tests)
+  
+
+### Project Structure
+
+```
++core
+  +state
+    -PropertyState
+      *expired(property): bool
+      *changed(property): bool
+      *lock(property): threading.RLock
+    -ObjectState
+      *auto_commit: bool
+      *atomic(property): bool
+      *invalidate < - > -
+      *register < obj_property: property, aliases: list<str> > -
+      *unregister < obj_property: property > -
+      *operator[] < key: [str, property] > .PropertyState
+      *get < key: [str, property] > [.PropertyState, null]
+      *keys < - > list<property>
+      *values < - > list<.PropertyState>
+      *items < - > list<property, .PropertyState>
+      *aliases < - > list<str, .PropertyState>
+  +property
+    *FALLBACK_METHOD: object
+    -stateful_property
+      *state_class: class<.state.PropertyState>
+      *fget < owner: * > *
+      *fset < owner: *, value: * > -
+      *fdel < owner: * > -
+      *frefresh < owner: * > -
+      *fcommit < owner: * > -
+      *auto_commit: bool
+      *raw: bool
+      *getter < fget ... > -
+      *setter < fset ... > -
+      *deleter < fdel ... > -
+      *refresher < frefresh ... > -
+      *committer < fcommit ... > -
+      *GET descriptor < owner: *, cls: * > *
+      *SET descriptor < owner: *, value: * > -
+      *DEL descriptor < owner: * > -
+      *NAME descriptor < owner: * > -
+      *touch < owner: * > -
+      *refresh < owner: * > -
+      *commit < owner: * > -
+      *fallback_refresher < owner: * > -
+      *fallback_committer < owner: * > -
+    -StatefulPropertyWrapper
+      *expired: bool
+      *changed: bool
+      *value: *
+  +object
+    -StatefulObject
+      *state(property): .state.ObjectState
+      *expired(property): list<str>
+      *get_properties < property_spec: [str, list<str>, null] > list<.property.stateful_property>
+      *refresh < property_spec: [str, list<str>, null], force: bool > -
+      *commit < property_spec: [str, list<str>, null], force: bool > -
++util
+  +environ
+    -EnvironmentVariableState(..core.state.PropertyState)
+    -environment_variable(..core.property.stateful_property)
+      *varname: str
+      *decoder < env_var: str > value: *
+      *encoder < value: * > env_var: str
+      *value(property): *
+      *fallback_getter < owner: * > *
+      *fallback_setter < owner: * > -
+      *fallback_deleter < owner: * > -
+      *fallback_refresher < owner: * > -
+      *fallback_committer < owner: * > -
+  +timer
+    -Timer
+      *period: datetime.timedelta
+      *iterator < - > list<datetime.datetime>
+    -TimedPropertyState(..core.state.PropertyState)
+      *timer(property): .Timer
+      *expired(property): bool
+    -timed_property(..core.property.stateful_property)
+      *timespec(property): dict<str, [int, float]>
+    -TimedStatefulObject(..core.object.StatefulObject)
+      *timespec(property): dict<str, [int, float]>
+```
+
+### Usage
+
+#### Code samples
+
+Manually load REST API data, change data subset and re-send to API
+
+```python3
+import json
+
+from stateful import StatefulObject, stateful_property
+from requests import request
+
+from .config import URI, auth
+
+class ApiConnector(StatefulObject): 
+    @stateful_property
+    def data(self)->dict:
+        return self._json
+
+    @data.refresh
+    def data(self):
+        self._json = request("get", URI, auth=auth).json()
+
+    @data.commit
+    def data(self):
+        request("put", URI, auth=auth, body_data=json.dumps(self._json))
+
+api = ApiConnector()
+api.invalidate()
+
+del response.data["_auth"]        
+for entry in response.data["form"]:
+    del entry["_auth"]
+
+api.commit()
+```
+
+Continuously fetch current system workload with polling time set to 30s. 
+
+```python3
+from stateful import TimedStatefulObject, timed_property
+import psutil
+
+class Workload(TimedStatefulObject):
+    def __init__(self):
+        super().__init__(timespec={"seconds": 30})
+
+    @timed_property
+    def _data(self):
+        return self._payload
+
+    @_data.refresh
+    def _data(self):
+        self._payload = {
+            "mem": psutil.virtual_memory(),
+            "cpu": psutil.cpu_percent(5),
+        }
+
+    @property
+    def memory(self):
+        return self._data["mem"]
+
+    @property
+    def cpu(self):
+        return self._data["cpu"]
+``` 
+
+#### Testing library functionality
+
+##### Unit tests
+
+Format: None
+
+##### Integration tests
+
+Format: None
