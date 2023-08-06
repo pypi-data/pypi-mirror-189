@@ -1,0 +1,7 @@
+tao_poetry_example/__init__.py,sha256=GnKHT6967WfQ0xgWf__sepppDvhKdr_e228MsuFBTPw,35
+tao_poetry_example/cli.py,sha256=GNuiU7fDVuI0VUjIhO5ElnuRlebrACqsfrAr4PBxsFg,303
+tao_poetry_example/increment.py,sha256=6LJmhHBEpy5oZHLcJiMpj6PRqvavb32r38vT2AWoDeY,38
+tao_poetry_example-0.1.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+tao_poetry_example-0.1.0.dist-info/entry_points.txt,sha256=JOrZ0GKbaXcMWJh0bLi82tFccAwoXB-6KG2ao2K6urA,43
+tao_poetry_example-0.1.0.dist-info/METADATA,sha256=8M2phPKfny7ZAFKw7SYHjeRhu6l9O9bw48kRJXePycg,423
+tao_poetry_example-0.1.0.dist-info/RECORD,,
