@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+learnpy_spammer.egg-info/PKG-INFO
+learnpy_spammer.egg-info/SOURCES.txt
+learnpy_spammer.egg-info/dependency_links.txt
+learnpy_spammer.egg-info/top_level.txt
+spammer/__init__.py
+spammer/app.py
