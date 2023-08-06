@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: datamastery
+Version: 0.1.1
+Summary: Datamastery is a Python package for data preprocessing and visualisation.
+Download-URL: http://pypi.python.org/pypi/datamastery
+Author: Baran Kutluay
+Author-email: barankutluay19@gmail.com
+License: MIT
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# Datamastery
+
+Datamastery is a Python package for data preprocessing and visualisation. It provides a set of functions to make it easier to work with data.
+
+## Installation
+
+To install the package, you can use pip:
+
+```
+pip install datamastery
+```
+
+## Usage
+
+Here's an example of how to use the package:
+
+```
+import datamastery as dm
+import seaborn as sns
+
+data = sns.load_dataset("iris")
+
+print(dm.chart.pie_chart("species", data))
+```
+
+## Documentation
+
+Documentation will be added.
