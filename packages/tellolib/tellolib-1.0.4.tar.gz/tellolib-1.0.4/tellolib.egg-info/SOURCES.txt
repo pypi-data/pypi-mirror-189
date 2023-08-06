@@ -1,0 +1,8 @@
+README.md
+setup.py
+tellolib/__init__.py
+tellolib/tello.py
+tellolib.egg-info/PKG-INFO
+tellolib.egg-info/SOURCES.txt
+tellolib.egg-info/dependency_links.txt
+tellolib.egg-info/top_level.txt
