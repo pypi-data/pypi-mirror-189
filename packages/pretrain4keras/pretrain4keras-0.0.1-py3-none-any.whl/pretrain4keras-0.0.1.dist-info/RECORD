@@ -1,0 +1,10 @@
+pretrin4keras/__init__.py,sha256=aioPnyNzuC-64tY4vx2Wl9TGpfPTTkW-jqOidvLEJHg,141
+pretrin4keras/layers.py,sha256=cD4VwWodOteK2AQJeRmr5Cnuenfutnycjid1sTKYlfg,18412
+pretrin4keras/snippets.py,sha256=Ckt2Y_8j82fXM67sEb80EvFVJRx7jkZ30O89kErcHlE,726
+pretrin4keras/models/__init__.py,sha256=s3DnupTBiM_wErFVp-ULMdQInr0ZKEQvMS7v7wBfqSw,122
+pretrin4keras/models/bart.py,sha256=sPXiybrZXlYakUi18aNVuLudX7qyGROYFXpuEj5iia4,28403
+pretrin4keras/models/bert.py,sha256=u8lfWp7MGA15RIzo8f9NEz-KA2n5TGHlLJl0J6Bt_cM,15879
+pretrain4keras-0.0.1.dist-info/METADATA,sha256=gCVa7CIGOqxuN099XwtJJu2V1lUS66LXGPCS3ifc-TE,1093
+pretrain4keras-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pretrain4keras-0.0.1.dist-info/top_level.txt,sha256=477J_IjcY0ZEvi2ZZbpetgkzTdZjrXe4JVMUXpSONPg,14
+pretrain4keras-0.0.1.dist-info/RECORD,,
