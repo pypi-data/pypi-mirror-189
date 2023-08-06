@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+kriodsbot.egg-info/PKG-INFO
+kriodsbot.egg-info/SOURCES.txt
+kriodsbot.egg-info/dependency_links.txt
+kriodsbot.egg-info/not-zip-safe
+kriodsbot.egg-info/top_level.txt
+unknownkrio-discord-bot/__init__.py
+unknownkrio-discord-bot/krzb.py
+unknownkrio-discord-bot/rpb.py
+unknownkrio-discord-bot/zzb.py
