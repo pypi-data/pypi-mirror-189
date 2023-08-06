@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: LCSpy
+Version: 0.0.1
+Summary: A package to make calling cutouts and catalogues from the LoFAR survey easier.
+Home-page: https://github.com/RhysAlfShaw/LSCpy
+Author-email: Rhys Shaw <rhysc3p0@gmail.com>
+Maintainer-email: Rhys Shaw <rhysc3p0@gmail.com>
+Project-URL: Homepage, https://github.com/RhysAlfShaw/LCSpy
+Project-URL: Bug Tracker, https://github.com/RhysAlfShaw/LCSpy/issues
+Keywords: Radio Astronomy,Astropy,Astronomy,LoFAR,Archive,Survey
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# LoFAR Survey Archive - Python Package
+Under development..
+
+## Search the Source Catalogue.
+
+
+## Generate Source Image Cutouts.
