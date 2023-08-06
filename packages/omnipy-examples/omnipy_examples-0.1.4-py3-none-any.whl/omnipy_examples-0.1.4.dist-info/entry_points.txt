@@ -1,0 +1,3 @@
+[console_scripts]
+dagsim_example=omnipy_examples.scripts.dagsim_example:main
+
