@@ -1,0 +1,8 @@
+requests
+pyperclip
+alive_progress
+simple_term_menu
+openai
+scikit-learn
+numpy
+cursor
