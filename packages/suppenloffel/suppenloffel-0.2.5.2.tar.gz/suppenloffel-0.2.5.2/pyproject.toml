@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "suppenloffel"
+version = "0.2.5.2"
+description ="suppenlöffel is a library build upon bs4 to provide fast webscraping scripting experience"
+authors = ["Qubut <s-aahmed@haw-landshut.de>"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: Markup :: HTML ",
+    "Operating System :: OS Independent",
+]
+include = [
+    "LICENSE",
+]
+[tool.poetry.dependencies]
+python = "^3.10"
+beautifulsoup4 = "^4.11.1"
+numpy = "^1.23.0"
+autopep8 = "^1.6.0"
+pandas = "^1.5.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
