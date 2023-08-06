@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: awz
+Version: 2.1.2
+Summary: libraryawz
+Home-page: https://www.rubika.ir/awz_lib
+Author: rebackk
+Author-email: aryongram@gmail.com
+License: MIT
+Keywords: bot,Bot,BOT,Robot,ROBOT,robot,self,api,API,Api,rubika,Rubika,RUBIKA,Python,python,aiohttp,asyncio,awz,Awz,AWZ
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: pycryptodome (==3.16.0)
+Requires-Dist: aiohttp (==3.8.3)
+Requires-Dist: asyncio (==3.4.3)
+Requires-Dist: tinytag (==1.8.1)
+Requires-Dist: Pillow (==9.4.0)
+
+
+
+### How to import the Rubik's library
+
+``` bash
+from Awz import Messenger
+
+Or
+
+from Awz import Robot_Rubika
+```
+
+### How to import the Robino class
+
+``` bash
+from Awz import Robino
+```
+
+### How to import the anti-advertising class
+
+``` bash
+from Awz.Zedcontent import Antiadvertisement
+```
+
+### How to install the library
+
+``` bash
+pip install awz==1.2.1
+```
+
+## An example:
+``` python
+from Awz import Messenger
+
+bot = Messenger("Your Auth Account")
+
+gap = "your guid or gap or pv or channel"
+
+bot.sendMessage(gap,"libraryawz")
+```
+
+## And Or:
+``` python
+from Awz import Messenger
+
+bot = Robot_Rubika("Your Auth Account")
+
+gap = "your guid or gap or pv or channel"
+
+bot.sendMessage(gap,"awz")
+```
