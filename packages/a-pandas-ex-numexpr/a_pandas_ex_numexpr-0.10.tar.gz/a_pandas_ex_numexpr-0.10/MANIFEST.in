@@ -1,0 +1,4 @@
+include a_pandas_ex_numexpr/requirements.txt
+include a_pandas_ex_numexpr/thirdparty.json
+include a_pandas_ex_numexpr/README.MD
+include a_pandas_ex_numexpr/LICENSE

@@ -1,0 +1,15 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+a_pandas_ex_numexpr/LICENSE
+a_pandas_ex_numexpr/README.MD
+a_pandas_ex_numexpr/__init__.py
+a_pandas_ex_numexpr/requirements.txt
+a_pandas_ex_numexpr/thirdparty.json
+a_pandas_ex_numexpr.egg-info/PKG-INFO
+a_pandas_ex_numexpr.egg-info/SOURCES.txt
+a_pandas_ex_numexpr.egg-info/dependency_links.txt
+a_pandas_ex_numexpr.egg-info/requires.txt
+a_pandas_ex_numexpr.egg-info/top_level.txt
