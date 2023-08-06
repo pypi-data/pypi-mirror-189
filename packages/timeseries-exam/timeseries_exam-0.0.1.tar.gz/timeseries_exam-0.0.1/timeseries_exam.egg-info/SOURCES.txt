@@ -1,0 +1,13 @@
+LICENSE
+setup.py
+timeseries_exam/__init__.py
+timeseries_exam/arch.py
+timeseries_exam/content.py
+timeseries_exam/model.py
+timeseries_exam/number.py
+timeseries_exam/syntax.py
+timeseries_exam/syntax2.py
+timeseries_exam.egg-info/PKG-INFO
+timeseries_exam.egg-info/SOURCES.txt
+timeseries_exam.egg-info/dependency_links.txt
+timeseries_exam.egg-info/top_level.txt
