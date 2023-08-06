@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: django-chedid
+Version: 0.1
+Summary: A Django app to create and manage API Handlers and JWT Communications.
+Home-page: https://github.com/Getdit/django-chedid
+Author: Eduardo Chedid Padilha Ribeiro
+Author-email: duducpribeiro@gmail.com
+License: GPL-3.0
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.0
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.8
+License-File: LICENSE
