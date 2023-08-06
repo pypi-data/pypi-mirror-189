@@ -1,0 +1,12 @@
+mmcq_numba/__init__.py,sha256=SnHet24nyfyQ3kZpyLDBaRCzivKu1D5qsWu8_9kGQgU,172
+mmcq_numba/color.py,sha256=XCEAlQjDNolkn2DAliLJ0A3kGPYkoHJjwb-BuMJgxlY,205
+mmcq_numba/constant.py,sha256=VLzNNKJNtstZlMl8xzWsDKqz0Pye8E4Y6c41SjlqShI,86
+mmcq_numba/math_.py,sha256=N-EebY60v_RxV9aI3gokMzo9v2innq5NByp-dGeLurE,173
+mmcq_numba/quantize.py,sha256=Kv_WBr1AuDW4gwOPA9veiLYm_MfodlLQ0ZCTcn__76M,9440
+mmcq_numba/region.py,sha256=W58enn7HzV0LdW3aykP0XwAbLNcoK0L8GiT_UyB96K4,3137
+mmcq_numba/struct.py,sha256=Tqzo9Y6XUmnVE_dQXP2v7qUYfCO3s4tL69IUk4nyJjw,3181
+mmcq_numba-0.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+mmcq_numba-0.0.3.dist-info/METADATA,sha256=HjhWbdZiuKoV_HlwQJtc8j-S7mShntzlO43SkjErl-8,1117
+mmcq_numba-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mmcq_numba-0.0.3.dist-info/top_level.txt,sha256=9heurkq30SdaNEsef9fkrHrnnUuV0bqbzr9AglZpNJo,11
+mmcq_numba-0.0.3.dist-info/RECORD,,
