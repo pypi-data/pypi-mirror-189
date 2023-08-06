@@ -1,0 +1,11 @@
+youscan_ir_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+youscan_ir_client/client.py,sha256=Nju-xANVvJmWXJuudAQghb_XXaYL9GvcsXhptHSLJUY,3556
+youscan_ir_client/config.py,sha256=FvvFbhTsXwrWmhPO63Ro_KjQMSXRT2tk-58fIMHZzHc,463
+youscan_ir_client/entities.py,sha256=18XWQrkcOVJohZXlQbqVzxwK1hqALJAo_osXFofW-_Q,2508
+youscan_ir_client/factories.py,sha256=K6rHK9mNMLcqLzsNYL8jk85JjE8jlqZ2BUCf4Pkxq4Y,4516
+youscan_ir_client/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+youscan_ir_client-23.2.0.dist-info/LICENSE,sha256=95qtGdAxVqw74GUZvbkcu1buK3upqzO5PyqkVX9g8p4,551
+youscan_ir_client-23.2.0.dist-info/METADATA,sha256=oP7-0P4f_aNFIdxlnZCuWtJnBR4yTQeS9mXO36ErE34,2112
+youscan_ir_client-23.2.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+youscan_ir_client-23.2.0.dist-info/top_level.txt,sha256=IoZuci6okfs_Tf8Vl8-bYRB7X8Huh7ljMyFvHxsyJmo,18
+youscan_ir_client-23.2.0.dist-info/RECORD,,
