@@ -1,0 +1,12 @@
+LICENCE
+README.md
+setup.cfg
+setup.py
+Nanybot/How.py
+Nanybot/Ny_Wb.py
+Nanybot/client.py
+Nanybot/encryption.py
+Nanybot.egg-info/PKG-INFO
+Nanybot.egg-info/SOURCES.txt
+Nanybot.egg-info/dependency_links.txt
+Nanybot.egg-info/top_level.txt
