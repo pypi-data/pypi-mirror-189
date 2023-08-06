@@ -1,0 +1,15 @@
+MANIFEST.in
+pyproject.toml
+setup.cfg
+setup.py
+src/digisondeindices/__init__.py
+src/digisondeindices/base.py
+src/digisondeindices/io.py
+src/digisondeindices/utils.py
+src/digisondeindices/web.py
+src/digisondeindices.egg-info/PKG-INFO
+src/digisondeindices.egg-info/SOURCES.txt
+src/digisondeindices.egg-info/dependency_links.txt
+src/digisondeindices.egg-info/not-zip-safe
+src/digisondeindices.egg-info/requires.txt
+src/digisondeindices.egg-info/top_level.txt
