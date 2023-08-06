@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: ITA-test3
+Version: 2.1
+Summary: Italian tweets analyzer is a tool created for the thesis work at the University of Bari "Aldo Moro" of the course "Methods for the information retrieval". It can perform analysis on Italian tweets and it provides several featuresThis project is an upgraded version of the tool: Hate-Tweet-Map.
+Home-page: 
+Author: sdvolpicella
+Author-email: davidevolpicella@gmail.com
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+<h1>ciao</h1>
