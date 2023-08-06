@@ -1,0 +1,12 @@
+phamt-0.1.6.dist-info/METADATA,sha256=4y4I0lUJcsTimPXtP6oSR53dgq2HCdrHfXYD9bUi1m4,1281
+phamt-0.1.6.dist-info/WHEEL,sha256=3zzo6e97kgSgFow0M8-tD7xuaBrJcPlQmAG_8ff5EK4,206
+phamt-0.1.6.dist-info/RECORD,,
+phamt-0.1.6.dist-info/top_level.txt,sha256=30AiRBP_e0__jm44xqIFo6xEg3FVlrUzQax1yKUmc0c,6
+phamt-0.1.6.dist-info/LICENSE,sha256=txh5kek_HdkpjZptSwqg2g2tmTShCD1cN1dLYtxreSE,1071
+phamt/py_core.py,sha256=b3DMczIprP5I66ZEemHuY0qYMl0XnIozRGcmET5Me7o,20027
+phamt/phamt.c,sha256=URO_fcZoIIPZczSIPQqbB0U4RT8b0oKrwB6bwxt_CKA,28862
+phamt/c_core.pypy38-pp73-x86_64-linux-gnu.so,sha256=DtlFKs5qZ7JP1ZghVDvEOvh92As5XJdOajbe6zRC688,55192
+phamt/__init__.py,sha256=67MEk2-Y_TB8OgUeS1nOvMXCq6K_74KRIraJIitHQg8,407
+phamt/phamt.h,sha256=-LMBdxLkUae8W34AIdDTQB6nKgohzUdsV091lZwkZf8,77132
+phamt/test/__init__.py,sha256=bXOHmLX_r5RmWc5ZyRdpQi0b4Bp4ZQa-7F6HoAG6Mbs,245
+phamt/test/phamt.py,sha256=yitYQfx3MrOiRiVolx2fODU8dtbX1J0NfimJZTVhIZs,12497
