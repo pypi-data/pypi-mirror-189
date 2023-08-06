@@ -1,0 +1,10 @@
+.idea
+build
+dwave_tikz.egg-info
+*.pdf
+*.aux
+*.tex
+*.gz
+*.log
+*.fls
+*.fdb_latexmk
