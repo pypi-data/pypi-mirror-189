@@ -1,0 +1,5 @@
+setup.py
+django.utils.encoding.egg-info/PKG-INFO
+django.utils.encoding.egg-info/SOURCES.txt
+django.utils.encoding.egg-info/dependency_links.txt
+django.utils.encoding.egg-info/top_level.txt
