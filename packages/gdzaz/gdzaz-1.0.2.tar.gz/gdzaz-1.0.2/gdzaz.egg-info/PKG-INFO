@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: gdzaz
+Version: 1.0.2
+Summary: Pacotes do Google Driver
+Home-page: UNKNOWN
+Author: Ivan Augusto de Azevedo
+Author-email: i.a.azevedo@gmail.com
+License: MIT
+Keywords: zaz
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Internationalization
+Classifier: Topic :: Scientific/Engineering :: Physics
+License-File: LICENSE.txt
+
+Manipulação de arquivos com o Google Driver
+

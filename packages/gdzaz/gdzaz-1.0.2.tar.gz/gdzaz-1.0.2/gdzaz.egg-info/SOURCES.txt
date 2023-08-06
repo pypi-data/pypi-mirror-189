@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+gdzaz/__init__.py
+gdzaz/gdzaz.py
+gdzaz.egg-info/PKG-INFO
+gdzaz.egg-info/SOURCES.txt
+gdzaz.egg-info/dependency_links.txt
+gdzaz.egg-info/top_level.txt
