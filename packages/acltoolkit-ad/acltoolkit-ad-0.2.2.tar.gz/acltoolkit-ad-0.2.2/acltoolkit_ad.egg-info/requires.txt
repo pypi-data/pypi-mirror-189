@@ -1,0 +1,6 @@
+asn1crypto==1.5.1
+dnspython==2.3.0
+impacket==0.10.0
+ldap3==2.9.1
+pyasn1==0.4.8
+pycryptodome==3.17
