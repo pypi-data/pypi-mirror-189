@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+setup.py
+package_ddhjy_talk.egg-info/PKG-INFO
+package_ddhjy_talk.egg-info/SOURCES.txt
+package_ddhjy_talk.egg-info/dependency_links.txt
+package_ddhjy_talk.egg-info/top_level.txt
+package_mikezhou_talk/__init__.py
+package_mikezhou_talk/main.py
+package_mikezhou_talk/module1.py
