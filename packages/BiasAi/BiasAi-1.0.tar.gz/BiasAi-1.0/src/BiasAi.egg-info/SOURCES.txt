@@ -1,0 +1,9 @@
+LICENSE.text
+README.md
+pyproject.toml
+src/BiasAi/Debug.py
+src/BiasAi/__init__.py
+src/BiasAi.egg-info/PKG-INFO
+src/BiasAi.egg-info/SOURCES.txt
+src/BiasAi.egg-info/dependency_links.txt
+src/BiasAi.egg-info/top_level.txt
