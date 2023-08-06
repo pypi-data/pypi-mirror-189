@@ -1,0 +1,11 @@
+vecops/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vecops/addition.py,sha256=OfPoZ9TZKSHwY3viYInpnOp04SDR53z_Sa21qXXIW5o,2258
+vecops/inverse.py,sha256=6qLc74sQjAwaYkNJ9buxrISLHZIbjmtFaJqw42NFcfI,6021
+vecops/multiplication.py,sha256=Y_M5n3mzxoxmblr4BIarH4x0kzqvHZNWmjuMi-zs_iQ,4218
+vecops/rotation.py,sha256=2NVE65zBOReFfQtZf1Ul4ynPWw44E0df1lq620rchYA,1406
+vecops/scale.py,sha256=GVondOhbG5j3CYS-MHTb-eH-LNLfmn3w5IYBxMVo6tw,713
+vecops/translation.py,sha256=9MyjxmE43SLCOb0kHnFu1peYZFYKiHbfH-hEvUxFK2Y,687
+vecops-1.1.0.dist-info/METADATA,sha256=jzeO-g83l1Nrlsu8FM4eDfeiIfCE5BBU9yhDRztAONU,708
+vecops-1.1.0.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+vecops-1.1.0.dist-info/licenses/LICENSE,sha256=mlJ5BhBwGJY5Mg0xXG3ky2NY6zR6AENKJPpwpP-Qwpo,1106
+vecops-1.1.0.dist-info/RECORD,,
