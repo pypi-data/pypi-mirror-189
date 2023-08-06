@@ -1,0 +1,16 @@
+eDOCr/keras_ocr/__init__.py,sha256=ahk1zSX-oj7WuaEl2ApELu1KVE3nOkLtjpzJeNI6VFU,161
+eDOCr/keras_ocr/config.py,sha256=ET1enzVgCrXYMQA-iiPzSM643Asflhm5CuE0rRIRJbE,867
+eDOCr/keras_ocr/data_generation.py,sha256=VC4Yw-ha268QJDSHWplQxK3XprDyiZC1FUirqvp0P5s,26218
+eDOCr/keras_ocr/datasets.py,sha256=B0rFe-LJ1nmvL8poUd-_cePboGOOk0-Hw82rx119vAc,19052
+eDOCr/keras_ocr/detection.py,sha256=7ewbDqSgiuGjKCxM8z2bmctQnpZrCgWLNcln7Viit8g,30332
+eDOCr/keras_ocr/evaluation.py,sha256=QzXLzzSnJA2PYNZrsGdVxSwEmVjYR4hcIMsLteJFD60,6354
+eDOCr/keras_ocr/pipeline.py,sha256=8zNmgOCGZRFbSZInTWTtnu1e4wgEPH3OFi_2htM-nTY,2722
+eDOCr/keras_ocr/recognition.py,sha256=Ut0cuyYz0FtDJsxHful5eyRdou9fIKydna78psIm4nY,21179
+eDOCr/keras_ocr/tools.py,sha256=kJ5in7H78WWeqUpCpIhh2xFUQzvyWi-fw0sKhvRQOgo,20719
+eDOCr/keras_ocr_models/__init__.py,sha256=46IDHfYTu3-EH7it0ESLYgPVcmlIBQJPQt89DFnsg2w,32
+eDOCr/keras_ocr_models/train_recognizer.py,sha256=kZTD6IuxI8YAtrLvkrsjIooICzk-OiJZIZYs2OlkkA0,3962
+eDOCr_javvi51-0.0.1.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+eDOCr_javvi51-0.0.1.dist-info/METADATA,sha256=dJ6TB5-j3M9kxu4kBm9f9vnJaIVgU2LafKNO5Tz6Se8,7921
+eDOCr_javvi51-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+eDOCr_javvi51-0.0.1.dist-info/top_level.txt,sha256=Y0y6GB8uVQG9tDJRMQSZ5LBf31BGey3B3R6Kgz0IWRU,6
+eDOCr_javvi51-0.0.1.dist-info/RECORD,,
