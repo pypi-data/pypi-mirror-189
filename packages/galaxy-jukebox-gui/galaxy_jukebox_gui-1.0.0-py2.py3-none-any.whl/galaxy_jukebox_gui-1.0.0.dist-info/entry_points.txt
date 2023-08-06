@@ -1,0 +1,3 @@
+[console_scripts]
+galaxy-jukebox-gui=galaxy_jukebox_gui.gui:main
+

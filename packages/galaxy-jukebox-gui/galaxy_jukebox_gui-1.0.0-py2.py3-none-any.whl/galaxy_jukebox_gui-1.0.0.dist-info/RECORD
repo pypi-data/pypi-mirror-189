@@ -1,0 +1,16 @@
+galaxy_jukebox_gui/__init__.py,sha256=oSi0CctrN2wFiuMeUOb7e9tUrebfQhNHQIoK0_E4nEw,161
+galaxy_jukebox_gui/__main__.py,sha256=PuuDawDYvPRX7-au3MFB6sj7m5GqhzpQBfv-gpecubc,85
+galaxy_jukebox_gui/gui.py,sha256=OOfF3xht1wpxgxTZqo2PCrlfhDkFPd9stKRlkXfWAQY,6179
+galaxy_jukebox_gui/gui_icons/0side_lamp.png,sha256=XsqXu9gnvDTp6LX9Q7BxrdxTCRWaIj3KaW7bkcYV4Bk,1212292
+galaxy_jukebox_gui/gui_icons/0side_nolamp.png,sha256=sCsLb9w2VfHKN0-3b3XJ37GDPIkG5i1vVu3Qyf6A73Q,1211300
+galaxy_jukebox_gui/gui_icons/1side_lamp.png,sha256=3fRV9zRwLvtTt8Zrt02owNUfod6wHJ-xI3Sn3ZkH9Go,976673
+galaxy_jukebox_gui/gui_icons/1side_nolamp.png,sha256=ZSlSzbf0tPxrNKEMj6LhJ-kkiWVEGH3wf8OQK0gHLFQ,980933
+galaxy_jukebox_gui/gui_icons/2side_lamp.png,sha256=91aff9G_Rpywx7wDMlZ1b8k2gO60xHF_ZdKJB54T2N4,1175509
+galaxy_jukebox_gui/gui_icons/2side_nolamp.png,sha256=48l5Sty-QRqJNOcqaIdPngTD6yDvgaKvUQj26XuKzLY,1166100
+galaxy_jukebox_gui/gui_icons/3side_lamp.png,sha256=F87ErJJcUYEg0I6CqBTh3x2nXXzCwoyAq6rYMLwC8og,1170421
+galaxy_jukebox_gui/gui_icons/3side_nolamp.png,sha256=g6oPxJHL4l-H4Uo-hIwkNgJnlyOhKCoustRTDQPKS-0,1170314
+galaxy_jukebox_gui-1.0.0.dist-info/entry_points.txt,sha256=EOMYVAp2_WGQwPZYc3VWQ_HyUmLx-mgGkr4qMheKGLg,66
+galaxy_jukebox_gui-1.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+galaxy_jukebox_gui-1.0.0.dist-info/WHEEL,sha256=kdeDBNPvBI0w3meLKPoGgAnEr54n1jzrZWUoaLmGzVY,99
+galaxy_jukebox_gui-1.0.0.dist-info/METADATA,sha256=vwpOnHSWCvcAEqYMPlSIMpcXG6WLc1oQBiaWIevGpSM,2716
+galaxy_jukebox_gui-1.0.0.dist-info/RECORD,,
