@@ -1,0 +1,16 @@
+[Unit]
+Description=Starts and stops the Ray cluster
+Requires=network-online.target
+After=network-online.target time-sync.target
+
+[Service]
+Type=simple
+User=tuyen
+WorkingDirectory=~/git/ray-quickstart
+ExecStartPre=
+ExecStart=/bin/bash -c "source ~/anaconda3/etc/profile.d/conda.sh && conda activate ray-quickstart && pipenv run ~/git/ray-quickstart/scripts/ray_start.sh"
+ExecStop=~/git/ray-quickstart/scripts/ray_stop.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
