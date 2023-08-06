@@ -1,0 +1,4 @@
+matplotlib>=3.4.0
+numpy
+scikit-image>=0.18.1
+scipy
