@@ -1,0 +1,6 @@
+setup.py
+StableSCA1.egg-info/PKG-INFO
+StableSCA1.egg-info/SOURCES.txt
+StableSCA1.egg-info/dependency_links.txt
+StableSCA1.egg-info/requires.txt
+StableSCA1.egg-info/top_level.txt
