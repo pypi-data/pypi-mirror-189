@@ -1,0 +1,8 @@
+pysqlite3/__init__.py,sha256=W86ST9R5MtrC6S7NW2pycbV1oCs8Zk0i9YIlimo0yFU,1042
+pysqlite3/_sqlite3.cp311-win32.pyd,sha256=8V07hudIpB7TQZmGQzO4yAtRNn3mum-XfRekRv_Ab-4,1231360
+pysqlite3/dbapi2.py,sha256=ZlGPPjFHoxWkdCAHNq61jUKkXNSEWztgEI8ypmPJEqg,2815
+pysqlite3_wheels-0.5.0.dist-info/LICENSE,sha256=0q-Yl1sVC_b_XvmXhbVrS1l5AkpKsxFyU_HNd3-YutY,908
+pysqlite3_wheels-0.5.0.dist-info/METADATA,sha256=ahvv6CedDHVMSK-QJNpqMaYYisOF_lOl12rHfCwLLxs,3054
+pysqlite3_wheels-0.5.0.dist-info/WHEEL,sha256=dTOErEcdB767H0LwzWU4sSGTzJRs59N_0uVyL1DFkVM,98
+pysqlite3_wheels-0.5.0.dist-info/top_level.txt,sha256=5dA_8xmjcn9wK-34vSyb6OBHiz-x_6NfmTNh-XJWNMA,10
+pysqlite3_wheels-0.5.0.dist-info/RECORD,,
