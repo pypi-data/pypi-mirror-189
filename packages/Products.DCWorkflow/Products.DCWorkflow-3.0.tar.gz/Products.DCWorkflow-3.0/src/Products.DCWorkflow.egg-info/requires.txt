@@ -1,0 +1,11 @@
+setuptools
+Zope>=5.0
+Products.CMFCore>=2.4.0
+Products.ExternalMethod
+Products.GenericSetup>=2.0b1
+Products.PythonScripts
+
+[docs]
+Sphinx
+repoze.sphinx.autointerface
+pkginfo
