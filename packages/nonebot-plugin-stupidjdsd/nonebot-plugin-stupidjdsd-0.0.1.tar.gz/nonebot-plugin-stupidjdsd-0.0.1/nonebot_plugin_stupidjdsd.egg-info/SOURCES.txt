@@ -1,0 +1,9 @@
+setup.py
+nonebot-plugin-stupidjdsd/Original_Script.py
+nonebot-plugin-stupidjdsd/Script.py
+nonebot-plugin-stupidjdsd/__init__.py
+nonebot_plugin_stupidjdsd.egg-info/PKG-INFO
+nonebot_plugin_stupidjdsd.egg-info/SOURCES.txt
+nonebot_plugin_stupidjdsd.egg-info/dependency_links.txt
+nonebot_plugin_stupidjdsd.egg-info/requires.txt
+nonebot_plugin_stupidjdsd.egg-info/top_level.txt
