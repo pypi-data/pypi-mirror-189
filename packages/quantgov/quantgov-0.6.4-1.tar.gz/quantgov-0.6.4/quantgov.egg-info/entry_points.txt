@@ -1,0 +1,2 @@
+[console_scripts]
+quantgov = quantgov.__main__:main
