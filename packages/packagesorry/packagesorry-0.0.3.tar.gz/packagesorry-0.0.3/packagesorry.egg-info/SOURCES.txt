@@ -1,0 +1,11 @@
+setup.py
+ganit/__init__.py
+ganit/_baisc.py
+ganit/setup.py
+math/__init__.py
+math/_basic.py
+math/setup.py
+packagesorry.egg-info/PKG-INFO
+packagesorry.egg-info/SOURCES.txt
+packagesorry.egg-info/dependency_links.txt
+packagesorry.egg-info/top_level.txt
