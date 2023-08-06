@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: ucord
+Version: 0.0.3
+Summary: Minimal Discord bot library for Python
+Author-email: Jeff53978 <snikkerzakelijk@gmail.com>
+Project-URL: Homepage, https://github.com/Pepper-Diffusion/ucord
+Project-URL: Bug Tracker, https://github.com/Pepper-Diffusion/ucord/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ucord
+
+Ucord is a discord library build using threads for maximum performance
+
+## Bot example
+
+```python
+    import ucord
+
+    client = ucord.Client()
+    client.set_token("token")
+    client.run()
+
+    @client.on_ready
+    def on_ready(client):
+        print(f"Logged in as {client.user}")
+
+    @client.slash_command(name="ping", description="Ping command")
+    def ping(ctx):
+        embed = ucord.Embed(title="Pong!", description="Pong!")
+        ctx.reply("Bot is online", embed=embed)
+```
