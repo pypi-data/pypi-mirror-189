@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+Tudjewuj/_init_.py
+Tudjewuj.egg-info/PKG-INFO
+Tudjewuj.egg-info/SOURCES.txt
+Tudjewuj.egg-info/dependency_links.txt
+Tudjewuj.egg-info/not-zip-safe
+Tudjewuj.egg-info/top_level.txt
