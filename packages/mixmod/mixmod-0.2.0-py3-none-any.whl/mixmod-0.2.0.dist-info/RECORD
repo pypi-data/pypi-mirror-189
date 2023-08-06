@@ -1,0 +1,8 @@
+mixmod/__init__.py,sha256=fxodwzZdnmH-bKwwhpfUgUiQJqPI99Abq-dyMw9cV2I,87
+mixmod/estimators.py,sha256=gijtJ1GiXJWpMs0ipkokgerBKBBmcx8Dgmxl27aifuY,11126
+mixmod/mixture.py,sha256=fV5cayUFjIL1tY8Ewzeg1Vih-iydmqZodVjlemMmXL8,19011
+mixmod-0.2.0.dist-info/LICENSE.txt,sha256=zmbrOUJefSkZHOXtBIaGrKDvA-Js7nfB8svF9rtmhTo,1071
+mixmod-0.2.0.dist-info/METADATA,sha256=Olr2mXuSdBeiNhjRs2pOWL7V-zl_gqnjoC-nps5qk8A,1974
+mixmod-0.2.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+mixmod-0.2.0.dist-info/top_level.txt,sha256=tBZrvIIwGY0VWQPt2cEiTi-L6-x-jkE9_EwyQi3arY8,7
+mixmod-0.2.0.dist-info/RECORD,,
