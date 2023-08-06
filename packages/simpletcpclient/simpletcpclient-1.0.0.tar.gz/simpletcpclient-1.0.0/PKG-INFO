@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: simpletcpclient
+Version: 1.0.0
+Summary: Simple command line TCP client
+Project-URL: Homepage, https://gitlab.cylab.be/cylab/simpletcpclient
+Project-URL: Bug Tracker, https://gitlab.cylab.be/cylab/simpletcpclient/-/issues
+Author-email: Thibault Debatty <t.debatty@cylab.be>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: validators
+Description-Content-Type: text/markdown
+
+# Simple TCP Client
+
+A simple interactive TCP client, written in Python. Basically a simple python version of netcat.
+
+## Installation
+
+```bash
+pip3 install simpletcpclient
+```
+
+## Usage
+
+```bash
+simpletcpclient <server> <port>
+```
+
+Simple TCP client also has built-in **autocomplete**, activated using the ```tab``` key. It currently supports basic HTTP and SMTP commands: ```GET```, ```Host:```, ```MAIL FROM:```, ```RCPT TO:``` etc.
+
+![Simple TCP Client](./stc.png)
