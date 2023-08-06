@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pidgan
+Version: 0.0.0
+Summary: GAN-based models to fast-simulate the LHCb PID detectors
+Author-email: Matteo Barbetti <matteo.barbetti@fi.infn.it>, Lucio Anderlini <lucio.anderlini@fi.infn.it>
+License: GPLv3 License
+Project-URL: repository, https://github.com/mbarbetti/pidgan
+Keywords: tensorflow,machine learning,deep learning,generative adversarial nets,lhcb experiment,lamarr,ultra-fast simulation,particle identification
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: <=3.10,>=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: standard
+Provides-Extra: advanced
+Provides-Extra: style
+Provides-Extra: tests
+License-File: LICENSE
+
+# pidgan
+GAN-based models to fast-simulate the LHCb PID detectors
