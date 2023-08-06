@@ -1,0 +1,148 @@
+Metadata-Version: 1.1
+Name: django-filtrate
+Version: 0.1.1
+Summary: Customizable Django Admin filters
+Home-page: https://github.com/Lenders-Cooperative/django-filtrate
+Author: Lenders-Cooperative
+Author-email: dgraves@thesummitgrp.com
+License: BSD
+Description: =============================
+        Django Filtrate
+        =============================
+        
+        .. image:: https://img.shields.io/badge/license-BSD-blue.svg
+           :target: https://github.com/Lenders-Cooperative/django-filtrate/blob/main/LICENSE
+        
+        .. image:: https://img.shields.io/pypi/v/django-filtrate.svg
+           :target: https://pypi.org/project/django-filtrate/
+        
+        .. image:: https://img.shields.io/pypi/pyversions/django-filtrate
+           :target: https://pypi.org/project/django-filtrate/
+        
+        .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+           :target: https://github.com/psf/black
+        
+        
+        Allow trusted users to create custom Django admin filters
+        
+        
+        Quickstart
+        ----------
+        
+        Install Django Filtrate::
+        
+            pip install django-filtrate
+        
+        Add it to your ``INSTALLED_APPS``:
+        
+        .. code-block:: python
+        
+            INSTALLED_APPS = (
+                ...
+                "filtrate",
+                ...
+            )
+        
+        1) Add the mixin
+        
+        .. code-block:: python
+        
+           class YourModelAdmin(FiltrateMixin, admin.ModelAdmin):
+               ...
+        
+        
+        2) Navigate to http://localhost:8000/admin/filtrate/filter
+        3) Add your new filter!
+        
+        How it works
+        ------------
+        As soon as you add the FiltrateMixin to your ModelAdmin, your model and admin
+        will be registered with Filtrate.  At this point, you can navigate to the Filtrate
+        admin page, and begin adding filters.
+        
+        Filtrate uses Django's built-in filtering to build it's ListFilters, by passing the `filters` field as arguments
+        to the queryset. See https://docs.djangoproject.com/en/dev/topics/db/queries/#retrieving-specific-objects-with-filters
+        for more details about filtering queries with Django.
+        
+        For example, let's say you have the following `Template` model:
+        
+        .. code-block:: python
+        
+          class Template(models.Model):
+              name = models.CharField(max_length=25)
+              is_active = models.BooleanField(default=True)
+              created_at = models.DateTimeField(auto_now_add=True)
+        
+              def __str__(self):
+                  return self.name
+        
+        If you wanted to build a filter for all active Templates created on or after 2023-01-01,
+        then your `Filter.filters` should look like:
+        
+        .. code-block:: python
+        
+          {
+              "is_active": True,
+              "created_at__gte": "2023-01-01",
+          }
+        
+        
+        Save it, and then voila, you have a new filter on your TemplateAdmin!
+        
+        Happy Filtering!
+        
+        
+        Features
+        --------
+        * ``Filter`` data model
+        * ``FiltrateMixin`` ModelAdmin mixin
+        
+        
+        TODO's
+        -------
+        * User-specific filters
+        * Export data
+        * `Add Filter` button on changelist
+        * Additional test coverage
+        * Setup tox
+        * More documentation
+        
+        
+        Local Development
+        -----------------
+        
+        ::
+        
+            make install
+            make test
+        
+        
+        Deployment
+        ----------
+        
+        ::
+        
+            make build
+            make deploy
+        
+        
+        License
+        -------
+        
+        This project is provided under the `BSD License <https://github.com/Lenders-Cooperative/django-filtrate/blob/main/LICENSE>`_.
+        
+Keywords: django-filtrate
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Django :: 3.2
+Classifier: Framework :: Django :: 4.0
+Classifier: Framework :: Django :: 4.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
