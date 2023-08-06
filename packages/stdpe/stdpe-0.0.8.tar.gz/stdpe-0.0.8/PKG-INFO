@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: stdpe
+Version: 0.0.8
+Summary: Steinemann DPE Libary
+Author: Joshoua Bigler
+License: MIT
+Platform: unix
+Platform: linux
+Platform: osx
+Platform: cygwin
+Platform: win32
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## Steinemann DPE
+![Tests](https://github.com/SteinemannDPE/Python_Libs/actions/workflows/deploy-stdpe-lib.yml/badge.svg)
+
+The Steinemann DPE (stdpe) library is a fast and easy to use library for the daily work.
+
+### Main Features
+**Azure**
+- Working with key vault
+- Working with azure storage account
+
+**Database kit**
+- Working with Microsoft SLQ database 
+
+**Utils**
+- Logging (Console/Azure)
+- Dictionary utilities
+- Pandas utilities
+- Stopwatch
+- World geodetic system (WGS 84)
+
