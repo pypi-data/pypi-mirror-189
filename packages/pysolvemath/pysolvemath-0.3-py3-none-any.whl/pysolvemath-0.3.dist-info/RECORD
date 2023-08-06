@@ -1,0 +1,11 @@
+pysolvemath/__init__.py,sha256=jTHQQlKW6ULhiwCIzygpHSnPTcLA5RpIlnpz29wpVB4,1722
+pysolvemath/control_flow.py,sha256=N5C-u3xDrhCdmrMP_hqx9Ohx6sHtr_OKgSCk7RatVlI,812
+pysolvemath/initial_guess.py,sha256=8vqfc3nqCTwlvrQNCEPRVOKQ9wXlrNJIcXUKdblnhPM,1100
+pysolvemath/parsing.py,sha256=bDhufHb0fszqQkY5EUI1gsUpNmcclPfFEqC7b1VLBFk,2719
+pysolvemath/solver.py,sha256=xj1gE29QiVPjmxGeyHi_SvKrOExC8_dkuLahC5ydSQk,2631
+pysolvemath/stop_solve.py,sha256=XTfIv2rvSZfMpKTOJE5Xk0wNQKErplMz1cfvTwHxmeE,556
+pysolvemath-0.3.dist-info/LICENSE,sha256=Wh8_4YxWLFyziYvjaJwJnqgYutqAImmnfXOZo7bCjYc,1068
+pysolvemath-0.3.dist-info/METADATA,sha256=SmGpHP0FCZ3beM4lgBiOs9oxXZzlnn39v8VZ0837kV8,1467
+pysolvemath-0.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+pysolvemath-0.3.dist-info/top_level.txt,sha256=VuROH2Nyrm0YZ6qDQ63uKvVIbNAsqMEzC6434Szg1-Y,12
+pysolvemath-0.3.dist-info/RECORD,,
