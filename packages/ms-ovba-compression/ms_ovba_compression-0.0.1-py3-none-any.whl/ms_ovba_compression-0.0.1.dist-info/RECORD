@@ -1,0 +1,9 @@
+ms_ovba_compression/__init__.py,sha256=7bhTTM96rRA3ll3Yi2RSDs-0h85mzN3H7gzoyxrupX4,52
+ms_ovba_compression/compressor.py,sha256=MziYJMc1uSr7cmj2Rnnk4HpEdyfoIUd0_twkZlTp2Vw,6923
+ms_ovba_compression/decompressor.py,sha256=Pa4d9ToNctSkbmScOil0XI0_SFSZQF16hQi9LVCsWLY,6129
+ms_ovba_compression/helpers.py,sha256=Cn5dhU76IAVWMWlwCou2lZMkjE1BCW9tVAYpb65xHFs,1136
+ms_ovba_compression-0.0.1.dist-info/LICENSE,sha256=Qv-ncaevwz1jJEqHISqrvG5VLqr7-F5x6kaRhB6V8JI,1071
+ms_ovba_compression-0.0.1.dist-info/METADATA,sha256=G-z7Vy3hGO-xN-tK2dm5dRuWiXghfRLYVI3VYpTVavY,3487
+ms_ovba_compression-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+ms_ovba_compression-0.0.1.dist-info/top_level.txt,sha256=Uw9ZQOVAFjP7RmLbypHxCG8G9nuFdnH0EcC6CpMB4hU,20
+ms_ovba_compression-0.0.1.dist-info/RECORD,,
