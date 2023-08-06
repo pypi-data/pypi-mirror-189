@@ -1,0 +1,10 @@
+sushipy/__init__.py,sha256=QG-JOgy4UM2LxEf749v0eo4RCAxSHbZgaVP88P1464c,528
+sushipy/execute.py,sha256=16IXOXpQik4ni7UVto8dxU4gjU8EUpVANW1oWMKCPX4,2075
+sushipy/index.py,sha256=arEqvF7loAMF61dLKuJq_4FeM7ES6wwiBLdLaMyr8P0,1648
+sushipy/cache/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sushipy/cache/main.py,sha256=2mhK1vY1Qe-0jI5q5Q7XLnlvZcH8bXFcrpZ9PYLa564,825
+sushipy-0.0.2.dist-info/LICENSE,sha256=1Ux1dsbxtIdTYCfLeRY9-GzLOXsuDK6BdVI-SRVoEwM,1087
+sushipy-0.0.2.dist-info/METADATA,sha256=FdIlFNAOb0_KVC9binYtzbT23j-hHdlaTuYLqDcCqfY,1056
+sushipy-0.0.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+sushipy-0.0.2.dist-info/top_level.txt,sha256=27_EJcW8iVABpPErC65lb2Y5fjLGEgapLbjzMUSIWXo,8
+sushipy-0.0.2.dist-info/RECORD,,
