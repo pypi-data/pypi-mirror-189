@@ -1,0 +1,9 @@
+README.md
+setup.py
+cacheall/__init__.py
+cacheall/cachetest.py
+cacheall.egg-info/PKG-INFO
+cacheall.egg-info/SOURCES.txt
+cacheall.egg-info/dependency_links.txt
+cacheall.egg-info/requires.txt
+cacheall.egg-info/top_level.txt
