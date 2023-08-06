@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: cinquis
+Version: 0.0.2
+Summary: Code Inquisitor Utilities
+Project-URL: Homepage, https://github.com/gcc71/cinquis
+Project-URL: Bug Tracker, https://github.com/gcc71/cinquis/issues
+Author-email: gcc71 <moore938@regis.edu>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
