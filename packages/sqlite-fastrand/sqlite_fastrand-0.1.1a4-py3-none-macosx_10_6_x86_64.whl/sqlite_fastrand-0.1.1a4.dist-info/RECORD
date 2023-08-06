@@ -1,0 +1,7 @@
+noop.cpython-311-darwin.so,sha256=1eNikAi9Dz78fJ4PxnLY0YBqQ0iEVvRoRcXYYPVAoB0,65895
+sqlite_fastrand/__init__.py,sha256=dEGb1LA4gLnidbyTn2YvKFHF5mtfOdkYzoToXQBlDUo,244
+sqlite_fastrand/fastrand0.dylib,sha256=t07bPtb9A67Y0b2gLZmpDTZeIjNVqrOew3GmWR41NW4,513352
+sqlite_fastrand-0.1.1a4.dist-info/METADATA,sha256=tLBMaV9-EZh0mlf6zWO3uGgFV1OY0Vv1fJw40RlV4do,521
+sqlite_fastrand-0.1.1a4.dist-info/WHEEL,sha256=2-XKWRF0X4zJt1h4iIXOteJtJqZatUw9M_5etqhVpiQ,115
+sqlite_fastrand-0.1.1a4.dist-info/top_level.txt,sha256=uJpLen17gtUxTnP_tfbtLzPomkSZ7v2wcIyEAZ4ZokE,21
+sqlite_fastrand-0.1.1a4.dist-info/RECORD,,
