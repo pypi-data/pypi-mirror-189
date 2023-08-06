@@ -1,0 +1,3 @@
+[console_scripts]
+llamalabs=llamalabs.client.console:llamalabs
+

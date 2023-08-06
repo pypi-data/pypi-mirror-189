@@ -1,0 +1,17 @@
+llamalabs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamalabs/agents/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamalabs/agents/api.py,sha256=xJsDJYsNf_lznY-n377dj169oTDjNh9AOT9xtqKm0cc,1751
+llamalabs/agents/code_shot.py,sha256=CXSHAYRcE93hvbHQvCWcd6lodTtenAtF1p6I_UCbXHs,4208
+llamalabs/agents/code_shot_test.py,sha256=NRwCHdIVuZGSsmQSjfSUyp4KdzY2ibQWvxN6rEJ6tnI,2426
+llamalabs/agents/utils.py,sha256=R4BjzI1PC7yo4bn6FEHRxAOIoZ-otyt3BQ68aTJFyqs,7070
+llamalabs/agents/utils_test.py,sha256=0ydYr6yFywj-ytbQAp3opxSwBpI_fSAmdCxBznS9ZP8,2432
+llamalabs/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamalabs/client/client.py,sha256=e1ixbaESz_vT5CTGI03D_sBmjco8mgbBvgddsQX36YU,4954
+llamalabs/client/client_test.py,sha256=d3HlVXERZY3fCQW8dkmx3VbmobCPfLQQIweVdZCupTI,2228
+llamalabs/client/console.py,sha256=6LkRn3sifsJbQbmPAgLlQzZ876VHjGZioV61ZRyy_lI,4243
+llamalabs/client/session.py,sha256=mmKXSu-_ezjWAj0kNOBetAuiqVBx9IiOAhp6O-m-Bqs,7805
+llamalabs-0.1.1.dist-info/entry_points.txt,sha256=3iACyBbhDPmoujptGxyg9A6Hiv444NjOdgE2R_PLdKI,64
+llamalabs-0.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+llamalabs-0.1.1.dist-info/WHEEL,sha256=gSF7fibx4crkLz_A-IKR6kcuq0jJ64KNCkG8_bcaEao,88
+llamalabs-0.1.1.dist-info/METADATA,sha256=4EQwxgOP7yFVct5Ycl-TUcTFJjnl6RXpw_dIpjROVQ0,710
+llamalabs-0.1.1.dist-info/RECORD,,
