@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.11.0"]
+build-backend = "hatchling.build"
+#
+[tool.hatch.build]
+ignore-vcs = true
+only-packages = true
+include = [
+  "src/*.py",
+  "/tests",
+]
+#
+[tool.hatch.script]
+
+[tool.hatch.build.sources]
+"src/uniqcharstest7/" = "uniqcharstest"
+
+#
+#[project]
+#name = "uniqcharstest7"
+#description = "Modern, extensible Python project"
+#readme = "README.md"
+#license = "LICENSE"
+#requires-python = ">=3.8"
+#authors = [{ name = "DIHTIAR VADYM", email = "dihtiar.vadym@gmail.dev" }]
+#classifiers = [
+#  "Development Status :: Production/Stable",
+#  "Intended Audience :: Developers",
+#  "License :: OSI Approved :: MIT License",
+#  "Natural Language :: English",
+#  "Operating System :: OS Independent",
+#  "Programming Language :: Python :: 3.8",
+#  "Topic :: Software Development :: Build Tools",
+#]
+#dependencies = ["pytest==7.2.0"]
+
