@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: etlgpx
+Version: 0.1.6
+Summary: A small python package for simple etl processing of gpx tracks
+Home-page: https://godatadriven.com/blog/a-practical-guide-to-setuptools-and-pyproject-toml
+Author: Piotr Szmelczynski
+Author-email: piotr.szmelczynski@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# GPX-TRACKS-ETL
+
+1. pip3 install -e . -r requirements.txt
+
+python3 etlgpx/main.py
+etlgpx pipeline

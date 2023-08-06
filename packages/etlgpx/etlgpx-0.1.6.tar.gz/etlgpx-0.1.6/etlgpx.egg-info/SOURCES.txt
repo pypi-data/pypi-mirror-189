@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+etlgpx/cli.py
+etlgpx/main.py
+etlgpx/processor.py
+etlgpx.egg-info/PKG-INFO
+etlgpx.egg-info/SOURCES.txt
+etlgpx.egg-info/dependency_links.txt
+etlgpx.egg-info/entry_points.txt
+etlgpx.egg-info/not-zip-safe
+etlgpx.egg-info/requires.txt
+etlgpx.egg-info/top_level.txt
