@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: Ziplit.Tuser
+Version: 0.1.0
+Summary: Tuser allows you to create databases for users of your project.
+Home-page: 
+Author: Daniil Baikalov
+Author-email: felix.trof@gmail.com
+License: GNU
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+file: README.md
