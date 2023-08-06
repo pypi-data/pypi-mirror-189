@@ -1,0 +1,6 @@
+rustpy/__init__.py,sha256=28T3JL86M2OVadxkHnIFW9nNj-lUuusTVl0cnMqEXIo,75
+rustpy/_rustpy.cpython-37m-darwin.so,sha256=z5Y3aB0oaSNc0S6QaDft7hwLpDup3xtMMd4Y5uo4fyM,519192
+rustpy-0.0.0.dist-info/METADATA,sha256=_AKqeDbh7zp5_6DjQ84FrrB8gdPqAs5WAP9O8SqJJPQ,3442
+rustpy-0.0.0.dist-info/WHEEL,sha256=KvHHByUTP2MbKQ1p8Pj-CAXJ8Vq4aohhjG0KKHGcnf4,110
+rustpy-0.0.0.dist-info/top_level.txt,sha256=SI0NqH78d-o_aTVvn_RYa40DwhvvIblXD2KHJkZSLVg,7
+rustpy-0.0.0.dist-info/RECORD,,
