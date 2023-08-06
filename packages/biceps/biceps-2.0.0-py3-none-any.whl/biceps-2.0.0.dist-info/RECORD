@@ -1,0 +1,15 @@
+biceps/Analysis.py,sha256=0Li5rkMLVhBgQx0TojssZmodBPr7PpEKG-sHakeQ3PU,20093
+biceps/J_coupling.py,sha256=o494as9R8oOzwWJzgfr44nP3_DSOCx6RCDl68ZDF6K8,3931
+biceps/KarplusRelation.py,sha256=Q8HCePwLksub5Ejn1Lbsx8yxyrSmSAtP_1CiHqLCe1w,5281
+biceps/PosteriorSampler.py,sha256=b_uVEjIfqeD2xe7JjjlnZcufCVbP_txq3GG9svHrbuA,24123
+biceps/Restraint.py,sha256=hAPDBLRyAfoYggjRfWZm1QLL4cQPvDwPMdWuukpjkmk,50981
+biceps/__init__.py,sha256=qICBhBKEVl2ecY1IRzbJi833vG3OpwOAV3NxN9Fchhk,848
+biceps/convergence.py,sha256=eR0KInfz3vkLrKY9Azaa1a-THkYiDtP-sEofCEE2e44,27694
+biceps/decorators.py,sha256=_joQVSn-ysN6K4YfzQ39bDpydtgMK4vmqUXitU6-4oY,2372
+biceps/toolbox.py,sha256=--xksQF7mxyq4cNFzdUGSAnQ81zaTUD2MdgTlH0AC7k,34742
+biceps-2.0.0.dist-info/AUTHORS,sha256=8wAyw1qrFpJhHvRTAzARSPAWvxuG2FT-uwgPNn6eI_c,118
+biceps-2.0.0.dist-info/COPYING,sha256=bv4gf1hHrasnbxEtZzSFr6PFHTlc2miiAm2XDOrU6r0,18104
+biceps-2.0.0.dist-info/METADATA,sha256=oHfc8XXEmBKgzIBp9_br-Ch0ae9xOQEPiibgOBP_fY4,4346
+biceps-2.0.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+biceps-2.0.0.dist-info/top_level.txt,sha256=h-Y8yDp76krDzhsuwHT9gDKqUgA2HWkwtDZF3ElSuxo,7
+biceps-2.0.0.dist-info/RECORD,,
