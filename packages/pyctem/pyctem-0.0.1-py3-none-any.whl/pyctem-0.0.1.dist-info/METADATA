@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: pyctem
+Version: 0.0.1
+Summary: A Python based toolset for computational S/TEM
+Author-email: Tore Niermann <tore.niermann@tu-berlin.de>
+License: Copyright (c) 2023, Tore Niermann
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are
+        met:
+        
+            * Redistributions of source code must retain the above copyright
+              notice, this list of conditions and the following disclaimer.
+        
+            * Redistributions in binary form must reproduce the above
+              copyright notice, this list of conditions and the following
+              disclaimer in the documentation and/or other materials provided
+              with the distribution.
+        
+            * Neither the name of the NumPy Developers nor the names of any
+              contributors may be used to endorse or promote products derived
+              from this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+        "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+        LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+        A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+        OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+        SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+        LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+        DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+        THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+        (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: homepage, https://example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: scipy
+
+PyCTEM - A Python based toolset for computational S/TEM
+=======================================================
+
+*PyCTEM* - short for **Py**thon-based toolset for **c**omputational (scanning-) 
+transmission electron microscopy (**TEM**).
+Under the term computational S/TEM we understand the computer-based part of transmission
+electron microscopy, meaning scattering simulations, data evaluations as well
+as data visualization. 
+
+The core of *PyCTEM* is a Python library, which provides functions 
+and classes allowing a fine-grained control over the individual steps of
+these use cases. On top of this library it features several high level Python entry points as well as
+command line tools. 
+
+The *PyCTEM* package is currently under development. It will eventually feature the
+full functionality of the internal Python toolset developed over the
+last decade for computational TEM at the Technische Universität Berlin.
