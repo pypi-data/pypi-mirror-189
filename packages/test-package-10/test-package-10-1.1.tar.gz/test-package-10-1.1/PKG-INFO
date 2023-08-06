@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: test-package-10
+Version: 1.1
+Summary: UNKNOWN
+Home-page: https://homepage
+Author: xiaoFei
+Author-email: 1228372188@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+made by george-fly,just for testing
+
