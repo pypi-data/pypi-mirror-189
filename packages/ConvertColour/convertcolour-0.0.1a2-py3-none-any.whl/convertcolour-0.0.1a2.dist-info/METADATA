@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: ConvertColour
+Version: 0.0.1a2
+Summary: A simple Python colour converter!
+Project-URL: Documentation, http://convertcolour.rtfd.io/
+Project-URL: Homepage, https://github.com/Pigeon43/ConvertColour
+Project-URL: Issues / Bugs, https://github.com/Pigeon43/ConvertColour/issues
+Project-URL: PyPI, https://pypi.org/project/convertcolour/
+Project-URL: Support Server, https://discord.gg/MyPTZBH4Q8
+Author-email: Pigeon43 <rapidpigeon43@gmail.com>
+License: The MIT License (MIT)
+        
+        Copyright (c) 2023-present Pigeon43
+        
+        Permission is hereby granted, free of charge, to any person obtaining a
+        copy of this software and associated documentation files (the "Software"),
+        to deal in the Software without restriction, including without limitation
+        the rights to use, copy, modify, merge, publish, distribute, sublicense,
+        and/or sell copies of the Software, and to permit persons to whom the
+        Software is furnished to do so, subject to the following conditions:
+        The above copyright notice and this permission notice shall be included in
+        all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+        OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+        FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+        DEALINGS IN THE SOFTWARE.
+License-File: LICENSE
+Keywords: RGB,RYB,color,color converter,colour,colour converter,convert,converter,hex
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Multimedia :: Graphics :: Graphics Conversion
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# <img width="36" style="vertical-align: bottom; padding-bottom: 2px; margin-right: 7px;" src="https://github.com/Pigeon43/ConvertColour/blob/main/assets/logo-purple.png" />ConvertColour</h1>
+> *A simple, no fuss Python module for converting between different colour models!*
+
+[<img align="left" style="margin-right: 7px;" src="https://github-readme-stats.vercel.app/api/pin/?username=Pigeon43&repo=ConvertColour&theme=transparent&title_color=ffb000&icon_color=785ef0text_color=bcb6ad&&locale=en" />](https://github.com/Pigeon43/ConvertColour)
+
+<a href="https://pypi.org/project/convertcolour"><img src="https://img.shields.io/pypi/v/ConvertColour?label=Version" /></a> <a href="https://pypi.org/project/convertcolour"><img src="https://img.shields.io/pypi/status/ConvertColour?label=Status" /></a> <a href="http://convertcolour.rtfd.io/"><img src="https://img.shields.io/readthedocs/convertcolour?label=Docs" /></a>
+
+<a href="https://pypi.org/project/convertcolour"><img src="https://img.shields.io/pypi/pyversions/ConvertColour?label=Python" /></a> <a href="https://github.com/Pigeon43/ConvertColour/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/ConvertColour?label=License" /></a> <a href="https://github.com/Pigeon43/ConvertColour"><img src="https://img.shields.io/github/languages/code-size/Pigeon43/ConvertColour?label=Size" /></a>
+
+<a href="https://github.com/Pigeon43/ConvertColour"><img src="https://img.shields.io/github/downloads/Pigeon43/ConvertColour/total?label=GitHub%20Downloads" /></a> <a href="https://pypi.org/project/convertcolour"><img src="https://img.shields.io/pypi/dd/ConvertColour?label=PyPI%20Downloads" /></a> <a href="https://github.com/Pigeon43/ConvertColour"><img src="https://img.shields.io/github/issues-raw/Pigeon43/ConvertColour?label=Issues" /></a>
+<!-- <a href="https://github.com/Pigeon43/ConvertColour"><img src="https://img.shields.io/github/checks-status/Pigeon43/ConvertColour/main?label=Checks" /></a> -->
+
+## <img width="24" style="vertical-align: bottom; padding-bottom: 2px; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/light/color-fg-default/tools-24.svg#gh-light-mode-only" alt="" /><img width="24" style="vertical-align: bottom; padding-bottom: 2px; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/dark/color-fg-default/tools-24.svg#gh-dark-mode-only" alt="" />Features
+Supports the following colour models:
+* Hex
+* RGB
+* RYB
+
+### <img width="22" style="vertical-align: bottom; padding-bottom: 0.5px; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/light/color-fg-default/clock-24.svg#gh-light-mode-only" alt="" /><img width="22" style="vertical-align: bottom; padding-bottom: 0.5px; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/dark/color-fg-default/clock-24.svg#gh-dark-mode-only" alt="" />Planned / In Progress
+> *If there is a colour model you want added, open a request [here](https://github.com/Pigeon43/ConvertColour/issues/new?assignees=Pigeon43&labels=%F0%9F%8F%97+Enhancement&template=colour-model-request.md&title=Colour+model+request%3A+).*
+* CMY, CMYK
+* YUV
+* CIE colour spaces
+* HSL, HSV
+* Human colour spaces (RAL, Munsell, PANTONE)
+* And more!
+
+## <img width="24" style="vertical-align: bottom; padding-bottom: 2px; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/light/color-fg-default/link-24.svg#gh-light-mode-only" alt="" /><img width="24" style="vertical-align: bottom; padding-bottom: 2px; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/dark/color-fg-default/link-24.svg#gh-dark-mode-only" alt="" />Links
+#### <img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/light/color-fg-default/book-16.svg#gh-light-mode-only" alt="" /><img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/dark/color-fg-default/book-16.svg#gh-dark-mode-only" alt="" />[Documentation](http://convertcolour.rtfd.io/)
+#### <img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/light/color-fg-default/mark-github-16.svg#gh-light-mode-only" alt="" /><img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/dark/color-fg-default/mark-github-16.svg#gh-dark-mode-only" alt="" />[Homepage](https://github.com/Pigeon43/ConvertColour)
+#### <img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/light/color-fg-default/bug-16.svg#gh-light-mode-only" alt="" /><img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/dark/color-fg-default/bug-16.svg#gh-dark-mode-only" alt="" />[Issues / Bugs](https://github.com/Pigeon43/ConvertColour/issues)
+#### <img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/light/color-fg-default/package-16.svg#gh-light-mode-only" alt="" /><img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/dark/color-fg-default/package-16.svg#gh-dark-mode-only" alt="" />[PyPI](https://pypi.org/project/convertcolour/)
+#### <img width="18" style="vertical-align: middle; padding-bottom: 2px; margin-right: 7px;" src="https://github.com/Pigeon43/Discord-icons/blob/main/light/header-primary/discordMark.svg#gh-light-mode-only" alt="" /><img width="18" style="vertical-align: bottom; padding-bottom: 2px; margin-right: 7px;" src="https://github.com/Pigeon43/Discord-icons/blob/main/dark/header-primary/discordMark.svg#gh-dark-mode-only" alt="" />[Support Server](https://discord.gg/MyPTZBH4Q8)
+
+## <img width="24" style="vertical-align: bottom; padding-bottom: 2px; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/light/color-fg-default/info-24.svg#gh-light-mode-only" alt="" /><img width="24" style="vertical-align: bottom; padding-bottom: 2px; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/dark/color-fg-default/info-24.svg#gh-dark-mode-only" alt="" />Help
+#### <img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/light/color-fg-default/diff-16.svg#gh-light-mode-only" alt="" /><img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/dark/color-fg-default/diff-16.svg#gh-dark-mode-only" alt="" />[Changelog](https://github.com/Pigeon43/ConvertColour/blob/main/CHANGELOG.md)
+#### <img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/light/color-fg-default/people-16.svg#gh-light-mode-only" alt="" /><img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/dark/color-fg-default/people-16.svg#gh-dark-mode-only" alt="" />[Contributing guidelines](https://github.com/Pigeon43/ConvertColour/blob/main/CONTRIBUTING)
+#### <img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/light/color-fg-default/download-16.svg#gh-light-mode-only" alt="" /><img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/dark/color-fg-default/download-16.svg#gh-dark-mode-only" alt="" />[Installation](https://github.com/Pigeon43/ConvertColour/blob/main/INSTALL.md)
+#### <img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/light/color-fg-default/law-16.svg#gh-light-mode-only" alt="" /><img width="18" style="vertical-align: bottom; margin-right: 7px;" src="https://github.com/Pigeon43/GitHub-icons/blob/main/dark/color-fg-default/law-16.svg#gh-dark-mode-only" alt="" />[License](https://github.com/Pigeon43/ConvertColour/blob/main/LICENSE)
