@@ -1,0 +1,9 @@
+cdk_cloudformation_cloudflare_dns_record/__init__.py,sha256=kCTKfdTYCuaTMEN_1B0v6NeilcSrwXssBjK3nCmZ8tc,13768
+cdk_cloudformation_cloudflare_dns_record/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cdk_cloudformation_cloudflare_dns_record/_jsii/__init__.py,sha256=TcOtG5TMVhCIek3z_0sxePzrAzOqgnsUZg1rwluCueU,458
+cdk_cloudformation_cloudflare_dns_record/_jsii/cloudflare-dns-record@1.0.0-alpha.6.jsii.tgz,sha256=oB_QEslCIY9_YXozfdxdqnSWN0Dy9G6-vKMrziVrMaY,20494
+cdk_cloudformation_cloudflare_dns_record-1.0.0a6.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+cdk_cloudformation_cloudflare_dns_record-1.0.0a6.dist-info/METADATA,sha256=89kwHT_UBJ8HMdPYdelwguI_wFXTZ7b1PLfXupF3qKs,3197
+cdk_cloudformation_cloudflare_dns_record-1.0.0a6.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+cdk_cloudformation_cloudflare_dns_record-1.0.0a6.dist-info/top_level.txt,sha256=DFFd1T3tRPNh9pybnMQDwAHo-jIQqkNmdgvJJ7V1BOw,41
+cdk_cloudformation_cloudflare_dns_record-1.0.0a6.dist-info/RECORD,,
