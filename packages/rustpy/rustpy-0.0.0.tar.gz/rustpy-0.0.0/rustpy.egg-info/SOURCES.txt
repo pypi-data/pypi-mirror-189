@@ -1,0 +1,13 @@
+Cargo.toml
+MANIFEST.in
+README.md
+pyproject.toml
+requirements-setup.txt
+setup.py
+rustpy/__init__.py
+rustpy.egg-info/PKG-INFO
+rustpy.egg-info/SOURCES.txt
+rustpy.egg-info/dependency_links.txt
+rustpy.egg-info/not-zip-safe
+rustpy.egg-info/top_level.txt
+src/lib.rs
