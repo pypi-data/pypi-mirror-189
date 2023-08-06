@@ -1,0 +1,8 @@
+README.md
+setup.py
+MathisN_Ex8_9.egg-info/PKG-INFO
+MathisN_Ex8_9.egg-info/SOURCES.txt
+MathisN_Ex8_9.egg-info/dependency_links.txt
+MathisN_Ex8_9.egg-info/top_level.txt
+Package_Calculator/Calculator.py
+Package_Calculator/__init__.py
