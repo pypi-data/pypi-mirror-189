@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+kafka_rest/__init__.py
+kafka_rest/kafka_rest.py
+nlp_kafka_rest_api.egg-info/PKG-INFO
+nlp_kafka_rest_api.egg-info/SOURCES.txt
+nlp_kafka_rest_api.egg-info/dependency_links.txt
+nlp_kafka_rest_api.egg-info/requires.txt
+nlp_kafka_rest_api.egg-info/top_level.txt

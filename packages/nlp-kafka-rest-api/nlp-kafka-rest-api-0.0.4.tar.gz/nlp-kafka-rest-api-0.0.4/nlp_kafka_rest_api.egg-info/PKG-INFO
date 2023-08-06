@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: nlp-kafka-rest-api
+Version: 0.0.4
+Summary: Kafka REST API
+Author: X251258
+Author-email: X251258@one.merckgroup.com
+Keywords: kafka,rest,api,batch,processing
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+
+This package is a wrapper for REST API requests to Kafka Proxy.
