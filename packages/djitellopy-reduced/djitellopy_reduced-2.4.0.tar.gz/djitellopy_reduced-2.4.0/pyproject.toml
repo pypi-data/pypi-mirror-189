@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "djitellopy_reduced"
+version = "2.4.0"
+description = "Tello drone library including support for video streaming, swarms, state packets and more. Removed unnecessary functions to reduce dependencies."
+authors = ["Jakob Löw <djitellopy@m4gnus.de>", "wcyat <wcyat@wcyat.me>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+
+[tool.poetry.dev-dependencies]
+numpy = "^1.24.1"
+opencv-python = "^4.7.0"
+pygame = "^2.1.2"
+mkdocs = "^1.4.2"
+mkdocs-material = "^9.0.11"
+mkdocstrings = "^0.20.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

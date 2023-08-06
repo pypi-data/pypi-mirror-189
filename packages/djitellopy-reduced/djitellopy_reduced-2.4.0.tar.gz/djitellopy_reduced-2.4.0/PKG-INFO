@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: djitellopy-reduced
+Version: 2.4.0
+Summary: Tello drone library including support for video streaming, swarms, state packets and more. Removed unnecessary functions to reduce dependencies.
+License: MIT
+Author: Jakob Löw
+Author-email: djitellopy@m4gnus.de
+Requires-Python: >=3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
