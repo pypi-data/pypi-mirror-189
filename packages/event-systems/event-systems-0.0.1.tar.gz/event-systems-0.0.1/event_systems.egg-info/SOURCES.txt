@@ -1,0 +1,10 @@
+LICENCE
+README.md
+pyproject.toml
+event_systems.egg-info/PKG-INFO
+event_systems.egg-info/SOURCES.txt
+event_systems.egg-info/dependency_links.txt
+event_systems.egg-info/top_level.txt
+events_system/__init__.py
+events_system/event_listener.py
+events_system/events_system.py
