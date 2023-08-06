@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: turtlepolishedition
+Version: 0.0.1
+Summary: This PythonTurtle in polish commands.
+Home-page: https://github.com/ChomisiowiecGamer/turtlepolish
+Author: DaytimeSpore380
+Author-email: daytimespore380.light@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PythonTurtle
+
+Description
+===========
+
+This is PythonTurtle module in polish commands
+
+
+Instalation
+===========
+
+For the module to work properly, you need python version 3.11 (or higher)
+
+Windows 10/11
+Please open cmd or PowerShell and write:
+ pip install TurtlePolish
+
+MacOS
+Please open command line and write:
+ python -m pip install TurtlePolish
+
+Thanks to
+=========
+
+DaytimeSpore380
