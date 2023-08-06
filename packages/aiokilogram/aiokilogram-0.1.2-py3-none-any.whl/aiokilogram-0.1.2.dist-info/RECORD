@@ -1,0 +1,17 @@
+aiokilogram/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiokilogram/action.py,sha256=Q17WvgwZFup6JxKxrKlulc4PbN8MD0gmB2vNz9a-090,5458
+aiokilogram/bot.py,sha256=5Afpip5pw-Zb5xwVyN-hiTM2k8Mp3iDeUvkXB4rLCr4,1437
+aiokilogram/data.py,sha256=vUqAIMVmGYI1k0xpduvrcHMtTSK7CCuHi3OBxTXrJIE,1952
+aiokilogram/dispatcher.py,sha256=K2THCZixEM2QzMjn2985Foy5B_5LWcs_y4JOmXEXACI,1498
+aiokilogram/errors.py,sha256=BU8zhLHyewITOAnhOugq9r4AiI8FPA28g4nGX2RbUUo,2669
+aiokilogram/handler.py,sha256=foTprxPEqKaClVlPkGsUySSSlfoe9z-dAc-235JYhG8,3403
+aiokilogram/messenger.py,sha256=DWb_zrHeJqMJRe4qkmM3Z-WK3z1LPGtNmDGhHf8y0yQ,438
+aiokilogram/page.py,sha256=_iXnPrgYmjiBQ7ViqVeObZY1yaA2e2UOSDCrcfKvOgE,2788
+aiokilogram/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiokilogram/registration.py,sha256=XFkkTIbHops10FHntDUMXSWTOZvzdpP5UBwbTCnET1c,2332
+aiokilogram/settings.py,sha256=g5XN09akicA2Mq2qi_g-tplGJCHvGttYnw4yJH1JvmE,230
+aiokilogram-0.1.2.dist-info/LICENSE,sha256=pyhqjIsFfdNPFpJ1MJiWHqi2BjMGr8fxS-FF9oRbiHM,1074
+aiokilogram-0.1.2.dist-info/METADATA,sha256=GKrrS4yKggbP8J_jgDrQhGHa_9bI5Vhi1JXdEg2PEPI,6283
+aiokilogram-0.1.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+aiokilogram-0.1.2.dist-info/top_level.txt,sha256=aV1QBUjsrOBx9bFhOf1dSWqGTvZKjtbNF2AZiDU09Zk,12
+aiokilogram-0.1.2.dist-info/RECORD,,
