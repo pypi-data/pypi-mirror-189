@@ -1,0 +1,9 @@
+LICENSE.text
+README.md
+pyproject.toml
+src/Neurone.egg-info/PKG-INFO
+src/Neurone.egg-info/SOURCES.txt
+src/Neurone.egg-info/dependency_links.txt
+src/Neurone.egg-info/top_level.txt
+src/neurone/Debug.py
+src/neurone/__init__.py
