@@ -1,0 +1,12 @@
+astropy
+astroquery
+matplotlib
+scipy
+emcee
+pandas
+matplotlib
+numpy
+lxml
+termcolor
+uncertainties
+multiprocess
