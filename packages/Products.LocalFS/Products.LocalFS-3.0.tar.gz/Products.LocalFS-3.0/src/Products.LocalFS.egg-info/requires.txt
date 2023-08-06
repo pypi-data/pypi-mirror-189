@@ -1,0 +1,6 @@
+setuptools
+Zope
+Products.PythonScripts
+
+[docs]
+Sphinx
