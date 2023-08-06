@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: CounterOfVisit
+Version: 0.2
+Summary: A package to count the number of visits
+Home-page: UNKNOWN
+Author: Johan Polsinelli
+Author-email: johan.polsinelli@gmail.com
+License: UNKNOWN
+Description: Commands:
+            count: create a file who has the storage for the number of
+            visit and dictionnary
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
