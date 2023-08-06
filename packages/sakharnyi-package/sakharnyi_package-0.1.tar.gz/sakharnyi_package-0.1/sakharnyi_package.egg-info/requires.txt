@@ -1,0 +1,8 @@
+numpy
+scikit-learn
+hyperopt
+pandas
+copy
+itertools
+re
+fuzzywuzzy

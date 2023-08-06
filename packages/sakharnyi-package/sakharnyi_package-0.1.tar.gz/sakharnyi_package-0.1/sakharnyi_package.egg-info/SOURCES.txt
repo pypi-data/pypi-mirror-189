@@ -1,0 +1,7 @@
+README.md
+setup.py
+sakharnyi_package.egg-info/PKG-INFO
+sakharnyi_package.egg-info/SOURCES.txt
+sakharnyi_package.egg-info/dependency_links.txt
+sakharnyi_package.egg-info/requires.txt
+sakharnyi_package.egg-info/top_level.txt
