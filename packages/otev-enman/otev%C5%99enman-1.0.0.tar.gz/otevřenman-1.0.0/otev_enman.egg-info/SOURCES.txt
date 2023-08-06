@@ -1,0 +1,14 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.py
+osman/__init__.py
+osman/config.py
+osman/environment.py
+osman/osman.py
+osman/template.py
+otev_enman.egg-info/PKG-INFO
+otev_enman.egg-info/SOURCES.txt
+otev_enman.egg-info/dependency_links.txt
+otev_enman.egg-info/requires.txt
+otev_enman.egg-info/top_level.txt
