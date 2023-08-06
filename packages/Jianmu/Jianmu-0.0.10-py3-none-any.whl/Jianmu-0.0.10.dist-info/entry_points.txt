@@ -1,0 +1,2 @@
+[console_scripts]
+jianmu = jianmu.cli:parse
