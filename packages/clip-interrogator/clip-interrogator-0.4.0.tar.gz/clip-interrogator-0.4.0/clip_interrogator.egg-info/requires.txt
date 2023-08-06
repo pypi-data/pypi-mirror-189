@@ -1,0 +1,10 @@
+Pillow
+blip-vit
+open_clip_torch
+requests
+torch
+torchvision
+tqdm
+
+[dev]
+pytest
