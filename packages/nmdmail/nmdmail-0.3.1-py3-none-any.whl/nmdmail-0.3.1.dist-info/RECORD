@@ -1,0 +1,11 @@
+nmdmail/__init__.py,sha256=LKTeZjmAWuGEZeerLqY4wr7YTqJNXkS4MDCxw0IgOzs,73
+nmdmail/api.py,sha256=_LM2zce9m1b89uxT1g4lUONdEiVaNrkqATMaQGV3ciU,4905
+nmdmail/cli.py,sha256=7I9WBaIsH1yOVmTpreXwyWjlP29smG9GBJlQGe6c5mI,2643
+nmdmail/default.css,sha256=Ina5MZGozTfUxByh9ErrooYsH-5UddsP3X3mAiILS0w,901
+nmdmail/helpers.py,sha256=BUUPyKz4KtSrEECgbKwQ1mcW300801-19pm-zeCxbJU,711
+nmdmail/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nmdmail-0.3.1.dist-info/METADATA,sha256=gsCX8xYSNWwLc-Iyg_DqAQKkKcjnjyPhXx9K-V8tIo4,6648
+nmdmail-0.3.1.dist-info/entry_points.txt,sha256=PUBbxw6WEqpmiKFvNsX406yxCzdQnZ_AQRNvp1ZhE4U,44
+nmdmail-0.3.1.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+nmdmail-0.3.1.dist-info/LICENSE,sha256=bKNWjALGSdLoR-110ReemWDb9tQmNZ2Io_D_kuNSvNI,1281
+nmdmail-0.3.1.dist-info/RECORD,,
