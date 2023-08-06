@@ -1,0 +1,3 @@
+[console_scripts]
+dicomsort=dicomsort:main
+
