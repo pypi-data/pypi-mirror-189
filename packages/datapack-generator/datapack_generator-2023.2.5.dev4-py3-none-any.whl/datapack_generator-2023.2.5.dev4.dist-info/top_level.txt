@@ -1,0 +1,2 @@
+datapack_generator
+generator

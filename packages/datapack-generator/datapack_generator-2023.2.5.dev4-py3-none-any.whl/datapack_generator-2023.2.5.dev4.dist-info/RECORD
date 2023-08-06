@@ -1,0 +1,14 @@
+datapack_generator/__init__.py,sha256=NkkidcwRh4lnVnsWKuMyJgnGwcP7dipT-EjO2MtD98s,50
+datapack_generator/core.py,sha256=lpX59KUxFy0QyL8eU8yHohficyFLzSiXAMrXGGtxPaE,1011
+datapack_generator/lib.py,sha256=ZYacWBWmIrB7Xb17YRt7RgOlrwNn5XnSJ0NIVYeylJM,1929
+datapack_generator/error/__init__.py,sha256=m_KE_wzhbSjnNlUTC6MthraQ6F-soh_jqYz18Cvcaf8,34
+datapack_generator/error/file_format_error.py,sha256=jIJqlr1_AETPdgIKFv9tLO3ol6B6i748dKTp15nxQ7k,102
+datapack_generator/parser/__init__.py,sha256=njgR_CkWc-YMjIa6dJ8BYhfUzmaThO75hqaTW8cGMCw,21
+datapack_generator/parser/meta.py,sha256=70p7S1JzoYccB19AM-pROZ5Ht18BGnlnuF6y_uD-Eno,1024
+datapack_generator/parser/script/__init__.py,sha256=6i7EAgwMr13WYOT2DfKastVvDCRm1EMSypDtkLzWOCc,59
+datapack_generator/parser/script/parser.py,sha256=3zIWDYx256mwGkhNrBT9EBL4kUkVyLsB-OI-jKqRPJs,1980
+datapack_generator-2023.2.5.dev4.dist-info/LICENSE,sha256=miZSzaGB7lA3YeeYseeM_VO31VS84SSzRMiOComnH4o,1065
+datapack_generator-2023.2.5.dev4.dist-info/METADATA,sha256=ExyMjWLFzI3fpKslFSA7hIZDvdnfDo7bPIwz7U_W7H4,421
+datapack_generator-2023.2.5.dev4.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+datapack_generator-2023.2.5.dev4.dist-info/top_level.txt,sha256=PogL5ZxyEb1KbVKUzXJKEmDZSUG1nCnOVYYLA03F6XY,29
+datapack_generator-2023.2.5.dev4.dist-info/RECORD,,

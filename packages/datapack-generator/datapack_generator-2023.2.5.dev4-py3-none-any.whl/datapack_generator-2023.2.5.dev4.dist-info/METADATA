@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: datapack-generator
+Version: 2023.2.5.dev4
+Project-URL: Homepage, https://github.com/copecone/datapack-generator
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Datapack Generator
+
+This Library is still in Development
