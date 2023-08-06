@@ -1,0 +1,8 @@
+ruuvibot/__init__.py,sha256=3G3n-6aBRbneO_4Tw5d8tLNxL5ADq7W56vfTpobXPec,48
+ruuvibot/dbdata/heatcontrol.sqlite,sha256=jGJ8OdiGeMock0gTn1NTngj34cnff_oTSyurRgCU-Ow,12288
+ruuvibot/ruuvibot.py,sha256=NMIqda74T5vNdV5wqgaXlWfQ-PrU6oJBndwSEv5ts-k,8547
+ruuvibot/settings.example.json,sha256=mVPIy_W3-vUBtu3YrzHc2Y6cOMa8Yk7QNYlDUk27UWs,175
+ruuvibot-0.7.6.dist-info/entry_points.txt,sha256=a0Nu5F3GsnBbEeff_OhfVhT3Db4gc03--rndyBm5Zr0,42
+ruuvibot-0.7.6.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+ruuvibot-0.7.6.dist-info/METADATA,sha256=UZ1Z-PE6U3tksRhh5Yo0IoDQKw4w5-VqivdUQ7_IboY,560
+ruuvibot-0.7.6.dist-info/RECORD,,
