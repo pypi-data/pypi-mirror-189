@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pynami
+Version: 0.0.1
+Summary: Deep Learning - Transformers
+Home-page: https://github.com/Fei-Wang/dl-transformers
+Author: Fei Wang
+Author-email: fei.comm@icloud.com
+License: MIT
+Keywords: artificial intelligence,deep learning
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: gradio (==3.17.0)
+Requires-Dist: mmengine (==0.4.0)
+Requires-Dist: transformers (==4.25.1)
+Requires-Dist: torch (==1.13.1)
+Requires-Dist: numpy (==1.24.1)
+Requires-Dist: seqeval (==1.2.2)
+Requires-Dist: setuptools (==47.1.0)
+
+* nami = transformers + mmengine
+* nami = not an mmlab implementation
