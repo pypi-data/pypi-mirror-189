@@ -1,0 +1,14 @@
+include *.txt
+include *.md
+include *.pkl
+
+include ./contract_nli/config/*.py
+include ./contract_nli/config/*.yaml
+include ./contract_nli/preprocessing/*.py
+include ./contract_nli/trained_model/*.pth
+include ./contract_nli/*.py
+include ./contract_nli/VERSION
+
+
+include ./requirements/requirements.txt
+include ./requirements/test_requirements.txtpy
