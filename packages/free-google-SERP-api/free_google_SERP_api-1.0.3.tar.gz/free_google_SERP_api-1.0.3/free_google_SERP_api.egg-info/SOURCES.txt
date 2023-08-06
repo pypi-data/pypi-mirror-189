@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+free_google_SERP_api/__init__.py
+free_google_SERP_api/free_google_SERP_api.py
+free_google_SERP_api.egg-info/PKG-INFO
+free_google_SERP_api.egg-info/SOURCES.txt
+free_google_SERP_api.egg-info/dependency_links.txt
+free_google_SERP_api.egg-info/requires.txt
+free_google_SERP_api.egg-info/top_level.txt
