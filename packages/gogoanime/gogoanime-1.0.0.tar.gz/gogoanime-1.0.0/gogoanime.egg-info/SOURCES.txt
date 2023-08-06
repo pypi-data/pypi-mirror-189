@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+gogoanime/__init__.py
+gogoanime.egg-info/PKG-INFO
+gogoanime.egg-info/SOURCES.txt
+gogoanime.egg-info/dependency_links.txt
+gogoanime.egg-info/requires.txt
+gogoanime.egg-info/top_level.txt
