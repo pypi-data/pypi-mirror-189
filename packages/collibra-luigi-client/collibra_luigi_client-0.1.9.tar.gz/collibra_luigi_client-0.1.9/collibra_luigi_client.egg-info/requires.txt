@@ -1,0 +1,8 @@
+collibra_core
+collibra_importer
+cryptography
+luigi
+python-dotenv
+toml
+requests
+apache_beam
