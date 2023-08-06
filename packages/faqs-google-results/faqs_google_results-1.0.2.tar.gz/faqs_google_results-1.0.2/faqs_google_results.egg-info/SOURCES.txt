@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+faqs_google_results/__init__.py
+faqs_google_results/data_collector.py
+faqs_google_results/exceptions.py
+faqs_google_results/get-pip.py
+faqs_google_results/google.py
+faqs_google_results/parser.py
+faqs_google_results/tools.py
+faqs_google_results.egg-info/PKG-INFO
+faqs_google_results.egg-info/SOURCES.txt
+faqs_google_results.egg-info/dependency_links.txt
+faqs_google_results.egg-info/requires.txt
+faqs_google_results.egg-info/top_level.txt
+faqs_google_results/request/__init__.py
+faqs_google_results/request/session.py
