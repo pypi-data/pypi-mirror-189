@@ -1,0 +1,10 @@
+tagesschauscraper/__init__.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+tagesschauscraper/constants.py,sha256=b-yAkqWAh7b8k06_7mC3KKjA39neI_fV6yKRO7vUCNk,201
+tagesschauscraper/helper.py,sha256=INIVer04gG06ItAPtwL5GbjF-qar37eGPg3WDE9uTDg,4991
+tagesschauscraper/retrieve.py,sha256=npjBc--bTtjL1ysH8GQm4UTsIrEz1eUOwIa3Wcs4maA,1736
+tagesschauscraper/tagesschau.py,sha256=1lPhxI-1FPIO7UR7Neo4rcC0qJjfBXvxfDdanS8mS4E,10368
+tagesschauscraper-0.1.1.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+tagesschauscraper-0.1.1.dist-info/METADATA,sha256=SqjW0kSOu6y4N6cTQtZLKchQtlq1m-ks204kMgehPiI,4007
+tagesschauscraper-0.1.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+tagesschauscraper-0.1.1.dist-info/top_level.txt,sha256=XLaWQZOv01pgIWFt8iN4eXrbx6pBcbwOMQPe7cRJXLA,18
+tagesschauscraper-0.1.1.dist-info/RECORD,,
