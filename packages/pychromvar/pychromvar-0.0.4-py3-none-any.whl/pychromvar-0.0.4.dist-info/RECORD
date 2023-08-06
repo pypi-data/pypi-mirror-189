@@ -1,0 +1,9 @@
+pychromvar/__init__.py,sha256=UTnaHRsJlDD_enuLEBh4qOO6QhYKYYLvojFjN81H_P0,320
+pychromvar/compute_deviations.py,sha256=DnWsGFjB4bQ1xA0DGgRIGz8ZoCZAPB-jABnPvID2rMw,4264
+pychromvar/get_genome.py,sha256=0sCOQ2qDap7YywOFpI1dyFGU3mZtVT8FD8TtYs_bIs0,1466
+pychromvar/match_motif.py,sha256=_OPN0EE8Idb3LDVMTQQhlvDY0h2pOfflTxe1zGhndxs,3577
+pychromvar/preprocessing.py,sha256=rP3eAIPN9b1hfHXe9ij1EYKoB-vZv-hoxACX6OoTqVw,4005
+pychromvar-0.0.4.dist-info/LICENSE,sha256=9FEk9DYb3OdxJCXXLDfpwH2mhu3FOmFehyJupWG41pU,1067
+pychromvar-0.0.4.dist-info/WHEEL,sha256=rSgq_JpHF9fHR1lx53qwg_1-2LypZE_qmcuXbVUq948,81
+pychromvar-0.0.4.dist-info/METADATA,sha256=xY1Fr62oG-M4CJmh-U6zjqp-dJPoXuTCC8SPSW3UOdk,2172
+pychromvar-0.0.4.dist-info/RECORD,,
