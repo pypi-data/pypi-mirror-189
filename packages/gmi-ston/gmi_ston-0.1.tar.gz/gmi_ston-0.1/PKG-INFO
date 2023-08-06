@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: gmi_ston
+Version: 0.1
+Summary: Interface to interact with STON.fi by GetMoney Inc.
+Home-page: https://github.com/get-money-inc/ston-py
+Author: GetMoney Inc.
+Author-email: get.money.inc.official@gmail.com
+License: UNKNOWN
+Description: # GetMoney Inc. STON.fi Client
+        
+        ## StonClient
+        
+Platform: UNKNOWN
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
