@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: infodeslib
+Version: 0.0.14
+Summary: Implementation of Dynamic Ensemble Selection methods with Late Fusion
+Home-page: https://github.com/fukashi-hatake/infodeslib
+Author: Firuz Juraev
+Author-email: f.i.juraev@gmail.com
+Maintainer: Firuz Juraev
+Maintainer-email: f.i.juraev@gmail.com
+License: MIT
+Description: Implementation of Dynamic Ensemble Selection methods with Late Fusion
+Platform: UNKNOWN
+Requires-Python: >=3
