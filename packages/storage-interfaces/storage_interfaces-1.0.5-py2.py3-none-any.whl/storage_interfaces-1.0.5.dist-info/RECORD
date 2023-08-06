@@ -1,0 +1,13 @@
+storage_interfaces/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+storage_interfaces/__version__.py,sha256=yAMPNWhyPm8fUe-_h_EYG-wST0tYdZD0Ri_gWLabtYM,97
+storage_interfaces/_compat.py,sha256=B_s4s1JdRgkCngNdCx_WXiIajc2kSuO5NYHbUWy4HaQ,1137
+storage_interfaces/abstracts.py,sha256=yivAZuLKggiPVYEVu8Fnz0vKZ5Cv5sqxp0vDNxbcVXw,592
+storage_interfaces/scsi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+storage_interfaces/scsi/abstracts.py,sha256=OQq4IkledBmOrNpCBYXj0cXAx6-bARDm9q6aEvu3RVc,1102
+storage_interfaces-1.0.5.dist-info/AUTHORS,sha256=RJ0f5YFQPrh1FIGBgO8waTyJFsB1GG56gf0sSgI5-pg,257
+storage_interfaces-1.0.5.dist-info/LICENSE,sha256=R1Fg3Vt7LRxG_SjIVLYigx1chFmI0yToMVTyCf5ivyQ,1491
+storage_interfaces-1.0.5.dist-info/METADATA,sha256=fCrvmxsi-BkIZmCnGfgFYETyYTLT0VmAQfQlj6vbCRE,1396
+storage_interfaces-1.0.5.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+storage_interfaces-1.0.5.dist-info/pbr.json,sha256=_qUaLp5q-DDT6itgYgQbvU8PCLPswlQgPeEwHQsQngI,46
+storage_interfaces-1.0.5.dist-info/top_level.txt,sha256=2LosLxgGYMYBiJK7pZo_9AOqEpqUAS6Z6yVVc6aWyl0,19
+storage_interfaces-1.0.5.dist-info/RECORD,,
