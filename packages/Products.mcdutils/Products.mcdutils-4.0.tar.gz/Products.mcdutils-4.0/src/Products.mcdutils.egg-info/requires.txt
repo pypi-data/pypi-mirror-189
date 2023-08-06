@@ -1,0 +1,7 @@
+setuptools
+python-memcached
+Zope>=5
+
+[docs]
+repoze.sphinx.autointerface
+Sphinx
