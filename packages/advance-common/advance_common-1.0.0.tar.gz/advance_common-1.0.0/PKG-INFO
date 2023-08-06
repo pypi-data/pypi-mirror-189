@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: advance-common
+Version: 1.0.0
+Summary: 
+Author: Szymon-SR
+Author-email: srszymonsr@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: pymavlink (>=2.4.37,<3.0.0)
+Requires-Dist: pyserial (>=3.5,<4.0)
+Description-Content-Type: text/markdown
+
+Contains files useful on PA and GS:
+- protobuf definition AND compiled python
+- custom mavlink frame code
+- logger setup
+
+# Protobuf messages in messages_pb2 are tracked by git, so when importing this repo as submodule # there is no need to compile protobuf.
+
+# How to use this cool project
+
+Poetry:
+```poetry add git+ssh://git@gitlab.com:academic-aviation-club/sae-2023/advance_common.git```
+
+Pip:
+```pip install git+ssh://git@gitlab.com/academic-aviation-club/sae-2023/advance_common.git```
+
+Notice the / instead of : for just pip, for me it only worked this way
