@@ -1,0 +1,7 @@
+embestore/base.py,sha256=aqdh3tcYKfySXfq8WwcH9jBLoOJvX9m0Fl-hDD_5570,4600
+embestore/jina.py,sha256=tPgaNYz3o_kEhpazl-rvAG9VEhvOxKevIru1tLHdleQ,1238
+embestore/torch.py,sha256=gzZjJrriwHScCeln5ij6Kqfihd_5GZ3YJXDZpMArxhk,414
+embestore/version.py,sha256=mv5clwgvmRvCLPl-Nl_XiwoGWuH_SVBJoh5cozrNwcs,116
+embestore-0.1.4.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+embestore-0.1.4.dist-info/METADATA,sha256=BHNbgPYTYHUjXpnMXaZJpwdvgFotXERMku4cpCAIAww,3462
+embestore-0.1.4.dist-info/RECORD,,
