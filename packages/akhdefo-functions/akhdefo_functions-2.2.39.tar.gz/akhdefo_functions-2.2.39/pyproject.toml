@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "akhdefo_functions"
+version = "2.2.39"
+description = "Land Deformation Monitoring Using Optical Satellite Imagery"
+authors = ["Mahmud Mustafa Muhammad <mahmud.muhamm1@gmail.com>"]
+
+license = "Academic Free License (AFL)"
+readme = "README.md"
+homepage = "https://github.com/mahmudsfu/AkhDefo"
+repository  = "https://akhdefo.readthedocs.io/en/latest/"
+documentation = "https://akhdefo.readthedocs.io/en/latest/README.html"
+
+classifiers = [
+        'Development Status :: 3 - Alpha',
+        'Intended Audience :: Science/Research',
+        'License :: OSI Approved :: Academic Free License (AFL)',  
+        'Operating System :: Microsoft :: Windows :: Windows 10',
+        'Operating System :: POSIX :: Linux',        
+        'Programming Language :: Python :: 3',  'Programming Language :: Python :: 3.6',  
+        'Programming Language :: Python :: 3.7', "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+
+    ]
+
+include = [
+    "LICENSE",
+]
+
+
+
+
+
+
+
+
