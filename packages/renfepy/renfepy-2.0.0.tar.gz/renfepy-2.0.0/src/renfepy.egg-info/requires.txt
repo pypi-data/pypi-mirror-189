@@ -1,0 +1,10 @@
+selenium
+rich
+python-dateutil
+
+[dev]
+black
+bumpver
+isort
+pip-tools
+pytest
