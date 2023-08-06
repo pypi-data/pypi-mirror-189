@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+crackertool/__init__.py
+crackertool/crackertool.py
+crackertool.egg-info/PKG-INFO
+crackertool.egg-info/SOURCES.txt
+crackertool.egg-info/dependency_links.txt
+crackertool.egg-info/not-zip-safe
+crackertool.egg-info/top_level.txt
