@@ -1,0 +1,7 @@
+In file included from /root/miniconda3/envs/py3.7/include/boost/property_tree/json_parser/detail/parser.hpp:7:0,
+                 from /root/miniconda3/envs/py3.7/include/boost/property_tree/json_parser/detail/read.hpp:13,
+                 from /root/miniconda3/envs/py3.7/include/boost/property_tree/json_parser.hpp:16,
+                 from src/caffe/util/io.cpp:5:
+/root/miniconda3/envs/py3.7/include/boost/bind.hpp:41:1: note: #pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.
+ )
+ ^

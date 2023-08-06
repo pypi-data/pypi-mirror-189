@@ -1,0 +1,465 @@
+.build_release/src/caffe/layers/hdf5_data_layer.o: \
+ src/caffe/layers/hdf5_data_layer.cpp \
+ /root/miniconda3/envs/py3.7/include/hdf5.h \
+ /root/miniconda3/envs/py3.7/include/H5public.h \
+ /root/miniconda3/envs/py3.7/include/H5pubconf.h \
+ /root/miniconda3/envs/py3.7/include/H5version.h \
+ /root/miniconda3/envs/py3.7/include/H5api_adpt.h \
+ /root/miniconda3/envs/py3.7/include/H5Apublic.h \
+ /root/miniconda3/envs/py3.7/include/H5Ipublic.h \
+ /root/miniconda3/envs/py3.7/include/H5Opublic.h \
+ /root/miniconda3/envs/py3.7/include/H5Lpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5Tpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5ACpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5Cpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5Dpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5Epublic.h \
+ /root/miniconda3/envs/py3.7/include/H5Epubgen.h \
+ /root/miniconda3/envs/py3.7/include/H5Fpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5FDpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5Gpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5MMpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5Ppublic.h \
+ /root/miniconda3/envs/py3.7/include/H5Zpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5PLpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5Rpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5Spublic.h \
+ /root/miniconda3/envs/py3.7/include/H5FDcore.h \
+ /root/miniconda3/envs/py3.7/include/H5FDdirect.h \
+ /root/miniconda3/envs/py3.7/include/H5FDfamily.h \
+ /root/miniconda3/envs/py3.7/include/H5FDhdfs.h \
+ /root/miniconda3/envs/py3.7/include/H5FDlog.h \
+ /root/miniconda3/envs/py3.7/include/H5FDmpi.h \
+ /root/miniconda3/envs/py3.7/include/H5FDmpio.h \
+ /root/miniconda3/envs/py3.7/include/H5FDmulti.h \
+ /root/miniconda3/envs/py3.7/include/H5FDros3.h \
+ /root/miniconda3/envs/py3.7/include/H5FDsec2.h \
+ /root/miniconda3/envs/py3.7/include/H5FDstdio.h \
+ /root/miniconda3/envs/py3.7/include/hdf5_hl.h \
+ /root/miniconda3/envs/py3.7/include/hdf5.h \
+ /root/miniconda3/envs/py3.7/include/H5DOpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5DSpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5LTpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5IMpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5TBpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5PTpublic.h \
+ /root/miniconda3/envs/py3.7/include/H5LDpublic.h \
+ include/caffe/layers/hdf5_data_layer.hpp include/caffe/blob.hpp \
+ include/caffe/common.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/shared_ptr.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/shared_ptr.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/config.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/config/user.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/config/detail/select_compiler_config.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/config/compiler/gcc.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/config/detail/select_stdlib_config.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/config/stdlib/libstdcpp3.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/config/detail/select_platform_config.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/config/platform/linux.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/config/detail/posix_features.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/config/detail/suffix.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/config/no_tr1/memory.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/assert.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/checked_delete.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/core/checked_delete.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/throw_exception.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/assert/source_location.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/current_function.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/cstdint.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/config/workaround.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/exception/exception.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/shared_count.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/bad_weak_ptr.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_counted_base.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_has_sync.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_counted_base_std_atomic.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_typeinfo_.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_noexcept.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/core/addressof.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_convertible.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/spinlock_pool.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/spinlock.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/spinlock_std_atomic.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/yield_k.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/operator_bool.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
+ /root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/local_counted_base.hpp \
+ /root/miniconda3/envs/py3.7/include/gflags/gflags.h \
+ /root/miniconda3/envs/py3.7/include/gflags/gflags_declare.h \
+ /root/miniconda3/envs/py3.7/include/gflags/gflags_gflags.h \
+ /root/miniconda3/envs/py3.7/include/glog/logging.h \
+ /root/miniconda3/envs/py3.7/include/glog/export.h \
+ /root/miniconda3/envs/py3.7/include/glog/log_severity.h \
+ /root/miniconda3/envs/py3.7/include/glog/vlog_is_on.h \
+ include/caffe/util/device_alternate.hpp \
+ .build_release/src/caffe/proto/caffe.pb.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/port_def.inc \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/port_undef.inc \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/io/coded_stream.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/stubs/common.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/stubs/macros.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/stubs/platform_macros.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/stubs/port.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/stubs/stringpiece.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/stubs/hash.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/stubs/logging.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/stubs/status.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/stubs/strutil.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/port.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/arena.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/arena_impl.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/arenastring.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/generated_message_table_driven.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/map.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/generated_enum_util.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/message_lite.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/explicitly_constructed.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/metadata_lite.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/stubs/once.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/map_type_handler.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/parse_context.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/io/zero_copy_stream.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/implicit_weak_message.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/repeated_field.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/repeated_ptr_field.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/inlined_string_field.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/wire_format_lite.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/stubs/casts.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/map_entry_lite.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/generated_message_util.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/any.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/has_bits.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/map_field_lite.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/generated_message_reflection.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/descriptor.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/stubs/mutex.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/generated_enum_reflection.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/unknown_field_set.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/io/zero_copy_stream_impl_lite.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/stubs/callback.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/stubs/stl_util.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/message.h \
+ /root/miniconda3/envs/py3.7/include/google/protobuf/extension_set.h \
+ include/caffe/syncedmem.hpp include/caffe/layer.hpp \
+ include/caffe/layer_factory.hpp include/caffe/util/math_functions.hpp \
+ include/caffe/util/mkl_alternate.hpp \
+ /root/miniconda3/envs/py3.7/include/cblas.h \
+ /root/miniconda3/envs/py3.7/include/openblas_config.h \
+ include/caffe/layers/base_data_layer.hpp \
+ include/caffe/data_transformer.hpp include/caffe/internal_thread.hpp \
+ include/caffe/util/blocking_queue.hpp include/caffe/util/hdf5.hpp
+
+/root/miniconda3/envs/py3.7/include/hdf5.h:
+
+/root/miniconda3/envs/py3.7/include/H5public.h:
+
+/root/miniconda3/envs/py3.7/include/H5pubconf.h:
+
+/root/miniconda3/envs/py3.7/include/H5version.h:
+
+/root/miniconda3/envs/py3.7/include/H5api_adpt.h:
+
+/root/miniconda3/envs/py3.7/include/H5Apublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5Ipublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5Opublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5Lpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5Tpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5ACpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5Cpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5Dpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5Epublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5Epubgen.h:
+
+/root/miniconda3/envs/py3.7/include/H5Fpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5FDpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5Gpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5MMpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5Ppublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5Zpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5PLpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5Rpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5Spublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5FDcore.h:
+
+/root/miniconda3/envs/py3.7/include/H5FDdirect.h:
+
+/root/miniconda3/envs/py3.7/include/H5FDfamily.h:
+
+/root/miniconda3/envs/py3.7/include/H5FDhdfs.h:
+
+/root/miniconda3/envs/py3.7/include/H5FDlog.h:
+
+/root/miniconda3/envs/py3.7/include/H5FDmpi.h:
+
+/root/miniconda3/envs/py3.7/include/H5FDmpio.h:
+
+/root/miniconda3/envs/py3.7/include/H5FDmulti.h:
+
+/root/miniconda3/envs/py3.7/include/H5FDros3.h:
+
+/root/miniconda3/envs/py3.7/include/H5FDsec2.h:
+
+/root/miniconda3/envs/py3.7/include/H5FDstdio.h:
+
+/root/miniconda3/envs/py3.7/include/hdf5_hl.h:
+
+/root/miniconda3/envs/py3.7/include/hdf5.h:
+
+/root/miniconda3/envs/py3.7/include/H5DOpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5DSpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5LTpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5IMpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5TBpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5PTpublic.h:
+
+/root/miniconda3/envs/py3.7/include/H5LDpublic.h:
+
+include/caffe/layers/hdf5_data_layer.hpp:
+
+include/caffe/blob.hpp:
+
+include/caffe/common.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/shared_ptr.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/shared_ptr.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/config.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/config/user.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/config/detail/select_compiler_config.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/config/compiler/gcc.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/config/detail/select_stdlib_config.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/config/stdlib/libstdcpp3.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/config/detail/select_platform_config.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/config/platform/linux.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/config/detail/posix_features.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/config/detail/suffix.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/config/no_tr1/memory.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/assert.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/checked_delete.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/core/checked_delete.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/throw_exception.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/assert/source_location.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/current_function.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/cstdint.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/config/workaround.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/exception/exception.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/shared_count.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/bad_weak_ptr.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_counted_base.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_has_sync.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_counted_base_std_atomic.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_typeinfo_.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_noexcept.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_counted_impl.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/core/addressof.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_convertible.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/sp_nullptr_t.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/spinlock_pool.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/spinlock.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/spinlock_std_atomic.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/yield_k.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/operator_bool.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/local_sp_deleter.hpp:
+
+/root/miniconda3/envs/py3.7/include/boost/smart_ptr/detail/local_counted_base.hpp:
+
+/root/miniconda3/envs/py3.7/include/gflags/gflags.h:
+
+/root/miniconda3/envs/py3.7/include/gflags/gflags_declare.h:
+
+/root/miniconda3/envs/py3.7/include/gflags/gflags_gflags.h:
+
+/root/miniconda3/envs/py3.7/include/glog/logging.h:
+
+/root/miniconda3/envs/py3.7/include/glog/export.h:
+
+/root/miniconda3/envs/py3.7/include/glog/log_severity.h:
+
+/root/miniconda3/envs/py3.7/include/glog/vlog_is_on.h:
+
+include/caffe/util/device_alternate.hpp:
+
+.build_release/src/caffe/proto/caffe.pb.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/port_def.inc:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/port_undef.inc:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/io/coded_stream.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/stubs/common.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/stubs/macros.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/stubs/platform_macros.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/stubs/port.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/stubs/stringpiece.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/stubs/hash.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/stubs/logging.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/stubs/status.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/stubs/strutil.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/port.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/arena.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/arena_impl.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/arenastring.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/generated_message_table_driven.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/map.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/generated_enum_util.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/message_lite.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/explicitly_constructed.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/metadata_lite.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/stubs/once.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/map_type_handler.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/parse_context.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/io/zero_copy_stream.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/implicit_weak_message.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/repeated_field.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/repeated_ptr_field.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/inlined_string_field.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/wire_format_lite.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/stubs/casts.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/map_entry_lite.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/generated_message_util.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/any.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/has_bits.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/map_field_lite.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/generated_message_reflection.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/descriptor.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/stubs/mutex.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/generated_enum_reflection.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/unknown_field_set.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/io/zero_copy_stream_impl_lite.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/stubs/callback.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/stubs/stl_util.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/message.h:
+
+/root/miniconda3/envs/py3.7/include/google/protobuf/extension_set.h:
+
+include/caffe/syncedmem.hpp:
+
+include/caffe/layer.hpp:
+
+include/caffe/layer_factory.hpp:
+
+include/caffe/util/math_functions.hpp:
+
+include/caffe/util/mkl_alternate.hpp:
+
+/root/miniconda3/envs/py3.7/include/cblas.h:
+
+/root/miniconda3/envs/py3.7/include/openblas_config.h:
+
+include/caffe/layers/base_data_layer.hpp:
+
+include/caffe/data_transformer.hpp:
+
+include/caffe/internal_thread.hpp:
+
+include/caffe/util/blocking_queue.hpp:
+
+include/caffe/util/hdf5.hpp:
