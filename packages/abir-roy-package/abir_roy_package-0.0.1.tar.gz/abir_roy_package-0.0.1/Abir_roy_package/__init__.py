@@ -1,0 +1,1 @@
+from abir_roy_package.model import ImageCaptioningModel

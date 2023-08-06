@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: abir_roy_package
+Version: 0.0.1
+Summary: A package for image processing and making caption out of this.
+Author-email: ABIR ROY <royabirbabai0@kgpian.iitkgp.ac.in>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+This is a package for image processing and making caption from image.
+abir_roy_package
+    ImageCaptioningModel()
+    data
+        Dataset()
+        Download()
+        transforms
+            BlurImage()
+            CropImage()
+            FlipImage()
+            RescaleImage()
+            RotateImage()
