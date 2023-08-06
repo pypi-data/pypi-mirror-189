@@ -1,0 +1,10 @@
+di_ioc/__init__.py,sha256=NXsKHi5GVBplaPOQ0q99GFZOR3M09Z2SazPTiQUJGZ0,204
+di_ioc/abstraction.py,sha256=ibgG1b86aBbUPeCtKOnlTw8MNUSgr_dRNPgZCLlMWcw,941
+di_ioc/container.py,sha256=DyLPEnVOQ14eIhcyZtt7378DMU0QCSwPhxqITywR6ks,2109
+di_ioc/lifetimes.py,sha256=hwJtxX35PJHaMemdoKF--9KIPEBUIgV2jX5mQQ1JslA,2387
+di_ioc/scope.py,sha256=V1Xvrv87HVwqqKb_XaqvBagEp3bolG-ADWkUu0Al2OE,485
+di_ioc-0.0.1.dist-info/LICENSE,sha256=Y-rgkHY90CW5hzxXRgge8hnCH0pBQU-vs6LbNB_KIZI,1067
+di_ioc-0.0.1.dist-info/METADATA,sha256=q_2X-bR0SWjhYaZaqax_a1eyZ9JRAxIbEUIg5jKSx5k,491
+di_ioc-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+di_ioc-0.0.1.dist-info/top_level.txt,sha256=toxLqLE6JKA5hxECMxNc2XTofqnO_E4V9fyY-PShF-I,7
+di_ioc-0.0.1.dist-info/RECORD,,
