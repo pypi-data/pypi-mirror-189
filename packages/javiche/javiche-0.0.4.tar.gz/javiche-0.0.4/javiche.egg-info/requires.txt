@@ -1,0 +1,11 @@
+numpy
+ceviche
+jax
+jaxlib
+fastcore
+
+[dev]
+nbdev>=2.3
+tqdm
+jupyter
+ipywidgets
