@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "slicetune"
+version = "0.0.1"
+description = "A non-invasive parameter-efficient method for finetuning large neural models."
+authors = ["Marek Kadlcik <10684818+markcheeky@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+typing-extensions = "^4.4.0"
+torch = ">=1.8"
+prettytable = { version = ">=3.0.0", optional = true }
+
+[tool.poetry.extras]
+pretty = ["prettytable"]
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.12.0"
+isort = "^5.11.4"
+flake8 = "^6.0.0"
+ipykernel = "^6.19.4"
+rich = "^13.0.1"
+# current release does not support Self, but on master it does
+mypy = { git = "https://github.com/python/mypy.git", branch = "master" }
+pre-commit = "^2.21.0"
+pytest = "^7.2.0"
+pytest-cov = "^4.0.0"
+transformers = "^4.25.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100
