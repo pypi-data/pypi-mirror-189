@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+shpdf/__init__.py
+shpdf/pad2text.py
+shpdf/pdf2image.py
+shpdf.egg-info/PKG-INFO
+shpdf.egg-info/SOURCES.txt
+shpdf.egg-info/dependency_links.txt
+shpdf.egg-info/top_level.txt
