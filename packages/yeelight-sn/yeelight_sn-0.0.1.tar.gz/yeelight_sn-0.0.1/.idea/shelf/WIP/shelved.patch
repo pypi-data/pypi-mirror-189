@@ -1,0 +1,238 @@
+Index: commands/set_color.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from commands.command import validate_duration, validate_effect, create_command as create_command_base\n\nMETHOD = 'set_rgb'\nMIN_COLOR = 0\nMAX_COLOR = 16777215\n\n\ndef create_command(color, effect, duration):\n    return create_command_base(\n        METHOD,\n        [\n            validate_color(color),\n            validate_effect(effect),\n            validate_duration(duration)\n        ]\n    )\n\n\ndef validate_color(color):\n    if type(color) is not int:\n        raise Exception('Color must be given as int')\n\n    if color < MIN_COLOR or color > MAX_COLOR:\n        raise Exception('Color is out of range 0-16777215')\n\n    return color\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/commands/set_color.py b/commands/set_color.py
+--- a/commands/set_color.py	(revision 432be89ea6825d338fe84062234d126cb8e9d706)
++++ b/commands/set_color.py	(date 1675491172727)
+@@ -5,7 +5,7 @@
+ MAX_COLOR = 16777215
+ 
+ 
+-def create_command(color, effect, duration):
++def create_command(color, effect, duration=30):
+     return create_command_base(
+         METHOD,
+         [
+Index: commands/command.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import json\n\nEFFECT_SUDDEN = 'sudden'\nEFFECT_SMOOTH = 'smooth'\nMIN_DURATION = 30\n\n\ndef create_command(method, params):\n    return {\n        \"id\": 1,\n        \"method\": method,\n        \"params\": params\n    }\n\n\ndef serialize_command(command):\n    message = json.dumps(command) + \"\\r\\n\"\n    return message.encode()\n\n\ndef validate_effect(effect):\n    if effect not in [EFFECT_SUDDEN, EFFECT_SMOOTH]:\n        raise Exception('Effect must be one of [' + EFFECT_SUDDEN + ', ' + EFFECT_SMOOTH + ']')\n\n    return effect\n\n\ndef validate_duration(duration):\n    if type(duration) is not int:\n        raise Exception('Duration must be given as int')\n\n    if duration < MIN_DURATION:\n        raise Exception('Duration must be greater than or equal to 30')\n\n    return duration\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/commands/command.py b/commands/command.py
+--- a/commands/command.py	(revision 432be89ea6825d338fe84062234d126cb8e9d706)
++++ b/commands/command.py	(date 1675491172722)
+@@ -13,9 +13,6 @@
+     }
+ 
+ 
+-def serialize_command(command):
+-    message = json.dumps(command) + "\r\n"
+-    return message.encode()
+ 
+ 
+ def validate_effect(effect):
+Index: color.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>COLOR_WHITE = 16777215\n# Reds\nCOLOR_RED = 16711680\nCOLOR_SALMON = 16416882\nCOLOR_CRIMSON = 14423100\nCOLOR_PINK = 16738740\nCOLOR_SCARLET = 12192815\n\n# Oranges\nCOLOR_ORANGE = 16753920\nCOLOR_DARK_ORANGE = 16747520\n\n# Yellows\nCOLOR_YELLOW = 16776960\nCOLOR_GOLD = 16766720\n\n# Purples\nCOLOR_PURPLE = 8388736\nCOLOR_VIOLET = 15631086\nCOLOR_DARK_VIOLET = 9699539\nCOLOR_MAGENTA = 16711935\nCOLOR_INDIGO = 4915330\n\n# Greens\nCOLOR_GREEN = 65280\nCOLOR_OLIVE = 8421376\nCOLOR_SPRING_GREEN = 65407\n\n# Blues\nCOLOR_BLUE = 255\nCOLOR_CYAN = 65535\nCOLOR_SKY_BLUE = 8900331\nCOLOR_ROYAL_BLUE = 4286945\n\n\ndef hex_to_int(hex_string):\n    return int(hex_string, 16)\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/color.py b/color.py
+--- a/color.py	(revision 432be89ea6825d338fe84062234d126cb8e9d706)
++++ b/color.py	(date 1675491172737)
+@@ -1,3 +1,4 @@
++# TODO: It would be better if these were all hex strings
+ COLOR_WHITE = 16777215
+ # Reds
+ COLOR_RED = 16711680
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># This is a sample Python script.\n\n# Press Shift+F10 to execute it or replace it with your code.\n# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.\n\nimport commands\nimport color\nimport socket\n\n\ndef get_socket():\n    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    s.connect(('10.0.0.168', 55443))\n    return s\n\n\ndef send_message():\n    s = get_socket()\n    #cmd = commands.set_color.create_command(color.COLOR_SPRING_GREEN, commands.EFFECT_SUDDEN, 3000)\n    #cmd = commands.set_brightness.create_command(commands.set_brightness.MAX_BRIGHTNESS, commands.EFFECT_SUDDEN, 1000);\n    #cmd = commands.set_color_temp.create_command(int(commands.set_color_temp.MAX_TEMP / 3), commands.EFFECT_SMOOTH, 1000)\n    cmd = commands.set_power.create_command(commands.set_power.STATE_ON)\n    msg = commands.serialize_command(cmd)\n    s.send(msg)\n\n\n# Press the green button in the gutter to run the script.\nif __name__ == '__main__':\n    send_message()\n\n# See PyCharm help at https://www.jetbrains.com/help/pycharm/\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision 432be89ea6825d338fe84062234d126cb8e9d706)
++++ b/main.py	(date 1675491172740)
+@@ -1,31 +1,9 @@
+-# This is a sample Python script.
+-
+-# Press Shift+F10 to execute it or replace it with your code.
+-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+-
+-import commands
++from yeelight import Yeelight
+ import color
+-import socket
+-
+-
+-def get_socket():
+-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+-    s.connect(('10.0.0.168', 55443))
+-    return s
+-
+-
+-def send_message():
+-    s = get_socket()
+-    #cmd = commands.set_color.create_command(color.COLOR_SPRING_GREEN, commands.EFFECT_SUDDEN, 3000)
+-    #cmd = commands.set_brightness.create_command(commands.set_brightness.MAX_BRIGHTNESS, commands.EFFECT_SUDDEN, 1000);
+-    #cmd = commands.set_color_temp.create_command(int(commands.set_color_temp.MAX_TEMP / 3), commands.EFFECT_SMOOTH, 1000)
+-    cmd = commands.set_power.create_command(commands.set_power.STATE_ON)
+-    msg = commands.serialize_command(cmd)
+-    s.send(msg)
+-
+ 
+ # Press the green button in the gutter to run the script.
+ if __name__ == '__main__':
+-    send_message()
+-
+-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
++    light = Yeelight('10.0.0.168')
++    light.turn_on()
++    light.set_color(color.COLOR_CYAN)
++    print(light)
+Index: commands/set_brightness.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from commands.command import validate_effect, validate_duration, create_command as create_command_base\n\n\nMETHOD = 'set_bright'\nMIN_BRIGHTNESS = 1\nMAX_BRIGHTNESS = 100\n\n\ndef create_command(brightness, effect, duration):\n    return create_command_base(\n        METHOD,\n        [\n            validate_brightness(brightness),\n            validate_effect(effect),\n            validate_duration(duration)\n        ]\n    )\n\n\ndef validate_brightness(brightness):\n    if type(brightness) is not int:\n        raise Exception('Brightness must be given as int')\n\n    if brightness < MIN_BRIGHTNESS or brightness > MAX_BRIGHTNESS:\n        raise Exception('Brightness value out of range 1-100')\n\n    return brightness\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/commands/set_brightness.py b/commands/set_brightness.py
+--- a/commands/set_brightness.py	(revision 432be89ea6825d338fe84062234d126cb8e9d706)
++++ b/commands/set_brightness.py	(date 1675491172725)
+@@ -6,7 +6,7 @@
+ MAX_BRIGHTNESS = 100
+ 
+ 
+-def create_command(brightness, effect, duration):
++def create_command(brightness, effect, duration=30):
+     return create_command_base(
+         METHOD,
+         [
+Index: yeelight.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/yeelight.py b/yeelight.py
+new file mode 100644
+--- /dev/null	(date 1675491172742)
++++ b/yeelight.py	(date 1675491172742)
+@@ -0,0 +1,49 @@
++import commands
++import json
++from network import dispatch
++
++
++class Yeelight:
++    def __init__(self, ip_address):
++        self.ip_address = ip_address
++
++    def __str__(self):
++        status = self.get_status()
++        return str(status)
++
++    def send_command(self, command):
++        dispatch.send_command(self.ip_address, command)
++
++    def get_status(self):
++        cmd = commands.get_prop.create_command(commands.get_prop.PARAM_ALL)
++        response = dispatch.send_command(self.ip_address, cmd)
++        values = json.loads(response)['result']
++
++        print('constructing output')
++        status = {}
++        for i in range(0, len(values)):
++            status[commands.get_prop.PARAM_ALL[i]] = values[i]
++
++        status['ip'] = self.ip_address
++
++        return status
++
++    def turn_on(self):
++        cmd = commands.set_power.create_command(commands.set_power.STATE_ON)
++        self.send_command(cmd)
++
++    def turn_off(self):
++        cmd = commands.set_power.create_command(commands.set_power.STATE_OFF)
++        self.send_command(cmd)
++
++    def set_brightness(self, brightness):
++        cmd = commands.set_brightness.create_command(brightness, commands.EFFECT_SUDDEN)
++        self.send_command(cmd)
++
++    def set_color(self, color):
++        cmd = commands.set_color.create_command(color, commands.EFFECT_SUDDEN)
++        self.send_command(cmd)
++
++    def set_color_temp(self, temp):
++        cmd = commands.set_color_temp.create_command(temp, commands.EFFECT_SUDDEN)
++        self.send_command(cmd)
+Index: network/dispatch.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/network/dispatch.py b/network/dispatch.py
+new file mode 100644
+--- /dev/null	(date 1675491172735)
++++ b/network/dispatch.py	(date 1675491172735)
+@@ -0,0 +1,27 @@
++import socket
++import json
++
++TCP_PORT = 55443
++
++
++def get_socket(ip_address):
++    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
++    s.connect((ip_address, TCP_PORT))
++    return s
++
++
++def serialize_command(command):
++    message = json.dumps(command) + "\r\n"
++    return message.encode()
++
++
++def send_command(ip_address, command):
++    s = get_socket(ip_address)
++
++    s.send(serialize_command(command))
++    response = s.recv(1024)
++
++    s.close()
++
++    return response.decode()
++
+Index: commands/set_color_temp.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from commands.command import validate_duration, validate_effect, create_command as create_command_base\n\n\nMETHOD = 'set_ct_abx'\nMIN_TEMP = 1700\nMAX_TEMP = 6500\n\n\ndef create_command(temp, effect, duration):\n    return create_command_base(\n        METHOD,\n        [\n            validate_temp(temp),\n            validate_effect(effect),\n            validate_duration(duration)\n        ]\n    )\n\n\ndef validate_temp(temp):\n    if type(temp) is not int:\n        raise Exception('Color temperature must be given as int')\n\n    if temp < MIN_TEMP or temp > MAX_TEMP:\n        raise Exception('Temperature value must be in the range 1700-6500')\n\n    return temp\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/commands/set_color_temp.py b/commands/set_color_temp.py
+--- a/commands/set_color_temp.py	(revision 432be89ea6825d338fe84062234d126cb8e9d706)
++++ b/commands/set_color_temp.py	(date 1675491172729)
+@@ -6,7 +6,7 @@
+ MAX_TEMP = 6500
+ 
+ 
+-def create_command(temp, effect, duration):
++def create_command(temp, effect, duration=30):
+     return create_command_base(
+         METHOD,
+         [
+diff --git a/discovery.py b/network/discovery.py
+rename from discovery.py
+rename to network/discovery.py

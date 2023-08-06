@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f2056541-54c7-4440-b3fa-37b800313bdf" name="Changes" comment="Reorganize project for upload as package">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yeelight_api_smnelson/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/yeelight_sn/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yeelight_api_smnelson/color.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/yeelight_sn/color.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yeelight_api_smnelson/commands/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/yeelight_sn/commands/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yeelight_api_smnelson/commands/command.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/yeelight_sn/commands/command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yeelight_api_smnelson/commands/get_prop.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/yeelight_sn/commands/get_prop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yeelight_api_smnelson/commands/set_brightness.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/yeelight_sn/commands/set_brightness.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yeelight_api_smnelson/commands/set_color.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/yeelight_sn/commands/set_color.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yeelight_api_smnelson/commands/set_color_temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/yeelight_sn/commands/set_color_temp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yeelight_api_smnelson/commands/set_power.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/yeelight_sn/commands/set_power.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yeelight_api_smnelson/network/discovery.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/yeelight_sn/network/discovery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yeelight_api_smnelson/network/dispatch.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/yeelight_sn/network/dispatch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yeelight_api_smnelson/yeelight.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/yeelight_sn/yeelight.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="onto" value="ae9e77fd17cc97b8fef80ec594c374bc1a0f3948" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JRAeslQ8rsvbH7vC9V2jAgzTvc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/yeelight_api_smnelson" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/network" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/discovery" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="yeelight-api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f2056541-54c7-4440-b3fa-37b800313bdf" name="Changes" comment="" />
+      <created>1672030619479</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672030619479</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Move discovery.py to main directory">
+      <created>1672780743116</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672780743116</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add get_prop command">
+      <created>1675491081377</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675491081377</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixup add thing">
+      <created>1675491103868</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675491103868</updated>
+    </task>
+    <task id="LOCAL-00004" summary="WIP">
+      <created>1675491204569</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675491204569</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add yeelight class">
+      <created>1675491370648</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675491370648</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add dispatch class for handling network communications">
+      <created>1675491462522</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675491462522</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add default duration values to relevant commands so the parameter is optional">
+      <created>1675491522297</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675491522297</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add Yeelight class to represent an individual bulb">
+      <created>1675491555790</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675491555790</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fixup! Add Yeelight class to represent an individual bulb">
+      <created>1675492100750</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1675492100750</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fixup! Remove commited cache files and add gitignore">
+      <created>1675492670590</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675492670590</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Reorganize project for upload as package">
+      <created>1675496724614</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1675496724614</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Move discovery.py to main directory" />
+    <MESSAGE value="Add get_prop command" />
+    <MESSAGE value="fixup add thing" />
+    <MESSAGE value="WIP" />
+    <MESSAGE value="Add yeelight class" />
+    <MESSAGE value="Add dispatch class for handling network communications" />
+    <MESSAGE value="Add default duration values to relevant commands so the parameter is optional" />
+    <MESSAGE value="Add Yeelight class to represent an individual bulb" />
+    <MESSAGE value="fixup! Add Yeelight class to represent an individual bulb" />
+    <MESSAGE value="fixup! Remove commited cache files and add gitignore" />
+    <MESSAGE value="Reorganize project for upload as package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reorganize project for upload as package" />
+  </component>
+</project>

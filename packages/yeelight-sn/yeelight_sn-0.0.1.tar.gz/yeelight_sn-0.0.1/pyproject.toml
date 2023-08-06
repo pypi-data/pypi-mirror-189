@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "yeelight-sn"
+version = "0.0.1"
+authors = [
+    { name="Sean Nelson", email="sean@smnelson.me" },
+]
+description = "Simple API for controlling Yeelight Wi-Fi light-bulbs"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"
+]
+
+[project.urls]
+"Homepage" = "https://gitlab.com/sean-nelson/yeelight-api"
+"Bug Tracker" = "https://gitlab.com/sean-nelson/yeelight-api/-/issues"
