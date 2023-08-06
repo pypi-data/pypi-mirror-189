@@ -1,0 +1,6 @@
+PyQt5
+tabulate
+sqlalchemy
+sphinx
+wheel
+cx-Freeze

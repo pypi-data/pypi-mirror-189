@@ -1,0 +1,11 @@
+client_setup.py
+messanger_client_my_ultra_unique_name.egg-info/PKG-INFO
+messanger_client_my_ultra_unique_name.egg-info/SOURCES.txt
+messanger_client_my_ultra_unique_name.egg-info/dependency_links.txt
+messanger_client_my_ultra_unique_name.egg-info/requires.txt
+messanger_client_my_ultra_unique_name.egg-info/top_level.txt
+unit_tests/__init__.py
+unit_tests/client.py
+unit_tests/test_client.py
+unit_tests/test_server.py
+unit_tests/test_utils.py
