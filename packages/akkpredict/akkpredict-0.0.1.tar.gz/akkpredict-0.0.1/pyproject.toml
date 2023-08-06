@@ -1,0 +1,8 @@
+[build-system]
+requires = [
+    "setuptools>=58.1.0",
+    "aiohttp>=3.8.1",
+    "requests>=2.27.1",
+    "fire"
+]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,3 @@
+graft src/akkpredict/*
+recursive-include src/akkpredict *.gz
+recursive-include src/akkpredict *.h5

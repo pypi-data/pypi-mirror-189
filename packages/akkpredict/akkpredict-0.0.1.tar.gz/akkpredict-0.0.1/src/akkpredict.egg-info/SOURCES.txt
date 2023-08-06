@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/akkpredict/__init__.py
+src/akkpredict/moonapi.py
+src/akkpredict/test.py
+src/akkpredict.egg-info/PKG-INFO
+src/akkpredict.egg-info/SOURCES.txt
+src/akkpredict.egg-info/dependency_links.txt
+src/akkpredict.egg-info/requires.txt
+src/akkpredict.egg-info/top_level.txt
