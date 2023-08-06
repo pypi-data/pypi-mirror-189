@@ -1,0 +1,11 @@
+fastnumbers.libs/libgcc_s-8b50eaaa.so.1,sha256=WXj_FYQE1MDIyb-nN8siUALdxit6NHma0p9UxemQV8o,101649
+fastnumbers.libs/libstdc++-8baf04f9.so.6.0.28,sha256=yrzOxg1heyJ9Y-43YCLLn04Cpl_A68FN0D2Q1iBTMcY,2428961
+fastnumbers/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastnumbers/__init__.py,sha256=Ci7-DO09bhOFdDc5T-qRoFfv3ARXrq3cAjqAYCjOxmY,878
+fastnumbers/fastnumbers.cpython-38-i386-linux-gnu.so,sha256=Qq3gei0kiGLABRdhzX1ojCk8lIkozBWR7j0tKKoi4Xo,1029633
+fastnumbers/fastnumbers.pyi,sha256=RC6chE5H-kXlmGBHcEhXeQPf7terrUOnyyGGWT6PNsU,88421
+fastnumbers-4.0.1.dist-info/METADATA,sha256=IWfrPTYupc8hm5nm7lqes5LfopTXUwf04MDAvuH7WHk,17794
+fastnumbers-4.0.1.dist-info/WHEEL,sha256=-vbRX7Hgem6uUwWYl2DJU2pl4yXZdF3CNLBWFTb8sBU,109
+fastnumbers-4.0.1.dist-info/RECORD,,
+fastnumbers-4.0.1.dist-info/top_level.txt,sha256=aG_PdvzknepKeYVWlLw8rjNFe7kLQW1-ni1LnDhI7ps,12
+fastnumbers-4.0.1.dist-info/LICENSE,sha256=r8KXBuzqLE8LwA_xS4e8FyABPpMWBGxhyaeaJOLERyg,1063
