@@ -1,0 +1,9 @@
+insight_python_linux
+insight_python_linux/com
+insight_python_linux/com/cert
+insight_python_linux/com/insight
+insight_python_linux/com/interface
+insight_python_linux/com/libs/linux/python310
+insight_python_linux/com/libs/linux/python36
+insight_python_linux/com/libs/linux/python37
+insight_python_linux/com/libs/linux/python39
