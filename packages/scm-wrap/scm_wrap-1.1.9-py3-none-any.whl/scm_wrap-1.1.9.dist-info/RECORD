@@ -1,0 +1,10 @@
+scmwrap/__init__.py,sha256=1Ws6KRtynjOY63HHXOTUGebrbB4jcg3D_xo5lVx1_kU,100
+scmwrap/git.py,sha256=1IYnHjvwEvDJfjknZe3tCcZXjgDe9YYSiSLsnFtzQ1M,13228
+scmwrap/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scmwrap/repo.py,sha256=8iI78IWQDo5nj_-BU4kp8xBczYzn-asHAp1ca2Sme04,6855
+scmwrap/scmwrap.py,sha256=qfgbLsraRSBmEC0GzbUulupz4_o14lpdKUTN7k8iylE,1843
+scmwrap/svn.py,sha256=mPECVKs4bpCQIVXa85i3pEpKsCZgmLSosqL7iNmOoxQ,9955
+scm_wrap-1.1.9.dist-info/METADATA,sha256=F8HCiWtjIfXQS4VcicnYVEykfe1xTowSQwD88BTPp7Y,618
+scm_wrap-1.1.9.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+scm_wrap-1.1.9.dist-info/top_level.txt,sha256=tx-4flX5CiQuCA0YvLG4WNJ731-ZOUsiT8NVA2dGCns,8
+scm_wrap-1.1.9.dist-info/RECORD,,
