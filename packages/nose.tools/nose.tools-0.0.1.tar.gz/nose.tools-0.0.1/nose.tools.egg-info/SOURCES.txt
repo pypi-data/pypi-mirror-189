@@ -1,0 +1,5 @@
+setup.py
+nose.tools.egg-info/PKG-INFO
+nose.tools.egg-info/SOURCES.txt
+nose.tools.egg-info/dependency_links.txt
+nose.tools.egg-info/top_level.txt
