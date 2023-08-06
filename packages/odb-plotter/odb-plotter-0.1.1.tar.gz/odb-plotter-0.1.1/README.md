@@ -1,0 +1,49 @@
+# ODB Plotter
+
+## Install with pip
+```shell
+pip install odb-plotter
+```
+
+## Run the cli with python
+```shell
+python -m odbp
+```
+
+## Or import to use the api
+```python
+from odbp import Odb
+...
+```
+
+## ODB Plotter Design Goals
+
+### I intend for this project to serve two purposes:
+- First, implement an extensible, flexible api for accessing data within .odb files or .hdf5 files with odb data
+- Second, implement a user-friendly, sane-defaults cli to allow for quick data extraction, manipulation, and visualization with no hassle
+
+### Current TODOS (Waiting for the official github repo to open issues...)
+- Pick License (likely either MIT or GPL3)
+- Work on ergonomics: version information, help menu, license info, etc.
+- Migrate to .json5 (comments in views.json5 file)
+- Manage Views in a more sane way
+- Update CLI to take in user input from source config file
+    - Use platformdirs
+- Generate default config with platformdirs on install
+- Parametrize all relevant values in the odb_to_npz.py script
+- Add 2D plotting methods
+- Mayavi
+    - Test/rework lighting on all sides
+    - Add support for melt pool plot
+    - Add support for non-temperature based plots
+    - Interpolate Colors
+- Rework cli.py and odb-plotter script to remove need for \_\_main\_\_.py
+
+### TEMP:
+```
+angle: "Top-Right-Fromt Vertex: top" (May pass in a relevant string from views.json5 or a 3-tuple of Elevation/Azimuth/Roll)
+
+    # TODO Default
+    parser.add_argument("-v", "--view")
+    
+```

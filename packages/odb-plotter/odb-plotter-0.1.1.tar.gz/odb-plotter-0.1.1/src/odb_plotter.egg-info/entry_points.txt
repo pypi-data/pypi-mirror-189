@@ -1,0 +1,2 @@
+[console_scripts]
+odb-plotter = odbp:main
