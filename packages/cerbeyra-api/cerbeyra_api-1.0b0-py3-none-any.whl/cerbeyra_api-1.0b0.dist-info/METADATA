@@ -1,0 +1,265 @@
+Metadata-Version: 2.1
+Name: cerbeyra-api
+Version: 1.0b0
+Summary: The Ultimate Client for the Cerbeyra's API. Ubiqum's too.
+Author-email: Cerbeyra Dev Team <supporto@cerbeyra.com>
+Project-URL: Homepage, https://cerbeyra.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openpyxl (>=3.0.10)
+Requires-Dist: requests (>=2.28.2)
+
+# Welcome to Cerbeyra API Client’s documentation!
+
+This library provides a high level interface for interacting with Cerbeyra’s APIs and retrieving cyber-threat’s
+information from them. Through such API’s, it is possible to get clues regarding vulnerability assessments, cyber
+feeds, governance, threat intelligence and much more.
+
+To use the Cerbeyra’s API you need to start with the creation of a CerbeyraApi object. IN order to do that you must have
+access to your account's username and password. 
+
+Once a CerbeyraApi has been instantiated, you may start using the python object for requesting Cerbeyra’s resources and
+getting responses over HTTP protocol. All the HTTP Cerbeyra’s responses are encapsulated in classes specifically
+designed to facilitate their manipulation.
+
+## Getting started:
+
+First install the package
+
+
+```shell
+python -m pip install cerbeyra-api
+# or
+pip install cerbeyra-api
+```
+
+### Simple Usage
+
+```python
+# Usage as a Cerbeyra Client
+from cerbeyra import CerbeyraApi
+
+with CerbeyraApi(username='my@email.it', password='my-password') as ca:
+    ci = ca.get_cerbeyra_index()
+print(f"Your Cerbeyra Index is {ci.index} ({ci.risk_level})")
+
+# ouput:
+# Successfully connected to https://areaclienti.cerbeyra.com
+# Your Cerbeyra Index is B (medium)
+
+####################################################
+
+# Use as Ubiqum Client
+from cerbeyra import UbiqumApi
+
+with UbiqumApi(username='my@email.it', password='my-password') as ca:
+    ci = ca.get_ubiqum_index()
+print(f"Your Ubiqum Index is {ci.index} ({ci.risk_level})")
+
+# ouput:
+# Successfully connected to https://areaclienti.ubiqum.ch
+# Your Ubiqum Index is B (medium)
+```
+
+
+# API 
+
+### get_cerbeyra_index(client_id: int = None) -> CerbeyraIndex
+
+Returns the *Cerbeyra Index* of the logged user.
+*For Partners Only:* you can specify the client_id to obtain the Cerbeyra Index of a specific client. 
+
+```python
+class CerbeyraIndex:
+    index: str
+    risk_level: str
+    explain: dict
+```
+
+#### get_ubiqum_index(client_id:int None) -> UbiqumIndex
+
+As a Ubiqum Client, you can create a **UbiqumApi** instance to access the API at the proper endpoint
+
+
+
+### get_report_network(columns: list[str] = None, client_id: int = None) -> NetworkReport
+
+Gets the list of every vulnerability detected on your account on every network host. 
+Each vulnerability information (e.g., host, threat, solution, vulnerability description) is collected in a va_item.VAItem object as key-value pair.
+You can select a list of columns using the Enum class : types.NetworkReportFields, otherwise the API will return a default set of column.
+
+*For Partners Only:* you can specify a client_id to obtain the information about one of your client.
+
+```python
+class NetworkReport:
+    def iterate_entries(self) -> Generator[VAItem, Any, None]:
+        # provides a generator over report entries.
+    def group_by_threat(self) -> Dict[str, List[VAItem]]:
+        # groups report items that have the same threat level. 
+    def get_distinct_hosts(self) -> Set[str]:
+        # gets the list of all scanned network hosts.
+    def count_by_threat(self) -> Dict[str, int]:
+        # counts the number of report items for each threat level.
+    def save_csv(self, path):
+        # saves the network report in a .csv file.
+    def save_xls(self, path):
+        # saves the network report in a .xls file
+
+class VAItem(dict):
+    def get_field(self, name: str) -> str | None:
+        # gets a report item value based on its field name.
+
+class NetworkReportFields(Enum):
+    asset = 'asset'
+    host = 'host'
+    hostname = 'hostname'
+    vulnerability = 'vulnerability'
+    description = 'description'
+    threat = 'threat'
+    solution = 'solution'
+    vuln_id = 'vuln_id'
+    last_detection = 'last_detection'
+    first_detection = 'first_detection'
+    protocol = 'protocol'
+    port = 'port'
+    cvss = 'cvss'
+    summary = 'summary'
+    insight = 'insight'
+    impact = 'impact'
+    affected = 'affected'
+    references = 'references'
+```
+
+### get_report_web(columns: list[str] = None, client_id: int = None) -> WebReport
+
+Gets the list of every vulnerability detected on your account on every web host. 
+Each vulnerability information (e.g., host, threat, solution, vulnerability description) is collected in a va_item.VAItem object as key-value pair.
+You can select a list of columns using the Enum class : types.WebReportFields, otherwise the API will return a default set of column.
+
+*For Partners Only:* you can specify a client_id to obtain the information about one of your client.
+
+```python
+class WebReport:
+    def iterate_entries(self) -> Generator[VAItem, Any, None]:
+        # provides a generator over report entries.
+    def group_by_threat(self) -> Dict[str, List[VAItem]]:
+        # groups report items that have the same threat level. 
+    def get_distinct_hosts(self) -> Set[str]:
+        # gets the list of all scanned web hosts.
+    def get_distinct_urls(self) -> Set[str]:
+        # gets the list of all scanned web urls.
+    def count_by_threat(self) -> Dict[str, int]:
+        # counts the number of report items for each threat level. 
+    def save_csv(self, path):
+        # saves the web report in a .csv file.
+    def save_xls(self, path):
+        # saves the web report in a .xls file
+
+class VAItem(dict):
+   def get_field(self, name: str) -> str | None:
+     # gets a report item value based on its field name.
+
+class WebReportFields(Enum):
+    asset = 'asset'
+    host = 'host'
+    hostname = 'hostname'
+    vulnerability = 'vulnerability'
+    description = 'description'
+    threat = 'threat'
+    solution = 'solution'
+    vuln_id = 'vuln_id'
+    last_detection = 'last_detection'
+    first_detection = 'first_detection'
+    other = 'other'
+    param = 'param'
+    attack = 'attack'
+    evidence = 'evidence'
+    response = 'response'
+    request = 'request',
+    family = 'family'
+    url = 'url'
+    method = 'method'
+```
+
+
+### get_all_clients() -> List[Client]
+
+*For Partners Only:* gets the list of all clients.
+
+```python
+class Client:
+    client_id: int
+    name: str
+    surname: str
+    email: str
+    company: str
+    active: bool
+    expiration_date: str = None
+```
+
+### get_all_probes(status: str = None) -> List[Probe]
+
+*For Partners Only:* gets the list of all probes. 
+You can specify a status *(ALIVE, WARNING, DANGER)* to filter away the probes you are not interested in.
+
+```python
+class Probe:
+    name: str
+    probe_id: str
+    status: IoTStatus
+    last_update: str
+    client: Client
+
+class IoTStatus(Enum):
+    ALIVE = 'ALIVE'
+    WARNING = 'WARNING'
+    DANGER = 'DANGER'
+```
+
+### get_all_sensors(status: str = None) -> List[Sensor]
+
+*For Partners Only:* gets the list of all IoT sensors. 
+You can specify a status *(ALIVE, WARNING, DANGER)* to filter away the sensors you are not interested in.
+
+```python
+class Sensor:
+    name: str
+    probe_gateway: str
+    status: IoTStatus
+    alarm: str
+    last_update: str
+    client: Client
+    thresholds: list = None
+
+class IoTStatus(Enum):
+    ALIVE = 'ALIVE'
+    WARNING = 'WARNING'
+    DANGER = 'DANGER'
+```
+
+
+
+## A typical use case would be
+
+```python
+from cerbeyra import CerbeyraApi
+from cerbeyra.src.types import NetworkReportFields, WebReportFields
+
+username = "your_cerbeyra_username"
+password = "your_cerbeyra_password"
+network_columns = [NetworkReportFields.host.value, NetworkReportFields.threat.value]
+with CerbeyraApi(username=username, password=password) as cerbeyra_api:
+   clients = cerbeyra_api.get_all_clients()
+   for client in clients:
+       net_report = cerbeyra_api.get_report_network(columns=network_columns, client_id=client.client_id)
+       csv_path=f"/path/to/report/cilent_{client.client_id}.csv"
+       net_report.save_csv(csv_path)
+       # email_report_to(email=client.email, path=csv_path)
+```
+
+
+
