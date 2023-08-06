@@ -1,0 +1,2 @@
+[console_scripts]
+gradiator = gradiator.gradiator:main
