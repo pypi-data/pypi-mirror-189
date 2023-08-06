@@ -1,0 +1,9 @@
+keyframed/__init__.py,sha256=uf-q4mSFvoWfJt9OtJEBQ_U-QiaidwX_-GmXgEgvnBA,817
+keyframed/curve.py,sha256=ORpP0OV7JGLpC1OYHtDDSsDbbKX2DrcAU9v505MmQ58,20427
+keyframed/dsl.py,sha256=t0bxUAkaw4Xhua6s2CGWQuIYJWWc8o87r-tV6aMR_BA,1098
+keyframed/interpolation.py,sha256=8XAFPuEZTt_EcBdKEkwF7ZU5kvw7zgyoPcRayhsqqKs,2800
+keyframed/utils.py,sha256=sJEn2vYEdNndE8h_6us_u8hb2c6aub_WfsO9KdtUiac,1563
+keyframed-0.3.0.dist-info/METADATA,sha256=CipKumG7iEEUlfXOHf5gd94OIzM2-th-vjsgZyoli4k,15809
+keyframed-0.3.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+keyframed-0.3.0.dist-info/top_level.txt,sha256=DjVJwpw2pFCYw0Q-6BihYUHdRSc-ta1QGUoU_mrYAIw,10
+keyframed-0.3.0.dist-info/RECORD,,
