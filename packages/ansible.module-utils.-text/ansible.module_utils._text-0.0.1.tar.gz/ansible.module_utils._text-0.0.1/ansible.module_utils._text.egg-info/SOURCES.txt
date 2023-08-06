@@ -1,0 +1,5 @@
+setup.py
+ansible.module_utils._text.egg-info/PKG-INFO
+ansible.module_utils._text.egg-info/SOURCES.txt
+ansible.module_utils._text.egg-info/dependency_links.txt
+ansible.module_utils._text.egg-info/top_level.txt
