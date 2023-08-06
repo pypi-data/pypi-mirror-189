@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: PyAase
+Version: 0.0.1
+Summary: Python package for personal development
+Project-URL: Homepage, https://github.com/AngeloBurt/packaging-py-develop-venus
+Project-URL: Bug Tracker, https://github.com/AngeloBurt/packaging-py-develop-venus/issues
+Author-email: AngeloBurt <542685010@qq.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+## Project description
+ 
+Python package for personal development
+
+## Install
+
+```
+pip install venus-tools
+```
+
+## Usage
+
+```
+from venus-tools import ead
+
+
+# Change the sequence of strings after base64 encryption
+
+enc_str = 'VmVudXM='
+
+# _desc: A with Z(lowercase and so on) and 0 with 9...
+re_enc_str = ead.clo(enc_str) 
+
+print(re_enc_str) # EnEfwCN=
+
+```
+
+
+
+This is a simple package. There are still many imperfections.
+
+Please give us your advice. I wish you all the best.
