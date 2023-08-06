@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+debugger/__init__.py
+debugger/main.py
+ztdebugger.egg-info/PKG-INFO
+ztdebugger.egg-info/SOURCES.txt
+ztdebugger.egg-info/dependency_links.txt
+ztdebugger.egg-info/not-zip-safe
+ztdebugger.egg-info/requires.txt
+ztdebugger.egg-info/top_level.txt
