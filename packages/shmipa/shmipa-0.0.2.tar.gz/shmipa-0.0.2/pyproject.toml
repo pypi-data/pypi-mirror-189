@@ -1,0 +1,19 @@
+[project]
+name = "shmipa"
+version = "0.0.2"
+authors = [
+  { name="Shmart", email="szprytnyd@gmail.com" },
+]
+description = "Package that uses DeepPhonemizer to do conversion of english text to IPA (with some conversion to polish subset of IPA) and then back conversion from IPA to polish alphabet."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+]
+dependencies=[
+    "appdirs",
+    "deep-phonemizer",
+    "gdown",
+]

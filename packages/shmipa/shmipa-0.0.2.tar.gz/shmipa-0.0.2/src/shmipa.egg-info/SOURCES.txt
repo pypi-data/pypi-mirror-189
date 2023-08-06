@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/shmipa/models.json
+src/shmipa/shmart_phonemizer.py
+src/shmipa.egg-info/PKG-INFO
+src/shmipa.egg-info/SOURCES.txt
+src/shmipa.egg-info/dependency_links.txt
+src/shmipa.egg-info/requires.txt
+src/shmipa.egg-info/top_level.txt

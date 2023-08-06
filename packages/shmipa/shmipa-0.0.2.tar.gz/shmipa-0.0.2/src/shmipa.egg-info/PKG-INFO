@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: shmipa
+Version: 0.0.2
+Summary: Package that uses DeepPhonemizer to do conversion of english text to IPA (with some conversion to polish subset of IPA) and then back conversion from IPA to polish alphabet.
+Author-email: Shmart <szprytnyd@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ShmIpa
+
+Package that uses DeepPhonemizer to do conversion of english text to IPA (with some conversion to polish subset of IPA) and then back conversion from IPA to polish alphabet.
