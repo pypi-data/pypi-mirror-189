@@ -1,0 +1,12 @@
+_sherpa_ncnn.cp37-win_amd64.pyd,sha256=5EDQvE4UybM4iFASELxHBBpcDtYioTle1IKdKkK1-qI,4273664
+sherpa_ncnn/__init__.py,sha256=H4Fdl3VBweAW3QffEFEAUMiaJk3YZS2YB_3bK4Ajykc,59
+sherpa_ncnn/recognizer.py,sha256=-qHdA7XQVZKr8sSj3-0XoUhNFvJJVPLs4urJfaBk3KI,7965
+sherpa_ncnn/lib/kaldi-native-fbank-core.lib,sha256=OprGmDZG5nL-zJfrucIPQKA1ALo3k_Ldfk6T5HYbKhA,432182
+sherpa_ncnn/lib/ncnn.lib,sha256=xD00dXG8AiKAAbCc8E8vhz54DEKWXBXN5Ve4ipA_MpI,15008700
+sherpa_ncnn/lib/sherpa-ncnn-c-api.lib,sha256=HT4jIW3EhceVKModQ2oHXmvvv3kzI07ZXPKnzX1mzG4,43436
+sherpa_ncnn/lib/sherpa-ncnn-core.lib,sha256=JPMZPV6ygJmZaEKq0ZhazoJnv5cz89eRgAXMnFisWX8,1602820
+sherpa_ncnn-1.4.0.dist-info/LICENSE,sha256=jfClcNbFUkJ_A39ojeA1MTvJ1caVOPB4_H-ABviJeF4,11939
+sherpa_ncnn-1.4.0.dist-info/METADATA,sha256=dzMj9UYNujqhznMNkL7_rpagQvHjnBnQIrwusg7gxbw,2194
+sherpa_ncnn-1.4.0.dist-info/WHEEL,sha256=eaY3ejwL19QEEyHRYuTgC3FZQgNYBpzCION1l_gJUb8,101
+sherpa_ncnn-1.4.0.dist-info/top_level.txt,sha256=xGw9g1ZO9t1l8G8iCSjTUtS032IrUa-CG6HG6D3vVWQ,25
+sherpa_ncnn-1.4.0.dist-info/RECORD,,
