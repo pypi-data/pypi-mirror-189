@@ -1,0 +1,12 @@
+multiformats_config/__init__.py,sha256=ck4EZaFvxi5MiFRBka9MBgbJFRmV3ie4W3imy3D6BpI,1126
+multiformats_config/config.py,sha256=yVkKWrvX_Wl8fz0boL-4-SStG5y_d9UPpFyEtZs8A44,3273
+multiformats_config/multibase-table.json,sha256=TE1C2alq3TEEWwGvWa9XzwQWuicpmXtFhQExKfqU8So,3909
+multiformats_config/multibase.py,sha256=LFnkvZ4HDmkNcdmzIz0brOfCCaLFmNhB0zfekC8Pd6Y,2587
+multiformats_config/multicodec-table.json,sha256=igKjRg3AryjB5rCSrgLHdJXr8bl_XwV5gWB6NWA5eRA,87392
+multiformats_config/multicodec.py,sha256=vWw1-EOebFZeYrdP-f0azWWcKSOfjMDYYMHP3EYM8O0,4264
+multiformats_config/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+multiformats_config-0.2.0.dist-info/LICENSE,sha256=kK5T36WIJiDbV-mospXjR2u0s-UcxBgGpkNFo-2X9Nw,1086
+multiformats_config-0.2.0.dist-info/METADATA,sha256=MfLzHlHBLS4TRjv_3zVuNHO8t-rjyCyWE_6rkB9idYk,2084
+multiformats_config-0.2.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+multiformats_config-0.2.0.dist-info/top_level.txt,sha256=8BT_4dCFV_pGqJ8OCO7K9w7f0MKGQE9yAUKE_xqFJEE,20
+multiformats_config-0.2.0.dist-info/RECORD,,
