@@ -1,0 +1,47 @@
+Status<br>
+
+    Metadata retrieval  
+{{ "{:>10}".format(status_stats.overall.md_processed) }} processed    
+
+{% if status_stats.get_active_metadata_operation_info() != "" %}{{ colors.ORANGE }}{{ status_stats.get_active_metadata_operation_info() }}{{ colors.END }} {% endif %}
+
+{% if status_stats.perc_curated < 30 %}[only {{ colors.RED }}
+{% elif status_stats.perc_curated < 60 %}[{{ colors.ORANGE }}
+{% else %}[{{ colors.GREEN }}{% endif %}
+{{ status_stats.nr_curated_records }}{{ colors.END }} quality-curated]
+<br>
+
+    Metadata prescreen  
+{{ "{:>10}".format(status_stats.overall.rev_prescreen_included) }} included     
+
+{% if status_stats.currently.md_processed > 0 %}{{ colors.ORANGE }}{{ status_stats.currently.md_processed }} to prescreen{{ colors.END }} {% endif %}
+
+{% if status_stats.currently.rev_prescreen_excluded > 0 %}[
+{{ status_stats.currently.rev_prescreen_excluded }} prescreen excluded]{% endif %}
+<br>
+
+    PDF retrieval       
+{{ "{:>10}".format(status_stats.overall.pdf_prepared) }} prepared     
+
+{% if status_stats.get_active_pdf_operation_info() != "" %}{{ colors.ORANGE }}{{ status_stats.get_active_pdf_operation_info() }}{{ colors.END }} {% endif %}
+
+{% if status_stats.currently.pdf_not_available > 0 %}[
+{{ status_stats.currently.pdf_not_available }} not available]{% endif %}
+<br>
+
+    PDF screen          
+{{ "{:>10}".format(status_stats.overall.rev_included) }} included     
+
+{% if status_stats.currently.pdf_prepared > 0 %}{{ colors.ORANGE }}{{ status_stats.currently.pdf_prepared }} to screen{{ colors.END }} {% endif %}
+
+{% if status_stats.currently.rev_excluded > 0 %}[
+{{ status_stats.currently.rev_excluded }} excluded]{% endif %}
+<br>
+
+    Data synthesis      
+{{ "{:>10}".format(status_stats.overall.rev_synthesized) }} synthesized  
+
+{% if status_stats.currently.rev_included > 0 %}{{ colors.ORANGE }}{{ status_stats.currently.rev_included }} to synthesize{{ colors.END }} {% endif %}
+{% if status_stats.completeness_condition %}[completed]{{ colors.END }} {% endif %}
+
+<br>
