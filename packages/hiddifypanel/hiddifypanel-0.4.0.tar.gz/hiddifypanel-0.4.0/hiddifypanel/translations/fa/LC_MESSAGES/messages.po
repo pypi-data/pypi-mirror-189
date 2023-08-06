@@ -1,0 +1,1719 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  HiddifyPanel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-02 18:25+0100\n"
+"PO-Revision-Date: 2023-02-02 11:20-0600\n"
+"Last-Translator: hidden u\n"
+"Language: fa\n"
+"Language-Team: Persian\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+# | msgid "Apply Configs"
+#: hiddifypanel/panel/admin/ProxyAdmin.py:41 hiddifypanel/panel/hiddify.py:102
+msgid "admin.config.apply_configs"
+msgstr "اعمال تنظیمات"
+
+# | msgid ""
+# | "Configs have changed successfully. Click %(link)s to apply the configs.
+# It "
+# | "may takes 2 minutes to apply."
+#: hiddifypanel/panel/admin/ProxyAdmin.py:42 hiddifypanel/panel/hiddify.py:103
+msgid "config.validation-success"
+msgstr ""
+"تنظیمات با موفقیت ذخیره شدند. لطفا بر روی این لینک: %(link)s کلیک کنید تا"
+" بر روی سیستم اعمال شوند. این کار ممکن است 2 دقیقه طول بکشد.\n"
+
+#: hiddifypanel/panel/admin/Actions.py:72
+msgid ""
+"Success! Please wait around 4 minutes to make sure everything is updated."
+" During this time, please save your proxy links which are:"
+msgstr ""
+"موفقیت آمیز بود! لطفا برای اینکه مطمئن شوید بروزرسانی‌ها به درستی اعمال "
+"شده، حدود 5 دقیقه صبر کنید. در این فاصله لینک‌های زیر را در جایی برای خود"
+" سیو نمایید:"
+
+# | msgid "See the log in the bellow screen"
+#: hiddifypanel/panel/admin/Actions.py:93
+msgid "see the log in the bellow screen"
+msgstr "لاگ سیستم  را می‌توانید در صفحه زیر ببینید:"
+
+#: hiddifypanel/panel/admin/Actions.py:112
+msgid "Success! Please wait around 5 minutes to make sure everything is updated."
+msgstr ""
+"موفقیت آمیز بود! لطفا برای اینکه مطمئن شوید بروزرسانی‌ها به درستی اعمال "
+"شده، حدود 5 دقیقه صبر کنید."
+
+# | msgid "Domain"
+#: hiddifypanel/panel/admin/DomainAdmin.py:20
+#: hiddifypanel/panel/admin/QuickSetup.py:74
+msgid "domain.domain"
+msgstr "دامنه"
+
+# | msgid "Mode"
+#: hiddifypanel/panel/admin/DomainAdmin.py:21
+msgid "domain.mode"
+msgstr "حالت"
+
+#: hiddifypanel/panel/admin/ProxyAdmin.py:36
+msgid "config.domain-fronting-notsetup-error"
+msgstr "خطا! تنظیمات دامین فرانتینگ کامل نشده."
+
+# | msgid "One of the fields has encountered with error"
+#: hiddifypanel/panel/admin/ProxyAdmin.py:63
+#: hiddifypanel/panel/admin/QuickSetup.py:52
+#: hiddifypanel/panel/admin/SettingAdmin.py:59
+msgid "config.validation-error"
+msgstr "یکی از فیلدها دچار خطا شده است."
+
+#: hiddifypanel/panel/admin/ProxyAdmin.py:90
+#: hiddifypanel/panel/admin/ProxyAdmin.py:116
+#: hiddifypanel/panel/admin/QuickSetup.py:58
+#: hiddifypanel/panel/admin/QuickSetup.py:77
+#: hiddifypanel/panel/admin/SettingAdmin.py:163
+msgid "Submit"
+msgstr "ثبت"
+
+# | msgid "Name"
+#: hiddifypanel/panel/admin/ProxyAdmin1.py:16
+msgid "proxy.name"
+msgstr "نام"
+
+# | msgid "Protocol"
+#: hiddifypanel/panel/admin/ProxyAdmin1.py:17
+msgid "proxy.protocol"
+msgstr "پروتکل"
+
+# | msgid "Transport"
+#: hiddifypanel/panel/admin/ProxyAdmin1.py:18
+msgid "proxy.transport"
+msgstr "حمل و نقل"
+
+# | msgid "Outer Layer"
+#: hiddifypanel/panel/admin/ProxyAdmin1.py:19
+msgid "proxy.l3"
+msgstr "لایه خارجی"
+
+# | msgid "CDN"
+#: hiddifypanel/panel/admin/ProxyAdmin1.py:20
+msgid "proxy.cdn"
+msgstr "CDN"
+
+# | msgid "Change language success"
+#: hiddifypanel/panel/admin/QuickSetup.py:32
+msgid "quicksetup.setlang.success"
+msgstr "تغییر زبان با موفقیت انجام شد"
+
+# | msgid "An error happened in changing language"
+#: hiddifypanel/panel/admin/QuickSetup.py:35
+msgid "quicksetup.setlang.error"
+msgstr "خطایی در تغییر زبان رخ داد"
+
+# | msgid "Language"
+#: hiddifypanel/panel/admin/QuickSetup.py:57
+#: hiddifypanel/panel/admin/SettingAdmin.py:118
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+#: hiddifypanel/panel/admin/templates/quick_setup.html:22
+msgid "config.lang.label"
+msgstr "زبان"
+
+# | msgid "English انگلیسی 英语"
+#: hiddifypanel/panel/admin/QuickSetup.py:57
+#: hiddifypanel/panel/admin/SettingAdmin.py:118
+msgid "lang.en"
+msgstr "English انگلیسی 英语"
+
+# | msgid "Persian فارسی 波斯语"
+#: hiddifypanel/panel/admin/QuickSetup.py:57
+#: hiddifypanel/panel/admin/SettingAdmin.py:118
+msgid "lang.fa"
+msgstr "Persian فارسی 波斯语"
+
+# | msgid "It will change admin and user language"
+#: hiddifypanel/panel/admin/QuickSetup.py:57
+#: hiddifypanel/panel/admin/SettingAdmin.py:118
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.lang.description"
+msgstr "این گزینه زبان بخش مدیریت و بخش کاربر را تغییر می دهد"
+
+# | msgid "Error! Invalid domain.  The domain format is www.google.com"
+#: hiddifypanel/panel/admin/QuickSetup.py:72
+#: hiddifypanel/panel/admin/SettingAdmin.py:123
+#: hiddifypanel/panel/admin/SettingAdmin.py:125
+msgid "config.Invalid domain"
+msgstr "خطا! دامنه نامعتبر! فرمت دامنه باید مثل www.google.com باشد."
+
+# | msgid "Domain is exist in domains section. Use another domain"
+#: hiddifypanel/panel/admin/QuickSetup.py:73
+#: hiddifypanel/panel/admin/SettingAdmin.py:127
+msgid "config.Domain already used"
+msgstr "دامنه در بخش دامنه‌ها وجود دارد. از دامنه دیگری استفاده کنید."
+
+# | msgid ""
+# | "This field should be correct. Please visit <a "
+# |
+# "href=\"https://github.com/hiddify/hiddify-config/wiki/راهنمای-تنظیم-دامنه-و-"
+# | "نهایی-کردن-نصب#آموزش-ساخت-زیردامنه\"> Help</a> to learn how to create a "
+# | "subdomain."
+#: hiddifypanel/panel/admin/QuickSetup.py:74
+msgid "domain.description"
+msgstr ""
+"این فیلد باید به درستی وارد شود. لطفا برای دیدن راهنمای ساخت زیردامنه \n"
+"<a href=\"https://github.com/hiddify/hiddify-"
+"config/wiki/راهنمای-تنظیم-دامنه-و-نهایی-کردن-نصب#آموزش-ساخت-زیردامنه\">این"
+" آدرس </a>\n"
+"را ببینید:"
+
+# | msgid "Enable Telegram MT Proxy"
+#: hiddifypanel/panel/admin/QuickSetup.py:75
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.telegram_enable.label"
+msgstr "فعال کردن پروکسی تلگرام (MTProxy)"
+
+# | msgid ""
+# | "Telegram MT Proxy is used for encapsulate telegram proxy as a TLS
+# traffic"
+#: hiddifypanel/panel/admin/QuickSetup.py:75
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.telegram_enable.description"
+msgstr "برای کپسوله کردن پروکسی تلگرام در قالب ترافیک TLS استفاده می‌شود"
+
+# | msgid "Enable vmess"
+#: hiddifypanel/panel/admin/QuickSetup.py:76
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.vmess_enable.label"
+msgstr "فعال کردن vmess"
+
+# | msgid ""
+# | "It is reported by several people that vmess causes the system to be
+# detected"
+# | " by the government. So it is not recommended"
+#: hiddifypanel/panel/admin/QuickSetup.py:76
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.vmess_enable.description"
+msgstr ""
+"گزارش‌های متعددی موجود است مبنی بر اینکه که vmess باعث می‌شود که سیستم "
+"توسط فیلترینگ شناسایی شود. بنابراین استفاده از آن توصیه نمی‌شود."
+
+# | msgid "Chinese چینی 中国人"
+#: hiddifypanel/panel/admin/SettingAdmin.py:118
+msgid "lang.zh"
+msgstr "Chinese چینی 中国人"
+
+# | msgid ""
+# | "Invalid UUID secret. e.g., 6098ea35-8cb2-4a08-ba15-2be25bc49cb6\n"
+# | "\n"
+#: hiddifypanel/panel/admin/SettingAdmin.py:136
+msgid "config.invalid uuid"
+msgstr "رمز UUID نامعتبر است. به عنوان مثال: 6098ea35-8cb2-4a08-ba15-2be25bc49cb6"
+
+# | msgid "Invalid proxy path. It should be asci string (a-z A-Z 0-9)"
+#: hiddifypanel/panel/admin/SettingAdmin.py:140
+msgid "config.Invalid proxy path"
+msgstr "مسیر پروکسی نامعتبر است. باید رشته متن asci باشد. ( شامل a-z A-Z 0-9)"
+
+# | msgid ""
+# | "Invalid port. It should be comma separated integer e.g., 1000,1001"
+#: hiddifypanel/panel/admin/SettingAdmin.py:144
+msgid "config.Invalid port"
+msgstr "پورت نامعتبر است. اعداد باید با کاما از هم جدا شود، مثلاً 1000,1001"
+
+# | msgid ""
+# | "Port 80 should always be presented. We use it for getting ssl
+# certificate"
+#: hiddifypanel/panel/admin/SettingAdmin.py:147
+msgid "config.port 80 is required"
+msgstr ""
+"پورت 80 همیشه باید در دسترس باشد. از آن برای دریافت سرتیفیکیت ssl استفاده"
+" می‌کنیم."
+
+# | msgid "Port 443 should always be presented. "
+#: hiddifypanel/panel/admin/SettingAdmin.py:150
+msgid "config.port 443 is required"
+msgstr "پورت ۴۴۳ همیشه باید در دسترس باشد."
+
+# | msgid "UUID"
+#: hiddifypanel/panel/admin/UserAdmin.py:27
+msgid "user.UUID"
+msgstr "UUID"
+
+# | msgid "Name"
+#: hiddifypanel/panel/admin/UserAdmin.py:28
+msgid "user.name"
+msgstr "نام"
+
+# | msgid "Monthly Usage Limit (GB)"
+#: hiddifypanel/panel/admin/UserAdmin.py:29
+msgid "user.monthly_usage_limit_GB"
+msgstr "محدودیت حجم ماهانه (گیگابایت)"
+
+# | msgid "Current Usage (GB)"
+#: hiddifypanel/panel/admin/UserAdmin.py:30
+msgid "user.current_usage_GB"
+msgstr "حجم استفاده شده کنونی (گیگابایت)"
+
+# | msgid "Expire Time"
+#: hiddifypanel/panel/admin/UserAdmin.py:31
+msgid "user.expiry_time"
+msgstr "زمان انقضا"
+
+# | msgid "Last usage date reset"
+#: hiddifypanel/panel/admin/UserAdmin.py:32
+msgid "user.last_reset_time"
+msgstr "آخرین تاریخ بازنشانی حجم استفاده شده"
+
+# | msgid "Links for user"
+#: hiddifypanel/panel/admin/UserAdmin.py:33
+msgid "user.user_links"
+msgstr "لینک‌های کاربر"
+
+# | msgid "Actions"
+#: hiddifypanel/panel/admin/UserAdmin.py:34
+msgid "actions"
+msgstr "عملیات"
+
+# | msgid "Settings"
+#: hiddifypanel/panel/admin/templates/config.html:11
+msgid "admin.config.title"
+msgstr "تنظیمات"
+
+# | msgid "CDN"
+#: hiddifypanel/panel/admin/templates/configfake.html:5
+msgid "domain.cdn"
+msgstr "سی‌دی‌ان"
+
+# | msgid "Admin Secret"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.admin_secret.label"
+msgstr "رمز ادمین"
+
+# | msgid "Admin Secret will be used for accessing admin panel"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.admin_secret.description"
+msgstr "رمز ادمین برای دسترسی به پنل ادمین استفاده خواهد شد. "
+
+# | msgid "Admin Settings"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.admin.label"
+msgstr "تنظیمات ادمین"
+
+# | msgid "Admin section is for configuring admin related settings"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.admin.description"
+msgstr "قسمت ادمین برای دسترسی به تنظیمات مدیریتی است."
+
+# | msgid "Enable TLS domain fronting"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.domain_fronting_tls_enable.label"
+msgstr "فعال کردن نمای دامنه در اتصال TLS."
+
+# | msgid "It will use port 443 to connect to CDN"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.domain_fronting_tls_enable.description"
+msgstr "برای اتصال به CDN از پورت 443 استفاده میکند."
+
+# | msgid "Enable HTTP domain fronting"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.domain_fronting_http_enable.label"
+msgstr "فعال کردن نمای دامنه در اتصال HTTP."
+
+# | msgid ""
+# | "Enabling HTTP domain fronting causes your domain to be block quickly."
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.domain_fronting_http_enable.description"
+msgstr "فعال کردن نمای دامنه در HTTP باعث می شود دامنه شما به سرعت فیلتر شود."
+
+# | msgid "Domain Fronting"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.domain_fronting_domain.label"
+msgstr "دامین فرانتینگ"
+
+# | msgid ""
+# | "It is used to simulate another website instead of your website in SNI. "
+# | "Therefore, GTW can not filter your domain"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.domain_fronting_domain.description"
+msgstr ""
+"از این مورد برای شبیه‌سازی یک وبسایت دیگر به جای SNI شما استفاده می‌شود. "
+"در نتیجه GTW نمی‌تواند دامنه شما را فیلتر کند."
+
+# | msgid "Domain Fronting"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.domain_fronting.label"
+msgstr "نمای دامنه"
+
+# | msgid ""
+# | "It is used to simulate another website instead of your website in SNI. "
+# | "Therefore, GTW can not filter your domain"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.domain_fronting.description"
+msgstr ""
+"برای شبیه سازی وب سایت دیگری به جای وب سایت شما در SNI استفاده می شود. "
+"بنابراین، GTW نمی تواند دامنه شما را فیلتر کند."
+
+# | msgid "Firewall"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.firewall.label"
+msgstr "فایروال"
+
+# | msgid ""
+# | "Enabling firewall will open used ports (at least 22,443,80) and close all
+# "
+# | "other ports"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.firewall.description"
+msgstr ""
+"با فعال کردن فایروال، پورت‌های استفاده شده باز خواهند شد (حداقل ۲۲، ۴۴۳ و"
+" ۸۰) و سایر پورت‌ها بسته می‌شوند."
+
+# | msgid "Netdata"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.netdata.label"
+msgstr "Netdata"
+
+# | msgid ""
+# | "For displaying resources. May use your CPU but it is not too much."
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.netdata.description"
+msgstr "برای نمایش منابع. ممکن است از CPU شما استفاده کند اما میزان آن زیاد نیست."
+
+# | msgid "Auto Update"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.auto_update.label"
+msgstr "آپدیت خودکار"
+
+# | msgid ""
+# | "Every day at 3:00 am, we will check for a new update. If there is a new "
+# | "update available, we will update the system automatically."
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.auto_update.description"
+msgstr ""
+"هر روز راس ساعت ۳ صبح، آپدیت‌ها را چک می‌کنیم. در صورتی که آپدیت جدیدی "
+"موجود باشد به صورت خودکار سیستم را آپدیت می‌کنیم."
+
+# | msgid "SpeedTest"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.speed_test.label"
+msgstr "تست سرعت"
+
+# | msgid ""
+# | "Allow your users to do speed test. It helps them to identify the link "
+# | "quality."
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.speed_test.description"
+msgstr ""
+"به کاربران اجازه تست سرعت بدهید. این کار کمک می‌کند تا کیفیت لینک را "
+"بسنجند."
+
+# | msgid "Only IPv4"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.only_ipv4.label"
+msgstr "فقط آی‌پی ورژن 4"
+
+# | msgid "It will disable IPv6"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.only_ipv4.description"
+msgstr "IPv6 را غیر فعال می‌کند. "
+
+# | msgid "Decoy Site"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.decoy_domain.label"
+msgstr "سایت جعلی"
+
+# | msgid "Fake site: simulates a site when someone visits your domain"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.decoy_domain.description"
+msgstr ""
+"سایت جعلی: زمانی که شخصی دامنه شما را در مرورگر وارد کند، یک سایت جعلی را"
+" نمایش می‌دهد."
+
+# | msgid "General Settings"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.general.label"
+msgstr "تنظیمات عمومی"
+
+# | msgid "It is general system configurations."
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.general.description"
+msgstr "این قسمت، تنظیمات عمومی سیستم است."
+
+# | msgid "Enable KCP"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.kcp_enable.label"
+msgstr "KCP را فعال کنید."
+
+# | msgid "It is a UDP based protocol "
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.kcp_enable.description"
+msgstr "این یک پروتکل مبتنی بر UDP است."
+
+# | msgid "KCP ports"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.kcp_ports.label"
+msgstr "پورت‌های KCP"
+
+# | msgid ""
+# | "Comma separated integers indicating the ports to use as KCP
+# connection.\n"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.kcp_ports.description"
+msgstr ""
+"پورت هایی را که برای استفاده برای اتصال KCP هستند. برای ورود چند پورت، "
+"آنها را با کاما از هم جدا کنید."
+
+# | msgid "KCP"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.kcp.label"
+msgstr "KCP"
+
+# | msgid "Need to be completed."
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.kcp.description"
+msgstr "نیاز به کامل شدن دارد."
+
+# | msgid "Allow HTTP connection"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.http_proxy_enable.label"
+msgstr "اجازه اتصال HTTP"
+
+# | msgid ""
+# | "By allowing this, your users can connect to the system with unencrypted
+# http"
+# | " port. (not recommended)"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.http_proxy_enable.description"
+msgstr ""
+"با فعال کردن این گزینه، کاربران شما می‌توانند با پورت http  که یک پورت "
+"رمزگذاری نشده است، به سیستم متصل شوند. (توصیه نمیشود.)"
+
+# | msgid "HTTP ports"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.http_ports.label"
+msgstr "پورت‌های HTTP"
+
+# | msgid ""
+# | "Comma separated integers indicating the ports to use as unencrypted "
+# | "connections (port 80 is required).\n"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.http_ports.description"
+msgstr ""
+"پورت هایی را که برای استفاده برای اتصال HTTP هستند. برای ورود چند پورت، "
+"آنها را با کاما از هم جدا کنید. (پورت 80 اجباری است)."
+
+# | msgid "TLS Ports"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.tls_ports.label"
+msgstr "پورت‌های TLS"
+
+# | msgid ""
+# | "Comma separated integers indicating the ports to use as TLS connection
+# (port"
+# | " 443 is required).\n"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.tls_ports.description"
+msgstr ""
+"پورت هایی را که برای استفاده برای اتصال TLS هستند. برای ورود چند پورت، "
+"آنها را با کاما از هم جدا کنید. (پورت 443 اجباری است)."
+
+# | msgid "Ports settings"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.ports.label"
+msgstr "تنظیمات پورت"
+
+# | msgid "You can select different ports of the system in the section"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.ports.description"
+msgstr "میتوانید از این قسمت پورت‌های مختلف سیستم را انتخاب کنید."
+
+# | msgid "Block Iranian sites"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.block_iran_sites.label"
+msgstr "بلاک کردن سایت‌های ایرانی"
+
+# | msgid ""
+# | "Block Iranian sites to prevent detection by the government (experimental:
+# If"
+# | " there is a problem, please disable it and tell us.)"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.block_iran_sites.description"
+msgstr ""
+"برای جلوگیری از شناسایی توسط فیلترچی، دسترسی به سایت های ایرانی را مسدود "
+"می‌کند. (این قسمت بصورت آزمایشی است؛ اگر مشکلی وجود دارد، لطفاً آن را "
+"غیرفعال کنید و ما را مطلع کنید.)"
+
+# | msgid "Allow invalid SNI"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.allow_invalid_sni.label"
+msgstr "اجازه دادن به SNI نامعتبر "
+
+# | msgid ""
+# | "If you allow invalid SNI, you can use any domain rather than your
+# original "
+# | "domain to access the proxy (not recommended)."
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.allow_invalid_sni.description"
+msgstr ""
+"اگر به SNI نامعتبر اجازه دهید، می‌توانید از هر دامنه‌ای به جای دامنه اصلی"
+" خود برای دسترسی به پروکسی استفاده کنید (توصیه نمی‌شود)."
+
+# | msgid "Secret Proxy Path"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.proxy_path.label"
+msgstr "مسیر مخفی پروکسی"
+
+# | msgid ""
+# | "We use secret proxy path to hide our proxies for the gouvernment."
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.proxy_path.description"
+msgstr ""
+"ما از مسیر‌های پروکسی مخفی استفاده میکنیم تا پروکسی‌ها را از فیلترچی مخفی"
+" کنیم."
+
+# | msgid "Shared Secret"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.shared_secret.label"
+msgstr "رمز مشترک"
+
+# | msgid ""
+# | "Some proxies don't support accounting currently so we have to use a
+# secret "
+# | "for them."
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.shared_secret.description"
+msgstr ""
+"برخی از پراکسی‌ها در حال حاضر محاسبه حجم ترافیک را پشتیبانی نمی‌کنند، "
+"بنابراین باید از یک رمز برای آنها استفاده کنیم."
+
+# | msgid "Proxies Settings"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.proxies.label"
+msgstr "تنظیمات پروکسی"
+
+# | msgid "Define Specific Proxy Settings"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.proxies.description"
+msgstr "تنظیمات یک پروکسی خاص را مشخص کنید."
+
+# | msgid "Shadow TLS"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.shadowtls_enable.label"
+msgstr "Shadow TLS"
+
+# | msgid ""
+# | "Shadow TLS is a new protocol with low performance but it can hide the
+# traffic from the government using faketls.\n"
+# | "Please note that for the moment ShadowTLS is not support accounting."
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.shadowtls_enable.description"
+msgstr ""
+"Shadow TLS یک پروتکل جدید با کارایی پایین است اما می تواند با استفاده از "
+"faketls ترافیک را از فیلترچی پنهان کند.\n"
+"لطفاً توجه داشته باشید که در حال حاضر ShadowTLS محاسبه حجم ترافیک را "
+"پشتیبانی نمی‌کند."
+
+# | msgid "ShadowTLS fakedomain"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.shadowtls_fakedomain.label"
+msgstr "دامنه جعلی ShadowTLS"
+
+# | msgid ""
+# | "Please use a well known domain in your data center. For example, if you
+# are "
+# | "in azure data center, microsoft-update.com is a good example."
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.shadowtls_fakedomain.description"
+msgstr ""
+"لطفاً از یک دامنه شناخته شده در دیتاسنتر خود استفاده کنید. به عنوان مثال،"
+" اگر از دیتاسنتر azure استفاده می‌کنید، microsoft-update.com یک نمونه خوب"
+" است."
+
+# | msgid "ShadowTLS"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.shadowtls.label"
+msgstr "ShadowTLS"
+
+# | msgid ""
+# | "A proxy to expose real tls handshake to the firewall.\n"
+# | "\n"
+# | "It works like trojan but it does not require signing certificate. The
+# firewall will see real tls handshake with valid certificate that you
+# choose."
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.shadowtls.description"
+msgstr ""
+"یک پروکسی برای در اختیار قرار دادن tls handshake به فایروال.\n"
+"\n"
+"مانند تروجان کار می کند اما نیازی به signing certificate ندارد. فایروال، "
+"tls handshake واقعی را با گواهی معتبری که انتخاب می کنید، می‌بیند."
+
+# | msgid "Shadowsocks Fake TLS (simple obfs)"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.ssfaketls_enable.label"
+msgstr "Shadowsocks Fake TLS (obfs ساده)"
+
+# | msgid "simple obfs protocol is not recommended"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.ssfaketls_enable.description"
+msgstr "پروتکل obfs ساده، توصیه نمی شود"
+
+# | msgid "SS fakeTLS fakedomain"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.ssfaketls_fakedomain.label"
+msgstr "دامنه جعلی برای SS fakeTLS"
+
+# | msgid ""
+# | "Please use a well known domain in your data center. For example, if you
+# are "
+# | "in azure data center, microsoft-update.com is a good example. "
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.ssfaketls_fakedomain.description"
+msgstr ""
+"لطفاً از یک دامنه شناخته شده در دیتاسنتر خود استفاده کنید. به عنوان مثال،"
+" اگر از دیتاسنتر azure استفاده می‌کنید، microsoft-update.com یک نمونه خوب"
+" است."
+
+# | msgid "Shadowsocks FakeTLS"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.ssfaketls.label"
+msgstr "Shadowsocks FakeTLS"
+
+# | msgid ""
+# | "Shadowsocks fake tls is a simple obfusacting tool that encapsulate the
+# date "
+# | "in TLS packet"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.ssfaketls.description"
+msgstr ""
+"شادوساکس FakeTLS یک روش مبهم سازی ساده هست که دیتا را در بسته  TLS کپسوله"
+" میکند تا فیلترچی فریب بخورد."
+
+# | msgid "Enable SSR"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.ssr_enable.label"
+msgstr "فعال کردن SSR"
+
+# | msgid ""
+# | "ShadowsocksR is a fork of the original Shadowsocks project, claimed to be
+# "
+# | "superior in terms of security and stability. Not Tested. Not support "
+# | "Accounting."
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.ssr_enable.description"
+msgstr ""
+"شادوساکسR یا ShadowsocksR ورژن دیگری از پروژه شادوساکس است که ادعا شده "
+"است که از لحاظ امنیت و ثبات به نسبت شادوساکس بهتر است. (تا به حال تست "
+"نشده.)"
+
+# | msgid "SSR fakedomain"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.ssr_fakedomain.label"
+msgstr "دامنه جعلی برای SSR"
+
+# | msgid ""
+# | "Please use a well known domain in your data center. For example, if you
+# are "
+# | "in azure data center, microsoft-update.com is a good example "
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.ssr_fakedomain.description"
+msgstr ""
+"لطفا از یک دامنه معتبر در دیتاسنتر خود استفاده کنید. برای مثال، اگر از "
+"دیتاسنتر Azure استفاده می‌کنید، microsoft-update.com یک نمونه خوب است. "
+
+# | msgid "SSR"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.ssr.label"
+msgstr "SSR"
+
+# | msgid ""
+# | "ShadowsocksR is a fork of the original Shadowsocks project, claimed to be
+# "
+# | "superior in terms of security and stability."
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.ssr.description"
+msgstr ""
+"ShadowsocksR ورژنی از پروژه اصلی Shadowsocks است که ادعا می‌شود از نظر "
+"امنیت و ثبات نسبت به آن بهتر است."
+
+# | msgid "Telegram AD Tag"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.telegram_adtag.label"
+msgstr "تگ تبلیغاتی تلگرام"
+
+# | msgid ""
+# | "It is used to show a sponsored channel in the client's chat list. To "
+# | "advertise a channel get a tag from @MTProxybot "
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.telegram_adtag.description"
+msgstr ""
+"برای نشان دادن کانال اسپانسر شده در لیست چت کاربر استفاده می شود. برای "
+"تبلیغ یک کانال یک تگ از @MTProxybot دریافت کنید. "
+
+# | msgid "Telegram FakeDomain"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.telegram_fakedomain.label"
+msgstr "دامنه فیک تلگرام "
+
+# | msgid ""
+# | "Please use a well known domain in your data center. For example, if you
+# are "
+# | "in azure data center, microsoft-update.com is a good example. "
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.telegram_fakedomain.description"
+msgstr ""
+"لطفا از یک دامنه معتبر در دیتاسنتر خود استفاده کنید. برای مثال، اگر از "
+"دیتاسنتر Azure استفاده می‌کنید، microsoft-update.com یک نمونه خوب است."
+
+# | msgid "Telegram Proxy "
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.telegram.label"
+msgstr "پروکسی تلگرام"
+
+# | msgid "A proxy designed for telegram to bypass telegram filtering"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.telegram.description"
+msgstr "پروکسی برای تلگرام طراحی شده تا فیلترینگ تلگرام را دور بزند."
+
+# | msgid "Enable TUIC"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.tuic_enable.label"
+msgstr "فعال کردن TUIC"
+
+# | msgid "It is a UDP based protocol similar to quic"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.tuic_enable.description"
+msgstr "این یک پروتکل مبتنی بر UDP شبیه به quic است"
+
+# | msgid "TUIC ports"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.tuic_port.label"
+msgstr "پورت‌های TUIC"
+
+# | msgid "Use comma to separate ports like 63000,60000"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.tuic_port.description"
+msgstr "از کاما برای جدا کردن پروت‌ها استفاده کنید مثلا 63000,60000"
+
+# | msgid "TUIC"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.tuic.label"
+msgstr "TUIC"
+
+# | msgid ""
+# | "Delicately-TUICed high-performance proxy is on top of the QUIC protocol.
+# \n"
+# | "\n"
+# | "TUIC's goal is to minimize the handshake latency as much as possible"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.tuic.description"
+msgstr ""
+"پروکسی Delicately-TUICed با کارایی بالا روی پروتکل QUIC است. \n"
+"هدف TUIC این است که تأخیر handshake را تا حد امکان به حداقل برساند."
+
+# | msgid "Database version label"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.db_version.label"
+msgstr "ورژن دیتابیس"
+
+# | msgid "Database version description"
+#: hiddifypanel/panel/admin/templates/configfake.html:6
+msgid "config.db_version.description"
+msgstr "توضیحات ورژن دیتابیس"
+
+# | msgid "Protocol Usage Chart"
+#: hiddifypanel/panel/admin/templates/index.html:16
+msgid "admin.protocol_chart"
+msgstr "نمودار مصرف هر پروتکل"
+
+# | msgid "Users Usage Chart"
+#: hiddifypanel/panel/admin/templates/index.html:47
+msgid "admin.user_chart"
+msgstr "نمودار مصرف کاربران"
+
+# | msgid "CPU usage chart"
+#: hiddifypanel/panel/admin/templates/index.html:77
+msgid "admin.cpu_chart"
+msgstr "نمودار پردازنده"
+
+# | msgid "RAM Usage Chart"
+#: hiddifypanel/panel/admin/templates/index.html:108
+msgid "admin.ram_chart"
+msgstr "نمودار رم"
+
+# | msgid "Network Usage"
+#: hiddifypanel/panel/admin/templates/index.html:139
+msgid "admin.network_chart"
+msgstr "نمودار مصرف اینترنت"
+
+# | msgid "Global Configs"
+#: hiddifypanel/panel/admin/templates/proxy.html:11
+msgid "admin.proxy.global_config"
+msgstr "تنظیمات عمومی"
+
+# | msgid "Detailed Configs"
+#: hiddifypanel/panel/admin/templates/proxy.html:21
+msgid "admin.proxy.detailed_config"
+msgstr "تنظیمات دقیق"
+
+# | msgid "QuickSetup"
+#: hiddifypanel/panel/admin/templates/quick_setup.html:35
+msgid "admin.quicksetup.title"
+msgstr "نصب سریع"
+
+# | msgid ""
+# | "Your IPv4 is %(ipv4)s and IPv6 is %(ipv6)s. Please set this ip in your "
+# | "domain and enter your domain bellow.\n"
+#: hiddifypanel/panel/admin/templates/quick_setup.html:40
+msgid "admin.quicksetup_intro"
+msgstr ""
+"IPv4 شما %(ipv4)s و IPv6 شما %(ipv6)s است. لطفا این آی‌پی را با دامنه خود"
+" تنظیم کنید و دامنه را در زیر وارد کنید. "
+
+# | msgid "Log"
+#: hiddifypanel/panel/admin/templates/result.html:13
+msgid "log"
+msgstr "لاگ"
+
+# | msgid "Click here to see the complete log."
+#: hiddifypanel/panel/admin/templates/result.html:14
+msgid "Click here to see the complete log"
+msgstr "برای دیدن لاگ کامل، اینجا کلیک کنید."
+
+# | msgid "All Configs"
+#: hiddifypanel/panel/user/templates/home/all-configs.html:1
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:1
+msgid "user.home.tool.all-configs"
+msgstr "تمام کانفیگ‌ها"
+
+# | msgid "Name and Link"
+#: hiddifypanel/panel/user/templates/home/all-configs.html:7
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:7
+msgid "user.home.allconfig.name"
+msgstr "اسم و لینک"
+
+# | msgid "Type"
+#: hiddifypanel/panel/user/templates/home/all-configs.html:8
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:8
+msgid "user.home.allconfig.type"
+msgstr "نوع"
+
+# | msgid "Protocol"
+#: hiddifypanel/panel/user/templates/home/all-configs.html:9
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:9
+msgid "user.home.allconfig.protocol"
+msgstr "پروتکل"
+
+# | msgid "Transport"
+#: hiddifypanel/panel/user/templates/home/all-configs.html:10
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:10
+msgid "user.home.allconfig.transport"
+msgstr "انتقال"
+
+# | msgid "Security"
+#: hiddifypanel/panel/user/templates/home/all-configs.html:11
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:11
+msgid "user.home.allconfig.security"
+msgstr "امنیت"
+
+# | msgid "Hiddify Configs"
+#: hiddifypanel/panel/user/templates/home/all-configs.html:20
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:19
+msgid "user.home.allconfig.hiddify-configs"
+msgstr "کانفیگ هایدیفای"
+
+# | msgid "All"
+#: hiddifypanel/panel/user/templates/home/all-configs.html:23
+#: hiddifypanel/panel/user/templates/home/all-configs.html:24
+#: hiddifypanel/panel/user/templates/home/all-configs.html:25
+#: hiddifypanel/panel/user/templates/home/all-configs.html:26
+#: hiddifypanel/panel/user/templates/home/all-configs.html:35
+#: hiddifypanel/panel/user/templates/home/all-configs.html:37
+#: hiddifypanel/panel/user/templates/home/all-configs.html:38
+#: hiddifypanel/panel/user/templates/home/all-configs.html:47
+#: hiddifypanel/panel/user/templates/home/all-configs.html:48
+#: hiddifypanel/panel/user/templates/home/all-configs.html:49
+#: hiddifypanel/panel/user/templates/home/all-configs.html:50
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:22
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:23
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:24
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:25
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:34
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:36
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:37
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:46
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:47
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:48
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:49
+msgid "all"
+msgstr "همه"
+
+# | msgid "Clash Configs"
+#: hiddifypanel/panel/user/templates/home/all-configs.html:32
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:31
+msgid "user.home.allconfig.clash-configs"
+msgstr "کانفیگ‌های کلش"
+
+# | msgid "Except vless"
+#: hiddifypanel/panel/user/templates/home/all-configs.html:36
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:35
+msgid "user.home.allconfigs.expect_vless"
+msgstr "به جز vless"
+
+# | msgid "Subscription Link"
+#: hiddifypanel/panel/user/templates/home/all-configs.html:44
+#: hiddifypanel/panel/user/templates/home/all-configs_old.html:43
+msgid "user.home.allconfig.link-configs"
+msgstr "لینک اشتراک"
+
+# | msgid "Direct Download"
+#: hiddifypanel/panel/user/templates/home/android.html:4
+msgid "download"
+msgstr "دانلود مستقیم"
+
+# | msgid "Google Play"
+#: hiddifypanel/panel/user/templates/home/android.html:11
+msgid "install from google play"
+msgstr "گوگل‌پلی"
+
+# | msgid ""
+# | "Please install HiddifyAndroid from %(dl_link)s or %(play_link)s. \n"
+# | "\n"
+# | "<div class=\"callout callout-danger\">\n"
+# | "    <b>Update HiddifyAndroid to version 0.8</b>\n"
+# | "</div>\n"
+# | "<div class=\"card card-info\">\n"
+# | "    <div class=\"card-header\">\n"
+# | "Is it safe to use HiddifyAndorid?\n"
+# | "    </div>\n"
+# | "    <div class=\"card-body\">\n"
+# | "        HiddifyAndroid is an open source fork of Clash that supports more
+# protocol.\n"
+# | "        <br>\n"
+# | "        It's source codes exist in\n"
+# | "        <a
+# href=\"https://github.com/hiddify/HiddifyProxyAndroid\">GitHub</a>.\n"
+# | "        \n"
+# | "        Therefore, it is safe.\n"
+# | "        <details>\n"
+# | "            <summary>Alternative: Normal Clash</summary>\n"
+# | "            <div class=\"btn-group\">\n"
+# | "                <a
+# href=\"https://play.google.com/store/apps/details?id=com.github.kr328.clash\"\n"
+# | "                    class=\"btn btn-warning orig-link\">Clash in Google
+# Play</a>\n"
+# | "            </div>\n"
+# | "                <a
+# href=\"/{{hconfigs[ConfigEnum.proxy_path]}}/gh/Kr328/ClashForAndroid/releases/download/v2.5.12/cfa-2.5.12-premium-universal-release.apk\"\n"
+# | "                    class=\"btn btn-warning orig-link\">Direct
+# Download</a>\n"
+# | "            <div class=\"alert alert-danger\">\n"
+# | "            \tClash does not support VLESS protocol. Therefore, we need
+# to add another link for it.\n"
+# | "            \n"
+# | "        </details>\n"
+#: hiddifypanel/panel/user/templates/home/android.html:15
+msgid "user.home.android.intro"
+msgstr ""
+"لطفاً HiddifyAndroid را از %(dl_link)s یا %(play_link)s نصب کنید.\n"
+"\n"
+"<div class=\"callout callout-danger\">\n"
+"    <b>اپ HiddifyAndroid را به ورژن 0.8 آپدیت کنید. </b>\n"
+"</div>\n"
+"<div class=\"card card-info\">\n"
+"     <div class=\"card-header\">\n"
+"آیا استفاده از HiddifyAndorid ایمن است؟\n"
+"     </div>\n"
+"     <div class=\"card-body\">\n"
+"         HiddifyAndroid یک ورژن (fork) منبع باز Clash است که از پروتکل "
+"های بیشتری پشتیبانی می کند.\n"
+"         <br>\n"
+"         کدهای منبع آن موجود است\n"
+"         <a "
+"href=\"https://github.com/hiddify/HiddifyProxyAndroid\">GitHub</a>.\n"
+"        \n"
+"         <br>\n"
+"         بنابراین، ایمن است.\n"
+"\n"
+"         <details>\n"
+"             <summary>جایگزین: Normal Clash</summary>\n"
+"             <div class=\"btn-group\">\n"
+"                 <a "
+"href=\"https://play.google.com/store/apps/details?id=com.github.kr328.clash\""
+"\n"
+"                     class=\"btn btn-warning orig-link\">برخورد در Google"
+" Play</a>\n"
+"             </div>\n"
+"             <div class=\"btn-group\">\n"
+"                 <a "
+"href=\"/{{hconfigs[ConfigEnum.proxy_path]}}/gh/Kr328/ClashForAndroid/releases/download/v2.5.12/cfa-2.5.12"
+"-premium-universal-release.apk\"\n"
+"                     class=\"btn btn-warning orig-link\">دانلود "
+"مستقیم</a>\n"
+"             </div>\n"
+"\n"
+"             <div class=\"alert alert-danger\">\n"
+"             Clash از پروتکل VLESS پشتیبانی نمی کند. بنابراین، باید لینک "
+"دیگری برای آن اضافه کنیم.\n"
+"             </div>\n"
+"            \n"
+"\n"
+"         </details>\n"
+"     </div>\n"
+"</div>"
+
+#: hiddifypanel/panel/user/templates/home/base.html:36
+msgid "test"
+msgstr "تست"
+
+# | msgid "Now based on your needs, click on one of the following links."
+#: hiddifypanel/panel/user/templates/home/clash-links.html:1
+msgid "user.home.clash_configs.intro"
+msgstr "حالا بر اساس نیازتان، روی یکی از لینک‌های زیر کلیک کنید."
+
+# | msgid "For only blocked sites"
+#: hiddifypanel/panel/user/templates/home/clash-links.html:5
+msgid "user.home.clash_configs.only_for_blocked_sites.title"
+msgstr "فقط برای سایت‌های فیلتر شده"
+
+# | msgid ""
+# | "This mode is suggested. It only forwards the blocked sites via proxy.\n"
+# | "            <div class=\"callout callout-success\">\n"
+# | "                In this mode, you will not feel any change in the
+# speed.\n"
+# | "            </div>"
+#: hiddifypanel/panel/user/templates/home/clash-links.html:7
+msgid "user.home.clash_configs.only_for_blocked_sites.description"
+msgstr ""
+"<b>پیشنهادی</b>.\n"
+"فقط سایت‌های فیلتر شده از طریق پروکسی عبور داده شود.\n"
+"<div class=\"callout callout-success\">\n"
+"در این حالت، شما هیچ تغییری در سرعت احساس نمی‌کنید. \n"
+"</div>"
+
+# | msgid "Install proxy for only blocked sites"
+#: hiddifypanel/panel/user/templates/home/clash-links.html:10
+msgid "user.home.clash_configs.only_for_blocked_sites.btn"
+msgstr "نصب فقط برای سایت‌های فیلتر شده"
+
+# | msgid "Alternative link for Clash"
+#: hiddifypanel/panel/user/templates/home/clash-links.html:13
+#: hiddifypanel/panel/user/templates/home/clash-links.html:31
+#: hiddifypanel/panel/user/templates/home/clash-links.html:50
+msgid "user.home.clash_configs.alternative_for_normal_clash"
+msgstr "لینک جایگزین برای کلش معمولی"
+
+# | msgid "Instal Clash"
+#: hiddifypanel/panel/user/templates/home/clash-links.html:16
+#: hiddifypanel/panel/user/templates/home/clash-links.html:34
+#: hiddifypanel/panel/user/templates/home/clash-links.html:53
+msgid "user.home.clash_configs.link_for_normal_clash"
+msgstr "نصب کلش معمولی"
+
+# | msgid "Foreign sites proxy"
+#: hiddifypanel/panel/user/templates/home/clash-links.html:23
+msgid "user.home.clash_configs.foreign_sites.title"
+msgstr "پروکسی سایت‌های خارجی"
+
+# | msgid ""
+# | "Use proxy for all foreign sites (even not blocked ones)\n"
+# | "<div class=\"callout callout-warning\">\n"
+# | "\tThis mode is useful in accessing some sanctaioned sites.\n"
+# | "</div>\n"
+#: hiddifypanel/panel/user/templates/home/clash-links.html:25
+msgid "user.home.clash_configs.foreign_sites.description"
+msgstr ""
+"استفاده از پروکسی برای همه سایت‌های خارجی (حتی سایت‌های غیر فیلتر). \n"
+"<div class=\"callout callout-warning\">\n"
+"این حالت برای دسترسی به بعضی از سایت‌های تحریم شده مفید است. \n"
+"</div>"
+
+# | msgid "Install for foreign sites"
+#: hiddifypanel/panel/user/templates/home/clash-links.html:28
+msgid "user.home.clash_configs.foreign_sites.btn"
+msgstr "نصب برای سایت‌های خارجی"
+
+# | msgid "Proxy for all sites"
+#: hiddifypanel/panel/user/templates/home/clash-links.html:42
+msgid "user.home.clash_configs.all_sites.title"
+msgstr "پروکسی برای همه سایت‌ها"
+
+# | msgid ""
+# | "Use proxy for all websites even for local websites.\n"
+# | "<div class=\"callout callout-danger\">\n"
+# | "    The speed of loading local sites will be reduced and will endanger
+# your privacy.\n"
+# | "</div>\n"
+#: hiddifypanel/panel/user/templates/home/clash-links.html:44
+msgid "user.home.clash_configs.all_sites.description"
+msgstr ""
+"استفاده از پروکسی برای همه سایت‌ها، حتی برای سایت‌های داخلی.\n"
+"<div class=\"callout callout-danger\">\n"
+"سایت‌های داخلی کند و باعث به خطر افتادن امنیت نیز می‌شود.\n"
+"</div>\n"
+
+# | msgid "Install Proxy for all sites"
+#: hiddifypanel/panel/user/templates/home/clash-links.html:47
+msgid "user.home.clash_configs.all_sites.btn"
+msgstr "نصب پروکسی برای همه سایت‌ها"
+
+# | msgid "Copy the link bellow into your browser."
+#: hiddifypanel/panel/user/templates/home/doh.html:1
+msgid "user.home.tool.doh"
+msgstr "لینک زیر را در مرورگرتان کپی کنید."
+
+# | msgid "Copy"
+#: hiddifypanel/panel/user/templates/home/doh.html:8
+#: hiddifypanel/templates/master.html:121
+msgid "copy"
+msgstr "کپی"
+
+# | msgid ""
+# | "    <h4>Configure DoH on your browser</h4>\n"
+# | "    There are several browsers compatible with DNS over HTTPS (DoH). This
+# protocol lets\n"
+# | "    you encrypt your connection to 1.1.1.1 in order to protect your DNS
+# queries from privacy intrusions and tampering.\n"
+# | "\n"
+# | "    Some browsers might already have this setting enabled.\n"
+# | "    <h5>​​Mozilla Firefox</h5>\n"
+# | "    Select the <b>menu</b> button > <b>Settings</b>.In the General menu,
+# scroll down to access <b>Network Settings</b>. Select <b>Settings</b>.
+# Select <b>Enable DNS over HTTPS</b>.\n"
+# | "    ​<h5>​Google Chrome</h5>\n"
+# | "    Select the <b>three-dot</b> menu in your browser >
+# <b>Settings</b>.\n"
+# | "    Select <b>Privacy and security</b> > <b>Security</b>.\n"
+# | "    Scroll down and enable <b>Use secure DNS</b>.\n"
+# | "    \n"
+# | "    <h5>​​Microsoft Edge</h5>\n"
+# | "    Select <b>Privacy, Search, and Services</b>, and scroll down to
+# <b>Security</b>.\n"
+# | "    Enable <b>Use secure DNS</b>.\n"
+# | "    Select Choose a service provider.\n"
+# | "    "
+#: hiddifypanel/panel/user/templates/home/doh.html:13
+msgid "user.home.tool.doh.help"
+msgstr ""
+"<h4> کانفیک کردن DNS روی HTTPS </h4>\n"
+"مرورگرهای متعددی وجود دارد که با DNS روی HTTPS یا (DoH) سازگار هستند. این"
+" پروتکل اجازه می‌دهد تا ارتباطتان را با 1.1.1.1 رمزگذاری کنید تا از "
+"کوئری‌های روی DNS در برابر حملات نفوذ به امنیت محافظت کنید. \n"
+"\n"
+"بعضی مرورگرها ممکن است به این تنظیمات را از قبل داشته باشند. \n"
+"  <h5>​​موزیلا فایرفاکس</h5>\n"
+"    "
+
+# | msgid "Hiddify Proxy"
+#: copy.html:2 hiddifypanel/panel/user/templates/home/index
+#: hiddifypanel/panel/user/templates/home/index.html:2
+msgid "user.home.title"
+msgstr "پروکسی هایدیفای"
+
+# | msgid "Telegram"
+#: copy.html:27 hiddifypanel/panel/user/templates/home/index
+#: hiddifypanel/panel/user/templates/home/index.html:39
+msgid "telegram"
+msgstr "تلگرام"
+
+# | msgid "HiddifyPanel"
+#: hiddifypanel/panel/user/templates/home/index.html:7
+#: hiddifypanel/templates/admin-layout.html:20
+#: hiddifypanel/templates/admin-layout.html:24
+#: hiddifypanel/templates/admin-layout.html:67
+#: hiddifypanel/templates/master.html:6
+msgid "master.page-title"
+msgstr "هایدیفای"
+
+# | msgid "Android"
+#: hiddifypanel/panel/user/templates/home/index.html:42
+msgid "android"
+msgstr "اندروید"
+
+# | msgid "iOS"
+#: hiddifypanel/panel/user/templates/home/index.html:44
+msgid "ios"
+msgstr "آی‌او‌اس"
+
+# | msgid "Desktop"
+#: hiddifypanel/panel/user/templates/home/index.html:46
+msgid "desktop"
+msgstr "دسکتاپ"
+
+# | msgid "Please select your operation system"
+#: hiddifypanel/panel/user/templates/home/index.html:53
+msgid "user.home.select os"
+msgstr "لطفا سیستم عامل خود را انتخاب کنید."
+
+# | msgid "All Configs"
+#: hiddifypanel/panel/user/templates/home/index.html:88
+msgid "user.home.all_configs"
+msgstr "تمام کانفیگ‌ها"
+
+# | msgid "Speedtest (detect dirty IP)"
+#: hiddifypanel/panel/user/templates/home/index.html:90
+msgid "user.home.speedtest"
+msgstr "تست سرعت (شناسایی آی‌پی کثیف)"
+
+# | msgid "DNS over https"
+#: hiddifypanel/panel/user/templates/home/index.html:92
+msgid "user.home.doh"
+msgstr "DNS روی HTTPS"
+
+# | msgid "Please select the item."
+#: hiddifypanel/panel/user/templates/home/index.html:98
+msgid "user.home.select tool"
+msgstr "لطفا یکی از موارد زیر را انتخاب کنید."
+
+#: hiddifypanel/panel/user/templates/home/index.html:124
+#: hiddifypanel/panel/user/templates/home/usage.html:35
+msgid "QR code"
+msgstr "کیوآر کد"
+
+# | msgid ""
+# | "To copy or share links, click on the gray <i class='fa-solid
+# fa-qrcode'></i>"
+# | " field to display its QR Code."
+#: hiddifypanel/panel/user/templates/home/index.html:125
+#: hiddifypanel/panel/user/templates/home/usage.html:36
+msgid "user.home.qr-code.description"
+msgstr ""
+"برای کپی یا به اشتراک‌گذاری لینک‌ها، روی قسمت طوسی‌رنگ <i class='fa-solid"
+" fa-qrcode'></i> کلیک کنید تا کیوآر کد نمایش داده شود."
+
+# | msgid "Display QR Code"
+#: hiddifypanel/panel/user/templates/home/index.html:133
+#: hiddifypanel/panel/user/templates/home/usage.html:44
+msgid "user.home.qr-code.display"
+msgstr "نمایش کیو آر کد"
+
+# | msgid "Next"
+#: hiddifypanel/panel/user/templates/home/index.html:351
+msgid "next"
+msgstr "بعدی"
+
+# | msgid "Previous"
+#: hiddifypanel/panel/user/templates/home/index.html:352
+msgid "previous"
+msgstr "قبلی"
+
+# | msgid "Search"
+#: hiddifypanel/panel/user/templates/home/index.html:363
+msgid "search"
+msgstr "جستجو"
+
+# | msgid "Stash <span class=\"badge badge-success\">Recommended</span>"
+#: copy.html:6 hiddifypanel/panel/user/templates/home/ios
+#: hiddifypanel/panel/user/templates/home/ios.html:5
+msgid "user.home.ios.stash.title"
+msgstr "اپ Stash توصیه می‌شود."
+
+# | msgid ""
+# | "Stash is a great application. We think it is worth to buy it.\n"
+# | "\n"
+# | "        <div class=\"btn-group\">\n"
+# | "        <a
+# href=\"https://apps.ap0ple.com/us/app/stash-rule-based-proxy/id1596063349\"
+# target=\"_blank\" class=\"btn btn-success orig-link\">Download stash</a>\n"
+# | "        </div>"
+#: copy.html:17 hiddifypanel/panel/user/templates/home/ios
+#: hiddifypanel/panel/user/templates/home/ios.html:16
+msgid "user.home.ios.stash.intro"
+msgstr ""
+"اپلیکیشن Stash یک اپ بسیار عالی است و به نظر ما ارزش خرید دارد.\n"
+"  <div class=\"btn-group\">\n"
+"        <a href=\"https://apps.apple.com/us/app/stash-rule-based-"
+"proxy/id1596063349\" target=\"_blank\" class=\"btn btn-success orig-"
+"link\">دانلود Stash</a>\n"
+"        </div>"
+
+# | msgid "Other applications (shadowlink, fairVPN, napsternetv)"
+#: hiddifypanel/panel/user/templates/home/ios.html:31
+msgid "user.home.ios.others.title"
+msgstr "سایر اپلیکیشن‌ها (shadowlink, fairVPN, napsternetv)"
+
+# | msgid ""
+# | "First install on of the following applications:\n"
+# | "<div class=\"btn-group\">\n"
+# | "<a
+# href=\"https://apps.apple.com/us/app/shadowlink-shadowsocks-vpn/id1439686518\"\n"
+# | "        class=\"btn btn-primary orig-link\">shadow link</a> \n"
+# | "    <a href=\"https://apps.apple.com/us/app/napsternetv/id1629465476\"\n"
+# | "        class=\"btn btn-primary orig-link\">napsternetv</a>\n"
+# | "\t<a href=\"https://apps.apple.com/us/app/fair-vpn/id1533873488\"\n"
+# | "        class=\"btn btn-primary orig-link\">fair-vpn</a>\n"
+# | "</div>\n"
+# | "\n"
+# | "<br />\n"
+# | "Then apply one of the following configs:"
+#: hiddifypanel/panel/user/templates/home/ios.html:42
+msgid "user.home.ios.others.intro"
+msgstr ""
+"ابتدا یکی از برنامه های زیر را نصب کنید:\n"
+"<div class=\"btn-group\">\n"
+"<a href=\"https://apps.apple.com/us/app/shadowlink-shadowsocks-"
+"vpn/id1439686518\"\n"
+"         class=\"btn btn-primary orig-link\">Shadowlink</a>\n"
+"     <a href=\"https://apps.apple.com/us/app/napsternetv/id1629465476\"\n"
+"         class=\"btn btn-primary orig-link\">napsternetv</a>\n"
+"<a href=\"https://apps.apple.com/us/app/fair-vpn/id1533873488\"\n"
+"         class=\"btn btn-primary orig-link\">fair-vpn</a>\n"
+"</div>\n"
+"\n"
+"<br />\n"
+"سپس یکی از تنظیمات زیر را اعمال کنید:"
+
+# | msgid ""
+# | "First, test the speed <b>without</b> the proxy. If the speed is not good,
+# it means that this ip is so called dirty on your ISP.\n"
+# | "If the speed was low without a proxy, don't waste your time to test this
+# proxy.\n"
+# | "Otherwise, test with different proxies of this site and if the speed is
+# similar to the speed without the proxy, then you have found the best
+# protocol."
+#: hiddifypanel/panel/user/templates/home/speedtest.html:1
+msgid "user.home.speedtest.intro"
+msgstr ""
+"ابتدا سرعت را <b>بدون</b> پراکسی تست کنید. اگر سرعت خوب نیست، به این معنی"
+" است که این IP در ISP شما اصطلاحا کثیف است.\n"
+"اگر سرعت بدون پراکسی کم بود، وقت خود را برای تست این پروکسی تلف نکنید.\n"
+"در غیر این صورت با پراکسی های مختلف این سایت تست کنید و اگر سرعت مشابه "
+"سرعت بدون پروکسی است، بهترین پروتکل را پیدا کرده اید."
+
+# | msgid "Upload"
+#: hiddifypanel/panel/user/templates/home/speedtest.html:5
+msgid "user.home.speedtest.upload"
+msgstr "آپلود"
+
+# | msgid "Download"
+#: hiddifypanel/panel/user/templates/home/speedtest.html:7
+msgid "user.home.speedtest.download"
+msgstr "دانلود"
+
+# | msgid "Both ways"
+#: hiddifypanel/panel/user/templates/home/speedtest.html:9
+msgid "user.home.speedtest.two_ways"
+msgstr "هر دو راه"
+
+# | msgid "Telegram Proxy"
+#: hiddifypanel/panel/user/templates/home/telegram.html:7
+msgid "user.home.telegram.clickbtn"
+msgstr "پروکسی تلگرام"
+
+# | msgid ""
+# | "Click on %(link)s, then, in the telegram you can see a window that
+# contains "
+# | "<b>Connect Proxy</b>. Click on it and it will work."
+#: hiddifypanel/panel/user/templates/home/telegram.html:12
+msgid "user.home.telegram.description"
+msgstr ""
+"روی این لینک  %(link)s کلیک کنید و سپس در تلگرام پنجره‌‌ای مشاهده می‌کنید"
+" که یک دکمه با نوشته <b>Connect Proxy</b> قابل مشاهده است. روی آن کلیک "
+"کنید تا پروکسی متصل شود."
+
+# | msgid "Trafic Usage"
+#: hiddifypanel/panel/user/templates/home/usage.html:7
+msgid "user.home.usage.title"
+msgstr "حجم ترافیک مصرفی"
+
+# | msgid "of"
+#: hiddifypanel/panel/user/templates/home/usage.html:9
+msgid "user.home.usage.from"
+msgstr "از"
+
+# | msgid "Monthly"
+#: hiddifypanel/panel/user/templates/home/usage.html:10
+msgid "user.home.usage.monthly"
+msgstr "ماهانه"
+
+# | msgid "Expire in: "
+#: hiddifypanel/panel/user/templates/home/usage.html:16
+msgid "user.home.usage.expire"
+msgstr "تا انقضا:"
+
+# | msgid "Days"
+#: hiddifypanel/panel/user/templates/home/usage.html:16
+msgid "days"
+msgstr "روز"
+
+# | msgid "Display usage details."
+#: hiddifypanel/panel/user/templates/home/usage.html:24
+msgid "user.home.usage.details"
+msgstr "نمایش جزئیات استفاده"
+
+#: hiddifypanel/panel/user/templates/home/windows.html:6
+#: hiddifypanel/panel/user/templates/home/windows.html:22
+msgid "Windows"
+msgstr "ویندوز"
+
+#: hiddifypanel/panel/user/templates/home/windows.html:9
+#: hiddifypanel/panel/user/templates/home/windows.html:25
+msgid "macOS"
+msgstr "مک"
+
+#: hiddifypanel/panel/user/templates/home/windows.html:12
+#: hiddifypanel/panel/user/templates/home/windows.html:28
+msgid "Linux"
+msgstr "لینوکس"
+
+# | msgid ""
+# | "First, download and install the HiddifyDesktop software according to your
+# operating system.\n"
+# | "<br>\n"
+# | "%(hiddify_desktop_links)s\n"
+# | "\n"
+# | "<div class=\"card card-info\">\n"
+# | "    <div class=\"card-header\">\n"
+# | "Is it safe to use HiddifyDesktop?\n"
+# | "    </div>\n"
+# | "    <div class=\"card-body\">\n"
+# | "        HiddifyDesktop is an open source fork of Clash that supports more
+# protocol.\n"
+# | "        <br>\n"
+# | "        Its source codes exist in\n"
+# | "        <a
+# href=\"https://github.com/hiddify/HiddifyDesktop\">GitHub</a>.\n"
+# | "        \n"
+# | "        Therefore, it is safe.\n"
+# | "        <details>\n"
+# | "            <summary>Alternative: Normal Clash</summary>\n"
+# | "            %(normal_clash_link)s\n"
+# | "            <div class=\"alert alert-danger\">\n"
+# | "            \tClash does not support VLESS protocol. Therefore, we need
+# to add another link for it.\n"
+# | "            </div>\n"
+# | "            \n"
+# | "        </details>\n"
+# | "</div>\n"
+# | "Now, according to your need, you can click on one of the buttons. By
+# viewing the window in your browser, just click on the Open HiddifyDesktop
+# option to automatically add the server link to HiddifyDesktop.\n"
+#: hiddifypanel/panel/user/templates/home/windows.html:33
+msgid "user.home.windows.intro"
+msgstr ""
+"ابتدا نرم افزار HiddifyDesktop را با توجه به سیستم عامل خود دانلود و نصب "
+"کنید.\n"
+"<br>\n"
+"%(hiddify_desktop_links)s\n"
+"\n"
+"<div class=\"card card-info\">\n"
+"     <div class=\"card-header\">\n"
+"آیا استفاده از HiddifyDesktop ایمن است؟\n"
+"     </div>\n"
+"     <div class=\"card-body\">\n"
+"         HiddifyDesktop یک ورژن (fork) منبع باز از Clash است که از پروتکل"
+" های بیشتری پشتیبانی می‌کند.\n"
+"         <br>\n"
+"         کدهای منبع آن در لینک زیر موجود است\n"
+"         <a "
+"href=\"https://github.com/hiddify/HiddifyDesktop\">GitHub</a>.\n"
+"        \n"
+"         <br>\n"
+"         بنابراین، ایمن است.\n"
+"\n"
+"         <details>\n"
+"             <summary>جایگزین: کلش </summary>\n"
+"             %(normal_clash_link)s\n"
+"\n"
+"             <div class=\"alert alert-danger\">\n"
+"             Clash از پروتکل VLESS پشتیبانی نمی کند. بنابراین، باید لینک "
+"دیگری برای آن اضافه کنیم.\n"
+"             </div>\n"
+"            \n"
+"\n"
+"         </details>\n"
+"     </div>\n"
+"</div>\n"
+"حال با توجه به نیاز خود می توانید روی یکی از دکمه ها کلیک کنید. با مشاهده"
+" پنجره در مرورگر خود، کافیست روی گزینه Open HiddifyDesktop کلیک کنید تا "
+"لینک سرور به صورت خودکار به HiddifyDesktop اضافه شود."
+
+#: hiddifypanel/templates/admin-layout.html:9
+msgid "new_test"
+msgstr ""
+
+# | msgid "Admin"
+#: hiddifypanel/templates/admin-layout.html:28
+#: hiddifypanel/templates/admin-layout.html:81
+msgid "admin.menu.home"
+msgstr "ادمین"
+
+# | msgid "Domains"
+#: hiddifypanel/templates/admin-layout.html:29
+#: hiddifypanel/templates/admin-layout.html:82
+msgid "admin.menu.domain"
+msgstr "دامنه‌ها"
+
+# | msgid "Users"
+#: hiddifypanel/templates/admin-layout.html:30
+#: hiddifypanel/templates/admin-layout.html:83
+msgid "admin.menu.user"
+msgstr "کاربران"
+
+# | msgid "Proxies"
+#: hiddifypanel/templates/admin-layout.html:31
+#: hiddifypanel/templates/admin-layout.html:84
+msgid "admin.menu.proxy"
+msgstr "پروکسی‌ها"
+
+# | msgid "Settings"
+#: hiddifypanel/templates/admin-layout.html:32
+#: hiddifypanel/templates/admin-layout.html:85
+msgid "admin.menu.config"
+msgstr "تنظیمات"
+
+# | msgid "Actions"
+#: hiddifypanel/templates/admin-layout.html:35
+#: hiddifypanel/templates/admin-layout.html:94
+msgid "admin.actions.title"
+msgstr "اقدامات"
+
+# | msgid "Status"
+#: hiddifypanel/templates/admin-layout.html:37
+#: hiddifypanel/templates/admin-layout.html:97
+msgid "admin.actions.status"
+msgstr "وضعیت"
+
+# | msgid "Apply Configs"
+#: hiddifypanel/templates/admin-layout.html:38
+msgid "admin.Actions:apply_configs"
+msgstr "اعمال تنظیمات"
+
+# | msgid "Reinstall System"
+#: hiddifypanel/templates/admin-layout.html:39
+#: hiddifypanel/templates/admin-layout.html:100
+msgid "admin.actions.reinstall"
+msgstr "نصب مجدد سیستم"
+
+# | msgid "Restart system"
+#: hiddifypanel/templates/admin-layout.html:40
+#: hiddifypanel/templates/admin-layout.html:99
+msgid "admin.actions.reset"
+msgstr "ریستارت سیستم"
+
+# | msgid "Update System"
+#: hiddifypanel/templates/admin-layout.html:41
+#: hiddifypanel/templates/admin-layout.html:101
+msgid "admin.actions.update"
+msgstr "به‌روز‌ رسانی سیستم"
+
+# | msgid "View Logs"
+#: hiddifypanel/templates/admin-layout.html:42
+#: hiddifypanel/templates/admin-layout.html:96
+msgid "admin.actions.viewlogs"
+msgstr "نمایش لاگ"
+
+# | msgid "Support"
+#: hiddifypanel/templates/admin-layout.html:48
+#: hiddifypanel/templates/admin-layout.html:105
+msgid "admin.menu.support"
+msgstr "پشتیبانی"
+
+# | msgid "Telegram"
+#: hiddifypanel/templates/admin-layout.html:51
+#: hiddifypanel/templates/admin-layout.html:108
+msgid "admin.menu.telegram"
+msgstr "تلگرام"
+
+# | msgid "Apply configs"
+#: hiddifypanel/templates/admin-layout.html:98
+msgid "admin.actions.apply_configs"
+msgstr "اعمال کانفیگ‌ها"
+
+# | msgid "Share to social media"
+#: hiddifypanel/templates/master.html:112
+msgid "user.home.share-title"
+msgstr "اشتراک‌گذاری در شبکه‌های اجتماعی"
+
+# | msgid "Link for social media"
+#: hiddifypanel/templates/master.html:122
+msgid "clickable copy"
+msgstr "لینک برای شبکه‌های اجتماعی"
+
+# | msgid "Open"
+#: hiddifypanel/templates/master.html:123
+msgid "open"
+msgstr "باز کردن"
+
+# | msgid "Close"
+#: hiddifypanel/templates/master.html:130
+msgid "close"
+msgstr "بستن"
+
+# | msgid "Link Copied to clipboard. "
+#: hiddifypanel/templates/master.html:172
+msgid "user.home.link.success-copy"
+msgstr "لینک کپی شد. "
+
+# | msgid "Copy to clipboard:  Ctrl+C, Enter"
+#: hiddifypanel/templates/master.html:174
+#: hiddifypanel/templates/master.html:177
+msgid "user.home.link.manual-copy"
+msgstr "کپی کردن به کلیپ‌بورد: دکمه Ctrl+C و Enter"
+
+# | msgid ""
+# | "Invalid address: a website for decoy site should be complete url e.g., "
+# | "https://www.wikipedia.org/\n"
+#~ msgid "config.Invalid decoy_site"
+#~ msgstr ""
+#~ "آدرس نامعتبر: یک وب‌سایت جعلی باید "
+#~ "نشانی اینترنتی کاملی داشته باشد، به "
+#~ "عنوان مثال، https://www.wikipedia.org/"
+
+# | msgid "Decoy Site"
+#~ msgid "config.decoy_site.label"
+#~ msgstr "سایت جعلی"
+
+# | msgid "Fake site: simulates a site when someone visits your domain"
+#~ msgid "config.decoy_site.description"
+#~ msgstr ""
+#~ "سایت جعلی: زمانی که شخصی از دامنه"
+#~ " شما بازدید می کند یک سایت جعلی"
+#~ " را نمایش می‌دهد."
+
+# | msgid "Allow HTTP connection"
+#~ msgid "config.http_proxy.label"
+#~ msgstr "اجازه اتصال HTTP"
+
+# | msgid ""
+# | "By allowing this, your users can connect to the system with unencrypted
+# http"
+# | " port. (not recommended)"
+#~ msgid "config.http_proxy.description"
+#~ msgstr ""
+#~ "با دادن این مجوز، کاربران شما "
+#~ "می‌توانند با پورت‌های غیر رمز نگاری "
+#~ "شده‌ی HTTP به سیستم وصل شوند. "
+#~ "(توصیه نمی‌شود.)"
+
+# | msgid "Link Copied to clipboard. "
+#~ msgid "user.home.link.success - copy"
+#~ msgstr "لینک با موفقیت کپی شد"
+
+# | msgid "Enable HTTP domain fronting"
+#~ msgid "config.domain_fronting_http.label"
+#~ msgstr "فعال‌سازی HTTP در دامین فرانتینگ"
+
+# | msgid ""
+# | "Enabling HTTP domain fronting causes your domain to be block quickly."
+#~ msgid "config.domain_fronting_http.description"
+#~ msgstr ""
+#~ "فعالسازی دامین فرانتینگ در مود http "
+#~ "باعث می‌شود دامنه شما به سرعت "
+#~ "فیلتر شود."
+
+# | msgid "Enable TLS domain fronting"
+#~ msgid "config.domain_fronting_tls.label"
+#~ msgstr "فعالسازی TLS در دامین فرانتینگ"
+
+# | msgid "It will use port 443 to connect to CDN"
+#~ msgid "config.domain_fronting_tls.description"
+#~ msgstr "از پورت 443 برای اتصال به CDN استفاده می‌کند."
+
+# | msgid "Check"
+#~ msgid "check"
+#~ msgstr "بررسی"
+
