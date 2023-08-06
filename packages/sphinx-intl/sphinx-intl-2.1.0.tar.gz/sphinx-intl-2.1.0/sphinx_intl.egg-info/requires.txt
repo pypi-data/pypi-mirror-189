@@ -1,0 +1,9 @@
+setuptools
+click
+babel
+sphinx
+
+[test]
+pytest
+mock
+six
