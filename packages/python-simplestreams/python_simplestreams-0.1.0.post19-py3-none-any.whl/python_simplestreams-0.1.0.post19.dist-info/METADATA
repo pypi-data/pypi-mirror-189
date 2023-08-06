@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: python-simplestreams
+Version: 0.1.0.post19
+Summary: Library and tools for using Simple Streams data
+Home-page: http://launchpad.net/simplestreams/
+Author: Scott Moser
+Author-email: scott.moser@canonical.com
+License: AGPL
+License-File: LICENSE
+
