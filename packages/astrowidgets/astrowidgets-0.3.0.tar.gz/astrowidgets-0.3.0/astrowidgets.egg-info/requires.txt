@@ -1,0 +1,14 @@
+astropy
+ginga>=3.4
+pillow
+ipywidgets>=7.5
+ipyevents>=0.6.3
+jupyterlab>=3
+aggdraw
+
+[docs]
+sphinx-astropy
+
+[test]
+pytest-astropy
+pytest-cov
