@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: meoawji
+Version: 1.0.1
+Summary: Free uptime bot in replit with module !
+Home-page: https://discord.gg/nUXkXEyBBM
+Author: GxdjCoding
+Author-email: meoawcute@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MeoawJi
+
+Free uptime bot in replit with module !
+
+#### How to install ?
+
+```http
+pip install meoawji
+```
+
+#### How to use ?
+
+```http
+soon with full ex code :D
+```
+
+## Features
+
+- Host your code in replit online 24 hour ! ( with out hacker plan )
+- Free panel to see your code online in replit
+
+## Discord Server
+
+[Offical Server](https://discord.gg/nUXkXEyBBM)
