@@ -1,0 +1,12 @@
+pyvichan/__init__.py,sha256=11QTs2Z0BUjSlQKnB3aZpUTLcFd8Fc1dkcfAjI5boNc,719
+pyvichan/board.py,sha256=USs255MBIM7C26mXil-ZasIm22SDm_lKDkoRIZJFJRI,10115
+pyvichan/file.py,sha256=pPHQwygT4SpmrBp_HFvGEEP3CQHPHenRwfVfRMhBsl0,3700
+pyvichan/post.py,sha256=j0qZUlgzl117spycxeS9AUL5_4Zxm2pzJJibPW_R29o,4942
+pyvichan/thread.py,sha256=2h8hricyMqeTP_SGsIap_sSTV6TrARTCBULVxxwySK8,8569
+pyvichan/url.py,sha256=rElJTUiaQE_MgmydPGk_Xb3REGSaORchpKLCFg30Obo,5316
+pyvichan/util.py,sha256=lPNMFU5oupSeJSwdsbvYb7QzuGct-HH6OekHV7ESBAw,718
+pyvichan-0.4.3.dist-info/LICENSE,sha256=djc4a1-B6KcZyjNiMxSQBeX6KLXmBU6ntn3kk1WwrUA,484
+pyvichan-0.4.3.dist-info/METADATA,sha256=C6dw3FFwFkqMrbn2-uYIFWxYZ92wJOi_1w8xIhl3n1s,3562
+pyvichan-0.4.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+pyvichan-0.4.3.dist-info/top_level.txt,sha256=fNEycokKZM-ywIL5nzJ60evcL8n7lcH6ghT8-7GwliI,9
+pyvichan-0.4.3.dist-info/RECORD,,
