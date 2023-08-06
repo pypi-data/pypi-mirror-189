@@ -1,0 +1,13 @@
+LICENCE
+README.md
+setup.cfg
+setup.py
+Nanylibrary/Cliob.py
+Nanylibrary/Nany.py
+Nanylibrary/Ny_Wb.py
+Nanylibrary/__init__.py
+Nanylibrary/encryption.py
+Nanylibrary.egg-info/PKG-INFO
+Nanylibrary.egg-info/SOURCES.txt
+Nanylibrary.egg-info/dependency_links.txt
+Nanylibrary.egg-info/top_level.txt
