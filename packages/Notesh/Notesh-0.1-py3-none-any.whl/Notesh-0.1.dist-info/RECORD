@@ -1,0 +1,15 @@
+notesh/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+notesh/color_picker.py,sha256=-C9LkZasY2PrBpQ9EtyvD15ULQ5MXrDG-7AjYGJVl4M,5396
+notesh/command_line.py,sha256=rIFyu7rvIMjodeBnsaI3kwywdkniVAqksF0VCkX1geQ,359
+notesh/main.css,sha256=AVYvsUsS5JpA0e_soO7patbwHNrpK4R0OhOVqwlUqd0,4218
+notesh/main.py,sha256=bcRLf01WI6h9f5idjm_ieEvqBKDDqrvRmNViLHFbFxI,4790
+notesh/play_area.py,sha256=XGoqx8Dyqut_nPbQzLLLhf9AopeES_Wk68p3oy2lC2I,3348
+notesh/sidebar.py,sha256=pb8V_1o-fjRdTN-Ebk4gVF1-1eSDw3wDQ-PbYk30vGA,5238
+notesh/sticknote.py,sha256=WUgHcdt2a8yXaeyIwIzac_0vGmml--2KvyrYs7ijGNI,8174
+notesh/utils.py,sha256=jNE8lJkvdBj_0_JG1Jhk-MwKvnV3yPinSNxXjr6srX8,73
+Notesh-0.1.dist-info/LICENSE,sha256=0hI7bAs4_358m3RswUv_17VSBolsQbtylcLRCeP6OPQ,1064
+Notesh-0.1.dist-info/METADATA,sha256=iJrf0YXYcdlWdkCZUk2Xr9L4x3A7lewbjDmauVjTXSU,1321
+Notesh-0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+Notesh-0.1.dist-info/entry_points.txt,sha256=kbh7-THJc_g-fD3EJi-VAkIVtIBfKAenic4YBlUioCM,51
+Notesh-0.1.dist-info/top_level.txt,sha256=prkk--LRiffpgow9rEm-iy_ui6sfi8_ygCLI209xL3w,7
+Notesh-0.1.dist-info/RECORD,,
