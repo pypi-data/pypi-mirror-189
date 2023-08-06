@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: crypticbcs
+Version: 0.1
+Summary: code for cryptic
+Author: Yash Yadav
+Author-email: yashuyadav197@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: licence.txt
+
