@@ -1,0 +1,2 @@
+recursive-include muphyn/themes *
+recursive-include muphyn/packages/interface/assets *
