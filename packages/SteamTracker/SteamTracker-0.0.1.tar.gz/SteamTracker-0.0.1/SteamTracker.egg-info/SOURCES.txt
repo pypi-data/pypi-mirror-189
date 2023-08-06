@@ -1,0 +1,8 @@
+setup.py
+SteamTracker.egg-info/PKG-INFO
+SteamTracker.egg-info/SOURCES.txt
+SteamTracker.egg-info/dependency_links.txt
+SteamTracker.egg-info/requires.txt
+SteamTracker.egg-info/top_level.txt
+Steam_Tracker/__init__.py
+Steam_Tracker/steam_tracker.py
