@@ -1,0 +1,9 @@
+[
+  "tests/test_gallicaWrapper.py::test_get_content",
+  "tests/test_gallicaWrapper.py::test_get_issues",
+  "tests/test_gallicaWrapper.py::test_get_papers_wrapper",
+  "tests/test_gallicaWrapper.py::test_get_period_occurrences[input0-6]",
+  "tests/test_gallicaWrapper.py::test_get_period_occurrences[input1-12]",
+  "tests/test_gallicaWrapper.py::test_get_volume_occurrences[input0-268]",
+  "tests/test_gallicaWrapper.py::test_get_volume_occurrences[input1-1]"
+]

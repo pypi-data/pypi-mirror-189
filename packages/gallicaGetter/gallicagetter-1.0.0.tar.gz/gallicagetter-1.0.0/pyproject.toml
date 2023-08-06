@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gallicaGetter"
+version = "1.0.0"
+authors = [
+  { name="Will Gleason", email="wgleaeson9@gmail.com" },
+]
+description = "A collection of Python wrappers for the French National Library Gallica API."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+	"pandas",
+	"requests",
+	"lxml",
+	"bs4",
+	"pydantic"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/gleasonw/gallica-grapher"
+"Bug Tracker" = "https://github.com/gleasonw/gallica-grapher/issues"

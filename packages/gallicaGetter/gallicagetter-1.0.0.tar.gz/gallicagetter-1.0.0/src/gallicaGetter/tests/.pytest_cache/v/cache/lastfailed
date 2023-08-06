@@ -1,0 +1,6 @@
+{
+  "test_gallicaWrapper.py::test_get_volume_occurrences[input0-658-None]": true,
+  "test_gallicaWrapper.py::test_get_volume_occurrences[input1-20179]": true,
+  "test_gallicaWrapper.py::test_get_period_occurrences[input0-659]": true,
+  "test_gallicaWrapper.py::test_get_volume_occurrences[input0-659]": true
+}
