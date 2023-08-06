@@ -1,0 +1,10 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/tests.py,sha256=_de4_qgJLTqR8g4Yqo44-mwl7vKQgKEmYn7RR3MKmnk,4245
+trimkmeans/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+trimkmeans/metrics.py,sha256=uRagad9H2n05WFXuvC4BGIzuuqabLEXp6cimx9oTjwk,4012
+trimkmeans/trimkmeans.py,sha256=MFoO035CmeB8GcqmkjeV7aIKAcFFPCyn4m1jz2MzKLg,11027
+trimkmeans-1.1.1.dist-info/LICENSE.txt,sha256=tBb4j_v7wMLyyUrdE6rjbmLLEvWrO-JsLjaL3rk5Eng,1099
+trimkmeans-1.1.1.dist-info/METADATA,sha256=sfmbjxP-s18HQf2AJdNitGtuQlS1L4komcrrF7dYb8I,3648
+trimkmeans-1.1.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+trimkmeans-1.1.1.dist-info/top_level.txt,sha256=LBu_B8SpEAFuaS-T5uenZkxea0vIN8LClw3sHKMW-Xk,17
+trimkmeans-1.1.1.dist-info/RECORD,,
