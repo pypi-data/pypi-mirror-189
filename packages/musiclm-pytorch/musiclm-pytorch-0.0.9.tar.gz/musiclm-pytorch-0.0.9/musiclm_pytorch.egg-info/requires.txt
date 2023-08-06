@@ -1,0 +1,7 @@
+audiolm-pytorch>=0.9.3
+beartype
+einops>=0.4
+vector-quantize-pytorch>=1.0.0
+x-clip
+torch>=1.6
+torchaudio
