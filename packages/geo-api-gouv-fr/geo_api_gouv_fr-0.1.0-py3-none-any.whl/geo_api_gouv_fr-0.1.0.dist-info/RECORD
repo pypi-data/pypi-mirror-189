@@ -1,0 +1,13 @@
+geo_api_gouv_fr/__init__.py,sha256=ddi35FYmRbSWy1uhpgNEZpVpRCt4L8hkYqg2IhlDFvE,152
+geo_api_gouv_fr/adress/__init__.py,sha256=16EnmeeYCzjDyDkevfTIEZAplVp1dN1czcQOyGV2xdQ,90
+geo_api_gouv_fr/adress/api.py,sha256=XLUj5tNUfosr7IB3NLu53dtas4Y1NGpi9OZbAgMXVyE,614
+geo_api_gouv_fr/adress/schemas.py,sha256=RBtZXu_fFUAm5BfEsVD8GSwn4lXwifNcoOZ9c8A3quM,2162
+geo_api_gouv_fr/department/__init__.py,sha256=qMbSDHwsBXhuPL1dWigEp4RQ0oJIsP5e19jBKxBDAoA,78
+geo_api_gouv_fr/department/api.py,sha256=C4YTseNGv_APeomJU6dg5B0B12dGB1Wb5Ipsb97Fuik,938
+geo_api_gouv_fr/department/schemas.py,sha256=hpKKK3ilw2ZqmIRSfVHFOMvB7l5ht39KP5mvlmpkslQ,804
+geo_api_gouv_fr/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geo_api_gouv_fr/tests/test_adresse.py,sha256=2o7Z464JC6BSyoH4z51LRXC_rYt36N05K05o9KO9rto,1342
+geo_api_gouv_fr/tests/test_department.py,sha256=v4OlJiYrPtC86-OJsX5osukHfcCJmGhw-dLzYYZmFRM,986
+geo_api_gouv_fr-0.1.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+geo_api_gouv_fr-0.1.0.dist-info/METADATA,sha256=05XqKHsprZG5kuaDLDLCzA8czcpz9UW_QfIzQ_159iA,1411
+geo_api_gouv_fr-0.1.0.dist-info/RECORD,,
