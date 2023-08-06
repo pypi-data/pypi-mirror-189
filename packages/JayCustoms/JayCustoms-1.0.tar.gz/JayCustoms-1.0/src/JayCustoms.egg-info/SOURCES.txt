@@ -1,0 +1,9 @@
+LICENSE.text
+README.md
+pyproject.toml
+src/JayCustoms/Debug.py
+src/JayCustoms/__init__.py
+src/JayCustoms.egg-info/PKG-INFO
+src/JayCustoms.egg-info/SOURCES.txt
+src/JayCustoms.egg-info/dependency_links.txt
+src/JayCustoms.egg-info/top_level.txt
