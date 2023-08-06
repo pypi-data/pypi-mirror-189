@@ -1,0 +1,5 @@
+setup.py
+AsyncTelegramBot.egg-info/PKG-INFO
+AsyncTelegramBot.egg-info/SOURCES.txt
+AsyncTelegramBot.egg-info/dependency_links.txt
+AsyncTelegramBot.egg-info/top_level.txt
