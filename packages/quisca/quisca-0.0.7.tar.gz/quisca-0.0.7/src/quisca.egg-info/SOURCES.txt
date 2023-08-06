@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/quisca/__init__.py
+src/quisca.egg-info/PKG-INFO
+src/quisca.egg-info/SOURCES.txt
+src/quisca.egg-info/dependency_links.txt
+src/quisca.egg-info/entry_points.txt
+src/quisca.egg-info/requires.txt
+src/quisca.egg-info/top_level.txt
