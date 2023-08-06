@@ -1,0 +1,13 @@
+labelbase/__init__.py,sha256=NHUcGD3bxOwI6I9NAsnYbDToQrdYhe82oa-7fgVurrA,240
+labelbase/annotate.py,sha256=ALNqxG8txOsUDiJ-GKdipeB9O-EqsGLTsgJutTWrpg0,19098
+labelbase/dataset.py,sha256=rgMtucNimPhgNF3zf0Ydc4YlrEIKIEEIQ8gKAoSnKik,1756
+labelbase/metadata.py,sha256=c__kTsmZpCVVkJ5_SyOFAjCbpkzRgpGMsE42ypuR17M,9271
+labelbase/ontology.py,sha256=KDEpGJPe1KYLQtrV0T_A2nnjHC35rkv7dI27xedXvCM,5489
+labelbase/uploader.py,sha256=ZVmiFdmN7RTWDYKeiQA-hRuQoobQe3qRZA8ihgwhqOM,12084
+labelbase/converters/__init__.py,sha256=JTIQxCd3MKRSvK8oxyzvpaaj9zFjCTiC4SyRCwtj-30,33
+labelbase/converters/coco.py,sha256=TDZazl3wK-S_USivMHd_GnFEquPoyBCKDZ1DUVv-e10,15660
+labelbase-0.0.51.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+labelbase-0.0.51.dist-info/METADATA,sha256=9r1nNBOx-TGuZPy_Uaru0nejvCgHBV1NzBSfY7ngQDg,795
+labelbase-0.0.51.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+labelbase-0.0.51.dist-info/top_level.txt,sha256=WgtO_32cys_o6rJBVM_jBtfOiChDUIToYrUklO4Y1lo,10
+labelbase-0.0.51.dist-info/RECORD,,
