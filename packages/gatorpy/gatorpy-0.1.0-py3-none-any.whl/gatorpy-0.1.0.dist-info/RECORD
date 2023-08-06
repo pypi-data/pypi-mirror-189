@@ -1,0 +1,14 @@
+gatorpy/.DS_Store,sha256=Sh4zGfrWBN_ojuRdm-bTVYoZJz8lsHKbxuDhyXd-8c0,6148
+gatorpy/__init__.py,sha256=htxXXiELo7PBFNch0yzQ2zV0j4PsZizjuyieYxfDILk,343
+gatorpy/archives/gator-01272023.py,sha256=HV0TAjTKhkQM1OdzAZGlNfxVLwOOPdp9RttSa3jhV00,35278
+gatorpy/cloneFolder.py,sha256=ITtoC_5YnSyC368-8-gxcaedw7wHZ-2T1wQAMcQVuP0,9357
+gatorpy/gator.py,sha256=P-Cbz_r7210TCJL1-Q5VpOUBqQWJiBOHsP0_ZCrQWd8,39588
+gatorpy/gatorObject.py,sha256=vNS-TbIsl-dyolnRKdCO1OYbpO1-eB-bNKzZa1wbCvo,12012
+gatorpy/gatorPhenotype.py,sha256=bjCNpqk0bNXileiLgIV70iNl7hgMb7YdPT4kMI8p__c,20873
+gatorpy/generateDLScore.py,sha256=IzvvOMPP0_5BrMdbRblCiPCFy7-21jkLyr_DnNnIayg,7094
+gatorpy/generateThumbnails.py,sha256=lDfqlF-ruh8Ni4engXdWp4pss9qIXs8m_33dQCU0r0Y,23125
+gatorpy/generateTrainTestSplit.py,sha256=nT6JF-3Fq1Axxl4Vbihd72riBHq6yIV3t7HcLEdJxHM,12754
+gatorpy/mergeGatorObject.py,sha256=ue0hYhN5et1BGUsOkJa0G472sbOxWIi5HGdJLCmPgoU,7996
+gatorpy-0.1.0.dist-info/WHEEL,sha256=bbU3AyvhQ312rVm7zzRQjs6axI1UYWC3nmFA2E6FFSI,88
+gatorpy-0.1.0.dist-info/METADATA,sha256=WNlZ2-IRhl8zEGZyQp4Lb-v8mY7MgypHIgC180p4xds,1292
+gatorpy-0.1.0.dist-info/RECORD,,
