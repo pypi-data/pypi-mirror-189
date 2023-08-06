@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pyqt-openai
+Version: 0.0.1
+Summary: PyQt OpenAI example
+Home-page: https://github.com/yjg30737/pyqt-openai.git
+Author: Jung Gyu Yoon
+Author-email: yjg30737@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# pyqt-openai
+Example of using OpenAI with PyQt (Python cross-platform GUI toolkit) 
