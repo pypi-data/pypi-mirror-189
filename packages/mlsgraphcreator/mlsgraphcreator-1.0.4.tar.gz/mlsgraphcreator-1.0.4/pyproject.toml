@@ -1,0 +1,41 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlsgraphcreator"
+version = "1.0.4"
+description = "graphCreator creates a graph from CSV file."
+readme = "README.md"
+authors= [{name = "Chirag Modi", email = "kolbenkraft.kk@gmail.com"}]
+license = {file = "LICENSE"}
+classifiers = [
+	"License :: OSI Approved :: MIT License",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+]
+keywords = ["graph", "creator"]
+dependencies = ["contourpy==1.0.7",
+	"cycler==0.11.0",
+	"fonttools==4.38.0",
+	"kiwisolver==1.4.4",
+	"matplotlib==3.6.3",
+	"numpy==1.24.1",
+	"packaging==23.0",
+	"pandas==1.5.3",
+	"Pillow==9.4.0",
+	"pyparsing==3.0.9",
+	"python-dateutil==2.8.2",
+	"pytz==2022.7.1",
+	"six==1.16.0",
+	'tomli; python_version < "3.11"',
+]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
+
+[project.scripts]
+graphCreator = "mlsgraphcreator.__main__:main"
