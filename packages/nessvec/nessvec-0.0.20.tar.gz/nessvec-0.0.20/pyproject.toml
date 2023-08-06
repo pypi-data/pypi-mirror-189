@@ -1,0 +1,99 @@
+[tool.poetry]
+# https://python-poetry.org/docs/pyproject/
+# https://github.com/python-poetry/poetry/blob/master/pyproject.toml
+name = "nessvec"
+version = "0.0.20"
+description = "Decomposition of word embeddings (word vectors) into qualities ('ness'es)."
+license = "GPLv3"
+readme = "README.md"
+authors = [
+    "Hobson Lane <hobson@tangibleai.com>",
+    "Maria Dyshel <maria@tangibleai.com>",
+    "Leo Hepis <leo@leohepis.com>",
+    "Geoffrey Marshal",
+    "Sylvia Lee",
+    "Winnie Yeung @dcvionwinnie",
+    "Mohammed Dala Ali <mms.dala@gmail.com>",
+    "Alex Rosengarten @alxrsngrtn",
+    "Jose Robins @jorobins",
+    ]
+homepage = "https://gitlab.com/tangibleai/nessvec"
+repository = "https://gitlab.com/tangibleai/nessvec"
+documentation = "https://gitlab.com/tangibleai/nessvec"
+exclude = ["bigdata"]
+# exclude = ["src/nessvec/data", "data"]
+include = [
+    "data/datasets.yml",
+    "data/constants/nltk_stopwords_english.json",
+    "data/*",
+    "data/constants/*",
+    ]
+
+# https://python-poetry.org/docs/pyproject/#keywords
+keywords = ['NLP', 'Natural Language Processing', 'Virtual Assistant', 'chatbot', 'Text Processing', 'Machine Learning', 'Text Mining', 'Deep Learning']
+# https://pypi.org/classifiers/
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Text Processing :: Linguistic",
+]
+
+[tool.poetry.build]
+generate-setup-file = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+# https://python-poetry.org/docs/pyproject/#scripts
+"nessvec" = "nessvec.main:main"
+
+[tool.poetry.dependencies]
+beautifulsoup4 = "^4.11"
+django = "^4"
+editdistance = "^0.6"
+h5py = "^3.8"
+huggingface_hub = "^0.12"
+jupyter = "^1.0.0"
+meilisearch = "^0.23"
+pandas-gbq = "^0.19"
+pynndescent = "^0.5"
+python = "^3.7,<3.10"
+python-dotenv = "^0.21"
+scikit-learn = "^1.2"
+seaborn = "^0.12"
+scipy = "^1.10"
+spacy = "^3.5"
+torchtext = "^0.14"
+tqdm = "^4.64"
+wikipedia = "^1.4"
+xmltodict = "^0.13"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1"
+pytest-cov = "^3.0"
+
+[tool.black]
+# https://github.com/psf/black
+line-length = 80
+target-version = ["py37"]
+
+[tool.isort]
+# https://github.com/timothycrosley/isort/
+py_version = 37
+profile = "black"
+force_single_line = true
+combine_as_imports = true
+lines_between_types = 1
+lines_after_imports = 2
+src_paths = ["src", "tests"]
+extend_skip = ["setup.py"]
+known_typing = "typing,types,typing_extensions,mypy,mypy_extensions"
+sections = "FUTURE,TYPING,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+include_trailing_comma = true
+line_length = 80
+indent = 4
+use_parentheses = true
