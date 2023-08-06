@@ -1,0 +1,2 @@
+[console_scripts]
+xkcd-phrase = xkcd_phrase.xkcd_phrase:main
