@@ -1,0 +1,9 @@
+igl/_version.py,sha256=LgDSW5laOqA_7i2VW0cZ9QumZREigUxs3ZCBzJ1EG0o,22
+igl/pyigl_classes.cpython-36m-x86_64-linux-gnu.so,sha256=oFQm8maF2IbM9llj7qtugxLWC_OhdMjWWEYZRWG2p5U,1132552
+igl/__init__.py,sha256=LI3KBk-BGPmyguuzAaLRBgtCypprxBNuR55BS3-J--Y,107
+igl/pyigl.cpython-36m-x86_64-linux-gnu.so,sha256=oDeInq0I9z31sUe-bOyvBuc4lF7g9klm8mdvN-il9OE,65979080
+igl/helpers.py,sha256=z5pVFTx4kzfF_FrrgEeGHa2-jjGSR4RU62LmYAUwQX8,2026
+libigl-2.4.1.dist-info/METADATA,sha256=1iZICeEyB4DELhqqb9UlhQNNb_gH3DgwRgc489-5zXc,2139
+libigl-2.4.1.dist-info/WHEEL,sha256=YVAXCacQXnznQ-_lMj8Nvqrs7YPtMP1pHRCw9EcyWRQ,150
+libigl-2.4.1.dist-info/RECORD,,
+libigl-2.4.1.dist-info/top_level.txt,sha256=TF1tYDKDOv891WW8VMKHYFbUMW0bi_1a2OKWpZzoVUQ,10
