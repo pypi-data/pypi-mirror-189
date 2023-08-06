@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+qatamagochi/__init__.py
+qatamagochi/qatamagochi.py
+qatamagochi/tamagochiowner.py
+qatamagochi.egg-info/PKG-INFO
+qatamagochi.egg-info/SOURCES.txt
+qatamagochi.egg-info/dependency_links.txt
+qatamagochi.egg-info/top_level.txt
