@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: streamlit-datagrid
+Version: 0.0.1
+Summary: Scrollable data grid for listing items.
+Home-page: https://github.com/victorC97/streamlit_datagrid
+Author: victorC97
+Author-email: victor.cour@telecomnancy.net
+License: UNKNOWN
+Description: Streamlit component based on Typescript/MUI/React to display large list of items.
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/plain
