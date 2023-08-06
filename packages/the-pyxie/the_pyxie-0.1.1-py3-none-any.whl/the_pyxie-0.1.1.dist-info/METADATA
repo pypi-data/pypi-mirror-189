@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: the-pyxie
+Version: 0.1.1
+Summary: Pyxie might help you with html
+License: MIT
+Author: Daniel Konopka
+Author-email: pyxie@konopka.me
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3
+Project-URL: Bug Tracker, https://github.com/ipseityperse/pyxie/issues
+Project-URL: Homepage, https://github.com/ipseityperse/pyxie
+Description-Content-Type: text/markdown
+
+
