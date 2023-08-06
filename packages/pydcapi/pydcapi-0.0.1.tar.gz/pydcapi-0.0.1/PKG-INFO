@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pydcapi
+Version: 0.0.1
+Summary: Unofficial Python API for Adobe Document Cloud
+Author-email: raccacoonie <me@raccacoonie.dev>
+Requires-Python: >=3.7
+Requires-Dist: httpx
+Requires-Dist: pydantic
+Requires-Dist: typing-extensions
+Requires-Dist: uritemplate
+Provides-Extra: dev
+Requires-Dist: autoflake; extra == 'dev'
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: datamodel-code-generator; extra == 'dev'
+Requires-Dist: hatch; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: jinja2; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Provides-Extra: tests
+Description-Content-Type: text/markdown
+
+# dcapi: Unofficial Python API for Adobe Document Cloud
+
