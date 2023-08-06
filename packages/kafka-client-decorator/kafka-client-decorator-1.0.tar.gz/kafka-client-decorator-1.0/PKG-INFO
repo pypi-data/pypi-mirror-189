@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: kafka-client-decorator
+Version: 1.0
+Summary: A wrapper for confluent-kafka producer and consumer
+Home-page: https://www.quantrium.ai/
+Author: Quantrium
+Author-email: firoz.mohammad@quantrium.ai
+License: MIT
+Keywords: confluent-kafka,Kafka-producer,Kafka-consumer
+Requires-Python: >=3.6
+License-File: LICENSE
