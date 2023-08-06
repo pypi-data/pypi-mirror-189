@@ -1,0 +1,8 @@
+README.md
+setup.py
+pywin_query/__init__.py
+pywin_query.egg-info/PKG-INFO
+pywin_query.egg-info/SOURCES.txt
+pywin_query.egg-info/dependency_links.txt
+pywin_query.egg-info/requires.txt
+pywin_query.egg-info/top_level.txt
