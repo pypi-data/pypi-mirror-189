@@ -1,0 +1,5 @@
+dagster==1.1.15
+requests
+
+[test]
+requests-mock
