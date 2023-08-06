@@ -1,0 +1,12 @@
+FrEIA
+jkinpylib==0.0.8
+klampt
+torch
+
+[dev]
+PyQt5
+black
+pylint
+pytorch-lightning
+tensorboard
+wandb
