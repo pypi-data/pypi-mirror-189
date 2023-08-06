@@ -1,0 +1,3 @@
+# MANIFEST.in
+
+include src/euro_dem2km/dems/*.zip
