@@ -1,0 +1,4 @@
+[console_scripts]
+serve = woocatpacnew.web:run_server
+woocatpacnew = woocatpacnew.core:print_message
+
