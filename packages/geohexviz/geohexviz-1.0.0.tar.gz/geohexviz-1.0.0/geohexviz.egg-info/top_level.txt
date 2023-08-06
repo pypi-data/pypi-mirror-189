@@ -1,0 +1,8 @@
+build
+dist
+docs
+examples
+geohexviz
+img_files
+recipe
+tests
