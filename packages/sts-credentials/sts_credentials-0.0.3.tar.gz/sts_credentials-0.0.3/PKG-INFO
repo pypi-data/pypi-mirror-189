@@ -1,0 +1,116 @@
+Metadata-Version: 2.1
+Name: sts-credentials
+Version: 0.0.3
+Summary: get sts credentials tools, use pydantic for autocompletion.
+Project-URL: Homepage, https://github.com/sunfkny/sts-credentials
+Author-email: sunfkny <sunfkny@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.7
+Requires-Dist: alibabacloud-sts20150401<2,>=1
+Requires-Dist: pydantic
+Requires-Dist: qcloud-python-sts<4,>=3
+Description-Content-Type: text/markdown
+
+# sts_credentials
+get sts credentials tools, use pydantic for autocompletion.
+
+now support
+ - Alibaba Cloud OSS 
+ - qcloud cos
+
+```shell
+pip install sts-credentials
+```
+
+```python
+from sts_credentials import get_credential_oss
+from sts_credentials import get_credential_cos
+from secrets import (
+    aliyun_access_key_id,
+    aliyun_access_key_secret,
+    aliyun_bucket,
+    aliyun_region,
+    aliyun_role_arn,
+    qcloud_bucket,
+    qcloud_region,
+    qcloud_secret_id,
+    qcloud_secret_key,
+)
+
+print(
+    get_credential_oss(
+        access_key_id=aliyun_access_key_id,
+        access_key_secret=aliyun_access_key_secret,
+        bucket=aliyun_bucket,
+        region=aliyun_region,
+        role_arn=aliyun_role_arn,
+    )
+)
+# class OssCredentials(BaseModel):
+#     AccessKeyId: str
+#     AccessKeySecret: str
+#     SecurityToken: str
+#     Expiration: str
+#     Domain: str
+#     Bucket: str
+#     Region: str
+#     Endpoint: str
+
+print(
+    get_credential_cos(
+        bucket=qcloud_bucket,
+        region=qcloud_region,
+        secret_id=qcloud_secret_id,
+        secret_key=qcloud_secret_key,
+    )
+)
+# class CosCredentials(BaseModel):
+#     sessionToken: str
+#     tmpSecretId: str
+#     tmpSecretKey: str
+#     domain: str
+#     bucket: str
+#     region: str
+#     endpoint: str
+
+# class CosStsModel(BaseModel):
+#     expiredTime: int
+#     expiration: str
+#     credentials: CosCredentials
+#     requestId: str
+#     startTime: int
+
+import time
+from sts_credentials import ttl_lru_cache
+
+
+@ttl_lru_cache(ttl=2)
+def test_func(i=0):
+    return time.time() - i
+
+
+assert test_func(123) != test_func(456)
+
+f1 = test_func()
+time.sleep(1)
+f2 = test_func()
+time.sleep(3)
+f3 = test_func()
+
+assert f1 == f2
+assert f2 != f3
+
+```
