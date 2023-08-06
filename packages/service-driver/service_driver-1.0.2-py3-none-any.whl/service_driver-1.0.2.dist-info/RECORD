@@ -1,0 +1,15 @@
+service_driver/__init__.py,sha256=x4qnqsjnIaUDhpSEycX1QvtAoZ80b7DAjw3-CnyGe_k,40
+service_driver/__main__.py,sha256=NxVOGIMdIJvo_xZHNFrREGab7MThNyt1rPvDyClvC8I,183
+service_driver/_version.py,sha256=cu9_-G-GqeNdpZWFqFuF6Pkqo5Infw9rv1eBSda6Ct0,131
+service_driver/base_testcase.py,sha256=1vlhL_m0MvppQy9sD1M5QnuxCE6a4cHTygF_taWBDlw,2715
+service_driver/project_generator.py,sha256=CxaTlCUHYyNA6FEXUpPcGPYMY_7-cGNvFd54sL9eUQU,2525
+service_driver/templates/api_demo.tpl,sha256=thw4CVp_RcGDMHxnBB2IrBqvIJON8e3zXxQt-6KVDGQ,399
+service_driver/templates/base_api.tpl,sha256=IOYX4asOmfx1froaOd_bQ7LhRIdSKhRz87nw2y6kBM4,3899
+service_driver/templates/base_testcase.tpl,sha256=br7ud5OYRnfunw48-UeSUzsa0vppAfqt-AML-iq2lW8,422
+service_driver/templates/testcase_demo.tpl,sha256=jrQB5JeJTDiuo8AKJsiEg78lNyDjJ1ibNnnVBFTL9pg,362
+service_driver-1.0.2.dist-info/LICENSE.txt,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+service_driver-1.0.2.dist-info/METADATA,sha256=vZ594pKWFIxcCsbhatF3BmNA-OcDQD7bKQKEvgHs6qA,946
+service_driver-1.0.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+service_driver-1.0.2.dist-info/entry_points.txt,sha256=EP0TwMblMXuiCXZdkconLRGP43t_Z5gyKQlcSBsYaB4,56
+service_driver-1.0.2.dist-info/top_level.txt,sha256=ZaXyBQk-VKk-GSXL0i6AP0wJHWB7G3rZfdgDStMaqs8,15
+service_driver-1.0.2.dist-info/RECORD,,
