@@ -1,0 +1,10 @@
+gradiator/__init__.py,sha256=n4AXaT1YKOqxvWez3P-xu2kUThLkY4iZjbPiXcjuviE,120
+gradiator/_version.py,sha256=_MeWfNLZkzgHOM3dPFWt36SEZ9gDlA_t42E2ZzhiCiY,175
+gradiator/gradiator.py,sha256=Z-XT6sveGA7GC5ygjDYGYXkgwdZChlFsfkp1qa_JCHM,7879
+gradiator/utils.py,sha256=FFHMTO2WJe4dEW5731EqjXGe5hGbwllNkXkL6tqIm7E,2495
+gradiator-0.0.1.dev14.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+gradiator-0.0.1.dev14.dist-info/METADATA,sha256=ifOs6manO_gphAqewYqOVgaiTUUYOJ1L3BmmtfLKQO0,7051
+gradiator-0.0.1.dev14.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+gradiator-0.0.1.dev14.dist-info/entry_points.txt,sha256=8U5960Rg0D94OePqhBsdBK5W1wUx1huZObV4VYzVh80,55
+gradiator-0.0.1.dev14.dist-info/top_level.txt,sha256=Y9Xx6pft9itsuJN_bOzs6uLKEcZExJZBdCeg39WwyIY,10
+gradiator-0.0.1.dev14.dist-info/RECORD,,
