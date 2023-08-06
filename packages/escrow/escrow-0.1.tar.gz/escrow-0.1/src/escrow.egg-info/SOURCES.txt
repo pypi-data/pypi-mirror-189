@@ -1,0 +1,5 @@
+setup.py
+src/escrow.egg-info/PKG-INFO
+src/escrow.egg-info/SOURCES.txt
+src/escrow.egg-info/dependency_links.txt
+src/escrow.egg-info/top_level.txt
