@@ -1,0 +1,2 @@
+[console_scripts]
+neo3-boa = boa3.cli:main
