@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ray-quickstart
+Version: 0.1.1
+Summary: Starter ML project that allows you to develop on your Mac or PC computer and train using your remote GPU server
+Author-email: Tuyen Truong <tuyen.truong@gmail.com>
+Project-URL: Homepage, https://github.com/tuyentruong/ray_quickstart
+Project-URL: Bug Tracker, https://github.com/tuyentruong/ray_quickstart/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+Allows you to quickly configure your machine-learning project to use [Ray](https://github.com/ray-project/ray) for 
+distributed training and tuning of your ML models on a GPU-enabled remote computer.
+
+## Setup
+1. Create a YAML configuration file named `ray_config.yaml` in the root directory of your project.
+1. Ray QuickStart expects a configuration file named `ray_config.yaml` to be present in the root directory of your project.
