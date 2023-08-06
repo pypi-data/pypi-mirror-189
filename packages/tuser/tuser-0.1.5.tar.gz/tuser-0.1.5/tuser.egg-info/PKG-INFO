@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: tuser
+Version: 0.1.5
+Summary: Tuser allows you to create databases for users of your project.
+Home-page: UNKNOWN
+Author: Daniil Baikalov
+Author-email: felix.trof@gmail.com
+License: GNU
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+file: README.md
+
