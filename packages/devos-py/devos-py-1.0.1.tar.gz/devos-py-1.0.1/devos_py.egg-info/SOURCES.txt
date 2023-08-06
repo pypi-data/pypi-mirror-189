@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+devos/__init__.py
+devos/enricher.py
+devos/fetcher.py
+devos/gister.py
+devos/prefixes.py
+devos/util.py
+devos_py.egg-info/PKG-INFO
+devos_py.egg-info/SOURCES.txt
+devos_py.egg-info/dependency_links.txt
+devos_py.egg-info/requires.txt
+devos_py.egg-info/top_level.txt
