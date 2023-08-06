@@ -1,0 +1,14 @@
+numpy
+dill
+deepdish
+lmfit
+sep
+cython
+astropy
+scipy
+scikit-image
+
+[test]
+pytest
+coverage
+pytest-runner
