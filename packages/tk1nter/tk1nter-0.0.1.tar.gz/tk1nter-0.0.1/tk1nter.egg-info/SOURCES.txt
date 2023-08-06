@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+tk1nter/__init__.py
+tk1nter.egg-info/PKG-INFO
+tk1nter.egg-info/SOURCES.txt
+tk1nter.egg-info/dependency_links.txt
+tk1nter.egg-info/top_level.txt
