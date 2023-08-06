@@ -1,0 +1,6 @@
+setup.py
+EmotionDetector.egg-info/PKG-INFO
+EmotionDetector.egg-info/SOURCES.txt
+EmotionDetector.egg-info/dependency_links.txt
+EmotionDetector.egg-info/requires.txt
+EmotionDetector.egg-info/top_level.txt
