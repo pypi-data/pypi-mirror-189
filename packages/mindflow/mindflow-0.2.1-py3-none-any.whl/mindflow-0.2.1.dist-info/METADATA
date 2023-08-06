@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: mindflow
+Version: 0.2.1
+Requires-Dist: requests
+Requires-Dist: pyperclip
+Requires-Dist: alive-progress
+Requires-Dist: simple-term-menu
+Requires-Dist: openai
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
+Requires-Dist: cursor
+
