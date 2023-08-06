@@ -1,0 +1,27 @@
+setup.py
+educational_physics_simulator/Adding labels whilst running.py
+educational_physics_simulator/Drawing rect.py
+educational_physics_simulator/User interface 1.py
+educational_physics_simulator/User interface 2.py
+educational_physics_simulator/User interface 3.py
+educational_physics_simulator/User interface 4.py
+educational_physics_simulator/User interface 5.py
+educational_physics_simulator/User interface 6.py
+educational_physics_simulator/User_interface_7.py
+educational_physics_simulator/__init__.py
+educational_physics_simulator/frame.py
+educational_physics_simulator/frames.py
+educational_physics_simulator/gamemode_window.py
+educational_physics_simulator/gamemode_window_2.py
+educational_physics_simulator/gamemode_window_3.py
+educational_physics_simulator/gamemode_window_4.py
+educational_physics_simulator/gamemode_window_5.py
+educational_physics_simulator/gamemode_window_6.py
+educational_physics_simulator/learning_frame.py
+educational_physics_simulator/profile_window.py
+educational_physics_simulator/tkinter colour change help.py
+educational_physics_simulator.egg-info/PKG-INFO
+educational_physics_simulator.egg-info/SOURCES.txt
+educational_physics_simulator.egg-info/dependency_links.txt
+educational_physics_simulator.egg-info/requires.txt
+educational_physics_simulator.egg-info/top_level.txt
