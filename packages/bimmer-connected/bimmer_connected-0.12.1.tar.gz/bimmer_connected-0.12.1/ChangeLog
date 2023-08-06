@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+0.12.1
+------
+
+* Fix total range for hybrid vehicles (#515)
