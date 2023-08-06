@@ -1,0 +1,17 @@
+nostr_bot/__init__.py,sha256=0jkoA2lXoQ7qhiNBDXACD8wpI0URwxgEjYccS2Z_jT0,180
+nostr_bot/bot.py,sha256=XuJqY2v37l_kUI_uODsAL_IWBgJ5UNm8guhiAB_saAM,6900
+nostr_bot/cli.py,sha256=kxs5u5mL2bGVA0jIBrLOSl842R7Z6jLhOCfRJEdP2Xo,2063
+nostr_bot/examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nostr_bot/examples/gotmail.py,sha256=um71GT2aGhJMCR7KEJ3MWKo-s3JroXFz6BxYLMS7tOY,1675
+nostr_bot/examples/mirror.py,sha256=KOqxW_FYXPJyGhOYCCLS8LNSArmmAuV9rNn-NIxEzLo,1956
+nostr_bot/examples/ping.py,sha256=CUK8_iyQdYQbn2jTF9PxtPzLtaF8SkVKskYFCGZFmCk,544
+nostr_bot/examples/registration.py,sha256=fuYU3JHXrMw0C8jyWNlyS1lchFPigoYXTBbTdhXJCDM,407
+nostr_bot/examples/reporting.py,sha256=ehjOZ2-RxNGw-JHNQeibXUWlcXKVB-CnDqhUG2Rqtf8,3640
+nostr_bot/examples/welcome.py,sha256=2n0CY3nzlS_C6XrOcS9zLkpURuRJLQuPTZ4MWV_Jyt8,561
+nostr_bot-0.4.0.dist-info/AUTHORS.rst,sha256=reubB2nfOXGKxctAnIbLr4ZO-hnEiKKspi3LpBw1UVU,157
+nostr_bot-0.4.0.dist-info/LICENSE,sha256=WEgXad5LQjAzHWUJ2OAHrxJfTAgeUTHVBbAyml3I6ds,1509
+nostr_bot-0.4.0.dist-info/METADATA,sha256=AyfkmQ_REtVkAJeO0NTRRZj_Vo_or-It6upB8DAP3Bg,2225
+nostr_bot-0.4.0.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
+nostr_bot-0.4.0.dist-info/entry_points.txt,sha256=QAkvu0IU8wYfIrXB8aPFGniCP0uRrN9T_aZxdpOz3mg,49
+nostr_bot-0.4.0.dist-info/top_level.txt,sha256=geRM-2pd-VhCOitQXXHKq6ZozBDB25xwBvpvBf55IDU,10
+nostr_bot-0.4.0.dist-info/RECORD,,
