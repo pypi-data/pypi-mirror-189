@@ -1,0 +1,4 @@
+[variables.wind_speed.meta]
+standard_name = "wind_speed"
+long_name = "Wind speed"
+units = "m.s^-1"

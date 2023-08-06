@@ -1,0 +1,39 @@
+[variables.wind_speed]
+name = "wind_speed"
+
+[variables.wind_speed.meta]
+standard_name = "wind_speed"
+long_name = "My custom wind speed long name"
+
+[variables.custom_var]
+name = "custom_var"
+
+[variables.custom_var.meta]
+standard_name = "custom_var"
+long_name = "My custom wind speed long name"
+units = "m.s^-1"
+
+[variables.custom_var.encoding]
+dtype = "float32"
+
+[coords.time]
+name = "time"
+
+[coords.time.meta]
+standard_name = "time"
+long_name = "Date"
+
+[coords.time.encoding]
+units = "seconds since 1970-01-01"
+calendar = "standard"
+
+[coords.custom_time]
+name = "custom_time"
+
+[coords.custom_time.meta]
+standard_name = "custom_time"
+long_name = "Date"
+
+[coords.custom_time.encoding]
+units = "seconds since 1970-01-01"
+calendar = "standard"
