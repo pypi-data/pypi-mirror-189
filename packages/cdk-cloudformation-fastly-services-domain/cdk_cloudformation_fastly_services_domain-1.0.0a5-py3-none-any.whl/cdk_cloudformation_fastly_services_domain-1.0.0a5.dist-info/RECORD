@@ -1,0 +1,9 @@
+cdk_cloudformation_fastly_services_domain/__init__.py,sha256=mNjEVmK8lEtmaSkZdDp6CqJz9UtZpp9dJgxsXXSYhRU,12186
+cdk_cloudformation_fastly_services_domain/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cdk_cloudformation_fastly_services_domain/_jsii/__init__.py,sha256=1OnutFInIuHGttiWe3-Lh0PefgtxYZX1rak79W_ztXg,460
+cdk_cloudformation_fastly_services_domain/_jsii/fastly-services-domain@1.0.0-alpha.5.jsii.tgz,sha256=GL0tzmuNX-iTp00gKhBNuuQVjdZG9PPorB2tNFDrRxE,114626
+cdk_cloudformation_fastly_services_domain-1.0.0a5.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+cdk_cloudformation_fastly_services_domain-1.0.0a5.dist-info/METADATA,sha256=Jy0Ok4ffoDenpl0Sh3g3icC9Lga_M9CJd1cQ4P7E8eg,3143
+cdk_cloudformation_fastly_services_domain-1.0.0a5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+cdk_cloudformation_fastly_services_domain-1.0.0a5.dist-info/top_level.txt,sha256=orH7LDWNuTFTaajCjly8OqNPIBj5S7650Yt0oaf5JaI,42
+cdk_cloudformation_fastly_services_domain-1.0.0a5.dist-info/RECORD,,
