@@ -1,0 +1,2 @@
+sqlalchemy<3.0,>=1.4.46
+hypothesis<7.0,>=6.66.0
