@@ -1,0 +1,12 @@
+kinpy
+klampt
+more_itertools
+numpy
+roma
+torch
+tqdm
+
+[dev]
+PyQt5
+black
+pylint
