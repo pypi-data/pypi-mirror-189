@@ -1,0 +1,11 @@
+setuptools_openapi_generator/__init__.py,sha256=5O0M8UanXkW3gMW4zkaNswOqVUxcMU8YPdmuWukIE0g,133
+setuptools_openapi_generator/_version.py,sha256=aDfNBQh0vsVL7CSgYEMdMUbrxVw92raLxMivH20w2A4,160
+setuptools_openapi_generator/config.py,sha256=ZBsCFHx5OQ3Uvb11mVMKA_CMdt7hikkACMUFzu_V_ac,902
+setuptools_openapi_generator/generator.py,sha256=zOQcQJvOyiNFdVIS5opzZT_Fvbm6G8EdH6Ox20_oyW4,1616
+setuptools_openapi_generator/integration.py,sha256=0fi0NxilESsxZXoyFXUr4sRxFPw1z4JZpPkkOdNmvnw,1238
+setuptools_openapi_generator-0.1.1.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+setuptools_openapi_generator-0.1.1.dist-info/METADATA,sha256=HGDUP2XVkPnAnX0BXSdxQ2D7kNvLTEOZSQTtFfX7eJo,16508
+setuptools_openapi_generator-0.1.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+setuptools_openapi_generator-0.1.1.dist-info/entry_points.txt,sha256=Ts-UEpCPTIlAsd1mQmYXaUJgWkmBPud4Rj3JuUYN_v4,132
+setuptools_openapi_generator-0.1.1.dist-info/top_level.txt,sha256=WPT7aWtaltmNHmSwhyfeunH_ISmrsUX0VXJUVeiQLII,29
+setuptools_openapi_generator-0.1.1.dist-info/RECORD,,
