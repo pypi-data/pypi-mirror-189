@@ -1,0 +1,63 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "regex-patterns"
+
+[tool.poetry]
+name = "regex-patterns"
+version = "1.0.0"
+description = """
+An extended version of the original commonregex-improved. Find all dates, times, emails, phone \
+numbers, links, emails, ip addresses, prices, bitcoin address, and more in a string. \
+"""
+authors = ["Luiz Otavio V. B. Oliveira <luiz.vbo@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/regex-patterns/regex-patterns"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Text Processing :: General",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Security",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Developers",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+mypy = "^0.961"
+flake8 = "^4.0.1"
+tox = "^3.25.0"
+pytest-cov = "^3.0.0"
+
+
+[tool.pytest.ini_options]
+minversion = "2.0"
+addopts = "-rfEX -p pytester --strict-markers"
+python_files = ["tests/test_*.py"]
+python_classes = ["Test", "Acceptance"]
+python_functions = ["test"]
+
+[tool.mypy]
+mypy_path = "regex-patterns/src"
+check_untyped_defs = true
+disallow_any_generics = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = true
