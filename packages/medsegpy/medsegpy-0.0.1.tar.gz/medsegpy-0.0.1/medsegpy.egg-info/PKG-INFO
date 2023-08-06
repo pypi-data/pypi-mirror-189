@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: medsegpy
+Version: 0.0.1
+Summary: MedSegPy is a framework for research on medical image segmentation.
+Home-page: https://github.com/ad12/MedSegPy
+Author: Arjun Desai
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Provides-Extra: all
+Provides-Extra: dev
