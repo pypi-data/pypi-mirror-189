@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+fakesnow/__init__.py
+fakesnow/py.typed
+fakesnow.egg-info/PKG-INFO
+fakesnow.egg-info/SOURCES.txt
+fakesnow.egg-info/dependency_links.txt
+fakesnow.egg-info/requires.txt
+fakesnow.egg-info/top_level.txt

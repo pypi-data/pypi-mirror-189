@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: fakesnow
+Version: 0.0.0.dev0
+Summary: Mock SnowflakeDB locally
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+
+# fakesnow
+
+Mock SnowflakeDB locally
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) to get started and develop in this repo.
