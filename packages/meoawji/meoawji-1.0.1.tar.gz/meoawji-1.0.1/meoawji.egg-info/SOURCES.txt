@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+meoaw/__init__.py
+meoaw/meoaw.py
+meoawji.egg-info/PKG-INFO
+meoawji.egg-info/SOURCES.txt
+meoawji.egg-info/dependency_links.txt
+meoawji.egg-info/top_level.txt
