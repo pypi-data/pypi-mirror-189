@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: persistable-clustering
+Version: 0.3.2
+Summary: Persistable: persistent and stable clustering. Versatile density-based clustering for exploratory data analysis.
+Maintainer: Luis Scoccola
+Maintainer-email: luis.scoccola@gmail.com
+License: 3-clause BSD
+License-File: LICENSE
