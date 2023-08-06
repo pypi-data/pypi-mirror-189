@@ -1,0 +1,15 @@
+git_changelog/__init__.py,sha256=7jA1C9qZXoXZJ5YgIGseV846GZ7GJGZ8DaXc_koYCqI,271
+git_changelog/__main__.py,sha256=lK1BE51f2EOpaKnmZ9sajgwOvlxLQnwUNy_c-u5--gc,388
+git_changelog/build.py,sha256=7UOKPkVgCiwg7HTQhYPKYwkKm0OY6qBEI0UK4pSvSIA,14787
+git_changelog/cli.py,sha256=cifplQ0y0iqMgKYTwGJQsDrFci5wRXFl2RECKvfmUs8,12699
+git_changelog/commit.py,sha256=1pHR7_czexqyrxkq-4kGV8VhtRoDn7j2lvtYETRzzWg,13510
+git_changelog/providers.py,sha256=x2cCxbd6j-u6-Sw7Qg9J2gmCWpgxfr5L9R4uTMfYZo8,11228
+git_changelog/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+git_changelog/templates/__init__.py,sha256=rWQqHp_1UJweAg_Vk4b-8BMpp1Mg3EZCBVL6sPC4T2k,1122
+git_changelog/templates/angular.md.jinja,sha256=mYLMCRU8AYuo8S96OjSaPIZsYl3Smo7f81bdw2j4Ekk,1588
+git_changelog/templates/keepachangelog.md.jinja,sha256=xfz0UI5Q5HiYTKGWdYIu8ZIq1g6rqDkZkO-I9q5CqyY,2213
+git_changelog-1.0.0.dist-info/entry_points.txt,sha256=hlXOZqx3cvKtt2Nkh-bjp1h8R3SnUvFYuzR_Qr405VQ,56
+git_changelog-1.0.0.dist-info/WHEEL,sha256=_tUZrwPtr100-R0q5G_f5lOII6s0lN3q8n5zAHueCvs,87
+git_changelog-1.0.0.dist-info/METADATA,sha256=Y1b_ObHUaXPKbysHODfUiSC81PfGnBkh6m5yCJCbDZk,9527
+git_changelog-1.0.0.dist-info/licenses/LICENSE,sha256=Vf1CLt-aY6rh7_snDLm2AVQOZbTUb8T9ZahjBA_miSo,754
+git_changelog-1.0.0.dist-info/RECORD,,
