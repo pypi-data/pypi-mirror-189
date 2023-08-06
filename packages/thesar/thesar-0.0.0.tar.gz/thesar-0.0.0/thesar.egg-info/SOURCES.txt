@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+thesar/__init__.py
+thesar/discord.py
+thesar.egg-info/PKG-INFO
+thesar.egg-info/SOURCES.txt
+thesar.egg-info/dependency_links.txt
+thesar.egg-info/top_level.txt
