@@ -1,0 +1,14 @@
+abir_roy_package/__init__.py,sha256=JPaj-zt95gVqd3mC8lCDOcupSVFepu8DYATHNxMJF5A,55
+abir_roy_package/model.py,sha256=1d6juZ2PKtBBlXsuv6SioQwCTrlQ7_QOhfUwWIGqrYo,948
+abir_roy_package/data/__init__.py,sha256=IVw9lXDkEQoLMSsPHH83wosQMlUbfKl9A-X-78l9wgc,102
+abir_roy_package/data/dataset.py,sha256=iyDrbqipW8nmMHr8p1MrJNDYI5zap959GSjxguhwBjY,2095
+abir_roy_package/data/download.py,sha256=p5EFiPLrG8QKeFI2ZR9ckBhn6arz-F7BbKI2L1j5gh0,638
+abir_roy_package/data/transforms/__init__.py,sha256=M3ndDg16m039WclvsImycWmTKWZbVJwV5QlFwQSkqd0,313
+abir_roy_package/data/transforms/blur.py,sha256=YtvROkSgSZOM2fScr4QNt0lf1_WacDx-FZCldAg2U3Y,587
+abir_roy_package/data/transforms/crop.py,sha256=3DFrQKoBPv5ohYkCO7xBdTytvkx7Ud4snS64ySZuhKo,1466
+abir_roy_package/data/transforms/flip.py,sha256=yREFQ40IsrWAcgktpFWl_MPyp3WSDkWPuAQvS-7-KJQ,783
+abir_roy_package/data/transforms/rescale.py,sha256=LjoskO5NmPwhxMSMgSlljR5Mp4Xg83a0pWx5JDchSUc,1758
+abir_roy_package/data/transforms/rotate.py,sha256=QfeVGkrDXA7_EZpGUEtQ3nFZGDv1rsh_GdaaSEANVNY,564
+abir_roy_package-0.0.1.dist-info/METADATA,sha256=xR5Tr8JhvOvzugYxOldYK48MuNv2WkF7xH2nE5x7Mb8,704
+abir_roy_package-0.0.1.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+abir_roy_package-0.0.1.dist-info/RECORD,,
