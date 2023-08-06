@@ -1,0 +1,186 @@
+import os
+import requests
+import re
+import ctypes
+import platform
+
+class BuscoPhylo:
+    def __init__(self):
+        self.post_token = None
+        self.post_Project_Name = None
+        self.post_lineage = None
+        self.post_mode = None
+        self.post_Project_groupe = ""
+        self.post_directory = None
+
+    def Token(self, data):
+        self.post_token = data
+        return self
+
+    def Project_Name(self, data):
+        self.post_Project_Name = data
+        return self
+
+    def lineage(self, data):
+        self.post_lineage = data
+        return self
+
+    def mode(self, data):
+        self.post_mode = data
+        return self
+
+    def Project_groupe(self, data):
+        self.post_Project_groupe = data
+        return self
+
+    def directory(self, data):
+        self.post_directory = data
+        return self
+
+    def run(self, arg2=None):
+        # Check if data is set
+        if self.post_token is None:
+            raise ValueError("Token is not set. Please set a value for Token. Please use buscophylo.Token('YOUR_TOKEN')")
+        if self.post_Project_Name is None:
+            raise ValueError("Project Name is not set. Please set a value for Project Name. Please use buscophylo.Project_Name('Project_Name')")
+        if self.post_lineage is None:
+            raise ValueError("Lineage is not set. Please set a value for Lineage. Please use buscophylo.lineage('lineage')")
+        if self.post_mode is None:
+            raise ValueError("Mode is not set. Please set a value for Mode. Please use buscophylo.mode('mode (transcriptome, genome, or proteins)')")
+        if self.post_directory is None:
+            raise ValueError("Directory is not set. Please set a value for Directory. Please use buscophylo.directory('directory you want to upload from (allowed formats: pep, fa, fasta, faa, fna, fsa)')")
+        else:
+            url = "https://buscophylo.inra.org.ma/api/post.php"
+            # Data to be posted
+            data = {
+                "Token": self.post_token,
+                }
+            # Make the post request
+            response = requests.post(url, data=data)
+            # Print the response
+            if response.text == "valid" :
+                if platform.system() == "Windows":
+                    kernel32 = ctypes.windll.kernel32
+                    STD_OUTPUT_HANDLE = -11
+                    green = 0x0A
+                    handle = kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
+                    kernel32.SetConsoleTextAttribute(handle, green)
+                    print("Token is valid")
+                    kernel32.SetConsoleTextAttribute(handle, 7)
+                else:
+                    print("\033[32m" + "Token is valid" + "\033[0m")
+            else :
+                if platform.system() == "Windows":
+                    kernel32 = ctypes.windll.kernel32
+                    STD_OUTPUT_HANDLE = -11
+                    red = 0x0C
+                    handle = kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
+                    kernel32.SetConsoleTextAttribute(handle, red)
+                    raise ValueError("Token is not valid. Please login to https://buscophylo.inra.org.ma/user to obtain a valid token.")
+                    kernel32.SetConsoleTextAttribute(handle, 7)
+                else:
+                    raise ValueError("\033[31m" + "Token is not valid. Please login to https://buscophylo.inra.org.ma/user to obtain a valid token." + "\033[0m")
+
+        url = "https://buscophylo.inra.org.ma/api/post.php"
+        allowed_formats = ["pep", "fa", "fasta", "faa", "fna", "fsa"]
+        mode_options = ["transcriptome", "genome", "proteins"]
+        lineage_options = ["acidobacteria_odb10","actinobacteria_phylum_odb10","actinobacteria_class_odb10","corynebacteriales_odb10","micrococcales_odb10","propionibacteriales_odb10","streptomycetales_odb10","streptosporangiales_odb10","coriobacteriia_odb10","coriobacteriales_odb10","aquificae_odb10","bacteroidetes-chlorobi_group_odb10","bacteroidetes_odb10","bacteroidia_odb10","bacteroidales_odb10","cytophagia_odb10","cytophagales_odb10","flavobacteriia_odb10","flavobacteriales_odb10","sphingobacteriia_odb10","chlorobi_odb10","chlamydiae_odb10","chloroflexi_odb10","cyanobacteria_odb10","chroococcales_odb10","nostocales_odb10","oscillatoriales_odb10","synechococcales_odb10","firmicutes_odb10","bacilli_odb10","bacillales_odb10","lactobacillales_odb10","clostridia_odb10","clostridiales_odb10","thermoanaerobacterales_odb10","selenomonadales_odb10","tissierellia_odb10","tissierellales_odb10","fusobacteria_odb10","fusobacteriales_odb10","planctomycetes_odb10","proteobacteria_odb10","alphaproteobacteria_odb10","rhizobiales_odb10","rhizobium-agrobacterium_group_odb10","rhodobacterales_odb10","rhodospirillales_odb10","rickettsiales_odb10","sphingomonadales_odb10","betaproteobacteria_odb10","burkholderiales_odb10","neisseriales_odb10","nitrosomonadales_odb10","delta-epsilon-subdivisions_odb10","deltaproteobacteria_odb10","desulfobacterales_odb10","desulfovibrionales_odb10","desulfuromonadales_odb10","epsilonproteobacteria_odb10","campylobacterales_odb10","gammaproteobacteria_odb10","alteromonadales_odb10","cellvibrionales_odb10","chromatiales_odb10","enterobacterales_odb10","legionellales_odb10","oceanospirillales_odb10","pasteurellales_odb10","pseudomonadales_odb10","thiotrichales_odb10","vibrionales_odb10","xanthomonadales_odb10","spirochaetes_odb10","spirochaetia_odb10","spirochaetales_odb10","synergistetes_odb10","tenericutes_odb10","mollicutes_odb10","entomoplasmatales_odb10","mycoplasmatales_odb10","thermotogae_odb10","verrucomicrobia_odb10","archaea_odb10","thaumarchaeota_odb10","thermoprotei_odb10","thermoproteales_odb10","sulfolobales_odb10","desulfurococcales_odb10","euryarchaeota_odb10","thermoplasmata_odb10","methanococcales_odb10","methanobacteria_odb10","methanomicrobia_odb10","methanomicrobiales_odb10","halobacteria_odb10","halobacteriales_odb10","natrialbales_odb10","haloferacales_odb10","eukaryota_odb10","alveolata_odb10","apicomplexa_odb10","aconoidasida_odb10","plasmodium_odb10","coccidia_odb10","euglenozoa_odb10","fungi_odb10","ascomycota_odb10","dothideomycetes_odb10","capnodiales_odb10","pleosporales_odb10","eurotiomycetes_odb10","chaetothyriales_odb10","eurotiales_odb10","onygenales_odb10","leotiomycetes_odb10","helotiales_odb10","saccharomycetes_odb10","sordariomycetes_odb10","glomerellales_odb10","hypocreales_odb10","basidiomycota_odb10","agaricomycetes_odb10","agaricales_odb10","boletales_odb10","polyporales_odb10","tremellomycetes_odb10","microsporidia_odb10","mucoromycota_odb10","mucorales_odb10","metazoa_odb10","arthropoda_odb10","arachnida_odb10","insecta_odb10","endopterygota_odb10","diptera_odb10","hymenoptera_odb10","lepidoptera_odb10","hemiptera_odb10","mollusca_odb10","nematoda_odb10","vertebrata_odb10","actinopterygii_odb10","cyprinodontiformes_odb10","tetrapoda_odb10","mammalia_odb10","eutheria_odb10","euarchontoglires_odb10","glires_odb10","primates_odb10","laurasiatheria_odb10","carnivora_odb10","cetartiodactyla_odb10","sauropsida_odb10","aves_odb10","passeriformes_odb10","stramenopiles_odb10","viridiplantae_odb10","chlorophyta_odb10","embryophyta_odb10","liliopsida_odb10","poales_odb10","eudicots_odb10","brassicales_odb10","fabales_odb10","solanales_odb10","alphaherpesvirinae_odb10","baculoviridae_odb10","rudiviridae_odb10","betaherpesvirinae_odb10","herpesviridae_odb10","poxviridae_odb10","tevenvirinae_odb10","aviadenovirus_odb10","enquatrovirus_odb10","teseptimavirus_odb10","bclasvirinae_odb10","fromanvirus_odb10","skunavirus_odb10","betabaculovirus_odb10","pahexavirus_odb10","alphabaculovirus_odb10","tunavirinae_odb10","simplexvirus_odb10","gammaherpesvirinae_odb10","varicellovirus_odb10","cheoctovirus_odb10","guernseyvirinae_odb10","tequatrovirus_odb10","chordopoxvirinae_odb10","peduovirus_odb10","iridoviridae_odb10","spounavirinae_odb10"]
+
+        # Data to be posted
+        data = {
+            "Token": self.post_token,
+            "Project_Name": self.post_Project_Name,
+            "lineage": self.post_lineage,
+            "mode": self.post_mode,
+            "Project_groupe": self.post_Project_groupe,
+            "directory": self.post_directory
+        }
+
+        if data["lineage"] not in lineage_options:
+            if platform.system() == "Windows":
+                kernel32 = ctypes.windll.kernel32
+                STD_OUTPUT_HANDLE = -11
+                red = 0x0C
+                handle = kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
+                kernel32.SetConsoleTextAttribute(handle, red)
+                raise ValueError("lineage option not valid : https://busco.ezlab.org/list_of_lineages.html")
+                kernel32.SetConsoleTextAttribute(handle, 7)
+            else:
+                raise ValueError("\033[31m" + "lineage option not valid : https://busco.ezlab.org/list_of_lineages.html" + "\033[0m")
+
+        if data["mode"] not in mode_options:
+            if platform.system() == "Windows":
+                kernel32 = ctypes.windll.kernel32
+                STD_OUTPUT_HANDLE = -11
+                red = 0x0C
+                handle = kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
+                kernel32.SetConsoleTextAttribute(handle, red)
+                raise ValueError("mode should be one of transcriptome, genome, or proteins")
+                kernel32.SetConsoleTextAttribute(handle, 7)
+            else:
+                raise ValueError("\033[31m" + "mode should be one of transcriptome, genome, or proteins" + "\033[0m")
+
+        # Check if the directory exists
+        if not os.path.isdir(data["directory"]):
+            if platform.system() == "Windows":
+                kernel32 = ctypes.windll.kernel32
+                STD_OUTPUT_HANDLE = -11
+                red = 0x0C
+                handle = kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
+                kernel32.SetConsoleTextAttribute(handle, red)
+                raise ValueError("The directory specified does not exist")
+                kernel32.SetConsoleTextAttribute(handle, 7)
+            else:
+                raise ValueError("\033[31m" + "The directory specified does not exist" + "\033[0m")
+
+        # Get the list of files in the directory
+        all_files = os.listdir(data["directory"])
+        files = {}
+        count = 1
+        group_name = None
+        for file in all_files:
+            if file.split(".")[-1] in allowed_formats:
+                if group_name is None:
+                    group_name = ""
+                else:
+                    if data["Project_groupe"] == file.split(".")[0]:
+                        group_name = data["Project_groupe"]
+                files["file" + str(count)] = open(os.path.join(data["directory"], file), "rb")
+                count += 1
+
+        if count < 4:
+            if platform.system() == "Windows":
+                kernel32 = ctypes.windll.kernel32
+                STD_OUTPUT_HANDLE = -11
+                red = 0x0C
+                handle = kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
+                kernel32.SetConsoleTextAttribute(handle, red)
+                raise ValueError("There should be at least 4 files in the directory")
+                kernel32.SetConsoleTextAttribute(handle, 7)
+            else:
+                raise ValueError("\033[31m" + "There should be at least 4 files in the directory" + "\033[0m")
+
+        # Update the data dictionary with the Project_groupe
+        data["Project_groupe"] = group_name
+
+        # Make the post request
+        response = requests.post(url, data=data, files=files)
+
+        # Print the response
+        if platform.system() == "Windows":
+            kernel32 = ctypes.windll.kernel32
+            STD_OUTPUT_HANDLE = -11
+            blue = 0x09
+            handle = kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
+            kernel32.SetConsoleTextAttribute(handle, blue)
+            print(response.text)
+            kernel32.SetConsoleTextAttribute(handle, 7)
+        else:
+            print("\033[34m" + response.text + "\033[0m")
+
+        # Close the opened files
+        for key in files:
+            files[key].close()
+
+        requests.get('https://buscophylo.inra.org.ma')
+buscophylo = BuscoPhylo()
