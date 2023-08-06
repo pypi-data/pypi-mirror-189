@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: qpsolversbench
+Version: 0.0.3
+Summary: Evaluation of quadratic solvers using qpsolvers
+Home-page: https://github.com/microprediction/qpsolversbench
+Author: microprediction
+Author-email: peter.cotton@microprediction.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: wheel
+Requires-Dist: precise
+Requires-Dist: qpsolvers (>=2.7.3)
+
+# qpsolversbench
+
+Minor utilities for examining quadratic solvers on problems from the precise package. 
