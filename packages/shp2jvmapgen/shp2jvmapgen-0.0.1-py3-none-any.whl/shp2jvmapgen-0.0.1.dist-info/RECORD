@@ -1,0 +1,7 @@
+shp2jvmapgen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shp2jvmapgen/bound2pixel.py,sha256=_UKZIpQwSWsG7B3FJJj_e4qKF7hUreMbyowlrY5awKY,1944
+shp2jvmapgen/shp2jvmap.py,sha256=BDF6-urxXkUHq1E6uDxG3q_UXQiqmsIjz-WCnfBzd8I,6961
+shp2jvmapgen/svg2jvm.py,sha256=j_AH6h76DFpAcI7WBrAAOjo4SBtNq2i4xlQV51enoMc,1270
+shp2jvmapgen-0.0.1.dist-info/METADATA,sha256=OYpuWf5rD1oXrQVu86gdODfQeP-CnZXTu_6x_MAOAf0,3804
+shp2jvmapgen-0.0.1.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+shp2jvmapgen-0.0.1.dist-info/RECORD,,
