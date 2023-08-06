@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+mkdocs_changelog_plugin/__init__.py
+mkdocs_changelog_plugin/plugin.py
+mkdocs_changelog_plugin.egg-info/PKG-INFO
+mkdocs_changelog_plugin.egg-info/SOURCES.txt
+mkdocs_changelog_plugin.egg-info/dependency_links.txt
+mkdocs_changelog_plugin.egg-info/entry_points.txt
+mkdocs_changelog_plugin.egg-info/requires.txt
+mkdocs_changelog_plugin.egg-info/top_level.txt
+mkdocs_changelog_plugin/css/timeline.css
+mkdocs_changelog_plugin/templates/changelog.html
