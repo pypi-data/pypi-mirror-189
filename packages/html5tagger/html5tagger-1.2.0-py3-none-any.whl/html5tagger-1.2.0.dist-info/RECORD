@@ -1,0 +1,10 @@
+html5tagger/__init__.py,sha256=R_KbCRniw2NriyUoHlDjk4Uy7mgn19hC9t1bPkx8ApM,288
+html5tagger/builder.py,sha256=66dWnY6GOi2S8sDiAUSkvZJidVv89ziQmJXIld8GLyo,6492
+html5tagger/document.py,sha256=mgjH8OewM7PxSlf1DqjlPdQaQgUkUF6QBxqyidohyEM,1501
+html5tagger/html5.py,sha256=YLfm_gih5C2auK3MSgoCV6_K84JnMNL6izglIYPKOoI,524
+html5tagger/makebuilder.py,sha256=yMZGOlc6vzT0QrD-8Z9H50tF5zqiORsWkTmLHdM5Q6s,325
+html5tagger/util.py,sha256=i3Tm80jEOUVRHfJPCi6tLzgo_2VivM950rlztKIxSWM,1127
+html5tagger-1.2.0.dist-info/METADATA,sha256=ZYZiWeUFBakFGjrfEvij71LEgA1cY31HkwSBlEGneQc,9446
+html5tagger-1.2.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+html5tagger-1.2.0.dist-info/top_level.txt,sha256=wPh1jEpYkIpkmH4dS_CBprBBVzCZPg0KoLXWHEAaw40,12
+html5tagger-1.2.0.dist-info/RECORD,,
