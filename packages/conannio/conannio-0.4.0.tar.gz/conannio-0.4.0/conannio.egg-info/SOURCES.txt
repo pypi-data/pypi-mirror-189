@@ -1,0 +1,12 @@
+CHANGELOG.md
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+conannio/__init__.py
+conannio.egg-info/PKG-INFO
+conannio.egg-info/SOURCES.txt
+conannio.egg-info/dependency_links.txt
+conannio.egg-info/requires.txt
+conannio.egg-info/top_level.txt
