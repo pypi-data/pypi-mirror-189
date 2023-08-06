@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: geocondense
+Version: 0.0.3
+Summary: geocondense
+Home-page: https://github.com/cubao/geocondense
+Author: tzx
+Author-email: dvorak4tzx@gmail.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: concave-hull
+Requires-Dist: fire
+Requires-Dist: loguru
+Requires-Dist: numpy
+Requires-Dist: open3d
+Requires-Dist: polyline-ruler
+Requires-Dist: pybind11-rdp
+Requires-Dist: scipy
+Provides-Extra: test
+Requires-Dist: pytest (>=6.0) ; extra == 'test'
+
+# geocondense
