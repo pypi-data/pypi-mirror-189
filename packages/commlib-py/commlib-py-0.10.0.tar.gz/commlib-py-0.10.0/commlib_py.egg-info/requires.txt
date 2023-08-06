@@ -1,0 +1,5 @@
+pika
+paho-mqtt
+hiredis
+ujson
+pydantic
