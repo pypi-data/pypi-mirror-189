@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pysweep
+Version: 0.1.0
+Summary: Simple minesweeper game for the terminal
+Home-page: https://github.com/AnttiRae/PySweep
+Author: Antti rae
+Author-email: anttiraework@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+
+Simple minesweeper game for the terminal
