@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+turtlepolishedition.egg-info/PKG-INFO
+turtlepolishedition.egg-info/SOURCES.txt
+turtlepolishedition.egg-info/dependency_links.txt
+turtlepolishedition.egg-info/requires.txt
+turtlepolishedition.egg-info/top_level.txt
