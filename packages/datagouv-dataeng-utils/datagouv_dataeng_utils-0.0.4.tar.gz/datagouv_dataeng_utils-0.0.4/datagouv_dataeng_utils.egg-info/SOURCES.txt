@@ -1,0 +1,12 @@
+README.md
+setup.py
+datagouv_dataeng_utils/__init__.py
+datagouv_dataeng_utils/datagouv.py
+datagouv_dataeng_utils/mattermost.py
+datagouv_dataeng_utils/minio.py
+datagouv_dataeng_utils/postgres.py
+datagouv_dataeng_utils.egg-info/PKG-INFO
+datagouv_dataeng_utils.egg-info/SOURCES.txt
+datagouv_dataeng_utils.egg-info/dependency_links.txt
+datagouv_dataeng_utils.egg-info/requires.txt
+datagouv_dataeng_utils.egg-info/top_level.txt
