@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: duper
+Version: 0.0.1
+Project-URL: Documentation, https://github.com/unknown/duper#readme
+Project-URL: Issues, https://github.com/unknown/duper/issues
+Project-URL: Source, https://github.com/unknown/duper
+Author-email: Bobronium <appkiller16@gmail.com>
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Requires-Dist: typing-extensions; python_version < '3.11'
+Provides-Extra: build
+Requires-Dist: mypy[c]; extra == 'build'
+Provides-Extra: dev
+Requires-Dist: astpretty; extra == 'dev'
+Requires-Dist: pyinstrument; extra == 'dev'
+Provides-Extra: lint
+Requires-Dist: ruff; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Description-Content-Type: text/markdown
+
+# duper
+
+Library for building fast and reusable copying factories for python objects.
+
+Aims to fill the gaps in performance and obscurity between copy, pickle, json and other serialization libraries.
+
+[![PyPI - Version](https://img.shields.io/pypi/v/duper.svg)](https://pypi.org/project/duper)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/duper.svg)](https://pypi.org/project/duper)
+
+-----
+
+```py
+import duper
+
+
+@timesup(units="microseconds")
+def benchmark():
+    """
+    Current performance results. 
+    
+    While compiling is extremely slow, decompiling is still faster than anything
+    """
+    x = {"a": {"x": 2}}
+    # dumping
+    reconstructor = duper.dup(x)  # ~12.6 µs (duper_compile)
+    marshal_dumped = marshal.dumps(x)  # ~0.173 µs (marshal_dumps): 72.77 times faster than duper_compile
+    pickle_dumped = pickle.dumps(x)  # ~0.311 µs (pickle_dumps): 40.43 times faster than duper_compile
+    json_dumped = json.dumps(x)  # ~1.37 µs (json_dumps): 9.17 times faster than duper_compile
+    orjson_dumped = orjson.dumps(x)  # ~0.116 µs (orjson_dumps): 108.75 times faster than duper_compile
+    dill_dumped = dill.dumps(x)  # ~15.5 µs (dill_dumps): 1.23 times slower than duper_compile
+
+    # loading
+    reconstructor()  # ~0.103 µs (duper)
+    copy.deepcopy(x)  # ~1.97 µs (deepcopy): 19.15 times slower than duper
+    marshal.loads(marshal_dumped)  # ~0.163 µs (marshal): 1.58 times slower than duper
+    pickle.loads(pickle_dumped)  # ~0.236 µs (pickle): 2.29 times slower than duper
+    json.loads(json_dumped)  # ~1.15 µs (json): 11.14 times slower than duper
+    orjson.loads(orjson_dumped)  # ~0.154 µs (orjson_loads): 1.49 times slower than duper
+    dill.loads(dill_dumped)  # ~1.32 µs (dill): 12.83 times slower than duper
+
+```
+
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install duper
+```
+
+## License
+
+`duper` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
