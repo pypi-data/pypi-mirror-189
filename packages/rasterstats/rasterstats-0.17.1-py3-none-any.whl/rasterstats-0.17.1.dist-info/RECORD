@@ -1,0 +1,13 @@
+rasterstats/__init__.py,sha256=OeuT-v4z3yZEdrt45aa27JK63lyjGjrRgWORvIz3K_A,364
+rasterstats/_version.py,sha256=mrwBkyZNcMowMG4-KslRvuWjlT2xdlnWDSWDZEK270s,23
+rasterstats/cli.py,sha256=XwhzoV-24kiyExkR5IZA3ac8HVT-L7_Eb8t_WAly4uA,4189
+rasterstats/io.py,sha256=85GE7g_BzniP9KPgZId2aCLeMCQLNWgZDQh2A3Y2A9M,10825
+rasterstats/main.py,sha256=xWWufEgTXJ4_TBYdaShZ-x_BzHkudnbhQUOWwkSEKW4,11484
+rasterstats/point.py,sha256=OxFD_cOQwn0Xknba1XdRDS1CpdKZ4pn4DNzVVoy2RXk,6472
+rasterstats/utils.py,sha256=UBQQ_vK9aqqEzOx1tejBUTIQy3xfPxmOek0gCTURBU8,3950
+rasterstats-0.17.1.dist-info/LICENSE.txt,sha256=7tRacwCkgVjPT5W68MFCqoWWovtpDpf4_ZjscA6f3DU,1482
+rasterstats-0.17.1.dist-info/METADATA,sha256=c_Iblv8UuOqfM_Eud7LfOnaRFIcac-Jup9vmC2l0D2A,3523
+rasterstats-0.17.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+rasterstats-0.17.1.dist-info/entry_points.txt,sha256=9g4ApNQI_B28nvYsLwWzhgBJLIEnQGOVkOP6u3TM0ak,103
+rasterstats-0.17.1.dist-info/top_level.txt,sha256=kunPup9x76bF31ltJzug9IgGKJxhPzdekAeG-9K_VWg,12
+rasterstats-0.17.1.dist-info/RECORD,,
