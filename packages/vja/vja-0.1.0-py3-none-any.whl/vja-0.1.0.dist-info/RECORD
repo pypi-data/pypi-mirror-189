@@ -1,0 +1,15 @@
+vja/__init__.py,sha256=uXRemtumfYxVKEOtbGBrlBc_U6nuZMJ-RhSbbPXsHms,220
+vja/apiclient.py,sha256=tr6P93dqySvtSnxZ6vMRAaqzoX248TywpaA1JgTkvdg,8238
+vja/cli.py,sha256=XilrT7yxsEefvuMNS_xzfmAnuEdMrqvF9WpSxX5cvck,8243
+vja/config.py,sha256=hhUtwabLayZ09LjVdNL3Xm76lG2CRtM5ib8cIZ1v8R8,1326
+vja/list_service.py,sha256=i9615FWL50AWVJq714S_pyqemGJozFen1OEWrv8xtQE,1620
+vja/model.py,sha256=UAoT9k_Dp2CdL941fiKqrmbBwNDe81FOGY-Uo92BZcE,4488
+vja/service_command.py,sha256=2_yPYaUws9cT6CO9AswE3CHfMtmS-RBLREk1l89T9o8,4446
+vja/service_query.py,sha256=SyFGQBkCN_wU82WVqY_s937YxViL5jqw_yZDZ6ak8bE,4523
+vja/urgency.py,sha256=CgcIwiiW8QaRjMKdbsyP7kpbUM5DqiOagYDy7rfgZ8I,1552
+vja-0.1.0.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+vja-0.1.0.dist-info/METADATA,sha256=tACsj51NUEM2uPe9L5WXxHLZaqJ0pQOhobrB750zOfg,2316
+vja-0.1.0.dist-info/WHEEL,sha256=tIy8_2ZxPExwRKcXlg4jzESby3jB9aLsFLrFCKKh88M,92
+vja-0.1.0.dist-info/entry_points.txt,sha256=uY2goCaBrL2TlEeiVmsfwTp-T-iPTkecOaH75CWGz6I,36
+vja-0.1.0.dist-info/top_level.txt,sha256=uCXTRnBcR5DOFR2AuGjri05ZbrN4MzzaXNTTpHOQ4Xk,4
+vja-0.1.0.dist-info/RECORD,,
