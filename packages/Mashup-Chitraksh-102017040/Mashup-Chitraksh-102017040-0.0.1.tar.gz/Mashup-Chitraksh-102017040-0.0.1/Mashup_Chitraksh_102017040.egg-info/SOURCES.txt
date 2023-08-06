@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+Mashup-Chitraksh-102017040/102017040.py
+Mashup-Chitraksh-102017040/__init__.py
+Mashup-Chitraksh-102017040/__main__.py
+Mashup_Chitraksh_102017040.egg-info/PKG-INFO
+Mashup_Chitraksh_102017040.egg-info/SOURCES.txt
+Mashup_Chitraksh_102017040.egg-info/dependency_links.txt
+Mashup_Chitraksh_102017040.egg-info/requires.txt
+Mashup_Chitraksh_102017040.egg-info/top_level.txt
