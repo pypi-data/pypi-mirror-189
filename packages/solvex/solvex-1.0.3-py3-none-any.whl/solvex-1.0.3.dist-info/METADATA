@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: solvex
+Version: 1.0.3
+Summary: Solvability-Based Explainer
+Author-email: Yilun Zhou <yilun@csail.mit.edu>
+Project-URL: Homepage, https://yilunzhou.github.io/solvability/
+Project-URL: Bug Tracker, https://github.com/yilunzhou/solvability-explainer/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Science/Research
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tqdm
+Requires-Dist: tabulate (>=0.9.0)
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: Pillow
+Requires-Dist: torch
+Requires-Dist: spacy
+
+# Solvability-Based Explainer (solvex)
+
+This package implements the model-agnostic explainer introduced in the EACL 2023 (Findings) paper [The Solvability of Interpretability Evaluation Metrics](https://arxiv.org/pdf/2205.08696.pdf). 
+
+## Installation
+
+This package can be installed with `pip install solvex`. 
+
+## Usage
+
+Please refer to the [project homepage](https://yilunzhou.github.io/solvability/) for toturials and documentation. In addition, sample jupyter notebooks are available in the `examples` folder. 
