@@ -1,0 +1,10 @@
+sarina/__main__.py,sha256=5YnGGZIdT8dRSaqDy2NpJgC7JU1m-ETdDIpDv62rbJU,10824
+sarina/parsers.py,sha256=v-MEki52tha1-bJyq4StZxfNbSVn5F4Uaq8fcz6iHIM,448
+sarina/cpp_backend/py2cpp.py,sha256=pvowbEJsrALuxgxMD5UfQyl8qtuPec7iqyezmU2mqZ8,2072
+sarina/cpp_backend/lib/lib_cpp_backend.so,sha256=QMg71R-7x6pcSVBseSN_gaAC2si8q9Kb_QNpfaPAkDQ,33272
+sarina_cli-0.0.1.dist-info/LICENSE,sha256=3na-zZLeh6vPeDswDFIueVxhEaDfoRpYef_0_3Itwb4,1066
+sarina_cli-0.0.1.dist-info/METADATA,sha256=v2dfmtdDzuSQ9l_yAauH99MXcwwR0GA4dqphEOP5vpw,9231
+sarina_cli-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+sarina_cli-0.0.1.dist-info/entry_points.txt,sha256=z_8KaaXu-gVUrJuI9oiwnVa1HNW8dXslRQyOfAQDwOg,48
+sarina_cli-0.0.1.dist-info/top_level.txt,sha256=606NBHbyspdgus5twnST3a8Ubwm9yBa0i_ccJJEoY14,7
+sarina_cli-0.0.1.dist-info/RECORD,,
