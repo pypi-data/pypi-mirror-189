@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+binaryToDecimal.egg-info/PKG-INFO
+binaryToDecimal.egg-info/SOURCES.txt
+binaryToDecimal.egg-info/dependency_links.txt
+binaryToDecimal.egg-info/top_level.txt
+lib-name/__init__.py
+lib-name/binaryToDecimal.py

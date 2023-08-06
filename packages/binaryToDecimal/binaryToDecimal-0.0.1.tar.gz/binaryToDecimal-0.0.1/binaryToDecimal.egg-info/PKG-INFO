@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: binaryToDecimal
+Version: 0.0.1
+Summary: Convert binary bits to decimal numbers
+Home-page: UNKNOWN
+Author: karthik mummadi
+Author-email: <karthikmumadi@icloud.com>
+License: UNKNOWN
+Keywords: python,binary to decimal,binarydecimal,bits to numbers
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# binaryToDecimal
+A package that converts binary form of data to decimal, to contact me use my website https://karthiks-digital-resume-react.netlify.app and send your queries in contact section
+
+Usage:
+
+
+
+
+
+
+
+<img width="338" alt="Screenshot 2023-02-05 at 7 11 01 PM" src="https://user-images.githubusercontent.com/67945756/216822729-664bc7b3-4d1a-40b4-89c7-8b2db72893dd.png">
+
+
+
