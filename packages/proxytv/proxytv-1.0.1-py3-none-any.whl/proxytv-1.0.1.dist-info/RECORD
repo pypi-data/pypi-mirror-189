@@ -1,0 +1,10 @@
+proxytv/__init__.py,sha256=xZMoPjJ-6D9aQQ1SoF6qES0nwvfRyFaMBxgBvUPRcko,4038
+proxytv/__main__.py,sha256=jfhjGQ9zYiKyvirWJGo0h__KyDC7Wl-Mmw2AecgWL3k,3420
+proxytv/_static.py,sha256=-cS4Wuppuf8CWi5k6KUZ1tENKpXVqnzUEdvf-UPndfM,1461
+proxytv/extinf.py,sha256=XmFZwIaXGKtuC6VLhBW987cAhoQlZaPPFuZ2MkiTcmg,6776
+proxytv/search.py,sha256=uqCfoEQJkahvTw3wvxjfjBjfcSBJd5F1TirihSVkggM,3568
+proxytv-1.0.1.dist-info/LICENSE,sha256=Eef7V1nFGLe_ZZAnztt68MR9M13XGMvSkVRw2kOtsiI,1122
+proxytv-1.0.1.dist-info/METADATA,sha256=9EoEFnQ52m_Co85WzEZx8Wpw_Z-jc77OwEYhtKMReMw,9096
+proxytv-1.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+proxytv-1.0.1.dist-info/top_level.txt,sha256=bRZwz_lMxn9y_fG5Ys_XpswOocB7hcp6R-G5HZ6uPOc,8
+proxytv-1.0.1.dist-info/RECORD,,
