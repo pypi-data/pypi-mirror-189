@@ -1,0 +1,8 @@
+dbscan1d/__init__.py,sha256=nU_ScldTFgudQirhF8V09zBkusPQGSEr0Y_4JvnaxOU,149
+dbscan1d/core.py,sha256=c3wGqV8lixHF4y5M5OIIP-yz8BsdFcdIbwtKU7Zhg9k,5023
+dbscan1d/version.py,sha256=NDpsOy9n1s4hYVelKRZHknWEkLTZv3YkhiA6omaFO5U,255
+dbscan1d-0.2.1.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+dbscan1d-0.2.1.dist-info/METADATA,sha256=EPidfgGd5IITSSYjcBFYEJfhscBScvEU7IvwWEBITts,1144
+dbscan1d-0.2.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+dbscan1d-0.2.1.dist-info/top_level.txt,sha256=0ifQxG8kSTmvKNBb2tsJ-d50IHb9noz3T4yNgcVGUvI,9
+dbscan1d-0.2.1.dist-info/RECORD,,
