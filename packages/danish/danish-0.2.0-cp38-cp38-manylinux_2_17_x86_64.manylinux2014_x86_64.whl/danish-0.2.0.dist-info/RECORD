@@ -1,0 +1,12 @@
+danish-0.2.0.dist-info/METADATA,sha256=oVxBs9qiNHMAgDwELdJor2P60InoHCzCCsMQeYbdpnA,1083
+danish-0.2.0.dist-info/WHEEL,sha256=82Wkr2Lag2dORBGM375Z9_JVKxb2Fhvp7wOacHsh7mU,148
+danish-0.2.0.dist-info/RECORD,,
+danish-0.2.0.dist-info/top_level.txt,sha256=TQc4XIMdC63lanjYXELqaLG0AhO44WyaXkKSxal1Zgo,7
+danish-0.2.0.dist-info/LICENSE,sha256=hRZ0Zf7txVfTiVfuZhD93_kGQ1OYBSUDvrF_mhcAaGE,1547
+danish/_version.py,sha256=CmB0upYg-MBFC2cK6nl5UYaAtEncyUj-8qXkMigQbVA,184
+danish/factory.py,sha256=5HFTlMKYTKWJCXhS4C6cJ7Rh8ONH9KKt83Fus2NTwOA,24344
+danish/__init__.py,sha256=lY4D5G787VkhKk2DqwJg0h8bqxa2qdq1KJb0iAThsFM,296
+danish/fitter.py,sha256=KMqOFlOd4A_pXVH5FB-5Wd-sz-K4mrQI7KLACL1QObo,17719
+danish/_danish.cpython-38-x86_64-linux-gnu.so,sha256=6h53bAb38RrV2dNceqnflIk7soZAc60ATHbTJPGLlIY,237624
+danish/data/AuxTelObsc.yaml,sha256=PS3ViRnp-EvAs8_0P1VpvCw7dTuiXGA4kMJrOXBZQ5o,994
+danish/data/RubinObsc.yaml,sha256=dyQXRPAf293aXiimPXMvi89oe4g1xo1niim452fvWck,901
