@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: fcwslib
+Version: 1.0.0
+Summary: A library that makes development of Python Minecraft Bedrock Edition websocket applications easier.
+Author-email: mingfengpigeon <mingfengpigeon@gmail.org>
+License: SEE: https://mingfengpigeon.mit-license.org/
+Project-URL: homepage, https://github.com/mingfengpigeon/fcwslib
+Project-URL: repository, https://github.com/mingfengpigeon/fcwslib
+Keywords: python,minecraft,bedrock,websocket
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: websockets
+
