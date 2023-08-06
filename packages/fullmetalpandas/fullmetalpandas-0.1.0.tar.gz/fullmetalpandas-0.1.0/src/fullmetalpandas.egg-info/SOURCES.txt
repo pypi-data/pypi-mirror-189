@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/fullmetalpandas/__init__.py
+src/fullmetalpandas/records.py
+src/fullmetalpandas/sqldataframe.py
+src/fullmetalpandas/sqltable.py
+src/fullmetalpandas.egg-info/PKG-INFO
+src/fullmetalpandas.egg-info/SOURCES.txt
+src/fullmetalpandas.egg-info/dependency_links.txt
+src/fullmetalpandas.egg-info/not-zip-safe
+src/fullmetalpandas.egg-info/requires.txt
+src/fullmetalpandas.egg-info/top_level.txt
