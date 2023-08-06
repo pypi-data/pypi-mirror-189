@@ -1,0 +1,5 @@
+dominate<3.0.0,>=2.6.0
+python-slugify<7.0.0,>=6.1.1
+Markdown<4.0.0,>=3.3.6
+toml>=0.10.2
+griffe>=0.25.2
