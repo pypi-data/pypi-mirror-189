@@ -1,0 +1,9 @@
+README.md
+setup.py
+evalAIRR/__init__.py
+evalAIRR/main.py
+evalAIRR.egg-info/PKG-INFO
+evalAIRR.egg-info/SOURCES.txt
+evalAIRR.egg-info/dependency_links.txt
+evalAIRR.egg-info/entry_points.txt
+evalAIRR.egg-info/top_level.txt
