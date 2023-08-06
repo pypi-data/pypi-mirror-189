@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+nonebot_plugin_russian_ban/__init__.py
+nonebot_plugin_russian_ban.egg-info/PKG-INFO
+nonebot_plugin_russian_ban.egg-info/SOURCES.txt
+nonebot_plugin_russian_ban.egg-info/dependency_links.txt
+nonebot_plugin_russian_ban.egg-info/requires.txt
+nonebot_plugin_russian_ban.egg-info/top_level.txt
