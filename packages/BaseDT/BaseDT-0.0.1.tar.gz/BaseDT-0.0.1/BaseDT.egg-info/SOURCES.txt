@@ -1,0 +1,14 @@
+MANIFEST.in
+install_requires.txt
+setup.py
+BaseDT/BaseData.py
+BaseDT/BaseDataSet.py
+BaseDT/BaseIO.py
+BaseDT/BasePlot.py
+BaseDT/__init__.py
+BaseDT.egg-info/PKG-INFO
+BaseDT.egg-info/SOURCES.txt
+BaseDT.egg-info/dependency_links.txt
+BaseDT.egg-info/requires.txt
+BaseDT.egg-info/top_level.txt
+BaseDT.egg-info/zip-safe
