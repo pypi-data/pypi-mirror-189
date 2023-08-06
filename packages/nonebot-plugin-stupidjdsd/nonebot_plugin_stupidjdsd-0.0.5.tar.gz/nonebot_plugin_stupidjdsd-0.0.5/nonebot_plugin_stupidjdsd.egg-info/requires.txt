@@ -1,0 +1,4 @@
+requests
+urllib3
+nonebot-adapter-onebot
+nonebot2
