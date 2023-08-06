@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: lord-of-the-clips
+Version: 0.1.0
+Summary: Video downloader, trimmer, and merger using the terminal. Supports YouTube, Facebook, Reddit, Twitter, etc. Trims at multiple points and merges multiple clips.
+Home-page: https://github.com/ranelpadon/lord-of-the-clips
+Author: Ranel Padon
+Author-email: ranel.padon@gmail.com
+License: MIT
+Keywords: video,downloader,trimmer,snipper,cutter,merger,splicer,cli,terminal,youtube,facebook,reddit,twitter,multiple,click,rich,movie,snip,clip,subclip
+Platform: Windows
+Platform: macOS
+Platform: Linux
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+License-File: LICENSE

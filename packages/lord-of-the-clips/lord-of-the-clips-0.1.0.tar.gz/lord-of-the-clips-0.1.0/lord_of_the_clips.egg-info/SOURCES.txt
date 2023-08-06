@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+commands/__init__.py
+commands/download.py
+commands/merge.py
+commands/trim.py
+lord_of_the_clips.egg-info/PKG-INFO
+lord_of_the_clips.egg-info/SOURCES.txt
+lord_of_the_clips.egg-info/dependency_links.txt
+lord_of_the_clips.egg-info/entry_points.txt
+lord_of_the_clips.egg-info/requires.txt
+lord_of_the_clips.egg-info/top_level.txt
