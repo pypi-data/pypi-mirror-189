@@ -1,0 +1,9 @@
+cdk_cloudformation_okta_policy_policy/__init__.py,sha256=t2KDM722-j8l6l3-b-0n_pyHOuXYSWWqt5T7jedbqLc,9878
+cdk_cloudformation_okta_policy_policy/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cdk_cloudformation_okta_policy_policy/_jsii/__init__.py,sha256=omqB39oT14hm-dkj6rgPudj2WrC9vhZwSl4fIdYCJRM,452
+cdk_cloudformation_okta_policy_policy/_jsii/okta-policy-policy@1.2.0-alpha.5.jsii.tgz,sha256=wSPuLrXlDeHy8vgj3eK3t6XfaiLRhJ1JNRHM7upyNJo,115650
+cdk_cloudformation_okta_policy_policy-1.2.0a5.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+cdk_cloudformation_okta_policy_policy-1.2.0a5.dist-info/METADATA,sha256=-s6i8kNoVA8boyd9nqLxA-mVso1_3pikms9eLbz3HzQ,3085
+cdk_cloudformation_okta_policy_policy-1.2.0a5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+cdk_cloudformation_okta_policy_policy-1.2.0a5.dist-info/top_level.txt,sha256=moEilxdD608aKBrEcjCS2Mru5_aHTU505FWVYXQCNLA,38
+cdk_cloudformation_okta_policy_policy-1.2.0a5.dist-info/RECORD,,
