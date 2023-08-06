@@ -1,0 +1,2 @@
+[datalad.extensions]
+container = datalad_container:command_suite
