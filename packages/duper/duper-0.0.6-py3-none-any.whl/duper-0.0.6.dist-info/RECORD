@@ -1,0 +1,15 @@
+duper/.DS_Store,sha256=RkFNFPisIKjUs8a7fqnJaVRe25mV-2JsaTtSiUVPzGg,6148
+duper/__about__.py,sha256=2fVt5eOpCX07WNowh9OwBBRcHs_yBsJJ_1JK-9Aby3g,125
+duper/__init__.py,sha256=MMtHHuUwt_1qyAuvvf4w0S_qnWjZilqdVyawy7aVK2I,7104
+duper/_msg.py,sha256=FrYiSoaMmjJTauMPXnhx1rL06wi4MeCA6gdxoyqB-BE,926
+duper/constants.py,sha256=exoOSpCgb4sK98i_LOEpMUA4lfJv4Y-_c43CbFnYYds,1302
+duper/fastast.py,sha256=PVti8Emiq53uOPei0IFQ0-htCxEX8OX92wOVOlt-Xcs,4569
+duper/factories/__init__.py,sha256=fT4uUPDxL19AirQNz8MW-h-sHb6L9q9z7qQsdTX_feg,102
+duper/factories/ast.py,sha256=OQMpvIDX5VqNg7CYEvUNDWv-0cebavkUq6MBBzoG2v4,13236
+duper/factories/recursive.py,sha256=zpaSNcyPTtgZx5NkI5MotiMKsrKKxO9qB4dPxCP_K_M,4669
+duper/factories/runtime.py,sha256=CbNtUKx4T1Dkv_fQnvkKj3rF2a9fgfQwKonYV1UMJ5k,3848
+duper/factories/tlv.py,sha256=UFCouFVitujSj1QoQIWg4mDKgUA9NvKIzKKjM1jhDmk,13987
+duper-0.0.6.dist-info/METADATA,sha256=ztCXBpFf4lvNWdBXh4PUvjshXPGlmJNVOzrdxdyAZ_Y,8261
+duper-0.0.6.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+duper-0.0.6.dist-info/licenses/LICENSE,sha256=U_HyRH4Qn9IqjiTYvkszhRGKBaEm6o3RSAYjMCTxteA,230
+duper-0.0.6.dist-info/RECORD,,
