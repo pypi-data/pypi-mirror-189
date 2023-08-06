@@ -1,0 +1,3 @@
+[console_scripts]
+rpdb2=rpdb2:run_rpdb2
+
