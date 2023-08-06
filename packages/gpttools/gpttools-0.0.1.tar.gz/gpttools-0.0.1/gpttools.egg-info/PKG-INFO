@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: gpttools
+Version: 0.0.1
+Summary: GPT-Tools - Easy-to-use Python module with tools for OpenAI GPT-3. Natural language processing, text generation, and conversation simulations included.
+Home-page: https://github.com/meyiapir/gpt_tools
+Author: meyap
+Author-email: mmeyiapir@gmail.com
+License: Apache License, Version 2.0, see LICENSE file
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+License-File: NOTICE.txt
+
+
+GPT-Tools is a Python module that provides a comprehensive suite of tools for working with OpenAI's GPT-3 language model. 
+The module includes functions for natural language processing, text generation, and conversation simulations. 
+With GPT-Tools, you can easily integrate GPT-3 into your applications and projects, streamlining the process of developing language-based applications. 
+The module is designed to be easy to use, with intuitive APIs that make working with GPT-3 a breeze. 
+Whether you're a seasoned developer or just getting started, GPT-Tools is the perfect choice for anyone looking to leverage the power of OpenAI's GPT-3 in their work.

@@ -1,0 +1,15 @@
+LICENSE.txt
+NOTICE.txt
+README.md
+setup.py
+gptools/__init__.py
+gptools/modules/BASE_QUERIES.py
+gptools/modules/__init__.py
+gptools/modules/api_query.py
+gptools/modules/get_answer.py
+gptools/modules/text_edit.py
+gpttools.egg-info/PKG-INFO
+gpttools.egg-info/SOURCES.txt
+gpttools.egg-info/dependency_links.txt
+gpttools.egg-info/requires.txt
+gpttools.egg-info/top_level.txt
