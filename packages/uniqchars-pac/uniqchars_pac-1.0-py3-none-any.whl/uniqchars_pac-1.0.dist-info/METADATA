@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: uniqchars-pac
+Version: 1.0
+Summary: Count of uniq chars in string package
+Home-page: UNKNOWN
+Author: Dihtiar Vadym
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: coverage (==7.0.5)
+Requires-Dist: isort (==5.11.4)
+Requires-Dist: pytest (==7.2.0)
+
+Description
+===========
+
+An example woocatpac package project.
+
+
