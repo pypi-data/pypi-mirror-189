@@ -1,0 +1,11 @@
+ghome_foyer_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ghome_foyer_api/api.proto,sha256=In4zzbjaFDofnTjff3Ktqu4KbLiuK78zUzaLnuQlwnI,8773
+ghome_foyer_api/api_pb2.py,sha256=qvZWaVosE_oxipiX1RvJZerkMYCkrL6UVYBdLsbIzNE,26829
+ghome_foyer_api/api_pb2.pyi,sha256=3LSse6WsGgBcWvj7i2jWWLCIncMQlaZcNGwMzxt1O08,59201
+ghome_foyer_api/api_pb2_grpc.py,sha256=QU7vODK9VB2Eijzct-e_j0C5ux6DFvFWXKnHRBxlxwk,9767
+ghome_foyer_api/api_pb2_grpc.pyi,sha256=qdHQ24V3HnHlh6TPEFwq-KDLhKUXLGcO8ArHbbL7tQg,3087
+ghome_foyer_api/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ghome_foyer_api-1.0.0.dist-info/LICENSE,sha256=lEeKDIEWFycexwmtAi8giTs6nPGVPugaKV88AU5Y3e0,1075
+ghome_foyer_api-1.0.0.dist-info/METADATA,sha256=8CoMc61l4z80nt2m9CBoaBWEIHB4MRalMR-nf5QPwRM,1835
+ghome_foyer_api-1.0.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+ghome_foyer_api-1.0.0.dist-info/RECORD,,
