@@ -1,0 +1,8 @@
+setup.py
+hellopackage_asliddin750750.egg-info/PKG-INFO
+hellopackage_asliddin750750.egg-info/SOURCES.txt
+hellopackage_asliddin750750.egg-info/dependency_links.txt
+hellopackage_asliddin750750.egg-info/requires.txt
+hellopackage_asliddin750750.egg-info/top_level.txt
+libname/__init__.py
+libname/hello.py
