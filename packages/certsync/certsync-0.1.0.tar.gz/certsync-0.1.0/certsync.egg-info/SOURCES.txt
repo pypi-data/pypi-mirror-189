@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+certsync/__init__.py
+certsync/entry.py
+certsync.egg-info/PKG-INFO
+certsync.egg-info/SOURCES.txt
+certsync.egg-info/dependency_links.txt
+certsync.egg-info/entry_points.txt
+certsync.egg-info/requires.txt
+certsync.egg-info/top_level.txt
