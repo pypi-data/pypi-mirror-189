@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/pysolvemath/__init__.py
+src/pysolvemath/control_flow.py
+src/pysolvemath/initial_guess.py
+src/pysolvemath/parsing.py
+src/pysolvemath/solver.py
+src/pysolvemath/stop_solve.py
+src/pysolvemath.egg-info/PKG-INFO
+src/pysolvemath.egg-info/SOURCES.txt
+src/pysolvemath.egg-info/dependency_links.txt
+src/pysolvemath.egg-info/top_level.txt
