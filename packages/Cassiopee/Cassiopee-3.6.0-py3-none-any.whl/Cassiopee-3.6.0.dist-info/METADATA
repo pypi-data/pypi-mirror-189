@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: Cassiopee
+Version: 3.6.0
+Summary: *Cassiopee* CFD python modules.
+Home-page: https://github.com/benoit128/Cassiopee
+Author: ONERA
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/benoit128/Cassiopee/issues
+Project-URL: Changelog, https://github.com/benoit128/Cassiopee/releases
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+UNKNOWN
+
