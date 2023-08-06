@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: cracker-saying
+Version: 3.0
+Summary: A simple pip for designing & designing termux banner.
+Home-page: https://pypi.org/project/cracker-saying
+Download-URL: https://pypi.org/project/cracker-saying
+Author: cracker911181
+Author-email: admin@cracker911181.cf
+License: GNU General Public License v3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
