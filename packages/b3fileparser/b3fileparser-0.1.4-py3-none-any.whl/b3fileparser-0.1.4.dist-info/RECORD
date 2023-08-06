@@ -1,0 +1,10 @@
+b3fileparser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+b3fileparser/b3_meta_data.py,sha256=vsemvrPhMldFdThF75Btnxy4MayxBAeCYO5K3mbU3V0,3432
+b3fileparser/b3parser.py,sha256=Htc1Pq8vEVXyVfEjcGypW0mwTYmJwUGJKRDmiF4PshI,2026
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_b3file.py,sha256=lT0jd2yjuAzzAq38kCfHd37iSma7YZGLF_YgpBPC4aI,432
+b3fileparser-0.1.4.dist-info/LICENSE,sha256=zpge37ugnvZYzLCJyN5WtDZEK14p9QEKJNm26J_SD24,1090
+b3fileparser-0.1.4.dist-info/METADATA,sha256=3xqnc1l7swmRXGqOuhrGyJNpAS1tw1haC5p-UJd4NA8,284
+b3fileparser-0.1.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+b3fileparser-0.1.4.dist-info/top_level.txt,sha256=jh32OgyTUlrDLlCvf3C8yWcoWr0mlT6IOI1qzBY1KSo,19
+b3fileparser-0.1.4.dist-info/RECORD,,
