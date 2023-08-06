@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: Shiny-API
+Version: 0.0.14
+Summary: Interface with LS and Camera Scanner
+Home-page: http://shinycomputers.com
+Author: Chris Busillo
+Author-email: info@shinycomputers.com
+Requires-Dist: grpcio-status
+Requires-Dist: setuptools
+Requires-Dist: virtualenv
+Requires-Dist: flask
+Requires-Dist: selenium
+Requires-Dist: cython
+Requires-Dist: pyinstaller
+Requires-Dist: opencv-python
+Requires-Dist: sqlalchemy
+Requires-Dist: scikit-image
+Requires-Dist: deskew
+Requires-Dist: matplotlib
+Requires-Dist: pytesseract
+Requires-Dist: kivy
+Requires-Dist: pygsheets
+Requires-Dist: pandas
+Requires-Dist: beautifulsoup4
+
