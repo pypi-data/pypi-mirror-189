@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: SC-Engine
+Version: 1.0.3
+Summary: A pixel rotation module
+Home-page: 
+Author: SplatCraft
+Author-email: splatcraft.5972@gmail.com
+License: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.1
+Description-Content-Type: text/markdown
+
+# SC ENGINE
+
+SC-Engine is a rotation engine coded by @SplatCraft
+
+It works with Oz-Engine (or other libraries)
+
+## SETUP
+
+In shell, type the following command :
+
+`pip install SC-Engine`
+
+In your file, write this:
+
+```python
+import SC
+```
+## USE
+
+Let's try to rotate a point around another point !
+
+```python
+new = SC.rotate([1,1] , 90 , [3,3])
+
+# here we are rotating the point at x=1 y=1 around the point at x=3 y=3 to 90 degrees
+
+# this function returns a list of two integers [x,y]
+
+print(new)
+```
+Run the project and see what happens
+```python
+[5, 5]
+```
+And those are the new coordinates of the point !
