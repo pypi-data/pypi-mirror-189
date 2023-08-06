@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+osman/__init__.py
+osman/config.py
+osman/environment.py
+osman/osman.py
+osman/template.py
+strv_ds_opensearch_manager.egg-info/PKG-INFO
+strv_ds_opensearch_manager.egg-info/SOURCES.txt
+strv_ds_opensearch_manager.egg-info/dependency_links.txt
+strv_ds_opensearch_manager.egg-info/requires.txt
+strv_ds_opensearch_manager.egg-info/top_level.txt
