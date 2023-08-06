@@ -1,0 +1,5 @@
+setup.py
+gyp.common.egg-info/PKG-INFO
+gyp.common.egg-info/SOURCES.txt
+gyp.common.egg-info/dependency_links.txt
+gyp.common.egg-info/top_level.txt
