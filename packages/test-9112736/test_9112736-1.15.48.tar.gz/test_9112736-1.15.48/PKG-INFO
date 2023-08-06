@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: test_9112736
+Version: 1.15.48
+Summary: ok.py supports programming projects by running tests, tracking progress, and assisting in debugging.
+Home-page: https://github.com/nnbaokhang/ok-client
+Author: John Denero, Soumya Basu, Stephen Martinis, Sharad Vikram, Albert Wu
+License: Apache License, Version 2.0
+Keywords: education,autograding
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE
