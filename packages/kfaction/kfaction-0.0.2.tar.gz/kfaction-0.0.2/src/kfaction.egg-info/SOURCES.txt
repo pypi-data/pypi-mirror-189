@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+src/kfaction.egg-info/PKG-INFO
+src/kfaction.egg-info/SOURCES.txt
+src/kfaction.egg-info/dependency_links.txt
+src/kfaction.egg-info/top_level.txt
+src/mypackage/__init__.py
+src/mypackage/main.py
