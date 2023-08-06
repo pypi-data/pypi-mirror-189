@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.testing.txt
+setup.py
+src/execute/__init__.py
+src/shellexecute.egg-info/PKG-INFO
+src/shellexecute.egg-info/SOURCES.txt
+src/shellexecute.egg-info/dependency_links.txt
+src/shellexecute.egg-info/requires.txt
+src/shellexecute.egg-info/top_level.txt
