@@ -1,0 +1,9 @@
+cdk_cloudformation_tf_azuread_application/__init__.py,sha256=qHHnpMplyPM-BtaHAIsjM9z9i7aLWdGuURSg0C2DliY,90411
+cdk_cloudformation_tf_azuread_application/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cdk_cloudformation_tf_azuread_application/_jsii/__init__.py,sha256=2Aeb1M_1ws5z6Y2FqCyk4DJAmFZDezUcbwZMIm9qBW8,460
+cdk_cloudformation_tf_azuread_application/_jsii/tf-azuread-application@1.0.0-alpha.6.jsii.tgz,sha256=iED95mopCJasfNQqkRwDPZvwU7vPzwv3Rj4mCzBTZu0,33411
+cdk_cloudformation_tf_azuread_application-1.0.0a6.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+cdk_cloudformation_tf_azuread_application-1.0.0a6.dist-info/METADATA,sha256=dLFik2QBBpZS57UNjOzJQnTotb4XgJ5rypR_y5As8lo,3536
+cdk_cloudformation_tf_azuread_application-1.0.0a6.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+cdk_cloudformation_tf_azuread_application-1.0.0a6.dist-info/top_level.txt,sha256=-hvRqrfvxBQIbdwg-nK6f3DeP99FDb66stWSXovARA4,42
+cdk_cloudformation_tf_azuread_application-1.0.0a6.dist-info/RECORD,,
