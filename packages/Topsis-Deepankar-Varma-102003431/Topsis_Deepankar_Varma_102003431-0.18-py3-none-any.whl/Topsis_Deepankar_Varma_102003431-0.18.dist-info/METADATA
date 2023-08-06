@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: Topsis-Deepankar-Varma-102003431
+Version: 0.18
+Summary: This is a topsis package of Deepankar Varma version 0.18
+Author: Deepankar Varma
+Author-email: satiwkdprhrit@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+
+## Topsis_Deepankar_Varma_102003431
+
+# TOPSIS
+
+Submitted By: _Deepankar Varma-102003431_.
+
+Type: _Package_.
+
+Title: **TOPSIS method for multiple-criteria decision making (MCDM)**.
+
+Version: _0.0.7_.
+
+Date: _2022-01-29_.
+
+Author: _Deepankar Varma_.
+
+Maintainer: **Deepankar Varma <satwikdpshrit@gmail.com>**.
+
+Description: **Evaluation of alternatives based on multiple criteria using TOPSIS method.**.
+
+---
+
+## What is TOPSIS?
+
+*Technique for **Order **Preference by **Similarity to **Ideal \*\*S*olution
+(TOPSIS) originated in the 1980s as a multi-criteria decision making method.
+TOPSIS chooses the alternative of shortest Euclidean distance from the ideal solution,
+and greatest distance from the negative-ideal solution.
+
+<br>
+
+## How to install this package:
+
+> > pip install Topsis-Deepankar-Varma-102003431==0.171
+
+### In Command Prompt
+
+> > topsis 102003431-data.csv "1,1,1,1,2" "-,+,+,-,+" 102003431-result.csv
+
+## Input file (data.csv)
+
+The decision matrix should be constructed with each row representing a Model alternative, and each column representing a criterion like Accuracy, R<sup>2</sup>, Root Mean Squared Error, Correlation, and many more.
+
+| Model | P1  | P2   | P3  | P4   | P5    |
+| ----- | --- | ---- | --- | ---- | ----- |
+| M1    | 0.7 | 0.71 | 6.7 | 42.1 | 12.59 |
+| M2    | 0.8 | 0.83 | 7   | 31.7 | 10.11 |
+| M3    | 0.7 | 0.62 | 4.8 | 46.7 | 13.23 |
+| M4    | 0.9 | 0.61 | 6.4 | 42.4 | 12.55 |
+| M5    | 0.9 | 0.88 | 3.6 | 62.2 | 16.91 |
+| M6    | 0.9 | 0.77 | 6.5 | 51.5 | 14.91 |
+| M7    | 0.9 | 0.44 | 5.3 | 48.9 | 13.83 |
+| M8    | 0.9 | 0.86 | 3.4 | 37   | 10.55 |
+
+Weights (`weights`) is not already normalised will be normalised later in the code.
+
+Information of benefit positive(+) or negative(-) impact criteria should be provided in `impacts`.
+
+<br>
+
+## Output file (result.csv)
+
+| Model | P1   | P2   | P3  | P4   | P5    | Topsis Score | Rank |
+| ----- | ---- | ---- | --- | ---- | ----- | ------------ | ---- |
+| M1    | 0.93 | 0.86 | 4.4 | 52.6 | 14.7  | 0.457283053  | 6    |
+| M2    | 0.67 | 0.45 | 3.7 | 47.9 | 13.18 | 0.172274243  | 8    |
+| M3    | 0.61 | 0.37 | 5.8 | 65   | 17.95 | 0.560480297  | 2    |
+| M4    | 0.94 | 0.88 | 6   | 40.7 | 12.13 | 0.491036776  | 3    |
+| M5    | 0.69 | 0.48 | 3.8 | 55.6 | 15.14 | 0.239375223  | 7    |
+| M6    | 0.93 | 0.86 | 5.3 | 47.1 | 13.55 | 0.486632047  | 4    |
+| M7    | 0.93 | 0.86 | 6.9 | 69.9 | 19.65 | 0.822186901  | 1    |
+| M8    | 0.95 | 0.9  | 3.1 | 61.6 | 16.64 | 0.460139442  | 5    |
+
+<br>
+The output file contains columns of input file along with two additional columns having *Topsis_score* and *Rank*
