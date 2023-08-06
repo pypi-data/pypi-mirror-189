@@ -1,0 +1,50 @@
+---
+# runtime parameters for processing Sensing and Actuation function measurements
+
+# Common parameters are *defaults* for Sensing and Actuation.
+# That is, we look to Sensing and Actuation arguments *first*. Any values not
+# specified there will fall back to their Common counterparts.
+
+Common:
+  paramfile: "/ligo/gitcommon/Calibration/ifo/pydarmparams/pydarm_modelparams_PostO3_H1_20221118.ini"
+  output_dir: "/ligo/svncommon/CalSVN/aligocalibration/trunk/Runs/O3/H1/Results/" # For pdf output
+  mcmc_burn_in: 100
+  mcmc_steps: 900
+  coh_thresh_loop: 0.9
+  coh_thresh_pcal: 0.9
+  mcmc_mode: 'none' # Choose from 'none','latest', or 'all'
+  mcmc_print: True # Whether to print params to command line
+  n_recent_meas: 2 # number of latest measurements to plot
+
+Sensing:
+  meas_dir: "/ligo/svncommon/CalSVN/aligocalibration/trunk/Runs/O3/H1/Measurements/FullIFOSensingTFs/"
+  output_dir: "/ligo/svncommon/CalSVN/aligocalibration/trunk/Runs/O3/H1/Results/FullIFOSensingTFs/"
+  loop_xml: "*_H1_DARM_OLGTF_*.xml"
+  pcal_xml: "*_H1_PCAL2DARMTF_*.xml"
+  mcmc_mode: 'latest'
+  mcmc_fmin: 20.0 #Hz
+  mcmc_fmax: 12.e+3 #Hz
+
+Actuation:
+  meas_dir: "/ligo/svncommon/CalSVN/aligocalibration/trunk/Runs/O3/H1/Measurements/FullIFOActuationTFs/"
+  output_dir: "/ligo/svncommon/CalSVN/aligocalibration/trunk/Runs/O3/H1/Results/FullIFOActuationTFs/"
+  optic: 'ETMX'
+  n_recent_meas: 0
+
+  L1:
+    loop_xml: "2022-*_H1SUSETMX_L1_iEXC2DARM_*.xml"
+    pcal_xml: "2022-*_H1SUSETMX_L1_PCAL2DARM_*.xml"
+    mcmc_fmin: 11.0  # Hz
+    mcmc_fmax: 90.0  # Hz
+
+  L2:
+    loop_xml: "2022-*_H1SUSETMX_L2_iEXC2DARM_*.xml"
+    pcal_xml: "2022-*_H1SUSETMX_L2_PCAL2DARM_*.xml"
+    mcmc_fmin: 20.0  # Hz
+    mcmc_fmax: 400.0  # Hz
+
+  L3:
+    loop_xml: "2022-*_H1SUSETMX_L3_iEXC2DARM_*.xml"
+    pcal_xml: "2022-*_H1SUSETMX_L3_PCAL2DARM_*.xml"
+    mcmc_fmin: 20.0  # Hz
+    mcmc_fmax: 1.2e+3  # Hz
