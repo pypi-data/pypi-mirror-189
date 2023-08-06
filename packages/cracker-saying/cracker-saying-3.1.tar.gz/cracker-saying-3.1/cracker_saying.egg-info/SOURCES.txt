@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+cracker_say/__init__.py
+cracker_say/cracker_say.py
+cracker_saying.egg-info/PKG-INFO
+cracker_saying.egg-info/SOURCES.txt
+cracker_saying.egg-info/dependency_links.txt
+cracker_saying.egg-info/not-zip-safe
+cracker_saying.egg-info/top_level.txt
