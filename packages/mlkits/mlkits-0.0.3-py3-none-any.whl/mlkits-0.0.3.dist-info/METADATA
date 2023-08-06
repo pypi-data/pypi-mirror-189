@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mlkits
+Version: 0.0.3
+Summary: Common tools and training models for machine learning.
+Home-page: https://gitee.com/winter1991/mlkits
+Author: WangSihong
+Author-email: wangsihong@live.com
+License: MIT Licence
+Keywords: mlkits,xgboost,lightgbm
+Platform: UNKNOWN
+Requires-Python: >=3.4.0
+License-File: LICENSE
+Requires-Dist: Cython (~=0.29.28)
+Requires-Dist: dill (~=0.3.5.1)
+Requires-Dist: lightgbm (~=3.3.2)
+Requires-Dist: numpy (~=1.22.3)
+Requires-Dist: pandas (~=1.4.2)
+Requires-Dist: PyYAML (~=6.0)
+Requires-Dist: setuptools (~=59.5.0)
+Requires-Dist: storage (~=0.0.4.3)
+Requires-Dist: tqdm (~=4.63.0)
+Requires-Dist: typing-extensions (~=4.4.0)
+
+Common machine learning tools and training models can be used to solve common regression and classification problems. The model includes the most commonly used XGBoost and LightGBT models, as well as the basic linear model and SVM that will be gradually improved in the future, and the DNN model based on PyTorch will be implemented. At the same time, feature processing and analysis will be gradually added, as well as comprehensive model index evaluation capabilities.
+
