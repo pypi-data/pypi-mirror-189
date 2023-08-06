@@ -1,0 +1,14 @@
+hemabot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hemabot/api.py,sha256=iys0_p2gga1jeqi_5lK5faEEyAyp6e6wSq6pRmPoVbk,4760
+hemabot/auth.py,sha256=tzVc1ldTe61NersSuVk3I88_XMY65Ef30KwHZuAKxVw,655
+hemabot/config.py,sha256=cbCtwxkH8HZato_llMw_7YNxVYlMOtM3WWeBLumJFoY,53
+hemabot/processors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hemabot/processors/base.py,sha256=nEny8HLRhsMgCp2fS-Guy1yDmclWYA5d149j86eXXho,527
+hemabot/processors/deepl.py,sha256=z94FuCqH4EOc9HwOiYv4v2j0SXtVMLLYywVneUGlmhg,3127
+hemabot/processors/oncemessager.py,sha256=NfGCi5OxG0T2qfgYlQb-27DwuZ3_1wsCFUGR9NvtZ6o,597
+hemabot/processors/twitter.py,sha256=pZPDAmHQg1EYq7IRNm3yZSuMXrCGBLMPLE7EM1ed2Yo,2654
+hemabot-0.0.3.dist-info/METADATA,sha256=ZmDXWsJYGU8kbjy5R_OXxC2VYtwGzhnKaqXlRsr80TQ,8843
+hemabot-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+hemabot-0.0.3.dist-info/entry_points.txt,sha256=b8BW5e-0Z_938ujBgKGON3CU8_E3qRL1xwyla2uFEqk,50
+hemabot-0.0.3.dist-info/top_level.txt,sha256=oClc8eE9usAWJpf7VgkFgj8NGVqsUqiDUa41TiBp2GQ,8
+hemabot-0.0.3.dist-info/RECORD,,
