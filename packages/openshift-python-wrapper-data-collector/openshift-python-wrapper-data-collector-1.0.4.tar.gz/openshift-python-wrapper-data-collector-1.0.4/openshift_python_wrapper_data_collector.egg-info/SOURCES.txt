@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+ocp_wrapper_data_collector/__init__.py
+ocp_wrapper_data_collector/data_collector.py
+openshift_python_wrapper_data_collector.egg-info/PKG-INFO
+openshift_python_wrapper_data_collector.egg-info/SOURCES.txt
+openshift_python_wrapper_data_collector.egg-info/dependency_links.txt
+openshift_python_wrapper_data_collector.egg-info/requires.txt
+openshift_python_wrapper_data_collector.egg-info/top_level.txt

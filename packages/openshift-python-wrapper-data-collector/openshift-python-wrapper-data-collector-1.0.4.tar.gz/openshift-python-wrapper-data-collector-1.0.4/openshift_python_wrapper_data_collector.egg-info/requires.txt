@@ -1,0 +1,4 @@
+pytest
+pytest-testconfig
+PyYAML
+openshift-python-wrapper
