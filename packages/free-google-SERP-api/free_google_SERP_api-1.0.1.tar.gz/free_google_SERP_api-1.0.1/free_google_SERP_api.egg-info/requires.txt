@@ -1,0 +1,6 @@
+requests
+urllib
+pandas
+numpy
+requests_html
+faqs_google_results
