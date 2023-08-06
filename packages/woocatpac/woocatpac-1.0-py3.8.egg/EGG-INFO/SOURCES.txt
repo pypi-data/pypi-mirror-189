@@ -1,0 +1,9 @@
+README.md
+setup.py
+woocatpac/__init__.py
+woocatpac/core.py
+woocatpac.egg-info/PKG-INFO
+woocatpac.egg-info/SOURCES.txt
+woocatpac.egg-info/dependency_links.txt
+woocatpac.egg-info/entry_points.txt
+woocatpac.egg-info/top_level.txt

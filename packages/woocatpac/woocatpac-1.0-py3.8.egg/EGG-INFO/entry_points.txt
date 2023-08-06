@@ -1,0 +1,3 @@
+[console_scripts]
+woocatpac = woocatpac.core:print_message
+
