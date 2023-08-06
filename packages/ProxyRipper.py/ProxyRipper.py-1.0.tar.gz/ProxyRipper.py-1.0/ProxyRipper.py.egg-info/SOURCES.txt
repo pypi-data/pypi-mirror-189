@@ -1,0 +1,10 @@
+LICENCE
+README.md
+setup.py
+ProxyRipper/ProxyRipper.py
+ProxyRipper/__init__.py
+ProxyRipper.py.egg-info/PKG-INFO
+ProxyRipper.py.egg-info/SOURCES.txt
+ProxyRipper.py.egg-info/dependency_links.txt
+ProxyRipper.py.egg-info/requires.txt
+ProxyRipper.py.egg-info/top_level.txt
