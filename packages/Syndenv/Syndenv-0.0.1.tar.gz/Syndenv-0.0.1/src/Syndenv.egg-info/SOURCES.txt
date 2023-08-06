@@ -1,0 +1,9 @@
+LICENSE,txt
+README.md
+pyproject.toml
+src/Syndenv/Syndbox.py
+src/Syndenv/__init__.py
+src/Syndenv.egg-info/PKG-INFO
+src/Syndenv.egg-info/SOURCES.txt
+src/Syndenv.egg-info/dependency_links.txt
+src/Syndenv.egg-info/top_level.txt
