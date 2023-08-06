@@ -1,0 +1,17 @@
+[project]
+name = "nonebot-plugin-stupidjdsd"
+version = "0.0.7"
+description = "一个笨笨的用于解决广州大学经典诵读任务的插件"
+authors = [
+  { name="ShunYu", email="1265257855@qq.com" },
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+homepage = "https://github.com/liu1272/nonebot-plugin-stupidjdsd"
