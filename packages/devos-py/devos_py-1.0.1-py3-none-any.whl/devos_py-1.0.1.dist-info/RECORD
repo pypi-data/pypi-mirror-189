@@ -1,0 +1,11 @@
+devos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+devos/enricher.py,sha256=vwo_CsD3WXKbLc8I2Tvysq5de3KLUvQaMKXs-AoFQOg,4132
+devos/fetcher.py,sha256=u63G9UTBVOfkQFKOA7x91MiWt9H3L_WTywoj0nge76Q,18067
+devos/gister.py,sha256=R3VGXrEKvno4CDP52F_T5Us7hwqEZrAdheCif4Nd8po,22942
+devos/prefixes.py,sha256=j8xxh_q0NoEFDWF6oKd-Wfpr5fdrKdFmnJ9hBRuUSM4,598
+devos/util.py,sha256=ltQqaq_zpRqa80L-QoxeF2QmNz6rbLxMsPkLF5fbeEE,1463
+devos_py-1.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+devos_py-1.0.1.dist-info/METADATA,sha256=pLSpQUnkTBDX3WmSWKMki-rMNGQnuZHFhrJGTL22_pw,17825
+devos_py-1.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+devos_py-1.0.1.dist-info/top_level.txt,sha256=o0GRmBRdRL4EJBh12b6T1SLmkVzP3nPLMT2QrHLQsUw,6
+devos_py-1.0.1.dist-info/RECORD,,
