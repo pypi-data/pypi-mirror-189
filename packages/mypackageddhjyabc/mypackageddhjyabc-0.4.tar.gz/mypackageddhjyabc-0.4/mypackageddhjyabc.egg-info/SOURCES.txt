@@ -1,0 +1,7 @@
+setup.py
+mypackageddhjyabc.egg-info/PKG-INFO
+mypackageddhjyabc.egg-info/SOURCES.txt
+mypackageddhjyabc.egg-info/dependency_links.txt
+mypackageddhjyabc.egg-info/top_level.txt
+sub_p/__init__.py
+sub_p/sub_m.py
