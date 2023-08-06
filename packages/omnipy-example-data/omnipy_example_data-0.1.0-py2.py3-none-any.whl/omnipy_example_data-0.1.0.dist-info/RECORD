@@ -1,0 +1,13 @@
+omnipy_example_data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+omnipy_example_data/bif/LICENSE,sha256=4tCjEMxctDF7qadHNPNH3IxnIe6cF51U5tYV-6V3yM8,752
+omnipy_example_data/bif/asia.bif,sha256=n3cMlpQNxNhgtYFgISB5CsU4mDswso04YxuBhNx7X4k,1074
+omnipy_example_data/gff/GCF_000002945.1_ASM294v2_genomic.gff,sha256=wUgyvERkJVNlbEDooewzBU_-JBwHqG30PBGpz5vXVOc,10599604
+omnipy_example_data/gff/GCF_000146045.2_R64_genomic.gff,sha256=lkgRPZ-XUtmFo4632lmn4LTbkWp2ei8chO-pWg9xNP8,12353943
+omnipy_example_data/gff/LICENSE,sha256=PiGsyWhgA6LpDRc1NA8CWnGznbKPJwcaWVVaERpEWZ4,543
+omnipy_example_data/isa-json/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+omnipy_example_data/isa-json/isa_seek-investigation19.json,sha256=z_xSsLhKzeiHksX8t3QsCb-JQreQNO5habwNl1UMT70,31064
+omnipy_example_data/isa-json/isa_seek-investigation20_p14.json,sha256=dCa55hk9kKi2mX6S3FWVtbW1-SqrnC2MhI4wCJNjt0A,15147
+omnipy_example_data/isa-json/isa_seek-investigation21_p14.json,sha256=h3gSZwDKRPWP2lKo9V0BtK_R6KYUQDazGcG0ItCDDzw,18155
+omnipy_example_data-0.1.0.dist-info/WHEEL,sha256=SlW3K6T2LNPbN9-QzFT1pS72PIuYOJEoe_9_lIJkxrk,92
+omnipy_example_data-0.1.0.dist-info/METADATA,sha256=dwXDicCDVn01JuE9yXoz33uATs1aqtuhInYMKokdi80,914
+omnipy_example_data-0.1.0.dist-info/RECORD,,
