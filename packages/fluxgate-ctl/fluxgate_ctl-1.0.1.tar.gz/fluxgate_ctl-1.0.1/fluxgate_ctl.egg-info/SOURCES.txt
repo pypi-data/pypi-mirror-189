@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+fluxgate_ctl.egg-info/PKG-INFO
+fluxgate_ctl.egg-info/SOURCES.txt
+fluxgate_ctl.egg-info/dependency_links.txt
+fluxgate_ctl.egg-info/requires.txt
+fluxgate_ctl.egg-info/top_level.txt
