@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: joolyterdemo
+Version: 0.3.6
+Summary: Python package that goes with Joolyter gamification approach.
+Home-page: UNKNOWN
+Author: Paul J. Schmiedtke
+License: None
+Platform: UNKNOWN
+Requires-Dist: protobuf (==3.19.4)
+Requires-Dist: setuptools (==57.5.0)
+Requires-Dist: krpc
+Requires-Dist: p2j
+Requires-Dist: jupyterlab
+
+Joolyter was developed in the course of Bachelor thesis 'A Gamification Approach to the Teaching of Space Flight Mechanics'. It represents the core application, interpreting solution scripts to use kRPC to communicate with KSP. 
+
+Source code: https://github.com/Joolyter/paul-thesis/tree/main/PythonInput/src 
+Documentation: https://joolyter.github.io/paul-thesis/PythonInput/src/docs/_build/html/index.html
+
