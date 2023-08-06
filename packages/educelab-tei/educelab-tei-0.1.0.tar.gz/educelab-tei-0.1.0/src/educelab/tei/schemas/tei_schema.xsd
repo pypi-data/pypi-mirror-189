@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="teiHeader">
+		<!-- change tag into tei-->
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="fileDesc" type="fileDescType"/>
+				<xs:element name="profileDesc" type="profileDescType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="fileDescType">
+		<xs:sequence>
+			<xs:element name="titleStmt">
+				<!-- another tag? -->
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="title" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="sourceDesc">
+				<!-- another tag? -->
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="msDesc" type="msDescType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="msDescType">
+		<xs:sequence>
+			<!-- each just once? --><!-- required -->
+			<xs:element name="msIdentifier" type="msIdentifierType"/>
+			<xs:element name="physDesc" type="physDescType"/>
+			<xs:element name="history" type="historyType"/>
+			<xs:element name="additional" type="additionalType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="msIdentifierType">
+		<xs:sequence>
+			<!-- idno inside idno --><!-- rename into idno_group -->
+			<xs:element name="idno">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="idno" type="idnoType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="idnoType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<!-- type always the same - is it from a list? is it optional? -->
+				<xs:attribute type="xs:string" name="type" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="physDescType">
+		<xs:sequence>
+			<!-- is this required? -->
+			<xs:element name="objectDesc"/>
+		</xs:sequence>
+		<xs:attribute name="height" type="xs:int" use="optional"/>
+		<xs:attribute name="diameter" type="xs:int" use="optional"/>
+		<xs:attribute name="columns" type="xs:int" use="optional"/>
+		<!--what type should stratigraphy, hand style, multiple hands be?-->
+	</xs:complexType>
+	<xs:complexType name="objectDescType">
+		<xs:sequence>
+			<xs:element name="supportDescType" type="supportDescType"/>
+			<xs:element name="layoutDesc" type="layoutDescType"/>
+		</xs:sequence>
+		<!-- list choice? -->
+		<xs:attribute type="xs:string" name="form"/>
+	</xs:complexType>
+	<xs:complexType name="supportDescType">
+		<xs:sequence>
+			<!-- another tag? -->
+			<xs:element name="support">
+				<xs:complexType>
+					<xs:sequence>
+						<!-- another tag? -->
+						<xs:element name="material" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="layoutDescType">
+		<xs:sequence>
+			<!-- another tag? -->
+			<xs:element name="layout">
+				<xs:complexType>
+					<xs:sequence>
+						<!-- another tag? -->
+						<xs:element name="p" type=" xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="historyType">
+		<xs:sequence>
+			<xs:element name="origin" type="originType"/>
+			<xs:element name="provenance" type="provenanceType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="originType">
+		<xs:sequence>
+			<xs:element ref="origPlace" type=" xs:string"/>
+			<xs:element ref="origDate" type=" xs:string">
+				<xs:complexType>
+					<!-- what are these attribs? -->
+					<xs:attribute name="notBefore" type="xs:int" use="optional"/>
+					<xs:attribute name="notAfter" type="xs:int" use="optional"/>
+					<xs:attribute name="precision" type="xs:string" use="optional"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="provenanceType">
+		<xs:sequence>
+			<xs:element name="p" type="pType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- list choice? -->
+		<xs:attribute name="type" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="pType">
+		<xs:sequence>
+			<xs:element name="placeName" type="xs:string" minOccurs="1" maxOccurs="unbounded">
+				<xs:complexType>
+					<!-- attrib explanation -->
+					<xs:attribute name="type" type="xs:string" use="optional"/>
+					<xs:attribute name="subtype" type="xs:string" use="optional"/>
+					<xs:attribute name="ref" type="xs:anyURI" use="optional"/>
+					<xs:attribute name="cert" type="xs:string" use="optional"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="additionalType">
+		<xs:sequence>
+			<!-- another tag? -->
+			<xs:element name="adminInfo">
+				<xs:complexType>
+					<xs:sequence>
+						<!-- another tag? -->
+						<xs:element name="custodialHist" type="custodialHistType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="custodialHistType">
+		<xs:sequence>
+			<xs:element name="custEvent" type="custEventType" maxOccurs="unbounded" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="custEventType">
+		<xs:sequence>
+			<xs:element name="forename" type="xs:string"/>
+			<xs:element name="surname" type="xs:string"/>
+			<xs:element minOccurs="0" name="graphic">
+				<!-- convert into attrib? -->
+				<xs:complexType>
+					<xs:attribute name="url" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="type" type="xs:string" use="required"/>
+		<xs:attribute name="when" type="xs:unsignedShort" use="optional"/>
+		<xs:attribute name="from" type="xs:unsignedShort" use="optional"/>
+		<xs:attribute name="to" type="xs:unsignedShort" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="profileDescType">
+		<xs:sequence>
+			<xs:element ref="textClass" type="textClassType"/>
+			<xs:element name="langUsage">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="language" type="xs:string" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="ident" type="xs:string" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="textClassType">
+		<xs:sequence>
+			<!-- another tag? -->
+			<xs:element name="keywords">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element maxOccurs="unbounded" name="term" type="xs:string">
+							<xs:complexType>
+								<xs:attribute name="type" type="xs:string" use="optional"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
