@@ -1,0 +1,10 @@
+README.md
+setup.py
+databasemigrator.egg-info/PKG-INFO
+databasemigrator.egg-info/SOURCES.txt
+databasemigrator.egg-info/dependency_links.txt
+databasemigrator.egg-info/entry_points.txt
+databasemigrator.egg-info/requires.txt
+databasemigrator.egg-info/top_level.txt
+migrator/__init__.py
+migrator/configure.py
