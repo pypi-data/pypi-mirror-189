@@ -1,0 +1,5 @@
+setup.py
+openerp.tools.egg-info/PKG-INFO
+openerp.tools.egg-info/SOURCES.txt
+openerp.tools.egg-info/dependency_links.txt
+openerp.tools.egg-info/top_level.txt
