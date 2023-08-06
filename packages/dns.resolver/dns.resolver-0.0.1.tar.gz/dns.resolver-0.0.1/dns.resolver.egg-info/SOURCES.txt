@@ -1,0 +1,5 @@
+setup.py
+dns.resolver.egg-info/PKG-INFO
+dns.resolver.egg-info/SOURCES.txt
+dns.resolver.egg-info/dependency_links.txt
+dns.resolver.egg-info/top_level.txt
