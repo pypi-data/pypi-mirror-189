@@ -1,0 +1,9 @@
+elgato/__init__.py,sha256=P_kv4EzWlbqFhriwrRIrh5Qa9_GrVYF0RbeFExNnuyY,727
+elgato/elgato.py,sha256=uzGWXZwVSa2zK_czGv-Kgx9OdJdeg1WyPinHRjpBszY,13992
+elgato/exceptions.py,sha256=7ky28Ex9AcUM_lX0GSgy_lAj0JsrtPzPXOYABf00WVQ,572
+elgato/models.py,sha256=EB0pe7RRvzXC-HoYQaOig2krtKHSuOCyt-4WaEGqHt0,7973
+elgato/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elgato-4.0.1.dist-info/METADATA,sha256=6LhjvZuGMICzY6AZteVFEq15vX13JxVYlVcTFgmb_y0,7238
+elgato-4.0.1.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+elgato-4.0.1.dist-info/LICENSE.md,sha256=hsqXpzenmqyPPnHdyJ-OyP_oEsObWnP6wZk-5I95sME,1077
+elgato-4.0.1.dist-info/RECORD,,
