@@ -1,0 +1,14 @@
+[flake8]
+exclude =
+    .git,
+    __pycache__,
+    build,
+    dist,
+    docs/source/conf.py
+    legacy
+max-line-length = 79
+ignore =
+         # Ignore some style 'errors' produced while formatting by 'black'
+         E203,
+	 W503,
+	 W605,  
