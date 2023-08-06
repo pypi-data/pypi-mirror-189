@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: suppenloffel
+Version: 0.2.5.2
+Summary: suppenlöffel is a library build upon bs4 to provide fast webscraping scripting experience
+License: MIT
+Author: Qubut
+Author-email: s-aahmed@haw-landshut.de
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup :: HTML 
+Requires-Dist: autopep8 (>=1.6.0,<2.0.0)
+Requires-Dist: beautifulsoup4 (>=4.11.1,<5.0.0)
+Requires-Dist: numpy (>=1.23.0,<2.0.0)
+Requires-Dist: pandas (>=1.5.3,<2.0.0)
+Description-Content-Type: text/markdown
+
+
