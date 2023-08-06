@@ -1,0 +1,11 @@
+torch_nested/__init__.py,sha256=_LmQVV_s_rKrtqAvlsB00-Xti7Rqxd_zBEPY09srWqM,78
+torch_nested/nested_size.py,sha256=UC4MzUyb--ABQ8In0yQ_PuPFNFP8lLqkX5wNfX8y-r8,1631
+torch_nested/nested_tensors.py,sha256=f0fJsOHnCDUk5WquJh5TxLMJkLlOg5_NFuNB-cF0hUg,12089
+torch_nested/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torch_nested/str_repr.py,sha256=JjmqkGN3oymN0Wg4PCNWZiHMKkOSR3vHung1zbjDtbw,3951
+torch_nested/type_definitions.py,sha256=xnf250lw8LwlN7q6uT7-S5fvXurfOIubx_tALfIvbIE,410
+torch_nested/type_signals.py,sha256=ub5e0pFXOjKroTV6QFz2rBZR823MfVmqs-bHWju0SGs,1361
+torch_nested-0.0.3.dist-info/METADATA,sha256=UNpab60PBdq79L30jVajYeNuPC8cro1o_AZTWtMmO_M,4219
+torch_nested-0.0.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+torch_nested-0.0.3.dist-info/top_level.txt,sha256=VNdJBXbNC5eQLwWj4lFMZIjkxvSC_Q-bGD19Pd73_MY,13
+torch_nested-0.0.3.dist-info/RECORD,,
