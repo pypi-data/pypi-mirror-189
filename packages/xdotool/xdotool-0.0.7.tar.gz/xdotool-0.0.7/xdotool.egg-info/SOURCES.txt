@@ -1,0 +1,13 @@
+README.md
+setup.py
+simulant/__init__.py
+simulant/display/__init__.py
+simulant/keyboard/__init__.py
+simulant/keyboard/key.py
+simulant/mouse/__init__.py
+simulant/mouse/human.py
+xdotool.egg-info/PKG-INFO
+xdotool.egg-info/SOURCES.txt
+xdotool.egg-info/dependency_links.txt
+xdotool.egg-info/requires.txt
+xdotool.egg-info/top_level.txt
