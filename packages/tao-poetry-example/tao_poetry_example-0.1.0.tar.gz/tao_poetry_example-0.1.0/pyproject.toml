@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "tao-poetry-example"
+version = "0.1.0"
+description = ""
+authors = ["Tao <twang15@ncsu.edu>"]
+readme = "README.md"
+packages = [{include = "tao_poetry_example"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^8.1.3"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 95
+target-version = [ "py39",]
+
+[tool.poetry.scripts]
+inc = "first_steps.cli:cli"
+
