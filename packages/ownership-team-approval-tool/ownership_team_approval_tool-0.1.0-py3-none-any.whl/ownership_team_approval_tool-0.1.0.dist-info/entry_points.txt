@@ -1,0 +1,3 @@
+[console_scripts]
+ownership-team-approval-tool=src.example:run
+
