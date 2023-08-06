@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+dcreq/__init__.py
+dcreq/discord.py
+dcreq.egg-info/PKG-INFO
+dcreq.egg-info/SOURCES.txt
+dcreq.egg-info/dependency_links.txt
+dcreq.egg-info/top_level.txt
