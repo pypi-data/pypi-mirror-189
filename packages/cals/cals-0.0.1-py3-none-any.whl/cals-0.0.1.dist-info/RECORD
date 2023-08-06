@@ -1,0 +1,11 @@
+cals/__init__.py,sha256=9fOXK9TVusz1TrCNeTJ0I1YzWCdzMXMFU7vgu4PNHMM,74
+cals/birashk.py,sha256=rr1YYF2wYqEpt_Gt94bT2mU_DQymiVYQofwIwbcwVCQ,6199
+cals/core.py,sha256=f4S3qyWHiqWF5IAkrmVCb5ELd6EHBayAhekiGKe2-AM,2261
+cals/data.py,sha256=m1q9XJH85qtNPnNFw7cLsgQIH0N48BaCh31jQNA1u7Q,5939
+cals/gregorian.py,sha256=jwmm9zoPlU4c0PB__uhAp5b6AQTTg6Vo8OQHbWV6nX4,4416
+cals/official.py,sha256=_YFYbFc8maFN7nD8ysNFTuCbTnWGpmQkIOuJsWstY_Q,4802
+cals-0.0.1.dist-info/LICENSE.txt,sha256=BqImMFjoX8yJfJhlsKvWHgaDG24AKgwIAVtz9j1a16c,1090
+cals-0.0.1.dist-info/METADATA,sha256=914ysiFYTFm6qHingjlN2B1ZIvTtO0lvz44dfftcdIs,1692
+cals-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+cals-0.0.1.dist-info/top_level.txt,sha256=rAmxllHXCbsk4iHdrARb4Q1UiLEd5Zt4MxB-5M5w678,5
+cals-0.0.1.dist-info/RECORD,,
