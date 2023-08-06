@@ -1,0 +1,7 @@
+Pillow==9.3.0
+imagecodecs==2021.8.26
+numpy==1.23.3
+scikit-image==0.19.3
+scipy==1.9.1
+torch==1.13.1
+torchvision==0.14.1
