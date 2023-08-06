@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: pfl
+Version: 0.0.0
+Summary: A dummy package to reserve the PyPI name for 2023
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+
