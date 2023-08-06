@@ -1,0 +1,15 @@
+variantfinder/ParseAlignments/VariantCounter.py,sha256=tplyukwGJvbupTx7Yj2znjhxVStEfpaYvsCqg9fO10U,2588
+variantfinder/ParseAlignments/VariantLooker.py,sha256=nygpJuWcjwowk5KF-2xD6mspkajDlzy5H8IPZ7PGwnU,2483
+variantfinder/ReadFiles/DataCollector.py,sha256=fSre0nUjnoQZ2P0zXpDXlidF4wIgV49fym1tMiC2J2k,3503
+variantfinder/ReadFiles/LookingForVCF.py,sha256=1d1qqgM_YdvWt5M48ZZsP2qf3f846uz184j3r-4256E,1128
+variantfinder/ReadFiles/VcfReader.py,sha256=Nn464hbWT0niq5I60T9tcY1At-UDqyNpoFqKpMKWJtE,989
+variantfinder/WriteFiles/BamWriter.py,sha256=KzgSHzs4nZDUrRGFv4mSsi30GP8D_AD3R3GVMG84tvE,2013
+variantfinder/WriteFiles/TsvWriter.py,sha256=OW2ZQqjZv4ltlBLgPR6r4QE9mTSdO1IqPWinx5ffgVs,945
+variantfinder/WriteFiles/VcfWriter.py,sha256=49dD7ciGQHBKAMSOtaQYrS7vDMs2_kBty0-kRSZb_b0,1505
+variantfinder/__init__.py,sha256=X-3yks9wNTiC3_ZF1-ccRUj40HxgjCD98E3mw2WU9r4,34
+variantfinder/__main__.py,sha256=tmu_heIbhZ8kShpwHA-0Zo2uxaJGlFaSibaEwPM4n6k,3790
+variantfinder/pyproject.toml,sha256=Df-hw3UH6hqIBUfxrFw69Nqo0MzcognE82SDE31c9Os,555
+variantfinder-0.5.dist-info/entry_points.txt,sha256=wJSkIwmdsVlXPD-loKdVU_Sgh5FnHckXSBFe2MMOMVY,61
+variantfinder-0.5.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+variantfinder-0.5.dist-info/METADATA,sha256=3sjWbOOc_LFYuenvu9g3t3eMoMaMUNc22MX5VF2dgn8,498
+variantfinder-0.5.dist-info/RECORD,,
