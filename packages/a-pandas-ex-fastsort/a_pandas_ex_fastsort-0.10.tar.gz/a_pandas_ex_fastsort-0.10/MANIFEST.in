@@ -1,0 +1,4 @@
+include a_pandas_ex_fastsort/requirements.txt
+include a_pandas_ex_fastsort/thirdparty.json
+include a_pandas_ex_fastsort/README.MD
+include a_pandas_ex_fastsort/LICENSE

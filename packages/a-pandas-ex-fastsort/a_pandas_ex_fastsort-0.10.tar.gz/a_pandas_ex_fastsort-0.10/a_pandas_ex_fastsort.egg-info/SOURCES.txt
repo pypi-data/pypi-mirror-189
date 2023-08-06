@@ -1,0 +1,15 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+a_pandas_ex_fastsort/LICENSE
+a_pandas_ex_fastsort/README.MD
+a_pandas_ex_fastsort/__init__.py
+a_pandas_ex_fastsort/requirements.txt
+a_pandas_ex_fastsort/thirdparty.json
+a_pandas_ex_fastsort.egg-info/PKG-INFO
+a_pandas_ex_fastsort.egg-info/SOURCES.txt
+a_pandas_ex_fastsort.egg-info/dependency_links.txt
+a_pandas_ex_fastsort.egg-info/requires.txt
+a_pandas_ex_fastsort.egg-info/top_level.txt
