@@ -1,0 +1,54 @@
+# Grayscale Converter
+_____
+
+Type: **Package** 
+
+Title: **Greyscale converter with custom extension**
+
+Version: **0.1**
+
+Date and Time: **04-02-2023 1:00AM**
+
+Author: **Pranav Singh, Aashutosh Dubey, Aditya Singh Rathore**
+
+Maintainer: **Pranav Singh <psingh2_be20@thapar.edu>, Aditya Singh Rathore <arathore_be20@thapar.edu>, Aashutosh Dubey <asaashutoshdubey0@gmail.com>**
+
+Description: **conversion of digital colored images to grayscale images with custom passed extension**
+
+<br>
+
+## How to install this package:
+```
+>> pip install Grayscale-Converter
+```
+
+### In Command Prompt
+
+```
+>> grayscale input.png jpeg
+```
+<br>
+
+## Grayscale
+
+Grayscale images are digital images that represent a single channel of information, where each pixel is represented by a single value that represents its intensity. In grayscale images, the intensity of each pixel is proportional to the brightness of the corresponding point in the scene being captured or generated. Grayscale images have only one channel, compared to color images, which have three channels (red, green, and blue) that together form the final color representation of each pixel. Grayscale images are often used in fields such as image processing, computer vision, and photography, where the focus is on the intensity information, rather than the color information, of the image.
+
+___________________
+
+## File Extension
+
+### What's the difference between JPEG, JPG and PNG?
+
+JPEG, JPG, and PNG are the three most commonly used image file formats on the web. Understanding the differences between them is important for choosing the right format for your images.
+
+JPEG, or Joint Photographic Experts Group, is a lossy image compression format. This means that during the compression process, some image data is lost, leading to a smaller file size but lower image quality. JPEG is best for photographs and images with a lot of color variations and smooth gradients, as these types of images can be compressed with little visible loss in quality. The ".jpg" extension is commonly used for JPEG images, while the ".jpeg" extension is also used, but less commonly.
+
+JPG is just a common file extension used for JPEG images, with "JPEG" being the correct name for the image format.
+
+PNG, or Portable Network Graphics, is a lossless image compression format. This means that no image data is lost during the compression process, resulting in high-quality images but larger file sizes. PNG is ideal for images that require high-quality images, such as illustrations and graphics, which often have sharp lines and distinct areas of color. PNG images are also capable of handling transparency, which allows the background color or image behind the PNG to show through any transparent pixels in the image.
+
+In conclusion, when choosing between JPEG, JPG, and PNG, consider the quality and transparency of your images. If you want to preserve image quality and transparency, choose PNG. If you want to save space and don't mind sacrificing a bit of image quality, choose JPEG.
+_______
+
+
+
