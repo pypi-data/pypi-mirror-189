@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: cncolors
+Version: 0.1.0
+Summary: cncolors: the library for Chinese colors
+Home-page: https://github.com/fzhu2e/cnc
+Author: Feng Zhu
+Author-email: fzhu2e@outlook.com
+License: MIT
+Keywords: python,colors
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+# cncolors: Chinese Colors
+
+This Python library implements the Chinese colors presented in this amazing website: http://zhongguose.com.
+
+

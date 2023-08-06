@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+cncolors/__init__.py
+cncolors/colors.py
+cncolors.egg-info/PKG-INFO
+cncolors.egg-info/SOURCES.txt
+cncolors.egg-info/dependency_links.txt
+cncolors.egg-info/not-zip-safe
+cncolors.egg-info/requires.txt
+cncolors.egg-info/top_level.txt
