@@ -1,0 +1,8 @@
+setup.py
+school_mosreg_api/__init__.py
+school_mosreg_api/exceptions.py
+school_mosreg_api.egg-info/PKG-INFO
+school_mosreg_api.egg-info/SOURCES.txt
+school_mosreg_api.egg-info/dependency_links.txt
+school_mosreg_api.egg-info/requires.txt
+school_mosreg_api.egg-info/top_level.txt
