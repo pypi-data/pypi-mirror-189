@@ -1,0 +1,12 @@
+docutils < 0.20
+sphinxcontrib-issuetracker
+sphinx-autodoc-typehints
+tqdm
+requests
+pytest
+pytest-cov
+pytest-recording
+codecov
+vcrpy
+PyYAML
+simplejson
