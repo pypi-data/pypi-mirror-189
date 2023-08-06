@@ -1,0 +1,9 @@
+readysignal/__init__.py,sha256=cKNSnvjcu-cgcmhwywitJMteLlJoTgz9AEmVGeisrjE,6372
+readysignal/readysignal.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_readysignal.py,sha256=MQAv9mTQQ0qsZSdjrLMxRSeplxwm_TrUuRgfCha25Vk,2622
+readysignal-1.0.4.dist-info/LICENSE,sha256=Wt7Dilkiu_8YZu6eq-Lnlv_VPOsJbOC0E36Ept6xZ1A,1054
+readysignal-1.0.4.dist-info/METADATA,sha256=w0qajdYbWo9BQMN1pkVaHCvhdQ9UU6N1_eDJvwLI7qM,8013
+readysignal-1.0.4.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+readysignal-1.0.4.dist-info/top_level.txt,sha256=QMaPMEXT-mVJXEGB1ESPHeyDhL_HltF_LaUATsL0bfo,18
+readysignal-1.0.4.dist-info/RECORD,,
