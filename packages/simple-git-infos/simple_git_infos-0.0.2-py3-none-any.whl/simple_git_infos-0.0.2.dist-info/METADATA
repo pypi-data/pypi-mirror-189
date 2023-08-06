@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: simple-git-infos
+Version: 0.0.2
+Summary: Simple Git Infos
+Author: Marc DEXET
+Author-email: marc.dexet@universite-paris-saclay.fr
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: CEA CNRS Inria Logiciel Libre License, version 2.1 (CeCILL-2.1)
+Description-Content-Type: text/markdown
+License-File: LICENCE_en
+License-File: LICENCE_fr
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Provides-Extra: inspect
+Requires-Dist: typeguard ; extra == 'inspect'
+Requires-Dist: coverage ; extra == 'inspect'
+Requires-Dist: astroid ; extra == 'inspect'
+Provides-Extra: package
+Requires-Dist: distlib ; extra == 'package'
+Requires-Dist: twine ; extra == 'package'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# Git infos
+
+Lightful Git infos library without pretention
+
+It uses shell commands to get git infos.
+
+## Installation
+
+```
+pip install simple-git-infos
+``` 
+
+## Usage 
+
+Import `gitinfos` module
+
+Current functions are simple and easy to understand
+
+* `get_current_git_branch()`
+* `get_full_commit()`
+* `get_short_commit_id()`
+* `get_tag()`
+
+
+**Sample**
+```python
+from simple_git_infos import gitinfos
+
+print(f"BRANCH: {gitinfos.get_current_git_branch()}")
+print(f"COMMIT: {gitinfos.get_full_commit()}")
+print(f"ID: {gitinfos.get_short_commit_id()}")
+print(f"TAG: {gitinfos.get_tag()}")
+```
+
+will output 
+
+```
+BRANCH: main
+COMMIT: commit b78468a45489eec3ea6b816f5b28f7093d9bac4b
+Author: marc dexet <marc.dexet@ias.u-psud.fr>
+Date:   Fri Feb 3 08:41:52 2023 +0000
+
+    Initial commit
+ID: b78468a
+TAG: 0.0.1
+```
+
+All functions could be pointed to any location
+
+
+```python
+full_commit= gitinfos.get_full_commit(cwd='/home/user/somewhere/')
+```
