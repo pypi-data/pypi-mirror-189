@@ -1,0 +1,8 @@
+setup.py
+bighudders/__init__.py
+bighudders/program.py
+bighudders.egg-info/PKG-INFO
+bighudders.egg-info/SOURCES.txt
+bighudders.egg-info/dependency_links.txt
+bighudders.egg-info/requires.txt
+bighudders.egg-info/top_level.txt
