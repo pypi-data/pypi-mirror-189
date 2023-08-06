@@ -1,0 +1,2 @@
+[flake8.extension]
+ICL = flake8_no_implicit_str_concat_in_list:Checker
