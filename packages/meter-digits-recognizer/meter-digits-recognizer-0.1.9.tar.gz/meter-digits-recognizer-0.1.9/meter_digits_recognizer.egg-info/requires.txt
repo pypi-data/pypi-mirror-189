@@ -1,0 +1,13 @@
+numpy
+opencv-python
+Pillow
+torch
+torchvision
+
+[dev]
+matplotlib
+flake8
+pytest
+pip-tools
+ipykernel
+ipympl
