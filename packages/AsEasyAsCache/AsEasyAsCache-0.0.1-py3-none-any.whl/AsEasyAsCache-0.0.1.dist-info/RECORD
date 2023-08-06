@@ -1,0 +1,14 @@
+AsEasyAsCache/__init__.py,sha256=NYl9syCiR9nyBcmP5rLQX9CAvlrRparsZ1IVaChkzYk,159
+AsEasyAsCache/abstractClasses.py,sha256=AJHk-0XpnzbUtRq2oa8zxGnTs9DjcYF00KdH1a2crfg,543
+AsEasyAsCache/clustering.py,sha256=CkYKBTU-RWemC6wKQhGChvlrF3lDvlMkqlzm-J06GnY,1172
+AsEasyAsCache/matrix.py,sha256=pO7fJ9m2wxTsec6Cq4vF72qGAHmHqqhkXNCFrmdylZU,3820
+AsEasyAsCache/sgd.py,sha256=J3naL6LnJRoZvHClYlfCguSeAPyX0EtHKsPzRXZYwjI,1655
+AsEasyAsCache/testClustering.py,sha256=XELQqhOHMdV-6wq7eWnfpiriTe7hkl0pgJU7iStftRw,1371
+AsEasyAsCache/testMatrix.py,sha256=bPdxAhWhGHdmVu6ueu0PV_q71jTJlhHc994OAJnPxUE,949
+AsEasyAsCache/testSGD.py,sha256=sGanSwpV-gE3aI-CkkI63RCJpn4PUUezHiDv-OjnoGw,538
+AsEasyAsCache/testVector.py,sha256=mcMaBB6Ga4K5cwMwejdWECO60Sc7AY1SqrqdS-a79H0,4514
+AsEasyAsCache/vector.py,sha256=OeFnQuXbYscwtNslVGV0lL5mvtrTfrmeYevfq1TnM3M,5303
+AsEasyAsCache-0.0.1.dist-info/METADATA,sha256=_3cDUYgf96GAdTkux5fiSIjSXEquCr1Ea8skqQwF4DM,449
+AsEasyAsCache-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+AsEasyAsCache-0.0.1.dist-info/top_level.txt,sha256=ufdepntbcO8pttIPNv_yLD5zPSNNV3TIsfkeQ2BHCik,14
+AsEasyAsCache-0.0.1.dist-info/RECORD,,
