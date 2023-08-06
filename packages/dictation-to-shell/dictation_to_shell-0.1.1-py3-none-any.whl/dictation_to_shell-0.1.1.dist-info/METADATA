@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dictation-to-shell
+Version: 0.1.1
+Summary: Dictate your shell commands on a Mac and run them directly in your terminal!
+Home-page: https://github.com/ekalosak/dictation-to-shell
+License: MIT
+Author: Eric Kalosa-Kenyon
+Author-email: helloateric@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: openai (>=0.2.2,<0.3.0)

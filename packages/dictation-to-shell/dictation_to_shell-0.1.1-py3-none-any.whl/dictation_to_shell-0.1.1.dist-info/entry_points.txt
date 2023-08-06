@@ -1,0 +1,3 @@
+[console_scripts]
+dictation_to_shell=dictation_to_shell.main:main
+
