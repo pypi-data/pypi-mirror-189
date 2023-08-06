@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+rivertext/__init__.py
+rivertext.egg-info/PKG-INFO
+rivertext.egg-info/SOURCES.txt
+rivertext.egg-info/dependency_links.txt
+rivertext.egg-info/requires.txt
+rivertext.egg-info/top_level.txt

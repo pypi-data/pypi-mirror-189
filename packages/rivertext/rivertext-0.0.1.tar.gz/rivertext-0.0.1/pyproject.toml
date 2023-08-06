@@ -1,0 +1,7 @@
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+extend-select = [
+    "B", "I252"
+]
