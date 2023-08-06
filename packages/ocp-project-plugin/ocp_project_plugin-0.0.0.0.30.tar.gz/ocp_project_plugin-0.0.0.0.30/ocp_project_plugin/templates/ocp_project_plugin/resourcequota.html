@@ -1,0 +1,53 @@
+{% extends 'generic/object.html' %}
+{% load helpers %}
+{% load plugins %}
+{% load render_table from django_tables2 %}
+{% load perms %}
+
+{% block controls %}
+{{ block.super }}
+{% endblock controls %}
+
+{% block breadcrumbs %}
+{{ block.super }}
+{% endblock %}
+
+{% block tabs %}
+{{ block.super }}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <h5 class="card-header">Linux Volume</h5>
+            <div class="card-body">
+                <table class="table table-hover attr-table">
+                    <tr>
+                        <th scope="row">Limits CPU</th>
+                        <td>{{ object.limits_cpu }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Limits Memory</th>
+                        <td>{{ object.limits_memory }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Requests CPU</th>
+                        <td>{{ object.requests_cpu }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Requests Memory</th>
+                        <td>{{ object.requests_memory }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">App Env</th>
+                        <td>{{ object.app_environment|linkify }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        {% include 'inc/panels/custom_fields.html' %}
+    </div>
+</div>
+
+{% endblock %}
