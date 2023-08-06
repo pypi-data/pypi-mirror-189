@@ -1,0 +1,48 @@
+#!python
+#
+# Gery Casiez
+# 2022 - 2023
+#
+
+import argparse
+import os
+import json
+import sys
+from os.path import exists
+from pathlib import Path
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Highlights diff between two versions of a Latex file')
+    parser.add_argument('sha1', help = 'SHA version')
+    parser.add_argument('-sha2', help = 'SHA version - optional - use current version if not defined')
+    parser.add_argument('main', help = 'main tex file with documentclass')
+    args = parser.parse_args() 
+
+    if args.sha2 == None: # usage 1
+        cmds = ["latexpand %s > new.tex"%args.main, \
+                "git checkout %s"%args.sha1, \
+                "latexpand %s > old.tex"%args.main]
+        for cmd in cmds:
+            print(">>>>> %s"%cmd)
+            os.system(cmd)
+
+    else:
+        cmds = ["git checkout %s"%args.sha2, \
+                "latexpand %s > new.tex"%args.main, \
+                "git checkout %s"%args.sha1, \
+                "latexpand %s > old.tex"%args.main]
+        for cmd in cmds:
+            print(">>>>> %s"%cmd)
+            os.system(cmd)
+
+    cmds = ["latexdiff old.tex new.tex > diff.tex", \
+            "git checkout master", \
+            "pdflatex -interaction=nonstopmode  diff.tex", \
+            "bibtex diff", \
+            "pdflatex -interaction=nonstopmode  diff.tex", \
+            "pdflatex -interaction=nonstopmode  diff.tex", \
+            "open diff.pdf" ]
+    for cmd in cmds:
+        print(">>>>> %s"%cmd)
+        os.system(cmd)
+

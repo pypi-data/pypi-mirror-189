@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: gitlatexdiff
+Version: 0.0.1
+Summary: Allows to create a document that highlights the diff between two git versions of a LaTeX document.
+Home-page: https://github.com/casiez/gitlatexdiff
+Author: Géry Casiez
+Author-email: gery.casiez@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: argparse
+
+[![PyPI Version](https://img.shields.io/pypi/v/gitlatexdiff)](https://pypi.org/project/gitlatexdiff/)
+[![License](https://img.shields.io/github/license/casiez/gitlatexdiff)](LICENSE)
+# gitlatexdiff
+
+## Install
+```pip install gitlatexdiff --upgrade```
+
+## Usage
+
+```
+usage: gitlatexdiff [-h] [-sha2 SHA2] sha1 main
+
+Highlights diff between two versions of a Latex file
+
+positional arguments:
+  sha1        SHA version
+  main        main tex file with documentclass
+
+options:
+  -h, --help  show this help message and exit
+  -sha2 SHA2  SHA version - optional - use current version if not defined
+```
