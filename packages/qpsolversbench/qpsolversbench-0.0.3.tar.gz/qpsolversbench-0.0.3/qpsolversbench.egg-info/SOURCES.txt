@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+qpsolversbench.egg-info/PKG-INFO
+qpsolversbench.egg-info/SOURCES.txt
+qpsolversbench.egg-info/dependency_links.txt
+qpsolversbench.egg-info/entry_points.txt
+qpsolversbench.egg-info/requires.txt
+qpsolversbench.egg-info/top_level.txt
+qpsolversbench/diagnostics/__init__.py
+qpsolversbench/diagnostics/explain.py
+qpsolversbench/diagnostics/largest_discrepancy.py
+qpsolversbench/diagnostics/performance.py
+qpsolversbench/problems/__init__.py
+qpsolversbench/problems/caron_problems.py
+qpsolversbench/problems/financial_problems.py
+qpsolversbench/problems/solved_problems.py

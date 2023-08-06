@@ -1,0 +1,2 @@
+[console_scripts]
+qpsolversbench = qpsolversbench.__main__:main

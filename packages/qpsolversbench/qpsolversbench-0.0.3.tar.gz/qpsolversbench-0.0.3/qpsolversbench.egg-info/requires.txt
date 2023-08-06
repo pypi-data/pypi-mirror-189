@@ -1,0 +1,3 @@
+wheel
+precise
+qpsolvers>=2.7.3
