@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: sakharnyi-package
+Version: 0.1
+Summary: Combined package for feature extraction, hyperparameter tuning, and validation schema
+Author: Siarhei Sakharnyi
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: hyperopt
+Requires-Dist: pandas
+Requires-Dist: copy
+Requires-Dist: itertools
+Requires-Dist: re
+Requires-Dist: fuzzywuzzy
+
+UNKNOWN
+
