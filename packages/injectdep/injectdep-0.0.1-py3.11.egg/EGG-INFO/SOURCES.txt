@@ -1,0 +1,9 @@
+README.md
+setup.py
+injectdep/__init__.py
+injectdep/errors.py
+injectdep/module.py
+injectdep.egg-info/PKG-INFO
+injectdep.egg-info/SOURCES.txt
+injectdep.egg-info/dependency_links.txt
+injectdep.egg-info/top_level.txt

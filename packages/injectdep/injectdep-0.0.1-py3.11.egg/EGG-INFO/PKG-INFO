@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: injectdep
+Version: 0.0.1
+Summary: Injección de dependencias para python
+Author: jbuendia1y - jbuendia1y@gmail.com
+Author-email: jbuendia1y@gmail.com
+Keywords: python,injection,dependency,jbuendia1y,library
+Description-Content-Type: text/markdown
+
+# Probando injection dependency
+
+Librareria para la injecciÃ³n de dependencias para python
+
+## PorquÃ© usarlo ?
+
+Pues esta librerÃ­a estÃ¡ hecha para proyectos pequeÃ±os que no necesiten testear la applicaciÃ³n o que quieran probar la injecciÃ³n de dependencias
+
+
+## CÃ³mo usarlo ?
+
+AquÃ­ es un ejemplo de inyecciÃ³n de forma global con la librerÃ­a
+
+```py
+import injectdep
+
+
+@injectdep.register
+class MyDB:
+    def find_all():
+        return ["Jhon", "Pepe", "Carlos"]
+
+def main(db: MyDB):
+    results = db.find_all()
+    print(results) # ["Jhon", "Pepe", "Carlos"]
+
+
+if __name__ == "__main__":
+    injected = injectdep.inject(main)
+    injected()
+```
+
+## Puede construir su propio mÃ³dulo
+
+```py
+import injectdep
+from injectdep import Module
+
+database_module = Module()
+
+@database_module.register
+class MyDB:
+    def find_all():
+        return ["Jhon", "Pepe", "Carlos"]
+
+def main(db: MyDB):
+    results = db.find_all()
+    print(results) # ["Jhon", "Pepe", "Carlos"]
+
+
+if __name__ == "__main__":
+    injected = database_module.inject(main)
+    injected()
+```
+
+<p align="center">Inspirado en AngularModules</p>
