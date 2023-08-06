@@ -1,0 +1,5 @@
+setup.py
+gi.repository.egg-info/PKG-INFO
+gi.repository.egg-info/SOURCES.txt
+gi.repository.egg-info/dependency_links.txt
+gi.repository.egg-info/top_level.txt
