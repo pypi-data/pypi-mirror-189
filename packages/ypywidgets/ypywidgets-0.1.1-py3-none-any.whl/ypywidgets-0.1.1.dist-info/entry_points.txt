@@ -1,0 +1,3 @@
+[ypywidgets]
+checkbox = ypywidgets.checkbox:Checkbox
+txl_checkbox = ypywidgets.txl.checkbox:Checkbox
