@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: News-NLP
+Version: 0.2
+Summary: Fetch google news, preprocess, classify news articles into seven predifired types and classify sentiment strength, geolocate news articels in terms of population, lat, lon.
+Author: JasonLu
+Author-email: luzhenxian@hotmail.com
+License: MIT
