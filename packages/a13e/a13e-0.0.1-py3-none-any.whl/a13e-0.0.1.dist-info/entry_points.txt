@@ -1,0 +1,2 @@
+[console_scripts]
+a13e = a13e:__main__.main
