@@ -1,0 +1,198 @@
+#!/bin/bash
+#   Copyright (C) 2013 Canonical Ltd.
+#
+#   Author: Scott Moser <scott.moser@canonical.com>
+#
+#   Simplestreams is free software: you can redistribute it and/or modify it
+#   under the terms of the GNU Affero General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or (at your
+#   option) any later version.
+#
+#   Simplestreams is distributed in the hope that it will be useful, but
+#   WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+#   or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public
+#   License for more details.
+#
+#   You should have received a copy of the GNU Affero General Public License
+#   along with Simplestreams.  If not, see <http://www.gnu.org/licenses/>.
+set -f
+
+RC_FILTER_INCLUDE=0
+RC_FILTER_EXCLUDE=1
+RC_FAIL=2
+VERBOSITY=${VERBOSITY:-0}
+
+error() { echo "$@" 1>&2; }
+fail() { [ $# -eq 0 ] || error "$@"; exit "$RC_FAIL"; }
+debug() {
+    [ "${VERBOSITY}" -lt "$1" ] && return
+    shift
+    error "$@"
+}
+
+Usage() {
+   cat <<EOF
+Usage: ${0##*/}
+  This program is expected to be called by sstream-sync.
+
+  It uses the 'glance' command to synchronize the remote source
+  with the a glance server.
+
+  sstream-sync "--hook=$0" \\
+     http://cloud-images.ubuntu.com/releases/ streams/v1/index.json
+EOF
+}
+
+required() {
+    local req="" missing=""
+    for req in "$@"; do
+        [ -n "${!req}" ] || missing="${missing} ${req}"
+    done
+    missing=${missing# }
+    _RET="$missing"
+    [ -z "$_RET" ]
+}
+
+
+run() {
+    local ret=""
+    debug 1 "$@"
+    "$@"
+    ret=$?
+    [ $ret -eq 0 ] || error "failed:" "$@"
+    return $ret
+}
+
+load_products() {
+    required content_id ||
+        fail "load_products missing required fields: $_RET"
+    local output="" ids="" id="" prod="" ver=""
+    output=$(run glance image-list \
+        "--property-filter=content_id=${content_id}") || fail
+    ids=$(echo "$output" | awk '$2 ~ uuid { print $2 }' "uuid=[0-9a-f-]{36}")
+    for id in $ids; do
+        out=$(run glance image-show "$id") || fail "failed to show image $id"
+        prod=$(echo "$out" |
+            awk '$2 == "Property" && $3 == sname { print $5 }' \
+                sname="'product_name'")
+        [ -n "$prod" ] ||
+            fail "image-id '$id' had no 'product_name' tag"
+
+        ver=$(echo "$out" |
+            awk '$2 == "Property" && $3 == sname { print $5 }' \
+                sname="'version_name'")
+        [ -n "$ver" ] ||
+            fail "image-id '$id' had no 'version_name' tag"
+
+        debug 1 "${content_id}/${prod}/${ver} ${id}"
+        # report we have the given serial for this iqn
+        printf "%s\t%s\n" "${prod}" "${ver}"
+    done
+    return 0
+}
+
+
+insert_item() {
+    required content_id product_name version_name item_name arch path_local ||
+        fail "missing required fields: $_RET"
+
+    local xname="${pubname:-${name}}"
+    local id="${content_id}/${product_name}/${version_name}/${item_name}"
+
+    if [ -n "${xname}" ]; then
+        # if xname does not contain 'ftype' then append it.
+        # this covers the case where 'pubname' or 'name' is
+        # not specific to the item.
+        [ -n "${ftype}" -a "${xname#*${ftype}}" = "${xname}" ] &&
+            xname="${xname}-${ftype}"
+    else
+        xname="$id"
+    fi
+
+    local p="" propargs="" architecture="$arch"
+    propargs=()
+    for p in content_id product_name version_name item_name architecture; do
+        propargs[${#propargs[@]}]="--property=$p=${!p}"
+    done
+
+    run glance image-create \
+        --disk-format=qcow2 --container-format=bare \
+        "--name=$xname" ${md5:+"--checksum=$md5"} \
+        "${propargs[@]}" \
+        "--file=${path_local}" ||
+        fail "failed to add image $id / $xname"
+}
+
+
+remove_version() {
+    required content_id product_name version_name ||
+        fail "missing required fields: $_RET"
+
+    local output="" id="" ids=""
+    local disp_info="${content_id}/${product_name}/${version_name}"
+    output=$(run glance image-list \
+        "--property-filter=content_id=${content_id}" \
+        "--property-filter=product_name=${product_name}" \
+        "--property-filter=version_name=${version_name}") ||
+    fail "failed to list images with '${disp_info}'"
+    
+    ids=$(echo "$output" | awk '$2 ~ uuid { print $2 }' "uuid=[0-9a-f-]{36}")
+    for id in $ids; do
+        debug 1 "remove ${disp_info}: $id"
+        run glance image-delete "$id" || fail "failed to remove $id"
+    done
+    return 0
+}
+
+
+filter_item() {
+    case "${ftype:-unknown}" in
+        unknown|disk1.img|disk.img) return "${RC_FILTER_INCLUDE}";;
+        *) return "${RC_FILTER_EXCLUDE}"
+    esac
+}
+
+
+filter_product() {
+    case "${arch:-unknown}" in
+        unknown|amd64|x86_64|i386) return "${RC_FILTER_INCLUDE}";;
+    esac
+    return "${RC_FILTER_EXCLUDE}"
+}
+
+
+filter_index_entry() {
+    case "${content_id}" in
+       *:download:*) return "${RC_FILTER_INCLUDE}";;
+       *) return "${RC_FILTER_EXCLUDE}";;
+    esac
+}
+
+
+noop() {
+    return 0;
+}
+
+
+main() {
+    [ "$1" = "--help" -o "$1" = "-h" -o "$1" = "usage" ] &&
+        { Usage; exit 0; }
+
+    [ $# -eq 0 ] || fail "Unexpected arguments.  See --help" 
+
+    [ -n "$HOOK" ] ||
+        { Usage 1>&2; fail "HOOK not available in environment"; }
+   
+    # we only operate on
+    case "$HOOK" in
+        filter_item|filter_index_entry|filter_product|\
+        insert_item|load_products)
+            "$HOOK";;
+        filter_*) return "${RC_FILTER_INCLUDE}";;
+        *) noop;;
+    esac
+}
+main "$@"
+exit $?
+
+# vi: ts=4 expandtab
