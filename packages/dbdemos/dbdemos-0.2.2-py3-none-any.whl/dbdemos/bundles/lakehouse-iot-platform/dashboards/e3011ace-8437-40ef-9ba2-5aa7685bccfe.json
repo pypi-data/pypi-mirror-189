@@ -1,0 +1,3943 @@
+{
+    "queries": [
+        {
+            "id": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+            "name": "IOT platform - turbine ids",
+            "description": null,
+            "query": "select distinct(turbine_id) from dbdemos_lakehouse_iot.turbine",
+            "is_draft": false,
+            "updated_at": "2023-02-01T14:27:51Z",
+            "created_at": "2023-01-13T10:34:46Z",
+            "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+            "options": {
+                "parent": "folders/2963708295339670",
+                "apply_auto_limit": true,
+                "folder_node_status": "ACTIVE",
+                "folder_node_internal_name": "tree/4156927442271249",
+                "visualization_control_order": [],
+                "catalog": "hive_metastore",
+                "schema": "dbdemos_lakehouse_iot",
+                "parameters": []
+            },
+            "version": 1,
+            "tags": [],
+            "is_safe": true,
+            "user_id": 7718718868639865,
+            "run_as_role": null,
+            "run_as_service_principal_id": null,
+            "schedule": null,
+            "visualizations": [
+                {
+                    "id": "0f2c81d6-1b64-4e8a-815f-949bbedd4dbd",
+                    "type": "TABLE",
+                    "name": "Results",
+                    "description": "",
+                    "options": {
+                        "version": 2
+                    },
+                    "updated_at": "2023-02-01T14:27:51Z",
+                    "created_at": "2023-02-01T14:27:51Z",
+                    "query_plan": null
+                }
+            ],
+            "is_favorite": false,
+            "last_modified_by": {
+                "id": 7718718868639865,
+                "name": "Jyotsna Bharadwaj",
+                "email": "jyotsna.bharadwaj@databricks.com",
+                "profile_image_url": "https://www.gravatar.com/avatar/df8a37ff75287d4aa4b1b713357e26c5?s=40&d=identicon",
+                "is_db_admin": false
+            },
+            "query_draft": {
+                "org_id": 1444828305810485,
+                "user_id": 7644138420879474,
+                "query_id": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                "draft_text": "select distinct(turbine_id) from dbdemos_lakehouse_iot.turbine",
+                "original_query_text": "",
+                "parameters": [],
+                "catalog": "hive_metastore",
+                "schema": "dbdemos_lakehouse_iot",
+                "apply_auto_limit": true,
+                "updated_at": "2023-01-13T10:39:39Z"
+            },
+            "job_id": null,
+            "user": {
+                "id": 7718718868639865,
+                "name": "Jyotsna Bharadwaj",
+                "email": "jyotsna.bharadwaj@databricks.com",
+                "profile_image_url": "https://www.gravatar.com/avatar/df8a37ff75287d4aa4b1b713357e26c5?s=40&d=identicon",
+                "is_db_admin": false
+            },
+            "parent": "folders/1435603956186994",
+            "is_archived": false,
+            "can_edit": true,
+            "permission_tier": "CAN_MANAGE",
+            "is_parameter_query": true
+        },
+        {
+            "id": "1fcd78d0-b7ad-409f-951e-93258c494ce5",
+            "name": "IOT platform - turbine sensors",
+            "description": null,
+            "query": "select * from dbdemos_lakehouse_iot.sensor_bronze where turbine_id= '{{ turbine_id }}'",
+            "is_draft": false,
+            "updated_at": "2023-02-01T14:27:55Z",
+            "created_at": "2023-01-13T10:39:52Z",
+            "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+            "options": {
+                "parent": "folders/2963708295339670",
+                "apply_auto_limit": true,
+                "folder_node_status": "ACTIVE",
+                "folder_node_internal_name": "tree/4156927442271360",
+                "visualization_control_order": [
+                    "turbine_id"
+                ],
+                "catalog": "hive_metastore",
+                "schema": "dbdemos_lakehouse_iot",
+                "parameters": [
+                    {
+                        "queryId": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                        "title": "Turbine id",
+                        "name": "turbine_id",
+                        "type": "query",
+                        "locals": [],
+                        "urlPrefix": "p_",
+                        "$$value": "60252b8d-2cd9-f51a-10c3-13bd6478a399"
+                    }
+                ]
+            },
+            "version": 1,
+            "tags": [],
+            "is_safe": true,
+            "user_id": 7718718868639865,
+            "run_as_role": null,
+            "run_as_service_principal_id": null,
+            "schedule": null,
+            "visualizations": [
+                {
+                    "id": "0ddf7a1e-5055-4fa5-8f47-3374b608b1b4",
+                    "type": "CHART",
+                    "name": "Histogram C",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "histogram",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {},
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "numBins": 100,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "sensor_C",
+                                "id": "column_e6e50d1616386"
+                            }
+                        },
+                        "isAggregationOn": true
+                    },
+                    "updated_at": "2023-02-01T14:27:54Z",
+                    "created_at": "2023-02-01T14:27:54Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "function": "BIN",
+                                "args": [
+                                    {
+                                        "column": "sensor_C"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_C_BIN"
+                            },
+                            {
+                                "function": "BIN_LOWER_BOUND",
+                                "args": [
+                                    {
+                                        "column": "sensor_C"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_C_BIN_LOWER_BOUND"
+                            },
+                            {
+                                "function": "BIN_STEP",
+                                "args": [
+                                    {
+                                        "column": "sensor_C"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_C_BIN_STEP"
+                            },
+                            {
+                                "function": "COUNT",
+                                "args": [
+                                    {
+                                        "column": "sensor_C"
+                                    }
+                                ],
+                                "alias": "COUNT"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "sensor_C_BIN"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "1a7f227b-733f-4f0d-8900-d20e0f8a67e4",
+                    "type": "TABLE",
+                    "name": "Results",
+                    "description": "",
+                    "options": {
+                        "version": 2
+                    },
+                    "updated_at": "2023-02-01T14:27:55Z",
+                    "created_at": "2023-02-01T14:27:55Z",
+                    "query_plan": null
+                },
+                {
+                    "id": "23626b48-b16c-455d-ae97-2337e5358d73",
+                    "type": "CHART",
+                    "name": "Sensor F",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "line",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "column_e6e50d1615248": {
+                                "yAxis": 0,
+                                "type": "line",
+                                "color": "#F4B942"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "timestamp",
+                                "id": "column_e6e50d1615246"
+                            },
+                            "y": [
+                                {
+                                    "id": "column_e6e50d1615248",
+                                    "column": "sensor_F",
+                                    "transform": "SUM"
+                                }
+                            ]
+                        },
+                        "isAggregationOn": true,
+                        "hideYAxes": true,
+                        "condensed": true,
+                        "withRowNumber": true
+                    },
+                    "updated_at": "2023-02-01T14:27:56Z",
+                    "created_at": "2023-02-01T14:27:55Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "column": "timestamp"
+                            },
+                            {
+                                "function": "SUM",
+                                "args": [
+                                    {
+                                        "column": "sensor_F"
+                                    }
+                                ],
+                                "alias": "column_e6e50d1615248"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "timestamp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "24d5498b-9999-41d1-b2f2-aa766b3145bd",
+                    "type": "CHART",
+                    "name": "Histogram B",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "histogram",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "COUNT": {
+                                "color": "#6B9AC4"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "numBins": 100,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "sensor_B",
+                                "id": "column_e6e50d1616342"
+                            }
+                        },
+                        "isAggregationOn": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:54Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "function": "BIN",
+                                "args": [
+                                    {
+                                        "column": "sensor_B"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_B_BIN"
+                            },
+                            {
+                                "function": "BIN_LOWER_BOUND",
+                                "args": [
+                                    {
+                                        "column": "sensor_B"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_B_BIN_LOWER_BOUND"
+                            },
+                            {
+                                "function": "BIN_STEP",
+                                "args": [
+                                    {
+                                        "column": "sensor_B"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_B_BIN_STEP"
+                            },
+                            {
+                                "function": "COUNT",
+                                "args": [
+                                    {
+                                        "column": "sensor_B"
+                                    }
+                                ],
+                                "alias": "COUNT"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "sensor_B_BIN"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "4cba3e9a-8530-423f-adeb-dae0e3cc2453",
+                    "type": "CHART",
+                    "name": "Sensor D",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "line",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "column_e6e50d1614172": {
+                                "yAxis": 0,
+                                "type": "line"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "timestamp",
+                                "id": "column_e6e50d1614170"
+                            },
+                            "y": [
+                                {
+                                    "id": "column_e6e50d1614172",
+                                    "column": "sensor_D",
+                                    "transform": "SUM"
+                                }
+                            ]
+                        },
+                        "isAggregationOn": true,
+                        "hideXAxis": false,
+                        "hideYAxes": true,
+                        "condensed": true,
+                        "withRowNumber": true
+                    },
+                    "updated_at": "2023-02-01T14:27:54Z",
+                    "created_at": "2023-02-01T14:27:54Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "column": "timestamp"
+                            },
+                            {
+                                "function": "SUM",
+                                "args": [
+                                    {
+                                        "column": "sensor_D"
+                                    }
+                                ],
+                                "alias": "column_e6e50d1614172"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "timestamp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "55c0624a-6aac-44d0-9211-d75d6b4f8f29",
+                    "type": "CHART",
+                    "name": "Histogram F",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "histogram",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "COUNT": {
+                                "color": "#F4B942"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "numBins": 100,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "sensor_F",
+                                "id": "column_e6e50d1616664"
+                            }
+                        },
+                        "isAggregationOn": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:55Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "function": "BIN",
+                                "args": [
+                                    {
+                                        "column": "sensor_F"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_F_BIN"
+                            },
+                            {
+                                "function": "BIN_LOWER_BOUND",
+                                "args": [
+                                    {
+                                        "column": "sensor_F"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_F_BIN_LOWER_BOUND"
+                            },
+                            {
+                                "function": "BIN_STEP",
+                                "args": [
+                                    {
+                                        "column": "sensor_F"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_F_BIN_STEP"
+                            },
+                            {
+                                "function": "COUNT",
+                                "args": [
+                                    {
+                                        "column": "sensor_F"
+                                    }
+                                ],
+                                "alias": "COUNT"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "sensor_F_BIN"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "58adaf0b-fd0e-4c21-a0d5-6570868e869e",
+                    "type": "CHART",
+                    "name": "Histogram D",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "histogram",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {},
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "numBins": 100,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "sensor_D",
+                                "id": "column_e6e50d1616503"
+                            }
+                        },
+                        "isAggregationOn": true
+                    },
+                    "updated_at": "2023-02-01T14:27:55Z",
+                    "created_at": "2023-02-01T14:27:55Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "function": "BIN",
+                                "args": [
+                                    {
+                                        "column": "sensor_D"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_D_BIN"
+                            },
+                            {
+                                "function": "BIN_LOWER_BOUND",
+                                "args": [
+                                    {
+                                        "column": "sensor_D"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_D_BIN_LOWER_BOUND"
+                            },
+                            {
+                                "function": "BIN_STEP",
+                                "args": [
+                                    {
+                                        "column": "sensor_D"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_D_BIN_STEP"
+                            },
+                            {
+                                "function": "COUNT",
+                                "args": [
+                                    {
+                                        "column": "sensor_D"
+                                    }
+                                ],
+                                "alias": "COUNT"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "sensor_D_BIN"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "72596495-d4f8-473d-8f3d-be51cc20ddf7",
+                    "type": "CHART",
+                    "name": "Sensor B",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "line",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "column_e6e50d1613918": {
+                                "yAxis": 0,
+                                "type": "line",
+                                "color": "#6B9AC4"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "timestamp",
+                                "id": "column_e6e50d1613916"
+                            },
+                            "y": [
+                                {
+                                    "id": "column_e6e50d1613918",
+                                    "column": "sensor_B",
+                                    "transform": "SUM"
+                                }
+                            ]
+                        },
+                        "isAggregationOn": true,
+                        "condensed": true,
+                        "withRowNumber": true,
+                        "hideXAxis": false,
+                        "hideYAxes": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:55Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "column": "timestamp"
+                            },
+                            {
+                                "function": "SUM",
+                                "args": [
+                                    {
+                                        "column": "sensor_B"
+                                    }
+                                ],
+                                "alias": "column_e6e50d1613918"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "timestamp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "8bffed8b-1d69-4f13-a2af-4701c8e4939a",
+                    "type": "CHART",
+                    "name": "Histogram E",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "histogram",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "COUNT": {
+                                "color": "#97D8C4"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "numBins": 100,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "sensor_E",
+                                "id": "column_e6e50d1616547"
+                            }
+                        },
+                        "isAggregationOn": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:55Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "function": "BIN",
+                                "args": [
+                                    {
+                                        "column": "sensor_E"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_E_BIN"
+                            },
+                            {
+                                "function": "BIN_LOWER_BOUND",
+                                "args": [
+                                    {
+                                        "column": "sensor_E"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_E_BIN_LOWER_BOUND"
+                            },
+                            {
+                                "function": "BIN_STEP",
+                                "args": [
+                                    {
+                                        "column": "sensor_E"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_E_BIN_STEP"
+                            },
+                            {
+                                "function": "COUNT",
+                                "args": [
+                                    {
+                                        "column": "sensor_E"
+                                    }
+                                ],
+                                "alias": "COUNT"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "sensor_E_BIN"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "a26e7167-e6bf-4cb3-9b8a-917e59ab4fb6",
+                    "type": "CHART",
+                    "name": "Sensor C",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "line",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "column_e6e50d1614047": {
+                                "yAxis": 0,
+                                "type": "line"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "timestamp",
+                                "id": "column_e6e50d1614044"
+                            },
+                            "y": [
+                                {
+                                    "id": "column_e6e50d1614047",
+                                    "column": "sensor_C",
+                                    "transform": "SUM"
+                                }
+                            ]
+                        },
+                        "isAggregationOn": true,
+                        "condensed": true,
+                        "withRowNumber": true,
+                        "hideYAxes": true
+                    },
+                    "updated_at": "2023-02-01T14:27:55Z",
+                    "created_at": "2023-02-01T14:27:55Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "column": "timestamp"
+                            },
+                            {
+                                "function": "SUM",
+                                "args": [
+                                    {
+                                        "column": "sensor_C"
+                                    }
+                                ],
+                                "alias": "column_e6e50d1614047"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "timestamp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "a87870ff-fd35-4639-bac4-1a30ce72c91f",
+                    "type": "CHART",
+                    "name": "sensor A",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "line",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            },
+                            "percentValues": false
+                        },
+                        "seriesOptions": {
+                            "column_e6e50d1613351": {
+                                "yAxis": 0,
+                                "type": "line",
+                                "color": "#5C62D6"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "timestamp",
+                                "id": "column_e6e50d1613349"
+                            },
+                            "y": [
+                                {
+                                    "id": "column_e6e50d1613351",
+                                    "column": "sensor_A",
+                                    "transform": "SUM"
+                                }
+                            ]
+                        },
+                        "isAggregationOn": true,
+                        "condensed": true,
+                        "withRowNumber": true,
+                        "hideYAxes": true
+                    },
+                    "updated_at": "2023-02-01T14:27:56Z",
+                    "created_at": "2023-02-01T14:27:54Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "column": "timestamp"
+                            },
+                            {
+                                "function": "SUM",
+                                "args": [
+                                    {
+                                        "column": "sensor_A"
+                                    }
+                                ],
+                                "alias": "column_e6e50d1613351"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "timestamp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "ac1fa029-396c-4273-ab4b-04c4f7271d44",
+                    "type": "CHART",
+                    "name": "Energy produced",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "area",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-",
+                                "title": {
+                                    "text": "Instant energy produced"
+                                }
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "column_e6e50d1615505": {
+                                "yAxis": 0,
+                                "type": "area"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "timestamp",
+                                "id": "column_e6e50d1615502"
+                            },
+                            "y": [
+                                {
+                                    "id": "column_e6e50d1615505",
+                                    "column": "energy",
+                                    "transform": "SUM"
+                                }
+                            ]
+                        },
+                        "isAggregationOn": true,
+                        "condensed": true,
+                        "withRowNumber": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:54Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "column": "timestamp"
+                            },
+                            {
+                                "function": "SUM",
+                                "args": [
+                                    {
+                                        "column": "energy"
+                                    }
+                                ],
+                                "alias": "column_e6e50d1615505"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "timestamp"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "cb08d1f9-dadd-4640-b0fc-758e369bae61",
+                    "type": "CHART",
+                    "name": "Histogram A",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "histogram",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "timestamp": {
+                                "yAxis": 0,
+                                "type": "histogram"
+                            },
+                            "COUNT": {
+                                "color": "#5C62D6"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "numBins": 100,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "sensor_A",
+                                "id": "column_e6e50d1616206"
+                            }
+                        },
+                        "isAggregationOn": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:54Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "function": "BIN",
+                                "args": [
+                                    {
+                                        "column": "sensor_A"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_A_BIN"
+                            },
+                            {
+                                "function": "BIN_LOWER_BOUND",
+                                "args": [
+                                    {
+                                        "column": "sensor_A"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_A_BIN_LOWER_BOUND"
+                            },
+                            {
+                                "function": "BIN_STEP",
+                                "args": [
+                                    {
+                                        "column": "sensor_A"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_A_BIN_STEP"
+                            },
+                            {
+                                "function": "COUNT",
+                                "args": [
+                                    {
+                                        "column": "sensor_A"
+                                    }
+                                ],
+                                "alias": "COUNT"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "sensor_A_BIN"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "f889e7b0-8d89-421f-acfe-f7ea105f89b6",
+                    "type": "CHART",
+                    "name": "Sensor E",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "line",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "column_e6e50d1614596": {
+                                "yAxis": 0,
+                                "type": "line",
+                                "color": "#97D8C4"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "timestamp",
+                                "id": "column_e6e50d1614597"
+                            },
+                            "y": [
+                                {
+                                    "id": "column_e6e50d1614596",
+                                    "column": "sensor_E",
+                                    "transform": "SUM"
+                                }
+                            ]
+                        },
+                        "isAggregationOn": true,
+                        "condensed": true,
+                        "withRowNumber": true,
+                        "hideYAxes": true
+                    },
+                    "updated_at": "2023-02-01T14:27:56Z",
+                    "created_at": "2023-02-01T14:27:55Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "column": "timestamp"
+                            },
+                            {
+                                "function": "SUM",
+                                "args": [
+                                    {
+                                        "column": "sensor_E"
+                                    }
+                                ],
+                                "alias": "column_e6e50d1614596"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "timestamp"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "is_favorite": false,
+            "last_modified_by": {
+                "id": 7718718868639865,
+                "name": "Jyotsna Bharadwaj",
+                "email": "jyotsna.bharadwaj@databricks.com",
+                "profile_image_url": "https://www.gravatar.com/avatar/df8a37ff75287d4aa4b1b713357e26c5?s=40&d=identicon",
+                "is_db_admin": false
+            },
+            "query_draft": null,
+            "job_id": null,
+            "user": {
+                "id": 7718718868639865,
+                "name": "Jyotsna Bharadwaj",
+                "email": "jyotsna.bharadwaj@databricks.com",
+                "profile_image_url": "https://www.gravatar.com/avatar/df8a37ff75287d4aa4b1b713357e26c5?s=40&d=identicon",
+                "is_db_admin": false
+            },
+            "parent": "folders/1435603956186994",
+            "is_archived": false,
+            "can_edit": true,
+            "permission_tier": "CAN_MANAGE",
+            "is_parameter_query": false
+        },
+        {
+            "id": "fbe77428-c119-4ae8-8641-7b0f1f5090fb",
+            "name": "IOT platform - turbine status",
+            "description": null,
+            "query": "select *, CASE WHEN prediction = 'ok' THEN 'Healthy' ELSE CONCAT('Faulty (', prediction, ')') END as status from dbdemos_lakehouse_iot.current_turbine_metrics where turbine_id= '{{ turbine_id }}'",
+            "is_draft": false,
+            "updated_at": "2023-02-01T14:27:53Z",
+            "created_at": "2023-01-13T11:08:53Z",
+            "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+            "options": {
+                "parent": "folders/2963708295339670",
+                "apply_auto_limit": true,
+                "folder_node_status": "ACTIVE",
+                "folder_node_internal_name": "tree/4156927442284690",
+                "visualization_control_order": [
+                    "turbine_id"
+                ],
+                "catalog": "hive_metastore",
+                "schema": "dbdemos_lakehouse_iot",
+                "parameters": [
+                    {
+                        "queryId": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                        "title": "turbine_id",
+                        "name": "turbine_id",
+                        "type": "query",
+                        "global": false,
+                        "locals": [],
+                        "urlPrefix": "p_",
+                        "$$value": "60252b8d-2cd9-f51a-10c3-13bd6478a399"
+                    }
+                ]
+            },
+            "version": 1,
+            "tags": [],
+            "is_safe": true,
+            "user_id": 7718718868639865,
+            "run_as_role": null,
+            "run_as_service_principal_id": null,
+            "schedule": null,
+            "latest_execution": {
+                "id": "1ef52419-630f-4a7c-9de7-d35192806730",
+                "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+                "catalog": "hive_metastore",
+                "schema": "dbdemos_lakehouse_iot",
+                "status": 3,
+                "error_message": "",
+                "start_time": "2023-01-30T21:58:18",
+                "runtime": 10.5077,
+                "num_rows": 0,
+                "query_id": "fbe77428-c119-4ae8-8641-7b0f1f5090fb",
+                "query_text": "select *, CASE WHEN prediction = 'ok' THEN 'Healthy' ELSE CONCAT('Faulty (', prediction, ')') END as status from dbdemos_lakehouse_iot.current_turbine_metrics where turbine_id= 'None' LIMIT 1000"
+            },
+            "visualizations": [
+                {
+                    "id": "470a5b42-e314-4e18-903c-4b8853707d29",
+                    "type": "COUNTER",
+                    "name": "Status",
+                    "description": "",
+                    "options": {
+                        "counterLabel": "Status",
+                        "counterColName": "status",
+                        "rowNumber": 1,
+                        "targetRowNumber": 1,
+                        "stringDecimal": 0,
+                        "stringDecChar": ".",
+                        "stringThouSep": ",",
+                        "tooltipFormat": "0,0.000",
+                        "condensed": true,
+                        "withRowNumber": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:53Z",
+                    "query_plan": null
+                },
+                {
+                    "id": "4bfef857-a5b9-443e-b5d4-91fbea203419",
+                    "type": "MAP",
+                    "name": "Map",
+                    "description": "",
+                    "options": {
+                        "latColName": "lat",
+                        "lonColName": "long",
+                        "groups": {},
+                        "mapTileUrl": "//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                        "clusterMarkers": true,
+                        "customizeMarkers": false,
+                        "iconShape": "marker",
+                        "iconFont": "circle",
+                        "foregroundColor": "#ffffff",
+                        "backgroundColor": "#356AFF",
+                        "borderColor": "#356AFF",
+                        "bounds": {
+                            "_southWest": {
+                                "lat": 15.263594052844502,
+                                "lng": -127.63517057586465
+                            },
+                            "_northEast": {
+                                "lat": 55.21684818263305,
+                                "lng": -68.35294401336463
+                            }
+                        },
+                        "tooltip": {
+                            "enabled": false,
+                            "template": ""
+                        },
+                        "popup": {
+                            "enabled": true,
+                            "template": ""
+                        },
+                        "showPlotlyControls": true,
+                        "condensed": true,
+                        "withRowNumber": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:53Z",
+                    "query_plan": null
+                },
+                {
+                    "id": "762ccca7-7e89-4f7c-8fe1-4e78abc9b375",
+                    "type": "TABLE",
+                    "name": "Results",
+                    "description": "",
+                    "options": {
+                        "version": 2
+                    },
+                    "updated_at": "2023-02-01T14:27:53Z",
+                    "created_at": "2023-02-01T14:27:53Z",
+                    "query_plan": null
+                },
+                {
+                    "id": "a24e7bae-54f5-4524-8a10-698a244348e6",
+                    "type": "COUNTER",
+                    "name": "energy",
+                    "description": "",
+                    "options": {
+                        "counterLabel": "Current energy produced",
+                        "counterColName": "avg_energy",
+                        "rowNumber": 1,
+                        "targetRowNumber": 1,
+                        "stringDecimal": 2,
+                        "stringDecChar": ".",
+                        "stringThouSep": ",",
+                        "tooltipFormat": "0,0.000",
+                        "stringPrefix": "",
+                        "stringSuffix": " MW",
+                        "condensed": true,
+                        "withRowNumber": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:53Z",
+                    "query_plan": null
+                },
+                {
+                    "id": "a4365cc9-c392-4dc2-a20c-f89d7f75194e",
+                    "type": "COUNTER",
+                    "name": "Model",
+                    "description": "",
+                    "options": {
+                        "counterLabel": "Turbine model",
+                        "counterColName": "model",
+                        "rowNumber": 1,
+                        "targetRowNumber": 1,
+                        "stringDecimal": 0,
+                        "stringDecChar": ".",
+                        "stringThouSep": ",",
+                        "tooltipFormat": "0,0.000"
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:53Z",
+                    "query_plan": null
+                }
+            ],
+            "is_favorite": false,
+            "last_modified_by": {
+                "id": 7718718868639865,
+                "name": "Jyotsna Bharadwaj",
+                "email": "jyotsna.bharadwaj@databricks.com",
+                "profile_image_url": "https://www.gravatar.com/avatar/df8a37ff75287d4aa4b1b713357e26c5?s=40&d=identicon",
+                "is_db_admin": false
+            },
+            "query_draft": null,
+            "job_id": null,
+            "user": {
+                "id": 7718718868639865,
+                "name": "Jyotsna Bharadwaj",
+                "email": "jyotsna.bharadwaj@databricks.com",
+                "profile_image_url": "https://www.gravatar.com/avatar/df8a37ff75287d4aa4b1b713357e26c5?s=40&d=identicon",
+                "is_db_admin": false
+            },
+            "parent": "folders/1435603956186994",
+            "is_archived": false,
+            "can_edit": true,
+            "permission_tier": "CAN_MANAGE",
+            "is_parameter_query": false
+        }
+    ],
+    "id": "e3011ace-8437-40ef-9ba2-5aa7685bccfe",
+    "dashboard": {
+        "id": "e3011ace-8437-40ef-9ba2-5aa7685bccfe",
+        "slug": "iot-platform---turbine-analysis",
+        "name": "IOT Platform - Turbine analysis",
+        "user_id": 7718718868639865,
+        "dashboard_filters_enabled": false,
+        "widgets": [
+            {
+                "id": "32d40fd1-8383-4765-b606-f0429abbcf5b",
+                "width": 1,
+                "options": {
+                    "parameterMappings": {
+                        "turbine_id": {
+                            "name": "turbine_id",
+                            "type": "dashboard-level",
+                            "mapTo": "turbine_id",
+                            "value": null,
+                            "title": ""
+                        }
+                    },
+                    "title": "sensor A readings",
+                    "description": "",
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 4,
+                        "sizeY": 5,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 5,
+                        "maxSizeY": 1000,
+                        "col": 0,
+                        "row": 10
+                    }
+                },
+                "dashboard_id": "e3011ace-8437-40ef-9ba2-5aa7685bccfe",
+                "text": "",
+                "updated_at": "2023-02-01T14:27:56Z",
+                "created_at": "2023-02-01T14:27:56Z",
+                "visualization": {
+                    "id": "a87870ff-fd35-4639-bac4-1a30ce72c91f",
+                    "type": "CHART",
+                    "name": "sensor A",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "line",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            },
+                            "percentValues": false
+                        },
+                        "seriesOptions": {
+                            "column_e6e50d1613351": {
+                                "yAxis": 0,
+                                "type": "line",
+                                "color": "#5C62D6"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "timestamp",
+                                "id": "column_e6e50d1613349"
+                            },
+                            "y": [
+                                {
+                                    "id": "column_e6e50d1613351",
+                                    "column": "sensor_A",
+                                    "transform": "SUM"
+                                }
+                            ]
+                        },
+                        "isAggregationOn": true,
+                        "condensed": true,
+                        "withRowNumber": true,
+                        "hideYAxes": true
+                    },
+                    "updated_at": "2023-02-01T14:27:56Z",
+                    "created_at": "2023-02-01T14:27:54Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "column": "timestamp"
+                            },
+                            {
+                                "function": "SUM",
+                                "args": [
+                                    {
+                                        "column": "sensor_A"
+                                    }
+                                ],
+                                "alias": "column_e6e50d1613351"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "timestamp"
+                            }
+                        ]
+                    },
+                    "query": {
+                        "id": "1fcd78d0-b7ad-409f-951e-93258c494ce5",
+                        "name": "IOT platform - turbine sensors",
+                        "description": null,
+                        "query": "select * from dbdemos_lakehouse_iot.sensor_bronze where turbine_id= '{{ turbine_id }}'",
+                        "is_draft": false,
+                        "updated_at": "2023-02-01T14:27:55Z",
+                        "created_at": "2023-01-13T10:39:52Z",
+                        "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+                        "options": {
+                            "parent": "folders/2963708295339670",
+                            "apply_auto_limit": true,
+                            "folder_node_status": "ACTIVE",
+                            "folder_node_internal_name": "tree/4156927442271360",
+                            "visualization_control_order": [
+                                "turbine_id"
+                            ],
+                            "catalog": "hive_metastore",
+                            "schema": "dbdemos_lakehouse_iot",
+                            "parameters": [
+                                {
+                                    "queryId": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                                    "title": "Turbine id",
+                                    "name": "turbine_id",
+                                    "type": "query",
+                                    "locals": [],
+                                    "urlPrefix": "p_",
+                                    "$$value": "60252b8d-2cd9-f51a-10c3-13bd6478a399"
+                                }
+                            ]
+                        },
+                        "version": 1,
+                        "tags": [],
+                        "is_safe": true,
+                        "user_id": 7718718868639865,
+                        "run_as_role": null,
+                        "run_as_service_principal_id": null,
+                        "schedule": null,
+                        "can_edit": true
+                    }
+                }
+            },
+            {
+                "id": "b83a9187-5b60-4ad4-b0d4-91804b75c4ef",
+                "width": 1,
+                "options": {
+                    "parameterMappings": {
+                        "turbine_id": {
+                            "name": "turbine_id",
+                            "type": "dashboard-level",
+                            "mapTo": "turbine_id",
+                            "value": null,
+                            "title": ""
+                        }
+                    },
+                    "title": "Sensor E - IOT platform - turbine sensors",
+                    "description": "",
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 4,
+                        "sizeY": 5,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 5,
+                        "maxSizeY": 1000,
+                        "col": 0,
+                        "row": 25
+                    }
+                },
+                "dashboard_id": "e3011ace-8437-40ef-9ba2-5aa7685bccfe",
+                "text": "",
+                "updated_at": "2023-02-01T14:27:56Z",
+                "created_at": "2023-02-01T14:27:56Z",
+                "visualization": {
+                    "id": "f889e7b0-8d89-421f-acfe-f7ea105f89b6",
+                    "type": "CHART",
+                    "name": "Sensor E",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "line",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "column_e6e50d1614596": {
+                                "yAxis": 0,
+                                "type": "line",
+                                "color": "#97D8C4"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "timestamp",
+                                "id": "column_e6e50d1614597"
+                            },
+                            "y": [
+                                {
+                                    "id": "column_e6e50d1614596",
+                                    "column": "sensor_E",
+                                    "transform": "SUM"
+                                }
+                            ]
+                        },
+                        "isAggregationOn": true,
+                        "condensed": true,
+                        "withRowNumber": true,
+                        "hideYAxes": true
+                    },
+                    "updated_at": "2023-02-01T14:27:56Z",
+                    "created_at": "2023-02-01T14:27:55Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "column": "timestamp"
+                            },
+                            {
+                                "function": "SUM",
+                                "args": [
+                                    {
+                                        "column": "sensor_E"
+                                    }
+                                ],
+                                "alias": "column_e6e50d1614596"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "timestamp"
+                            }
+                        ]
+                    },
+                    "query": {
+                        "id": "1fcd78d0-b7ad-409f-951e-93258c494ce5",
+                        "name": "IOT platform - turbine sensors",
+                        "description": null,
+                        "query": "select * from dbdemos_lakehouse_iot.sensor_bronze where turbine_id= '{{ turbine_id }}'",
+                        "is_draft": false,
+                        "updated_at": "2023-02-01T14:27:55Z",
+                        "created_at": "2023-01-13T10:39:52Z",
+                        "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+                        "options": {
+                            "parent": "folders/2963708295339670",
+                            "apply_auto_limit": true,
+                            "folder_node_status": "ACTIVE",
+                            "folder_node_internal_name": "tree/4156927442271360",
+                            "visualization_control_order": [
+                                "turbine_id"
+                            ],
+                            "catalog": "hive_metastore",
+                            "schema": "dbdemos_lakehouse_iot",
+                            "parameters": [
+                                {
+                                    "queryId": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                                    "title": "Turbine id",
+                                    "name": "turbine_id",
+                                    "type": "query",
+                                    "locals": [],
+                                    "urlPrefix": "p_",
+                                    "$$value": "60252b8d-2cd9-f51a-10c3-13bd6478a399"
+                                }
+                            ]
+                        },
+                        "version": 1,
+                        "tags": [],
+                        "is_safe": true,
+                        "user_id": 7718718868639865,
+                        "run_as_role": null,
+                        "run_as_service_principal_id": null,
+                        "schedule": null,
+                        "can_edit": true
+                    }
+                }
+            },
+            {
+                "id": "230b322e-73b5-421e-be9f-75d005e6ed3f",
+                "width": 1,
+                "options": {
+                    "parameterMappings": {
+                        "turbine_id": {
+                            "name": "turbine_id",
+                            "type": "dashboard-level",
+                            "mapTo": "turbine_id",
+                            "value": null,
+                            "title": ""
+                        }
+                    },
+                    "title": "Histogram F",
+                    "description": "",
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 2,
+                        "sizeY": 5,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 5,
+                        "maxSizeY": 1000,
+                        "col": 4,
+                        "row": 15
+                    }
+                },
+                "dashboard_id": "e3011ace-8437-40ef-9ba2-5aa7685bccfe",
+                "text": "",
+                "updated_at": "2023-02-01T14:27:57Z",
+                "created_at": "2023-02-01T14:27:57Z",
+                "visualization": {
+                    "id": "55c0624a-6aac-44d0-9211-d75d6b4f8f29",
+                    "type": "CHART",
+                    "name": "Histogram F",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "histogram",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "COUNT": {
+                                "color": "#F4B942"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "numBins": 100,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "sensor_F",
+                                "id": "column_e6e50d1616664"
+                            }
+                        },
+                        "isAggregationOn": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:55Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "function": "BIN",
+                                "args": [
+                                    {
+                                        "column": "sensor_F"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_F_BIN"
+                            },
+                            {
+                                "function": "BIN_LOWER_BOUND",
+                                "args": [
+                                    {
+                                        "column": "sensor_F"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_F_BIN_LOWER_BOUND"
+                            },
+                            {
+                                "function": "BIN_STEP",
+                                "args": [
+                                    {
+                                        "column": "sensor_F"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_F_BIN_STEP"
+                            },
+                            {
+                                "function": "COUNT",
+                                "args": [
+                                    {
+                                        "column": "sensor_F"
+                                    }
+                                ],
+                                "alias": "COUNT"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "sensor_F_BIN"
+                            }
+                        ]
+                    },
+                    "query": {
+                        "id": "1fcd78d0-b7ad-409f-951e-93258c494ce5",
+                        "name": "IOT platform - turbine sensors",
+                        "description": null,
+                        "query": "select * from dbdemos_lakehouse_iot.sensor_bronze where turbine_id= '{{ turbine_id }}'",
+                        "is_draft": false,
+                        "updated_at": "2023-02-01T14:27:55Z",
+                        "created_at": "2023-01-13T10:39:52Z",
+                        "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+                        "options": {
+                            "parent": "folders/2963708295339670",
+                            "apply_auto_limit": true,
+                            "folder_node_status": "ACTIVE",
+                            "folder_node_internal_name": "tree/4156927442271360",
+                            "visualization_control_order": [
+                                "turbine_id"
+                            ],
+                            "catalog": "hive_metastore",
+                            "schema": "dbdemos_lakehouse_iot",
+                            "parameters": [
+                                {
+                                    "queryId": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                                    "title": "Turbine id",
+                                    "name": "turbine_id",
+                                    "type": "query",
+                                    "locals": [],
+                                    "urlPrefix": "p_",
+                                    "$$value": "60252b8d-2cd9-f51a-10c3-13bd6478a399"
+                                }
+                            ]
+                        },
+                        "version": 1,
+                        "tags": [],
+                        "is_safe": true,
+                        "user_id": 7718718868639865,
+                        "run_as_role": null,
+                        "run_as_service_principal_id": null,
+                        "schedule": null,
+                        "can_edit": true
+                    }
+                }
+            },
+            {
+                "id": "33fbeee4-d10c-4432-a3dc-01d1f22eda24",
+                "width": 1,
+                "options": {
+                    "parameterMappings": {
+                        "turbine_id": {
+                            "name": "turbine_id",
+                            "type": "dashboard-level",
+                            "mapTo": "turbine_id",
+                            "value": null,
+                            "title": ""
+                        }
+                    },
+                    "title": "Status - IOT platform - turbine status",
+                    "description": "",
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 2,
+                        "sizeY": 4,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 1,
+                        "maxSizeY": 1000,
+                        "col": 4,
+                        "row": 0
+                    }
+                },
+                "dashboard_id": "e3011ace-8437-40ef-9ba2-5aa7685bccfe",
+                "text": "",
+                "updated_at": "2023-02-01T14:27:57Z",
+                "created_at": "2023-02-01T14:27:57Z",
+                "visualization": {
+                    "id": "470a5b42-e314-4e18-903c-4b8853707d29",
+                    "type": "COUNTER",
+                    "name": "Status",
+                    "description": "",
+                    "options": {
+                        "counterLabel": "Status",
+                        "counterColName": "status",
+                        "rowNumber": 1,
+                        "targetRowNumber": 1,
+                        "stringDecimal": 0,
+                        "stringDecChar": ".",
+                        "stringThouSep": ",",
+                        "tooltipFormat": "0,0.000",
+                        "condensed": true,
+                        "withRowNumber": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:53Z",
+                    "query_plan": null,
+                    "query": {
+                        "id": "fbe77428-c119-4ae8-8641-7b0f1f5090fb",
+                        "name": "IOT platform - turbine status",
+                        "description": null,
+                        "query": "select *, CASE WHEN prediction = 'ok' THEN 'Healthy' ELSE CONCAT('Faulty (', prediction, ')') END as status from dbdemos_lakehouse_iot.current_turbine_metrics where turbine_id= '{{ turbine_id }}'",
+                        "is_draft": false,
+                        "updated_at": "2023-02-01T14:27:53Z",
+                        "created_at": "2023-01-13T11:08:53Z",
+                        "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+                        "options": {
+                            "parent": "folders/2963708295339670",
+                            "apply_auto_limit": true,
+                            "folder_node_status": "ACTIVE",
+                            "folder_node_internal_name": "tree/4156927442284690",
+                            "visualization_control_order": [
+                                "turbine_id"
+                            ],
+                            "catalog": "hive_metastore",
+                            "schema": "dbdemos_lakehouse_iot",
+                            "parameters": [
+                                {
+                                    "queryId": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                                    "title": "turbine_id",
+                                    "name": "turbine_id",
+                                    "type": "query",
+                                    "global": false,
+                                    "locals": [],
+                                    "urlPrefix": "p_",
+                                    "$$value": "60252b8d-2cd9-f51a-10c3-13bd6478a399"
+                                }
+                            ]
+                        },
+                        "version": 1,
+                        "tags": [],
+                        "is_safe": true,
+                        "user_id": 7718718868639865,
+                        "run_as_role": null,
+                        "run_as_service_principal_id": null,
+                        "schedule": null,
+                        "can_edit": true
+                    }
+                }
+            },
+            {
+                "id": "3bcb8e36-f605-4eb4-9acf-f10216f1015a",
+                "width": 1,
+                "options": {
+                    "parameterMappings": {
+                        "turbine_id": {
+                            "name": "turbine_id",
+                            "type": "dashboard-level",
+                            "mapTo": "turbine_id",
+                            "value": null,
+                            "title": ""
+                        }
+                    },
+                    "title": "Histogram E",
+                    "description": "",
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 2,
+                        "sizeY": 5,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 5,
+                        "maxSizeY": 1000,
+                        "col": 4,
+                        "row": 25
+                    }
+                },
+                "dashboard_id": "e3011ace-8437-40ef-9ba2-5aa7685bccfe",
+                "text": "",
+                "updated_at": "2023-02-01T14:27:57Z",
+                "created_at": "2023-02-01T14:27:57Z",
+                "visualization": {
+                    "id": "8bffed8b-1d69-4f13-a2af-4701c8e4939a",
+                    "type": "CHART",
+                    "name": "Histogram E",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "histogram",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "COUNT": {
+                                "color": "#97D8C4"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "numBins": 100,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "sensor_E",
+                                "id": "column_e6e50d1616547"
+                            }
+                        },
+                        "isAggregationOn": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:55Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "function": "BIN",
+                                "args": [
+                                    {
+                                        "column": "sensor_E"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_E_BIN"
+                            },
+                            {
+                                "function": "BIN_LOWER_BOUND",
+                                "args": [
+                                    {
+                                        "column": "sensor_E"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_E_BIN_LOWER_BOUND"
+                            },
+                            {
+                                "function": "BIN_STEP",
+                                "args": [
+                                    {
+                                        "column": "sensor_E"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_E_BIN_STEP"
+                            },
+                            {
+                                "function": "COUNT",
+                                "args": [
+                                    {
+                                        "column": "sensor_E"
+                                    }
+                                ],
+                                "alias": "COUNT"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "sensor_E_BIN"
+                            }
+                        ]
+                    },
+                    "query": {
+                        "id": "1fcd78d0-b7ad-409f-951e-93258c494ce5",
+                        "name": "IOT platform - turbine sensors",
+                        "description": null,
+                        "query": "select * from dbdemos_lakehouse_iot.sensor_bronze where turbine_id= '{{ turbine_id }}'",
+                        "is_draft": false,
+                        "updated_at": "2023-02-01T14:27:55Z",
+                        "created_at": "2023-01-13T10:39:52Z",
+                        "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+                        "options": {
+                            "parent": "folders/2963708295339670",
+                            "apply_auto_limit": true,
+                            "folder_node_status": "ACTIVE",
+                            "folder_node_internal_name": "tree/4156927442271360",
+                            "visualization_control_order": [
+                                "turbine_id"
+                            ],
+                            "catalog": "hive_metastore",
+                            "schema": "dbdemos_lakehouse_iot",
+                            "parameters": [
+                                {
+                                    "queryId": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                                    "title": "Turbine id",
+                                    "name": "turbine_id",
+                                    "type": "query",
+                                    "locals": [],
+                                    "urlPrefix": "p_",
+                                    "$$value": "60252b8d-2cd9-f51a-10c3-13bd6478a399"
+                                }
+                            ]
+                        },
+                        "version": 1,
+                        "tags": [],
+                        "is_safe": true,
+                        "user_id": 7718718868639865,
+                        "run_as_role": null,
+                        "run_as_service_principal_id": null,
+                        "schedule": null,
+                        "can_edit": true
+                    }
+                }
+            },
+            {
+                "id": "4979955c-431c-4989-868f-e12e54c5c332",
+                "width": 1,
+                "options": {
+                    "parameterMappings": {
+                        "turbine_id": {
+                            "name": "turbine_id",
+                            "type": "dashboard-level",
+                            "mapTo": "turbine_id",
+                            "value": null,
+                            "title": ""
+                        }
+                    },
+                    "title": "Energy produced",
+                    "description": "",
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 4,
+                        "sizeY": 6,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 5,
+                        "maxSizeY": 1000,
+                        "col": 0,
+                        "row": 4
+                    }
+                },
+                "dashboard_id": "e3011ace-8437-40ef-9ba2-5aa7685bccfe",
+                "text": "",
+                "updated_at": "2023-02-01T14:27:57Z",
+                "created_at": "2023-02-01T14:27:57Z",
+                "visualization": {
+                    "id": "ac1fa029-396c-4273-ab4b-04c4f7271d44",
+                    "type": "CHART",
+                    "name": "Energy produced",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "area",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-",
+                                "title": {
+                                    "text": "Instant energy produced"
+                                }
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "column_e6e50d1615505": {
+                                "yAxis": 0,
+                                "type": "area"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "timestamp",
+                                "id": "column_e6e50d1615502"
+                            },
+                            "y": [
+                                {
+                                    "id": "column_e6e50d1615505",
+                                    "column": "energy",
+                                    "transform": "SUM"
+                                }
+                            ]
+                        },
+                        "isAggregationOn": true,
+                        "condensed": true,
+                        "withRowNumber": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:54Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "column": "timestamp"
+                            },
+                            {
+                                "function": "SUM",
+                                "args": [
+                                    {
+                                        "column": "energy"
+                                    }
+                                ],
+                                "alias": "column_e6e50d1615505"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "timestamp"
+                            }
+                        ]
+                    },
+                    "query": {
+                        "id": "1fcd78d0-b7ad-409f-951e-93258c494ce5",
+                        "name": "IOT platform - turbine sensors",
+                        "description": null,
+                        "query": "select * from dbdemos_lakehouse_iot.sensor_bronze where turbine_id= '{{ turbine_id }}'",
+                        "is_draft": false,
+                        "updated_at": "2023-02-01T14:27:55Z",
+                        "created_at": "2023-01-13T10:39:52Z",
+                        "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+                        "options": {
+                            "parent": "folders/2963708295339670",
+                            "apply_auto_limit": true,
+                            "folder_node_status": "ACTIVE",
+                            "folder_node_internal_name": "tree/4156927442271360",
+                            "visualization_control_order": [
+                                "turbine_id"
+                            ],
+                            "catalog": "hive_metastore",
+                            "schema": "dbdemos_lakehouse_iot",
+                            "parameters": [
+                                {
+                                    "queryId": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                                    "title": "Turbine id",
+                                    "name": "turbine_id",
+                                    "type": "query",
+                                    "locals": [],
+                                    "urlPrefix": "p_",
+                                    "$$value": "60252b8d-2cd9-f51a-10c3-13bd6478a399"
+                                }
+                            ]
+                        },
+                        "version": 1,
+                        "tags": [],
+                        "is_safe": true,
+                        "user_id": 7718718868639865,
+                        "run_as_role": null,
+                        "run_as_service_principal_id": null,
+                        "schedule": null,
+                        "can_edit": true
+                    }
+                }
+            },
+            {
+                "id": "5a03b841-6585-4bb4-90d1-61b7133c600e",
+                "width": 1,
+                "options": {
+                    "parameterMappings": {
+                        "turbine_id": {
+                            "name": "turbine_id",
+                            "type": "dashboard-level",
+                            "mapTo": "turbine_id",
+                            "value": null,
+                            "title": ""
+                        }
+                    },
+                    "title": "Sensor B readings",
+                    "description": "",
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 4,
+                        "sizeY": 5,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 5,
+                        "maxSizeY": 1000,
+                        "col": 0,
+                        "row": 20
+                    }
+                },
+                "dashboard_id": "e3011ace-8437-40ef-9ba2-5aa7685bccfe",
+                "text": "",
+                "updated_at": "2023-02-01T14:27:57Z",
+                "created_at": "2023-02-01T14:27:57Z",
+                "visualization": {
+                    "id": "72596495-d4f8-473d-8f3d-be51cc20ddf7",
+                    "type": "CHART",
+                    "name": "Sensor B",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "line",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "column_e6e50d1613918": {
+                                "yAxis": 0,
+                                "type": "line",
+                                "color": "#6B9AC4"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "timestamp",
+                                "id": "column_e6e50d1613916"
+                            },
+                            "y": [
+                                {
+                                    "id": "column_e6e50d1613918",
+                                    "column": "sensor_B",
+                                    "transform": "SUM"
+                                }
+                            ]
+                        },
+                        "isAggregationOn": true,
+                        "condensed": true,
+                        "withRowNumber": true,
+                        "hideXAxis": false,
+                        "hideYAxes": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:55Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "column": "timestamp"
+                            },
+                            {
+                                "function": "SUM",
+                                "args": [
+                                    {
+                                        "column": "sensor_B"
+                                    }
+                                ],
+                                "alias": "column_e6e50d1613918"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "timestamp"
+                            }
+                        ]
+                    },
+                    "query": {
+                        "id": "1fcd78d0-b7ad-409f-951e-93258c494ce5",
+                        "name": "IOT platform - turbine sensors",
+                        "description": null,
+                        "query": "select * from dbdemos_lakehouse_iot.sensor_bronze where turbine_id= '{{ turbine_id }}'",
+                        "is_draft": false,
+                        "updated_at": "2023-02-01T14:27:55Z",
+                        "created_at": "2023-01-13T10:39:52Z",
+                        "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+                        "options": {
+                            "parent": "folders/2963708295339670",
+                            "apply_auto_limit": true,
+                            "folder_node_status": "ACTIVE",
+                            "folder_node_internal_name": "tree/4156927442271360",
+                            "visualization_control_order": [
+                                "turbine_id"
+                            ],
+                            "catalog": "hive_metastore",
+                            "schema": "dbdemos_lakehouse_iot",
+                            "parameters": [
+                                {
+                                    "queryId": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                                    "title": "Turbine id",
+                                    "name": "turbine_id",
+                                    "type": "query",
+                                    "locals": [],
+                                    "urlPrefix": "p_",
+                                    "$$value": "60252b8d-2cd9-f51a-10c3-13bd6478a399"
+                                }
+                            ]
+                        },
+                        "version": 1,
+                        "tags": [],
+                        "is_safe": true,
+                        "user_id": 7718718868639865,
+                        "run_as_role": null,
+                        "run_as_service_principal_id": null,
+                        "schedule": null,
+                        "can_edit": true
+                    }
+                }
+            },
+            {
+                "id": "5ae66b60-b75f-4d61-bf7f-0c007a96bf00",
+                "width": 1,
+                "options": {
+                    "parameterMappings": {
+                        "turbine_id": {
+                            "name": "turbine_id",
+                            "type": "dashboard-level",
+                            "mapTo": "turbine_id",
+                            "value": null,
+                            "title": ""
+                        }
+                    },
+                    "title": "Map - IOT platform - turbine status",
+                    "description": "",
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 2,
+                        "sizeY": 6,
+                        "minSizeX": 2,
+                        "maxSizeX": 6,
+                        "minSizeY": 1,
+                        "maxSizeY": 1000,
+                        "col": 4,
+                        "row": 4
+                    }
+                },
+                "dashboard_id": "e3011ace-8437-40ef-9ba2-5aa7685bccfe",
+                "text": "",
+                "updated_at": "2023-02-01T14:27:57Z",
+                "created_at": "2023-02-01T14:27:57Z",
+                "visualization": {
+                    "id": "4bfef857-a5b9-443e-b5d4-91fbea203419",
+                    "type": "MAP",
+                    "name": "Map",
+                    "description": "",
+                    "options": {
+                        "latColName": "lat",
+                        "lonColName": "long",
+                        "groups": {},
+                        "mapTileUrl": "//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                        "clusterMarkers": true,
+                        "customizeMarkers": false,
+                        "iconShape": "marker",
+                        "iconFont": "circle",
+                        "foregroundColor": "#ffffff",
+                        "backgroundColor": "#356AFF",
+                        "borderColor": "#356AFF",
+                        "bounds": {
+                            "_southWest": {
+                                "lat": 15.263594052844502,
+                                "lng": -127.63517057586465
+                            },
+                            "_northEast": {
+                                "lat": 55.21684818263305,
+                                "lng": -68.35294401336463
+                            }
+                        },
+                        "tooltip": {
+                            "enabled": false,
+                            "template": ""
+                        },
+                        "popup": {
+                            "enabled": true,
+                            "template": ""
+                        },
+                        "showPlotlyControls": true,
+                        "condensed": true,
+                        "withRowNumber": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:53Z",
+                    "query_plan": null,
+                    "query": {
+                        "id": "fbe77428-c119-4ae8-8641-7b0f1f5090fb",
+                        "name": "IOT platform - turbine status",
+                        "description": null,
+                        "query": "select *, CASE WHEN prediction = 'ok' THEN 'Healthy' ELSE CONCAT('Faulty (', prediction, ')') END as status from dbdemos_lakehouse_iot.current_turbine_metrics where turbine_id= '{{ turbine_id }}'",
+                        "is_draft": false,
+                        "updated_at": "2023-02-01T14:27:53Z",
+                        "created_at": "2023-01-13T11:08:53Z",
+                        "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+                        "options": {
+                            "parent": "folders/2963708295339670",
+                            "apply_auto_limit": true,
+                            "folder_node_status": "ACTIVE",
+                            "folder_node_internal_name": "tree/4156927442284690",
+                            "visualization_control_order": [
+                                "turbine_id"
+                            ],
+                            "catalog": "hive_metastore",
+                            "schema": "dbdemos_lakehouse_iot",
+                            "parameters": [
+                                {
+                                    "queryId": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                                    "title": "turbine_id",
+                                    "name": "turbine_id",
+                                    "type": "query",
+                                    "global": false,
+                                    "locals": [],
+                                    "urlPrefix": "p_",
+                                    "$$value": "60252b8d-2cd9-f51a-10c3-13bd6478a399"
+                                }
+                            ]
+                        },
+                        "version": 1,
+                        "tags": [],
+                        "is_safe": true,
+                        "user_id": 7718718868639865,
+                        "run_as_role": null,
+                        "run_as_service_principal_id": null,
+                        "schedule": null,
+                        "can_edit": true
+                    }
+                }
+            },
+            {
+                "id": "744bd790-8049-4c20-834d-ddf1ff484f57",
+                "width": 1,
+                "options": {
+                    "parameterMappings": {
+                        "turbine_id": {
+                            "name": "turbine_id",
+                            "type": "dashboard-level",
+                            "mapTo": "turbine_id",
+                            "value": null,
+                            "title": ""
+                        }
+                    },
+                    "title": "Histogram B",
+                    "description": "",
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 2,
+                        "sizeY": 5,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 5,
+                        "maxSizeY": 1000,
+                        "col": 4,
+                        "row": 20
+                    },
+                    "overrideColors": false
+                },
+                "dashboard_id": "e3011ace-8437-40ef-9ba2-5aa7685bccfe",
+                "text": "",
+                "updated_at": "2023-02-01T14:27:57Z",
+                "created_at": "2023-02-01T14:27:57Z",
+                "visualization": {
+                    "id": "24d5498b-9999-41d1-b2f2-aa766b3145bd",
+                    "type": "CHART",
+                    "name": "Histogram B",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "histogram",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "COUNT": {
+                                "color": "#6B9AC4"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "numBins": 100,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "sensor_B",
+                                "id": "column_e6e50d1616342"
+                            }
+                        },
+                        "isAggregationOn": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:54Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "function": "BIN",
+                                "args": [
+                                    {
+                                        "column": "sensor_B"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_B_BIN"
+                            },
+                            {
+                                "function": "BIN_LOWER_BOUND",
+                                "args": [
+                                    {
+                                        "column": "sensor_B"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_B_BIN_LOWER_BOUND"
+                            },
+                            {
+                                "function": "BIN_STEP",
+                                "args": [
+                                    {
+                                        "column": "sensor_B"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_B_BIN_STEP"
+                            },
+                            {
+                                "function": "COUNT",
+                                "args": [
+                                    {
+                                        "column": "sensor_B"
+                                    }
+                                ],
+                                "alias": "COUNT"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "sensor_B_BIN"
+                            }
+                        ]
+                    },
+                    "query": {
+                        "id": "1fcd78d0-b7ad-409f-951e-93258c494ce5",
+                        "name": "IOT platform - turbine sensors",
+                        "description": null,
+                        "query": "select * from dbdemos_lakehouse_iot.sensor_bronze where turbine_id= '{{ turbine_id }}'",
+                        "is_draft": false,
+                        "updated_at": "2023-02-01T14:27:55Z",
+                        "created_at": "2023-01-13T10:39:52Z",
+                        "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+                        "options": {
+                            "parent": "folders/2963708295339670",
+                            "apply_auto_limit": true,
+                            "folder_node_status": "ACTIVE",
+                            "folder_node_internal_name": "tree/4156927442271360",
+                            "visualization_control_order": [
+                                "turbine_id"
+                            ],
+                            "catalog": "hive_metastore",
+                            "schema": "dbdemos_lakehouse_iot",
+                            "parameters": [
+                                {
+                                    "queryId": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                                    "title": "Turbine id",
+                                    "name": "turbine_id",
+                                    "type": "query",
+                                    "locals": [],
+                                    "urlPrefix": "p_",
+                                    "$$value": "60252b8d-2cd9-f51a-10c3-13bd6478a399"
+                                }
+                            ]
+                        },
+                        "version": 1,
+                        "tags": [],
+                        "is_safe": true,
+                        "user_id": 7718718868639865,
+                        "run_as_role": null,
+                        "run_as_service_principal_id": null,
+                        "schedule": null,
+                        "can_edit": true
+                    }
+                }
+            },
+            {
+                "id": "7b48d87b-4775-45ae-8ddf-aa7512a2ea83",
+                "width": 1,
+                "options": {
+                    "parameterMappings": {
+                        "turbine_id": {
+                            "name": "turbine_id",
+                            "type": "dashboard-level",
+                            "mapTo": "turbine_id",
+                            "value": null,
+                            "title": ""
+                        }
+                    },
+                    "title": "Sensor F - IOT platform - turbine sensors",
+                    "description": "",
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 4,
+                        "sizeY": 5,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 5,
+                        "maxSizeY": 1000,
+                        "col": 0,
+                        "row": 15
+                    }
+                },
+                "dashboard_id": "e3011ace-8437-40ef-9ba2-5aa7685bccfe",
+                "text": "",
+                "updated_at": "2023-02-01T14:27:57Z",
+                "created_at": "2023-02-01T14:27:57Z",
+                "visualization": {
+                    "id": "23626b48-b16c-455d-ae97-2337e5358d73",
+                    "type": "CHART",
+                    "name": "Sensor F",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "line",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "column_e6e50d1615248": {
+                                "yAxis": 0,
+                                "type": "line",
+                                "color": "#F4B942"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "timestamp",
+                                "id": "column_e6e50d1615246"
+                            },
+                            "y": [
+                                {
+                                    "id": "column_e6e50d1615248",
+                                    "column": "sensor_F",
+                                    "transform": "SUM"
+                                }
+                            ]
+                        },
+                        "isAggregationOn": true,
+                        "hideYAxes": true,
+                        "condensed": true,
+                        "withRowNumber": true
+                    },
+                    "updated_at": "2023-02-01T14:27:56Z",
+                    "created_at": "2023-02-01T14:27:55Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "column": "timestamp"
+                            },
+                            {
+                                "function": "SUM",
+                                "args": [
+                                    {
+                                        "column": "sensor_F"
+                                    }
+                                ],
+                                "alias": "column_e6e50d1615248"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "timestamp"
+                            }
+                        ]
+                    },
+                    "query": {
+                        "id": "1fcd78d0-b7ad-409f-951e-93258c494ce5",
+                        "name": "IOT platform - turbine sensors",
+                        "description": null,
+                        "query": "select * from dbdemos_lakehouse_iot.sensor_bronze where turbine_id= '{{ turbine_id }}'",
+                        "is_draft": false,
+                        "updated_at": "2023-02-01T14:27:55Z",
+                        "created_at": "2023-01-13T10:39:52Z",
+                        "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+                        "options": {
+                            "parent": "folders/2963708295339670",
+                            "apply_auto_limit": true,
+                            "folder_node_status": "ACTIVE",
+                            "folder_node_internal_name": "tree/4156927442271360",
+                            "visualization_control_order": [
+                                "turbine_id"
+                            ],
+                            "catalog": "hive_metastore",
+                            "schema": "dbdemos_lakehouse_iot",
+                            "parameters": [
+                                {
+                                    "queryId": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                                    "title": "Turbine id",
+                                    "name": "turbine_id",
+                                    "type": "query",
+                                    "locals": [],
+                                    "urlPrefix": "p_",
+                                    "$$value": "60252b8d-2cd9-f51a-10c3-13bd6478a399"
+                                }
+                            ]
+                        },
+                        "version": 1,
+                        "tags": [],
+                        "is_safe": true,
+                        "user_id": 7718718868639865,
+                        "run_as_role": null,
+                        "run_as_service_principal_id": null,
+                        "schedule": null,
+                        "can_edit": true
+                    }
+                }
+            },
+            {
+                "id": "80f2e881-10d6-4bab-be4a-d15b0833ea8e",
+                "width": 1,
+                "options": {
+                    "parameterMappings": {
+                        "turbine_id": {
+                            "name": "turbine_id",
+                            "type": "dashboard-level",
+                            "mapTo": "turbine_id",
+                            "value": null,
+                            "title": ""
+                        }
+                    },
+                    "title": "energy - IOT platform - turbine status",
+                    "description": "",
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 2,
+                        "sizeY": 4,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 1,
+                        "maxSizeY": 1000,
+                        "col": 0,
+                        "row": 0
+                    }
+                },
+                "dashboard_id": "e3011ace-8437-40ef-9ba2-5aa7685bccfe",
+                "text": "",
+                "updated_at": "2023-02-01T14:27:57Z",
+                "created_at": "2023-02-01T14:27:57Z",
+                "visualization": {
+                    "id": "a24e7bae-54f5-4524-8a10-698a244348e6",
+                    "type": "COUNTER",
+                    "name": "energy",
+                    "description": "",
+                    "options": {
+                        "counterLabel": "Current energy produced",
+                        "counterColName": "avg_energy",
+                        "rowNumber": 1,
+                        "targetRowNumber": 1,
+                        "stringDecimal": 2,
+                        "stringDecChar": ".",
+                        "stringThouSep": ",",
+                        "tooltipFormat": "0,0.000",
+                        "stringPrefix": "",
+                        "stringSuffix": " MW",
+                        "condensed": true,
+                        "withRowNumber": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:53Z",
+                    "query_plan": null,
+                    "query": {
+                        "id": "fbe77428-c119-4ae8-8641-7b0f1f5090fb",
+                        "name": "IOT platform - turbine status",
+                        "description": null,
+                        "query": "select *, CASE WHEN prediction = 'ok' THEN 'Healthy' ELSE CONCAT('Faulty (', prediction, ')') END as status from dbdemos_lakehouse_iot.current_turbine_metrics where turbine_id= '{{ turbine_id }}'",
+                        "is_draft": false,
+                        "updated_at": "2023-02-01T14:27:53Z",
+                        "created_at": "2023-01-13T11:08:53Z",
+                        "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+                        "options": {
+                            "parent": "folders/2963708295339670",
+                            "apply_auto_limit": true,
+                            "folder_node_status": "ACTIVE",
+                            "folder_node_internal_name": "tree/4156927442284690",
+                            "visualization_control_order": [
+                                "turbine_id"
+                            ],
+                            "catalog": "hive_metastore",
+                            "schema": "dbdemos_lakehouse_iot",
+                            "parameters": [
+                                {
+                                    "queryId": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                                    "title": "turbine_id",
+                                    "name": "turbine_id",
+                                    "type": "query",
+                                    "global": false,
+                                    "locals": [],
+                                    "urlPrefix": "p_",
+                                    "$$value": "60252b8d-2cd9-f51a-10c3-13bd6478a399"
+                                }
+                            ]
+                        },
+                        "version": 1,
+                        "tags": [],
+                        "is_safe": true,
+                        "user_id": 7718718868639865,
+                        "run_as_role": null,
+                        "run_as_service_principal_id": null,
+                        "schedule": null,
+                        "can_edit": true
+                    }
+                }
+            },
+            {
+                "id": "980c4efe-c9bd-4971-a4dc-4a7384862856",
+                "width": 1,
+                "options": {
+                    "parameterMappings": {
+                        "turbine_id": {
+                            "name": "turbine_id",
+                            "type": "dashboard-level",
+                            "mapTo": "turbine_id",
+                            "value": null,
+                            "title": ""
+                        }
+                    },
+                    "title": "Histogram A - IOT platform - turbine sensors",
+                    "description": "",
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 2,
+                        "sizeY": 5,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 5,
+                        "maxSizeY": 1000,
+                        "col": 4,
+                        "row": 10
+                    },
+                    "overrideColors": false
+                },
+                "dashboard_id": "e3011ace-8437-40ef-9ba2-5aa7685bccfe",
+                "text": "",
+                "updated_at": "2023-02-01T14:27:57Z",
+                "created_at": "2023-02-01T14:27:57Z",
+                "visualization": {
+                    "id": "cb08d1f9-dadd-4640-b0fc-758e369bae61",
+                    "type": "CHART",
+                    "name": "Histogram A",
+                    "description": "",
+                    "options": {
+                        "version": 2,
+                        "globalSeriesType": "histogram",
+                        "sortX": true,
+                        "sortY": true,
+                        "legend": {
+                            "traceorder": "normal"
+                        },
+                        "xAxis": {
+                            "type": "-",
+                            "labels": {
+                                "enabled": true
+                            }
+                        },
+                        "yAxis": [
+                            {
+                                "type": "-"
+                            },
+                            {
+                                "type": "-",
+                                "opposite": true
+                            }
+                        ],
+                        "alignYAxesAtZero": true,
+                        "error_y": {
+                            "type": "data",
+                            "visible": true
+                        },
+                        "series": {
+                            "stacking": null,
+                            "error_y": {
+                                "type": "data",
+                                "visible": true
+                            }
+                        },
+                        "seriesOptions": {
+                            "timestamp": {
+                                "yAxis": 0,
+                                "type": "histogram"
+                            },
+                            "COUNT": {
+                                "color": "#5C62D6"
+                            }
+                        },
+                        "valuesOptions": {},
+                        "direction": {
+                            "type": "counterclockwise"
+                        },
+                        "sizemode": "diameter",
+                        "coefficient": 1,
+                        "numberFormat": "0,0[.]00000",
+                        "percentFormat": "0[.]00%",
+                        "textFormat": "",
+                        "missingValuesAsZero": true,
+                        "useAggregationsUi": true,
+                        "swappedAxes": false,
+                        "dateTimeFormat": "YYYY-MM-DD HH:mm",
+                        "showDataLabels": false,
+                        "numBins": 100,
+                        "columnConfigurationMap": {
+                            "x": {
+                                "column": "sensor_A",
+                                "id": "column_e6e50d1616206"
+                            }
+                        },
+                        "isAggregationOn": true
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:54Z",
+                    "query_plan": {
+                        "selects": [
+                            {
+                                "function": "BIN",
+                                "args": [
+                                    {
+                                        "column": "sensor_A"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_A_BIN"
+                            },
+                            {
+                                "function": "BIN_LOWER_BOUND",
+                                "args": [
+                                    {
+                                        "column": "sensor_A"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_A_BIN_LOWER_BOUND"
+                            },
+                            {
+                                "function": "BIN_STEP",
+                                "args": [
+                                    {
+                                        "column": "sensor_A"
+                                    },
+                                    {
+                                        "number": 100.0
+                                    }
+                                ],
+                                "alias": "sensor_A_BIN_STEP"
+                            },
+                            {
+                                "function": "COUNT",
+                                "args": [
+                                    {
+                                        "column": "sensor_A"
+                                    }
+                                ],
+                                "alias": "COUNT"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "column": "sensor_A_BIN"
+                            }
+                        ]
+                    },
+                    "query": {
+                        "id": "1fcd78d0-b7ad-409f-951e-93258c494ce5",
+                        "name": "IOT platform - turbine sensors",
+                        "description": null,
+                        "query": "select * from dbdemos_lakehouse_iot.sensor_bronze where turbine_id= '{{ turbine_id }}'",
+                        "is_draft": false,
+                        "updated_at": "2023-02-01T14:27:55Z",
+                        "created_at": "2023-01-13T10:39:52Z",
+                        "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+                        "options": {
+                            "parent": "folders/2963708295339670",
+                            "apply_auto_limit": true,
+                            "folder_node_status": "ACTIVE",
+                            "folder_node_internal_name": "tree/4156927442271360",
+                            "visualization_control_order": [
+                                "turbine_id"
+                            ],
+                            "catalog": "hive_metastore",
+                            "schema": "dbdemos_lakehouse_iot",
+                            "parameters": [
+                                {
+                                    "queryId": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                                    "title": "Turbine id",
+                                    "name": "turbine_id",
+                                    "type": "query",
+                                    "locals": [],
+                                    "urlPrefix": "p_",
+                                    "$$value": "60252b8d-2cd9-f51a-10c3-13bd6478a399"
+                                }
+                            ]
+                        },
+                        "version": 1,
+                        "tags": [],
+                        "is_safe": true,
+                        "user_id": 7718718868639865,
+                        "run_as_role": null,
+                        "run_as_service_principal_id": null,
+                        "schedule": null,
+                        "can_edit": true
+                    }
+                }
+            },
+            {
+                "id": "d54275d1-c0c2-49bc-a09e-d97333fc13f9",
+                "width": 1,
+                "options": {
+                    "parameterMappings": {
+                        "turbine_id": {
+                            "name": "turbine_id",
+                            "type": "dashboard-level",
+                            "mapTo": "turbine_id",
+                            "value": null,
+                            "title": ""
+                        }
+                    },
+                    "title": "Model - IOT platform - turbine status",
+                    "description": "",
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 2,
+                        "sizeY": 4,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 1,
+                        "maxSizeY": 1000,
+                        "col": 2,
+                        "row": 0
+                    }
+                },
+                "dashboard_id": "e3011ace-8437-40ef-9ba2-5aa7685bccfe",
+                "text": "",
+                "updated_at": "2023-02-01T14:27:57Z",
+                "created_at": "2023-02-01T14:27:57Z",
+                "visualization": {
+                    "id": "a4365cc9-c392-4dc2-a20c-f89d7f75194e",
+                    "type": "COUNTER",
+                    "name": "Model",
+                    "description": "",
+                    "options": {
+                        "counterLabel": "Turbine model",
+                        "counterColName": "model",
+                        "rowNumber": 1,
+                        "targetRowNumber": 1,
+                        "stringDecimal": 0,
+                        "stringDecChar": ".",
+                        "stringThouSep": ",",
+                        "tooltipFormat": "0,0.000"
+                    },
+                    "updated_at": "2023-02-01T14:27:57Z",
+                    "created_at": "2023-02-01T14:27:53Z",
+                    "query_plan": null,
+                    "query": {
+                        "id": "fbe77428-c119-4ae8-8641-7b0f1f5090fb",
+                        "name": "IOT platform - turbine status",
+                        "description": null,
+                        "query": "select *, CASE WHEN prediction = 'ok' THEN 'Healthy' ELSE CONCAT('Faulty (', prediction, ')') END as status from dbdemos_lakehouse_iot.current_turbine_metrics where turbine_id= '{{ turbine_id }}'",
+                        "is_draft": false,
+                        "updated_at": "2023-02-01T14:27:53Z",
+                        "created_at": "2023-01-13T11:08:53Z",
+                        "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+                        "options": {
+                            "parent": "folders/2963708295339670",
+                            "apply_auto_limit": true,
+                            "folder_node_status": "ACTIVE",
+                            "folder_node_internal_name": "tree/4156927442284690",
+                            "visualization_control_order": [
+                                "turbine_id"
+                            ],
+                            "catalog": "hive_metastore",
+                            "schema": "dbdemos_lakehouse_iot",
+                            "parameters": [
+                                {
+                                    "queryId": "28ff3ff7-0322-4731-988f-6a39c6c303e5",
+                                    "title": "turbine_id",
+                                    "name": "turbine_id",
+                                    "type": "query",
+                                    "global": false,
+                                    "locals": [],
+                                    "urlPrefix": "p_",
+                                    "$$value": "60252b8d-2cd9-f51a-10c3-13bd6478a399"
+                                }
+                            ]
+                        },
+                        "version": 1,
+                        "tags": [],
+                        "is_safe": true,
+                        "user_id": 7718718868639865,
+                        "run_as_role": null,
+                        "run_as_service_principal_id": null,
+                        "schedule": null,
+                        "can_edit": true
+                    }
+                }
+            }
+        ],
+        "options": {
+            "parent": "folders/1435603956186994",
+            "run_as_role": "viewer",
+            "refresh_schedules": [],
+            "folder_node_status": "ACTIVE",
+            "folder_node_internal_name": "tree/4156927442284662"
+        },
+        "is_draft": false,
+        "tags": [
+            "field_demos",
+            "field_demos_manufacturing",
+            "wind_turbine"
+        ],
+        "updated_at": "2023-02-01T14:27:56Z",
+        "created_at": "2023-01-13T10:57:24Z",
+        "version": 14,
+        "color_palette": null,
+        "run_as_role": "viewer",
+        "run_as_service_principal_id": null,
+        "refresh_schedules": [],
+        "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+        "is_favorite": true,
+        "user": {
+            "id": 7718718868639865,
+            "name": "Jyotsna Bharadwaj",
+            "email": "jyotsna.bharadwaj@databricks.com",
+            "profile_image_url": "https://www.gravatar.com/avatar/df8a37ff75287d4aa4b1b713357e26c5?s=40&d=identicon",
+            "is_db_admin": false
+        },
+        "parent": "folders/1435603956186994",
+        "is_archived": false,
+        "can_edit": true,
+        "permission_tier": "CAN_MANAGE"
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "queries": [],
+    "id": "6f73dd1b-17b1-49d0-9a11-b3772a2c3357",
+    "dashboard": {
+        "id": "6f73dd1b-17b1-49d0-9a11-b3772a2c3357",
+        "slug": "dlt---retail-data-quality-stats",
+        "name": "DLT - Retail Data Quality Stats",
+        "user_id": 2277713728519058,
+        "dashboard_filters_enabled": false,
+        "widgets": [
+            {
+                "id": "621c562e-0747-414d-9264-b1f1bfc9cf43",
+                "width": 1,
+                "options": {
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 6,
+                        "sizeY": 4,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 1,
+                        "maxSizeY": 1000,
+                        "col": 0,
+                        "row": 0
+                    }
+                },
+                "dashboard_id": "6f73dd1b-17b1-49d0-9a11-b3772a2c3357",
+                "text": "# Retail ingestion quality tracker\nThis dashboard leverage the Delta Live Table expectation metrics to track our data quality over the ingestion pipeline.\n\nThe pipeline is incrementally consuming new data (each hour or in real time) and the dashboard is updated accordingly. Open notebook `02.1-Delta-Live-Table-Ingestion` to visualize the Delta Live Table pipeline.\n\nData has been prepared using a SQL query over the value from the `/system/events` table. Open `02.3-DLT-expectation-dashboard-data-prep` for more details.",
+                "updated_at": "2023-02-01T14:42:43Z",
+                "created_at": "2023-02-01T14:42:43Z"
+            },
+            {
+                "id": "8001f7dd-c69b-463e-8b62-9e1d8e8e2608",
+                "width": 1,
+                "options": {
+                    "isHidden": false,
+                    "position": {
+                        "autoHeight": false,
+                        "sizeX": 6,
+                        "sizeY": 1,
+                        "minSizeX": 1,
+                        "maxSizeX": 6,
+                        "minSizeY": 1,
+                        "maxSizeY": 1000,
+                        "col": 0,
+                        "row": 23
+                    }
+                },
+                "dashboard_id": "6f73dd1b-17b1-49d0-9a11-b3772a2c3357",
+                "text": "Field Demo dashboard. Please do not edit\n![tracking_img](https://www.google-analytics.com/collect?v=1&gtm=GTM-NKQ8TT7&tid=UA-163989034-1&cid=555&aip=1&t=event&ec=field_demos&ea=display&dp=%2F42_field_demos%2Fretail%2Fnotebook&dt=DASHBOARD_RETAIL_DLT_QUALITY)",
+                "updated_at": "2023-02-01T14:42:43Z",
+                "created_at": "2023-02-01T14:42:43Z"
+            }
+        ],
+        "options": {
+            "run_as_role": "viewer",
+            "refresh_schedules": [
+                {
+                    "id": "caeee496-e18c-4cb3-8045-221d3643ba20",
+                    "cron": "16 15 13 * * ?",
+                    "active": false,
+                    "job_id": "6df70cd0ac53f84c04038c374abbae389e910ae3",
+                    "data_source_id": null
+                }
+            ],
+            "schedule_failures": 0
+        },
+        "is_draft": false,
+        "tags": [
+            "field_demos",
+            "field_demos_retail",
+            "dlt_data_quality"
+        ],
+        "updated_at": "2023-02-01T14:42:43Z",
+        "created_at": "2021-10-21T08:09:27Z",
+        "version": 1068,
+        "color_palette": null,
+        "run_as_role": "viewer",
+        "run_as_service_principal_id": null,
+        "refresh_schedules": [
+            {
+                "id": "caeee496-e18c-4cb3-8045-221d3643ba20",
+                "cron": "16 15 13 * * ?",
+                "active": false,
+                "job_id": "6df70cd0ac53f84c04038c374abbae389e910ae3",
+                "data_source_id": null
+            }
+        ],
+        "data_source_id": "cef03be2-9a33-425a-bd0d-6ce0127aff32",
+        "is_favorite": true,
+        "user": {
+            "id": 2277713728519058,
+            "name": "julia.wang@databricks.com",
+            "email": "julia.wang@databricks.com",
+            "profile_image_url": "https://www.gravatar.com/avatar/eead862c14c4f48907dcc5ca7d6e179a?s=40&d=identicon",
+            "is_db_admin": false
+        },
+        "is_archived": false,
+        "can_edit": true,
+        "permission_tier": "CAN_EDIT"
+    }
+}
