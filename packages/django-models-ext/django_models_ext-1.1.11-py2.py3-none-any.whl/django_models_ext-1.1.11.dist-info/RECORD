@@ -1,0 +1,9 @@
+django_models_ext/__init__.py,sha256=A1E9T-9faZL4KV5TgGUhkTNxdWirkQBqnRYe-UlJTg4,351
+django_models_ext/basemodels.py,sha256=SafmEDE9ue9T31C9qJRxmt8G89b6QAmLR1fDsGo2AqA,819
+django_models_ext/fileext.py,sha256=0yjycmZGeOxJ8PNd51Rg1aYNjP2YTVW9ZP83610-zhw,788
+django_models_ext/provincemodels.py,sha256=pC4GJ_5PkX6MVj4M49YJc4cJLwmQSmb1Te8Ga4udTss,10684
+django_models_ext/queryext.py,sha256=9XL9XMMLM74XgHoHB6Y5mtMgkfhbBJ8DkxGgUqI5IVM,495
+django_models_ext-1.1.11.dist-info/METADATA,sha256=GL0FdTFBbTyCtSJ0sXB7pT7TNZf9ZnORqjpESX16uKc,1091
+django_models_ext-1.1.11.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
+django_models_ext-1.1.11.dist-info/top_level.txt,sha256=ASa4s8LdU9gNgKZSpC5h8C5M8MDEuk8_oOGcuawbJx8,18
+django_models_ext-1.1.11.dist-info/RECORD,,
