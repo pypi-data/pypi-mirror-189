@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling","scanpy","numpy","sklearn"]
+build-backend = "hatchling.build"
+[project]
+name = "nsforest"
+version = "3.9.2"
+authors = [
+  { name="Brian Aevermann", email="baeverma@jcvi.org" },
+  { name="Richard Scheuermann", email="RScheuermann@jcvi.org"}
+]
+description = "Necessary and Sufficient Forest is a method that takes cluster results from single cell/nuclei RNAseq experiments and generates lists of minimal markers needed to define each cell type cluster."
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ttl074/NSForest"
+
