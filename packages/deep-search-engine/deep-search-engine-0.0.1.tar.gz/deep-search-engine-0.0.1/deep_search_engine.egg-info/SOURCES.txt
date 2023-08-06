@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+DeepSearch/DeepSearch.py
+DeepSearch/ModelLoader.py
+DeepSearch/__init__.py
+deep_search_engine.egg-info/PKG-INFO
+deep_search_engine.egg-info/SOURCES.txt
+deep_search_engine.egg-info/dependency_links.txt
+deep_search_engine.egg-info/requires.txt
+deep_search_engine.egg-info/top_level.txt
