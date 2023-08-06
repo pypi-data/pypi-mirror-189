@@ -1,0 +1,23 @@
+name: equal-lib CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v4.5.0
+      - name: Install build/publish dependencies
+        run: pip install build twine virtualenv
+      - name: Build files
+        run: python3 -m build
+      - name: Publish with twine
+        run: python3 -m twine upload dist/*
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_AUTH_TOKEN }}
