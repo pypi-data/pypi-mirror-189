@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: fate-client
+Version: 2.0.0a0
+Summary: Clients for FATE, supply pipeline this version
+Home-page: https://fate.fedai.org/
+Author: FederatedAI
+Author-email: contact@FedAI.org
+License: UNKNOWN
+Description: Clients for FATE, supply pipeline this version
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: fate

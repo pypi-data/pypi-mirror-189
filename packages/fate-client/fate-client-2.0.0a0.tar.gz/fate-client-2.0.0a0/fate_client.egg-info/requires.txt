@@ -1,0 +1,14 @@
+click
+poetry
+pandas
+psutil
+requests
+requests_toolbelt
+ruamel.yaml
+setuptools
+networkx
+pydantic
+ml_metadata
+
+[fate]
+pyfate
