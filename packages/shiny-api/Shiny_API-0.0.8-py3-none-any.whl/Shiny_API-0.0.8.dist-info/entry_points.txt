@@ -1,0 +1,3 @@
+[console_scripts]
+shiny_api = shiny_api.main:main
+shiny_serial_camera = shiny_api.serial_camera:main
