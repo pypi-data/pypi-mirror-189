@@ -1,0 +1,5 @@
+numexpr
+numpy
+pandas
+regex
+ujson
