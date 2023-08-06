@@ -1,0 +1,12 @@
+evalipy/__init__.py,sha256=4o4D-hamBGz_KX5AwaV1-D_WUOD8n1aqa9uqt2Vg5i8,199
+evalipy/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+evalipy/comparator.py,sha256=Vy4oLGU3TwmP-JmF5ttVr8k4Vx6zVelkk7JdlZo05cw,1012
+evalipy/metrics.py,sha256=exM8pK9I6lHxrlGWS5vt1Ol-ga14rbjZ2NIToR4xyIk,2698
+evalipy/model.py,sha256=Rh6ds_-GG1WR-COyZmSZGZUWV-Zz05AroCP6bTX0T3E,1386
+evalipy/report.py,sha256=sVwMmw9l_oqdf9ytCpCVx5AI_FKtcsBHUaeScqGqGTI,1730
+evalipy-0.0.5.dist-info/LICENSE,sha256=3cVjX7cd6i56Pm3CZQOHqpNNjF9RFgCAltD908XIi7Q,1523
+evalipy-0.0.5.dist-info/METADATA,sha256=btmGqEx15nUD0LOLh4GHYs3q9sZQqrnoqyDBjWycOjY,3364
+evalipy-0.0.5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+evalipy-0.0.5.dist-info/entry_points.txt,sha256=hk3cO8KRVafDp4vLm_IFYOPUxA-8BdAHqcrRqYbAZYM,47
+evalipy-0.0.5.dist-info/top_level.txt,sha256=KOyaO-khb5p_oE3kogk6uml7dzisxahaw7sdTQsSHcg,8
+evalipy-0.0.5.dist-info/RECORD,,

@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: evalipy
+Version: 0.0.5
+Summary: Evalipy is a framework for evaluating & comparing machine learning models.
+Author-email: Mehrdad Heshmat <mehrddy@gmail.com>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2023, MR-EIGHT
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Homepage, https://github.com/evalipy/evalipy/
+Keywords: ML,Machine Learning,model,evaluation,framework
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: joblib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+
+<h1 align="center">EvaliPy </h1>
+<br>
+
+**EvaliPy** is an evaluation framework for machine learning Models.
+
+The project was started in 2023. It's a package for evaluating different machine learning models and comparing them.  
+  
+It's currently maintained by me :)
+
+## Dependencies
+* Python (>= 3.5)
+* NumPy (>= 1.17.3)
+* joblib (>= 1.1.1)
+* pandas (>= 1.5.0)
+* matplotlib (>= 3.6.2)
+* scikit-learn (>= 1.2.0)
+* scipy (>= 1.10.0)
+* seaborn (>= 0.12.2)
+
+## Installation
+```
+pip install evalipy
+```
+
+
+## Usage
+### Import
+```python
+from evalipy import *
+```
+### Report
+```python
+r = report.Report(model=model.Model(clf), actual_data=y, predicted_data=y_pred_1)
+*(optional)* print(r)
+```
+### Compare
+```python
+...
+tree_model.fit(X, y)
+linear_model.fit(X, y)
+...
+
+comparator = comparator.Comparator(models=[linear_model, tree_model], x=X, actual_data=y)
+print(comparator)
+```
+
+
+## Authors
+* **MR-EIGHT** (Mehrdad Heshmat)
