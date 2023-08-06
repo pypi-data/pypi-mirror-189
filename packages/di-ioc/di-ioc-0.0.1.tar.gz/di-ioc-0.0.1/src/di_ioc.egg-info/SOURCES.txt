@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/di_ioc/__init__.py
+src/di_ioc/abstraction.py
+src/di_ioc/container.py
+src/di_ioc/lifetimes.py
+src/di_ioc/scope.py
+src/di_ioc.egg-info/PKG-INFO
+src/di_ioc.egg-info/SOURCES.txt
+src/di_ioc.egg-info/dependency_links.txt
+src/di_ioc.egg-info/top_level.txt
