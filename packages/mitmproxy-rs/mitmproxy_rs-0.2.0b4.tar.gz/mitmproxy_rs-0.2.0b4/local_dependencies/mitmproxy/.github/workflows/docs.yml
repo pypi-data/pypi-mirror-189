@@ -1,0 +1,69 @@
+name: docs
+
+on:
+  push:
+    branches:
+      - main
+    pull_request:
+
+# security: restrict permissions for CI jobs.
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Build the documentation and upload the static HTML files as an artifact.
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+      - name: Install maturin[zig] from PyPI
+        uses: install-pinned/maturin-with-zig@19aca2b8219fdafc14ee8dedb66d0bba604187de
+      - name: Install mypy from PyPI
+        uses: install-pinned/mypy@3945a3392555da2be6861c1522985ccff7d6fca4
+      - name: Install pdoc from PyPI
+        uses: install-pinned/pdoc@6e29ca2a90375a8b666e3da0ef763bd6688727fc
+
+      # workaround for https://github.com/rust-lang/cargo/issues/9096
+      - run: cargo build --package windows-redirector
+
+      - run: maturin build
+        working-directory: ./ffi
+      - run: pip install --no-index --find-links target/wheels/ mitmproxy_rs
+
+      - run: stubtest --allowlist ffi/stubtest-allowlist.txt mitmproxy_rs
+
+      - run: pdoc -o docs/ mitmproxy_rs
+
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: docs/
+
+  # Deploy the artifact to GitHub pages.
+  # This is a separate job so that only actions/deploy-pages has the necessary permissions.
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v1
