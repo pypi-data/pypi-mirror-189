@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+NanoAutoGrad/__init__.py
+NanoAutoGrad/engine.py
+NanoAutoGrad/network.py
+NanoAutoGrad.egg-info/PKG-INFO
+NanoAutoGrad.egg-info/SOURCES.txt
+NanoAutoGrad.egg-info/dependency_links.txt
+NanoAutoGrad.egg-info/top_level.txt
