@@ -1,0 +1,9 @@
+sleap_anipose/__init__.py,sha256=OQsMpME3yfPzrmqKTKyMi8NEBZI2DjoJ9J0c4Py6Qig,310
+sleap_anipose/calibration.py,sha256=dQgWc4cd0LRKQL2J-jK3BIoeHFRP6ytBH1V_hHHcKJ0,23044
+sleap_anipose/triangulation.py,sha256=mWman6o12yrOVypDywt6uDkMDJBPtH2r1ldAN9GfFOM,15765
+sleap_anipose-0.1.5.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sleap_anipose-0.1.5.dist-info/METADATA,sha256=arx4qVxbQc9O9jnPlnffas9SxwxZ7ZQiIdCCjEYES0I,47440
+sleap_anipose-0.1.5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+sleap_anipose-0.1.5.dist-info/entry_points.txt,sha256=tBKkPWoPH6zHxjmdRRfRkdxhSuusz-OaYlUbxaC45lA,258
+sleap_anipose-0.1.5.dist-info/top_level.txt,sha256=tYlinljYJues5e7nUuFOb5B514t70h5KTMk54uG9-BA,14
+sleap_anipose-0.1.5.dist-info/RECORD,,
