@@ -1,0 +1,6 @@
+qcloud-python-sts
+alibabacloud_sts20150401
+pydantic
+oss2
+cos-python-sdk-v5
+python-dotenv

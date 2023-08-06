@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "sts-credentials"
+version = "0.0.1"
+authors = [{ name = "sunfkny", email = "sunfkny@gmail.com" }]
+description = "get storage services sts credentials tools"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+  'qcloud-python-sts>=3,<4',
+  'alibabacloud_sts20150401>=1,<2',
+  'pydantic',
+]
+classifiers = [
+  'Programming Language :: Python',
+  'Programming Language :: Python :: 3',
+  'Programming Language :: Python :: 3 :: Only',
+  'Programming Language :: Python :: 3.7',
+  'Programming Language :: Python :: 3.8',
+  'Programming Language :: Python :: 3.9',
+  'Programming Language :: Python :: 3.10',
+  'Programming Language :: Python :: 3.11',
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Utilities",
+  "Topic :: Software Development",
+  "Typing :: Typed",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/sunfkny/sts-credentials"
+"Bug Tracker" = "https://github.com/sunfkny/sts-credentials/issues"
