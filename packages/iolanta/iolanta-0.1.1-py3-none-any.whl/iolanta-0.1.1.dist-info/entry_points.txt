@@ -1,0 +1,6 @@
+[console_scripts]
+iolanta=iolanta.cli:app
+
+[iolanta.plugins]
+record=iolanta_record:IolantaRecord
+
