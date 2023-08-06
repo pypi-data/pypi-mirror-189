@@ -1,0 +1,5 @@
+setup.py
+perf_trace_context.egg-info/PKG-INFO
+perf_trace_context.egg-info/SOURCES.txt
+perf_trace_context.egg-info/dependency_links.txt
+perf_trace_context.egg-info/top_level.txt
