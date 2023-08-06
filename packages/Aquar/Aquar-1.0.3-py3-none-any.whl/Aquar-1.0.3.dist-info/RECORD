@@ -1,0 +1,15 @@
+Aquar/BaseStrategy.py,sha256=PwtbHe7-vgdGeFPawNHfXUA_nCqI2GyxQHI4QfDW_nk,15415
+Aquar/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Aquar/calc_utils.py,sha256=ntJDp0zHASuuMQR2VgWMTyJXl8lb2SximkSWcPquhMs,20765
+Aquar/dataEngine.py,sha256=F0M8BnWa-DvMtXsWodhLN6fvDGzkMkyLOl3Zs8fTdcM,715
+Aquar/dataLoaderDaily.py,sha256=wa0An9LEFHkwFrd9PxgjNqa09qbKCiNlrwxMTXHYkj8,8401
+Aquar/log.py,sha256=W7E-aQxDFzrLd0bbbgOOFtkrnwTj5XQEvJn_HWXAq-c,2428
+Aquar/mysqlConnector.py,sha256=PW8ZKkWl88M26R758NKTQGAEG9F653r5WAic_OXJ8bA,3549
+Aquar/plotReturn.py,sha256=sQi3dogS5mB-g-T2gfmSElwOppuKDao5H_qqwV7S7iM,4886
+Aquar/timeManager.py,sha256=wKItA22jTxJ_rv9kNWrlWhSVq-xDa4jWrboXoBjreUU,3144
+Aquar/utils.py,sha256=I1B0JHWkdqkgox9tXhLx3Wv9OWYiO4foRs_omNnbRTY,3867
+Aquar-1.0.3.dist-info/LICENSE.txt,sha256=ukEi8E0PKq1dQGTXHUflg3rppLymwAhr7il9x-0nPgg,1062
+Aquar-1.0.3.dist-info/METADATA,sha256=Rt9vlCvvPUc5YIyUVNzYpEZ5OgZuB8eoZZ0MnYsPpHQ,811
+Aquar-1.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+Aquar-1.0.3.dist-info/top_level.txt,sha256=rcVaacZwmyBmWDWG3TLWOyA9M7ZAB3m2kSp_IAfC9wI,6
+Aquar-1.0.3.dist-info/RECORD,,
