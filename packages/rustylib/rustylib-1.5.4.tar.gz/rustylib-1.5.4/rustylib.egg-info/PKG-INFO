@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: rustylib
+Version: 1.5.4
+Summary: A comprehensive utility library for Python, featuring modules for color manipulation, mathematical operations, random number generation, HTTP requests, mathematics, and a versatile utility module. Streamline your workflow with this all-in-one toolbox.
+Home-page: https://github.com/ZeyaTsu/rusty
+Author: ZeyaTsu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Rusty 
+## Rusty or rustylib is a useful python library containing tools such as HTTP requests, mathematics, and more.
+
+* You can find the documentation here : https://github.com/ZeyaTsu/rusty/tree/main/examples
