@@ -1,0 +1,9 @@
+pyproject.toml
+setup.cfg
+setup.py
+src/mevo/__init__.py
+src/mevo.egg-info/PKG-INFO
+src/mevo.egg-info/SOURCES.txt
+src/mevo.egg-info/dependency_links.txt
+src/mevo.egg-info/requires.txt
+src/mevo.egg-info/top_level.txt

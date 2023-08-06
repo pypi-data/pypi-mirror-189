@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mevo
+Version: 0.0.0
+Summary: evolutionary algorithms in python
+Home-page: https://github.com/MorvanZhou/mevo
+Author: MorvanZhou
+Author-email: morvanzhou@hotmail.com
+Project-URL: Bug Tracker, https://github.com/MorvanZhou/mevo/issues
+Project-URL: Source, https://github.com/MorvanZhou/mevo
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: build
+Provides-Extra: test
