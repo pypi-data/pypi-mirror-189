@@ -1,0 +1,5 @@
+reactivex~=4.0
+cyclotron~=2.0
+
+[test]
+pytest
