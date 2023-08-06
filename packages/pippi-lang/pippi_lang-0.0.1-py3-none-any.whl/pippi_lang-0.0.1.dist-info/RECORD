@@ -1,0 +1,12 @@
+pippi/__init__.py,sha256=WURZH_W1Y7__lix3-VMWibMlvHtOrAcAaOBNBQ1enQA,183
+pippi/text_cleaning.py,sha256=Ypp7NltCQmlP60bT5iClXJQVEWZewD46miHyvdFr_7E,4575
+pippi/text_transformation.py,sha256=JFPmO3H_n0AXnuiFFO-HA8aU2KtgJlzko-dqNZEDtRc,6775
+pippi/utils.py,sha256=rF4YDJvZQ1LYsgMG3_OsiEApSa0ZaZmFZ3Y7TmU8vTw,509
+src/__init__.py,sha256=HVtecSgy44UM317Vb-GbdbxTFUPb11-3sWIdDOo0BpQ,141
+src/text_cleaning.py,sha256=3f-CHsKQyYze1S3_TUV2FKNEeuTXEDeQsHADTfNoozU,4680
+src/text_transformation.py,sha256=JFPmO3H_n0AXnuiFFO-HA8aU2KtgJlzko-dqNZEDtRc,6775
+src/utils.py,sha256=xo5K_l82BGonT2K6Zy_-LLNoOQ_62Dpkyugyi9Rh0B8,480
+pippi_lang-0.0.1.dist-info/METADATA,sha256=1Bih2d1t6yjIXNumBR6bVTI-smUzRLwbSFtOP68IvdY,2012
+pippi_lang-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+pippi_lang-0.0.1.dist-info/top_level.txt,sha256=dDj_85a72o6zJ5ElwYbfG0_EO7DkajRWPhc4oRaXyZM,6
+pippi_lang-0.0.1.dist-info/RECORD,,
