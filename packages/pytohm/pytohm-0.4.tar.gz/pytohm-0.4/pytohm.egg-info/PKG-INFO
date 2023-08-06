@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pytohm
+Version: 0.4
+Summary: Pytohm is a package with Ohm's Law functions, making it easier to work with Ohm's Law in Python.
+Home-page: https://github.com/user/Yvnee
+Download-URL: https://github.com/Yvnee/Pytohm/archive/refs/tags/0.4.tar.gz
+Author: Yvnee
+Author-email: yeseirav@gmail.com
+License: MIT
+Keywords: OhmsLaw,Ohm,Resistance
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE
