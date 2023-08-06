@@ -1,0 +1,29 @@
+[project]
+name = "pyctem"
+version = "0.0.1"
+authors = [
+  { name="Tore Niermann", email="tore.niermann@tu-berlin.de" },
+]
+description = "A Python based toolset for computational S/TEM"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+  "scipy",
+]
+
+[project.urls]
+homepage = "https://example.com"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
