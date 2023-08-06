@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: quantgov
+Version: 0.6.4
+Summary: A Policy Analytics Framework
+Home-page: https://github.com/QuantGov/quantgov
+Author: QuantGov
+Author-email: info@quantgov.org
+License: MIT
+Keywords: quantgov economics policy government machine learning
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: decorator
+Requires-Dist: joblib
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: textstat
+Provides-Extra: nlp
+Requires-Dist: textblob ; extra == 'nlp'
+Requires-Dist: nltk ; extra == 'nlp'
+Provides-Extra: s3driver
+Requires-Dist: sqlalchemy ; extra == 's3driver'
+Requires-Dist: boto3 ; extra == 's3driver'
+Provides-Extra: testing
+Requires-Dist: pytest-flake8 ; extra == 'testing'
+
+QuantGov
+========
+
+========== ====================
+Branch       Build Status
+========== ====================
+**Master** |Master Test Status|
+**Dev**    |Dev Test Status|
+========== ====================
+
+The QuantGov library is a companion to the `QuantGov Platform
+<http://www.quantgov.org>`_. It provides an easy way to start a new project
+using the ``quantgov start`` set of commands, and also provides a set of
+classes and functions often used in the QuantGov framework.
+
+To install the library, use ``pip install quantgov``.
+
+A tutorial of the library is available at https://quantgov.github.io/quantgov-tutorial/pages/intro.html.
+
+.. |Master Test Status| image:: https://travis-ci.org/QuantGov/quantgov.svg?branch=master
+    :target: https://travis-ci.org/QuantGov/quantgov
+
+.. |Dev Test Status| image:: https://travis-ci.org/QuantGov/quantgov.svg?branch=dev
+    :target: https://travis-ci.org/QuantGov/quantgov
+
+
+How to Contribute
+-----------------
+
+#. Check for open issues or open a fresh issue to start a discussion around a feature idea or a bug.
+#. Fork `the repository`_ on GitHub to start making your changes to the **dev** branch (or branch off of it).
+#. Write a test which shows that the bug was fixed or that the feature works as expected.
+#. Send a pull request and bug the maintainer until it gets merged and published. Make sure to add yourself to AUTHORS_.
+
+.. _`the repository`: http://github.com/quantgov/quantov
+.. _AUTHORS: https://github.com/quantgov/quantgov/blob/master/AUTHORS.rst
