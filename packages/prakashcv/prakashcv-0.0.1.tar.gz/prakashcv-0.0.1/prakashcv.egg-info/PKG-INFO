@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: prakashcv
+Version: 0.0.1
+Summary: Computer Vision Helping Library
+Author: Krishna Prakash
+Author-email: krishnaprakash603@gmail.com
+License: MIT
+Keywords: ComputerVision,HandTracking,FaceMesh
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE.txt

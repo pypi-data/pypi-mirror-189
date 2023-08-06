@@ -1,0 +1,2 @@
+from prakashcv.HandTrackingModule import HandDetector
+from prakashcv.FaceMeshModule import FaceMeshDetector

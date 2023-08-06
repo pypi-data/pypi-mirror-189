@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+prakashcv/FaceMeshModule.py
+prakashcv/HandTrackingModule.py
+prakashcv/__init__.py
+prakashcv.egg-info/PKG-INFO
+prakashcv.egg-info/SOURCES.txt
+prakashcv.egg-info/dependency_links.txt
+prakashcv.egg-info/requires.txt
+prakashcv.egg-info/top_level.txt
