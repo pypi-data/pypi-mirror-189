@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+src/__init__.py
+src/main.py
+src/request.py
+src/clashofclans_api.egg-info/PKG-INFO
+src/clashofclans_api.egg-info/SOURCES.txt
+src/clashofclans_api.egg-info/dependency_links.txt
+src/clashofclans_api.egg-info/requires.txt
+src/clashofclans_api.egg-info/top_level.txt
