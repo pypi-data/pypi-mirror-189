@@ -1,0 +1,3 @@
+[console_scripts]
+km3dia_generate_opt = km3dia.cli.generate_opt:main
+
