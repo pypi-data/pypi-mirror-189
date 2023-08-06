@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ad-nacos
+Version: 0.0.4
+Summary: a package for nacos
+Home-page: UNKNOWN
+Author: xadocker
+Author-email: 1793360097@qq.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+### 这是一个连接nacos的python包
+
+
+
