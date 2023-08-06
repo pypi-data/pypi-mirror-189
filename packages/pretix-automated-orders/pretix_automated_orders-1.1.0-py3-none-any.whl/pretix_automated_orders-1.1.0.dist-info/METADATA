@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pretix-automated-orders
+Version: 1.1.0
+Summary: Plugin for Pretix software that allows automated orders.
+Home-page: https://evolutio.pt/
+Author: Joao Pires
+Author-email: jpires@evolutio.pt
+License: Apache
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.6
+Requires-Dist: Django (==3.2.*)
+
