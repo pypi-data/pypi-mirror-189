@@ -1,0 +1,217 @@
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.0.1"
+tag_format = "$version"
+version_files = [
+    "mkdocs_simple/_version.py",
+    "pyproject.toml:version"
+]
+bump_message = "chore(release): version $current_version → $new_version"
+update_changelog_on_bump = true
+
+[tool.poetry]
+name = "mkdocs-simple"
+version = "0.0.1"
+description = ""
+authors = ["Danil Akhtarov <daxartio@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/daxartio/mkdocs-simple"
+homepage = "https://pypi.org/project/mkdocs-simple"
+keywords = []
+
+[tool.poetry.scripts]
+mkdocs-simple = 'mkdocs_simple.cli.app:run'
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+codecov = "*"
+mypy = "*"
+poethepoet = "*"
+pytest = "*"
+pytest-asyncio = "*"
+pytest-cov = "*"
+pytest-deadfixtures = "*"
+pytest-mock = "*"
+ruff = "*"
+toml = "*"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "*"
+mkdocs-material = "*"
+
+[tool.poetry.group.git.dependencies]
+commitizen = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.env]
+CODE = "tests mkdocs_simple"
+
+[tool.poe.tasks.install-poetry]
+help = "Install poetry"
+cmd = "pip install poetry"
+
+[tool.poe.tasks.install]
+help = "Install dependencies"
+cmd = "poetry install"
+
+[tool.poe.tasks.install-docs]
+help = "Install docs dependencies"
+cmd = "poetry install --only docs"
+
+[tool.poe.tasks.all]
+help = "Run format lint test"
+sequence = ["format", "lint", "test"]
+default_item_type = "ref"
+
+[tool.poe.tasks.publish]
+help = "Publish package"
+cmd = "poetry publish --build --no-interaction --username=${pypi_username} --password=${pypi_password}"
+args = ["pypi_username", "pypi_password"]
+
+[tool.poe.tasks.test]
+help = "Test with coverage"
+cmd = "pytest --cov=./"
+
+[tool.poe.tasks.test-fast]
+help = "Test until error"
+cmd = "pytest --exitfirst"
+
+[tool.poe.tasks.test-failed]
+help = "Test failed"
+cmd = "pytest --last-failed"
+
+[tool.poe.tasks.test-report]
+help = "Report testing"
+sequence = [
+    {cmd = "pytest --cov --cov-report html"},
+    {cmd = "python -m webbrowser 'htmlcov/index.html'"},
+]
+
+[tool.poe.tasks.lint]
+help = "Check code"
+sequence = [
+    {cmd = "ruff ${CODE}"},
+    {cmd = "black --check ${CODE}"},
+    {cmd = "pytest --dead-fixtures --dup-fixtures"},
+    {cmd = "mypy ${CODE}"},
+]
+
+[tool.poe.tasks.format]
+help = "Formatting code"
+sequence = [
+	{cmd = "ruff --fix ${CODE}"},
+	{cmd = "black ${CODE}"},
+]
+
+[tool.poe.tasks.docs]
+help = "Build docs"
+cmd = "mkdocs build -s -v"
+
+[tool.poe.tasks.docs-serve]
+help = "Serve docs"
+cmd = "mkdocs serve"
+
+[tool.poe.tasks.bump]
+help = "Bump version (commit and tag)"
+cmd = "cz bump"
+
+[tool.poe.tasks.clean]
+help = "Clean"
+sequence = [
+	{cmd = "rm -rf site || true"},
+	{cmd = "rm -rf dist || true"},
+	{cmd = "rm -rf htmlcov || true"},
+]
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+no_implicit_optional = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+
+[tool.coverage.run]
+omit = ["tests/*", "**/__main__.py", "**/.venv/*", "**/site-packages/*"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 100
+
+[tool.pytest.ini_options]
+asyncio_mode = "strict"
+addopts = "--strict-markers --showlocals --verbosity 2"
+log_level = "DEBUG"
+
+[tool.ruff]
+select = ["F",
+    "E",
+    "W",
+    "C90",
+    "I",
+    "N",
+    "D",
+    # "UP",
+    "YTT",
+    # "ANN",
+    "S",
+    "BLE",
+    # "FBT",
+    "B",
+    "A",
+    "COM",
+    "C4",
+    "DTZ",
+    "T10",
+    "EM",
+    "EXE",
+    "ISC",
+    "ICN",
+    "G",
+    "INP",
+    "PIE",
+    "T20",
+    "PT",
+    "Q",
+    "RET",
+    "SIM",
+    "TID",
+    "TCH",
+    "ARG",
+    "PTH",
+    "ERA",
+    "PD",
+    # "PGH",
+    "PL",
+    "TRY",
+    "RSE",
+    "RUF",
+]
+ignore = [
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D106",
+    "D107",
+    "D203",
+    "D213",
+    "S101",
+]
+exclude = []
