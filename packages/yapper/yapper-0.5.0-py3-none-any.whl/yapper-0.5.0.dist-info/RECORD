@@ -1,0 +1,12 @@
+yapper/__init__.py,sha256=HN1FPspR9xnJ1Bqjd-KYRz-aXVn_2wPL9xa3v1PkD80,390
+yapper/cli.py,sha256=kPTxxrPf6_dfJXIbz1Chimpn1-2OPqgdzvawUNdSh7g,698
+yapper/handler.py,sha256=d21zhiIJYyzqih1bTKwx9q3LS6J-0xWRTmyk5_oK5hM,5094
+yapper/parser.py,sha256=UBni39mf7gWeDG8bTaH6naxiHKuEja5mUmZVxVE1vY8,16198
+yapper/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yapper/stubs/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yapper-0.5.0.dist-info/LICENSE.txt,sha256=ira5qpvLlriaJVEIpztjj3APUJWSE3UFKIk4vKPVTW0,1075
+yapper-0.5.0.dist-info/METADATA,sha256=xkVmLdRk4x0tKFLeLmDEVn94xi-Coe9KAB5-Pued5Lo,3444
+yapper-0.5.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+yapper-0.5.0.dist-info/entry_points.txt,sha256=Vq_ccLShY6x03Lv5Ik2e7KRHPKOlHpae-ys48Ocu1QI,48
+yapper-0.5.0.dist-info/top_level.txt,sha256=GgW0DZpc8bz7eMORwMFS8U8ScRDQdpY3XqpY5F6fob8,7
+yapper-0.5.0.dist-info/RECORD,,
