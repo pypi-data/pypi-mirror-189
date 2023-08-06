@@ -1,0 +1,8 @@
+README.md
+setup.py
+calculator/__init__.py
+calculator/simpleComplexCalculator.py
+simple_complex_calculator_AlixD_AdminCo.egg-info/PKG-INFO
+simple_complex_calculator_AlixD_AdminCo.egg-info/SOURCES.txt
+simple_complex_calculator_AlixD_AdminCo.egg-info/dependency_links.txt
+simple_complex_calculator_AlixD_AdminCo.egg-info/top_level.txt
