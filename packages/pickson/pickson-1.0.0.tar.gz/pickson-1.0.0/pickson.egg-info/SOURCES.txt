@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pickson/__init__.py
+pickson/pickson.py
+pickson.egg-info/PKG-INFO
+pickson.egg-info/SOURCES.txt
+pickson.egg-info/dependency_links.txt
+pickson.egg-info/requires.txt
+pickson.egg-info/top_level.txt
