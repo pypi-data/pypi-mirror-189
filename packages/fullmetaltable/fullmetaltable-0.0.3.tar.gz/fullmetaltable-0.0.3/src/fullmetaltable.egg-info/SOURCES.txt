@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/fullmetaltable/__init__.py
+src/fullmetaltable/records.py
+src/fullmetaltable/sqltable.py
+src/fullmetaltable/table.py
+src/fullmetaltable.egg-info/PKG-INFO
+src/fullmetaltable.egg-info/SOURCES.txt
+src/fullmetaltable.egg-info/dependency_links.txt
+src/fullmetaltable.egg-info/not-zip-safe
+src/fullmetaltable.egg-info/requires.txt
+src/fullmetaltable.egg-info/top_level.txt
