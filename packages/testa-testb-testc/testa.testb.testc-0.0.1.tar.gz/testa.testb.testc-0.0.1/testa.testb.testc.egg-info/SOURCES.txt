@@ -1,0 +1,5 @@
+setup.py
+testa.testb.testc.egg-info/PKG-INFO
+testa.testb.testc.egg-info/SOURCES.txt
+testa.testb.testc.egg-info/dependency_links.txt
+testa.testb.testc.egg-info/top_level.txt
