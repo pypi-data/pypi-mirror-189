@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: qiskit-symbolic
+Version: 0.0.1
+Home-page: https://github.com/SimoneGasperini/qiskit-symbolic
+Author: SimoneGasperini
+Author-email: simone.gasperini4@unibo.it
+License: Apache 2.0
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: qiskit
+Requires-Dist: pytest
+Requires-Dist: hypothesis
+
