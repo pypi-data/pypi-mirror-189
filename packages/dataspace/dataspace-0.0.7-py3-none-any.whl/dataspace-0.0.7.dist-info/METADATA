@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: dataspace
+Version: 0.0.7
+Summary: Data wrangling and visualization
+Home-page: https://github.com/synw/dataspace
+Download-URL: https://github.com/synw/dataspace/releases/tag/0.0.7
+Author: synw
+Author-email: synwe@yahoo.com
+Keywords: data_visualization,data_exploration,charts
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: altair
+Requires-Dist: altair-saver
+Requires-Dist: holoviews
+Requires-Dist: fpdf2
+
+# Dataspace
+
+[![pub package](https://img.shields.io/pypi/v/dataspace)](https://pypi.org/project/dataspace/)
+
+A simple api to explore, clean, transform and visualize data. This api is:
+
+- **Minimalistic**: short names, simple functionalites, minimal parameters
+- **Pragmatic**: focuses on raw efficiency rather than idiomatic code
+- **Simple stupid**: keep it easy to understand for both code and api
+
+## Features
+
+- **Explore data**: describe, search and visualize raw data
+- **Clean and transform data**: select, filter, normalize and reshape data
+- **Visualize data**: many kind of charts
+
+Check the [documentation](https://synw.github.io/dataspace/)
+
+## Install
+
+```
+pip install dataspace
+```
+
+## Example notebooks
+
+[Example notebooks](https://github.com/synw/dataspace_notebooks) are available
+
+
