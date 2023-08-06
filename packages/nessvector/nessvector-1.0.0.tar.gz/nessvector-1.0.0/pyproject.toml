@@ -1,0 +1,84 @@
+[tool.poetry]
+# https://python-poetry.org/docs/pyproject/
+# https://github.com/python-poetry/poetry/blob/master/pyproject.toml
+name = "nessvector"
+version = "1.0.0"
+description = "Alias that redirects to nessvec"
+authors = [
+    "Hobson Lane <hobson@tangibleai.com>",
+    "Maria Dyshel <maria@tangibleai.com>",
+    "Leo Hepis <leo@leohepis.com>",
+    "Geoffrey Marshal",
+    "Sylvia Lee",
+    "Winnie Yeung @dcvionwinnie",
+    "Mohammed Dala Ali <mms.dala@gmail.com>",
+    "Alex Rosengarten @alxrsngrtn",
+    "Jose Robins @jorobins",
+    ]
+license = "AGPL3"
+readme = "README.md"
+homepage = "https://gitlab.com/tangibleai/nessvec"
+repository = "https://gitlab.com/tangibleai/nessvec"
+documentation = "https://gitlab.com/tangibleai/nessvec"
+include = [
+    "data/datasets.yml",
+    "data/constants/nltk_stopwords_english.json",
+    "data/*",
+    "data/constants/*",
+    ]
+
+# https://python-poetry.org/docs/pyproject/#keywords
+keywords = ['NLP', 'Natural Language Processing', 'Virtual Assistant', 'chatbot', 'Text Processing', 'Machine Learning', 'Text Mining', 'Deep Learning']
+# https://pypi.org/classifiers/
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: GNU Affero General Public License v3",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Text Processing :: Linguistic",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+]
+
+[tool.poetry.build]
+generate-setup-file = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+# https://python-poetry.org/docs/pyproject/#scripts
+"nessvec" = "nessvec.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.7,<3.10"
+nessvec = "^0.0.18"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.2"
+pytest-cov = "^3.0"
+
+[tool.black]
+# https://github.com/psf/black
+line-length = 80
+target-version = ["py37"]
+
+[tool.isort]
+# https://github.com/timothycrosley/isort/
+py_version = 37
+profile = "black"
+force_single_line = true
+combine_as_imports = true
+lines_between_types = 1
+lines_after_imports = 2
+src_paths = ["src", "tests"]
+extend_skip = ["setup.py"]
+known_typing = "typing,types,typing_extensions,mypy,mypy_extensions"
+sections = "FUTURE,TYPING,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+include_trailing_comma = true
+line_length = 80
+indent = 4
+use_parentheses = true
