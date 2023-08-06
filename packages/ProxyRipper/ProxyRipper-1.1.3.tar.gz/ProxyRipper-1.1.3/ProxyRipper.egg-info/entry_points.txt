@@ -1,0 +1,2 @@
+[console_scripts]
+ProxyRipper = ProxyRipper.ProxyRipper:main
