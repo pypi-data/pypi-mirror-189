@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: arman_k
+Version: 0.0.1
+Summary: arman_k
+Author: Arman
+Author-email: armank3001@gmail.com
+Keywords: binary,math,mathematics,k.v.ofdumdum,arman kumar
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+This package made by Arman Kumar 
+This package helps you to perform great operations
+1. It helps you to convert Binary to decimal
+2. It helps you to make fibonacci series 
