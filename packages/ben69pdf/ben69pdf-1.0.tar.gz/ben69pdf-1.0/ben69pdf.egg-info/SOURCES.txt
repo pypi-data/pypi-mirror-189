@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+ben69pdf.egg-info/PKG-INFO
+ben69pdf.egg-info/SOURCES.txt
+ben69pdf.egg-info/dependency_links.txt
+ben69pdf.egg-info/top_level.txt
