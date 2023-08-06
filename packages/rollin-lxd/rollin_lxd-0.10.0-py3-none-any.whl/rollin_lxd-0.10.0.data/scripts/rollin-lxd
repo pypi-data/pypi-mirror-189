@@ -1,0 +1,5 @@
+#!python -u
+
+import rollin_lxd
+
+rollin_lxd.main()
