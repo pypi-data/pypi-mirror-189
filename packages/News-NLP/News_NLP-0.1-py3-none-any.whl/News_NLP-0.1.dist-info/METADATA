@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: News-NLP
+Version: 0.1
+Summary: Fetch google news, preprocess, classify news type and sentiment strength, geolocate
+Author: JasonLu
+Author-email: luzhenxian@hotmail.com
+License: MIT
+
