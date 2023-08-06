@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: lightorm
+Version: 0.0.3
+Summary: Yet another, super lightweight MySQL ORM in Python.
+Home-page: https://github.com/sabbiramin113008/tinyorm
+Author: Sabbir Amin
+Author-email: sabbiramin.cse11ruet@gmail.com
+License: MIT
+Keywords: python,Database,ORM,MySQL
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: pymysql
+
+# LightORM
+It is what the name means. [ Experimental]
+Yet another, super lightweight MySQL ORM in Python. 
+
+
+
+
+
