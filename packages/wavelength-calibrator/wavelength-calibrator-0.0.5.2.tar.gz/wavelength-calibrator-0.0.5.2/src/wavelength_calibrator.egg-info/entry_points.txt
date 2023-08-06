@@ -1,0 +1,2 @@
+[console_scripts]
+wavelength-calibrator = command_line:main
