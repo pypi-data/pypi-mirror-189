@@ -1,0 +1,8 @@
+SciAssist
+convert_pegasus
+data
+logs
+output
+pegasus
+pretrained
+process
