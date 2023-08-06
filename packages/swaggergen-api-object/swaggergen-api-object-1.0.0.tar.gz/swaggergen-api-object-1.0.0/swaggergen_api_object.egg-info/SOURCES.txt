@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+swaggergen_api/__init__.py
+swaggergen_api/__main__.py
+swaggergen_api/_version.py
+swaggergen_api/loader_swagger.py
+swaggergen_api/swagger_generate.py
+swaggergen_api/templates/api.tpl
+swaggergen_api_object.egg-info/PKG-INFO
+swaggergen_api_object.egg-info/SOURCES.txt
+swaggergen_api_object.egg-info/dependency_links.txt
+swaggergen_api_object.egg-info/entry_points.txt
+swaggergen_api_object.egg-info/requires.txt
+swaggergen_api_object.egg-info/top_level.txt

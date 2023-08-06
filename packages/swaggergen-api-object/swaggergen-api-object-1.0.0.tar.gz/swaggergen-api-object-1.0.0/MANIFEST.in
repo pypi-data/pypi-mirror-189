@@ -1,0 +1,3 @@
+recursive-include swaggergen_api/templates *
+include README.md
+include requirements.txt
