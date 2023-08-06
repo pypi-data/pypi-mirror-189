@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: CRClx
+Version: 0.0.1
+Summary: Lightweight library for calculating Cyclic Redundancy Check (CRC) checksums
+Home-page: https://github.com/technikian/crc
+Author: technician
+Author-email: <mail@xxxxxxxx.com>
+License: MPL
+Project-URL: Source, https://github.com/technikian/crc
+Keywords: python,CRClx,lightweight,crc,cyclic,redundancy,check,checksum
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# crc
+
+work in progress...
