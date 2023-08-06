@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: autofake
+Version: 0.1.1
+Summary: 
+Home-page: https://github.com/agusdmb/autofake
+Author: Agustin Marquez
+Author-email: agusdmb@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Project-URL: Repository, https://github.com/agusdmb/autofake
