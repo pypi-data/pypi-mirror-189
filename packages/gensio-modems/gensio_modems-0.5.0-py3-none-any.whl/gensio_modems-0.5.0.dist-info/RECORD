@@ -1,0 +1,10 @@
+gensio_modems/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gensio_modems/ax25.py,sha256=f8QFagLpxffVCEY0Vod-W908eCXkGSFhlN8QR70LJ8Y,3553
+gensio_modems/gutils.py,sha256=X8dusupOvt9KfsfBoSMDyNihjPrAA1v-Kdim0lLCqLI,8311
+gensio_modems/proxy.py,sha256=CPv0pGSE-W-0-1MiaEhJ6LOU0ISmPXkV0dLjl15YIig,9034
+gensio_modems/rmsgw.py,sha256=gABUwzV2KuiZWld1BIO8AbptzgJUPg4VWFC3PAo2lEM,1409
+gensio_modems/vara.py,sha256=23DHjEdTZmg7pcMA4jHHlDAuccs6i9yIivRwk69nCd0,8244
+gensio_modems-0.5.0.dist-info/METADATA,sha256=t-VIIqlBwR6hPp2PBCDVxFFubjfamj8XqiMwRWsQKCg,2085
+gensio_modems-0.5.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+gensio_modems-0.5.0.dist-info/top_level.txt,sha256=jQnx4BQZeOD0Y0izle32SOhPuaq8GjO9hyb382IjZ3c,14
+gensio_modems-0.5.0.dist-info/RECORD,,
