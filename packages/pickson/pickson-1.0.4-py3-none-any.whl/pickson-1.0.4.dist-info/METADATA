@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: pickson
+Version: 1.0.4
+Summary: A python package for saving and getting pickled and JSON data
+Home-page: https://github.com/MikeTeachesCode/pickson
+Author: Michael S. Russell
+Author-email: miketeachingcode@yahoo.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+
+# README.md
+<br>
+
+<img src='https://cdn.educba.com/academy/wp-content/uploads/2020/03/Python-Pickle-vs-JSON.jpg'
+     height="200px" width="200px"/>
+
+## Pickson module
+<br>
+
+- This package uses both JSON and pickle python modules.
+- You can save, get and convert your data to JSON or pickle.
