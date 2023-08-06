@@ -1,0 +1,11 @@
+packaging>=23.0
+ipython>=7.31.1
+Pillow>=9.2.0
+PyYAML>=6.0
+scipy>=1.10.0
+PyQt5>=5.12.3
+numpy>=1.21.5
+matplotlib>=3.5.2
+opcua>=0.98.13
+OMPython>=3.4.0
+pandas>=1.4.4
