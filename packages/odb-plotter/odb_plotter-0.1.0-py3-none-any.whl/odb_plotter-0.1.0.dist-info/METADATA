@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: odb-plotter
+Version: 0.1.0
+Summary: Python3 API for Abaqus FEA .odb Files and related Command Line Visualization Tool
+Author-email: Clark Hensley <clarkhensley@duck.com>
+Maintainer-email: Clark Hensley <clarkhensley@duck.com>
+Project-URL: Homepage, https://www.cmml.me.msstate.edu
+Project-URL: Bug Reports, https://www.github.com/mwpriddy/ODBPlotter/issues
+Project-URL: Source, https://www.github.com/mwpriddy/ODBPlotter
+Keywords: TODO
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: h5py
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+
+# ODB Plotter
+
+## Install with pip
+```shell
+pip install ODBPlotter
+```
+
+## ODB Plotter Design Goals
+
+### I intend for this project to serve two purposes:
+- First, implement an extensible, flexible api for accessing data within .odb files or .hdf5 files with odb data
+- Second, implement a user-friendly, sane-defaults cli to allow for quick data extraction, manipulation, and visualization with no hassle
+
+### What things need to be parametrized in the CLI?
+- Target File (.odb or .hdf5) --> Not Stored in userOptions
+- Physical dimensions (x min & max, y min & max, z min & max) --> Not stored in UserOptions
+- Temporal dimensions (start time & stop time) --> Not Stored in userOptions
+- Mesh Seed Size (Stored with the .hdf5 in a .json) --> Not Stored in userOptions
+- Meltpoint (Stored with jthe .hdf5 in a .json) --> Not Stored in userOptions
+- Time Sample Size (N for extracting from every Nth frame) (Stored with the .hdf5 in a .json) --> Not Stored in userOptions
+- Location of input files (default .hdf5 directory)
+- Location of any output file (default output directory)
+- View Angle (By default values or Elevation/Azimuth/Roll) --> Not Stored in userOptions
+- Toggle use of the interactive viewer
+- Run Immediately (Set the program to run if all necessary flags are set)
+
+### Current TODOS (Waiting for the official github repo to open issues...)
+- Migrate to .json5 (comments in views.json5 file)
+- Create OdbVisualizer Class to implement views and plotting functionality separately
+- Manage Views in a more sane way
+- Update CLI to take in user input from source config file
+    - Use platformdirs
+- Generate default config with platformdirs on install
+- Test/rework lighting on all sides
+- Parametrize all relevant values in the odb_to_npz.py script
+- Add 2D plotting methods
+- Add support for melt pool plot
+- Add support for non-temperature based plots
+- Interpolate Colors
+- Consider moving to mayavi
+
+### TEMP:
+```
+angle: "Top-Right-Fromt Vertex: top" (May pass in a relevant string from views.json5 or a 3-tuple of Elevation/Azimuth/Roll)
+
+    # TODO Default
+    parser.add_argument("-v", "--view")
+    
+```
