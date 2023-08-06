@@ -1,0 +1,5 @@
+setup.py
+gnuradio.egg-info/PKG-INFO
+gnuradio.egg-info/SOURCES.txt
+gnuradio.egg-info/dependency_links.txt
+gnuradio.egg-info/top_level.txt
