@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: more-babel-i18n
+Version: 23.2.0
+Summary: i18n/l10n support for Morepath applications and Jinja2 templates
+Home-page: https://github.com/edemocracy/more.babel_i18n
+License: BSD-3-Clause
+Keywords: babel,i18n,translation,morepath,jinja2
+Author: Tobias dpausp
+Author-email: dpausp@posteo.de
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: Babel (>=2.11.0,<3.0.0)
+Requires-Dist: Jinja2 (>=3.1.2,<4.0.0)
+Requires-Dist: morepath (>=0.19,<0.20)
+Project-URL: Repository, https://github.com/edemocracy/more.babel_i18n
+Description-Content-Type: text/markdown
+
+more.babel_i18n
+===============
+
+WARNING: This is an early version that works for me. Please don't rely on it ;)
+
+Internationalization and localization (i18n / l10n) support for Morepath applications based on [Babel](https://github.com/python-babel/babel).
+Most code is taken from the flask-babel(super) project.
+
