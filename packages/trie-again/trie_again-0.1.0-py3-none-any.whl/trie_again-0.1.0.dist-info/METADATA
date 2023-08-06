@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: trie-again
+Version: 0.1.0
+Summary: Trie data structure for prefix search and text completion
+License: ISC
+Author: Egor Blagov
+Author-email: e.m.blagov@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: setuptools (>=66.1.1,<67.0.0)
+Description-Content-Type: text/markdown
+
+# Trie Again: Python Trie implementation optimized for T9 completion
+
+
+## Installation
+
+```bash
+
+pip install trie-again
+
+```
+
