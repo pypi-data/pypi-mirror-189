@@ -1,0 +1,12 @@
+stat_lib/Table_Arp_Madore_pairs_updated.txt,sha256=HjCT3crr9re6HlkTYYsFQm0HXMfEgJzizmJjRLZ7u00,294972
+stat_lib/__init__.py,sha256=BSNTgv4SQ6CZfZfnz5aiB_kxUza8HfmPHbqNsKLmNHY,101146
+stat_lib/__init__old.py,sha256=oaJRaU0dJySt1HJobHxFY0YLwh3LptXHlawdKW5gbE8,90209
+stat_lib/properties.dat,sha256=4xwfDQZsyQW7OsQREsnKerq6zrP4uIwVe66qxLKS410,336
+stat_lib/zero_points.fits,sha256=Q9pBUe1aV9rz_Wg9K2JosAww1_qaDXZhH3X0IqfGmPc,106560
+stat_lib/__pycache__/__init__.cpython-38.pyc,sha256=lybAkojPaHMFkVR2U3S0AT_CAVnygxAiZcUcfLUwdUg,55726
+stat_lib/__pycache__/stat_lib.cpython-38.pyc,sha256=JjjvbJ3ZvDC4AA3UpVNQVK9XrceagpYT4uErUPrEllE,20743
+astromorphlib-0.2.15.dist-info/LICENSE.txt,sha256=9HVZvOfbXdgcsB8H4xM6WnFv7ghfh5Pf45Ix3X470Mo,399
+astromorphlib-0.2.15.dist-info/METADATA,sha256=QJ16rBGa3GlbGUIyftVR9Ff9Z-jSIrH8ihiZ78Qg9p4,1995
+astromorphlib-0.2.15.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+astromorphlib-0.2.15.dist-info/top_level.txt,sha256=wiqsogIcqAUB4tFCAP8f3Bix4TmhWZaQKZB0NxhgORA,9
+astromorphlib-0.2.15.dist-info/RECORD,,
