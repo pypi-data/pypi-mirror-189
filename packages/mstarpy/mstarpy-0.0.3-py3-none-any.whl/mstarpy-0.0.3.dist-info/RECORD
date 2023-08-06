@@ -1,0 +1,10 @@
+mstarpy/__init__.py,sha256=pA5r1MimhnZ5BnTyOQTp7IwjL0seDTgDFlfSaSa0b7s,97
+mstarpy/error.py,sha256=e8mWH6y8iNQm73jkPlNFZrLQvtKmVnsodptHnxxeh4w,732
+mstarpy/funds.py,sha256=WYNxbe2YivFTaLMveDA_yOM4fXONh0j72iZVXhZGTKI,181405
+mstarpy/search.py,sha256=3xu7rWnkbGIsCxiI6Mvx9f7WAVwuuW-p6p-e7Tg5Lvg,5214
+mstarpy/utils.py,sha256=fs89QASz8GodJBKcXA4_rgcLUe30iQAJe8ppbWtCAFo,22153
+mstarpy-0.0.3.dist-info/METADATA,sha256=i9DghmRfaNpguQFZpaajoU740gDDq0-CzCZmPXXwMzw,5336
+mstarpy-0.0.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+mstarpy-0.0.3.dist-info/license.txt,sha256=zIJdkbf7CkrGJc181hKuA4H0GTtzBRkOt5GcLFa6u2c,1059
+mstarpy-0.0.3.dist-info/top_level.txt,sha256=5-q3OnlRwHjXTAizSPkWCrikkyrfSCZ3raiwuJd7msA,8
+mstarpy-0.0.3.dist-info/RECORD,,
