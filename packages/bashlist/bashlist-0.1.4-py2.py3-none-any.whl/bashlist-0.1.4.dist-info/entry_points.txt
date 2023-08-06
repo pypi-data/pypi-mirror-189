@@ -1,0 +1,3 @@
+[console_scripts]
+bashlist_cli=bashlist.__main__:main
+
