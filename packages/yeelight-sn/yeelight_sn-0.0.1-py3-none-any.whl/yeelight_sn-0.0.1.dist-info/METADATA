@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: yeelight-sn
+Version: 0.0.1
+Summary: Simple API for controlling Yeelight Wi-Fi light-bulbs
+Project-URL: Homepage, https://gitlab.com/sean-nelson/yeelight-api
+Project-URL: Bug Tracker, https://gitlab.com/sean-nelson/yeelight-api/-/issues
+Author-email: Sean Nelson <sean@smnelson.me>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# yeelight-sn
+
+Simple API for controlling Yeelight Wi-Fi light-bulbs
