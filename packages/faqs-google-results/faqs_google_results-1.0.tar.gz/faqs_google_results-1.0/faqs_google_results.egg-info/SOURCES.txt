@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+faqs_google_results.egg-info/PKG-INFO
+faqs_google_results.egg-info/SOURCES.txt
+faqs_google_results.egg-info/dependency_links.txt
+faqs_google_results.egg-info/requires.txt
+faqs_google_results.egg-info/top_level.txt
