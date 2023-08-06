@@ -1,0 +1,15 @@
+.gitattributes
+.gitignore
+LICENSE
+pyproject.toml
+readme.md
+src/name_a_toon/__init__.py
+src/name_a_toon/gen.py
+src/name_a_toon/regex.py
+src/name_a_toon.egg-info/PKG-INFO
+src/name_a_toon.egg-info/SOURCES.txt
+src/name_a_toon.egg-info/dependency_links.txt
+src/name_a_toon.egg-info/top_level.txt
+tests/example.png
+tests/names.txt
+tests/nametest.py

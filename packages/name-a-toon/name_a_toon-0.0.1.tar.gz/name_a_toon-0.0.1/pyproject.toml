@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "name_a_toon"
+dependencies = []
+version = "0.0.1"
+authors = [
+  { name="Vhou-Atroph", email="vhouatroph@proton.me" },
+]
+description = "A Python package to make naming Toons easier!"
+readme = "readme.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Vhou-Atroph/name-a-toon"
+"Bug Tracker" = "https://github.com/Vhou-Atroph/name-a-toon/issues"
