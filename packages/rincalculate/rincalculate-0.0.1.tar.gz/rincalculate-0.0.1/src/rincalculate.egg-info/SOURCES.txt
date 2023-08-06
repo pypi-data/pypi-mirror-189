@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/rincalculate.egg-info/PKG-INFO
+src/rincalculate.egg-info/SOURCES.txt
+src/rincalculate.egg-info/dependency_links.txt
+src/rincalculate.egg-info/requires.txt
+src/rincalculate.egg-info/top_level.txt
