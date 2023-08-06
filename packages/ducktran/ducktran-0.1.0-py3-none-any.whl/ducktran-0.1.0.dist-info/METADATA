@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ducktran
+Version: 0.1.0
+Summary: Replicate data from Postgres to a Parquet-based data lake.
+License: MIT
+Author-email: Jake Thomas <jake@silverton.io>
+Requires-Python: >=3.10
+Requires-Dist: click>=8.1.3
+Requires-Dist: duckdb>=0.6.1
+Requires-Dist: loguru>=0.6.0
+Requires-Dist: psycopg2>=2.9.5
+Requires-Dist: pydantic>=1.10.4
+Provides-Extra: dev
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=22.12.0; extra == "dev"
+Requires-Dist: pylint>=2.15.10; extra == "dev"
+Requires-Dist: ipython>=8.9.0; extra == "dev"
+Description-Content-Type: text/markdown
+
+# Ducktran
+
+![duck](img/duckcenter.png)
+
+

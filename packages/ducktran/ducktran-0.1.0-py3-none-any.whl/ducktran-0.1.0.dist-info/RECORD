@@ -1,0 +1,11 @@
+config.py,sha256=exse21dMJUVwIEh_5jKdREuMAosi0KOoVSPL5RIZefo,1137
+constants.py,sha256=2eaxiYVAsqltZxtYqq071YOSoTW6eyrByW_RG6FnmVA,86
+duck.py,sha256=v8PS3LvBYqw800cmNXqflPsy6nIe-bUvpQWiSqENoNE,111
+ducktran.py,sha256=nnKSJz46h1mZZ_vcU6_XHRfKkrEWXrZtz3n1WhzFBis,2358
+lake.py,sha256=jM2vcE1ZE6kMJOq14AOxeQrYbJL1S4GaIxCOBib2q3k,304
+pg.py,sha256=kbqm6Hhn3r4uJoBgFqRVsDKHlw0iSK_UOCXLbyzI4tM,416
+sql.py,sha256=iJXMTR2vrRGuahy4sdBjhv30NiFmCCotxbm1RIeOyoI,107
+ducktran-0.1.0.dist-info/WHEEL,sha256=_tUZrwPtr100-R0q5G_f5lOII6s0lN3q8n5zAHueCvs,87
+ducktran-0.1.0.dist-info/METADATA,sha256=YOpAUDNPtYONQNan1we8j1avzC3hiovgA7bIsGrEnr8,643
+ducktran-0.1.0.dist-info/licenses/LICENSE,sha256=WQqK6EH7Xfkmd0hEwjm0i0urBowwsoatSBavUJ2BvwE,1068
+ducktran-0.1.0.dist-info/RECORD,,
