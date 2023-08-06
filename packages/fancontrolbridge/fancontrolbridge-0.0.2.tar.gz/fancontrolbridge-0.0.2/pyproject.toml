@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fancontrolbridge"
+version = "0.0.2"
+authors = [
+  { name="Markus Ijäs", email="markus.ijas@pm.me" },
+]
+description = "A MQTT-enabled bridge for the Arduino fan controller."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+]
+dependencies = ["confuse", "paho-mqtt", "pyserial"]
+
+[project.urls]
+"Homepage" = "https://github.com/mtijas/mqtt-fancontroller"
+"Bug Tracker" = "https://github.com/mtijas/mqtt-fancontroller/issues"
+
+[project.scripts]
+fancontrolbridge = "fancontrolbridge.fancontrolbridge:main"
