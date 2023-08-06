@@ -1,0 +1,3 @@
+[console_scripts]
+service_driver = service_driver:main
+
