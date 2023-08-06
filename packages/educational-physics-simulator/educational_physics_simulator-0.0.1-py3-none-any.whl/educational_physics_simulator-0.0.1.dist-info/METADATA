@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: educational-physics-simulator
+Version: 0.0.1
+Summary: An educational physics simulator
+Home-page: UNKNOWN
+Author: Edward Hardy
+Author-email: <hardyedward18@gmail.com>
+License: UNKNOWN
+Keywords: python,physics,educational,pygame,tkinter,pymunk
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: pygame
+Requires-Dist: pymunk
+Requires-Dist: pillow
+
+UNKNOWN
+
