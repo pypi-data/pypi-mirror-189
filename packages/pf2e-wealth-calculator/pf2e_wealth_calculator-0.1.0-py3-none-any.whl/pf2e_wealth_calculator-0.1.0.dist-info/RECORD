@@ -1,0 +1,14 @@
+pf2e_wealth_calculator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pf2e_wealth_calculator/dataframes.py,sha256=M7ipwg06WVSwUriKXfecRsewqj6_lOAinbaK_SPD6sQ,950
+pf2e_wealth_calculator/pf2ewc.py,sha256=DvZNxD0ru6DIQu3ZxfLmHgWbIDrJeYoB1iPGpqksO94,25172
+pf2e_wealth_calculator/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pf2e_wealth_calculator/tables/materials.csv,sha256=xtgni-zkqKN52VJ9Ziv2QJkhQWFRt-Z6_W4PLTaCiBk,144
+pf2e_wealth_calculator/tables/PF2eItemList.csv,sha256=CsbwzEgisJLTWWfBPKZnfdfG6cq9-YL87AQaupOWK80,171358
+pf2e_wealth_calculator/tables/rune_replacer.csv,sha256=_t8lbX69ORGEPO2smyVU2ywTy8mTXbx96ybAoPvvNmc,181
+pf2e_wealth_calculator/tables/runes.csv,sha256=aBITJljhILSsN8H1iBOEPZvJgKHeD1ra75bUaRz6pUo,6098
+pf2e_wealth_calculator/tables/treasurebylevel.csv,sha256=YXPl-g88zuVBlocZbUuFV1_2Qv6E-2CvVLA1-tnsxxg,1121
+pf2e_wealth_calculator-0.1.0.dist-info/entry_points.txt,sha256=1cZ5_1tvdzqIYo0LQm2uxfGm8nFyEMFdKjN4O9j_i5U,68
+pf2e_wealth_calculator-0.1.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+pf2e_wealth_calculator-0.1.0.dist-info/METADATA,sha256=vTUf2KYLMCic3a0eXs_6mNUU7j1txWBi5qJZh-FhKBQ,8069
+pf2e_wealth_calculator-0.1.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+pf2e_wealth_calculator-0.1.0.dist-info/RECORD,,
