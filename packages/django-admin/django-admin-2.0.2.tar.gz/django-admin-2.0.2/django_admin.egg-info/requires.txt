@@ -1,0 +1,2 @@
+django-excel-response2>=3.0.0
+django-six
