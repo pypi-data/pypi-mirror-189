@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: zgit
+Version: 0.0.1
+Summary: zgit
+Author: Wenyi Tang
+Author-email: wenyitang@outlook.com
+License: MIT
+Keywords: git statistic
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: dateparser
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+

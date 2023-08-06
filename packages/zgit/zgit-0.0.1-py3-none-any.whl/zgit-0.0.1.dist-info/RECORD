@@ -1,0 +1,10 @@
+zgit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zgit/__main__.py,sha256=faWqtv5kMd7VmG6g8dk5C5icJiEs4sXFXmXynuMLZAU,2838
+zgit/commit.py,sha256=4sNupsP-P6SDpd2y0esesAaOE_k3hGhfm9eLvVtC6FY,3304
+zgit/merge.py,sha256=ljMKPJI5EVKOfPZECdjf4tFp165XpzDt2N9tmRHw5Zc,2528
+zgit/plot.py,sha256=CCPpcjx_nC02btDNYknCKtAtEz4udl3RcqtyjHwUzac,2376
+zgit-0.0.1.dist-info/LICENSE,sha256=YfmC5wUWSUVFa5olL8fIGCqiMmfXNArA9W7GT-eSXkA,1084
+zgit-0.0.1.dist-info/METADATA,sha256=sleZEheHt_2-xTThEw_g3aDQohbLjIZh7aDKk-qF3mg,368
+zgit-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+zgit-0.0.1.dist-info/top_level.txt,sha256=MaGY_ZA0zdQXZiPETLh7JaXydT-sEC8ZfL4NdOSCrwE,5
+zgit-0.0.1.dist-info/RECORD,,
