@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: dataspace
+Version: 0.0.6
+Summary: Data wrangling and visualization
+Home-page: https://github.com/synw/dataspace
+Download-URL: https://github.com/synw/dataspace/releases/tag/0.0.6
+Author: synw
+Author-email: synwe@yahoo.com
+Keywords: data_visualization,data_exploration,charts
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Dataspace
+
+[![pub package](https://img.shields.io/pypi/v/dataspace)](https://pypi.org/project/dataspace/)
+
+Data wrangling and visualization. Check the [documentation](https://synw.github.io/dataspace/)
+
+## Install
+
+```
+pip install dataspace
+```
+
+## Example notebooks
+
+Example notebooks are available: https://github.com/synw/dataspace_notebooks
