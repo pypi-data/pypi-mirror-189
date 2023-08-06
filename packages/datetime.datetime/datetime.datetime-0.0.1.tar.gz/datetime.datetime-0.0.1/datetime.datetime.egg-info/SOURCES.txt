@@ -1,0 +1,6 @@
+datetime.datetime.egg-info/PKG-INFO
+datetime.datetime.egg-info/SOURCES.txt
+datetime.datetime.egg-info/dependency_links.txt
+datetime.datetime.egg-info/top_level.txt
+ipython3/__init__.py
+ipython3/setup.py
