@@ -1,0 +1,7 @@
+README.md
+setup.py
+rustylib.egg-info/PKG-INFO
+rustylib.egg-info/SOURCES.txt
+rustylib.egg-info/dependency_links.txt
+rustylib.egg-info/requires.txt
+rustylib.egg-info/top_level.txt
