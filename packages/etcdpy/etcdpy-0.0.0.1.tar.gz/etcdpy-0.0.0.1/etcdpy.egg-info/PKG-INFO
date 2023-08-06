@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: etcdpy
+Version: 0.0.0.1
+Summary: Python client for etcd
+Home-page: https://github.com/candango/etcdpy
+Author: Flavio Garcia
+Author-email: piraz@candango.org
+License: Apache Software License 2.0
+Keywords: etcd3
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+This is a work in progress
