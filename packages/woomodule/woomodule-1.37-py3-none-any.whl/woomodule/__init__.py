@@ -1,0 +1,1 @@
+from src.woomodule.main import main
