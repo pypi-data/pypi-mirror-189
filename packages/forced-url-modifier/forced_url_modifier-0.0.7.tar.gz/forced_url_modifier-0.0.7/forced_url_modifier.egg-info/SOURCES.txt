@@ -1,0 +1,8 @@
+README.md
+setup.py
+forced_url_modifier/__init__.py
+forced_url_modifier/core.py
+forced_url_modifier.egg-info/PKG-INFO
+forced_url_modifier.egg-info/SOURCES.txt
+forced_url_modifier.egg-info/dependency_links.txt
+forced_url_modifier.egg-info/top_level.txt
