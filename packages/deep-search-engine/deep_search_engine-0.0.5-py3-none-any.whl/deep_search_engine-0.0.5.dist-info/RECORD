@@ -1,0 +1,14 @@
+DeepSearch/DeepSearch.py,sha256=i_ntuFh6ndsGCpRqom3rMwRdSzhHEcuuXYbTPM-r3Fo,13267
+DeepSearch/ModelLoader.py,sha256=iwx2u1oxfFu_LthzJeq8wYozvKrY0DIsxHsR84jyR7Q,2154
+DeepSearch/__init__.py,sha256=M7s_c7ZugRbA6MSf-ZhgzEuFTrCb66HFkCoFlC6ylZA,36
+DeepSearch/models/InceptionV3.py,sha256=2IKaw6C8WMhkp7OK5uNbJlA3cxyuHpDgBfBJM6Cxgvc,755
+DeepSearch/models/ResNet50.py,sha256=UFZTLVYDOAB5Ub-5Ja3_qK18ILWO0MWmXJiQU6tqLXg,658
+DeepSearch/models/VGG16.py,sha256=clL6jeHjawJJkXxwzduLfye5gtomFcfNmgZm49FlblA,650
+DeepSearch/models/Xception.py,sha256=hk1erwC5IQNX-82W4CMj9MFyjok7N6vPdDDoCfIMQp4,733
+DeepSearch/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+DeepSearch/weights/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deep_search_engine-0.0.5.dist-info/LICENSE,sha256=tyFpZ-95l1W2YCxAFAt6XpnYRDAo1AK6eJvIJNIdecI,1092
+deep_search_engine-0.0.5.dist-info/METADATA,sha256=zHDM_nuXm9e_mlnVlSdcRXfAf9yH9xcEAc7uFfsUAdw,16525
+deep_search_engine-0.0.5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+deep_search_engine-0.0.5.dist-info/top_level.txt,sha256=cRrv2dRxnAxkQ-PDg_VU2qOT2AiQx6W7WhvX4fUjFLk,11
+deep_search_engine-0.0.5.dist-info/RECORD,,
