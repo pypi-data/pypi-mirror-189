@@ -1,0 +1,138 @@
+import json
+from dataclasses import dataclass
+from typing import Dict, Generic, Optional, TypeVar, get_args
+
+from gql.dsl import (
+    DSLMutation,
+    DSLQuery,
+    DSLSubscription,
+    dsl_gql,
+)
+from graphql import print_ast
+
+from .common import *
+
+ExecuteReturnType = TypeVar('ExecuteReturnType')
+ExecuteReturnClass = TypeVar('ExecuteReturnClass')
+QueryResultType = TypeVar("QueryResultType", bound=Dict[str, Any])
+
+
+class QueryResult(Generic[QueryResultType]):
+    __graphql_map__ = {}
+
+    def __init__(self, data: QueryResultType = None):
+        self._data = data
+
+    def __getattr__(self, name: str) -> Any:
+        res = (
+            self._data[name]
+            if name not in self.__graphql_map__
+            else self._data[self.__graphql_map__[name]]
+        )
+
+        if isinstance(res, list):
+            return [QueryResult(x) for x in res]
+        elif isinstance(res, dict):
+            return QueryResult(res)
+        return res
+
+    def __getitem__(self, name: str) -> Any:
+        return getattr(self, name)
+
+    def __str__(self) -> str:
+        return json.dumps(self._data, indent=2, sort_keys=True)
+
+    def as_dict(self) -> Dict[str, Any]:
+        return self._data
+
+    def get(self, name: str, default: Any = None) -> Any:
+        return self._data.get(name, default)
+
+
+
+class Executable(Generic[ExecuteReturnClass, ExecuteReturnType]):
+    def __init__(self, selection):
+        self._query = selection._query
+        self.client = selection._client
+
+    @property
+    def query_ast(self):
+        class_ = {
+            'Mutation': DSLMutation,
+            'Query': DSLQuery,
+            'Subscription': DSLSubscription,
+        }
+        return dsl_gql(class_[self._query.parent_type.name](self._query))
+
+    @property
+    def query(self) -> str:
+        return print_ast(self.query_ast)
+
+    def execute(self) -> ExecuteReturnType:
+        result = QueryResult[ExecuteReturnType](self.client._client.execute(self.query_ast))
+        return_type = get_args(self.__orig_class__)[1]
+        result.__graphql_map__.update(return_type.__graphql_map__)
+        return result
+
+    async def execute_async(self) -> ExecuteReturnType:
+        result = QueryResult[ExecuteReturnType](await self.client._client.execute_async(self.query_ast))
+        return_type = get_args(self.__orig_class__)[1]
+        result.__graphql_map__.update(return_type.__graphql_map__)
+        return result
+
+{% for type_ in gql_types.types %}
+
+@dataclass
+class {{ get_type(type_, constants.output) }}(QueryResult):
+    {{ '__graphql_map__ = {' }}{%  for field in type_.fields %}
+        '{{ underscore(field) }}': '{{ field }}'{% if not loop.last %}{{ ', ' }}{% endif %}
+    {%- endfor %}
+    {{ '}' }}
+
+    {% for field_name, field in type_.fields.items() -%}
+        {{ underscore(field_name) }}: {{ get_type(field.type, suffix=constants.output, enquote=True, strip_class=False) }}
+    {% endfor %}
+
+{%- endfor %}
+{% for type_ in gql_types.interface_types %}
+
+@dataclass
+class {{ get_type(type_, constants.output) }}(QueryResult):
+    {{ '__graphql_map__ = {' }}{%  for field in type_.all_fields %}
+        '{{ underscore(field) }}': '{{ field }}'{% if not loop.last %}{{ ', ' }}{% endif %}
+    {%- endfor %}
+    {{ '}' }}
+
+    {% for field_name, field in type_.all_fields.items() -%}
+        {{ underscore(field_name) }}: {{ get_type(field.type, suffix=constants.output, enquote=True, strip_class=False) }}
+    {% endfor %}
+
+{%- endfor %}
+{% for type_ in gql_types.union_types %}
+
+@dataclass
+class {{ get_type(type_, constants.output) }}(QueryResult):
+    {{ '__graphql_map__ = {' }}{%  for field in type_.all_fields %}
+        '{{ underscore(field) }}': '{{ field }}'{% if not loop.last %}{{ ', ' }}{% endif %}
+    {%- endfor %}
+    {{ '}' }}
+
+    {% for field_name, field in type_.all_fields.items() -%}
+        {{ underscore(field_name) }}: {{ get_type(field.type, suffix=constants.output, enquote=True, strip_class=False) }}
+    {% endfor %}
+
+{%- endfor %}
+{% for type_ in gql_types.enum_types %}
+
+@dataclass
+class {{ get_type(type_, constants.output) }}(QueryResult):
+    {{ '__graphql_map__ = {' }}{%  for field in type_.values %}
+        '{{ underscore(field) }}': '{{ field }}'{% if not loop.last %}{{ ', ' }}{% endif %}
+    {%- endfor %}
+    {{ '}' }}
+
+    {% for field_name, field in type_.values.items() -%}
+        {{ underscore(field_name) }} = '{{ field.value }}'
+    {% endfor %}
+
+{%- endfor %}

@@ -1,0 +1,34 @@
+from functools import partial
+from .result_types import *
+from .enum_types import *
+from .input_types import *
+from .queryable_types import *
+from .object_types import *
+from .common import *
+
+
+class Query:
+    {{'__graphql_map__ = {'}}{%  for field_name, field in gql_types.query_fields.items() %}
+        '{{ underscore(field_name) }}': '{{ field_name }}'{% if not loop.last %}{{ ', ' }}{% endif %}
+    {%- endfor %}
+    {{'}'}}
+
+    def __init__(self, client: 'Client') -> None:
+        self._schema = client._schema
+        self._client = client
+
+    def __getattribute__(self, item):
+        if item == '__annotations__':
+            return super().__getattribute__(item)
+        item_type = self.__annotations__.get(item)
+        if not item_type or not issubclass(item_type, QueryableField):
+            return super().__getattribute__(item)
+        field = super().__getattribute__(item)
+        graphql_name = self.__graphql_map__.get(item)
+        return partial(field, self._client, self._schema, getattr(self._schema.Query, graphql_name))
+
+{% for field_name, field in gql_types.query_fields.items() -%}
+{%- set is_union = get_type(field.type, strip_class=True) in gql_types.union_type_names -%}
+    {{ '    ' }}{{ underscore(field_name) }}: {{ field.name }} = {{ field.name }}()
+{% endfor %}
+
