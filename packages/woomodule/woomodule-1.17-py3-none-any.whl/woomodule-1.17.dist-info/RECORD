@@ -1,0 +1,8 @@
+src/woomodule/app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/woomodule/app/app.py,sha256=8bcqXv_pUFZFSVWBj_JmXNpz7oXQdyG-v1TU6FhVP4U,132
+woomodule-1.17.dist-info/LICENSE,sha256=dXnDEpLRc6XvqD_up6N7wG1c7E6eD2IU4OI-aGufxoY,1067
+woomodule-1.17.dist-info/METADATA,sha256=jeD1BqDOX5ZP4acwk5DWVdO4RLLARA_yqNvXGssG2sU,320
+woomodule-1.17.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+woomodule-1.17.dist-info/entry_points.txt,sha256=70ZwaBTVtFvUomYyufjKN6WzhLcKAVLJGcRXExycIrE,59
+woomodule-1.17.dist-info/top_level.txt,sha256=kOY1LXSOPQPRsUqIK1Zrv9Zp0zc5190f2bdFUkr7nRo,18
+woomodule-1.17.dist-info/RECORD,,
