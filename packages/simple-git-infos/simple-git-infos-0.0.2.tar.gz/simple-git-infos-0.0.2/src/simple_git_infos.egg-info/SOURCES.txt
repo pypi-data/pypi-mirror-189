@@ -1,0 +1,13 @@
+LICENCE_en
+LICENCE_fr
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/simple_git_infos/__init__.py
+src/simple_git_infos/gitinfos.py
+src/simple_git_infos.egg-info/PKG-INFO
+src/simple_git_infos.egg-info/SOURCES.txt
+src/simple_git_infos.egg-info/dependency_links.txt
+src/simple_git_infos.egg-info/requires.txt
+src/simple_git_infos.egg-info/top_level.txt
