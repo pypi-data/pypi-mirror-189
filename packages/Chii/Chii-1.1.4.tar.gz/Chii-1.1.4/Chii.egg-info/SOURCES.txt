@@ -1,0 +1,8 @@
+README.md
+setup.py
+Chii.egg-info/PKG-INFO
+Chii.egg-info/SOURCES.txt
+Chii.egg-info/dependency_links.txt
+Chii.egg-info/requires.txt
+Chii.egg-info/top_level.txt
+chii/main.py
