@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: fastapi-gql
+Version: 0.1.0
+Summary: Python project exmaple for using FastAPI/GQL
+Home-page: https://github.com/shubhamraj2202/fastapi-gql
+License: LICENSE
+Keywords: fastapi,gql
+Author: Shubham Raj
+Author-email: shubhamraj2202@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: SQLAlchemy
+Requires-Dist: cryptography
+Requires-Dist: fastapi
+Requires-Dist: pydantic
+Requires-Dist: pymysql
+Requires-Dist: strawberry-graphql
+Requires-Dist: uvicorn (>=0.20.0,<0.21.0)
+Project-URL: Repository, https://github.com/shubhamraj2202/fastapi-gql.git
+Description-Content-Type: text/markdown
+
+![build](https://github.com/shubhamraj2202/fastapi-gql/actions/workflows/github-actions.yml/badge.svg?event=push)
+[![codecov](https://codecov.io/gh/shubhamraj2202/fastapi-gql/branch/main/graph/badge.svg?token=X9KIXXBOAV)](https://codecov.io/gh/shubhamraj2202/fastapi-gql)
+# fastapi-gql
+Example Python project based on FastAPI and GraphQueryLanguage
+
+# Project Setup for Development
+- `source setup.sh`
+
+# Start Server
+- Run Command: `python3 -m poetry run uvicorn fastapi_gql.app:app --reload`
+- Open Browser: `http://localhost:8000/graphql`
+
+
+# Uploaded On:
+https://pypi.org/project/fastapi-gql/
+
