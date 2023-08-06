@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mlkits
+Version: 0.0.1
+Summary: MLkits
+Home-page: https://gitee.com/winter1991/mlkits
+Author: WangSihong
+Author-email: wangsihong@live.com
+License: MIT Licence
+Keywords: mlkits,xgboost,lightgbm
+Platform: UNKNOWN
+License-File: LICENSE
+
+MLkits
+
