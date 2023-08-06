@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+cinspector/__init__.py
+cinspector/interfaces.py
+cinspector/nodes.py
+cinspector/tree-sitter.so
+cinspector.egg-info/PKG-INFO
+cinspector.egg-info/SOURCES.txt
+cinspector.egg-info/dependency_links.txt
+cinspector.egg-info/requires.txt
+cinspector.egg-info/top_level.txt
+test/test_node_EnumSpecifierNode.py
