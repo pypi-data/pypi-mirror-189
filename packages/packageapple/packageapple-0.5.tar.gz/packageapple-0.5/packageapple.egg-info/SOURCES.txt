@@ -1,0 +1,13 @@
+setup.py
+packageapple/__init__.py
+packageapple.egg-info/PKG-INFO
+packageapple.egg-info/SOURCES.txt
+packageapple.egg-info/dependency_links.txt
+packageapple.egg-info/top_level.txt
+packageapple/math/__init__.py
+packageapple/math/_a.py
+packageapple/math/setup.py
+packageapple/mysubpackage1/__init__.py
+packageapple/mysubpackage1/basic.py
+packageapple/mysubpackage2/__init__.py
+packageapple/mysubpackage2/basic.py
