@@ -1,0 +1,10 @@
+lick/__init__.py,sha256=mtu9NJ06kTkkkKewRc1DhKwH9pwcgpBP0Q44kNamH6I,95
+lick/__version__.py,sha256=VrXpHDu3erkzwl_WXrqINBm9xWkcyUy53IQOj042dOs,22
+lick/lick.py,sha256=pe42EulasjvD8KjeeTsxYmJ4zlSPfbnkoq1wWoyYHTo,6805
+lick/_vendor/vectorplot/core.cpython-311-darwin.so,sha256=gt7oOfBEzz2Sh2_hGLqtxqTs4H-KIIDkA8smww_9s88,213056
+lick-0.3.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+lick-0.3.0.dist-info/METADATA,sha256=c92AO8Jband8Wbb0b6VaoDONfVG9fIviDl5N9ov10t8,3039
+lick-0.3.0.dist-info/WHEEL,sha256=cU6VF8zMujJUYVnyrnmNyXlIvfRQGwjK6RJnNnUKSGE,111
+lick-0.3.0.dist-info/entry_points.txt,sha256=htA8ypbyM6Y5dPIhFVbzczFqcdrsbEGPgeK1K2N_-VU,40
+lick-0.3.0.dist-info/top_level.txt,sha256=OamAjU-xaiaKmBZ4J_2cg0Q55ERMn9L8QeoA8hWn2os,5
+lick-0.3.0.dist-info/RECORD,,
