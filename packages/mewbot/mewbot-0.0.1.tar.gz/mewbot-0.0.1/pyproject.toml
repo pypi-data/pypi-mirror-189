@@ -1,0 +1,40 @@
+# SPDX-FileCopyrightText: 2021 - 2023 Mewbot Developers <mewbot@quicksilver.london>
+#
+# SPDX-License-Identifier: CC0-1.0
+
+[tool.black]
+
+line-length = 94
+
+[tool.pylint."MASTER"]
+
+persistent = "yes"
+unsafe-load-any-extension = "no"
+
+jobs=1
+
+[tool.pylint."MESSAGES CONTROL"]
+
+disable=[
+    "missing-module-docstring",
+    "missing-class-docstring",
+    "missing-function-docstring",
+]
+
+[tool.coverage.run]
+
+branch=true
+relative_files=true
+source=[
+	"src",
+	"examples"
+]
+dynamic_context = "test_function"
+
+[tool.coverage.report]
+
+fail_under=40.0
+
+[tool.coverage.html]
+
+show_contexts=true
