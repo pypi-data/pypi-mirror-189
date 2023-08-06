@@ -1,0 +1,5 @@
+setup.py
+six.moves.egg-info/PKG-INFO
+six.moves.egg-info/SOURCES.txt
+six.moves.egg-info/dependency_links.txt
+six.moves.egg-info/top_level.txt
