@@ -1,0 +1,2 @@
+[console_scripts]
+hemabot = hemabot.api:start_bot
