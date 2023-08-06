@@ -1,0 +1,1 @@
+cdk_cloudformation_karte_eventbridge_documentdb_module
