@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/Trayifier.egg-info/PKG-INFO
+src/Trayifier.egg-info/SOURCES.txt
+src/Trayifier.egg-info/dependency_links.txt
+src/Trayifier.egg-info/entry_points.txt
+src/Trayifier.egg-info/requires.txt
+src/Trayifier.egg-info/top_level.txt
+src/trayifier/__init__.py
+src/trayifier/__main__.py
+src/trayifier/config.toml
