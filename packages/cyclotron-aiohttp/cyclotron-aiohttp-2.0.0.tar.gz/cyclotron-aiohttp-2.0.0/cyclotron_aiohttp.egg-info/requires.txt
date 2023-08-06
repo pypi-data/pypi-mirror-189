@@ -1,0 +1,6 @@
+reactivex~=4.0
+cyclotron~=2.0
+aiohttp~=3.8
+
+[test]
+pytest
