@@ -1,0 +1,5 @@
+setup.py
+django.utils.deprecation.egg-info/PKG-INFO
+django.utils.deprecation.egg-info/SOURCES.txt
+django.utils.deprecation.egg-info/dependency_links.txt
+django.utils.deprecation.egg-info/top_level.txt
