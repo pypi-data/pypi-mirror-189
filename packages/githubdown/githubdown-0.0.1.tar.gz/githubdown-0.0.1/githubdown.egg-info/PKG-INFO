@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: githubdown
+Version: 0.0.1
+Summary: Download files and folders from Github
+Requires-Python: >=3.6
+
+Download files and folders from Github with automated parsing of urls

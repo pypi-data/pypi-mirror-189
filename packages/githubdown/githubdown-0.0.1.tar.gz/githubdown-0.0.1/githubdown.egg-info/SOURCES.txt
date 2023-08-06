@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+githubdown/__init__.py
+githubdown/githubdown.py
+githubdown.egg-info/PKG-INFO
+githubdown.egg-info/SOURCES.txt
+githubdown.egg-info/dependency_links.txt
+githubdown.egg-info/entry_points.txt
+githubdown.egg-info/top_level.txt
+test/test.py
