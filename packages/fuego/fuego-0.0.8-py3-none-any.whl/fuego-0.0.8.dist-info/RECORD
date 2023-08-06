@@ -1,0 +1,9 @@
+fuego/__init__.py,sha256=BQrUDmVSFeklHBu5helGuT0EXQVyLXYlE8T6zJRniTk,67
+fuego/run_on_spaces.py,sha256=CwKHNinSMtapokKh8HV_qW_frUKSP3wioN4F9fC6Pz8,20215
+fuego/runtime.py,sha256=wvmOuv4Ul_NEV4vInUMwJO5oZbenr5sqYqA2ifI4Q8E,1252
+fuego-0.0.8.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+fuego-0.0.8.dist-info/METADATA,sha256=x0dGZCXGcftB9RpO8RH6ILr9UeQdGOI_DyQ9mxep8hk,1507
+fuego-0.0.8.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+fuego-0.0.8.dist-info/entry_points.txt,sha256=AvXs-bIVFezmzlwg_POoivHAq1sjpey6uj0k4Np31lU,54
+fuego-0.0.8.dist-info/top_level.txt,sha256=iDAt8GNM7og2ZNkvDgPw284BwT--Zrf3vVj9RvZb03g,6
+fuego-0.0.8.dist-info/RECORD,,
