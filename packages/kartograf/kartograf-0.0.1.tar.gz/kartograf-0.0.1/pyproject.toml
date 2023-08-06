@@ -1,0 +1,26 @@
+[build-system]
+requires=['setuptools>=61.0']
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kartograf"
+version = "0.0.1"
+description = "This is a package for setting up FE-calculations"
+readme="README.md"
+authors=[
+    {name="Benjamin Ries", email="benjamin-ries@outlook.com"},
+    {name="Richard J Gowers", email="richardjgowers@gmail.com"},
+]
+dependencies = [
+  "scipy", 
+  "numpy",
+  "rdkit",
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+[project.urls]
+"Homepage" = "https://github.com/OpenFreeEnergy/kartograf"
