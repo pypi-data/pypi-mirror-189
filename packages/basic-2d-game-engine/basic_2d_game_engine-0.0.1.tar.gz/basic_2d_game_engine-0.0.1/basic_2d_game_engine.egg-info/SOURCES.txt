@@ -1,0 +1,8 @@
+license.txt
+setup.py
+basic_2d_game_engine/__init__.py
+basic_2d_game_engine/location.py
+basic_2d_game_engine.egg-info/PKG-INFO
+basic_2d_game_engine.egg-info/SOURCES.txt
+basic_2d_game_engine.egg-info/dependency_links.txt
+basic_2d_game_engine.egg-info/top_level.txt
