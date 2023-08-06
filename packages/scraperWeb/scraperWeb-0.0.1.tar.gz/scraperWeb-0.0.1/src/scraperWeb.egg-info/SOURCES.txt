@@ -1,0 +1,8 @@
+pyproject.toml
+setup.cfg
+src/mypackage/__init__.py
+src/mypackage/main.py
+src/scraperWeb.egg-info/PKG-INFO
+src/scraperWeb.egg-info/SOURCES.txt
+src/scraperWeb.egg-info/dependency_links.txt
+src/scraperWeb.egg-info/top_level.txt
