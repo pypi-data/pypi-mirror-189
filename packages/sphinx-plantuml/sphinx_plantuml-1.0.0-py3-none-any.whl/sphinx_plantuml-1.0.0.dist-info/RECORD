@@ -1,0 +1,10 @@
+sphinx_plantuml-1.0.0-py3.9-nspkg.pth,sha256=bvCbvTDhKUCTNtrCbu6HVe8TsYC4G4-hRkXeHdEJ6t4,574
+sphinxcontrib/plantuml/__init__.py,sha256=GJSOi0lppNmaagrUR3Y1rVV5VqhABowzfGSRc5vISSo,416
+sphinxcontrib/plantuml/encode.py,sha256=0AZJedx88bdrsodaffpYczPrKe7sLg3FkXtSEjpTmj8,567
+sphinxcontrib/plantuml/plantuml.py,sha256=Yx-DnyINuuJdY_hTJMQGpJh1YU_foywC2KTaFHKXjiI,1558
+sphinx_plantuml-1.0.0.dist-info/LICENSE,sha256=Vot8uzKSWKegMihfFBd1WHYNr4fHzkF5y36voMiEVJg,1065
+sphinx_plantuml-1.0.0.dist-info/METADATA,sha256=HPqNinJ5kg5D4bpskAsyZfKF42GzU-xfJkTyQ5cZXSE,2476
+sphinx_plantuml-1.0.0.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+sphinx_plantuml-1.0.0.dist-info/namespace_packages.txt,sha256=VJrV3_vaiKQVgVpR0I1iecxoO0drzGu-M0j40PVP2QQ,14
+sphinx_plantuml-1.0.0.dist-info/top_level.txt,sha256=VJrV3_vaiKQVgVpR0I1iecxoO0drzGu-M0j40PVP2QQ,14
+sphinx_plantuml-1.0.0.dist-info/RECORD,,
