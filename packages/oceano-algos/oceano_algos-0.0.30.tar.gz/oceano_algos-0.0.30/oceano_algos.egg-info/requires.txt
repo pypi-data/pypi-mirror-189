@@ -1,0 +1,13 @@
+beautifulsoup4
+fastcore
+loguru
+numpy
+oceano-algos
+pandas
+plotly
+psycopg2-binary
+seaborn
+selenium
+sqlalchemy
+sshtunnel
+undetected_chromedriver
