@@ -1,0 +1,8 @@
+datapack_generator/__init__.py,sha256=AU3q0vA3RH355vnICbvstUUhyzGBSZRagY21Ixyf8qk,56
+datapack_generator/generator.py,sha256=JmjSsObCPL8ExVIs1I3k6Mr2BnDlFWMPP1uAX7oYcGM,533
+datapack_generator/lib.py,sha256=IjgBRGdRe29OV9aWV_76Dqo2yH25hmBsPTR61S5DGN4,1111
+datapack_generator-2023.2.4.dev4.dist-info/LICENSE,sha256=miZSzaGB7lA3YeeYseeM_VO31VS84SSzRMiOComnH4o,1065
+datapack_generator-2023.2.4.dev4.dist-info/METADATA,sha256=2cbA0BdFw_tQbDtxTArdcypBapX5UGZQ6FyqaeqavJw,634
+datapack_generator-2023.2.4.dev4.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+datapack_generator-2023.2.4.dev4.dist-info/top_level.txt,sha256=6-anAOnd-nPsuEi0byHKnWX7nmdttn0lERRN2yq7Y78,19
+datapack_generator-2023.2.4.dev4.dist-info/RECORD,,
