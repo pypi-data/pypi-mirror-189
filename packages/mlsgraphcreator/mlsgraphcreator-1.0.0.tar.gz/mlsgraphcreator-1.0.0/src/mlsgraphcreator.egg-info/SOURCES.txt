@@ -1,0 +1,10 @@
+MANIFEST.in
+pyproject.toml
+src/mlsgraphcreator/__init__.py
+src/mlsgraphcreator/__main__.py
+src/mlsgraphcreator.egg-info/PKG-INFO
+src/mlsgraphcreator.egg-info/SOURCES.txt
+src/mlsgraphcreator.egg-info/dependency_links.txt
+src/mlsgraphcreator.egg-info/entry_points.txt
+src/mlsgraphcreator.egg-info/requires.txt
+src/mlsgraphcreator.egg-info/top_level.txt
