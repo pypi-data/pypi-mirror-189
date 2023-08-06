@@ -1,0 +1,12 @@
+setup.py
+math/__init__.py
+math/_a.py
+math/setup.py
+mySubPackage1/__init__.py
+mySubPackage1/basic.py
+mySubPackage2/__init__.py
+mySubPackage2/basic.py
+packageball.egg-info/PKG-INFO
+packageball.egg-info/SOURCES.txt
+packageball.egg-info/dependency_links.txt
+packageball.egg-info/top_level.txt
