@@ -1,0 +1,9 @@
+mewbot/api/__init__.py,sha256=1oLL20yLB1GL9IbFiZD8OReDqiCpFr-yetIR6x1cNkI,23
+mewbot/api/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mewbot/api/registry.py,sha256=3ItfBOV426AJ0w8lBGNlf5H2VnMKymQ8ZQ6oqk-bVTk,5714
+mewbot/api/v1.py,sha256=oAvqITeRnnVtF8GeOQlTCfxaBZcDRkQjbHyPlvSIQQs,6778
+mewbot_api-0.0.1.dist-info/LICENSE.md,sha256=5ahkWtlKqyTjEt0Ma-KqVCNuuTdEgLGxTqXGFZiHT9U,1287
+mewbot_api-0.0.1.dist-info/METADATA,sha256=kAs6o7H-b8cq38CSGGDNEm9GuCvYckD1DetTwDeFJTU,4859
+mewbot_api-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+mewbot_api-0.0.1.dist-info/top_level.txt,sha256=PevFtRfqeuN7_I12tyEOvXXFa571U4EpZnVD2zZPWjA,7
+mewbot_api-0.0.1.dist-info/RECORD,,
