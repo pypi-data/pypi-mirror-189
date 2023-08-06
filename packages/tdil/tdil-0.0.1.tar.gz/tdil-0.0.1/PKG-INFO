@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: tdil
+Version: 0.0.1
+Summary: Turkish word checker
+Home-page: https://github.com/aaltindas/tdil-0.0.1
+Author: Alper Altındaş
+Author-email: aaltindas.help@gmail.com
+Project-URL: Documentation, https://github.com/aaltindas/tdil-0.0.1
+Project-URL: Source Code, https://github.com/aaltindas/tdil-0.0.1
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## Version
+0.0.1
+
+## Python Version
+Python 3.10.8 is supported. 
+
+## Installation
+
+[sudo] pip install tdil
+
+## Quickstart
+```python
+
+from src.sep import Turkce
+
+turkce = Turkce()
+
+word = input("Enter A Word")
+
+is_turkish = turkce.seperator(word)
+print(is_turkish)
+# If your word is turkish word return True.
+# If your word isn't turkish word return False.

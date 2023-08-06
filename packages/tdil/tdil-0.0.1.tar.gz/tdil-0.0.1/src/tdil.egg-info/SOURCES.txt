@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+src/tdil.egg-info/PKG-INFO
+src/tdil.egg-info/SOURCES.txt
+src/tdil.egg-info/dependency_links.txt
+src/tdil.egg-info/requires.txt
+src/tdil.egg-info/top_level.txt
