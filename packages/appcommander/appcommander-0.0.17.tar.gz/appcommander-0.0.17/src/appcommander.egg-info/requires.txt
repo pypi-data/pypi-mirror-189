@@ -1,0 +1,8 @@
+xmltodict
+pyannotate
+pytest-cov
+typeguard
+uiautomator
+pyasn1
+pyasn1-modules
+pyOpenSSL
