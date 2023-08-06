@@ -1,0 +1,2 @@
+[console_scripts]
+evap = evalipy.__main__:main

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "evalipy"
+version = "0.0.5"
+description = "Evalipy is a framework for evaluating & comparing machine learning models."
+readme = "README.MD"
+authors = [{ name = "Mehrdad Heshmat", email = "mehrddy@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["ML", "Machine Learning", "model", "evaluation", "framework"]
+dependencies = [
+'joblib',
+'numpy',
+'pandas',
+'scikit-learn',
+]
+requires-python = ">=3.8"
+
+# [project.optional-dependencies]
+# dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
+
+[project.urls]
+Homepage = "https://github.com/evalipy/evalipy/"
+
+[project.scripts]
+evap = "evalipy.__main__:main"
