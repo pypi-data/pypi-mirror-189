@@ -1,0 +1,14 @@
+mkdocs_simple/__init__.py,sha256=88EIMpwlTW2fQ7_eebzlRIuOtKtHw4meTAGVt_rO8IA,62
+mkdocs_simple/__main__.py,sha256=Kk1qCcUdVoOSXxgbgNUcSmGiktwwjIUW9xlPj4AJnC4,32
+mkdocs_simple/_version.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+mkdocs_simple/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mkdocs_simple/cli/app.py,sha256=5-RNzKmad38_ZZq9jW4z5FvaBpIMqmKTkNdehe5-IEo,381
+mkdocs_simple/gitlab.py,sha256=6Yp8fYkvQUPkqPXJCvEn8WJln49_6W3hPplk4B4Qo5M,835
+mkdocs_simple/plugin.py,sha256=ubHlXRouqAE5BFcwOqsrsVlGHYb_jL-0BcDoOh2wkVE,1158
+mkdocs_simple/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+mkdocs_simple/site_config.py,sha256=Nm2emSZ4WhEu6N79WleFmtUZ4OzazbvU9TOruYfdpUo,293
+mkdocs_simple-0.0.1.dist-info/LICENSE,sha256=UDFIQQFQ8ZCm4ivf_U4uw0uag4cdIBU9AKP-dFnS4Hw,1092
+mkdocs_simple-0.0.1.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+mkdocs_simple-0.0.1.dist-info/entry_points.txt,sha256=B28LK0KvER9M0lLUWe24u1wLYI85yn3FYpVXa7X2Wvk,59
+mkdocs_simple-0.0.1.dist-info/METADATA,sha256=rEbycnUhMUDpYv0F1S0MTYLaPG_5BoSSa0Vme2hmTBs,1406
+mkdocs_simple-0.0.1.dist-info/RECORD,,
