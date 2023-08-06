@@ -1,0 +1,13 @@
+mstr_robotics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mstr_robotics/hello_beer.py,sha256=NHg5tLQ0XB-CGnnjzF5awRUluNQ0ico3BB8xNU5-8TM,5710
+mstr_robotics/helper.py,sha256=yc-jKy2gODn5l8l3UiuvKVEL0HqRQe8g5ixFNTgzkc4,955
+mstr_robotics/logger.py,sha256=dcwcFlPWWb89lWPV4u8DtustZOfEC5N8Nh20UAxkqUY,958
+mstr_robotics/lu_data.py,sha256=vo_wEraYAKfyjiOFDQRvIkZECzfSuKshOyp6V_gk9IU,3397
+mstr_robotics/mig_create_short_cut.py,sha256=3Piyj5_oNZe9WsTITGBI0PK5z3paLkpW8TX1vpMNqNw,16256
+mstr_robotics/mstr_classes.py,sha256=CV8JF5a3-EyhG0RxBvQButseyU8S1fzdzN2nYmjFvaM,13387
+mstr_robotics/test.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+MSTR_Robotics_magerdaniel-0.0.54.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+MSTR_Robotics_magerdaniel-0.0.54.dist-info/METADATA,sha256=BAg9ebT3xaPuPiynMck8BzbhgBNHGGbdhDhSLrIW8NM,292
+MSTR_Robotics_magerdaniel-0.0.54.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+MSTR_Robotics_magerdaniel-0.0.54.dist-info/top_level.txt,sha256=Z6VzTLWrwTpiVNderxcTgFqDap4Ock93V1_tADj3TRE,14
+MSTR_Robotics_magerdaniel-0.0.54.dist-info/RECORD,,
