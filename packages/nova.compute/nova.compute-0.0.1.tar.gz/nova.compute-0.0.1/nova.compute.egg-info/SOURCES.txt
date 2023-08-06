@@ -1,0 +1,5 @@
+setup.py
+nova.compute.egg-info/PKG-INFO
+nova.compute.egg-info/SOURCES.txt
+nova.compute.egg-info/dependency_links.txt
+nova.compute.egg-info/top_level.txt
