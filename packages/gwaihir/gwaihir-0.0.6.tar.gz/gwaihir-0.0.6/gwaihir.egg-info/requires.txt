@@ -1,0 +1,17 @@
+numpy
+pandas
+datetime
+argparse
+matplotlib
+ipywidgets
+ipython
+ipyvolume
+scipy
+xrayutilities
+tables
+h5glance
+PyQt5
+h5py
+jupyter
+bokeh
+panel
