@@ -1,0 +1,12 @@
+BoatBuddy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+BoatBuddy/__main__.py,sha256=C08Qu6uDAq9cX_RFxxcPdwP4q8whUV0HxhFybmrawWY,13400
+BoatBuddy/clock_plugin.py,sha256=60hs0QpqbSI031BxnfU0fx7sVReA42FIz24pbrrcT6s,2873
+BoatBuddy/config.py,sha256=cPkrruL6-YHke44GJj9HI48GZUDCwkXSl6fd-8zs5K0,701
+BoatBuddy/generic_plugin.py,sha256=uvVQ2J1FVCjf6mV6XNBPd49alY80FHIetB3Ie8NelXg,860
+BoatBuddy/nmea_plugin.py,sha256=I8b1JpHwik7qYFufqXuS_hVzxGLCaNTaVKHcbMIkpQs,16390
+BoatBuddy/utils.py,sha256=BghyHdBCxjStgHwhco-fjq7qDof5MEqFyK1X46nwzI4,1529
+BoatBuddy/victron_plugin.py,sha256=bO4WqmEmhT5K-rEXn6LHRx1Cu33-4qMLuw2SW6HTU84,13630
+boatbuddy-0.0.8.dist-info/METADATA,sha256=cH2E2emmn9zef511HYcZjYTRQB2-X9F-PBiPeONavxo,2363
+boatbuddy-0.0.8.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+boatbuddy-0.0.8.dist-info/licenses/LICENSE,sha256=taOdjnMPXJjimRygqdTnyvU5wHOos4lYnc1S1FL-do0,1069
+boatbuddy-0.0.8.dist-info/RECORD,,
