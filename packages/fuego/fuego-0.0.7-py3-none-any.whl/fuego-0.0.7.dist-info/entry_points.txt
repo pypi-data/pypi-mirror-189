@@ -1,0 +1,2 @@
+[console_scripts]
+fuego = fuego.run_on_spaces:cli_run
