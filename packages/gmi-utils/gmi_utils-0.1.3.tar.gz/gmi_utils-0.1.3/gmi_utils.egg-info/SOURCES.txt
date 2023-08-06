@@ -1,0 +1,7 @@
+README.md
+setup.cfg
+setup.py
+gmi_utils.egg-info/PKG-INFO
+gmi_utils.egg-info/SOURCES.txt
+gmi_utils.egg-info/dependency_links.txt
+gmi_utils.egg-info/top_level.txt
