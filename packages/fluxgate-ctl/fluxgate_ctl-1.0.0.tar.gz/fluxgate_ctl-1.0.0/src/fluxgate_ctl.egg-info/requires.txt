@@ -1,0 +1,5 @@
+zmq
+matplotlib
+
+[dev]
+tox

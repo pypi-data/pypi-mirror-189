@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: fluxgate-ctl
+Version: 1.0.0
+Summary: fluxgate_ctl package for TUCAN
+Author-email: Bryerton Shaw <bryerton@triumf.ca>
+Description-Content-Type: text/markdown
+Provides-Extra: dev

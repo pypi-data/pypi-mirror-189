@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/discovery.py
+src/fluxgate_ctl.py
+src/fluxgate_ctl.egg-info/PKG-INFO
+src/fluxgate_ctl.egg-info/SOURCES.txt
+src/fluxgate_ctl.egg-info/dependency_links.txt
+src/fluxgate_ctl.egg-info/requires.txt
+src/fluxgate_ctl.egg-info/top_level.txt

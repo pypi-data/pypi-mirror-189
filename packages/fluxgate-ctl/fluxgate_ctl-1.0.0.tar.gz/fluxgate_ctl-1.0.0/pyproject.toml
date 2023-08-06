@@ -1,0 +1,31 @@
+[project]
+name = "fluxgate_ctl"
+description = "fluxgate_ctl package for TUCAN"
+version = "1.0.0"
+authors = [
+    { name = "Bryerton Shaw", email = "bryerton@triumf.ca" }
+]
+readme = "README.md"
+dependencies = [
+    "zmq",
+    "matplotlib"
+]
+
+[project.optional-dependencies]
+dev = [
+    "tox"
+]
+
+[build-system]
+requires = [ "setuptools >= 35.0.2", "wheel >= 0.29.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py310
+
+[testenv]
+deps = pytest >= 3.0.0, <4
+commands = pytest
+"""
