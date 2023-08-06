@@ -1,0 +1,10 @@
+setup.py
+aistis_calculator/Calculator.py
+aistis_calculator/__init__.py
+aistis_calculator/action.py
+aistis_calculator/test.py
+aistis_calculator.egg-info/PKG-INFO
+aistis_calculator.egg-info/SOURCES.txt
+aistis_calculator.egg-info/dependency_links.txt
+aistis_calculator.egg-info/not-zip-safe
+aistis_calculator.egg-info/top_level.txt
