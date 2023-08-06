@@ -1,0 +1,3 @@
+[mkdocs.plugins]
+heti = mkdocs_heti_plugin.plugin:HetiPlugin
+
