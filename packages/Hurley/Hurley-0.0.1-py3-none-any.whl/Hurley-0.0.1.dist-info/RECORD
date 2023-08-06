@@ -1,0 +1,15 @@
+Hurley/__init__.py,sha256=NYl9syCiR9nyBcmP5rLQX9CAvlrRparsZ1IVaChkzYk,159
+Hurley/abstractClasses.py,sha256=AJHk-0XpnzbUtRq2oa8zxGnTs9DjcYF00KdH1a2crfg,543
+Hurley/clustering.py,sha256=CkYKBTU-RWemC6wKQhGChvlrF3lDvlMkqlzm-J06GnY,1172
+Hurley/matrix.py,sha256=pO7fJ9m2wxTsec6Cq4vF72qGAHmHqqhkXNCFrmdylZU,3820
+Hurley/sgd.py,sha256=J3naL6LnJRoZvHClYlfCguSeAPyX0EtHKsPzRXZYwjI,1655
+Hurley/testClustering.py,sha256=XELQqhOHMdV-6wq7eWnfpiriTe7hkl0pgJU7iStftRw,1371
+Hurley/testMatrix.py,sha256=bPdxAhWhGHdmVu6ueu0PV_q71jTJlhHc994OAJnPxUE,949
+Hurley/testSGD.py,sha256=sGanSwpV-gE3aI-CkkI63RCJpn4PUUezHiDv-OjnoGw,538
+Hurley/testVector.py,sha256=mcMaBB6Ga4K5cwMwejdWECO60Sc7AY1SqrqdS-a79H0,4514
+Hurley/vector.py,sha256=OeFnQuXbYscwtNslVGV0lL5mvtrTfrmeYevfq1TnM3M,5303
+Hurley-0.0.1.dist-info/LICENSE,sha256=uBr-ac1MfmxnzaovoKntc1ElNSIBVYTy5ogR3PpKzT0,1070
+Hurley-0.0.1.dist-info/METADATA,sha256=EBlh2wp-kNk9osj7KAEKAsqQ2hcjv7N1vdj_qrY7pyw,3654
+Hurley-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+Hurley-0.0.1.dist-info/top_level.txt,sha256=9eRaKMVqLsxniuuMHlL_4DGGSsFO013JAkwVEi3jfQs,7
+Hurley-0.0.1.dist-info/RECORD,,
