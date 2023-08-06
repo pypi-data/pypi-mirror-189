@@ -1,0 +1,10 @@
+cpufeature/__init__.py,sha256=z5_ZmrHhIOMF2uLjeNsSAK9cL4I9dVcoBRelb5vnxxg,397
+cpufeature/bitmask.py,sha256=hmKz9dN1_tp-7is5zkyrSRvGNZXPW10s2TT5w8DTM6E,578
+cpufeature/extension.cp38-win32.pyd,sha256=NLBLOVATxmmgjWz9VEpy4oT9upX-GtTeE-l5lPNyMRQ,14336
+cpufeature/test_cpufeature.py,sha256=TOUeK4Zk7RqYKdfeZbX9QhwM50V4iUodmMeQlEjSJFw,614
+cpufeature/version.py,sha256=7VyHp48OUTQQUylqTtD2KYmDnZ1N5qU2-WFiy4BFYEo,23
+cpufeature-0.2.1.dist-info/LICENSE,sha256=TS7vZ51fr5JFNLzBMmRjIumoUs5QrlYWaU4Llfe4J10,6671
+cpufeature-0.2.1.dist-info/METADATA,sha256=grmnI9qCTw6X3-fQ5zji5AOFoabEX9n7XLhyXVfSxdY,5543
+cpufeature-0.2.1.dist-info/WHEEL,sha256=Q7KGyTRxVwi3WXoWZ0tr1_wclwXGEbxf3IXLj3MR-7U,96
+cpufeature-0.2.1.dist-info/top_level.txt,sha256=G23qXMS9SHRE_GS0a-ZbXokWy8wczZuxCLPXjsJ65V4,11
+cpufeature-0.2.1.dist-info/RECORD,,
