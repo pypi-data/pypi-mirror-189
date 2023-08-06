@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+hieutest/singlesignondemotest.egg-info/PKG-INFO
+hieutest/singlesignondemotest.egg-info/SOURCES.txt
+hieutest/singlesignondemotest.egg-info/dependency_links.txt
+hieutest/singlesignondemotest.egg-info/requires.txt
+hieutest/singlesignondemotest.egg-info/top_level.txt
