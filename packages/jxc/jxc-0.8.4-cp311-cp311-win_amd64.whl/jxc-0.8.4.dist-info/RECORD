@@ -1,0 +1,13 @@
+_pyjxc.cp311-win_amd64.pyd,sha256=IguIIBKoFKuiDbEwK8in6-iA9STpfHM9TeoYRA8lawQ,665600
+_pyjxc/__init__.pyi,sha256=dIQnxa3nZNYBWdaojomMwPSOCIBqUu_U80_AykdYkE4,28689
+_pyjxc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jxc/__init__.py,sha256=TdTD3Y_wD7pCZCRuFR2AWh1U33jWq4tbG8_rHRGbRuo,767
+jxc/decode.py,sha256=6IooagXKuiN7gkhkjmxZ-qNSGcb1VkDU4N0-cWTtXKE,5483
+jxc/encode.py,sha256=TzjlDOSMxnBiCrMrzka40FPV63K_tuq84BaPgegdzTU,6210
+jxc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jxc/util.py,sha256=FCYIUYF2aMlSgZY1gAY96_4Wx6gdtgj5qt4nq6J2Zhs,3542
+jxc-0.8.4.dist-info/LICENSE.MIT,sha256=nH4uY6WxhlfSSNe4X6ltM99jMumXVdpUmQ9owt76eEY,1057
+jxc-0.8.4.dist-info/METADATA,sha256=6YpFM_uh1zkPCSbHCXuAGkP9-ZoC8cukrYL_VbKAppE,7775
+jxc-0.8.4.dist-info/WHEEL,sha256=wklNeoByNLhdCl-oEQTdaHIeDl4q9zaQVqAlPxUEgLU,102
+jxc-0.8.4.dist-info/top_level.txt,sha256=niybJljSWIfSBzGgDDg36GV-XCHtdj8pWlYqnMlq3KU,11
+jxc-0.8.4.dist-info/RECORD,,
