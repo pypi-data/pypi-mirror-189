@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: fsearchpy
+Version: 0.4
+Summary: This package searches for a specified text pattern in various documents, including office and PDFs and prints results including file name, path and size while displaying progress and completion time
+Home-page: UNKNOWN
+Author: Dawood
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Requires-Dist: pymupdf
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: python-pptx
+Requires-Dist: python-docx
+
+UNKNOWN
+
+
