@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+searchdups/__init__.py
+searchdups/debug.py
+searchdups/version.py
+searchdups.egg-info/PKG-INFO
+searchdups.egg-info/SOURCES.txt
+searchdups.egg-info/dependency_links.txt
+searchdups.egg-info/entry_points.txt
+searchdups.egg-info/requires.txt
+searchdups.egg-info/top_level.txt
