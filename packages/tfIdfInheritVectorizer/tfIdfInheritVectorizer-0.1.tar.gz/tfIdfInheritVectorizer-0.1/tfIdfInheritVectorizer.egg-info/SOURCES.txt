@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+tfIdfInheritVectorizer/__init__.py
+tfIdfInheritVectorizer.egg-info/PKG-INFO
+tfIdfInheritVectorizer.egg-info/SOURCES.txt
+tfIdfInheritVectorizer.egg-info/dependency_links.txt
+tfIdfInheritVectorizer.egg-info/requires.txt
+tfIdfInheritVectorizer.egg-info/top_level.txt
+tfIdfInheritVectorizer/feature_extraction/__init__.py
+tfIdfInheritVectorizer/feature_extraction/vectorizer.py
+tfIdfInheritVectorizer/tests/__init__.py
+tfIdfInheritVectorizer/tests/vectorizer_test.py
