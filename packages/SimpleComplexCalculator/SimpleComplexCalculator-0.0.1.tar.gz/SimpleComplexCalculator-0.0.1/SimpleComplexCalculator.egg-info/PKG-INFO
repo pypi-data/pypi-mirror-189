@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: SimpleComplexCalculator
+Version: 0.0.1
+Summary: Calculateur simple entre nombres complexes
+Home-page: UNKNOWN
+Author: Tom Ebermeyer
+Author-email: tom.ebermeyer@cpe.fr
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
