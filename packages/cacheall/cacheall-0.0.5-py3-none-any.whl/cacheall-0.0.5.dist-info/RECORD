@@ -1,0 +1,13 @@
+cacheall/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cacheall/cachetest.py,sha256=ouoBRvcCNZ3s3zJ0Xxm8vXhf3IMJwIU9D2NDq5F1j5A,2481
+cacheall/Algorithms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cacheall/Algorithms/dllnode.py,sha256=f_-ZenC7Ai5vGhYTo74hoO87IML94QRpbOMWtIPgLQE,289
+cacheall/Algorithms/doublylinkedlist.py,sha256=433BeTeVFZaRTHfofAXISoW_hrOkoZAlJ75INdonOZ0,1009
+cacheall/EvictionPolicies/FIFOevictionpolicy.py,sha256=u1fpX4gQewEzDRkYlkZjzcMDz2aqgZ8k5YqWf4C_Qik,1603
+cacheall/EvictionPolicies/LIFOevictionpolicy.py,sha256=CS4ZZ3QuiPIJuHbuzx41Zk8I7jMW_A9OwFuSi8BOl80,1603
+cacheall/EvictionPolicies/LRUevictionpolicy.py,sha256=XJoqXMDiYKpusuTiCBo_lt1H6qg9Q0U7vCPpvRtsTYE,1841
+cacheall/EvictionPolicies/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cacheall-0.0.5.dist-info/METADATA,sha256=N1f81xMUcWXTohW0mfZwHDxBa2uMpHDo272NNS2-sB0,510
+cacheall-0.0.5.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+cacheall-0.0.5.dist-info/top_level.txt,sha256=h1MPneAPhBz0XRCrQSlZcPuLiJe5aMT3wPxXA3O-E2o,9
+cacheall-0.0.5.dist-info/RECORD,,
