@@ -1,0 +1,17 @@
+simplify/__init__.py,sha256=zP05zMboJt4lumVckh727cCVAOcYGRm_MYoHcEmeXbA,1652
+simplify/fuse.py,sha256=jtkWM6VzhtzsxiudSJKPdLUqdQxtfurYeaGYwKT2Bsc,6190
+simplify/layers.py,sha256=p6hZIHNvp-NBzNjQ2dzKjaylvWdlRYjEREXp6CmB_Dg,4042
+simplify/propagate.py,sha256=aLP0Kebp-DjkFZ8KaTdM7xYb5lBKXFaH2mKUR-IUs2E,7552
+simplify/remove.py,sha256=djIY_kr9CZKi8T_2ZpxfhhXo9sB39fy5OX6bZAsYVjo,6744
+simplify/utils.py,sha256=zypJv6AwH8rtxLuBM5IHbvQqiCt9IDtbCZhAJlJmibQ,5636
+test/__init__.py,sha256=4MYQlz6oBnzBE0mURh1U-qaDr_ZrZA8avS5yy6nirKI,110
+test/utils.py,sha256=tNvDVq7mRwY-G1JcUkI2_nTGOCcROxYvab_sDGRAqxo,1753
+test/modules/__init__.py,sha256=4MYQlz6oBnzBE0mURh1U-qaDr_ZrZA8avS5yy6nirKI,110
+test/modules/fuse.py,sha256=PhU0VxHVXiQMrhCeU1vqfUuwXmq0CqW4ga6bw1VRqt4,920
+test/modules/propagate.py,sha256=quwrB3hz3m21HtSgTJblT4EYgqAY5fMQOhgM08qdfaM,1344
+test/modules/remove.py,sha256=gBNfTACNmQJUtCvLngxVEYgrvHT1GsFhO7odm13SrjA,1420
+torch_simplify-1.1.4.dist-info/LICENSE,sha256=h7Z-zAAZgVWnvYAh66TpIiRrASkMC--Ivt6c3TJkq8I,1516
+torch_simplify-1.1.4.dist-info/METADATA,sha256=GCZAK6NTqSbsQPLBDG7F2qd_HxepgkoyU_ioYGAeWeM,3070
+torch_simplify-1.1.4.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+torch_simplify-1.1.4.dist-info/top_level.txt,sha256=1RMWYA9VbFDUIG1jbG2IXUmxpHtHzr8P4cncgyKz5xM,14
+torch_simplify-1.1.4.dist-info/RECORD,,
