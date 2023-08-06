@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/DGR_package/BlastXML_to_alignment_module.py
+src/DGR_package/DGR_module.py
+src/DGR_package/__init__.py
+src/DGR_package/generate_VR_TR_RT_summary_table_module.py
+src/DGR_package/parse_hmmer_module.py
+src/DGR_package/run_module.py
+src/DGR_package/sliding_window_master_module.py
+src/DGR_package.egg-info/PKG-INFO
+src/DGR_package.egg-info/SOURCES.txt
+src/DGR_package.egg-info/dependency_links.txt
+src/DGR_package.egg-info/top_level.txt
+src/DGR_package/data/Custom_DGR_RT.hmm
