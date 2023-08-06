@@ -1,0 +1,9 @@
+LICENSE,txt
+README.md
+pyproject.toml
+src/Pydvault/Syndbox.py
+src/Pydvault/__init__.py
+src/Pydvault.egg-info/PKG-INFO
+src/Pydvault.egg-info/SOURCES.txt
+src/Pydvault.egg-info/dependency_links.txt
+src/Pydvault.egg-info/top_level.txt

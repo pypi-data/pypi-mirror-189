@@ -1,0 +1,47 @@
+# Installation 
+pip install Pydvault
+
+# Use
+import pandas as pd
+from Pydbox import Syndbox
+
+df=pd.read_excel('/content/filename.xlsx')
+df1=Syndbox.TESI(df, Equation='Euc_p1', 
+                    start=0.01,
+                    augmentation_factor=10)
+                              
+df1.pd_frame(save=True)
+df1.arr()
+
+# Output
+Pd_Dataframe/numpy.array
+
+# Parameters 
+start: (float), default=0.01, The starting value of the angle sequence. 
+stop: (int), default=1, The end value of the angle's sines vector. Should be always 1 because the angle's max sine is 1. 
+augmentation_factor: (int), default (0.01), the number of times the data is augmented. should be from 0 to infinity.
+Equation: (default='Euc_p1'), Either the Euclidian or the following transformed Euclidian formulas. 
+
+'Euc_p1': The linear polynomial.
+'Euc_p2': The quadratic polynomial. 
+'Euc_p3': The cubic polynomial.
+'Euc_Log': The log-transformed euclidian formula. 
+
+# Documentation
+The TESI was developed in a study context, the study paper was published in Elsivier. 
+A detailed description behind the logical of the TESI can be found in the paper.
+NOTE: PLEASE CITE THE PAPER. 
+
+Publisher name: Elsevier
+Journal: Computers and Electronics in Agriculture
+Volume: 206
+Issue: March 2023
+Pages: 107646
+DOI: https://doi.org/10.1016/j.compag.2023.107646
+
+ 
+ 
+ 
+ 
+ 
+ 

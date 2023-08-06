@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Pydvault"
+version = "0.0.1"
+authors = [
+  { name="Radhwane Derraz", email="derrazradhwane@gmail.com" },
+]
+description = "A Python package for synthetic data augmentation"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://doi.org/10.1016/j.compag.2023.107646"
+"Bug Tracker" = "https://doi.org/10.1016/j.compag.2023.107646"
