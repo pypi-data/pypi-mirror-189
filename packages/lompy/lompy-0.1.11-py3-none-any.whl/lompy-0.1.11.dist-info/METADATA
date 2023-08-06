@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: lompy
+Version: 0.1.11
+Summary: Local Multiscale Analysis of Marked Point Processes
+Home-page: https://gitlab.com/sroux67/LomPy
+Author: ['Stéphane G. Roux, Janka Lengyel']
+Author-email: jankalengyel@gmail.com
+License: GNU AGPLv3
+License-File: LICENSE
+
