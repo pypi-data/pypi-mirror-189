@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.py
+flask_thumbnails/__init__.py
+flask_thumbnails/storage_backends.py
+flask_thumbnails/thumbnail.py
+flask_thumbnails/utils.py
+flask_thumbnails.egg-info/PKG-INFO
+flask_thumbnails.egg-info/SOURCES.txt
+flask_thumbnails.egg-info/dependency_links.txt
+flask_thumbnails.egg-info/not-zip-safe
+flask_thumbnails.egg-info/top_level.txt
