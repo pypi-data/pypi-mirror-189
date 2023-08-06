@@ -1,0 +1,14 @@
+django_onerror/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_onerror/admin.py,sha256=hlH6qtcsYi36lT-D0xKi3rWf6AzAMo9KXQYHf5j-LWI,687
+django_onerror/models.py,sha256=B-miuAK5tgvBtP4fO9D4xiKYeTTGaEdedsaJ1M5HHec,1224
+django_onerror/tests.py,sha256=DV4PwpYr1bPXjDWiJSGUXrgrPYO-OUbfxMeIqOfcC30,61
+django_onerror/urls.py,sha256=zwAqg8aW7MIMClh5lJAyTVaq-DTELU6zFdH3gat716o,219
+django_onerror/views.py,sha256=n6-Pa-K2IzQF6Z1Mer_RF3_xHEfTBUlrU93wFVEsnzI,1104
+django_onerror/migrations/0001_initial.py,sha256=_QaU_Vg3v4mZV-4TQx9Zi8s9yEdSXWOEtfPFcjt4o_U,1728
+django_onerror/migrations/0002_onerrorreportinfo_extra.py,sha256=TZBJDheSJgTlY0VjoB2p78vqKnCLkRxTHCzCsWiWQO4,524
+django_onerror/migrations/0003_auto_20190317_0002.py,sha256=PyZN8s7B42lbEdjAaxi3HQofqLbBvhq4UdkXAn3iJqA,775
+django_onerror/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_onerror-1.1.1.dist-info/METADATA,sha256=HhCa9B3qtmFB-4KfDNJvCZkuHuhXDsmSgTtsKxX9GQc,2471
+django_onerror-1.1.1.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
+django_onerror-1.1.1.dist-info/top_level.txt,sha256=byL7BzZSG0aPoxMx3nIbJY5cvEmbTxM1tOtZOkHuSOs,15
+django_onerror-1.1.1.dist-info/RECORD,,
