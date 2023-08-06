@@ -1,0 +1,9 @@
+plaintext_daw/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plaintext_daw/cli.py,sha256=XbR6KoQCObrXPRYmFtWYwd2tE-Es53X5LW6iRG9EOjQ,1213
+plaintext_daw/gui.py,sha256=NOgcFKaoLe-5nQE5diAe7L4YBzYF81hKXcoIX-Vv7RQ,834
+plaintext_daw/lib.py,sha256=c_k_SqbIJ55mvvEfAStJEIOoCGxfC0YvTq4jMfnZbv4,977
+plaintext_daw-0.0.0.dist-info/METADATA,sha256=iELK09eQ2Pgk390ZDhRU5L9Qngij8eUanhAJhCO6QvM,265
+plaintext_daw-0.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+plaintext_daw-0.0.0.dist-info/entry_points.txt,sha256=W_xokPSr0iaifQHn44J_fr-0WPWsULSOkNhlK8xq0wg,69
+plaintext_daw-0.0.0.dist-info/top_level.txt,sha256=v9p3wXoH4Eg55p4RkTBahYJZc-oM561B-KuFOG6RJhU,14
+plaintext_daw-0.0.0.dist-info/RECORD,,

@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: plaintext-daw
+Version: 0.0.0
+Summary: Plaintext DAW
+Home-page: UNKNOWN
+Author: Steve Grice
+Author-email: steve@pagekeytech.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: numpy
+Requires-Dist: pyyaml
+
+UNKNOWN
+
+
