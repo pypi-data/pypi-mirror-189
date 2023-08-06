@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+_init_.py
+setup.py
+turtlepolish.egg-info/PKG-INFO
+turtlepolish.egg-info/SOURCES.txt
+turtlepolish.egg-info/dependency_links.txt
+turtlepolish.egg-info/requires.txt
+turtlepolish.egg-info/top_level.txt

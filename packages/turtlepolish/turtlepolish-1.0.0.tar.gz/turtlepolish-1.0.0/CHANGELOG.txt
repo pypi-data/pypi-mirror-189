@@ -1,0 +1,4 @@
+Change Log
+==========
+
+version 1.0.0: - The first update (beta). Add 8 new commands !
