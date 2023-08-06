@@ -1,0 +1,2 @@
+[console_scripts]
+tablign = tablign:cli.main
