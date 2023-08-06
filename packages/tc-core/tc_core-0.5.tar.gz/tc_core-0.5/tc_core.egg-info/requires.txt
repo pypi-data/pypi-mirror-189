@@ -1,0 +1,6 @@
+libthumbor>=2.0.2
+thumbor>=7.0.10
+
+[tests]
+pyvows
+coverage
