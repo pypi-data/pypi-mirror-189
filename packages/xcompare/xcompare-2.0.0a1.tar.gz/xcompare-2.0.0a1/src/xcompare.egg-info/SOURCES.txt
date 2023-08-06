@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/xcompare/__init__.py
+src/xcompare/plot.py
+src/xcompare/xcompare.py
+src/xcompare/xr_stats.py
+src/xcompare.egg-info/PKG-INFO
+src/xcompare.egg-info/SOURCES.txt
+src/xcompare.egg-info/dependency_links.txt
+src/xcompare.egg-info/requires.txt
+src/xcompare.egg-info/top_level.txt
