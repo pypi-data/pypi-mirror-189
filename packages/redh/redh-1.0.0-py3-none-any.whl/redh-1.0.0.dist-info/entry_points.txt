@@ -1,0 +1,2 @@
+[console_scripts]
+redh = redh.redh:main
