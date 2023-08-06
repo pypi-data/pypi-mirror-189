@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+qafunnypet/__init__.py
+qafunnypet/qafunnypet.py
+qafunnypet.egg-info/PKG-INFO
+qafunnypet.egg-info/SOURCES.txt
+qafunnypet.egg-info/dependency_links.txt
+qafunnypet.egg-info/top_level.txt
