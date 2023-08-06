@@ -1,0 +1,57 @@
+# essential poetry
+
+<https://typer.tiangolo.com/tutorial/package/>
+
+## Step 1 Init project and dependencies
+
+```bash
+poetry new ray-chunkit-chung-gum-gum-pistol
+cd ray-chunkit-chung-gum-gum-pistol
+poetry add typer[all]
+poetry add pytest[all]
+```
+
+## Step 2 Define app
+
+Define app path
+
+```toml
+[tool.poetry.scripts]
+gum = "ray_chunkit_chung_gum_gum_pistol.main:app"
+```
+
+Install local
+
+```bash
+poetry install
+```
+
+Try app local
+
+```bash
+gum --help
+gum load
+gum shoot
+```
+
+## Step 2 Distribute app
+
+Build wheel file
+
+```bash
+poetry build
+```
+
+Test by changing to a new venv and execute
+
+```bash
+pip install ray-chunkit-chung-gum-gum-pistol\dist\ray_chunkit_chung_gum_gum_pistol-0.1.0-py3-none-any.whl
+```
+
+## Step 3 Upload to pypi
+
+Create PYPI_TOKEN and export to env. Then config pypi-token in poetry
+
+```bash
+poetry config pypi-token.pypi $PYPI_TOKEN
+```
