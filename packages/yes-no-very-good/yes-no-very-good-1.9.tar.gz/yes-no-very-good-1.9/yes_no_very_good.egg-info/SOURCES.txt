@@ -1,0 +1,10 @@
+LICENSE
+README
+setup.py
+cracker_say/__init__.py
+cracker_say/cracker_say.py
+yes_no_very_good.egg-info/PKG-INFO
+yes_no_very_good.egg-info/SOURCES.txt
+yes_no_very_good.egg-info/dependency_links.txt
+yes_no_very_good.egg-info/not-zip-safe
+yes_no_very_good.egg-info/top_level.txt
