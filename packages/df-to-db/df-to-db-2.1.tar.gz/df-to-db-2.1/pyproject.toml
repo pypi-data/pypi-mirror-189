@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools", "wheel", "setuptools_scm[toml]"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "df-to-db"
+version = "2.1"
+authors = [
+    {name = "Masum Billal", email = "billalmasum93@gmail.com"},
+]
+description = "An awesome package that can write pandas dataframe to different databases"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {file = "LICENSE"}
+
+dependencies = [
+    "pandas",
+    "pymysql",
+    "cryptography",
+    "pymongo",
+    "sqlalchemy <= 1.4.0",
+    "requests",
+    "mysqlclient",
+    "sphinx",
+    "sphinx-book-theme",
+    "sphinx-rtd-theme",
+    "psycopg2-binary",
+    "sqlalchemy-utils",
+    "dnspython",
+    "pymssql",
+    "google-cloud-bigquery",
+    "pyarrow",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "coverage",
+    "tox",
+    "black",
+    "flake8",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/proafxin/df_to_db"
+
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"] 
