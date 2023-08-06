@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+CMDpy/ConsoleClass.py
+CMDpy/__init__.py
+CMDpy/tablesAndAny.py
+CMDpy/tagsClasses.py
+CMDpy/textClass.py
+CMDpy.egg-info/PKG-INFO
+CMDpy.egg-info/SOURCES.txt
+CMDpy.egg-info/dependency_links.txt
+CMDpy.egg-info/top_level.txt
