@@ -1,0 +1,8 @@
+pyaudio
+SpeechRecognition
+requests
+tqdm
+torch
+torchvision
+torchaudio
+openai-whisper
