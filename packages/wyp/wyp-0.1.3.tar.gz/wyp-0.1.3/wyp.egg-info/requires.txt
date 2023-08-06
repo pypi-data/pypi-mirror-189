@@ -1,0 +1,4 @@
+wandb>=0.13.9
+flask>=1.1.2
+pandas
+flask_cors
