@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/requests_util/__init__.py
+src/requests_util/requests_util.py
+src/requests_util.egg-info/PKG-INFO
+src/requests_util.egg-info/SOURCES.txt
+src/requests_util.egg-info/dependency_links.txt
+src/requests_util.egg-info/top_level.txt
