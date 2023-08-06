@@ -1,0 +1,14 @@
+_pytest
+atomicwrites
+attr
+attrs
+colorama
+importlib_metadata
+iniconfig
+packaging
+pluggy
+py
+pyparsing
+pytest
+pytest_ordering
+tomli
