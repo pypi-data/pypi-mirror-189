@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+stot/__init__.py
+stot/__main__.py
+stot/ffexec.py
+stot.egg-info/PKG-INFO
+stot.egg-info/SOURCES.txt
+stot.egg-info/dependency_links.txt
+stot.egg-info/entry_points.txt
+stot.egg-info/requires.txt
+stot.egg-info/top_level.txt
