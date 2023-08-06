@@ -1,0 +1,5 @@
+setup.py
+pydasi.egg-info/PKG-INFO
+pydasi.egg-info/SOURCES.txt
+pydasi.egg-info/dependency_links.txt
+pydasi.egg-info/top_level.txt
