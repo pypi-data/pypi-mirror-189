@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: digisondeindices
+Version: 2.0.1
+Summary: Download and parse Digisonde data products.
+Home-page: https://github.com/sunipkm/digisondeindices
+Author: Sunip K. Mukherjee
+Author-email: sunipkmukherjee@gmail.com
+Keywords: aeronomy,aurora,ionosphere
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: python-dateutil
+Requires-Dist: requests
+Requires-Dist: numpy
+Requires-Dist: pandas (>=0.23.0)
+Requires-Dist: xarray
+Requires-Dist: netcdf4
+Provides-Extra: lint
+Requires-Dist: flake8 ; extra == 'lint'
+Requires-Dist: flake8-bugbear ; extra == 'lint'
+Requires-Dist: flake8-builtins ; extra == 'lint'
+Requires-Dist: flake8-blind-except ; extra == 'lint'
+Requires-Dist: mypy ; extra == 'lint'
+Provides-Extra: plot
+Requires-Dist: matplotlib ; extra == 'plot'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+
