@@ -1,0 +1,15 @@
+project_press/__init__.py,sha256=da1PTClDMl-IBkrSvq6JC1lnS-K_BASzCvxVhNxN5Ls,13
+project_press/__main__.py,sha256=3W-1n9-YYHcew7k2QmQBidRAinmi9qfWD_2GoO6Dma4,160
+project_press/cli.py,sha256=uETtW47ldwwKcvQBgV6R6S1iOpOja0JrnaOby4kJTuE,1500
+project_press/clone.py,sha256=VIp3RN2b35rn22VhNlqhkVXvkQSI7Ypx5vbj2ih1Rss,3449
+project_press/questions.py,sha256=XwlzZuSxdTy87oyyrb9I6cmzCKlh834kf7Fpbm9-488,4512
+project_press/template.py,sha256=pEFvg5JRPrz68GGmqvgI3wiCZfJGAvFaqiSQEr-_6ho,1987
+project_press/utils.py,sha256=acTzJGSfJ9vnnbkp5ryeewDbAefCzTnIusvVs4IObAc,551
+project_press/validate.py,sha256=pkKPdvvf7e8ta0iFv8F_MyZzhWjlshSETje1VfOmmYs,2484
+project_press-0.9.0.dist-info/LICENSE,sha256=rnNT6g1a17QL6947eHNCfdnFv-HnljrDFyfy0F18Djs,1086
+project_press-0.9.0.dist-info/METADATA,sha256=ogt7Qmir0QkIJ2HcODBEqDntcnU1IIASbPEwzXNNGSc,1725
+project_press-0.9.0.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
+project_press-0.9.0.dist-info/entry_points.txt,sha256=iFYgcu6p7jujKdp5qvXpCdO18PWcqP2k3xNZK_mICXk,62
+project_press-0.9.0.dist-info/top_level.txt,sha256=lgI6jAEejWhCDp3PxgAaQ3oVMorq_XwxNYK9ca4pv_I,14
+project_press-0.9.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+project_press-0.9.0.dist-info/RECORD,,

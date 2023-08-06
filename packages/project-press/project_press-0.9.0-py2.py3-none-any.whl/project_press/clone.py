@@ -1,0 +1,107 @@
+import os
+import shutil
+import sys
+
+import jinja2
+from boltons import fileutils
+from prompt_toolkit import prompt as user_input
+from prompt_toolkit.validation import ValidationError, Validator
+
+from . import questions, template
+from .utils import get_jinja_env, var2bool
+
+
+def clone_tree(args, ctx, questions):
+    # copy tree from source to dest, rendering templates
+    # along the way.
+    env = get_jinja_env()
+
+    # TODO: Verify before questions
+    # Get the template source directory (from command line)
+    # It's the folder containing another folder named "template"
+    source_path = args["template"]
+    source_path = os.path.join(source_path, "template")
+    source_path = os.path.abspath(source_path)
+
+    if not os.path.isdir(source_path):
+        sys.exit('error: no "template" named folder found in source template directory. No templating can be done')
+
+    # For every source file, replace templates, and create file
+    output = args.get("output_dir", ".")
+    for src in fileutils.iter_find_files(source_path, "*", include_dirs=True):
+        dst = os.path.relpath(src, source_path)
+        try:
+            dst = env.from_string(dst).render(**ctx)
+        except jinja2.exceptions.UndefinedError as err:
+            sys.exit(f'error: templating error during "{src}" file: {err}')
+        dst = os.path.join(output, dst)
+
+        if os.path.islink(src):
+            # TODO: Change destination
+            assert False, "change link destination"
+        elif os.path.isdir(src):
+            fileutils.mkdir_p(dst)
+        else:
+            fileutils.mkdir_p(os.path.dirname(dst))
+            with open(src, encoding="UTF-8") as fd:
+                dst_contents = fd.read()
+
+            try:
+                dst_contents = env.from_string(dst_contents).render(**ctx)
+            except jinja2.exceptions.UndefinedError as err:
+                sys.exit(f'error: while rendering "{src}", encountered template error: {err}')
+
+            with open(dst, mode="w", encoding="UTF-8") as fd:
+                fd.write(str(dst_contents))
+    return ctx
+
+
+def clean_tree(args, ctx, files):
+    if not files:
+        return
+
+    # Prepare path
+    output_dir = args["output_dir"]
+    template_path = os.path.join(os.getcwd(), output_dir)
+    template_path = os.path.abspath(template_path)
+
+    env = get_jinja_env()
+
+    for file in files:
+        path = file["path"]
+        when = file["when"]
+
+        when = env.from_string(when).render(**ctx)
+        when = var2bool(when)
+        if not when:
+            continue
+
+        action = file["action"]
+        if action == "remove":
+            path = os.path.abspath(os.path.join(template_path, path))
+            if not path.startswith(template_path):
+                sys.exit("error: can only delete files in copy's subpath")
+            if os.path.islink(path):
+                os.remove(path)
+            elif os.path.isfile(path):
+                os.remove(path)
+            elif os.path.isdir(path):
+                shutil.rmtree(path)
+        else:
+            sys.exit(f'error: unknown "action" for file path "{path}"')
+
+
+def clone(args):
+    """
+    Clone the tree, not a repository
+    """
+    # Get local folder from which we can load files from
+    data = template.get_data(args["template"])
+
+    bus = data.get("questions") or []
+
+    ctx = questions.prompt_questions(bus)
+    ctx = clone_tree(args, ctx, bus)
+
+    bus = data.get("files") or []
+    clean_tree(args, ctx, bus)
