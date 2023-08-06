@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-01 21:17+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\kmuhelper\external\multi_email_field\forms.py:10
+msgid "Enter valid email addresses."
+msgstr "Inserire indirizzi e-mail validi."
+
+#: .\kmuhelper\modules\main\models.py:660
+msgid "Referenznummer:"
+msgstr "Numero di riferimento:"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:33
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:197
+msgid "Art-Nr."
+msgstr "Articolo n."
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:33
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:197
+msgid "Bezeichnung"
+msgstr "Denominazione"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:33
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:197
+msgid "Anzahl"
+msgstr "Quantità"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:34
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:197
+msgid "Einheit"
+msgstr "Unità"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:34
+msgid "Preis"
+msgstr "Prezzo"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:34
+msgid "Total"
+msgstr "Totale"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:54
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:89
+msgid "Rabatt"
+msgstr "Sconto"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:115
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:559
+msgid "MwSt"
+msgstr "IVA"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:131
+#, python-format
+msgid "Rechnungsbetrag, zahlbar netto innert %s Tagen"
+msgstr "Importo netto, pagabile entro %s giorni"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:133
+msgid "Rechnungsbetrag"
+msgstr "Importo della fattura"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:149
+#, python-format
+msgid "%(days)s Tage %(percent)s%% Skonto"
+msgstr "%(days)s giorni %(percent)s%% di sconto"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:223
+msgid "Anzahl Produkte"
+msgstr "Numero di prodotti"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:420
+msgid "Vor der Einzahlung abzutrennen"
+msgstr "Da staccare prima del versamento"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:432
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:450
+msgid "Konto / Zahlbar an"
+msgstr "Conto / Pagabile a"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:439
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:457
+msgid "Referenz"
+msgstr "Riferimento"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:442
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:465
+msgid "Zahlbar durch"
+msgstr "Pagabile da"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:460
+msgid "Zusätzliche Informationen"
+msgstr "Informazioni aggiuntive"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:473
+msgid "Empfangsschein"
+msgstr "Ricevuta"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:474
+msgid "Zahlteil"
+msgstr "Sezione pagamento"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:477
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:486
+msgid "Währung"
+msgstr "Valuta"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:478
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:487
+msgid "Betrag"
+msgstr "Importo"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:479
+msgid "Annahmestelle"
+msgstr "Punto di accettazione"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:554
+msgid "Tel."
+msgstr "Tel."
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:555
+msgid "E-Mail"
+msgstr "E-Mail"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:557
+msgid "Web"
+msgstr "Web"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:576
+msgid "Ihre Kundennummer"
+msgstr "Il Suo codice cliente"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:577
+msgid "Bestellnummer"
+msgstr "Numero d'ordine"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:578
+msgid "Bestelldatum"
+msgstr "Data dell'ordine"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:580
+msgid "Datum"
+msgstr "Data"
+
+#: .\kmuhelper\modules\pdfgeneration\order\generator.py:582
+msgid "Rechnungsdatum"
+msgstr "Data della fattura"
+
+#: .\kmuhelper\modules\pdfgeneration\order\views.py:45
+msgid "Rechnung"
+msgstr "Fattura"
+
+#: .\kmuhelper\modules\pdfgeneration\order\views.py:48
+msgid "Lieferschein"
+msgstr "Nota di consegna"
+
+#: .\kmuhelper\modules\pdfgeneration\order\views.py:52
+msgid "Zahlungserinnerung"
+msgstr "Promemoria di pagamento"
+
+#: .\kmuhelper\modules\pdfgeneration\order\views.py:53
+#, python-format
+msgid ""
+"Geschätzter Kunde\n"
+"\n"
+"Vermutlich ist Ihnen entgangen, diese Rechnung vom %(original_date)s innert "
+"der gewährten Frist zu begleichen.\n"
+"Wir bitten Sie, dies innert %(days)d Tagen nachzuholen.\n"
+"\n"
+"Sollte sich Ihre Zahlung mit diesem Schreiben überkreuzen, so betrachten Sie "
+"dieses bitte als gegenstandslos."
+msgstr ""
+"Gentile Cliente\n"
+"\n"
+"Riteniamo che non abbiate pagato questa fattura dell' %(original_date)s "
+"entro i termini previsti.\n"
+"Vi chiediamo gentilmente di farlo entro %(days)d giorni.\n"
+"\n"
+"Se il vostro pagamento dovesse incrociarsi con questa lettera, consideratela "
+"irrilevante."
+
+#~ msgid "Ihr/e Ansprechpartner/in"
+#~ msgstr "La Sua controparte"
+
+#~ msgid "Ihre Bestellung vom"
+#~ msgstr "La Sua ordinazione del"
