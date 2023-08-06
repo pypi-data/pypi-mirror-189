@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/albanian-language/__init__.py
+src/albanian-language/main.py
+src/albanian_language.egg-info/PKG-INFO
+src/albanian_language.egg-info/SOURCES.txt
+src/albanian_language.egg-info/dependency_links.txt
+src/albanian_language.egg-info/top_level.txt
