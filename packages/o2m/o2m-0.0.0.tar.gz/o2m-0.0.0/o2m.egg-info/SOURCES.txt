@@ -1,0 +1,9 @@
+README.md
+setup.py
+o2m/__init__.py
+o2m/o2m.py
+o2m.egg-info/PKG-INFO
+o2m.egg-info/SOURCES.txt
+o2m.egg-info/dependency_links.txt
+o2m.egg-info/entry_points.txt
+o2m.egg-info/top_level.txt
