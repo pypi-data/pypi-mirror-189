@@ -1,0 +1,12 @@
+econll/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+econll/__main__.py,sha256=iBDDdOY2xXP6vbp-HVGRTBJS0jaFgMrOEZ-_UgDnUWU,4592
+econll/chunks.py,sha256=vyrEA3i_DrrO0DqeLsfqXS2LXOP8DVkYIZrx1lkT1I8,1306
+econll/reader.py,sha256=EdylvungltbpZeTEK7BVGnXhpNfuyffoBtykuJUY4WA,7479
+econll/report.py,sha256=r67N7vEjcot5hx6uEI85jgIzB-eEIusQa-xNePeTbPg,11035
+econll/scorer.py,sha256=gXA-HWGAnl5OAopNvLIhAYhxv-DpYdjYcJzTP3iyQt4,10799
+econll/tokens.py,sha256=_NUYCJB7A7JlvRGEE0_jRt2P0iKW_iOu9QlJN989T_U,10103
+econll-0.1.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+econll-0.1.2.dist-info/METADATA,sha256=rHgOpxvnAzOtUtWEgaaw6K5lWtD6H_w9yXeTDaAJQo0,3681
+econll-0.1.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+econll-0.1.2.dist-info/top_level.txt,sha256=_rCduYUFxXC4dfZ1a2KYuXFUlhxHxHmLvYEUhkkV5wU,7
+econll-0.1.2.dist-info/RECORD,,
