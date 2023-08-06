@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.11.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+ignore-vcs = true
+only-packages = true
+#include = [
+#  "src/*.py",
+#  "/tests",
+#]
+
+#[tool.hatch.build.sources]
+#"src/uniqcharspac/app/app.py" = "app/app.py"
+#"src/uniqcharspac/utils/functions.py" = "functions/functions.py"
+#"src/uniqcharspac/main.py" = "main.py"
+
+[project]
+name = "uniqchars"
+description = "Modern, extensible Python project"
+readme = "README.md"
+license = "LICENSE"
+requires-python = ">=3.8"
+authors = [{ name = "DIHTIAR VADYM", email = "dihtiar.vadym@gmail.dev" }]
+classifiers = [
+  "Development Status :: Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.8",
+  "Topic :: Software Development :: Build Tools",
+]
+dependencies = ["pytest==7.2.0"]
+
