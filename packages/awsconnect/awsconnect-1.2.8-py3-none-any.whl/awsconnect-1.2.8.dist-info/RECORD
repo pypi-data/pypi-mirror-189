@@ -1,0 +1,13 @@
+awsclient/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+awsclient/__main__.py,sha256=meDwAU0YCv7ktIit8Uyui1YIQkLeYVeL8xhwtEGFn-c,5822
+awsclient/config.py,sha256=jiRymMnNkWazT_JoavzeZlMf9h3H1OBbkjMxKaHapi0,2204
+awsclient/ec2.py,sha256=K15ULSCA2PNbsqvpmFYBVoDWjHxFOmxxAbdIdeoj0aQ,2122
+awsclient/s3.py,sha256=ttYJw8YL-d5gu7NMqnwO_VQa3t7aL1VxpDHiPaSNH_w,1595
+awsclient/sqs.py,sha256=4OTLf5ufYQnsCharooAKG-nxghRSYkXASiPKy_d8VAk,1940
+awsclient/sshclient.py,sha256=jwF1OGX5yBfI9tB4a4xw-penqUqWogWpvVqcWEf0Rhw,1883
+awsconnect-1.2.8.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+awsconnect-1.2.8.dist-info/METADATA,sha256=xx4J4ew7x3a8TSvpWEAWyTYqWFa3j0MqJaFEuHLml4A,419
+awsconnect-1.2.8.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+awsconnect-1.2.8.dist-info/entry_points.txt,sha256=fTe6m2roLLpMOK1DKvbutPwsHoLfxjSM8mqOU-J2xxo,56
+awsconnect-1.2.8.dist-info/top_level.txt,sha256=IwqFCvRzjZzSU1jkNNKo1m_o6B_whF_lp_b2O27HWh8,10
+awsconnect-1.2.8.dist-info/RECORD,,
