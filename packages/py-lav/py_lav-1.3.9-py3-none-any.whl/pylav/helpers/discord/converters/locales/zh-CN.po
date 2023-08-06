@@ -1,0 +1,80 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pylav\n"
+"POT-Creation-Date: 2023-02-02 22:15+0000\n"
+"PO-Revision-Date: 2023-02-02 22:33\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: pylav\n"
+"X-Crowdin-Project-ID: 535244\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /lib/pylav/helpers/discord/converters/locales/messages.pot\n"
+"X-Crowdin-File-ID: 3575\n"
+"Language: zh_CN\n"
+
+#: pylav/helpers/discord/converters/nodes.py:41
+msgid "Node with name or identifier `{user_input_value}` not found."
+msgstr "具有名称或标识符的节点 '{user_input_value}'未找到。"
+
+#: pylav/helpers/discord/converters/nodes.py:48
+msgid "Node with name or identifier `{user_input_value}` not found"
+msgstr "具有名称或标识符的节点 '{user_input_value}' 未找到"
+
+#: pylav/helpers/discord/converters/playlists.py:42
+msgid "Playlist with name or identifier `{user_input_value}` not found"
+msgstr "带有名称或标识符的播放列表 '{user_input_value}' 未找到"
+
+#: pylav/helpers/discord/converters/queries.py:52
+msgid "Query must be a playlist or album."
+msgstr "查询必须是播放列表或专辑。"
+
+#: pylav/helpers/discord/converters/radio.py:57
+msgid "Station with name `{user_input_value}` not found."
+msgstr "车站名称为 '{user_input_value}'未找到。"
+
+#: pylav/helpers/discord/converters/radio.py:74
+msgid "Radio Browser extension is currently disabled."
+msgstr "无线电浏览器扩展当前已禁用。"
+
+#: pylav/helpers/discord/converters/radio.py:94
+msgid "Unnamed"
+msgstr "无名"
+
+#: pylav/helpers/discord/converters/radio.py:141
+msgid "Tag with name `{user_input_value}` not found."
+msgstr "带有名称的标记 '{user_input_value}'未找到。"
+
+#: pylav/helpers/discord/converters/radio.py:158
+#: pylav/helpers/discord/converters/radio.py:200
+#: pylav/helpers/discord/converters/radio.py:240
+#: pylav/helpers/discord/converters/radio.py:279
+#: pylav/helpers/discord/converters/radio.py:318
+#: pylav/helpers/discord/converters/radio.py:357
+msgid "Radio Browser extension is currently disabled"
+msgstr "无线电浏览器扩展当前已禁用"
+
+#: pylav/helpers/discord/converters/radio.py:183
+msgid "Language with name `{user_input_value}` not found."
+msgstr "名称为 ' 的语言{user_input_value}'未找到。"
+
+#: pylav/helpers/discord/converters/radio.py:223
+msgid "State with name `{user_input_value}` not found."
+msgstr "名称为 ' 的州{user_input_value}'未找到。"
+
+#: pylav/helpers/discord/converters/radio.py:262
+msgid "Codec with name `{user_input_value}` not found."
+msgstr "名称为 ' 的编解码器{user_input_value}'未找到。"
+
+#: pylav/helpers/discord/converters/radio.py:301
+msgid "Country code `{user_input_value}` not found."
+msgstr "国家代码 '{user_input_value}'未找到。"
+
+#: pylav/helpers/discord/converters/radio.py:340
+msgid "Country with name `{user_input_value}` not found."
+msgstr "国家名称 '{user_input_value}'未找到。"
+

@@ -1,0 +1,324 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pylav\n"
+"POT-Creation-Date: 2023-02-02 22:15+0000\n"
+"PO-Revision-Date: 2023-02-02 22:33\n"
+"Last-Translator: \n"
+"Language-Team: Lithuanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && (n%100>19 || n%100<11) ? 0 : (n%10>=2 && n%10<=9) && (n%100>19 || n%100<11) ? 1 : n%1!=0 ? 2: 3);\n"
+"X-Crowdin-Project: pylav\n"
+"X-Crowdin-Project-ID: 535244\n"
+"X-Crowdin-Language: lt\n"
+"X-Crowdin-File: /lib/pylav/extension/red/ui/sources/locales/messages.pot\n"
+"X-Crowdin-File-ID: 3663\n"
+"Language: lt_LT\n"
+
+#: pylav/extension/red/ui/sources/equalizer.py:32
+msgid "Preset Name"
+msgstr "Iš anksto nustatytas pavadinimas"
+
+#: pylav/extension/red/ui/sources/equalizer.py:33
+msgid "Author"
+msgstr "Autorius"
+
+#: pylav/extension/red/ui/sources/equalizer.py:39
+msgid "Bundled with PyLav"
+msgstr "Kartu su PyLav"
+
+#: pylav/extension/red/ui/sources/generic.py:94
+#: pylav/extension/red/ui/sources/nodes.py:56
+msgid "Page {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} entries"
+msgstr "Puslapis {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} Įrašai"
+
+#: pylav/extension/red/ui/sources/generic.py:102
+#: pylav/extension/red/ui/sources/nodes.py:64
+msgid "Page 1 / 1 | 1 entry"
+msgstr "Puslapis 1 / 1 | 1 įrašas"
+
+#: pylav/extension/red/ui/sources/generic.py:104
+#: pylav/extension/red/ui/sources/nodes.py:66
+msgid "Page 1 / 1 | 0 entries"
+msgstr "Puslapis 1 / 1 | 0 įrašų"
+
+#: pylav/extension/red/ui/sources/nodes.py:106
+#: pylav/extension/red/ui/sources/nodes.py:260
+msgid "No"
+msgstr "Ne"
+
+#: pylav/extension/red/ui/sources/nodes.py:107
+#: pylav/extension/red/ui/sources/nodes.py:261
+msgid "Yes"
+msgstr "Taip"
+
+#: pylav/extension/red/ui/sources/nodes.py:153
+#: pylav/extension/red/ui/sources/nodes.py:307
+msgid "None / Unknown"
+msgstr "Nėra / nežinoma"
+
+#: pylav/extension/red/ui/sources/nodes.py:155
+#: pylav/extension/red/ui/sources/nodes.py:309
+msgid "Property"
+msgstr "Nuosavybė"
+
+#: pylav/extension/red/ui/sources/nodes.py:156
+#: pylav/extension/red/ui/sources/nodes.py:310
+msgid "Value"
+msgstr "Vertė"
+
+#: pylav/extension/red/ui/sources/nodes.py:157
+msgid "Latitude: {lat}\n"
+"Longitude: {lon}"
+msgstr "Platuma: {lat}\n"
+"Ilguma: {lon}"
+
+#: pylav/extension/red/ui/sources/nodes.py:163
+#: pylav/extension/red/ui/sources/nodes.py:317
+msgid "Region"
+msgstr "Regionas"
+
+#: pylav/extension/red/ui/sources/nodes.py:163
+#: pylav/extension/red/ui/sources/nodes.py:317
+msgid "N/A"
+msgstr "N/A"
+
+#: pylav/extension/red/ui/sources/nodes.py:164
+#: pylav/extension/red/ui/sources/nodes.py:318
+msgid "Coordinates"
+msgstr "Koordinatės"
+
+#: pylav/extension/red/ui/sources/nodes.py:165
+#: pylav/extension/red/ui/sources/nodes.py:319
+msgid "Host"
+msgstr "Priimančiosios"
+
+#: pylav/extension/red/ui/sources/nodes.py:166
+#: pylav/extension/red/ui/sources/nodes.py:320
+msgid "Port"
+msgstr "Uostas"
+
+#: pylav/extension/red/ui/sources/nodes.py:167
+#: pylav/extension/red/ui/sources/nodes.py:321
+msgid "Password"
+msgstr "Slaptažodis"
+
+#: pylav/extension/red/ui/sources/nodes.py:170
+#: pylav/extension/red/ui/sources/nodes.py:324
+msgid "SSL"
+msgstr "SSL"
+
+#: pylav/extension/red/ui/sources/nodes.py:171
+#: pylav/extension/red/ui/sources/nodes.py:325
+msgid "Available"
+msgstr "Pasiekiamas"
+
+#: pylav/extension/red/ui/sources/nodes.py:172
+#: pylav/extension/red/ui/sources/nodes.py:326
+msgid "Search Only"
+msgstr "Tik paieška"
+
+#: pylav/extension/red/ui/sources/nodes.py:173
+#: pylav/extension/red/ui/sources/nodes.py:327
+msgid "Players\n"
+"Connected\n"
+"Active"
+msgstr "Žaidėjų\n"
+"Prijungtas prie\n"
+"Aktyvusis"
+
+#: pylav/extension/red/ui/sources/nodes.py:177
+#: pylav/extension/red/ui/sources/nodes.py:331
+msgid "Frames Lost"
+msgstr "Prarasti rėmeliai"
+
+#: pylav/extension/red/ui/sources/nodes.py:182
+#: pylav/extension/red/ui/sources/nodes.py:336
+msgid "Uptime"
+msgstr "Uptime"
+
+#: pylav/extension/red/ui/sources/nodes.py:183
+#: pylav/extension/red/ui/sources/nodes.py:337
+msgid "CPU Load\n"
+"Lavalink\n"
+"System"
+msgstr "CPU apkrova\n"
+"Lavalink\n"
+"Sistema"
+
+#: pylav/extension/red/ui/sources/nodes.py:186
+#: pylav/extension/red/ui/sources/nodes.py:340
+msgid "Penalty"
+msgstr "Bausmė"
+
+#: pylav/extension/red/ui/sources/nodes.py:187
+#: pylav/extension/red/ui/sources/nodes.py:341
+msgid "Memory\n"
+"Used\n"
+"Free\n"
+"Allocated\n"
+"Reservable"
+msgstr "Atmintis\n"
+"Naudotas\n"
+"Nemokamas\n"
+"Skirta\n"
+"Rezervuojamas"
+
+#: pylav/extension/red/ui/sources/nodes.py:190
+#: pylav/extension/red/ui/sources/nodes.py:344
+msgid "Features"
+msgstr "Funkcijos"
+
+#: pylav/extension/red/ui/sources/nodes.py:203
+msgid "Page {page_num_value}/{total_pages_value} | {num_value} {plural_value}"
+msgstr "Puslapis {page_num_value}/{total_pages_value} | {num_value} {plural_value}"
+
+#: pylav/extension/red/ui/sources/nodes.py:207
+msgid "nodes"
+msgstr "Mazgų"
+
+#: pylav/extension/red/ui/sources/nodes.py:207
+msgid "node"
+msgstr "Mazgas"
+
+#: pylav/extension/red/ui/sources/nodes.py:311
+msgid "Latitude: {lat_value}\n"
+"Longitude: {lon_value}"
+msgstr "Platuma: {lat_value}\n"
+"Ilguma: {lon_value}"
+
+#: pylav/extension/red/ui/sources/nodes.py:362
+msgid "Page {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} nodes"
+msgstr "Puslapis {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} Mazgų"
+
+#: pylav/extension/red/ui/sources/nodes.py:370
+msgid "Page 1 / 1 | 1 node"
+msgstr "Puslapis 1 / 1 | 1 mazgas"
+
+#: pylav/extension/red/ui/sources/nodes.py:372
+msgid "Page 1 / 1 | 0 nodes"
+msgstr "Puslapis 1 / 1 | 0 mazgų"
+
+#: pylav/extension/red/ui/sources/player.py:64
+msgid "I am not currently playing anything on this server."
+msgstr "Šiuo metu šiame serveryje nieko nežaidžiu."
+
+#: pylav/extension/red/ui/sources/player.py:76
+msgid "Server Owner"
+msgstr "Serverio savininkas"
+
+#: pylav/extension/red/ui/sources/player.py:77
+msgid "Connected"
+msgstr "Prijungtas prie"
+
+#: pylav/extension/red/ui/sources/player.py:78
+msgid "Users in Voice Channel"
+msgstr "\"Voice Channel\" vartotojai"
+
+#: pylav/extension/red/ui/sources/player.py:80
+msgid "Queue Length"
+msgstr "Eilės ilgis"
+
+#: pylav/extension/red/ui/sources/player.py:82
+#: pylav/extension/red/ui/sources/player.py:89
+msgid "track"
+msgstr "Sekti"
+
+#: pylav/extension/red/ui/sources/player.py:82
+#: pylav/extension/red/ui/sources/player.py:89
+msgid "tracks"
+msgstr "Takelius"
+
+#: pylav/extension/red/ui/sources/player.py:86
+msgid "Queue History Length"
+msgstr "Eilių istorijos ilgis"
+
+#: pylav/extension/red/ui/sources/player.py:105
+msgid "Page {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} servers"
+msgstr "Puslapis {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} Serveriai"
+
+#: pylav/extension/red/ui/sources/player.py:113
+msgid "Page 1 / 1 | 1 server"
+msgstr "Puslapis 1 / 1 | 1 serveris"
+
+#: pylav/extension/red/ui/sources/player.py:115
+msgid "Page 1 / 1 | 0 servers"
+msgstr "Puslapis 1 / 1 | 0 serverių"
+
+#: pylav/extension/red/ui/sources/playlist.py:58
+#: pylav/extension/red/ui/sources/playlist.py:207
+msgid "Page {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} playlists"
+msgstr "Puslapis {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} grojaraščiai"
+
+#: pylav/extension/red/ui/sources/playlist.py:66
+#: pylav/extension/red/ui/sources/playlist.py:215
+msgid "Page 1 / 1 | 1 playlist"
+msgstr "Puslapis 1 / 1 | 1 grojaraštis"
+
+#: pylav/extension/red/ui/sources/playlist.py:68
+#: pylav/extension/red/ui/sources/playlist.py:217
+msgid "Page 1 / 1 | 0 playlists"
+msgstr "Puslapis 1 / 1 | 0 grojaraščių"
+
+#: pylav/extension/red/ui/sources/playlist.py:131
+msgid "Tracks in"
+msgstr "Takeliai"
+
+#: pylav/extension/red/ui/sources/playlist.py:143
+msgid "Page {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} tracks"
+msgstr "Puslapis {current_page_value} / {total_number_of_pages_value} | {total_number_of_entries_value} Takelius"
+
+#: pylav/extension/red/ui/sources/playlist.py:151
+msgid "Page 1 / 1 | 1 track"
+msgstr "Puslapis 1 / 1 | 1 takelis"
+
+#: pylav/extension/red/ui/sources/playlist.py:153
+msgid "Page 1 / 1 | 0 tracks"
+msgstr "Puslapis 1 / 1 | 0 takelių"
+
+#: pylav/extension/red/ui/sources/playlist.py:181
+msgid "Unknown"
+msgstr "Nežinomas"
+
+#: pylav/extension/red/ui/sources/playlist.py:186
+msgid "Identifier: {id_value}"
+msgstr "Identifikatorius: {id_value}"
+
+#: pylav/extension/red/ui/sources/playlist.py:187
+msgid "Tracks: {num_value}"
+msgstr "Takelius: {num_value}"
+
+#: pylav/extension/red/ui/sources/playlist.py:188
+msgid "Author: {name_value}"
+msgstr "Autorius: {name_value}"
+
+#: pylav/extension/red/ui/sources/playlist.py:189
+msgid "Scope: {scope_value}\n"
+msgstr "Mastas: {scope_value}\n"
+
+#: pylav/extension/red/ui/sources/playlist.py:197
+msgid "Playlists you can access in this server:"
+msgstr "Grojaraščiai, kuriuos galite pasiekti šiame serveryje:"
+
+#: pylav/extension/red/ui/sources/queue.py:96
+msgid "I am not currently playing anything in this server."
+msgstr "Šiuo metu šiame serveryje nieko nežaidžiu."
+
+#: pylav/extension/red/ui/sources/queue.py:110
+msgid "There is nothing in recently played."
+msgstr "Neseniai žaistame nėra nieko."
+
+#: pylav/extension/red/ui/sources/queue.py:112
+msgid "There is nothing currently being played"
+msgstr "Šiuo metu nieko nėra žaidžiama"
+
+#: pylav/extension/red/ui/sources/queue.py:142
+msgid "No active player found in server."
+msgstr "Serveryje nerasta aktyvaus žaidėjo."
+
+#: pylav/extension/red/ui/sources/queue.py:155
+msgid "There is nothing currently being played."
+msgstr "Šiuo metu nieko nežaidžiama."
+
