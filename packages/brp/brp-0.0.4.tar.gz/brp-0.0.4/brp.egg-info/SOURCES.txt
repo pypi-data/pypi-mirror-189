@@ -1,0 +1,10 @@
+LICENSE
+pyproject.toml
+readme.md
+brp/__init__.py
+brp.egg-info/PKG-INFO
+brp.egg-info/SOURCES.txt
+brp.egg-info/dependency_links.txt
+brp.egg-info/entry_points.txt
+brp.egg-info/requires.txt
+brp.egg-info/top_level.txt
