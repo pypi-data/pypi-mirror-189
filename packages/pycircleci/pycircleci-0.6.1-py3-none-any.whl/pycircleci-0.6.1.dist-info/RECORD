@@ -1,0 +1,10 @@
+pycircleci/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pycircleci/api.py,sha256=nUAoOZzIABvwoKQFKDoUjeCdrYYRTux_SYMBf-UrtpE,54520
+pycircleci/console.py,sha256=FFQJPYBoRayDAIMXmfZfl2okMK2JuzzulnK9um8KTjg,784
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_api.py,sha256=84nA_l-CsXNcBzQiwvdaDhkgmmcy2TSbN9LhakuVcaU,17834
+pycircleci-0.6.1.dist-info/LICENSE,sha256=JXvzp3pdaF-UxsKOy5-1s1cOFS0yRf-g1QmDDB99op8,1070
+pycircleci-0.6.1.dist-info/METADATA,sha256=7PtJtW_UmNIpZ_NF8Dl8MZ3_kyGcCaV0KjQr6mzEPxw,3203
+pycircleci-0.6.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pycircleci-0.6.1.dist-info/top_level.txt,sha256=6mTVQiuQVIO3OEpmZpJEyn48bFn0xxVYTKfTWrkFL8U,17
+pycircleci-0.6.1.dist-info/RECORD,,
