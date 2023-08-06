@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: bloomdata-rabidgeek
+Version: 0.0.1
+Summary: My First Package - BloomTech
+Project-URL: Homepage, https://github.com/rabidgeek/bloomdata-rabidgeek
+Project-URL: Bug Tracker, https://github.com/rabidgeek/bloomdata-rabidgeek/issues
+Author-email: RabidGeek <admin@jesseragsdale.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+This is the first package I ever created! This is part of Unit 3, Module 1 of BloomTech's Data Science program. 
