@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mphtestlib
+Version: 0.0.1
+Summary: MPH Test Package
+Home-page: https://github.com/MedvedMichael/mph_test_lib
+Author: Michael Medvediev
+Author-email: misha.medvediev2001@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# mph_test_lib
