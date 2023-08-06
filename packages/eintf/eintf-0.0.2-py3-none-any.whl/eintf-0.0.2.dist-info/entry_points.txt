@@ -1,0 +1,3 @@
+[console_scripts]
+wanda=eintf.eintf:run
+
