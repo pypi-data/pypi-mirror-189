@@ -1,0 +1,10 @@
+nudecrawler/__init__.py,sha256=d6cB0AwSJ1WjyPWAtdRWkuO30WVOhURyO0cKQmDCDNo,60
+nudecrawler/page.py,sha256=g7Cz-Q1-bydgMVMXNzXjZH7u4VQG172eDRYltreAaeA,3066
+nudecrawler/remoteimage.py,sha256=g4RgUdnHsiLdMQLS4BUpSaawpFU7VxomZNRt-lQFTrc,1375
+nudecrawler/verbose.py,sha256=PHvqeU-idxtExTOP2Qaj1qihFLN4lKGicLEtjjfUb-I,54
+nudecrawler/version.py,sha256=J42gPPqQESoYlwdukWo7PfC1E-VhEl47y_8RwP7VELY,15
+nudecrawler-0.0.1.data/scripts/nudecrawler,sha256=2UMJmBEi3UuNqd03H2jOQ5Grq9XIe-TkRMjG9YM7FTQ,1936
+nudecrawler-0.0.1.dist-info/METADATA,sha256=snX94J6ZmwiM_wMVqy0hxYL2oFesnknROjPBX9cTCtU,1941
+nudecrawler-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+nudecrawler-0.0.1.dist-info/top_level.txt,sha256=2KWIE7C5-TCDmlvZm_enSRkupE6LvFXIZBgVeDD8gnU,12
+nudecrawler-0.0.1.dist-info/RECORD,,
