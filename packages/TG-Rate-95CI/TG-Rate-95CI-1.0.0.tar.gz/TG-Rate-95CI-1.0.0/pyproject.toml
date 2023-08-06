@@ -1,0 +1,24 @@
+# pyproject.toml
+
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TG-Rate-95CI"
+version = "1.0.0"
+description = "Calculating the 95% confidence interval for the trend of Tide Gauge data"
+readme = "README.md"
+authors = [{ name = "Guoquan (Bob) Wang", email = "bob.g.wang@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/bob-Github-2020/TG_Rate_95CI"
+

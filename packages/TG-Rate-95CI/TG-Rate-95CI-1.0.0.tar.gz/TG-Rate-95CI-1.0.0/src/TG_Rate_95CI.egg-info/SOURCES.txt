@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/TG_Rate_95CI.py
+src/__init__.py
+src/TG_Rate_95CI.egg-info/PKG-INFO
+src/TG_Rate_95CI.egg-info/SOURCES.txt
+src/TG_Rate_95CI.egg-info/dependency_links.txt
+src/TG_Rate_95CI.egg-info/top_level.txt
