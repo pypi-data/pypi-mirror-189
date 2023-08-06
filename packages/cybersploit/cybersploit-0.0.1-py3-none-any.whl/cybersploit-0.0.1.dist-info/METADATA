@@ -1,0 +1,120 @@
+Metadata-Version: 2.1
+Name: cybersploit
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Jacob Barrow
+Author-email: jacob.h.barrow@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: sklearn
+Requires-Dist: sympy
+
+# Welcome to a reliable Linear Algebra library
+- Library of functions and classes for machine learning and deep learning applications
+- Ideally a one stop shop for Numpy and GPU based datastructures for AI
+
+- Wont work (in-development)
+## 100% Unit Tested
+- Minus the MatrixNP class
+
+## 100% Integration Tested
+
+## End Goal
+- Version 2 (next year after Project Fox)
+    - An async library that targets a heterogenous computing environment.
+        - Control over CPU and GPU threads
+- The creator is going to take a break for Project Fox and will be back with a better heterogenous environment next year!!!
+
+## Way Forward
+- All LA basics for Numpy
+- Reimplementation using shaders with Kompute
+- Variadic Generics -> Type Hinting for either Numpy or Kompute data structures
+
+## Why The Name???
+- Hugo Hurley Reyes. Enough said.
+- Seriously, since 2015 it appears that my life has been like this Lost character.
+
+## Vector
+```
+class VectorNP(BaseArrayNP):
+    def __init__(self, capacity, arr=[], _dtype=np.int8)
+    def dimensions(self)
+    def typeID(self)
+    def __len__(self)
+    def __mul__(self, other)
+    def __sub__(self, other)
+    def __add__(self, other)
+    def concat(self, other, _return=False)
+    def linearCombination(self, other)
+    def innerProduct(self, other)
+    def affinePrediction(self, weights)
+    def regressionModel(self, weights, b)
+    def norm(self, root=2)
+    def rms(self, divisor, root=2)
+    def normOfSum(self, other, root=2)
+    def distance(self, other, root=2)
+    def rmsDeviation(self, other, divisor=2, root=2)
+    def triangleInequality(self, other1, other2, root=2)
+    def standardDeviation(self)
+    def standardizedVersion(self, x)
+    def angleBetweenVectors(self, other, degrees=True)
+    def innerProductWithAngle(self, other, angle, degrees=False)
+    def normOfSumViaAngles(self, other, angle, degrees=False)
+    def correlationCoefficient(self, other)
+    def correlationCoefficient2(self, other)
+```
+
+## Clustering
+```
+class ClusteringNP:
+    def __init__(self, X, y, k = 2)
+    def norm(self, arr, root = 2)
+    def newPoint(self, vec, _return = True)
+```
+
+## Matrix
+```
+class MatrixNP(BaseArrayNP):
+    def __init__(self, matrix, _dtype = np.int8)
+    def transform2NP(self, matrix)
+    def operations(self, other, operation)
+    def __add__(self, other)
+    def __sub__(self, other)
+    def __mul__(self, other)
+    def __div__(self, other)
+    def __pow__(self, other)
+    def shape(self)
+    def concat(self, other, _axis = 0)
+    def mean(self, _axis = 1)
+    def variance(self, _axis = 0)
+    def standardDeviation(self, _axis = None)
+    def innerProduct(self, other)
+    def outerProduct(self, other)
+    def dot(self, other)
+    def cross(self, other)
+    def getLambdify(self, formula, variable)
+    def applyFunction(self, formula, variable)
+    def norm(self, root = 2)
+    def rms(self, root = 2)
+```
+
+## SGD
+```
+class SGD_NP:
+    def __init__(self, vector, formula, variables, learningRate)
+    def start(self, display = True)
+    def gradientFunction(self, option, equation, variables)
+    def gradient(self, equation, variables, option)
+    def gradientDescent(self, option="derivative", numIterations=50, tolerance=1e-06)
+```
+
+### Join Dumbledore's Army!!!
+
+
