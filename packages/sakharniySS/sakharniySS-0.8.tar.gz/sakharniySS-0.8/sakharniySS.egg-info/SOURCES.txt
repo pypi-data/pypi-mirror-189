@@ -1,0 +1,8 @@
+setup.py
+sakharniySS/__init__.py
+sakharniySS/pointB.py
+sakharniySS.egg-info/PKG-INFO
+sakharniySS.egg-info/SOURCES.txt
+sakharniySS.egg-info/dependency_links.txt
+sakharniySS.egg-info/requires.txt
+sakharniySS.egg-info/top_level.txt
