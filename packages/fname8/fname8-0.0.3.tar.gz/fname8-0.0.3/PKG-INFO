@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: fname8
+Version: 0.0.3
+Summary: A script to check for PEP 8 file naming conventions
+Author: Spencer Taylor-Brown
+Author-email: spencer@spencertaylorbrown.uk
+License-File: LICENSE

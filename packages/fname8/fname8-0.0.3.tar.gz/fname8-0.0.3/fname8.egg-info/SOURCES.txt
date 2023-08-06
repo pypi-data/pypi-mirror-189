@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+fname8/__init__.py
+fname8/pep8_filename.py
+fname8.egg-info/PKG-INFO
+fname8.egg-info/SOURCES.txt
+fname8.egg-info/dependency_links.txt
+fname8.egg-info/entry_points.txt
+fname8.egg-info/top_level.txt

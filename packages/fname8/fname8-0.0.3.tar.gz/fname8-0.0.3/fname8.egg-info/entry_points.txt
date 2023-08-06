@@ -1,0 +1,2 @@
+[console_scripts]
+fname8 = fname8.pep8_filename:main
