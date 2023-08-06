@@ -1,0 +1,10 @@
+fastcore
+pandas
+transformers
+tree-sitter==0.20.1
+
+[dev]
+black[jupyter]
+datasets
+nbdev
+twine
