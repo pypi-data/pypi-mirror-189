@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: persistable-clustering
+Version: 0.3.2
+Summary: Persistable: persistent and stable clustering. Versatile density-based clustering for exploratory data analysis.
+Maintainer: Luis Scoccola
+Maintainer-email: luis.scoccola@gmail.com
+License: 3-clause BSD
+License-File: LICENSE
+Requires-Dist: numpy (>=1.21)
+Requires-Dist: scipy (>=1.7)
+Requires-Dist: scikit-learn (>=1.0)
+Requires-Dist: cython (>=0.29)
+Requires-Dist: plotly (>=5.10)
+Requires-Dist: dash (>=2.6)
+Requires-Dist: jupyter-dash (>=0.4)
+Requires-Dist: diskcache (>=5.4)
+Requires-Dist: multiprocess (>=0.70)
+Requires-Dist: psutil (>=5.9)
+
