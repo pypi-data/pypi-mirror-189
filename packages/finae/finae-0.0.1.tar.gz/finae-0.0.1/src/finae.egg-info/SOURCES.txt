@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/finae/__init__.py
+src/finae.egg-info/PKG-INFO
+src/finae.egg-info/SOURCES.txt
+src/finae.egg-info/dependency_links.txt
+src/finae.egg-info/entry_points.txt
+src/finae.egg-info/requires.txt
+src/finae.egg-info/top_level.txt
