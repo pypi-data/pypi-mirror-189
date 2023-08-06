@@ -1,0 +1,8 @@
+setuptools
+Products.ZSQLMethods
+Zope>=5
+mysqlclient>=1.4
+
+[docs]
+Sphinx
+repoze.sphinx.autointerface
