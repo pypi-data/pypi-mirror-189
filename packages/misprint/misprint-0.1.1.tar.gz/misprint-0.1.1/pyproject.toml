@@ -1,0 +1,114 @@
+[tool.poetry]
+name = "misprint"
+version = "0.1.1"
+description = "A logging filter that 'misprints' your secrets"
+authors = ["Bernard Cooke <bernard-cooke@hotmail.com>"]
+readme = "README.rst"
+packages = [{ include = "misprint", from = "src" }]
+license = "MIT"
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+]
+
+[tool.poetry.urls]
+"Project Url" = "http://github.com/bernardcooke53/misprint"
+"Bug Tracker" = "https://github.com/bernardcooke53/misprint"
+Homepage = "http://github.com/bernardcooke53/misprint"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.12.0"
+isort = "^5.11.4"
+mypy = "^0.991"
+pytest = "^7.2.1"
+pytest-cov = "^4.0.0"
+coverage = { extras = ["toml"], version = "^7.0.5" }
+bandit = "^1.7.4"
+
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^5.3.0"
+
+[tool.pytest.ini_options]
+addopts = [
+  "-ra",
+  "--cache-clear",
+  "--cov=misprint",
+  "--cov-report",
+  "html:coverage-html",
+  "--cov-report",
+  "term",
+]
+python_files = ["tests/test_*.py", "tests/**/test_*.py"]
+
+[tool.bandit]
+targets = ["src"]
+
+[tool.coverage.run]
+omit = ["*/tests/*"]
+
+[tool.isort]
+profile = "black"
+skip = [".tox", "venv"]
+combine_as_imports = true
+group_by_package = true
+default_section = "THIRDPARTY"
+known_first_party = ["misprint"]
+known_tests = ["tests"]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+sections = [
+  "FUTURE",
+  "STDLIB",
+  "THIRDPARTY",
+  "FIRSTPARTY",
+  "TESTS",
+  "LOCALFOLDER",
+]
+
+[tool.mypy]
+python_version = 3.7
+
+mypy_path = "src"
+
+show_column_numbers = true
+show_error_context = true
+pretty = true
+error_summary = true
+
+follow_imports = "normal"
+ignore_missing_imports = true
+
+disallow_untyped_calls = true
+warn_return_any = true
+strict_optional = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_unused_configs = true
+disallow_any_generics = true
+
+warn_unreachable = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+cache_dir = "/dev/null"
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+allow_untyped_defs = true
+allow_incomplete_defs = true
+allow_untyped_calls = true
