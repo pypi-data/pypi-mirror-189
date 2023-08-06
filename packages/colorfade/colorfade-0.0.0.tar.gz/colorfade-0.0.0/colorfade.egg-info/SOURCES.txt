@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+colorfade/__init__.py
+colorfade/color.py
+colorfade.egg-info/PKG-INFO
+colorfade.egg-info/SOURCES.txt
+colorfade.egg-info/dependency_links.txt
+colorfade.egg-info/top_level.txt
