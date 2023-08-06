@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+CoverGPT/__init_.py
+CoverGPT/gptex.py
+CoverGPT/gui.py
+CoverGPT.egg-info/PKG-INFO
+CoverGPT.egg-info/SOURCES.txt
+CoverGPT.egg-info/dependency_links.txt
+CoverGPT.egg-info/requires.txt
+CoverGPT.egg-info/top_level.txt
