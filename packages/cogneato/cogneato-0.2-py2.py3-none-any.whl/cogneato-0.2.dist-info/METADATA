@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: cogneato
+Version: 0.2
+Summary: API for Cogneato, a tool for experimental optimization.
+Author-email: Cogneato <info@cogneato.xyz>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Project-URL: Home, https://cogneato.xyz
+
+
+# Cogneato API
+
+API for Cogneato, an experimental optimizer.
+
+Optimize noisy metrics over continuous, categorical, and ordinal parameters.
+
+See:  
+ - https://cogneato.xyz
+ - https://github.com/dsweet99/cogneato-api
+ 
+
