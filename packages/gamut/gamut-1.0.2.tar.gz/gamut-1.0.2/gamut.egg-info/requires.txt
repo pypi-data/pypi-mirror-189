@@ -1,0 +1,8 @@
+progress
+librosa
+sounddevicematplotlib
+PySoundFile
+scipy
+SoundFile
+typing_extensions
+typing-extensions
