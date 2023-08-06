@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: ocx-schema-parser
+Version: 0.2.0
+Summary: A python XML parser for the Open Class 3D Exchange (OCX) schema
+Home-page: https://github.com/OCXStandard/ocx-schema-parser
+Author: Ole Christian Astrup
+Author-email: ole.christian.astrup@dnv.com
+License: MIT
+Project-URL: Documentation, https://ocx-schema-parser.readthedocs.io/
+Project-URL: Changelog, https://ocx-schema-parser.readthedocs.io/en/latest/changelog.html
+Project-URL: Issue Tracker, https://github.com/OCXStandard/ocx-schema-parser/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+========
+Overview
+========
+
+.. image:: docs/_static/logo.png
+   :width: 200px
+   :height: 100px
+   :scale: 50 %
+   :alt: alternate text
+   :align: right
+
+ocx-schema-parser
+=================
+
+
+
+
+A python XML parser for the Open Class 3D Exchange (OCX) schema
+
+* Free software: MIT license
+
+Installation
+============
+
+::
+
+    pip install ocx-schema-parser
+
+You can also install the in-development version with::
+
+    pip install https://github.com/OCXStandard/ocx-schema-parser/archive/main.zip
+
+
+Documentation
+=============
+
+
+https://ocx-schema-parser.readthedocs.io/en/latest/
+
+
+Development
+===========
+
+To run all the tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+Credits
+=======
+The project is based on a setup described in the blog `Packaging a library <https://blog.ionelmc.ro/2014/05/25/python-packaging/#the-structure%3E>`_ by Ionel Cristian Maries and the use of his `cookiecutter <https://github.com/ionelmc/cookiecutter-pylibrary>`_.
+
+
+Changelog
+=========
+
+0.1.0 (2023-01-30)
+------------------
+
+* First release on PyPI.
