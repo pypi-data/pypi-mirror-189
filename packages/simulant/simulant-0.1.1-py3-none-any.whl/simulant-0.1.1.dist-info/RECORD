@@ -1,0 +1,10 @@
+simulant/__init__.py,sha256=jEbGq-fQLIT8fK5tmudd4fG0mCxeousoZvDBwq5rCTk,406
+simulant/display/__init__.py,sha256=U_PZtOnm4d97Nn57aG7T4iTmromkatwJVrIShkrllhg,1132
+simulant/keyboard/__init__.py,sha256=N4aecEwBbntVYsAQjVpXAwsOkm-EJpWnsKV9Vbt-_L4,1583
+simulant/keyboard/key.py,sha256=7_c0oWC4d7ppAczjLc51vwcC7UWOLjuk6mhUHtj80Pk,1068
+simulant/mouse/__init__.py,sha256=PqVrE_bDeSmriieU54O-vmKSg80UgA4sjfnnlUFpNn0,628
+simulant/mouse/human.py,sha256=PbxG-Qdy5YLJgRS1_MyxrVuwBgrm5Il21jipK3xnVVg,1716
+simulant-0.1.1.dist-info/METADATA,sha256=1voB2g-50X23tupllMrFnoHYbmBkiFyzXtX_Z5MxzJA,425
+simulant-0.1.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+simulant-0.1.1.dist-info/top_level.txt,sha256=ELpGJtdbuIkh3898FP9agTfuzOv_AtBQgT1k-tNOb6M,9
+simulant-0.1.1.dist-info/RECORD,,
