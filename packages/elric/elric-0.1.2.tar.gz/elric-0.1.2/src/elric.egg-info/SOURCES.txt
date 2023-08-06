@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/elric/__init__.py
+src/elric/records.py
+src/elric/sqltable.py
+src/elric/to_sql.py
+src/elric.egg-info/PKG-INFO
+src/elric.egg-info/SOURCES.txt
+src/elric.egg-info/dependency_links.txt
+src/elric.egg-info/not-zip-safe
+src/elric.egg-info/requires.txt
+src/elric.egg-info/top_level.txt
