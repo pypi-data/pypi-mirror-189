@@ -1,0 +1,3 @@
+[pidi.plugin.display]
+DisplayST7789 = OrangePi_PidiPlugins.DisplayST7789:DisplayST7789
+File = OrangePi_PidiPlugins:DisplayFile

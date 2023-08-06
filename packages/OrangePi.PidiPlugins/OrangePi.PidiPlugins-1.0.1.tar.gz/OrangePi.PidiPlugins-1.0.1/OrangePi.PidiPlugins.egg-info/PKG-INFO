@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: OrangePi.PidiPlugins
+Version: 1.0.1
+Summary: Pidi plugins for display output using SPI LCDs on the OrangePi.
+Home-page: https://github.com/sonocotta/pidi-plugins-python
+Author: Andriy Malyshenko
+Author-email: andriy@sonocotta.com
+License: MIT
+Classifier: Environment :: X11 Applications
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+
+# PiDi Display Plugin for the ST7789 240x240 LCD
+
+This plugin allows PiDi and Mopidy-PiDi to display album art and transport on the ST7789 and ILI9xxx LCDs (OrangePi version).
+
+0.1.2
+-----
+
+* Issue commands to turn off/on display on stop/start
+* Support kwargs for PiDi
+
+0.1.1
+-----
+
+* Handle "stop" and turn off backlight/display
+
+0.1.0
+-----
+
+* Only update display if image buffer has changed
+
+0.0.2
+-----
+
+* Fix readme
+* Fix minimum Python version
+* Require pidi-display-pil==0.0.2
+
+0.0.1
+-----
+
+* Initial Release
