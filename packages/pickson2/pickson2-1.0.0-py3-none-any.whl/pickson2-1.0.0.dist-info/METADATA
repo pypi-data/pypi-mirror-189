@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pickson2
+Version: 1.0.0
+Summary: A python package for saving and getting pickled and JSON data
+Home-page: https://github.com/MikeTeachesCode/pickson
+Author: Michael S. Russell
+Author-email: miketeachingcode@yahoo.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+
+# README.md
+
+- A python package for saving and getting pickled and JSON data
