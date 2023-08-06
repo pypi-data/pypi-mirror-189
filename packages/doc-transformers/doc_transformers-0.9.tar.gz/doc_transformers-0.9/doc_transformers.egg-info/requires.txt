@@ -1,0 +1,8 @@
+transformers
+pyyaml
+torch
+torchvision
+datasets
+pytesseract
+pandas
+numpy
