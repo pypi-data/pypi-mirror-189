@@ -1,0 +1,10 @@
+teleexception/__init__.py,sha256=ZCJikkZXg9y6NWKrRPJFOipnuhuLP4ue45YM3zcvldI,248
+teleexception/status/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+teleexception/status/http_status.py,sha256=wk4TaoKVdEOUJE7v9jXY7HVRPaCDbaOQFQ4QTqOauIs,45546
+teleexception/status/http_status_digital_life.py,sha256=qV5H2vvmMkusqklkO5sVfNINJBuB2A7K_yxsvLp-reI,1718
+teleexception/status/status_exception.py,sha256=c8Hn-TIuPn5wMydVaSeaESalv14XjtLOD38m2-gSpR0,373
+teleexception/status/status_exception_digital_life.py,sha256=ClbhY_3a9EY5jWjxEsV9JBhR90wBgsLMoj591KGwH2A,419
+teleexception-0.3.4.dist-info/METADATA,sha256=JwNYUOsHUfDLs5cO8JSOKVpT1v-Pb3tcbpofw_PHrUY,4678
+teleexception-0.3.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+teleexception-0.3.4.dist-info/top_level.txt,sha256=8UE4OrNUAjQojJfld8TkzSD2RaYtO4XlXHzQIGBrTXU,14
+teleexception-0.3.4.dist-info/RECORD,,
