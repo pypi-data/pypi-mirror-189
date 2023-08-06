@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: speedrunapi
+Version: 0.6.0
+Summary: A library for working with speerun.coms API
+Author: Connor (fishin_rod)
+Project-URL: Homepage, https://github.com/fishin-rod/speedrunapi
+Project-URL: Bug Tracker, https://github.com/fishin-rod/speedrunapi/issues
+Project-URL: Documentation, https://speedrunapi.readthedocs.io
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+SpeedrunAPI
+===
+A library for working with speedrun.coms API
+
+Docs: 'https://speedrunapi.readthedocs.io'
+<br>
+The docs should contain all the nessiasary info on how to use the library, The docs should go into depth about most of the functions of the library.
+
+Version: 0.6.0
+```python
+pip install speedrunapi
+```
+
+*This library is licenced under the MIT licence.
+
+## If you have any questions or suggestions please feel free to contact me about them, for issues please report them on the project repository
