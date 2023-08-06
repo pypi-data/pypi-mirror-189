@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+woomodule.egg-info/PKG-INFO
+woomodule.egg-info/SOURCES.txt
+woomodule.egg-info/dependency_links.txt
+woomodule.egg-info/entry_points.txt
+woomodule.egg-info/requires.txt
+woomodule.egg-info/top_level.txt
