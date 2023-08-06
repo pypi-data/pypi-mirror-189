@@ -1,0 +1,8 @@
+CHANGELOG.md,sha256=ENuCR80CwRAu1bG433IJ7NlebpHGfwATxIMsb2J2SXg,611
+prodmanager/__init__.py,sha256=aRtdaq4CQiBT871fpPLGaXJ-sZiHIs7HnO0SonlEkzU,44
+prodmanager/base.py,sha256=BAtNPwDjj3AcCbDJ3Twj-RdWXnWio6lbrZfR_dZv8_Q,2717
+prodmanager/client.py,sha256=2W1fkModAziDXHAb5N8jduE56DR3Jx1b3KT4jAZOL0k,822
+prodmanager/log.py,sha256=oimqgdIGLJUgQGDRlqjmJ7LUoVxqclNKNGIhh7aJB00,318
+prod_manager-0.2.0.dist-info/METADATA,sha256=uYxRapRCsUNJfFDNkMmwTK19ArLLTwTRv167Sem2VE0,3175
+prod_manager-0.2.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+prod_manager-0.2.0.dist-info/RECORD,,
