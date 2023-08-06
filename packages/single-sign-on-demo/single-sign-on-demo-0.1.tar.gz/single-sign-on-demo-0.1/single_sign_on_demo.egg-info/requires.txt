@@ -1,0 +1,4 @@
+django
+oauthlib
+pyOpenSSL
+requests
