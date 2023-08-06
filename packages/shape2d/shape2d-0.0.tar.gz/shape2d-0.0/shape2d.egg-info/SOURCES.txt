@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+shape2d/__init__.py
+shape2d.egg-info/PKG-INFO
+shape2d.egg-info/SOURCES.txt
+shape2d.egg-info/dependency_links.txt
+shape2d.egg-info/top_level.txt
