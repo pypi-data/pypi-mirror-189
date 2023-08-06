@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: singlesignondemotest
+Version: 0.5
+Home-page: https://github.com/lehonghieu1512/single-sign-on-demo
+Author: lehonghieu1412159
+Author-email: lehonghieu1412159@gmail.com
+Keywords: demo project
+Requires-Dist: django
+Requires-Dist: oauthlib
+Requires-Dist: pyOpenSSL
+Requires-Dist: requests
+
