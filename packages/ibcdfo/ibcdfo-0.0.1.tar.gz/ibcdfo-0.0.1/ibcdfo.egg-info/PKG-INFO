@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ibcdfo
+Version: 0.0.1
+Summary: Interpolation-Based Composite Derivative-Free Optimization
+Home-page: https://github.com/poptus/ibcdfo
+Author: Jeffrey Larson and Stefan Wild
+Author-email: jmlarson@anl.gov
+License: MIT
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
