@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: qafunnypet
+Version: 0.1.1
+Summary: Testing a package that can be inherit to classes that use it
+Home-page: https://github.com/danielmen-mx/qafunnypet
+Author: Daniel Mendez
+Author-email: pablomen1131@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# qafunnypet
+
+### Install qafunnypet from PyPi.
+```bash
+pip install qafunnypet
+```
+
+#### Example
+```python
+  from qafunnypet import Qafunnypet
+
+  class Dog(Qafunnypet):
+      def __init__(self, name, age, color=None):
+          super().__init__(name, age)
+          self.color = color
+
+      def present(self):
+          if self.color is None:
+              pass
+          else:
+              print(f"I am {self.name} and I am {self.age} years old and I am {self.color}")
+
+      def speak(self):
+          print("Bark")
+
+>>> doggy = Dog("Tim", 15, "Bronw")
+>>> doggy.present()
+>>> doggy.speak()
+
+>>> some = Qafunnypet("Cuasi", 10)
+>>> some.present()
+>>> some.speak()
+```
