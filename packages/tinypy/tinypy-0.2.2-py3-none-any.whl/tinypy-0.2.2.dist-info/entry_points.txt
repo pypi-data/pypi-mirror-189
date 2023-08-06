@@ -1,0 +1,2 @@
+[console_scripts]
+tinypy = tinypy.main:main
