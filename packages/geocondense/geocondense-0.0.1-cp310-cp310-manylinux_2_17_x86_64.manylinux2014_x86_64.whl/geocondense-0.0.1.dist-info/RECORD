@@ -1,0 +1,10 @@
+pybind11_geocondense.cpython-310-x86_64-linux-gnu.so,sha256=ueokClJPUHAItms3R2MWU_01-Adr3SKgp6L_DrPeDxc,694096
+geocondense-0.0.1.dist-info/METADATA,sha256=V9wpvr9HK1ZQL5aEeF3aO-kmKPrdsIpBV_D0m1UeLUY,509
+geocondense-0.0.1.dist-info/WHEEL,sha256=AENPUwuTc6qB95Mrn5JB5boXegWw6oDhuwuuX0q_ONg,152
+geocondense-0.0.1.dist-info/RECORD,,
+geocondense-0.0.1.dist-info/LICENSE,sha256=SBNiCMUPOkN74CrKaGEJk1CNXzPemZ76Qsm106kwI1E,2182
+geocondense-0.0.1.dist-info/top_level.txt,sha256=bYmcpZ6zpjFz8_ImtYl1CMF7vw5ZyX1MYHrxKpt01d0,33
+geocondense/condense_geojson.py,sha256=zleozH7OaII3MVKa-8ooQ2aiHWAkoLsrMkRP3aoWABQ,1046
+geocondense/__init__.py,sha256=kRSkipLMz23mUvuCl5dY0gpBJBaB5sLZ_RjaCQr_250,96
+geocondense/condense_pointcloud.py,sha256=5YdXB-Wd0Bzj8OJOC3w7A4T65lss5WtPSPVqbOZnIk8,6617
+geocondense/utils.py,sha256=RmCrH_MQiHuPRyeTP2jut0ASpfvHEH1QCxRnlvDZW2s,21
