@@ -1,0 +1,7 @@
+LICENSE
+README.md
+pyproject.toml
+pelican_custom_css.egg-info/PKG-INFO
+pelican_custom_css.egg-info/SOURCES.txt
+pelican_custom_css.egg-info/dependency_links.txt
+pelican_custom_css.egg-info/top_level.txt
