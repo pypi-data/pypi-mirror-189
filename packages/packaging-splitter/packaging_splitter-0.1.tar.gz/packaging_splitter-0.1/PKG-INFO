@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: packaging_splitter
+Version: 0.1
+Summary: A package for splitting image datasets into train, test, and validation sets
+Author: Mubaraka Banadda
+Author-email: mubarakabanadda68@gmail.com

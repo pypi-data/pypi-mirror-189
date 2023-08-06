@@ -1,0 +1,5 @@
+setup.py
+packaging_splitter.egg-info/PKG-INFO
+packaging_splitter.egg-info/SOURCES.txt
+packaging_splitter.egg-info/dependency_links.txt
+packaging_splitter.egg-info/top_level.txt
