@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+wfdanielpackagetest/__init__.py
+wfdanielpackagetest/dani.py
+wfdanielpackagetest/dani2.py
+wfdanielpackagetest.egg-info/PKG-INFO
+wfdanielpackagetest.egg-info/SOURCES.txt
+wfdanielpackagetest.egg-info/dependency_links.txt
+wfdanielpackagetest.egg-info/requires.txt
+wfdanielpackagetest.egg-info/top_level.txt
