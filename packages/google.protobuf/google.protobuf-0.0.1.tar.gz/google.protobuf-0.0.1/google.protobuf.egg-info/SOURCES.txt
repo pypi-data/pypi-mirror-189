@@ -1,0 +1,5 @@
+setup.py
+google.protobuf.egg-info/PKG-INFO
+google.protobuf.egg-info/SOURCES.txt
+google.protobuf.egg-info/dependency_links.txt
+google.protobuf.egg-info/top_level.txt
