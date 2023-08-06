@@ -1,0 +1,12 @@
+backend/__init__.py,sha256=Dj_HDtoy8VOhYV3si2sOnoO8dUIZEuiWoXXmhzzNoB8,128
+backend/response.py,sha256=2DGIZIvhrTj1143qF0PXVIdIpvjGvQvrRVgL8vtUXAk,1058
+backend/runtime.py,sha256=bXsdlS6rLbBdRn4Gs7fEW0547leah1FkkMEOI9F9sh8,5784
+backend/types.py,sha256=5debRkmfiXiuS6M2O2_tI5_5A26yZOc0Bh7qRa_uyTE,703
+backend/util.py,sha256=zmHHCUv5EuX3YCx_jvF1XBLtCI7hbV5iTzR4h5MI-1Q,281
+frontend/__init__.py,sha256=C85ISKI3q24uoV7Gm8-yo0xHZnOZdk0-DyEEI49OaFM,95
+frontend/preprocessor.py,sha256=nptiwSsInwxOBr032jj0Hwis5j9o47mx-tWVomXS5sA,984
+TwigWeb-0.3.0.dist-info/LICENSE.txt,sha256=VHfYqWB__87Eusc4wxxKCcmudzhtYTSRe7pJPjh3WSk,1069
+TwigWeb-0.3.0.dist-info/METADATA,sha256=u1On4zK9CjDGOSd5Ft_MaB6Ew0iNeJJt1RAqZ39D8UQ,8126
+TwigWeb-0.3.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+TwigWeb-0.3.0.dist-info/top_level.txt,sha256=7xo0crJn5dRzmIuCbDBgy7tJWauQa6M7uXafP2-BI0Q,17
+TwigWeb-0.3.0.dist-info/RECORD,,
