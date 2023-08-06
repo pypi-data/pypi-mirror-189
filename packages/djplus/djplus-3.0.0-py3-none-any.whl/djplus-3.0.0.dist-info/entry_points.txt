@@ -1,0 +1,4 @@
+[console_scripts]
+dj=dj.__main__:main
+djonfig=dj.__main__:generate_config_file
+
