@@ -1,0 +1,5 @@
+generallibrary[table]
+generalfile
+requests
+pyinstaller
+coverage
