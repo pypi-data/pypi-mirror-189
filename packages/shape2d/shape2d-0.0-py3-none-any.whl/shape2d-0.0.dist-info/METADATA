@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: shape2d
+Version: 0.0
+Summary: Simple pure python library for 2D shapes and geometry
+Home-page: https://github.com/martinmcbride/shape2d
+Author: Martin McBride
+Author-email: mcbride.martin@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# shape2d
+
+Simple pure python library for 2D shapes and geometry
+
+Placeholder. No implementation yet.
