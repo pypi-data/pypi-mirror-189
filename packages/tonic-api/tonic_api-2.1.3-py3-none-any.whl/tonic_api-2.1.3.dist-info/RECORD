@@ -1,0 +1,14 @@
+tonic_api/__init__.py,sha256=f-2mRiTeF0JJDFKdLbDvISI8tqxFQNGL6iSWBKQh4I4,19
+tonic_api/api.py,sha256=Xi1qa_VpOLa6JBiRjPjbFHFD14hp4Sv7JQvSiKubKq4,1133
+tonic_api/classes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tonic_api/classes/httpclient.py,sha256=WDIfo82uadlh-iqTvcOu1S9PORzpxiN-HgUqpN5hRqI,1460
+tonic_api/classes/model.py,sha256=iu97MUFOnyOKiNrjYQgB8F6tgPC29tWywVWcK327wnM,1176
+tonic_api/classes/trained_model.py,sha256=1H09myDmdHXP8Lymy--SqqnfqVQNT6y3qLDo3VqPZTQ,6748
+tonic_api/classes/training_job_status.py,sha256=OnN2TmpUnF7LJftyoyaoy4Lsfig21fpUK_Jw2svu764,1569
+tonic_api/classes/workspace.py,sha256=oeqi4BAwMP7hgB1tMcYLr25AlT8-63eAAgpyI-7k82E,6915
+tonic_api/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tonic_api/services/models.py,sha256=-Lt_j_Oh9PDGOUSv8m_-49tRSckXZwFbNVQHSKEAQUg,1832
+tonic_api/services/workspaces.py,sha256=_zXZ3Qp8Pt2bk976sa7qEkFWPGneiwd2YYhi-bH07DI,491
+tonic_api-2.1.3.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+tonic_api-2.1.3.dist-info/METADATA,sha256=RA2C1nIQYgarC1ZRRDm_6bl0-5gmlcunung8BAXhPvE,2454
+tonic_api-2.1.3.dist-info/RECORD,,
