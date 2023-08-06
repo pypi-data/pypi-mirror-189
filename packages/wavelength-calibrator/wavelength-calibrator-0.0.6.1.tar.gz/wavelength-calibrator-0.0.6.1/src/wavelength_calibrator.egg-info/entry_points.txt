@@ -1,0 +1,2 @@
+[console_scripts]
+wcpy = wcpy.command_line:main
