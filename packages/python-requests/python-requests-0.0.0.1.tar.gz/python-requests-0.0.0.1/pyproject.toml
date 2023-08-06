@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "python-requests"
+version = "0.0.0.1"
+authors = [
+  { name="Kale Franz", email="eetygr@gmail.com" },
+]
+description = """\
+This is a sham PyPI package creation. In fact, it is a could-be / would-be malicious code injection
+vector into enterprise production systems. Dear PyPA: Please remove this project and resolve the
+underlying root-cause security issue. See also: https://pypi.org/search/?q=python-wheel
+"""
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/kalefranz/python-requests"
