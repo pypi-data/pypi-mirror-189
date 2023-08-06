@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: hjworks
+Version: 0.2.0
+Summary: libreria de juegos ligeros y sencillos de python
+Home-page: https://trabajodepanas.com
+Author: Héctor y Marta, Jiménez
+Author-email: hectorjjmch@gmail.com
+License: Libre
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: os
+Requires-Dist: time
+Requires-Dist: colorama
+Requires-Dist: webbrowser
+
+UNKNOWN
+
+
