@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "torippy"
+version = "0.1.4"
+description = ""
+authors = ["torippy <47879788+torippy1024@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+pyautogui = "^0.9.53"
+pillow = "^9.4.0"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+black = "^23.1.0"
+taskipy = "^1.10.3"
+pyinstaller = "^5.7.0"
+pytest = "^7.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+run = "poetry run python src/main.py"
+lint = "poetry run flake8 src --show-source --statistics"
+build = "poetry run pyinstaller -y src/main.py"
+build-one = "poetry run pyinstaller -y src/main.py --onefile"
+test = "poetry run pytest"
