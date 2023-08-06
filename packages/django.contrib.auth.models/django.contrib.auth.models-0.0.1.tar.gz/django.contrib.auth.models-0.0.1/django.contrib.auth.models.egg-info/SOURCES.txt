@@ -1,0 +1,5 @@
+setup.py
+django.contrib.auth.models.egg-info/PKG-INFO
+django.contrib.auth.models.egg-info/SOURCES.txt
+django.contrib.auth.models.egg-info/dependency_links.txt
+django.contrib.auth.models.egg-info/top_level.txt
