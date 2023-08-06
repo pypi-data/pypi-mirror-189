@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: mktimeline
+Version: 0.1.3
+Summary: 
+Home-page: https://github.com/jduprey/mktimeline
+License: MIT
+Keywords: timeline,edit,author
+Author: John Duprey
+Author-email: 297628+jduprey@users.noreply.github.com
+Requires-Python: >=3.8.1
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup
+Classifier: Topic :: Utilities
+Requires-Dist: Jinja2 (>=3.1.2,<4.0.0)
+Requires-Dist: Markdown (>=3.4.1,<4.0.0)
+Requires-Dist: beautifulsoup4 (>=4.11.2,<5.0.0)
+Requires-Dist: cleo (>=0.8.1,<0.9.0)
+Requires-Dist: python-frontmatter (>=1.0.0,<2.0.0)
+Project-URL: Documentation, https://github.com/jduprey/mktimeline/blob/master/README.md
+Project-URL: Repository, https://github.com/jduprey/mktimeline
+Description-Content-Type: text/markdown
+
+# MKTimeline - a static site generator for interactive/visual timelines
+A tool for creating interactive/visual timelines.
+
+This tool is under development and is considered BETA.
+As you can see, there is no documentation yet.
+Use at your own risk and befuddlement.
+
