@@ -1,0 +1,8 @@
+cyclotron_aiohttp/__init__.py,sha256=gKaSMu5FCvoIuAVinvn2bx8XMkEUBK-FwbHRTqG-CsY,120
+cyclotron_aiohttp/http.py,sha256=32Uyzk-vL_saszBTdlorhO7dB1vIUDAl6jPRh6RQl-8,4112
+cyclotron_aiohttp/httpd.py,sha256=NnduV4o4gzms94wwjAKSG8DTjH1GaxzO4v9KRAIWVCw,5485
+cyclotron_aiohttp-2.0.0.dist-info/LICENSE.txt,sha256=aioRxGI6xwHUxK-uUkdFos5H4ZaH-0pvnQaJI1gm1EA,1060
+cyclotron_aiohttp-2.0.0.dist-info/METADATA,sha256=3MNSZkeQKuenulOQ7CFG9I_aVCEUmTxAwA0bA4n_nZc,2376
+cyclotron_aiohttp-2.0.0.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
+cyclotron_aiohttp-2.0.0.dist-info/top_level.txt,sha256=OwdPxVQ-k5QRouP3OyFOtoqE133EQnvFgyGFtNBLdQw,18
+cyclotron_aiohttp-2.0.0.dist-info/RECORD,,
