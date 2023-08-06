@@ -1,0 +1,9 @@
+pyngo/__init__.py,sha256=3A_cy2fzXmUBc3bjN3qqnAdre9jLnyzR-NFnBz1p8-0,388
+pyngo/errors.py,sha256=c-SPqQYGZddcI2rtaquwoRNbCOpWf3QEnmBrSDwzeww,1354
+pyngo/openapi.py,sha256=ecK4Wu5-d4_ZxndczbT3zud1kCAqcHYbZ2kc2HDAUgA,3034
+pyngo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyngo/querydict.py,sha256=wh-Yqp2lJIzq8nPWwHcSd7_1Z3ADI9duI42JA_Tjbh0,2096
+pyngo-1.4.0.dist-info/METADATA,sha256=PpXZm6mNmkzrL5nD2Vw2wNNbrNi3PXhPDF_HUwRvOI8,6550
+pyngo-1.4.0.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+pyngo-1.4.0.dist-info/licenses/LICENSE,sha256=5Tq8bSUZxh60OnbIGljTjSaDz87ssNq_4ltyJ_c2iKQ,1070
+pyngo-1.4.0.dist-info/RECORD,,
