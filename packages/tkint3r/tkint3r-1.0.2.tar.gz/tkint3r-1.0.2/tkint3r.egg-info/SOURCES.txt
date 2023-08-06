@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+tkint3r/__init__.py
+tkint3r.egg-info/PKG-INFO
+tkint3r.egg-info/SOURCES.txt
+tkint3r.egg-info/dependency_links.txt
+tkint3r.egg-info/top_level.txt
