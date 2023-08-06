@@ -1,0 +1,5 @@
+openpyxl
+matplotlib==3.5.3
+pandas
+rich
+jinja2
