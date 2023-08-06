@@ -1,0 +1,3 @@
+[pytest11]
+mp=src.plugin:Plugin
+
