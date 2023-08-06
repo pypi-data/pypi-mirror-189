@@ -1,0 +1,5 @@
+setup.py
+django.forms.egg-info/PKG-INFO
+django.forms.egg-info/SOURCES.txt
+django.forms.egg-info/dependency_links.txt
+django.forms.egg-info/top_level.txt
