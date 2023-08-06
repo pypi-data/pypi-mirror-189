@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: forced-url-modifier
+Version: 0.0.7
+Summary: for URL forced FULL encoding & decoding
+Home-page: https://github.com/khgxsss/forced-url-modifier
+Author: dh kim
+Author-email: itschoolkdh@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+# forced_url
+for URL forced FULL encoding &amp; decoding <br/><br/>
+by dh kim
+
+## usage
+
+<pre><code>
+from forced_url_modifier import URL_Modifier
+
+um = URL_Modifier()
+
+payload = '<script>alert("XSS")</script>'
+encoded_payload = um.forced_url_encoding(payload)
+print("Encoded payload: ", encoded_payload)
+
+
+payload = '%3Cscript%3Ealert%28%22XSS%22%29%3C%2Fscript%3E'
+decoded_payload = um.forced_url_decoding(payload)
+print("Decoded payload: ", decoded_payload)
+</code></pre>
+
+
