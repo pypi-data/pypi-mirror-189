@@ -1,0 +1,93 @@
+[tool.towncrier]
+package = "OpenGrammar"
+package_dir = "opengrammar"
+directory = "changes"
+filename = "CHANGELOG.rst"
+issue_format = "`#{issue} <https://github.com/OpenDebates/OpenGrammar/issues/{issue}>`_"
+type = [
+    { name = "Breaking Changes",            directory = "breaking",     showcontent = true },
+    { name = "Deprecation",                 directory = "deprecation",  showcontent = true },
+    { name = "Features",                    directory = "feature",      showcontent = true },
+    { name = "Bugfixes",                    directory = "bugfix",       showcontent = true },
+    { name = "Documentation Improvements",  directory = "doc",          showcontent = true },
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra --strict-markers --ignore=docs/conf.py --ignore=setup.py --ignore=.eggs --doctest-modules --doctest-glob=/*.py --tb=short"
+norecursedirs = [
+	".git",
+	".tox",
+	".env",
+	"dist",
+	"build",
+	"migrations"
+]
+testpaths = [
+    "tests"
+]
+python_files = [
+	"test_*.py",
+	"*_test.py",
+	"tests.py"
+]
+
+[project]
+name = "opengrammar"
+authors = [
+    {name = "Taven", email = "taven@opendebates.net"},
+]
+maintainers = [
+  {name = "Taven", email = "taven@opendebates.net"}
+]
+description = "Open Source Inference Engine"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["semantics", "theorem prover", "logic", "inference", "syntax"]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 1 - Planning",
+	"Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation :: CPython"
+]
+dependencies = [
+    "lark>=1.1.5",
+]
+dynamic = ["version"]
+
+
+[project.optional-dependencies]
+tests = [
+    "pytest>=7.2.1",
+    "pytest-cov>=4.0.0"
+]
+release = [
+    "isort>=5.12.0",
+    "twine>=4.0.2",
+    "codecov>=2.1.12",
+    "bump2version>=1.0.1",
+    "black>=23.1.0",
+    "towncrier>=22.12.0",
+    "build>=0.9.0"
+]
+
+[project.urls]
+Documentation = "https://opengrammar.me/en/stable"
+Changelog = "https://github.com/OpenDebates/OpenGrammar/blob/main/CHANGELOG.rst"
+Funding = "https://github.com/sponsors/OpenDebates"
+Source = "https://github.com/OpenDebates/OpenGrammar"
+Tracker = "https://github.com/OpenDebates/OpenGrammar/issues"
+
+[tool.setuptools]
+packages = ["opengrammar"]
+
+[tool.setuptools.dynamic]
+version = {attr = "opengrammar.__version__"}
+
+[build-system]
+requires = ["wheel", "setuptools"]
+build-backend = "setuptools.build_meta"

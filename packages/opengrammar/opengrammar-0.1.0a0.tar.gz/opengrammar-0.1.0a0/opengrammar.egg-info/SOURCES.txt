@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+opengrammar/__init__.py
+opengrammar.egg-info/PKG-INFO
+opengrammar.egg-info/SOURCES.txt
+opengrammar.egg-info/dependency_links.txt
+opengrammar.egg-info/requires.txt
+opengrammar.egg-info/top_level.txt
