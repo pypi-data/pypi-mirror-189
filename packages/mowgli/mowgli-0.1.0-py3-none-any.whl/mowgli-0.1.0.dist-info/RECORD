@@ -1,0 +1,11 @@
+mowgli/__init__.py,sha256=hj8vDJt3Jtr0i7di4MIgZm94R7Rw3tKPu1rmDDgMvY0,95
+mowgli/models.py,sha256=CDKkLrNDqUdWTWfWrw7OsdlliDCXTRK4Xc8ZbmkdnTk,18580
+mowgli/pl.py,sha256=wRxyRvno2QcyozkyKn872h2O44lh41ZxdByZUTd5jsI,2567
+mowgli/score.py,sha256=Eyae-roZTpPL8Tce-Y9VQ4d-SpLRbCNrzxKh07w804E,4094
+mowgli/tl.py,sha256=AonE4TpQhDdgkdWj6FUAWzBwFsGydEhQlkm3yC3ni9c,3864
+mowgli/utils.py,sha256=KZYqeUSf4Q7Cmjxygp9WrUWszZzcjhTMz4_4Gj1CovQ,6766
+mowgli-0.1.0.dist-info/LICENCE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+mowgli-0.1.0.dist-info/METADATA,sha256=TqzLBBpYSGwPhXWg7vmd9wTe7GtzouXdtrowHw6gvp4,2371
+mowgli-0.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+mowgli-0.1.0.dist-info/top_level.txt,sha256=GThKZl0XZ9YvQkjJyEnE_N7h-LWJKNTbkU0JgXggY9w,7
+mowgli-0.1.0.dist-info/RECORD,,
