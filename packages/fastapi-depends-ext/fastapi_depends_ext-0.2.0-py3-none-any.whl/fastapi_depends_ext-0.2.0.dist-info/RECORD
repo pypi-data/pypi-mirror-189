@@ -1,0 +1,7 @@
+fastapi_depends_ext/__init__.py,sha256=tZQCmgAFB1_cI7kaYJpgvOWbKvi1pRBtc3kyXr84Fqs,107
+fastapi_depends_ext/depends.py,sha256=Y0hhlddT0PI_R9QeCk1AnkinkFN1wtDIHYmsswDiqpw,6025
+fastapi_depends_ext/utils.py,sha256=y60WzwdgLQkz_UptqtGWWA-hVDpXKYoMpkqi1g-Xu5c,4622
+fastapi_depends_ext-0.2.0.dist-info/LICENSE,sha256=40GMWI2CIKzwhpEyHC8aRrGDbIFGY2GZTM5KAfmnSuU,1085
+fastapi_depends_ext-0.2.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+fastapi_depends_ext-0.2.0.dist-info/METADATA,sha256=SrjsoWKJDx6FIWlAUARE4aqyuixgzmQcHo4QWqnlZU8,466
+fastapi_depends_ext-0.2.0.dist-info/RECORD,,
