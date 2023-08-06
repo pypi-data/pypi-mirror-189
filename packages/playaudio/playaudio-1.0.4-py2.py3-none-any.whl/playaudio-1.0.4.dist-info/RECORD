@@ -1,0 +1,12 @@
+playaudio/__init__.py,sha256=BXws6g3CzqdMywHNk5CZOekxMI7DjkxJrpevaprgFOQ,87
+playaudio/api.py,sha256=yFo2zJhN9H1ihMxKCLIppth-lUZi-79Amza3UnXuDAI,990
+playaudio/cli.py,sha256=7HOUoS5kAhc_6pT2GnetEZ408eG4R6_S-yu7AmsXWB4,430
+playaudio/assets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+playaudio/assets/bell.mp3,sha256=7BFCXo74aReYgttYIl7BqhWPBcKZJKtZBLl55UVOQgw,77452
+playaudio/assets/builtin.py,sha256=wpEpPS8lGjVgc3LN_JorqbLJOWF8h17o9aOKcB2Prnw,116
+playaudio-1.0.4.dist-info/LICENSE,sha256=b6pOoifSXiUaz_lDS84vWlG3fr4yUKwB8fzkrH9R8bQ,1064
+playaudio-1.0.4.dist-info/METADATA,sha256=dV9eYa2vUfmShVtsgBcz-8R33YP8ISZ3eff19cYdCs8,2183
+playaudio-1.0.4.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
+playaudio-1.0.4.dist-info/entry_points.txt,sha256=9vHtHucsDfasC-Zct-dkt3tflur7ffbd3L9Yv6C3eJg,49
+playaudio-1.0.4.dist-info/top_level.txt,sha256=rR2BHvaXXOnNbYOa3AKtOD1Sd6YqwDu3FD2iia_EWKY,10
+playaudio-1.0.4.dist-info/RECORD,,
