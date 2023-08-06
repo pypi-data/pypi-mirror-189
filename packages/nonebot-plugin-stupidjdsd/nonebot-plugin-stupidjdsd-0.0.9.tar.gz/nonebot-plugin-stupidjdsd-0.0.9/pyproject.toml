@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "nonebot-plugin-stupidjdsd"
+version = "0.0.9"
+authors = [
+  {name = "ShunYu", email = "1265257855@qq.com"},
+]
+description = "一个笨笨的用于解决广州大学经典诵读任务的插件"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ['requests',
+ 'urllib3',
+ 'nonebot-adapter-onebot',
+ 'nonebot2'
+ ]
+
+
+[project.urls]
+homepage = "https://github.com/liu1272/nonebot-plugin-stupidjdsd"

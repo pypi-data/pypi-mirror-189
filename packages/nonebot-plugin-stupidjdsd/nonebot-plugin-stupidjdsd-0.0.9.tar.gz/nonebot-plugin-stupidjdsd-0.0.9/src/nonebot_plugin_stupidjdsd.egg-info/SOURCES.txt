@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/Original_Script.py
+src/Script.py
+src/__init__.py
+src/nonebot_plugin_stupidjdsd.egg-info/PKG-INFO
+src/nonebot_plugin_stupidjdsd.egg-info/SOURCES.txt
+src/nonebot_plugin_stupidjdsd.egg-info/dependency_links.txt
+src/nonebot_plugin_stupidjdsd.egg-info/requires.txt
+src/nonebot_plugin_stupidjdsd.egg-info/top_level.txt
