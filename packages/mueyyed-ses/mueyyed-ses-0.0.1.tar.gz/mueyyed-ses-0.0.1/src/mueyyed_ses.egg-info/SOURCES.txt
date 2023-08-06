@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/mueyyed_ses.egg-info/PKG-INFO
+src/mueyyed_ses.egg-info/SOURCES.txt
+src/mueyyed_ses.egg-info/dependency_links.txt
+src/mueyyed_ses.egg-info/top_level.txt
+src/mypackage/__init__.py
+src/mypackage/main.py
