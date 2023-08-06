@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+pydisk2/__init__.py
+pydisk2/discord.py
+pydisk2.egg-info/PKG-INFO
+pydisk2.egg-info/SOURCES.txt
+pydisk2.egg-info/dependency_links.txt
+pydisk2.egg-info/top_level.txt
