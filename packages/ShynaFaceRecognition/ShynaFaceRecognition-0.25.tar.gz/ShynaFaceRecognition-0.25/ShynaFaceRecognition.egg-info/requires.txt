@@ -1,0 +1,5 @@
+ShynaDatabase
+ShynaTime
+face_recognition
+setuptools
+wheel
