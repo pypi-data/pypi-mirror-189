@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+requirements.txt
+src/__init__.py
+src/geom_props/__init__.py
+src/geom_props/geom_props.py
+src/geom_props.egg-info/PKG-INFO
+src/geom_props.egg-info/SOURCES.txt
+src/geom_props.egg-info/dependency_links.txt
+src/geom_props.egg-info/requires.txt
+src/geom_props.egg-info/top_level.txt
