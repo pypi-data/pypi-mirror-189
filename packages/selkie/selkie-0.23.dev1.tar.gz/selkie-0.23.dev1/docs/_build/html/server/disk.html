@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.disk — Virtual disks, REST &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.store — Object store" href="store.html" />
+    <link rel="prev" title="selkie.webserver — Web server" href="webserver.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Web Application</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">The Selkie web server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webserver.html"><code class="docutils literal notranslate"><span class="pre">selkie.webserver</span></code> — Web server</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.disk</span></code> — Virtual disks, REST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="store.html"><code class="docutils literal notranslate"><span class="pre">selkie.store</span></code> — Object store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="old/index.html">The old version</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp/index.html">The NLP pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Web Application</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.disk</span></code> — Virtual disks, REST</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/server/disk.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="module-selkie.disk"></span><section id="selkie-disk-virtual-disks-rest">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.disk</span></code> — Virtual disks, REST<a class="headerlink" href="#selkie-disk-virtual-disks-rest" title="Permalink to this heading"></a></h1>
+<p>This module provides “virtual disks” that behave like dicts whose
+keys are pathnames and whose values are the file contents.
+The virtual disk’s directory serves as root.
+Getting a value reads the named file, and setting a
+value writes the named file.  Deleting a key deletes the named file.
+For consistency with typical webserver expectations, the methods
+<code class="docutils literal notranslate"><span class="pre">GET()</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT()</span></code>, and <code class="docutils literal notranslate"><span class="pre">DELETE()</span></code> are provided as synonyms.</p>
+<p>A virtual disk behaves just like a dict, except that it is backed by
+files and thus persistent.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">disk</span> <span class="o">=</span> <span class="n">VDisk</span><span class="p">(</span><span class="s1">&#39;/tmp/foo&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">disk</span><span class="p">[</span><span class="s1">&#39;/bar/baz&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hi there</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;just a test</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The assignment causes the directory <code class="docutils literal notranslate"><span class="pre">/tmp/foo/bar</span></code> to be created if it did
+not previously exist, and it writes the file <code class="docutils literal notranslate"><span class="pre">/tmp/foo/bar/baz</span></code>, containing
+two lines of text.  One can subsequently fetch the contents:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">disk</span><span class="p">[</span><span class="s1">&#39;/bar/baz&#39;</span><span class="p">]:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">hi there</span>
+<span class="go">just a test</span>
+</pre></div>
+</div>
+<p>The return value is a <code class="docutils literal notranslate"><span class="pre">BaseFile</span></code> instance (see selkie.newio), which
+behaves like an iteration over lines (which include the terminating newline).</p>
+<p>Opening a new VDisk with the same directory name reads the same
+values:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">disk2</span> <span class="o">=</span> <span class="n">VDisk</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">disk2</span><span class="p">[</span><span class="s1">&#39;/bar&#39;</span><span class="p">])</span>
+<span class="go">[&#39;hi there&#39;, &#39;just a test&#39;]</span>
+</pre></div>
+</div>
+<p>Since the values are BaseFile instances, one can specify a format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.newio</span> <span class="kn">import</span> <span class="n">NestedDict</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">baz</span> <span class="o">=</span> <span class="n">NestedDict</span><span class="p">(</span><span class="n">disk</span><span class="p">[</span><span class="s1">&#39;/bar/baz&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">baz</span><span class="o">.</span><span class="n">save</span><span class="p">({</span><span class="s1">&#39;foo&#39;</span><span class="p">:</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="s1">&#39;2&#39;</span><span class="p">}})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">baz</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+<span class="go">{&#39;foo&#39;: &#39;bar&#39;, &#39;baz&#39;: {&#39;a&#39;: &#39;1&#39;, &#39;b&#39;: &#39;2&#39;}}</span>
+</pre></div>
+</div>
+<p>As an iteration, a VDisk contains all valid pathnames.  It is not
+hierarchically structured.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">disk</span><span class="p">)</span>
+<span class="go">[&#39;/bar/baz&#39;]</span>
+</pre></div>
+</div>
+<p>One can, however, access an (existing) directory to obtain a
+<code class="docutils literal notranslate"><span class="pre">Directory</span></code> object (rather than a BaseFile).  Iterating over the
+directory object yields only the names within that directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bar</span> <span class="o">=</span> <span class="n">disk</span><span class="p">[</span><span class="s1">&#39;/bar&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
+<span class="go">[&#39;baz&#39;]</span>
+</pre></div>
+</div>
+<p>One may use one of the names (note the lack of leading slashes) to
+access the actual files from the Directory object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">baz</span> <span class="o">=</span> <span class="n">NestedDict</span><span class="p">(</span><span class="n">bar</span><span class="p">[</span><span class="s1">&#39;baz&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">baz</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+<span class="go">{&#39;foo&#39;: &#39;bar&#39;, &#39;baz&#39;: {&#39;a&#39;: &#39;1&#39;, &#39;b&#39;: &#39;2&#39;}}</span>
+</pre></div>
+</div>
+<p>Thus one may alternatively use a sequence of directory accesses:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">disk</span><span class="p">[</span><span class="s1">&#39;/&#39;</span><span class="p">][</span><span class="s1">&#39;bar&#39;</span><span class="p">][</span><span class="s1">&#39;baz&#39;</span><span class="p">]</span>
+<span class="go">&lt;selkie.newio.RegularFile at 0x7f833f3c5d60&gt;</span>
+</pre></div>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.disk.VDisk">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.disk.</span></span><span class="sig-name descname"><span class="pre">VDisk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk" title="Permalink to this definition"></a></dt>
+<dd><p>The argument <em>root</em> is a directory name.  If it does not exist, it is
+created the first time a value is stored.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.root">
+<span class="sig-name descname"><span class="pre">root</span></span><a class="headerlink" href="#selkie.disk.VDisk.root" title="Permalink to this definition"></a></dt>
+<dd><p>The value passed to the constructor.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.ignore">
+<span class="sig-name descname"><span class="pre">ignore</span></span><a class="headerlink" href="#selkie.disk.VDisk.ignore" title="Permalink to this definition"></a></dt>
+<dd><p>A function that takes a filename and returns True if the
+filename should be ignored.  A default is provided that ignores
+filenames that end in <code class="docutils literal notranslate"><span class="pre">~</span></code> or contain a component beginning
+with <code class="docutils literal notranslate"><span class="pre">tmp</span></code> or ending with <code class="docutils literal notranslate"><span class="pre">.safe</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.physical_pathname">
+<span class="sig-name descname"><span class="pre">physical_pathname</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk.physical_pathname" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the physical pathname corresponding to the given
+VDisk-internal filename.  VDisk-internal filenames always have
+the root of the VDisk as root, and use <code class="docutils literal notranslate"><span class="pre">/</span></code> as separator.
+The physical pathname has the root of the filesystem as root,
+and uses the separator that is appropriate for the filesystem.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.iterdirectory">
+<span class="sig-name descname"><span class="pre">iterdirectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk.iterdirectory" title="Permalink to this definition"></a></dt>
+<dd><p>The physical pathname corresponding to <em>fn</em> must be an existing
+directory.  The iteration contains all names in the directory
+except <code class="docutils literal notranslate"><span class="pre">.</span></code> and <code class="docutils literal notranslate"><span class="pre">..</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.__getitem__">
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk.__getitem__" title="Permalink to this definition"></a></dt>
+<dd><p>The return value is the contents of the named file.  The <em>fn</em> is
+converted to a physical pathname.  A <code class="docutils literal notranslate"><span class="pre">BaseFile</span></code> instance is
+returned.  A NameError is signalled if the file does not exist.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.__setitem__">
+<span class="sig-name descname"><span class="pre">__setitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk.__setitem__" title="Permalink to this definition"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">BaseFile</span></code> is fetched, and the <em>value</em> is passed to its
+<code class="docutils literal notranslate"><span class="pre">save()</span></code> method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.__contains__">
+<span class="sig-name descname"><span class="pre">__contains__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk.__contains__" title="Permalink to this definition"></a></dt>
+<dd><p>The <em>fn</em> is converted to a physical pathname, and the return
+value is a boolean indicating whether the file exists or not.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.__delitem__">
+<span class="sig-name descname"><span class="pre">__delitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk.__delitem__" title="Permalink to this definition"></a></dt>
+<dd><p>The <em>fn</em> is converted to a physical pathname, and the file is
+deleted.  A NameError is signalled if the file does not exist.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.GET">
+<span class="sig-name descname"><span class="pre">GET</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk.GET" title="Permalink to this definition"></a></dt>
+<dd><p>Synonym for <code class="docutils literal notranslate"><span class="pre">__getitem__(fn)</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.PUT">
+<span class="sig-name descname"><span class="pre">PUT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk.PUT" title="Permalink to this definition"></a></dt>
+<dd><p>Synonym for <code class="docutils literal notranslate"><span class="pre">__setitem__(fn,</span> <span class="pre">value)</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.DELETE">
+<span class="sig-name descname"><span class="pre">DELETE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk.DELETE" title="Permalink to this definition"></a></dt>
+<dd><p>Synonym for <code class="docutils literal notranslate"><span class="pre">__delitem__(fn)</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.HEAD">
+<span class="sig-name descname"><span class="pre">HEAD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk.HEAD" title="Permalink to this definition"></a></dt>
+<dd><p>Synonym for <code class="docutils literal notranslate"><span class="pre">__contains__(fn)</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.__iter__">
+<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk.__iter__" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an iteration over the valid filenames.  These are
+VDisk-internal filenames of regular files (not subdirectories).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.__len__">
+<span class="sig-name descname"><span class="pre">__len__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk.__len__" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of filenames in the iteration <cite>__iter__()</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.keys">
+<span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk.keys" title="Permalink to this definition"></a></dt>
+<dd><p>A synonym for <cite>__iter__()</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.items">
+<span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk.items" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an iteration over (key, value) pairs.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.disk.VDisk.values">
+<span class="sig-name descname"><span class="pre">values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.disk.VDisk.values" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an iteration over the values (regular files).</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="webserver.html" class="btn btn-neutral float-left" title="selkie.webserver — Web server" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="store.html" class="btn btn-neutral float-right" title="selkie.store — Object store" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

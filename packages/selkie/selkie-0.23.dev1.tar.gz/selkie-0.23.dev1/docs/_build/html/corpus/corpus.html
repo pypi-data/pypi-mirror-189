@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.corpus — Simple text corpus &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Drill" href="drill.html" />
+    <link rel="prev" title="Conc - move back conc.rst.safe" href="conc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Corpus processing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="rom.html"><code class="docutils literal notranslate"><span class="pre">selkie.rom</span></code> — Romanizations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xml.html"><code class="docutils literal notranslate"><span class="pre">selkie.xml</span></code> — XML files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tok.html"><code class="docutils literal notranslate"><span class="pre">selkie.tok</span></code> — Tokenizer for Latin scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pretts.html"><code class="docutils literal notranslate"><span class="pre">selkie.pretts</span></code> — Converting text to bare words</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conc.html">Conc - move back conc.rst.safe</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.corpus</span></code> — Simple text corpus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="drill.html">Drill</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp/index.html">The NLP pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Corpus processing</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.corpus</span></code> — Simple text corpus</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/corpus/corpus.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-corpus-simple-text-corpus">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.corpus</span></code> — Simple text corpus<a class="headerlink" href="#selkie-corpus-simple-text-corpus" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="drill.html">Drill</a></li>
+</ul>
+</div>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p>The logical structure is intentionally simple.  A corpus consists of
+languages, and a language consists of texts and a lexicon.  We
+distinguish between <em>text</em> and <em>aggregate</em>.  A
+text is essentially just a list of sentence-sized units called
+<em>segments</em>.  An aggregate has hierarchical structure, terminating in
+texts.  We further distinguish between <em>collections</em> and <em>documents</em>.
+A <em>document</em> is a maximal item that is not a collection.  (Documents
+may either be single texts or themselves aggregates.)</p>
+<p>Languages are identified by <em>language IDs</em> (langids).
+The set of language IDs is not rigidly specified, though
+ISO 639-3 codes are typical.</p>
+<p>Texts and documents are identified by <em>text IDs</em>.  They are arbitrary
+strings; typical is simply to number them sequentially.</p>
+<p>The segments of a text are generically called <em>sentences</em>, though they
+may represent sentences, utterances, pause groups, or similar
+sentence-sized units.  Segment-by-segment translations (into a
+glossing language) may be provided.</p>
+<p>For texts that originate as audio recordings, the text is called
+a <em>transcription</em>, which is a tabular file with one record for every
+couple of seconds of speech, called a <em>snippet</em>.  The file contains four fields:
+start time and end time (in seconds), an indication of whether this
+snippet begins a new segment (<code class="docutils literal notranslate"><span class="pre">S</span></code>) or not (<code class="docutils literal notranslate"><span class="pre">-</span></code>), and the text of
+the snippet.</p>
+<p>Dividing a segment at whitespace yields <em>tokens</em>.  A token is an
+occurrence of a <em>form</em>.</p>
+<dl>
+<dt>On disk, a corpus is a directory with the following internal structure:</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">rom</span></code> — Subdirectory containing romanizations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lgid.lg</span></code> — Subdirectory representing the language with the
+given ID.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">orig</span></code> — Subdirectory containing original documents.  These
+are for convenience only; no assumptions are made about format.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">toc</span></code> — A file containing text metadata and documents.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">txt</span></code> — A subdirectory containing texts in files <code class="docutils literal notranslate"><span class="pre">textid.txt</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xs</span></code> — A subdirectory containing audio transcriptions in files
+<code class="docutils literal notranslate"><span class="pre">textid.xs</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lexicon.lx</span></code> — A file containing properties of lexical entries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lexicon.ldx</span></code> — An index file mapping forms to lists of token locations.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="hierarchical-interface">
+<h2>Hierarchical interface<a class="headerlink" href="#hierarchical-interface" title="Permalink to this heading"></a></h2>
+<p>One loads a corpus using the Corpus constructor.  The corpus has a
+<code class="docutils literal notranslate"><span class="pre">langs</span></code> member, which is a list of languages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.corpus</span> <span class="kn">import</span> <span class="n">Corpus</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.data</span> <span class="kn">import</span> <span class="n">ex</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">corpus</span> <span class="o">=</span> <span class="n">Corpus</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;corp25.lgc&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">corpus</span><span class="o">.</span><span class="n">langs</span><span class="p">)</span>
+<span class="go">deu German</span>
+</pre></div>
+</div>
+<p>One can fetch a language by accessing langs as a dict:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">deu</span> <span class="o">=</span> <span class="n">corpus</span><span class="o">.</span><span class="n">langs</span><span class="p">[</span><span class="s1">&#39;deu&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">deu</span><span class="o">.</span><span class="n">langid</span>
+<span class="go">&#39;deu&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">deu</span><span class="o">.</span><span class="n">name</span>
+<span class="go">&#39;German&#39;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">toc</span></code> member is a dict containing <strong>items</strong> (texts, documents, and
+collections).  It is loaded the first time it is accessed.  The
+metadata for each item is loaded at the same time:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">deu</span><span class="o">.</span><span class="n">toc</span><span class="p">)</span>
+<span class="go">1 story Eine kleine Geschichte</span>
+<span class="go">2 page  p1</span>
+<span class="go">3 page  p2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">deu</span><span class="o">.</span><span class="n">toc</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t1</span> <span class="o">=</span> <span class="n">deu</span><span class="o">.</span><span class="n">toc</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">t1</span><span class="o">.</span><span class="n">meta</span><span class="p">)</span>
+<span class="go">lang        &lt;Language deu German&gt;</span>
+<span class="go">textid      1</span>
+<span class="go">text_type   story</span>
+<span class="go">descr</span>
+<span class="go">author</span>
+<span class="go">title       Eine kleine Geschichte</span>
+<span class="go">orthography None</span>
+<span class="go">child_names (&#39;2&#39;, &#39;3&#39;)</span>
+<span class="go">catalog_id  None</span>
+<span class="go">audio       None</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t1</span><span class="o">.</span><span class="n">title</span>
+<span class="go">&#39;Eine kleine Geschichte&#39;</span>
+</pre></div>
+</div>
+<p>Subsets of interest are the documents (maximal items that are not
+collections) and the texts:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">deu</span><span class="o">.</span><span class="n">get_documents</span><span class="p">()</span>
+<span class="go">[&lt;Aggregate 1&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">deu</span><span class="o">.</span><span class="n">get_texts</span><span class="p">()</span>
+<span class="go">[&lt;Text 2&gt;, &lt;Text 3&gt;]</span>
+</pre></div>
+</div>
+<p>An aggregate behaves as a list of children, a text behaves as a
+list of sentences, and a sentence behaves like a list of words:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span>
+<span class="go">[&lt;Text 2&gt;, &lt;Text 3&gt;, &lt;Aggregate 4&gt;, &lt;Text 9&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t2</span> <span class="o">=</span> <span class="n">t1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
+<span class="go">[&lt;S in einem kleinen Dorf am Fluss wohnte ein Schuster&gt;,</span>
+<span class="go"> &lt;S der Schuster war sehr arm&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">t2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">&#39;in&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="rest-interface">
+<h2>REST interface<a class="headerlink" href="#rest-interface" title="Permalink to this heading"></a></h2>
+<p>Alternatively, one can create a REST interface to the corpus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.corpus</span> <span class="kn">import</span> <span class="n">RESTCorpus</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">corpus</span> <span class="o">=</span> <span class="n">RESTCorpus</span><span class="p">(</span><span class="n">corpus_filename</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The corpus can be accessed like a dict, or using the methods GET, PUT,
+and DELETE.  (If an object is read-only, then only GET is available.)
+The valid paths are as follows.  All entities are represented in JSON
+format.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/toc/lgid</span></code></p></td>
+<td><p>Read-only.  Returns the toc file for the given language as a
+list of text metadata objects.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/toc/lgid/textid</span></code></p></td>
+<td><p>Read-write.  Returns the metadata for a given text.  This is a
+dict with keys <code class="docutils literal notranslate"><span class="pre">textid</span></code>, <code class="docutils literal notranslate"><span class="pre">text_type</span></code>, <code class="docutils literal notranslate"><span class="pre">author</span></code>,
+<code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">orthography</span></code>, <code class="docutils literal notranslate"><span class="pre">filename</span></code>, and <code class="docutils literal notranslate"><span class="pre">children</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="corpus-and-language">
+<h2>Corpus and Language<a class="headerlink" href="#corpus-and-language" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.corpus.Corpus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.corpus.</span></span><span class="sig-name descname"><span class="pre">Corpus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.corpus.Corpus" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="selkie.corpus.Corpus.language">
+<span class="sig-name descname"><span class="pre">language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.corpus.Corpus.language" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the language with the given langid, or None if it does
+not exist.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.corpus.Corpus.languages">
+<span class="sig-name descname"><span class="pre">languages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.corpus.Corpus.languages" title="Permalink to this definition"></a></dt>
+<dd><p>Iterates over languages.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.corpus.Language">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.corpus.</span></span><span class="sig-name descname"><span class="pre">Language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tab</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">langid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.corpus.Language" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="utility-functions-and-classes">
+<h2>Utility functions and classes<a class="headerlink" href="#utility-functions-and-classes" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="counts">
+<span class="sig-name descname"><span class="pre">counts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#counts" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a dict mapping the item types to their counts in the
+iteration <em>items</em>.  Items must be hashable.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Records">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Records</span></span><a class="headerlink" href="#Records" title="Permalink to this definition"></a></dt>
+<dd><p>A Records instance represents the contents of a file whose lines
+are to be interpreted as tab-separated records.  It is not
+necessary to wrap Records in “with”.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">recs</span> <span class="o">=</span> <span class="n">Records</span><span class="p">(</span><span class="s1">&#39;foo.tab&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="n">recs</span><span class="p">:</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>One may report errors with line numbers by calling the methods
+<code class="docutils literal notranslate"><span class="pre">warn()</span></code> or <code class="docutils literal notranslate"><span class="pre">error()</span></code>.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="RecordGroups">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RecordGroups</span></span><a class="headerlink" href="#RecordGroups" title="Permalink to this definition"></a></dt>
+<dd><p>Represents the contents of a file that consists of tabular
+records that are separated into groups by empty lines.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="conc.html" class="btn btn-neutral float-left" title="Conc - move back conc.rst.safe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="drill.html" class="btn btn-neutral float-right" title="Drill" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

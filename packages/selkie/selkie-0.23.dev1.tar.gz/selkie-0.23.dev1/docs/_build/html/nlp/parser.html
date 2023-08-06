@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.parser — Constituent parser &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.expr — Predicate calculus" href="expr.html" />
+    <link rel="prev" title="selkie.gen — Generation" href="gen.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The NLP pipeline</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="fsa.html"><code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> — Finite-state automata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fst.html"><code class="docutils literal notranslate"><span class="pre">selkie.fst</span></code> — Finite-state transducers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tree.html"><code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> — Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemmer.html"><code class="docutils literal notranslate"><span class="pre">selkie.stemmer</span></code> — English stemmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="head.html"><code class="docutils literal notranslate"><span class="pre">selkie.head</span></code> — Head marking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dep.html"><code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> — Dependency conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html"><code class="docutils literal notranslate"><span class="pre">selkie.features</span></code> — Non-recursive features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avs.html"><code class="docutils literal notranslate"><span class="pre">selkie.avs</span></code> — Recursive feature structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grammar.html"><code class="docutils literal notranslate"><span class="pre">selkie.grammar</span></code> — Constituent grammars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gdev.html"><code class="docutils literal notranslate"><span class="pre">selkie.gdev</span></code> — Grammar development tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen.html"><code class="docutils literal notranslate"><span class="pre">selkie.gen</span></code> — Generation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.parser</span></code> — Constituent parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expr.html"><code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code> — Predicate calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interp.html"><code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> — Semantic interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.html"><code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> — Automated reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bot.html"><code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> — Conversational agent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">The NLP pipeline</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.parser</span></code> — Constituent parser</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/nlp/parser.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-parser-constituent-parser">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.parser</span></code> — Constituent parser<a class="headerlink" href="#selkie-parser-constituent-parser" title="Permalink to this heading"></a></h1>
+<section id="bottom-up-chart-parsing">
+<h2>Bottom-up chart parsing<a class="headerlink" href="#bottom-up-chart-parsing" title="Permalink to this heading"></a></h2>
+<p>In the particular implementation of bottom-up chart parsing that I
+use, the basic data structure is the <strong>Node,</strong> which represents an
+equivalence class of partial parse trees, identified by category,
+start position, and end position.  Ambiguity arises when a Node
+represents multiple parse trees.  The parser never creates more than
+one Node with a given category, start, and end position.  Rather, a
+single Node may have multiple <strong>expansions.</strong></p>
+<p>The <strong>chart</strong> is a dict that maps an (X,i,j) tuple (that is,
+category X, start position i, end position j) to a Node.</p>
+<p>The parser begins by creating one Node for each part of speech of each
+word.  It matches a grammar rule by collecting a sequence of
+children matching the right-hand side categories.  When all children
+have been identified, a new Node is created as specified by the
+left-hand side category.</p>
+<p>The process of collecting children is broken into a sequence of steps
+in which a partial match, representing a partial set of children, is
+represented by an <strong>Edge</strong> object.  When a new Node (X,i,j) is
+created, the grammar is accessed to find all rules whose first
+right-hand side category is matched by X.  For each of those rules, an
+Edge is created with one child, namely, the Node (X,i,j).  Edges are
+indexed in an <strong>edge table</strong> by the end position of the last child
+already collected.  The next child must start at that position.  When
+a new Node is created, in addition to looking up grammar rules, the
+edge table is also accessed to get existing Edges in which the new
+Node matches the next right-hand side category of the Edge.  If there
+is a match, the Edge and the new Node are <strong>combined</strong> to create a
+new Edge, extended by one more child.</p>
+<p>When an Edge is created that has all its children, a <strong>complete</strong>
+operation is called to create a Node corresponding to the left-hand
+side.</p>
+<p>The parser proceeds word by word through
+the sentence.  The <em>j</em>-th word spans positions <em>j-1</em> to <em>j</em>.
+When processing the <em>j</em>-th word, all Nodes that <em>end</em> at
+position <em>j</em> are created.  This guarantees systematicity.  The
+main combinatory operation is the one that combines an incomplete Edge
+with a new Node.  Any such combination involves an edge whose last
+collected child ends at position <em>i</em> and a Node that
+spans positions <em>i</em> to <em>j</em>.  The Node is created, and the
+combination is done, at position <em>j</em>.  At that point, all Edges
+with which the Node could ever be combined already exist in the edge
+table, since they would have been created when their final child was
+created, at position <em>i</em>.</p>
+</section>
+<section id="details-of-operation">
+<h2>Details of operation<a class="headerlink" href="#details-of-operation" title="Permalink to this heading"></a></h2>
+<p>As mentioned, there are two different data objects, <code class="docutils literal notranslate"><span class="pre">Node</span></code>
+and <code class="docutils literal notranslate"><span class="pre">Edge</span></code>, and two different indices: the <strong>chart</strong> and
+the <strong>edge table.</strong>
+Schematically, we write a node as
+<span class="math notranslate nohighlight">\(_iX_j\)</span> and an edge as
+<span class="math notranslate nohighlight">\(_iX \rightarrow\alpha\bullet_j\beta\)</span>.</p>
+<p>There are four basic parsing operations:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Shift(j)</span></code>
+nodes for each part of speech of the word spanning (<em>j</em>-1, <em>j</em>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Start(node)</span></code> accesses the grammar to find rules of form
+<span class="math notranslate nohighlight">\(X \rightarrow Y \beta\bullet\)</span>, where <em>Y</em> matches the node’s category.
+It adds a new edge <span class="math notranslate nohighlight">\(X\rightarrow{}_iY\bullet_j\beta\)</span> for each match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Combine(node)</span></code> accesses the edge table to find edges of form
+<span class="math notranslate nohighlight">\(X\rightarrow{}_k\alpha\bullet_iY\beta\)</span>, where <em>i</em> is the
+node’s start position and the node’s category matches <em>Y</em>.
+For each successful match, a new Edge is created and added to the edge table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Complete(edge)</span></code> checks whether the edge has collected all
+children required by its rule.  If so, it creates a new Node
+corresponding to the left-hand side of the rule.</p></li>
+</ul>
+</div></blockquote>
+<p>There are two supporting operations that stitch everything together:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Add_node(cat,</span> <span class="pre">expansion,</span> <span class="pre">i,</span> <span class="pre">j)</span></code>.  Create the
+node and put it in the chart, then call <code class="docutils literal notranslate"><span class="pre">start()</span></code> and <code class="docutils literal notranslate"><span class="pre">combine()</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Add_edge(edge)</span></code>.  If the edge has all its children,
+call <code class="docutils literal notranslate"><span class="pre">complete()</span></code>.  Otherwise, store it in the edge table.</p></li>
+</ul>
+</div></blockquote>
+<p>At the top level, the parser passes through the sentence,
+calling <code class="docutils literal notranslate"><span class="pre">shift()</span></code> at each position in turn.  In principle, a
+single call to shift causes a cascade of other actions.  However, for
+the ease of debugging, the parser keeps a to-do list of “add node” and
+“add edge” actions.  The method <code class="docutils literal notranslate"><span class="pre">step()</span></code> takes the next
+specification from the to-do list and executes it, possibly adding new
+actions to the to-do list.</p>
+<p>After all words have been processed, an <strong>unwind</strong> operation looks
+for an S node spanning the whole
+sentence.  If found, it extracts a list of trees from it and returns
+them.</p>
+<p>All operations just described are methods of the class <code class="docutils literal notranslate"><span class="pre">Parser</span></code>.
+Here is an example of using Parser:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.data</span> <span class="kn">import</span> <span class="n">ex</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.parser</span> <span class="kn">import</span> <span class="n">Parser</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Parser</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;g1a&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span> <span class="o">=</span> <span class="n">p</span><span class="p">(</span><span class="s1">&#39;I book a flight in May&#39;</span><span class="p">,</span> <span class="n">trace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">Add Node 0.NP.1 I NP</span>
+<span class="go">Add Edge (NP -&gt; 0.NP.1 * PP {})</span>
+<span class="go">Add Edge (S -&gt; 0.NP.1 * VP {})</span>
+<span class="go">Add Node 1.V.2 book V</span>
+<span class="go">Add Edge (VP -&gt; 1.V.2 * NP {})</span>
+<span class="go">Add Node 1.N.2 book N</span>
+<span class="go">Add Node 2.Det.3 a Det</span>
+<span class="go">Add Edge (NP -&gt; 2.Det.3 * N {})</span>
+<span class="go">Add Node 3.N.4 flight N</span>
+<span class="go">Add Edge (NP -&gt; 2.Det.3 3.N.4 * {})</span>
+<span class="go">Add Node 2.NP.4 (NP -&gt; 2.Det.3 3.N.4 * {})</span>
+<span class="go">Add Edge (NP -&gt; 2.NP.4 * PP {})</span>
+<span class="go">Add Edge (S -&gt; 2.NP.4 * VP {})</span>
+<span class="go">Add Edge (VP -&gt; 1.V.2 2.NP.4 * {})</span>
+<span class="go">Add Node 1.VP.4 (VP -&gt; 1.V.2 2.NP.4 * {})</span>
+<span class="go">Add Edge (VP -&gt; 1.VP.4 * PP {})</span>
+<span class="go">Add Edge (S -&gt; 0.NP.1 1.VP.4 * {})</span>
+<span class="go">Add Node 0.S.4 (S -&gt; 0.NP.1 1.VP.4 * {})</span>
+<span class="go">Add Node 4.P.5 in P</span>
+<span class="go">Add Edge (PP -&gt; 4.P.5 * NP {})</span>
+<span class="go">Add Node 5.NP.6 May NP</span>
+<span class="go">Add Edge (NP -&gt; 5.NP.6 * PP {})</span>
+<span class="go">Add Edge (S -&gt; 5.NP.6 * VP {})</span>
+<span class="go">Add Edge (PP -&gt; 4.P.5 5.NP.6 * {})</span>
+<span class="go">Add Node 4.PP.6 (PP -&gt; 4.P.5 5.NP.6 * {})</span>
+<span class="go">Add Edge (VP -&gt; 1.VP.4 4.PP.6 * {})</span>
+<span class="go">Add Node 1.VP.6 (VP -&gt; 1.VP.4 4.PP.6 * {})</span>
+<span class="go">Add Edge (VP -&gt; 1.VP.6 * PP {})</span>
+<span class="go">Add Edge (S -&gt; 0.NP.1 1.VP.6 * {})</span>
+<span class="go">Add Node 0.S.6 (S -&gt; 0.NP.1 1.VP.6 * {})</span>
+<span class="go">Add Edge (NP -&gt; 2.NP.4 4.PP.6 * {})</span>
+<span class="go">Add Node 2.NP.6 (NP -&gt; 2.NP.4 4.PP.6 * {})</span>
+<span class="go">Add Edge (NP -&gt; 2.NP.6 * PP {})</span>
+<span class="go">Add Edge (S -&gt; 2.NP.6 * VP {})</span>
+<span class="go">Add Edge (VP -&gt; 1.V.2 2.NP.6 * {})</span>
+<span class="go">Add Expansion 1.VP.6 (VP -&gt; 1.V.2 2.NP.6 * {})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">0   (S</span>
+<span class="go">1      (NP I)</span>
+<span class="go">2      (VP</span>
+<span class="go">3         (VP</span>
+<span class="go">4            (V book)</span>
+<span class="go">5            (NP</span>
+<span class="go">6               (Det a)</span>
+<span class="go">7               (N flight)))</span>
+<span class="go">8         (PP</span>
+<span class="go">9            (P in)</span>
+<span class="go">10           (NP May))))</span>
+<span class="go">0   (S</span>
+<span class="go">1      (NP I)</span>
+<span class="go">2      (VP</span>
+<span class="go">3         (V book)</span>
+<span class="go">4         (NP</span>
+<span class="go">5            (NP</span>
+<span class="go">6               (Det a)</span>
+<span class="go">7               (N flight))</span>
+<span class="go">8            (PP</span>
+<span class="go">9               (P in)</span>
+<span class="go">10              (NP May)))))</span>
+</pre></div>
+</div>
+<p>You can confirm that the nodes and edges in the trace produced by the
+parser correspond to the previous figure.</p>
+</section>
+<section id="top-down-filtering-earley-parser">
+<h2>Top-down filtering (Earley parser)<a class="headerlink" href="#top-down-filtering-earley-parser" title="Permalink to this heading"></a></h2>
+<p>Top-down filtering is not implemented in the current parser, but I
+describe the algorithm here for reference.</p>
+<p>A dotted rule not only keeps track of children that have been
+constructed, it also establishes expectations about what will come
+next: if <em>Y</em> is the category after the dot, then only nodes of
+category <em>Y</em>, or which might form the leading edge of a tree rooted in
+<em>Y</em>, could ever be used to extend the dotted rule.</p>
+<p>For example, consider position 1 in the chart.  The edges
+whose dot is at position 1 are in the column above the first word.
+There are two possible continuation categories: VP and PP.  They are
+circled in the two edges in the first column.  Now consider the two
+parts of speech for “book”, whose start position is 1.  The category
+V can be the first category in a VP, so it fits expectations.  But the
+category N cannot be initial in either VP or PP, so it violates
+expectations.</p>
+<p>Consider also the edge <span class="math notranslate nohighlight">\(_2\mbox{S}\rightarrow\mbox{NP}\bullet_4\mbox{VP}\)</span>.  If we
+subsequently find a VP and use the completed edge to construct an S,
+the start position of the S node will be position 2.  The only edge
+with the dot at position 2 is the one above “book”.  It expects an
+NP, not an S; nor can S be the initial category in an NP.
+Accordingly, we can filter out the S edge immediately.</p>
+<p>In short, we can use expectations to avoid creating the nodes and
+edges marked with an “X” in the chart.  In cases where
+(unlike here) the nodes and edges in question spawn significant
+downstream construction, a lot of work can be saved by filtering them
+out immediately.</p>
+<p>In the original Earley algorithm, one works top-down from
+expectations.  For example, we expect a VP at position 1, and there is
+a rule <span class="math notranslate nohighlight">\(\mbox{VP}\rightarrow\mbox{V}\;\mbox{NP}\)</span>; hence we would install an edge
+<span class="math notranslate nohighlight">\(_1\mbox{VP}\rightarrow\bullet_1\mbox{V}\;\mbox{NP}\)</span> in the chart, spanning no material, but
+indicating that a V will also satisfy expectations.</p>
+<p>Instead of installing these edges in the chart, an alternative is to
+precompute a table called the <strong>left corner table</strong> giving all
+predictions that follow from a symbol following the dot.  For
+<code class="docutils literal notranslate"><span class="pre">g1</span></code>:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>S</p></td>
+<td><p>S, NP, Det</p></td>
+</tr>
+<tr class="row-even"><td><p>NP</p></td>
+<td><p>NP, Det</p></td>
+</tr>
+<tr class="row-odd"><td><p>VP</p></td>
+<td><p>VP, V</p></td>
+</tr>
+<tr class="row-even"><td><p>PP</p></td>
+<td><p>PP, P</p></td>
+</tr>
+<tr class="row-odd"><td><p>Det</p></td>
+<td><p>Det</p></td>
+</tr>
+<tr class="row-even"><td><p>N</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-odd"><td><p>P</p></td>
+<td><p>P</p></td>
+</tr>
+</tbody>
+</table>
+<p>We use predictions to filter at two points:</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">shift</span></code>, do not install a part of speech unless it is predicted
+In <code class="docutils literal notranslate"><span class="pre">bu_predict</span></code>, do not create edge <span class="math notranslate nohighlight">\(_iX\rightarrow Y\bullet_j\beta\)</span> unless <em>X</em> is predicted.</p>
+<p>Here is a recursive definition for <code class="docutils literal notranslate"><span class="pre">lc-predicts()</span></code>.  For all
+categories <em>X</em>:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><em>X</em> lc-predicts <em>X</em></p></li>
+<li><p>If <em>X</em> lc-predicts <em>Y</em>, and there is a rule <span class="math notranslate nohighlight">\(Y\rightarrow Z\beta\)</span>, then <em>X</em> lc-predicts <em>Z</em></p></li>
+</ol>
+</div></blockquote>
+<p>Note that this definition is very similar to some of the relations
+involved in the conversion to CNF.  The discussion here can readily be
+applied to those relations as well.</p>
+<p>The relation “lc-predicts” can be thought of as a collection
+of pairs (X,Y) such that <em>X</em> lc-predicts <em>Y</em>.
+We build a table that takes pairs (X,Y) and returns true or
+false, depending on whether the pair is present in the table.
+We can use a python <code class="docutils literal notranslate"><span class="pre">set</span></code> containing pairs to implement it.
+Consider:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span><span class="s1">&#39;NP&#39;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">pairs</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="s1">&#39;S&#39;</span><span class="p">,</span><span class="s1">&#39;NP&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span><span class="s1">&#39;NP&#39;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">pairs</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>We initialize the table using the base clause (1) above: for every category
+in the grammar, add pair (X,X).
+Then every time we add a new pair (Y,Z), clause (2) comes into play.  Namely, we
+then look for all rules <span class="math notranslate nohighlight">\(X\rightarrow Y\beta\)</span>, and for each, we
+recursively add the pair (X, Y).  Note that the rules
+<span class="math notranslate nohighlight">\(X\rightarrow Y\beta\)</span> are the <strong>continuations</strong> of <em>Y</em> in a Grammar.
+Before adding a pair (X,Y), however, we should check whether
+it is already present.  If so, we do nothing.</p>
+<p>In short, we define a class <strong>LCTable</strong> that has the following
+methods.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>LCTable(g)</strong>.  Store the grammar as <code class="docutils literal notranslate"><span class="pre">t.grammar</span></code>,
+set <code class="docutils literal notranslate"><span class="pre">t.pairs</span></code> to the empty set, then cycle through the
+categories <em>X</em> of the grammar, calling <code class="docutils literal notranslate"><span class="pre">add_pair(X,X)</span></code> on each.</p></li>
+<li><p><strong>add_pair(Y,Z)</strong>.  First, it checks whether (Y,Z) is
+already present in the set of pairs.  If so, it does
+nothing.  If not, it adds the pair to the set, then cycles through
+the continuations <span class="math notranslate nohighlight">\(X\rightarrow Y\beta\)</span>, recursively calling
+<code class="docutils literal notranslate"><span class="pre">addPair(X,Z)</span></code> for each.  Note that the recursion will
+eventually be terminated, even if there is a cycle in the grammar:
+eventually, we will encounter pairs that have already been added.</p></li>
+<li><p><strong>predicts(X,Y)</strong>.  Takes an expected category <em>X</em>, and
+returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <em>X</em> lc-predicts <em>Y</em>, otherwise <code class="docutils literal notranslate"><span class="pre">False</span></code>.
+This is what we use after the table has been completed.</p></li>
+</ul>
+</div></blockquote>
+<p>Finally, the class <code class="docutils literal notranslate"><span class="pre">earley.Parser</span></code> is a modification of
+<code class="docutils literal notranslate"><span class="pre">chart.Parser</span></code> that adds top-down filtering.  It uses an LC table
+to implement a method <code class="docutils literal notranslate"><span class="pre">is_expected()</span></code> that determines
+whether a given category is expected at a given position or not, and
+it modifies the <code class="docutils literal notranslate"><span class="pre">shift()</span></code> and <code class="docutils literal notranslate"><span class="pre">bu_predict()</span></code> methods to
+test whether a node or edge is expected, before installing it in the
+chart.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gen.html" class="btn btn-neutral float-left" title="selkie.gen — Generation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="expr.html" class="btn btn-neutral float-right" title="selkie.expr — Predicate calculus" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

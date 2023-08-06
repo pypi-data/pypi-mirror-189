@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.fsa — Finite-state automata &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.fst — Finite-state transducers" href="fst.html" />
+    <link rel="prev" title="The NLP pipeline" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The NLP pipeline</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> — Finite-state automata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fst.html"><code class="docutils literal notranslate"><span class="pre">selkie.fst</span></code> — Finite-state transducers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tree.html"><code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> — Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemmer.html"><code class="docutils literal notranslate"><span class="pre">selkie.stemmer</span></code> — English stemmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="head.html"><code class="docutils literal notranslate"><span class="pre">selkie.head</span></code> — Head marking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dep.html"><code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> — Dependency conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html"><code class="docutils literal notranslate"><span class="pre">selkie.features</span></code> — Non-recursive features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avs.html"><code class="docutils literal notranslate"><span class="pre">selkie.avs</span></code> — Recursive feature structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grammar.html"><code class="docutils literal notranslate"><span class="pre">selkie.grammar</span></code> — Constituent grammars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gdev.html"><code class="docutils literal notranslate"><span class="pre">selkie.gdev</span></code> — Grammar development tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen.html"><code class="docutils literal notranslate"><span class="pre">selkie.gen</span></code> — Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parser.html"><code class="docutils literal notranslate"><span class="pre">selkie.parser</span></code> — Constituent parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expr.html"><code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code> — Predicate calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interp.html"><code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> — Semantic interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.html"><code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> — Automated reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bot.html"><code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> — Conversational agent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">The NLP pipeline</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> — Finite-state automata</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/nlp/fsa.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-fsa-finite-state-automata">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> — Finite-state automata<a class="headerlink" href="#selkie-fsa-finite-state-automata" title="Permalink to this heading"></a></h1>
+<p>The module <code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> provides finite-state automata, including
+finite-state transducers.</p>
+<section id="using-automata">
+<h2>Using automata<a class="headerlink" href="#using-automata" title="Permalink to this heading"></a></h2>
+<p>The most familiar representation of a finite-state automaton is the
+state graph.  An example is given in the following figure:</p>
+<p>One can create this automaton manually, as follows.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.fsa</span> <span class="kn">import</span> <span class="n">DFsa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">DFsa</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;the&#39;</span><span class="p">)</span>
+<span class="go">&lt;Edge 1 2 the&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;big&#39;</span><span class="p">)</span>
+<span class="go">&lt;Edge 2 2 big&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="go">&lt;Edge 2 2 red&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">)</span>
+<span class="go">&lt;Edge 2 3 dog&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">final_state</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span>
+<span class="go">DFsa:</span>
+<span class="go">  -&gt;0  [1]</span>
+<span class="go">    1  [2]</span>
+<span class="go">    2# [3]</span>
+<span class="go">    0 1 the</span>
+<span class="go">    1 1 big</span>
+<span class="go">    1 1 red</span>
+<span class="go">    1 2 dog</span>
+</pre></div>
+</div>
+<p>An automaton can be represented as a <strong>transition matrix</strong> that maps states and input
+symbols to next states.  For the automaton just defined, the matrix
+is:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">the</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">big</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">red</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dog</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>2</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The automaton can be accessed like a matrix:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">][</span><span class="s1">&#39;the&#39;</span><span class="p">]</span>
+<span class="go">&lt;DFsa.State 2 [1]&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">][</span><span class="s1">&#39;dog&#39;</span><span class="p">]</span>
+<span class="go">&lt;DFsa.State 3 [2]&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">][</span><span class="s1">&#39;the&#39;</span><span class="p">]</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<p>A row of the matrix is represented by a state, so one can access a
+state by name using the same idiom:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">]</span>
+<span class="go">&lt;DFsa.State 1 [0]&gt;</span>
+</pre></div>
+</div>
+<p>Final states are distinguished by their value
+for the attribute <code class="docutils literal notranslate"><span class="pre">is_final</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;3&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">is_final</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>The transition matrix is used to define the behavior of the automaton when given
+a sequence of input symbols, as follows.
+The automaton begins in the start state.  For each symbol in the input sequence in turn,
+the new state of the automaton, given old state <code class="docutils literal notranslate"><span class="pre">q</span></code> and input
+symbol <code class="docutils literal notranslate"><span class="pre">sym</span></code>, is <code class="docutils literal notranslate"><span class="pre">q[sym]</span></code>.
+If at any point there is no next state,
+the automaton <strong>blocks</strong>, and the input sequence is rejected.  At
+the end of the input, the sequence is <strong>accepted</strong> if the state is a
+final state, and rejected otherwise.  Here is the full definition of
+the <code class="docutils literal notranslate"><span class="pre">accepts</span></code> method:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">accepts</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span>
+    <span class="k">for</span> <span class="n">sym</span> <span class="ow">in</span> <span class="nb">input</span><span class="p">:</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="n">q</span><span class="p">[</span><span class="n">sym</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">q</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">q</span><span class="o">.</span><span class="n">is_final</span>
+</pre></div>
+</div>
+<p>Here are some examples of the behavior of <code class="docutils literal notranslate"><span class="pre">accepts</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">accepts</span><span class="p">([</span><span class="s1">&#39;the&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">])</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">accepts</span><span class="p">([</span><span class="s1">&#39;the&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">])</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">accepts</span><span class="p">([</span><span class="s1">&#39;the&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;big&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">])</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">accepts</span><span class="p">([</span><span class="s1">&#39;the&#39;</span><span class="p">])</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">accepts</span></code> method takes a sequence of symbols as
+input.  Be sure to split a string representing a sentence.  A string
+is treated as a sequence of characters, so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">accepts</span><span class="p">(</span><span class="s1">&#39;the&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>behaves as if it were:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">accepts</span><span class="p">([</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+<section id="fsa-file-format">
+<h2>Fsa file format<a class="headerlink" href="#fsa-file-format" title="Permalink to this heading"></a></h2>
+<p>An automaton can be stored in a file in
+<strong>fsa file format</strong>.  The example file <code class="docutils literal notranslate"><span class="pre">fsa1</span></code> illustrates the format:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.data</span> <span class="kn">import</span> <span class="n">ex</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">contents</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;fsa1&#39;</span><span class="p">)),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="go">1       2       the</span>
+<span class="go">2       2       big</span>
+<span class="go">2       2       red</span>
+<span class="go">2       3       dog</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<p>The fsa file format is an example of a <strong>tabular format</strong>.  The file consists
+of <strong>records</strong> terminated by single newline characters, and each
+record is separated into <strong>fields</strong> by single tab characters.  The
+number of fields is one more than the number of tabs.  An empty field
+is created by two tabs with nothing intervening, or by a tab at the
+beginning or end of the line.</p>
+<p>There are two kinds of records in an fsa file.  A record containing
+three fields is an <strong>edge</strong> record, and represents one edge in the
+graph.  A record containing one field is a <strong>final-state</strong>
+record.  The initial state is identified as the state in the first
+field of the first record (which may be either an edge or a
+final-state record).</p>
+<p>One can load the file simply by passing the filename to the <code class="docutils literal notranslate"><span class="pre">DFsa</span></code>
+constructor:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">DFsa</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;fsa1&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span>
+<span class="go">DFsa:</span>
+<span class="go">  -&gt;0  [1]</span>
+<span class="go">    1  [2]</span>
+<span class="go">    2# [3]</span>
+<span class="go">    0 1 the</span>
+<span class="go">    1 1 big</span>
+<span class="go">    1 1 red</span>
+<span class="go">    1 2 dog</span>
+</pre></div>
+</div>
+</section>
+<section id="more-about-states">
+<h2>More about states<a class="headerlink" href="#more-about-states" title="Permalink to this heading"></a></h2>
+<p>Note that state names are strings, not numbers.  One can
+actually use anything one likes as state names, but state names read
+from files are always strings, so we have used strings to now for
+consistency’s sake.  The automaton, viewed as a matrix, is accessed by
+state name:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;3&#39;</span><span class="p">]</span>
+<span class="go">&lt;DFsa.State 3 [2]&gt;</span>
+</pre></div>
+</div>
+<p>In the printed representation of the state, the “3” is the state’s
+name, and the “2” in brackets is its <strong>index</strong>.  The automaton contains a
+list of states, in order of creation, and the index is the position of
+the state in that list:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">states</span>
+<span class="go">[&lt;DFsa.State 1 [0]&gt;, &lt;DFsa.State 2 [1]&gt;, &lt;DFsa.State 3 [2]&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">q</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">states</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">q</span>
+<span class="go">&lt;DFsa.State 3 [2]&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">q</span><span class="o">.</span><span class="n">name</span>
+<span class="go">&#39;3&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">q</span><span class="o">.</span><span class="n">index</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>Unlike <code class="docutils literal notranslate"><span class="pre">edge</span></code> and <code class="docutils literal notranslate"><span class="pre">final_state</span></code> methods, accessing a state by label does
+not automatically create new states.  It signals an error if there is
+no existing state with the given label:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;5&#39;</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">&quot;/cl/python/seal/fsa.py&quot;</span>, line <span class="m">137</span>, in <span class="n">state</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_dict</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
+<span class="gr">KeyError</span>: <span class="n">&#39;5&#39;</span>
+</pre></div>
+</div>
+<p>Again, be careful not to confuse strings and numbers:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">]</span>
+<span class="go">&lt;DFsa.State 2 [1]&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">&quot;/cl/python/seal/fsa.py&quot;</span>, line <span class="m">137</span>, in <span class="n">state</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_dict</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
+<span class="gr">KeyError</span>: <span class="n">2</span>
+</pre></div>
+</div>
+<p>To create a new nonfinal state, use the method <code class="docutils literal notranslate"><span class="pre">state</span></code>.
+It takes a name as argument, and
+returns the state that has that name, creating a new state if
+necessary.  Any
+immutable object can be used as a label.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">state</span><span class="p">(</span><span class="s1">&#39;6&#39;</span><span class="p">)</span>
+<span class="go">&lt;DFsa.State 6 [3]&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">state</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<span class="go">&lt;DFsa.State hi [4]&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">state</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">&lt;DFsa.State 2 [5]&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">state</span><span class="p">(</span><span class="nb">frozenset</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]))</span>
+<span class="go">&lt;DFsa.State {1,2,4} [6]&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">a</span><span class="o">.</span><span class="n">states</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">q</span><span class="p">))</span>
+<span class="gp">...</span>
+<span class="go">&lt;DFsa.State 1 [0]&gt;</span>
+<span class="go">&lt;DFsa.State 2 [1]&gt;</span>
+<span class="go">&lt;DFsa.State 3 [2]&gt;</span>
+<span class="go">&lt;DFsa.State 6 [3]&gt;</span>
+<span class="go">&lt;DFsa.State hi [4]&gt;</span>
+<span class="go">&lt;DFsa.State 2 [5]&gt;</span>
+<span class="go">&lt;DFsa.State {1,2,4} [6]&gt;</span>
+</pre></div>
+</div>
+<p>One can “clean up” the state names by calling the method <code class="docutils literal notranslate"><span class="pre">rename_states</span></code>.
+It sets each state name to be the string corresponding to the state’s index:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">rename_states</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">states</span>
+<span class="go">[&lt;DFsa.State 0 [0]&gt;, &lt;DFsa.State 1 [1]&gt;, &lt;DFsa.State 2 [2]&gt;,</span>
+<span class="go"> &lt;DFsa.State 3 [3]&gt;, &lt;DFsa.State 4 [4]&gt;, &lt;DFsa.State 5 [5]&gt;,</span>
+<span class="go"> &lt;DFsa.State 6 [6]&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">states</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<span class="go">&#39;0&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">states</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">index</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+</section>
+<section id="nondeterministic-automata">
+<h2>Nondeterministic automata<a class="headerlink" href="#nondeterministic-automata" title="Permalink to this heading"></a></h2>
+<p>Suppose we wish to define an automaton that accepts any string of 0’s
+and 1’s that ends in “01.”  The easy way to do it is with the
+automaton <code class="docutils literal notranslate"><span class="pre">fsa2</span></code>, shown in the following figure.</p>
+<a class="reference internal image-reference" href="../_images/fig9.jpg"><img alt="../_images/fig9.jpg" src="../_images/fig9.jpg" style="width: 200px;" /></a>
+<p>It consumes 0’s and 1’s for a time, then nondeterministically
+“guesses” that a given “0” is the next to last symbol in the
+input.  If it guesses right, and if that “0” is immediately followed
+by a “1,” then the automaton arrives in a final state at the end of
+the input, and the string is accepted.</p>
+<p>Suppose that the string in fact ends in “01,” but the automaton
+guesses wrong.  The result is an alternative computation that ends in
+failure.  Hence we must be more explicit about what it means for an
+automaton to accept a string: it accepts an input string if there is
+<em>any</em> valid computation that leads to success.  The existence of
+alternative computations that end in failure is immaterial.</p>
+<p>The previous automaton is <strong>nondeterministic</strong> because there are two
+edges out of state “A” that are both labeled “0.”  In general,
+an automaton is nondeterministic if there is any state that has
+multiple outgoing edges with the same label.</p>
+<p>(Note that an
+otherwise deterministic automaton that had, say, two edges labeled
+“0” both of which go from state “A” to state “B” would satisfy
+our definition of nondeterminism.  To keep the definition simple, we
+indeed consider such an automaton to be nondeterministic, even though
+the nondeterminism is in a sense spurious.)</p>
+<p>There is one other way in which an automaton may be nondeterministic.
+It may contain <strong>epsilon edges</strong>.  The automaton <code class="docutils literal notranslate"><span class="pre">ex('fsa2')</span></code>, shown in
+the following figure, provides an example.</p>
+<p>(fig1.pdf)</p>
+<p>A (possibly) nondeterministic automaton is represented by the class
+<code class="docutils literal notranslate"><span class="pre">Fsa</span></code>, rather than <code class="docutils literal notranslate"><span class="pre">DFsa</span></code>.  For example, we may load
+<code class="docutils literal notranslate"><span class="pre">fsa1</span></code> as an <code class="docutils literal notranslate"><span class="pre">Fsa</span></code>, and add an edge to make it
+nondeterministic:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.fsa</span> <span class="kn">import</span> <span class="n">NFsa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">NFsa</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;fsa1&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="go">&lt;Edge 2 3 red&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span>
+<span class="go">NFsa:</span>
+<span class="go">  -&gt;0  [1]</span>
+<span class="go">    1  [2]</span>
+<span class="go">    2# [3]</span>
+<span class="go">    0 1 the</span>
+<span class="go">    1 1 big</span>
+<span class="go">    1 1 red</span>
+<span class="go">    1 2 dog</span>
+<span class="go">    1 2 red</span>
+</pre></div>
+</div>
+<p>An edge is an ε-edge if its label, coerced to a boolean, is
+<code class="docutils literal notranslate"><span class="pre">False</span></code>.  That is, the labels <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">''</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code>,
+<code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">()</span></code>, etc., are all equivalent.  (The label <code class="docutils literal notranslate"><span class="pre">'0'</span></code>,
+however, is not boolean false.)
+The label parameter for
+the <code class="docutils literal notranslate"><span class="pre">edge</span></code> method defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>, so one can also create an
+ε-edge by omitting the label.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">)</span>
+<span class="go">&lt;Edge 1 2 None&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span>
+<span class="go">NFsa:</span>
+<span class="go">  -&gt;0  [1]</span>
+<span class="go">    1  [2]</span>
+<span class="go">    2# [3]</span>
+<span class="go">    0 1</span>
+<span class="go">    0 1 the</span>
+<span class="go">    1 1 big</span>
+<span class="go">    1 1 red</span>
+<span class="go">    1 2 dog</span>
+<span class="go">    1 2 red</span>
+</pre></div>
+</div>
+<p>If we try to add either kind of edge to a <code class="docutils literal notranslate"><span class="pre">DFsa</span></code>, an error is signalled:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">DFsa</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;fsa1&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">&quot;/cl/python/seal/fsa.py&quot;</span>, line <span class="m">103</span>, in <span class="n">edge</span>
+    <span class="k">return</span> <span class="n">src</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
+  File <span class="nb">&quot;/cl/python/seal/fsa.py&quot;</span>, line <span class="m">85</span>, in <span class="n">edge</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">,</span> <span class="s1">&#39;Attempt to add multiple edges with same label&#39;</span>
+<span class="gr">Exception</span>: <span class="n">Attempt to add multiple edges with same label</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">&quot;/cl/python/seal/fsa.py&quot;</span>, line <span class="m">103</span>, in <span class="n">edge</span>
+    <span class="k">return</span> <span class="n">src</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
+  File <span class="nb">&quot;/cl/python/seal/fsa.py&quot;</span>, line <span class="m">82</span>, in <span class="n">edge</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">label</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">Exception</span><span class="p">,</span> <span class="s1">&#39;Attempt to add empty edge&#39;</span>
+<span class="gr">Exception</span>: <span class="n">Attempt to add empty edge</span>
+</pre></div>
+</div>
+<p>The next-state operation on an <code class="docutils literal notranslate"><span class="pre">Fsa</span></code> returns a list of states,
+rather than a single state.  That is true even if there is only one
+next state.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">][</span><span class="s1">&#39;red&#39;</span><span class="p">]</span>
+<span class="go">[&lt;Fsa.State 2 [1]&gt;, &lt;Fsa.State 3 [2]&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">][</span><span class="s1">&#39;big&#39;</span><span class="p">]</span>
+<span class="go">[&lt;Fsa.State 2 [1]&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">][</span><span class="s1">&#39;&#39;</span><span class="p">]</span>
+<span class="go">[&lt;Fsa.State 2 [1]&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">][</span><span class="s1">&#39;dog&#39;</span><span class="p">]</span>
+<span class="go">[]</span>
+</pre></div>
+</div>
+<p>Note that this operation does not automatically follow epsilon edges.
+There is no version of the next-state operation that follows epsilon
+edges.  Instead, one should convert the <code class="docutils literal notranslate"><span class="pre">Fsa</span></code> to a <code class="docutils literal notranslate"><span class="pre">DFsa</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.fsa</span> <span class="kn">import</span> <span class="n">determinize</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">determinize</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span>
+<span class="go">DFsa:</span>
+<span class="go">  -&gt;0  [0]</span>
+<span class="go">    1  [1]</span>
+<span class="go">    2# [2]</span>
+<span class="go">    3# [3]</span>
+<span class="go">    0 1 big</span>
+<span class="go">    0 1 the</span>
+<span class="go">    0 2 dog</span>
+<span class="go">    0 3 red</span>
+<span class="go">    1 1 big</span>
+<span class="go">    1 2 dog</span>
+<span class="go">    1 3 red</span>
+<span class="go">    3 1 big</span>
+<span class="go">    3 2 dog</span>
+<span class="go">    3 3 red</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">accepts</span><span class="p">([</span><span class="s1">&#39;red&#39;</span><span class="p">])</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">accepts</span><span class="p">([</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">])</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">accepts</span><span class="p">([</span><span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">])</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+</section>
+<section id="conversion-to-dfsa">
+<h2>Conversion to DFSA<a class="headerlink" href="#conversion-to-dfsa" title="Permalink to this heading"></a></h2>
+<p>The call <code class="docutils literal notranslate"><span class="pre">determinize(a)</span></code>, given a nondeterministic automaton <em>a</em>,
+produces an equivalent deterministic automaton.  If <em>a</em> is not
+ε-free, <code class="docutils literal notranslate"><span class="pre">determinize()</span></code> will first call
+<code class="docutils literal notranslate"><span class="pre">eliminate_epsilons()</span></code> on it.</p>
+<p>The call
+<code class="docutils literal notranslate"><span class="pre">minimize(d)</span></code> takes a deterministic automaton and creates an
+equivalent automaton that is minimal, in the
+sense that there is no other equivalent deterministic automaton that
+has fewer states.</p>
+<p>In this section, we examine these three main transformations:
+ε-elimination, determinization, and minimization.</p>
+</section>
+<section id="elimination">
+<h2>ε-Elimination<a class="headerlink" href="#elimination" title="Permalink to this heading"></a></h2>
+<p>To convert a nondeterministic automaton to a deterministic automaton,
+a preliminary step is the elimination of ε-edges.</p>
+<p>The method <code class="docutils literal notranslate"><span class="pre">eliminate_epsilons</span></code> does the following.
+Each state in the old automaton is replaced by a
+set of states, namely, those which can be reached crossing only
+ε-edges.  That set of states is known as the
+<strong>epsilon closure</strong> of the original state.  The method <code class="docutils literal notranslate"><span class="pre">eclosure</span></code>
+computes the epsilon closure of a state.  We illustrate with
+<code class="docutils literal notranslate"><span class="pre">fsa3</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">NFsa</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;fsa3&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">q</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eclosure</span><span class="p">())]</span>
+<span class="go">[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">q</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eclosure</span><span class="p">())]</span>
+<span class="go">[&#39;2&#39;, &#39;3&#39;, &#39;4&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">q</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;4&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eclosure</span><span class="p">())]</span>
+<span class="go">[&#39;4&#39;]</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">eliminate_epsilons</span></code> creates a new automaton whose
+states are the epsilon closures of the original states.  Its edges are
+computed as follows.  If there is an edge from <em>i</em> to  on <em>x</em>
+in the original automaton, and if <em>i’</em>
+is any new state that has <em>i</em> in the set of original states that it
+came from, and if <em>j’</em> is the ε-closure of <em>j</em>, then there is
+an edge from <em>i’</em> to <em>j’</em> on <em>x</em> in the new automaton.
+Here is the method definition:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">eliminate_epsilons</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">epsilon_free</span><span class="p">:</span> <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="n">new_fsa</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">()</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">states</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">q</span><span class="o">.</span><span class="n">index</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">table</span><span class="p">):</span> <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Bad index&quot;</span><span class="p">)</span>
+        <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_fsa</span><span class="o">.</span><span class="n">state</span><span class="p">(</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">eclosure</span><span class="p">())))</span>
+
+    <span class="k">for</span> <span class="n">q1</span> <span class="ow">in</span> <span class="n">new_fsa</span><span class="o">.</span><span class="n">states</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">q1</span><span class="o">.</span><span class="n">name</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">q</span><span class="o">.</span><span class="n">edges</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">e</span><span class="o">.</span><span class="n">is_epsilon</span><span class="p">():</span>
+                    <span class="n">q1</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="n">e</span><span class="o">.</span><span class="n">dest</span><span class="o">.</span><span class="n">index</span><span class="p">],</span> <span class="n">e</span><span class="o">.</span><span class="n">label</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">q</span><span class="o">.</span><span class="n">is_final</span><span class="p">:</span>
+                <span class="n">q1</span><span class="o">.</span><span class="n">is_final</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">return</span> <span class="n">new_fsa</span>
+</pre></div>
+</div>
+<p>Here is an example of its use.  It renames states by default, but we
+suppress that for this example.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">eliminate_epsilons</span><span class="p">(</span><span class="n">rename_states</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span>
+<span class="go">NFsa:</span>
+<span class="go">  -&gt;0  [{1,2,3,4}]</span>
+<span class="go">    1  [{2,3,4}]</span>
+<span class="go">    2# [{1,2,3,4,5}]</span>
+<span class="go">    0 1 big</span>
+<span class="go">    0 1 red</span>
+<span class="go">    0 1 the</span>
+<span class="go">    0 2 dog</span>
+<span class="go">    1 1 big</span>
+<span class="go">    1 1 red</span>
+<span class="go">    1 2 dog</span>
+<span class="go">    2 1 big</span>
+<span class="go">    2 1 red</span>
+<span class="go">    2 1 the</span>
+<span class="go">    2 2 dog</span>
+</pre></div>
+</div>
+<p>Incidentally, <code class="docutils literal notranslate"><span class="pre">eliminate_epsilons</span></code> immediately returns the original
+automaton if it is already ε-free.  This is possible because
+Fsas keep track of whether they are ε-free or not.
+When an Fsa is created, it has no edges, hence is ε-free.
+States record which fsa they belong to.  When an ε edge is
+added to a state, the state flags its automaton as no longer being
+ε-free.  This assumes that states and edges are never deleted
+from an automaton, and states are never transplanted from one automaton to
+another.</p>
+</section>
+<section id="determinization">
+<h2>Determinization<a class="headerlink" href="#determinization" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="determinize">
+<span class="sig-name descname"><span class="pre">determinize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fsa</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#determinize" title="Permalink to this definition"></a></dt>
+<dd><p>Determinizes an fsa.  Non-destructive.  Returns a DFsa.
+One may optionally specify <em>rename_states=True</em>.</p>
+</dd></dl>
+
+<p>The <code class="docutils literal notranslate"><span class="pre">determinize</span></code> function takes an fsa as input and produces
+a DFSA as output.  It begins by applying ε-elimination to the
+input fsa.  It constructs the new automaton as follows.</p>
+<p>States <em>Q</em> of the new automaton are labeled
+with sets of states from the old automaton.  For simplicity, we treat
+<em>Q</em> as being a set of states from the old automaton.  We begin by adding the
+state {<em>q</em>}, where <em>q</em> is start state of the old automaton.  Then we add edges to the
+new state <em>Q</em>.  The outgoing edges
+from <em>Q</em> take label <em>x</em> to state <em>R</em>
+where <em>x</em>
+is one of the input symbols and <em>R</em> is the set of old states <em>r</em> such
+that there is an edge from <em>q</em> to <em>r</em> on <em>x</em>
+in the old automaton for some <em>q</em> in <em>Q</em>.  A new state is final just in case it
+contains an old state that is final.  Here is the complete function definition:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">determinize</span> <span class="p">(</span><span class="n">old_fsa</span><span class="p">,</span> <span class="n">rename_states</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="n">old_fsa</span> <span class="o">=</span> <span class="n">old_fsa</span><span class="o">.</span><span class="n">eliminate_epsilons</span><span class="p">()</span>
+    <span class="n">new_fsa</span> <span class="o">=</span> <span class="n">DFsa</span><span class="p">()</span>
+    <span class="n">new_fsa</span><span class="o">.</span><span class="n">state</span><span class="p">(</span><span class="nb">frozenset</span><span class="p">([</span><span class="n">old_fsa</span><span class="o">.</span><span class="n">start</span><span class="p">]))</span>
+    <span class="n">ndone</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">while</span> <span class="n">ndone</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_fsa</span><span class="o">.</span><span class="n">states</span><span class="p">):</span>
+        <span class="n">q1</span> <span class="o">=</span> <span class="n">new_fsa</span><span class="o">.</span><span class="n">states</span><span class="p">[</span><span class="n">ndone</span><span class="p">]</span>
+        <span class="n">ndone</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">q1</span><span class="o">.</span><span class="n">name</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">q</span><span class="o">.</span><span class="n">edges</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">label</span> <span class="ow">in</span> <span class="n">table</span><span class="p">:</span>
+                    <span class="n">table</span><span class="p">[</span><span class="n">e</span><span class="o">.</span><span class="n">label</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">dest</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">table</span><span class="p">[</span><span class="n">e</span><span class="o">.</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">e</span><span class="o">.</span><span class="n">dest</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">q</span><span class="o">.</span><span class="n">is_final</span><span class="p">:</span> <span class="n">q1</span><span class="o">.</span><span class="n">is_final</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">dests</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+            <span class="n">q1</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">new_fsa</span><span class="o">.</span><span class="n">state</span><span class="p">(</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">dests</span><span class="p">)),</span> <span class="n">label</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">rename_states</span><span class="p">:</span> <span class="n">new_fsa</span><span class="o">.</span><span class="n">rename_states</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">new_fsa</span>
+</pre></div>
+</div>
+<p>To illustrate the behavior of <code class="docutils literal notranslate"><span class="pre">determinize</span></code>, we use <code class="docutils literal notranslate"><span class="pre">fsa2</span></code>.
+(The automaton <code class="docutils literal notranslate"><span class="pre">b</span></code> of the previous example is already deterministic.)</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">NFsa</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;fsa2&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">determinize</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">rename_states</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span>
+<span class="go">DFsa:</span>
+<span class="go">  -&gt;0  [{A}]</span>
+<span class="go">    1  [{A,B}]</span>
+<span class="go">    2# [{A,C}]</span>
+<span class="go">    0 0 1</span>
+<span class="go">    0 1 0</span>
+<span class="go">    1 1 0</span>
+<span class="go">    1 2 1</span>
+<span class="go">    2 0 1</span>
+<span class="go">    2 1 0</span>
+</pre></div>
+</div>
+</section>
+<section id="minimization">
+<h2>Minimization<a class="headerlink" href="#minimization" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="minimize">
+<span class="sig-name descname"><span class="pre">minimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fsa</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minimize" title="Permalink to this definition"></a></dt>
+<dd><p>Minimize an automaton.  Non-destructive.</p>
+</dd></dl>
+
+<p>Within every equivalence class of automata (an equivalence class
+being the set of automata that generate a given language), there is a
+unique minimal automaton, in the sense of an automaton with the fewest
+states.  The minimization algorithm finds that automaton for any given
+deterministic automaton.</p>
+<p>In a deterministic automaton, a given string <em>x</em> maps a state <em>q</em> to a
+unique state δ*(q,x).  We define the <strong>language of a state</strong>
+<em>q</em> to be the set of strings that take <em>q</em> to a final state; that is,
+the set of strings <em>x</em> such that δ*(q,x) is a final state.  By
+this definition, the language of the automaton is obviously equal to
+the language of its start state.</p>
+<p>We define two states to be <strong>equivalent</strong> if they have the same
+language.  Two states have the same language <em>L</em> just in case
+every string <em>x</em> either takes both states to a final state (in which case
+<em>x</em> is in <em>L</em>) or takes both to a nonfinal state (in which
+case <em>x</em> is not in <em>L</em>).
+To avoid having a special case for blocking, we add a special “sink”
+state ⊥.  For any state <em>q</em> and input symbol <em>w</em> such that <em>q*[*w</em>]
+is undefined, we define <em>q*[*w</em>] = ⊥.  In particular, ⊥[<em>w</em>] =
+⊥ for all input symbols <em>w</em>.  Once a string leads to ⊥, it
+stays there.  Moreover, ⊥ is nonfinal, so any string that leads
+to ⊥ is rejected.</p>
+<p>Two states are <strong>distinguished</strong> by a string <em>x</em> just in case <em>x</em>
+takes one of the states to a final state, and the other state to a
+nonfinal state.  The idea of the algorithm is to systematically find
+distinguishable state pairs, which we call <strong>incompatible pairs</strong>.
+When all incompatible state pairs
+have been identified, all remaining state pairs involve equivalent
+states.</p>
+<p>Systematicity is achieved by recursing on string length.  We first
+identify all state pairs that are distinguished by strings of length
+zero.  There is only one string of length zero, the empty string, and
+it distinguishes a state pair only if one of the states is final and
+the other is nonfinal.</p>
+<p>Then we recurse.  Assume that we know all state pairs that are
+distinguished by strings of length &lt;= <em>n</em>.  We will identify any
+additional state pairs that are distinguished by strings of length
+<em>n</em>.</p>
+<p>Consider an input symbol <em>w</em>, and states <em>q</em> and <em>r</em> with</p>
+<p><em>q*[*w</em>] = <em>s</em>
+<em>r*[*w</em>] = <em>t</em>.</p>
+<p>If <em>q</em> and <em>r</em> are equivalent, then clearly <em>s</em> and
+<em>t</em> are equivalent.  Namely, <em>q</em> and <em>r</em> being equivalent means that
+every string <em>x</em> = <em>wy</em> takes <em>q</em> and <em>r</em> to the same kind of state
+(final or nonfinal); hence every string <em>y</em> takes <em>s</em> and <em>t</em> to the
+same kind of state.
+Hence if <em>st</em> is an incompatible pair,
+then <em>qr</em> must be.  If we propagate incompatibility in this way, we
+will eventually identify every incompatible pair.  When the
+propagation peters out, any remaining pair is equivalent.</p>
+<p>We will illustrate using automaton <code class="docutils literal notranslate"><span class="pre">fsa4</span></code>, shown in the following figure.</p>
+<p>(fig10.pdf = Archive/2007-A/ling441/figs/fig3.pdf)</p>
+<p>The states of this automaton intuitively represent the most two
+recently encountered input symbols, and the automaton is in a final
+state only if the last two symbols were “01.”  That is, the
+automaton is equivalent to <code class="docutils literal notranslate"><span class="pre">fsa2</span></code>.  The following figure shows the
+same automaton with single-letter state names, which will be more
+convenient for illustrating minimization.</p>
+<p>Propagation goes “backwards” along edges: incompatibility between
+<em>q*[*w</em>] and <em>r*[*w</em>] implies incompatibility between <em>q</em> and <em>r</em>.
+Hence we construct an <strong>incompatibility table</strong> of “reverse edges.”  The table is indexed
+by state and input symbol, and entry <em>(s,w)</em> contains all source
+states <em>q</em> such that <em>q*[*w</em>] = <em>s</em>.  Here is the table for <code class="docutils literal notranslate"><span class="pre">fsa4</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="mi">0</span>    <span class="mi">1</span>
+<span class="n">a</span>
+<span class="n">b</span>  <span class="n">a</span>
+<span class="n">c</span>  <span class="n">bce</span>
+<span class="n">d</span>       <span class="n">bce</span>
+<span class="n">e</span>  <span class="n">dfg</span>
+<span class="n">f</span>       <span class="n">dfg</span>
+<span class="n">g</span>       <span class="n">a</span>
+</pre></div>
+</div>
+<p>For example, there is an edge from <em>c</em> to <em>d</em> on 1,
+hence the entry “<em>c</em>” in the cell (<em>d</em>,1).</p>
+<p>Here is how we use the incompatibility table.  Suppose we determine that <em>d</em> and <em>f</em>
+are incompatible.  Then we compare the rows for <em>d</em> and <em>f</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">d</span>      <span class="n">bce</span>
+<span class="n">f</span>      <span class="n">dfg</span>
+</pre></div>
+</div>
+<p>Any states <em>q</em> and <em>r</em> in the same column are such that <em>q[w] = s</em> and
+<em>r[w] = t</em>, where <em>s = d</em> and <em>t = f</em> or the other way around.  In
+short, since <em>d</em> and <em>f</em> are incompatible, it follows that <em>q</em> and <em>r</em>
+are incompatible.  In particular, we propagate incompatibility to the
+following pairs: <em>bd, bf, bg, cd, cf, cg, ed, ef, eg</em>.</p>
+<p>The incompatibility table is implemented as the class <code class="docutils literal notranslate"><span class="pre">Incompatibility</span></code>.
+Here is an example of its use.  Note that states are represented by
+their index.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">DFsa</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;fsa4&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.fsa</span> <span class="kn">import</span> <span class="n">Incompatibility</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">Incompatibility</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span>
+<span class="go">&lt;DFsa.State d [4]&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">]</span>
+<span class="go">&lt;DFsa.State f [6]&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">seal.nlp.fsa</span> <span class="kn">import</span> <span class="n">pair</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">pair</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">newp</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">propagate</span><span class="p">(</span><span class="n">p</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">newp</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(2, 1)</span>
+<span class="go">(3, 2)</span>
+<span class="go">(5, 2)</span>
+<span class="go">(4, 1)</span>
+<span class="go">(4, 3)</span>
+<span class="go">(5, 4)</span>
+<span class="go">(6, 1)</span>
+<span class="go">(6, 3)</span>
+<span class="go">(6, 5)</span>
+</pre></div>
+</div>
+<p>Now we use the incompatibility table to compute a list of compatible
+pairs.  We use two data structures: a map from state pairs to
+“compatible” or “incompatible”, and
+a “todo” list of the incompatible pairs that
+have been discovered but not yet used for propagation.  Initially,
+all pairs are marked as compatible and the todo list is empty.  Then we
+systematically go through pairs consisting of one final state and one
+nonfinal state, mark each as incompatible, and add them to the todo list.
+Here is the result of initialization on our example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.fsa</span> <span class="kn">import</span> <span class="n">Minimizer</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">Minimizer</span><span class="p">(</span><span class="n">DFsa</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;fsa4&#39;</span><span class="p">)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span><span class="o">.</span><span class="n">itab</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span>
+<span class="go">0 : {} {}</span>
+<span class="go">1 : {0} {}</span>
+<span class="go">2 : {} {0}</span>
+<span class="go">3 : {1,3,5} {}</span>
+<span class="go">4 : {} {1,3,5}</span>
+<span class="go">5 : {2,4,6} {}</span>
+<span class="go">6 : {} {2,4,6}</span>
+<span class="go">7 : {7} {7}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span><span class="o">.</span><span class="n">todo</span>
+<span class="go">[(7, 4), (4, 0), (4, 1), (4, 2), (4, 3), (5, 4), (6, 4)]</span>
+</pre></div>
+</div>
+<p>The next step is propagation.
+One takes a pair from the todo list, and one uses the incompatibility
+table to propagate to new pairs.  For each new pair, one checks whether it has been
+previously encountered.  If so, it is discarded, but if not, it is
+added to the table of known pairs as well as to the todo list.
+The process ends when the todo list is exhausted.</p>
+<p>Here is the trace of the computation for our example.  We initialize
+with final-nonfinal pairs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">da</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="n">dc</span><span class="p">,</span> <span class="n">ed</span><span class="p">,</span> <span class="n">fd</span><span class="p">,</span> <span class="n">gd</span>
+</pre></div>
+</div>
+<p>Then we begin propagating.  Most pairs propagate nothing; here are the
+exceptions, noting only the new pairs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fd</span><span class="p">:</span> <span class="n">fb</span><span class="p">,</span> <span class="n">fc</span><span class="p">,</span> <span class="n">fe</span><span class="p">,</span> <span class="n">gb</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">ge</span>
+<span class="n">gd</span><span class="p">:</span> <span class="n">ba</span><span class="p">,</span> <span class="n">ca</span><span class="p">,</span> <span class="n">ea</span>
+</pre></div>
+</div>
+<p>After that, no futher propagation is possible.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m</span><span class="o">.</span><span class="n">propagate</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span><span class="o">.</span><span class="n">marked</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span>
+<span class="go">(1, 0) True</span>
+<span class="go">(2, 0) None</span>
+<span class="go">(2, 1) True</span>
+<span class="go">(3, 0) True</span>
+<span class="go">(3, 1) None</span>
+<span class="go">(3, 2) True</span>
+<span class="go">(4, 0) True</span>
+<span class="go">(4, 1) True</span>
+<span class="go">(4, 2) True</span>
+<span class="go">(4, 3) True</span>
+<span class="go">(5, 0) True</span>
+<span class="go">(5, 1) None</span>
+<span class="go">(5, 2) True</span>
+<span class="go">(5, 3) None</span>
+<span class="go">(5, 4) True</span>
+<span class="go">(6, 0) None</span>
+<span class="go">(6, 1) True</span>
+<span class="go">(6, 2) None</span>
+<span class="go">(6, 3) True</span>
+<span class="go">(6, 4) True</span>
+<span class="go">(6, 5) True</span>
+</pre></div>
+</div>
+<p>When the final list of incompatible pairs has been computed, every
+pair not on the list is equivalent.  One creates a mapping from old
+states to new states, such that equivalent old states get mapped to
+the same new state.  That mapping is used to copy edges from the old
+automaton to the new automaton, as well as final-state information.</p>
+<p>For our example, the compatible pairs are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cb</span><span class="p">,</span> <span class="n">eb</span><span class="p">,</span> <span class="n">ec</span><span class="p">,</span> <span class="n">fa</span><span class="p">,</span> <span class="n">ga</span><span class="p">,</span> <span class="n">gf</span>
+</pre></div>
+</div>
+<p>We go through these pairs, assigning new-state indices to the members
+of each, so that the members of a pair both receive the same index.
+The pair <em>cb</em> causes us to create a new index (0) and assign it to
+both <em>b</em> and <em>c</em>.  The pair <em>eb</em> causes us to assign that
+index to <em>e</em>, and the pair <em>ec</em> causes no new assignments, but is
+campatible with previous assignments.  The pair <em>fa</em> causes a
+new index (1) to be created; it is further assigned to <em>g</em> when we
+encounter <em>ga.</em>  The result is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span>  <span class="n">b</span>  <span class="n">c</span>  <span class="n">e</span>  <span class="n">f</span>  <span class="n">g</span>
+<span class="mi">1</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">1</span>
+</pre></div>
+</div>
+<p>In Python:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m</span><span class="o">.</span><span class="n">create_map</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span><span class="o">.</span><span class="n">state_map</span>
+<span class="go">[0, 1, 0, 1, 2, 1, 0]</span>
+</pre></div>
+</div>
+<p>We then create new indices for any old states that have not yet been
+assigned an index.  In this case, only <em>d</em> remains.  The new automaton
+has three states.  State 0 corresponds to old states <em>b, c, e;</em>
+state 1 corresponds to old states <em>a, f, g;</em> and state 3
+corresponds to old state <em>d.</em></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">out</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">create_newfsa</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span>
+<span class="go">DFsa:</span>
+<span class="go">  -&gt;0  [0]</span>
+<span class="go">    1  [1]</span>
+<span class="go">    2# [2]</span>
+<span class="go">    0 0 1</span>
+<span class="go">    0 1 0</span>
+<span class="go">    1 1 0</span>
+<span class="go">    1 2 1</span>
+<span class="go">    2 0 1</span>
+<span class="go">    2 1 0</span>
+</pre></div>
+</div>
+<p>For the table where we keep track of
+state-pair compatibility, and for the mapping from state pairs to new
+states, an upper triangular matrix (UTM) provides an efficient data structure.
+It consists of an array with as many cells as state pairs (namely,
+<em>n(n-1)</em> for <em>n</em> the number of states), and a pair <em>(i,j)</em> of state
+indices maps to the array location:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\([ i(i-1) / 2 ] + j.\)</span></p>
+</div></blockquote>
+<p>It is assumed that <span class="math notranslate nohighlight">\(i &gt; j\)</span>.</p>
+<p>Here is why that calculation of array location maps every index pair to
+a unique array location.
+The order of pairs is:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((1,0), (2,0), (2,1), (3,0), (3,1), (3,2), \ldots\)</span></p>
+</div></blockquote>
+<p>There is one pair with <em>i</em> = 1, two pairs with <em>i</em>
+= 2, and so on.  Hence there are zero pairs that precede (1,0), one
+pair that precedes (2,0), 1+2 pairs that precede (3,0), and so on.
+In general, there are 1+2+…+n = n(n+1)/2 pairs that precede
+(n+1,0).  The array location is equal to the number of preceding
+pairs in the enumeration.</p>
+</section>
+<section id="the-fsa-class">
+<h2>The Fsa class<a class="headerlink" href="#the-fsa-class" title="Permalink to this heading"></a></h2>
+<p>The inheritance hierarchy is:</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>Fsa</dt><dd><ul>
+<li><dl class="simple">
+<dt>NFsa</dt><dd><ul>
+<li><p>SimpleFsa</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>DFsa</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.fsa.</span></span><span class="sig-name descname"><span class="pre">Fsa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa" title="Permalink to this definition"></a></dt>
+<dd><p>This is an abstract state, providing common code for
+specializations.  The main method that is required from
+specialization is <em>accepts()</em>.</p>
+<p>If <em>init</em> is pathlike, it is interpreted as a pathname and loaded.
+Otherwise, the method initialize_from(init) must be defined.  (Used
+by some specializations.)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.state_dict">
+<span class="sig-name descname"><span class="pre">state_dict</span></span><a class="headerlink" href="#selkie.fsa.Fsa.state_dict" title="Permalink to this definition"></a></dt>
+<dd><p>The states, a dict.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.states">
+<span class="sig-name descname"><span class="pre">states</span></span><a class="headerlink" href="#selkie.fsa.Fsa.states" title="Permalink to this definition"></a></dt>
+<dd><p>The states as a list.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.start">
+<span class="sig-name descname"><span class="pre">start</span></span><a class="headerlink" href="#selkie.fsa.Fsa.start" title="Permalink to this definition"></a></dt>
+<dd><p>The start state.  It is initially None, but is automatically set
+to the first state created, when a state is created.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.epsilon_free">
+<span class="sig-name descname"><span class="pre">epsilon_free</span></span><a class="headerlink" href="#selkie.fsa.Fsa.epsilon_free" title="Permalink to this definition"></a></dt>
+<dd><p>A flag indicating whether the fsa is epsilon-free.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.state_constructor">
+<span class="sig-name descname"><span class="pre">state_constructor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.state_constructor" title="Permalink to this definition"></a></dt>
+<dd><p>Create a state.  A specialization of Fsa generally has its own
+specialization of State.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.edge">
+<span class="sig-name descname"><span class="pre">edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.edge" title="Permalink to this definition"></a></dt>
+<dd><p>Create an edge.  <em>Label</em> is optional and defaults to None.</p>
+<p>One may optionally provide an old edge instead of a label, by
+using the keyword argument <em>label_from</em> instead of
+<em>label</em>.  The edge’s <em>single_label()</em> method is called to get the label.
+(Fst edges also work, provided that their inlabel equals their
+outlabel; otherwise an error is signalled.)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.edges">
+<span class="sig-name descname"><span class="pre">edges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.edges" title="Permalink to this definition"></a></dt>
+<dd><p>Iterate over all edges of all states.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.labels">
+<span class="sig-name descname"><span class="pre">labels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.labels" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a set containing all edge labels.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.final_state">
+<span class="sig-name descname"><span class="pre">final_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.final_state" title="Permalink to this definition"></a></dt>
+<dd><p>Whether or not the state with the given name is final.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.load" title="Permalink to this definition"></a></dt>
+<dd><p>Load from a file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.__len__">
+<span class="sig-name descname"><span class="pre">__len__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.__len__" title="Permalink to this definition"></a></dt>
+<dd><p>The number of states.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.__getitem__">
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.__getitem__" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an existing state.  Error if no state exists with the given name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.state">
+<span class="sig-name descname"><span class="pre">state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.state" title="Permalink to this definition"></a></dt>
+<dd><p>If a state with the given name exists, returns it.  Otherwise adds a new
+state to the automaton and returns it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.rename_states">
+<span class="sig-name descname"><span class="pre">rename_states</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.rename_states" title="Permalink to this definition"></a></dt>
+<dd><p>Change the state names to be the state indices as strings.
+Destructive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.typename">
+<span class="sig-name descname"><span class="pre">typename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.typename" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a pretty version of the class name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.__iter__">
+<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.__iter__" title="Permalink to this definition"></a></dt>
+<dd><p>Iterates over generated strings.  May be an infinite iteration.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.dump">
+<span class="sig-name descname"><span class="pre">dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.dump" title="Permalink to this definition"></a></dt>
+<dd><p>Dump the contents.  <em>file</em> may be omitted or None, in which case
+it prints to stdout.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.eliminate_epsilons">
+<span class="sig-name descname"><span class="pre">eliminate_epsilons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.eliminate_epsilons" title="Permalink to this definition"></a></dt>
+<dd><p>Eliminate epsilon edges.
+Works for Fst, too.
+Not destructive; creates a new automaton.</p>
+<p>The specification <em>rename_states=True</em>
+may optionally be provided, in which case the new automaton’s
+<em>rename_states()</em> method is called.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="nfsa-and-dfsa">
+<h2>NFsa and DFsa<a class="headerlink" href="#nfsa-and-dfsa" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.fsa.NFsa">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.fsa.</span></span><span class="sig-name descname"><span class="pre">NFsa</span></span><a class="headerlink" href="#selkie.fsa.NFsa" title="Permalink to this definition"></a></dt>
+<dd><p>A non-deterministic fsa.  Specializes Fsa, adding just one method:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.NFsa.accepts">
+<span class="sig-name descname"><span class="pre">accepts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.NFsa.accepts" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a boolean indicating whether it accepts the given sequence
+of symbols.  One may optionally provide <em>trace=True</em>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.fsa.SimpleFsa">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.fsa.</span></span><span class="sig-name descname"><span class="pre">SimpleFsa</span></span><a class="headerlink" href="#selkie.fsa.SimpleFsa" title="Permalink to this definition"></a></dt>
+<dd><p>An NFsa in which state names equal their indices.  It needs no
+state_dict to map state names to states.  Overrides the definitions
+of methods <em>__getitem__()</em> and <em>state()</em>, and its implementation of
+rename_states() signals an error.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.fsa.DFsa">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.fsa.</span></span><span class="sig-name descname"><span class="pre">DFsa</span></span><a class="headerlink" href="#selkie.fsa.DFsa" title="Permalink to this definition"></a></dt>
+<dd><p>A deterministic fsa.  Has its own State class.
+The methods <em>typename()</em>, <em>state_constructor()</em>, and <em>accepts()</em> are overridden.</p>
+</dd></dl>
+
+</section>
+<section id="state-and-edge-classes">
+<h2>State and Edge classes<a class="headerlink" href="#state-and-edge-classes" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.State">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.fsa.Fsa.</span></span><span class="sig-name descname"><span class="pre">State</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.State" title="Permalink to this definition"></a></dt>
+<dd><p>Also used by NFsa and SimpleFsa.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.State.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#selkie.fsa.Fsa.State.name" title="Permalink to this definition"></a></dt>
+<dd><p>The value is provided by the constructor.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.State.edges">
+<span class="sig-name descname"><span class="pre">edges</span></span><a class="headerlink" href="#selkie.fsa.Fsa.State.edges" title="Permalink to this definition"></a></dt>
+<dd><p>The list of outgoing edges, initially [].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.State.is_final">
+<span class="sig-name descname"><span class="pre">is_final</span></span><a class="headerlink" href="#selkie.fsa.Fsa.State.is_final" title="Permalink to this definition"></a></dt>
+<dd><p>Whether this is a final state, initially False.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.State.index">
+<span class="sig-name descname"><span class="pre">index</span></span><a class="headerlink" href="#selkie.fsa.Fsa.State.index" title="Permalink to this definition"></a></dt>
+<dd><p>Initially None.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.State.fsa">
+<span class="sig-name descname"><span class="pre">fsa</span></span><a class="headerlink" href="#selkie.fsa.Fsa.State.fsa" title="Permalink to this definition"></a></dt>
+<dd><p>The fsa that this state belongs to.  Initially None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.State.typename">
+<span class="sig-name descname"><span class="pre">typename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.State.typename" title="Permalink to this definition"></a></dt>
+<dd><p>A string representing a readable version of the class name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.State.__lt__">
+<span class="sig-name descname"><span class="pre">__lt__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.State.__lt__" title="Permalink to this definition"></a></dt>
+<dd><p>Comparison is by string representation (using str()).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.State.__eq__">
+<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.State.__eq__" title="Permalink to this definition"></a></dt>
+<dd><p>Comparison is by string representation (using str()).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.State.__hash__">
+<span class="sig-name descname"><span class="pre">__hash__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.State.__hash__" title="Permalink to this definition"></a></dt>
+<dd><p>The hash value of the name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.State.edge">
+<span class="sig-name descname"><span class="pre">edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.State.edge" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and adds a new edge, unless an edge to the given <em>dest</em>
+state with the given <em>label</em> already exists, in which case it is
+re-used.  Return value is the (new) edge.</p>
+<p>Boolean false labels match even if they are not ==.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.State.__getitem__">
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.State.__getitem__" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the edge(s) with the given label.  Boolean false labels
+match even if they are not ==.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.State.eclosure">
+<span class="sig-name descname"><span class="pre">eclosure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.State.eclosure" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the epsilon-closure of this state.
+This works for Fsts, too.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.State.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.State.__str__" title="Permalink to this definition"></a></dt>
+<dd><p>Converts the name to a string.  If the name is a set, the
+elements are sorted so that the string value is uniquely
+determined.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.Edge">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.fsa.Fsa.</span></span><span class="sig-name descname"><span class="pre">Edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.Edge" title="Permalink to this definition"></a></dt>
+<dd><p><em>label</em> is optional; defaults to None.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.Edge.source">
+<span class="sig-name descname"><span class="pre">source</span></span><a class="headerlink" href="#selkie.fsa.Fsa.Edge.source" title="Permalink to this definition"></a></dt>
+<dd><p>The state that the edge comes from.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.Edge.dest">
+<span class="sig-name descname"><span class="pre">dest</span></span><a class="headerlink" href="#selkie.fsa.Fsa.Edge.dest" title="Permalink to this definition"></a></dt>
+<dd><p>The state that the edge goes to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.Edge.label">
+<span class="sig-name descname"><span class="pre">label</span></span><a class="headerlink" href="#selkie.fsa.Fsa.Edge.label" title="Permalink to this definition"></a></dt>
+<dd><p>The edge label.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.Edge.is_epsilon">
+<span class="sig-name descname"><span class="pre">is_epsilon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.Edge.is_epsilon" title="Permalink to this definition"></a></dt>
+<dd><p>Whether this is an epsilon edge.  An epsilon edge is one whose label
+is boolean false.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.Edge.single_label">
+<span class="sig-name descname"><span class="pre">single_label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.Edge.single_label" title="Permalink to this definition"></a></dt>
+<dd><p>Return the label.  This is the same as the label member, for an
+Fsa.Edge, but not for an Fst.Edge.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.Edge.label_pair">
+<span class="sig-name descname"><span class="pre">label_pair</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.Edge.label_pair" title="Permalink to this definition"></a></dt>
+<dd><p>Return a pair consisting of the label twice.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.Fsa.Edge.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.Fsa.Edge.write" title="Permalink to this definition"></a></dt>
+<dd><p>Write it to an output stream.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.fsa.DFsa.State">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.fsa.DFsa.</span></span><span class="sig-name descname"><span class="pre">State</span></span><a class="headerlink" href="#selkie.fsa.DFsa.State" title="Permalink to this definition"></a></dt>
+<dd><p>A state in a deterministic FSA.  (DFsas do not override Fsa.Edge, though.)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.DFsa.State.__getitem__">
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.DFsa.State.__getitem__" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a single state, or None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fsa.DFsa.State.edge">
+<span class="sig-name descname"><span class="pre">edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fsa.DFsa.State.edge" title="Permalink to this definition"></a></dt>
+<dd><p>Add a new edge.  <em>Label</em> is optional and defaults to None.
+<em>Label</em> may not be boolean false (no empty edges).</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="The NLP pipeline" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fst.html" class="btn btn-neutral float-right" title="selkie.fst — Finite-state transducers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.string — Strings &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.seq — Sequences and iterators" href="seq.html" />
+    <link rel="prev" title="selkie.object — Types, reflexion, generic object" href="object.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python extensions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html"><code class="docutils literal notranslate"><span class="pre">selkie.config</span></code> — Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object.html"><code class="docutils literal notranslate"><span class="pre">selkie.object</span></code> — Types, reflexion, generic object</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.string</span></code> — Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seq.html"><code class="docutils literal notranslate"><span class="pre">selkie.seq</span></code> — Sequences and iterators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map.html"><code class="docutils literal notranslate"><span class="pre">selkie.map</span></code> — The Index class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html"><code class="docutils literal notranslate"><span class="pre">selkie.io</span></code> — Input/output functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="newio.html"><code class="docutils literal notranslate"><span class="pre">selkie.newio</span></code> — New I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fs.html"><code class="docutils literal notranslate"><span class="pre">selkie.fs</span></code> — File system convenience functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.html"><code class="docutils literal notranslate"><span class="pre">selkie.com</span></code> — Command invocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp/index.html">The NLP pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Python extensions</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.string</span></code> — Strings</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pyext/string.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-string-strings">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.string</span></code> — Strings<a class="headerlink" href="#selkie-string-strings" title="Permalink to this heading"></a></h1>
+<p>The code examples assume:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">selkie.string</span> <span class="k">as</span> <span class="nn">ss</span>
+</pre></div>
+</div>
+<section id="ascii-representations">
+<h2>ASCII representations<a class="headerlink" href="#ascii-representations" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="as_ascii">
+<span class="sig-name descname"><span class="pre">as_ascii</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#as_ascii" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a string containing only ASCII
+characters.  Define an “objectionable” character to be a
+non-printing character other than space, a non-ASCII
+character (code point 128 or higher), DEL, and left and right brace.
+If the input string contains no objectionable characters, it is returned unchanged.
+Otherwise, all objectionable characters are eliminated.  What they are
+replaced with depends on the value of the argument <code class="docutils literal notranslate"><span class="pre">use.</span></code>
+If <code class="docutils literal notranslate"><span class="pre">'names',</span></code> Unicode character names are used.  If <code class="docutils literal notranslate"><span class="pre">'hex',</span></code>
+hex codes are used.  If <code class="docutils literal notranslate"><span class="pre">'alts',</span></code> alternative single characters
+are used, where available, and deletion otherwise.  If None,
+objectionable characters are deleted.  The default is <code class="docutils literal notranslate"><span class="pre">'hex'.</span></code></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ss</span><span class="o">.</span><span class="n">as_ascii</span><span class="p">(</span><span class="s1">&#39;h</span><span class="se">\u00ff\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="go">&#39;h{ff}{nl}&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ss</span><span class="o">.</span><span class="n">as_ascii</span><span class="p">(</span><span class="s1">&#39;h</span><span class="se">\u00ff</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">use</span><span class="o">=</span><span class="s1">&#39;names&#39;</span><span class="p">)</span>
+<span class="go">&#39;h{LATIN SMALL LETTER Y WITH DIAERESIS}&#39;</span>
+</pre></div>
+</div>
+<p>If the input is not a string, verb|as_ascii()| calls <code class="docutils literal notranslate"><span class="pre">str()</span></code> on
+it.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ss</span><span class="o">.</span><span class="n">as_ascii</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="go">&#39;10&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ascii_chars">
+<span class="sig-name descname"><span class="pre">ascii_chars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ascii_chars" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">ascii_chars()</span></code> is more aggressive and less flexible.
+It does “smart quote” and “smart dash” substitutions, and it replaces
+tab with space, vertical tab with newline, and form feed with
+newline.  All characters above code point U+00fe (~) are deleted, as
+are all characters with code point below U+0020 (space) except newline.
+Returns an iteration over characters.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="deaccent">
+<span class="sig-name descname"><span class="pre">deaccent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deaccent" title="Permalink to this definition"></a></dt>
+<dd><p>Converts a Unicode string to ASCII in a
+lossy way.  It replaces characters in the Latin-1
+range with corresponding ASCII characters, where natural
+correspondences exist.  Characters without a natural ASCII counterpart
+are simply deleted.  ASCII control characters other than space, tab,
+newline, and carriage return are deleted.  The return value is an ASCII string.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="as_boolean">
+<span class="sig-name descname"><span class="pre">as_boolean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#as_boolean" title="Permalink to this definition"></a></dt>
+<dd><p>Converts the strings <code class="docutils literal notranslate"><span class="pre">'True'</span></code> and <code class="docutils literal notranslate"><span class="pre">'False'</span></code> to the
+corresponding boolean values.  Given anything else, it signals an
+error.</p>
+</dd></dl>
+
+</section>
+<section id="unicode">
+<h2>Unicode<a class="headerlink" href="#unicode" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="unidescribe">
+<span class="sig-name descname"><span class="pre">unidescribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unidescribe" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a string and prints out the details of the Unicode characters
+it contains.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ss</span><span class="o">.</span><span class="n">unidescribe</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<span class="go">0 0x68 LATIN SMALL LETTER H</span>
+<span class="go">1 0x69 LATIN SMALL LETTER I</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utf8">
+<span class="sig-name descname"><span class="pre">utf8</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utf8" title="Permalink to this definition"></a></dt>
+<dd><p>Writes string <em>s</em> to
+the file named <em>fn</em> in UTF-8 format.  It overwrites the file, if it
+already exists.  If no filename is given, the bytes of the UTF-8
+representation are printed out readably.</p>
+</dd></dl>
+
+</section>
+<section id="miscellany">
+<h2>Miscellany<a class="headerlink" href="#miscellany" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="quoted">
+<span class="sig-name descname"><span class="pre">quoted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quoted" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a string and wraps double-quotes
+around it, escaping any internal double-quotes with backslashes.  It
+also doubles any internal backslashes, and replaces newline with
+backslash-en.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ss</span><span class="o">.</span><span class="n">quoted</span><span class="p">(</span><span class="s1">&#39;L</span><span class="se">\u00ff</span><span class="s1">c&#39;</span><span class="p">)</span>
+<span class="go">&#39;&quot;Lÿc&quot;&#39;</span>
+</pre></div>
+</div>
+<p>The return value is a string suitable for printing, or suitable for use in
+JSON.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="trim">
+<span class="sig-name descname"><span class="pre">trim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">w</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#trim" title="Permalink to this definition"></a></dt>
+<dd><p>It first calls <code class="docutils literal notranslate"><span class="pre">as_ascii()</span></code> on the string, and then it
+truncates it at the field width.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="dtstr">
+<span class="sig-name descname"><span class="pre">dtstr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dtstr" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a float representing seconds since the epoch, and returns a
+readable string representation.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ss</span><span class="o">.</span><span class="n">dtstr</span><span class="p">(</span><span class="mi">1000000000</span><span class="p">)</span>
+<span class="go">&#39;2001-09-08 21:46:40&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="elapsed_time_string">
+<span class="sig-name descname"><span class="pre">elapsed_time_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elapsed_time_string" title="Permalink to this definition"></a></dt>
+<dd><p><em>T0</em> and <em>t1</em> represent start time and end time
+in seconds.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ss</span><span class="o">.</span><span class="n">elapsed_time_str</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">135</span><span class="p">)</span>
+<span class="go">&#39;0:02:05.0000&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sizestr">
+<span class="sig-name descname"><span class="pre">sizestr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sz</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sizestr" title="Permalink to this definition"></a></dt>
+<dd><p>Takes an int representing a number of bytes
+and returns a string with three digits after the decimal, suffixed
+with B, KB, MB, GB, TB, or PB.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ss</span><span class="o">.</span><span class="n">sizestr</span><span class="p">(</span><span class="mi">123456789</span><span class="p">)</span>
+<span class="go">&#39;123.457 MB&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="expand_envvars">
+<span class="sig-name descname"><span class="pre">expand_envvars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#expand_envvars" title="Permalink to this definition"></a></dt>
+<dd><p>Replace the pattern <code class="docutils literal notranslate"><span class="pre">${VAR}</span></code> with the value of the environment
+variable <code class="docutils literal notranslate"><span class="pre">VAR</span></code>, wherever the pattern occurs in <em>s</em>.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="object.html" class="btn btn-neutral float-left" title="selkie.object — Types, reflexion, generic object" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="seq.html" class="btn btn-neutral float-right" title="selkie.seq — Sequences and iterators" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

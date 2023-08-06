@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.xml — XML files &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.tok — Tokenizer for Latin scripts" href="tok.html" />
+    <link rel="prev" title="selkie.rom — Romanizations" href="rom.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Corpus processing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="rom.html"><code class="docutils literal notranslate"><span class="pre">selkie.rom</span></code> — Romanizations</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.xml</span></code> — XML files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tok.html"><code class="docutils literal notranslate"><span class="pre">selkie.tok</span></code> — Tokenizer for Latin scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pretts.html"><code class="docutils literal notranslate"><span class="pre">selkie.pretts</span></code> — Converting text to bare words</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conc.html">Conc - move back conc.rst.safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="corpus.html"><code class="docutils literal notranslate"><span class="pre">selkie.corpus</span></code> — Simple text corpus</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp/index.html">The NLP pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Corpus processing</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.xml</span></code> — XML files</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/corpus/xml.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-xml-xml-files">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.xml</span></code> — XML files<a class="headerlink" href="#selkie-xml-xml-files" title="Permalink to this heading"></a></h1>
+<p>The module <code class="docutils literal notranslate"><span class="pre">selkie.xml</span></code> provides a convenient XML parser.
+The standard Python library provides XML parsing,
+but the facilities it provides generally signal an error when
+encountering ill-formed XML.  Unfortunately, a great deal of XML on the
+web is ill-formed, and aborting is not a very graceful way of dealing
+with it.  The XML parser in <code class="docutils literal notranslate"><span class="pre">selkie.xml</span></code> is designed to be very
+robust and lightweight.</p>
+<section id="xml-tags">
+<h2>XML tags<a class="headerlink" href="#xml-tags" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="iter_xml_tags">
+<span class="sig-name descname"><span class="pre">iter_xml_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iter_xml_tags" title="Permalink to this definition"></a></dt>
+<dd><p>The XML parser described in the previous section calls
+<code class="docutils literal notranslate"><span class="pre">iter_xml_tags()</span></code> to convert the file to a stream containing a
+mix of XML tags and character data.  The function
+<code class="docutils literal notranslate"><span class="pre">iter_xml_tags()</span></code> is actually the constructor for a class.
+It has no methods beyond the standard iterator methods.
+For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.data</span> <span class="kn">import</span> <span class="n">ex</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.xml</span> <span class="kn">import</span> <span class="n">iter_xml_tags</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">iter_xml_tags</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;xml1&#39;</span><span class="p">)):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">elt</span><span class="p">))</span>
+<span class="gp">...</span>
+<span class="go">&lt;Tag start html [] 0&gt;</span>
+<span class="go">&#39;\n&#39;</span>
+<span class="go">&lt;Tag start body [(&#39;foo&#39;, &#39;hi&amp;bye&#39;), (&#39;bar&#39;, &#39;16&#39;)] 7&gt;</span>
+<span class="go">&#39;\nA &quot;little&quot; &#39;</span>
+<span class="go">&lt;Tag start b [] 59&gt;</span>
+<span class="go">&#39;example&#39;</span>
+<span class="go">&lt;Tag end b [] 69&gt;</span>
+<span class="go">&#39;.\n&#39;</span>
+<span class="go">&lt;Tag end body [] 75&gt;</span>
+<span class="go">&#39;\n&#39;</span>
+<span class="go">&lt;Tag end html [] 83&gt;</span>
+<span class="go">&#39;\n&#39;</span>
+</pre></div>
+</div>
+<p>The elements are either of type <code class="docutils literal notranslate"><span class="pre">Tag</span></code> or of type <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
+<p>The XML standard requires quotes around attribute values, but the tag
+scanner does not insist on them.  Entity references are expanded in
+character data as well as in attribute values.</p>
+</dd></dl>
+
+<p>The function <code class="docutils literal notranslate"><span class="pre">load_xml_tags()</span></code> converts the iterator into a list:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.xml</span> <span class="kn">import</span> <span class="n">load_xml_tags</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tags</span> <span class="o">=</span> <span class="n">load_xml_tags</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;xml1&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tags</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">&lt;Tag start html [] 0&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">tags</span><span class="p">)</span>
+<span class="go">12</span>
+</pre></div>
+</div>
+</section>
+<section id="tags">
+<h2>Tags<a class="headerlink" href="#tags" title="Permalink to this heading"></a></h2>
+<p>A <code class="docutils literal notranslate"><span class="pre">Tag</span></code> instance has the following attributes.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">type</span></code></p></td>
+<td><p>One of <code class="docutils literal notranslate"><span class="pre">&quot;start&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;end&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;empty&quot;</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">label</span></code></p></td>
+<td><p>The label (category) of the tag.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ftrs</span></code></p></td>
+<td><p>A list of pairs (<em>att, value</em>).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cpos</span></code></p></td>
+<td><p>The character position in the plain text file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">line_number</span></code></p></td>
+<td><p>The line number in the original XML file.</p></td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tag</span> <span class="o">=</span> <span class="n">tags</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tag</span>
+<span class="go">&lt;Tag start body [(&#39;foo&#39;, &#39;hi&amp;bye&#39;), (&#39;bar&#39;, &#39;16&#39;)] 7&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tag</span><span class="o">.</span><span class="n">type</span>
+<span class="go">&#39;start&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tag</span><span class="o">.</span><span class="n">label</span>
+<span class="go">&#39;body&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tag</span><span class="o">.</span><span class="n">ftrs</span>
+<span class="go">[(&#39;foo&#39;, &#39;hi&amp;bye&#39;), (&#39;bar&#39;, &#39;16&#39;)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tag</span><span class="o">.</span><span class="n">cpos</span>
+<span class="go">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tag</span><span class="o">.</span><span class="n">line_number</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>Note that the features are represented as a list of pairs.  If
+multiple features have the same key, all will be present.</p>
+</section>
+<section id="entities">
+<h2>Entities<a class="headerlink" href="#entities" title="Permalink to this heading"></a></h2>
+<p>The tag iterator has a method <code class="docutils literal notranslate"><span class="pre">decode_xml_entities()</span></code> that converts XML
+entities like “&amp;amp;” to characters (”&amp;”).
+The codes are listed in <code class="docutils literal notranslate"><span class="pre">TagIterator.entity_table</span></code>.
+For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.xml</span> <span class="kn">import</span> <span class="n">TagIterator</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TagIterator</span><span class="o">.</span><span class="n">entity_table</span><span class="p">[</span><span class="s1">&#39;amp&#39;</span><span class="p">]</span>
+<span class="go">&#39;&amp;&#39;</span>
+</pre></div>
+</div>
+<p>One can override <code class="docutils literal notranslate"><span class="pre">entity_table</span></code> in a given instance of TagIterator
+to add new tags.  If TagIterator is instantiated with <code class="docutils literal notranslate"><span class="pre">entities=False</span></code>,
+entity replacement is suppressed.</p>
+</section>
+<section id="xml-trees">
+<h2>XML trees<a class="headerlink" href="#xml-trees" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="load_xml">
+<span class="sig-name descname"><span class="pre">load_xml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#load_xml" title="Permalink to this definition"></a></dt>
+<dd><p>The main function.  It reads an XML file and
+converts it to a tree.  Optional keyword arguments are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">entities=False</span></code> leaves all HTML entities as-is.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">multiple=True</span></code> causes the return value to be a list of
+trees.  By default, only one tree is returned and it is an error
+if there is more than one in the file.</p></li>
+</ul>
+</div></blockquote>
+<p>To give an example, consider the file <code class="docutils literal notranslate"><span class="pre">xml1</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">contents</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;xml1&#39;</span><span class="p">)),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="go">&lt;html&gt;</span>
+<span class="go">&lt;body foo=&quot;hi&amp;amp;bye&quot; bar=16&gt;</span>
+<span class="go">A &amp;quot;little&amp;quot; &lt;b&gt;example&lt;/b&gt;.</span>
+<span class="go">&lt;/body&gt;</span>
+<span class="go">&lt;/html&gt;</span>
+</pre></div>
+</div>
+<p>We read it as a tree:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.xml</span> <span class="kn">import</span> <span class="n">load_xml</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xml1</span> <span class="o">=</span> <span class="n">load_xml</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;xml1&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">xml1</span><span class="p">)</span>
+<span class="go">0   (html</span>
+<span class="go">1      (&#39;#CDATA&#39; &#39;\n&#39;)</span>
+<span class="go">2      (body</span>
+<span class="go">3         (&#39;#CDATA&#39; &#39;\nA &quot;little&quot; &#39;)</span>
+<span class="go">4         (b</span>
+<span class="go">5            (&#39;#CDATA&#39; example))</span>
+<span class="go">6         (&#39;#CDATA&#39; &#39;.\n&#39;))</span>
+<span class="go">7      (&#39;#CDATA&#39; &#39;\n&#39;))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p>Each XML node is represented by a Tree instance.  It has one
+nonstandard member, namely, <code class="docutils literal notranslate"><span class="pre">ftrs</span></code>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">node.cat</span></code> - a string, the tag label or <code class="docutils literal notranslate"><span class="pre">'#CDATA'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node.word</span></code> - a string, the contents of a CDATA node</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node.ftrs</span></code> - a list of (att, value) pairs</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node.children</span></code> - a list of Tree instances, or None</p></li>
+</ul>
+</div></blockquote>
+<p>The functions from <code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> can be useful with XML trees.
+For example, one can pick out subtrees using the function <code class="docutils literal notranslate"><span class="pre">subtrees()</span></code>.  It
+takes a second argument which is either a category or a predicate.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">subtrees</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">subtrees</span><span class="p">(</span><span class="n">xml1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="go">[&lt;Tree b ...&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">subtrees</span><span class="p">(</span><span class="n">xml1</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">cat</span> <span class="o">==</span> <span class="s1">&#39;#CDATA&#39;</span> <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">word</span> <span class="o">!=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="go">[&lt;Tree #CDATA &#39;\nA &quot;little&quot; &#39;&gt;, &lt;Tree #CDATA example&gt;, &lt;Tree #CDATA &#39;.\n&#39;&gt;]</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">subtree()</span></code> is just like <code class="docutils literal notranslate"><span class="pre">subtrees()</span></code>, except
+that it returns a tree; it signals an error if the specified tree does
+not exist or is not unique.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">subtree</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">body</span> <span class="o">=</span> <span class="n">subtree</span><span class="p">(</span><span class="n">xml1</span><span class="p">,</span> <span class="s1">&#39;body&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">terminal_string()</span></code>
+returns the string contents of a node.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">terminal_string</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">terminal_string</span><span class="p">(</span><span class="n">body</span><span class="p">)</span>
+<span class="go">&#39;\nA &quot;little&quot;  example .\n&#39;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">subtrees()</span></code> function will not recurse inside any node that it
+returns.  For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">subtrees</span><span class="p">(</span><span class="n">xml1</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="ow">not</span> <span class="n">x</span><span class="o">.</span><span class="n">word</span><span class="p">)</span>
+<span class="go">[&lt;Tree html ...&gt;]</span>
+</pre></div>
+</div>
+<p>To retrieve all nodes matching a given criterion, use the function <code class="docutils literal notranslate"><span class="pre">nodes()</span></code> and
+list comprehension:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">nodes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">(</span><span class="n">xml1</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span><span class="o">.</span><span class="n">word</span><span class="p">]</span>
+<span class="go">[&lt;Tree html ...&gt;, &lt;Tree body ...&gt;, &lt;Tree b ...&gt;]</span>
+</pre></div>
+</div>
+<p>It is worth noting that the <code class="docutils literal notranslate"><span class="pre">iter_xml_trees()</span></code> function handles
+ill-formed XML gracefully.  For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;bad.html&#39;</span><span class="p">)),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="go">&lt;html&gt;</span>
+<span class="go">&lt;body&gt;</span>
+<span class="go">&lt;p&gt;</span>
+<span class="go">This is an example with lots</span>
+<span class="go">of missing end tags.</span>
+<span class="go">&lt;table&gt;</span>
+<span class="go">&lt;tr&gt;&lt;th&gt;Name &lt;th&gt;Rank &lt;th&gt;SerialNo&lt;/tr&gt;</span>
+<span class="go">&lt;tr&gt;&lt;td&gt;Smith &lt;td&gt;Corporal &lt;td&gt;1234567&lt;/tr&gt;</span>
+<span class="go">&lt;tr&gt;&lt;td&gt;Jones &lt;td&gt;Private &lt;td&gt;7654321&lt;/tr&gt;</span>
+<span class="go">&lt;tr&gt;&lt;td&gt;Howard &lt;td&gt;Major General &lt;td&gt;0000001&lt;/tr&gt;</span>
+<span class="go">&lt;/table&gt;</span>
+<span class="go">&lt;/body&gt;</span>
+</pre></div>
+</div>
+<p>The missing end tags are inserted automatically:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bad</span> <span class="o">=</span> <span class="n">load_xml</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;bad.html&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rows</span> <span class="o">=</span> <span class="n">subtrees</span><span class="p">(</span><span class="n">bad</span><span class="p">,</span> <span class="s1">&#39;tr&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">terminal_string</span><span class="p">(</span><span class="n">row</span><span class="p">))</span>
+<span class="gp">...</span>
+<span class="go">Name  Rank  SerialNo</span>
+<span class="go">Smith  Corporal  1234567</span>
+<span class="go">Jones  Private  7654321</span>
+<span class="go">Howard  Major General  0000001</span>
+</pre></div>
+</div>
+<p>End tags are paired with the nearest matching start tag.  If there is no
+start tag with the same label, the end tag is silently ignored.</p>
+<p>Within the region spanned by a matching tag pair, there may be
+unmatched start tags.  They are dealt with in a right-to-left pass, as follows.
+First, every category has a “precedence” assigned to it.
+(The precedence is only meaningful for HTML categories; it is
+a fixed constant for any non-HTML categories.)  If the precedence is
+zero (for categories <code class="docutils literal notranslate"><span class="pre">br</span></code> and <code class="docutils literal notranslate"><span class="pre">img</span></code>), the unmatched start tag
+is converted to an empty tag.  Otherwise, the “span” of the
+unmatched start tag is grown to
+cover as much material as possible, until it reaches the end of the
+region defined by the encompassing explicit tag pair, or until it
+encounters a node of equal or higher precedence.  In other words, no
+element created from an unmatched start tag will contain a child whose
+precedence is equal to or greater than its own.</p>
+<p>To get the value for an attribute, use the function <code class="docutils literal notranslate"><span class="pre">getvalue()</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.xml</span> <span class="kn">import</span> <span class="n">getvalue</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">getvalue</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="go">&#39;hi&amp;bye&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="tidy">
+<h2>Tidy<a class="headerlink" href="#tidy" title="Permalink to this heading"></a></h2>
+<p>When there are unmatched start tags, <code class="docutils literal notranslate"><span class="pre">iter_xml_trees()</span></code> calls the
+function <code class="docutils literal notranslate"><span class="pre">tidy()</span></code> to decide where the end tags should go.  It
+uses a table encoding intuitive operator precedences for HTML tags.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="rom.html" class="btn btn-neutral float-left" title="selkie.rom — Romanizations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tok.html" class="btn btn-neutral float-right" title="selkie.tok — Tokenizer for Latin scripts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.head — Head marking &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.dep — Dependency conversion" href="dep.html" />
+    <link rel="prev" title="selkie.stemmer — English stemmer" href="stemmer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The NLP pipeline</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="fsa.html"><code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> — Finite-state automata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fst.html"><code class="docutils literal notranslate"><span class="pre">selkie.fst</span></code> — Finite-state transducers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tree.html"><code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> — Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemmer.html"><code class="docutils literal notranslate"><span class="pre">selkie.stemmer</span></code> — English stemmer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.head</span></code> — Head marking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dep.html"><code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> — Dependency conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html"><code class="docutils literal notranslate"><span class="pre">selkie.features</span></code> — Non-recursive features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avs.html"><code class="docutils literal notranslate"><span class="pre">selkie.avs</span></code> — Recursive feature structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grammar.html"><code class="docutils literal notranslate"><span class="pre">selkie.grammar</span></code> — Constituent grammars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gdev.html"><code class="docutils literal notranslate"><span class="pre">selkie.gdev</span></code> — Grammar development tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen.html"><code class="docutils literal notranslate"><span class="pre">selkie.gen</span></code> — Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parser.html"><code class="docutils literal notranslate"><span class="pre">selkie.parser</span></code> — Constituent parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expr.html"><code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code> — Predicate calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interp.html"><code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> — Semantic interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.html"><code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> — Automated reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bot.html"><code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> — Conversational agent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">The NLP pipeline</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.head</span></code> — Head marking</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/nlp/head.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-head-head-marking">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.head</span></code> — Head marking<a class="headerlink" href="#selkie-head-head-marking" title="Permalink to this heading"></a></h1>
+<p>The examples assume you have done:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.head</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">parse_tree</span><span class="p">,</span> <span class="n">copy_tree</span>
+</pre></div>
+</div>
+<section id="head-rules">
+<h2>Head rules<a class="headerlink" href="#head-rules" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="mark_heads">
+<span class="sig-name descname"><span class="pre">mark_heads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">rules</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#mark_heads" title="Permalink to this definition"></a></dt>
+<dd><p>Destructively converts an unheaded
+tree into a headed tree.  Note that it is called for side effect; it
+does not return a value.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">parse_tree</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;(S (NP (DT the) (NN dog))</span>
+<span class="gp">... </span><span class="s1">                     (VP (VB chases)</span>
+<span class="gp">... </span><span class="s1">                         (NP (DT a) (NN cat))))&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">h</span> <span class="o">=</span> <span class="n">copy_tree</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mark_heads</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+<span class="go">0    (S</span>
+<span class="go">1       (NP</span>
+<span class="go">2          (DT the)</span>
+<span class="go">3          (NN:head dog))</span>
+<span class="go">4       (VP:head</span>
+<span class="go">5          (VB:head chases)</span>
+<span class="go">6          (NP</span>
+<span class="go">7             (DT a)</span>
+<span class="go">8             (NN:head cat))))</span>
+</pre></div>
+</div>
+<p>Nodes that already have heads are left unchanged: verb|mark_heads()|
+only determines heads for headless nodes.</p>
+<p>Head-marking uses a set of head rules.  The function
+<code class="docutils literal notranslate"><span class="pre">mark_heads()</span></code> will accept a rule set as second argument.  By
+default, it uses <code class="docutils literal notranslate"><span class="pre">DefaultHeadRules</span></code>.  These represent a modified
+version of the rules in Michael Collins’s thesis.  The original rules
+are also available as <code class="docutils literal notranslate"><span class="pre">CollinsMagermanRules</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="find_head">
+<span class="sig-name descname"><span class="pre">find_head</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#find_head" title="Permalink to this definition"></a></dt>
+<dd><p>This is the main function.
+It takes a node and indicates which of
+its children should be head.  The return value is the index of the
+predicted head node.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+<span class="go">0    (S</span>
+<span class="go">1       (NP</span>
+<span class="go">2          (DT the)</span>
+<span class="go">3          (NN dog))</span>
+<span class="go">4       (VP</span>
+<span class="go">5          (VB chases)</span>
+<span class="go">6          (NP</span>
+<span class="go">7             (DT a)</span>
+<span class="go">8             (NN cat))))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">find_head</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">find_head</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<p>For debugging, one can turn tracing on:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find_head</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">trace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">Rule &lt;Rule VP 0&gt;, found VB: h=0</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<p>One can print the head rules: <code class="docutils literal notranslate"><span class="pre">print(DefaultHeadRules)</span></code>.</p>
+</dd></dl>
+
+</section>
+<section id="the-magerman-collins-head-rules">
+<h2>The Magerman-Collins head rules<a class="headerlink" href="#the-magerman-collins-head-rules" title="Permalink to this heading"></a></h2>
+<p>As mentioned above, the head-marking rules are an adaptation of the
+Magerman-Collins rules, as given in Collins’s dissertation [1], pp. 238 ff.
+Collins adapts them from Magerman [1331].  The rules from Collins’s
+dissertation are listed in the following table.  Their use is best
+explained with an example.  Suppose the parent node has category
+<code class="docutils literal notranslate"><span class="pre">CONJP</span></code>.  The rule for <code class="docutils literal notranslate"><span class="pre">CONJP</span></code> has direction <code class="docutils literal notranslate"><span class="pre">R</span></code> and
+child categories <code class="docutils literal notranslate"><span class="pre">CC</span> <span class="pre">RB</span> <span class="pre">IN</span></code>.  One looks first for the rightmost
+child with category <code class="docutils literal notranslate"><span class="pre">CC</span></code>.  If none is found, look for the
+rightmost child with category <code class="docutils literal notranslate"><span class="pre">RB</span></code>.  If none is found, look for
+the rightmost child with category <code class="docutils literal notranslate"><span class="pre">IN</span></code>.  As a default, take
+the rightmost child as head.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>ADJP</p></td>
+<td><p>L</p></td>
+<td><p>NNS QP NN $ ADVP JJ VBN VBG ADJP JJR</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p>NP JJS DT FW RBR RBS SBAR RB</p></td>
+</tr>
+<tr class="row-odd"><td><p>ADVP</p></td>
+<td><p>R</p></td>
+<td><p>RB RBR RBS FW ADVP TO CD JJR JJ IN NP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p>JJS NN</p></td>
+</tr>
+<tr class="row-odd"><td><p>CONJP</p></td>
+<td><p>R</p></td>
+<td><p>CC RB IN</p></td>
+</tr>
+<tr class="row-even"><td><p>FRAG</p></td>
+<td><p>R</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>INTJ</p></td>
+<td><p>L</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>LST</p></td>
+<td><p>R</p></td>
+<td><p>LS :</p></td>
+</tr>
+<tr class="row-odd"><td><p>NAC</p></td>
+<td><p>L</p></td>
+<td><p>NN NNS NNP NNPS NP NAC EX $ CD QP PRP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p>VBG JJ JJS JJR ADJP FW</p></td>
+</tr>
+<tr class="row-odd"><td><p>PP</p></td>
+<td><p>R</p></td>
+<td><p>IN TO VBG VBN RP FW</p></td>
+</tr>
+<tr class="row-even"><td><p>PRN</p></td>
+<td><p>L</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>PRT</p></td>
+<td><p>R</p></td>
+<td><p>RP</p></td>
+</tr>
+<tr class="row-even"><td><p>QP</p></td>
+<td><p>L</p></td>
+<td><p>$ IN NNS NN JJ RB DT CD NCD QP JJR JJS</p></td>
+</tr>
+<tr class="row-odd"><td><p>RRC</p></td>
+<td><p>R</p></td>
+<td><p>VP NP ADVP ADJP PP</p></td>
+</tr>
+<tr class="row-even"><td><p>S</p></td>
+<td><p>L</p></td>
+<td><p>TO IN VP S SBAR ADJP UCP NP</p></td>
+</tr>
+<tr class="row-odd"><td><p>SBAR</p></td>
+<td><p>L</p></td>
+<td><p>WHNP WHPP WHADVP WHADJP IN DT S SQ</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p>SINV SBAR FRAG</p></td>
+</tr>
+<tr class="row-odd"><td><p>SBARQ</p></td>
+<td><p>L</p></td>
+<td><p>SQ S SINV SBARQ FRAG</p></td>
+</tr>
+<tr class="row-even"><td><p>SINV</p></td>
+<td><p>L</p></td>
+<td><p>VBZ VBD VBP VB MD VP S SINV ADJP NP</p></td>
+</tr>
+<tr class="row-odd"><td><p>SQ</p></td>
+<td><p>L</p></td>
+<td><p>VBZ VBD VBP VB MD VP SQ</p></td>
+</tr>
+<tr class="row-even"><td><p>UCP</p></td>
+<td><p>R</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>VP</p></td>
+<td><p>L</p></td>
+<td><p>TO VBD VBN MD VBZ VB VBG VBP VP ADJP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p>NN NNS NP</p></td>
+</tr>
+<tr class="row-odd"><td><p>WHADJP</p></td>
+<td><p>L</p></td>
+<td><p>CC WRB JJ ADJP</p></td>
+</tr>
+<tr class="row-even"><td><p>WHADVP</p></td>
+<td><p>R</p></td>
+<td><p>CC WRB</p></td>
+</tr>
+<tr class="row-odd"><td><p>WHNP</p></td>
+<td><p>L</p></td>
+<td><p>WDT WP WP$ WHADJP WHPP WHNP</p></td>
+</tr>
+<tr class="row-even"><td><p>WHPP</p></td>
+<td><p>R</p></td>
+<td><p>IN TO FW</p></td>
+</tr>
+</tbody>
+</table>
+<p>If the parent category is <code class="docutils literal notranslate"><span class="pre">NP</span></code>, the following rules are used.  The
+first one that matches determines the head.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The rightmost child that is a terminal node, if its category is
+<code class="docutils literal notranslate"><span class="pre">POS</span></code>,</p></li>
+<li><p>The rightmost child that is one of: {tt NN NNP NNPS NNS NX POS JJR},</p></li>
+<li><p>The leftmost child that is {tt NP},</p></li>
+<li><p>The rightmost child that is one of: {tt $ ADJP PRN},</p></li>
+<li><p>The rightmost child that is {tt CD},</p></li>
+<li><p>The rightmost child that is one of: {tt JJ JJS RB QP},</p></li>
+<li><p>The rightmost child that is a terminal node.</p></li>
+</ul>
+</div></blockquote>
+<p>These rules may fail if the parent category is not listed, or if an NP
+contains no terminal node.  In either of those cases, Collins
+specifies no action, but one presumably takes the rightmost child as head.</p>
+<p>Finally, there is an adjustment rule that applies in the case of
+coordination.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If the head is immediately preceded by {tt CC}, and there is
+another child before the {tt CC}, then that other child becomes head.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="decoordination">
+<h2>Decoordination<a class="headerlink" href="#decoordination" title="Permalink to this heading"></a></h2>
+<p>Head-marking is problematic in coordination structures, because, in
+the usual view, all the coordinands have an equal claim to being head.
+If desired, one can break the symmetry in coordination structures,
+before head marking, by calling the function <code class="docutils literal notranslate"><span class="pre">decoordinate()</span></code>.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="decoordinate">
+<span class="sig-name descname"><span class="pre">decoordinate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#decoordinate" title="Permalink to this definition"></a></dt>
+<dd><p>Replaces all coordinate structures
+with single-headed structures, in which the first coordinand is left
+in place, but other coordinands are wrapped in a new adjunct node with
+category <code class="docutils literal notranslate"><span class="pre">CO</span></code> and role <code class="docutils literal notranslate"><span class="pre">co</span></code>.
+The replacement is destructive.  Here is an example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">parse_tree</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;(NP (N trains)</span>
+<span class="gp">... </span><span class="s1">                      (&#39;,&#39; &#39;,&#39;) (N planes)</span>
+<span class="gp">... </span><span class="s1">                      (&#39;,&#39; &#39;,&#39;) (CC and) (N autos))&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">decoordinate</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="go">0    (NP</span>
+<span class="go">1       (N trains)</span>
+<span class="go">2       (CO:co</span>
+<span class="go">3          (, ,)</span>
+<span class="go">4          (N planes)</span>
+<span class="go">5          (, ,)</span>
+<span class="go">6          (CC and)</span>
+<span class="go">7          (N:head autos)))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="stemmer.html" class="btn btn-neutral float-left" title="selkie.stemmer — English stemmer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dep.html" class="btn btn-neutral float-right" title="selkie.dep — Dependency conversion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

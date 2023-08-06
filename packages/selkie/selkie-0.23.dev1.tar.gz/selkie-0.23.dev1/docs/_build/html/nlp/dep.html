@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.dep — Dependency conversion &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.features — Non-recursive features" href="features.html" />
+    <link rel="prev" title="selkie.head — Head marking" href="head.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The NLP pipeline</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="fsa.html"><code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> — Finite-state automata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fst.html"><code class="docutils literal notranslate"><span class="pre">selkie.fst</span></code> — Finite-state transducers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tree.html"><code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> — Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemmer.html"><code class="docutils literal notranslate"><span class="pre">selkie.stemmer</span></code> — English stemmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="head.html"><code class="docutils literal notranslate"><span class="pre">selkie.head</span></code> — Head marking</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> — Dependency conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html"><code class="docutils literal notranslate"><span class="pre">selkie.features</span></code> — Non-recursive features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avs.html"><code class="docutils literal notranslate"><span class="pre">selkie.avs</span></code> — Recursive feature structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grammar.html"><code class="docutils literal notranslate"><span class="pre">selkie.grammar</span></code> — Constituent grammars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gdev.html"><code class="docutils literal notranslate"><span class="pre">selkie.gdev</span></code> — Grammar development tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen.html"><code class="docutils literal notranslate"><span class="pre">selkie.gen</span></code> — Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parser.html"><code class="docutils literal notranslate"><span class="pre">selkie.parser</span></code> — Constituent parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expr.html"><code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code> — Predicate calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interp.html"><code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> — Semantic interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.html"><code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> — Automated reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bot.html"><code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> — Conversational agent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">The NLP pipeline</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> — Dependency conversion</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/nlp/dep.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-dep-dependency-conversion">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> — Dependency conversion<a class="headerlink" href="#selkie-dep-dependency-conversion" title="Permalink to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>The toplevel function for conversions among tree types
+is <code class="docutils literal notranslate"><span class="pre">convert()</span></code>.  It takes optional
+arguments giving the type of <code class="docutils literal notranslate"><span class="pre">input</span></code> and the type of <code class="docutils literal notranslate"><span class="pre">output</span></code>.
+By default, <code class="docutils literal notranslate"><span class="pre">input</span></code> is <code class="docutils literal notranslate"><span class="pre">'tree'</span></code> and <code class="docutils literal notranslate"><span class="pre">output</span></code> is <code class="docutils literal notranslate"><span class="pre">'efstemma'</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">parse_tree</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">parse_tree</span><span class="p">(</span><span class="s1">&#39;(S (NP (Pron this))&#39;</span>
+<span class="gp">... </span>               <span class="s1">&#39;   (VP (VBZ is)&#39;</span>
+<span class="gp">... </span>               <span class="s1">&#39;       (NP (DT a) (NN test))))&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.dep</span> <span class="kn">import</span> <span class="n">convert</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">convert</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="go">0 *root* _    _ _    _</span>
+<span class="go">1 this   Pron _ _    2</span>
+<span class="go">2 is     VBZ  _ root 0</span>
+<span class="go">3 a      DT   _ _    4</span>
+<span class="go">4 test   NN   _ _    2</span>
+</pre></div>
+</div>
+<p>To see how heads are assigned, one can specify <code class="docutils literal notranslate"><span class="pre">'headed'</span></code> output:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">convert</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s1">&#39;headed&#39;</span><span class="p">))</span>
+<span class="go">0   (S</span>
+<span class="go">1      (NP</span>
+<span class="go">2         (Pron:head this))</span>
+<span class="go">3      (VP:head</span>
+<span class="go">4         (VBZ:head is)</span>
+<span class="go">5         (NP</span>
+<span class="go">6            (DT a)</span>
+<span class="go">7            (NN:head test))))</span>
+</pre></div>
+</div>
+<p>Or if one prefers a dependency tree to a stemma:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">convert</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s1">&#39;dep&#39;</span><span class="p">))</span>
+<span class="go">0   (VBZ:root</span>
+<span class="go">1      (Pron this)</span>
+<span class="go">        is</span>
+<span class="go">2      (NN</span>
+<span class="go">3         (DT a)</span>
+<span class="go">           test))</span>
+</pre></div>
+</div>
+<p>The legal types input and output types are:</p>
+<p><code class="docutils literal notranslate"><span class="pre">'tree'</span></code> for an unheaded constituency tree,
+<code class="docutils literal notranslate"><span class="pre">'headed'</span></code> for a headed constituency tree,
+<code class="docutils literal notranslate"><span class="pre">'dep'</span></code> for a dependency tree,
+<code class="docutils literal notranslate"><span class="pre">'stemma'</span></code> for a <code class="docutils literal notranslate"><span class="pre">Sentence</span></code> possibly containing empty words,
+<code class="docutils literal notranslate"><span class="pre">'efstemma'</span></code> for an &amp;epsilon;-free stemma.</p>
+<p>These reflect the steps of the
+conversion: <code class="docutils literal notranslate"><span class="pre">mark_heads()</span></code> converts an unheaded tree to a headed
+tree, <code class="docutils literal notranslate"><span class="pre">dependency_tree()</span></code> converts a headed tree to a dependency
+tree, <code class="docutils literal notranslate"><span class="pre">stemma()</span></code> converts a dependency tree to a stemma, and
+<code class="docutils literal notranslate"><span class="pre">eliminate_epsilons()</span></code> eliminates empty words.</p>
+<p>All steps except the first are non-destructive.  If given an unheaded
+tree as input, <code class="docutils literal notranslate"><span class="pre">convert()</span></code> makes a copy before calling
+<code class="docutils literal notranslate"><span class="pre">mark_heads()</span></code>, unless the keyword argument <code class="docutils literal notranslate"><span class="pre">destructive=True</span></code>
+is provided.</p>
+<p>The keyword arguments <code class="docutils literal notranslate"><span class="pre">projections</span></code> and <code class="docutils literal notranslate"><span class="pre">reductions</span></code> may
+optionally be provided; they are passed directly to
+<code class="docutils literal notranslate"><span class="pre">dependency_tree()</span></code>.</p>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
+<p>The central function provided by <code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> is <code class="docutils literal notranslate"><span class="pre">dependency_tree()</span></code>,
+which converts a headed phrase-structure tree to a dependency tree.
+(It signals an error if it encounters a headless node.)</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">h</span> <span class="o">=</span> <span class="n">parse_tree</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="gp">... </span><span class="s1">    (S (NP:subj (Det the) (N:head dog))</span>
+<span class="gp">... </span><span class="s1">       (VP:head (V:head chased)</span>
+<span class="gp">... </span><span class="s1">                (NP:obj (Det a) (N:head cat)))</span>
+<span class="gp">... </span><span class="s1">       (Adv:mod quickly))</span>
+<span class="gp">... </span><span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.dep</span> <span class="kn">import</span> <span class="n">dependency_tree</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">dependency_tree</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="go">0    (V:root</span>
+<span class="go">1       (N:subj</span>
+<span class="go">2          (Det the)</span>
+<span class="go">           dog)</span>
+<span class="go">        chased</span>
+<span class="go">3       (N:obj</span>
+<span class="go">4          (Det a)</span>
+<span class="go">           cat)</span>
+<span class="go">5       (Adv:mod quickly))</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">dependency_tree()</span></code> takes two keyword arguments:
+<code class="docutils literal notranslate"><span class="pre">projections</span></code> and <code class="docutils literal notranslate"><span class="pre">reductions</span></code>.  They are passed directly to
+the <code class="docutils literal notranslate"><span class="pre">tree()</span></code> method of <code class="docutils literal notranslate"><span class="pre">Projection</span></code>, which is discussed
+below.</p>
+<p>It should be noted that the dependency tree may contain empty nodes.
+The conversion treats all terminal nodes alike, whether they have a
+string or <code class="docutils literal notranslate"><span class="pre">None</span></code> as their value for <code class="docutils literal notranslate"><span class="pre">.word</span></code>.</p>
+</section>
+<section id="projections">
+<h2>Projections<a class="headerlink" href="#projections" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">dependency_tree()</span></code> function works by converting the tree first to
+its <em>projections,</em> where a projection is defined as a list of
+nodes, each being the head of the previous.  There is one projection
+for each leaf node.  For example, in the
+tree <em>h</em> above, “the” has projection (Det), “dog” has
+projection (NP, N), “chased” has projection (S, VP, V),
+“a” has projection (Det), “cat” has projection (NP, N), and
+“quickly” has projection (Adv).</p>
+<p>The left dependents of a projection are defined to be the
+concatenation of left dependents of the nodes it contains, from
+outermost to innermost.
+The right dependents are defined to be the concatenation of the right
+dependents of the nodes, from innermost to outermost.  For example,
+the only left dependent of (S, NP, V) is the subject NP, and its right
+dependents are the object NP and the adverb.</p>
+<p>The class <code class="docutils literal notranslate"><span class="pre">Projection</span></code> represents a projection.  One creates a
+projection from a headed tree:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.dep</span> <span class="kn">import</span> <span class="n">Projection</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Projection</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This actually creates projections recursively for the entire tree.</p>
+<p><strong>Nodes.</strong>
+The value of attribute <code class="docutils literal notranslate"><span class="pre">nodes</span></code> is the list of nodes that make up
+the projection:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">nodes</span>
+<span class="go">[&lt;Tree S ...&gt;, &lt;Tree VP ...&gt;, &lt;Tree V chased&gt;]</span>
+</pre></div>
+</div>
+<p><strong>Ldeps, rdeps.</strong>
+The attributes <code class="docutils literal notranslate"><span class="pre">ldeps</span></code> and <code class="docutils literal notranslate"><span class="pre">rdeps</span></code> contain the left and right
+dependents, converted to projections:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">ldeps</span>
+<span class="go">[&lt;Projection NP N dog&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">rdeps</span>
+<span class="go">[&lt;Projection NP N cat&gt;, &lt;Projection Adv quickly&gt;]</span>
+</pre></div>
+</div>
+<p><strong>Lr, parent, headsib.</strong>
+Each non-root projection has values for <code class="docutils literal notranslate"><span class="pre">lr</span></code>, <code class="docutils literal notranslate"><span class="pre">parent</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">headsib</span></code>, representing the configuration in which the root node
+occurs in the original tree.  This configuration is called the
+“reduction” represented by attaching the root of projection to its parent.
+For example, the projection for the
+subject NP occurs as a left dependent in S, with head child VP.
+Accordingly:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">ldeps</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">lr</span>
+<span class="go">&#39;L&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">parent</span>
+<span class="go">&lt;Tree S ...&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sp</span><span class="o">.</span><span class="n">headsib</span>
+<span class="go">&lt;Tree VP ...&gt;</span>
+</pre></div>
+</div>
+<p>(For the root projection, all three attributes have the value <code class="docutils literal notranslate"><span class="pre">None</span></code>.)</p>
+<p><strong>Tree.</strong>
+The method <code class="docutils literal notranslate"><span class="pre">tree()</span></code> converts a projection into a dependency tree.
+By default, the category of a projection is taken to be the part of
+speech of the head node (that is, <code class="docutils literal notranslate"><span class="pre">nodes[-1]</span></code>.cat), and the role
+is the role (if any) of the root node (that is, <code class="docutils literal notranslate"><span class="pre">nodes[0].role</span></code>).</p>
+<p>There are two boolean keyword arguments that can be used to select
+alternative definitions of category and role.  If <code class="docutils literal notranslate"><span class="pre">projections</span></code> is
+true, then the category is the concatenation of all categories in the
+projection.  For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">tree</span><span class="p">(</span><span class="n">projections</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="go">0    (S_VP_V:root</span>
+<span class="go">1       (NP_N:subj</span>
+<span class="go">2          (Det the)</span>
+<span class="go">           dog)</span>
+<span class="go">        chased</span>
+<span class="go">3       (NP_N:obj</span>
+<span class="go">4          (Det a)</span>
+<span class="go">           cat)</span>
+<span class="go">5       (Adv:mod quickly))</span>
+</pre></div>
+</div>
+<p>If <code class="docutils literal notranslate"><span class="pre">reductions</span></code> is true, then the role is represented by a
+<code class="docutils literal notranslate"><span class="pre">Reduction</span></code> object, which prints out as
+the concatenation of <code class="docutils literal notranslate"><span class="pre">lr</span></code>, <code class="docutils literal notranslate"><span class="pre">nodes[0].cat</span></code>, <code class="docutils literal notranslate"><span class="pre">parent.cat</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">headsib.cat</span></code>.  For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">tree</span><span class="p">(</span><span class="n">reductions</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="go">0    (V:root</span>
+<span class="go">1       (N:&#39;L_NP:subj_S_VP&#39;</span>
+<span class="go">2          (Det:L_Det_NP_N the)</span>
+<span class="go">           dog)</span>
+<span class="go">        chased</span>
+<span class="go">3       (N:&#39;R_NP:obj_VP_V&#39;</span>
+<span class="go">4          (Det:L_Det_NP_N a)</span>
+<span class="go">           cat)</span>
+<span class="go">5       (Adv:&#39;R_Adv:mod_S_VP&#39; quickly))</span>
+</pre></div>
+</div>
+<p>One can specify both <code class="docutils literal notranslate"><span class="pre">projections</span></code> and <code class="docutils literal notranslate"><span class="pre">reductions</span></code>, if desired.</p>
+</section>
+<section id="reduction">
+<h2>Reduction<a class="headerlink" href="#reduction" title="Permalink to this heading"></a></h2>
+<p>The class <code class="docutils literal notranslate"><span class="pre">Reduction</span></code> represents the configuration, in the
+original headed phrase structure tree, in which a dependent occurs.
+It has four attributes:</p>
+<p><code class="docutils literal notranslate"><span class="pre">lr</span></code> may be “<code class="docutils literal notranslate"><span class="pre">L</span></code>,” for a dependent that precedes its
+head sibling, or “<code class="docutils literal notranslate"><span class="pre">R</span></code>,” for one that follows, or “<code class="docutils literal notranslate"><span class="pre">root</span></code>,”
+for the root node.
+<code class="docutils literal notranslate"><span class="pre">dep</span></code> is the category of the dependent.
+<code class="docutils literal notranslate"><span class="pre">parent</span></code> is the category of the parent node.
+<code class="docutils literal notranslate"><span class="pre">head</span></code> is the category of the head sibling.</p>
+</section>
+<section id="stemmas-and-governor-arrays">
+<h2>Stemmas and governor arrays<a class="headerlink" href="#stemmas-and-governor-arrays" title="Permalink to this heading"></a></h2>
+<p>A dependency stemma is represented by a <code class="docutils literal notranslate"><span class="pre">Sentence</span></code> instance, which
+contains <code class="docutils literal notranslate"><span class="pre">Word</span></code> instances representing the individual words of the
+sentence.  A <code class="docutils literal notranslate"><span class="pre">Sentence</span></code> may itself have an <code class="docutils literal notranslate"><span class="pre">index()</span></code>, which is
+intended to represent its position in a collection of sentences such
+as a treebank.  Otherwise, a <code class="docutils literal notranslate"><span class="pre">Sentence</span></code> is simply a list of
+<code class="docutils literal notranslate"><span class="pre">Word</span></code> instances.  The word at position 0 is a pseudo-word
+representing the root.</p>
+<p>To create a sentence with a known number of words, use <code class="docutils literal notranslate"><span class="pre">make_sentence()</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.dep</span> <span class="kn">import</span> <span class="n">make_sentence</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">make_sentence</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">form</span> <span class="o">=</span> <span class="s1">&#39;This&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">form</span> <span class="o">=</span> <span class="s1">&#39;is&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">form</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">form</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="go">0 *root* _ _ _ _</span>
+<span class="go">1 This   _ _ _ 0</span>
+<span class="go">2 is     _ _ _ 0</span>
+<span class="go">3 a      _ _ _ 0</span>
+<span class="go">4 test   _ _ _ 0</span>
+</pre></div>
+</div>
+<p>Alternatively, one can create an empty sentence and add words one at a
+time.  (Note that an “empty” sentence does contain a <code class="docutils literal notranslate"><span class="pre">*root*</span></code>
+pseudo-word.)</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.dep</span> <span class="kn">import</span> <span class="n">Sentence</span><span class="p">,</span> <span class="n">Word</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">Sentence</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Word</span><span class="p">(</span><span class="n">form</span><span class="o">=</span><span class="s1">&#39;hi&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Word</span><span class="p">(</span><span class="n">form</span><span class="o">=</span><span class="s1">&#39;there&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="go">0 *root* _ _ _ _</span>
+<span class="go">1 hi     _ _ _ 0</span>
+<span class="go">2 there  _ _ _ 0</span>
+</pre></div>
+</div>
+<p>One can copy an existing word by using the <code class="docutils literal notranslate"><span class="pre">copy()</span></code> method:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="go">&lt;Word None hi govr=0&gt;</span>
+</pre></div>
+</div>
+<p>The copy is identical to the original except that its <code class="docutils literal notranslate"><span class="pre">sent</span></code> and
+<code class="docutils literal notranslate"><span class="pre">index</span></code> are both <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.dep.Sentence">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.dep.</span></span><span class="sig-name descname"><span class="pre">Sentence</span></span><a class="headerlink" href="#selkie.dep.Sentence" title="Permalink to this definition"></a></dt>
+<dd><p>The methods of <code class="docutils literal notranslate"><span class="pre">Sentence</span></code> are as follows:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.index">
+<span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.index" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the index of the sentence.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.providence">
+<span class="sig-name descname"><span class="pre">providence</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.providence" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the index as a string, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.__len__">
+<span class="sig-name descname"><span class="pre">__len__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.__len__" title="Permalink to this definition"></a></dt>
+<dd><p>Includes the root pseudo-word.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.__iter__">
+<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.__iter__" title="Permalink to this definition"></a></dt>
+<dd><p>Iterates over all words, including the root pseudo-word.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.__getitem__">
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.__getitem__" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the <em>i</em>-th word; the root pseudo-word is at 0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.words">
+<span class="sig-name descname"><span class="pre">words</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.words" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of word forms (strings), excluding
+the root pseudo-word.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.nwords">
+<span class="sig-name descname"><span class="pre">nwords</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.nwords" title="Permalink to this definition"></a></dt>
+<dd><p>Excludes the root pseudo-word.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.cmp">
+<span class="sig-name descname"><span class="pre">cmp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.cmp" title="Permalink to this definition"></a></dt>
+<dd><p>Sentences are compared by comparing
+words from left to right until a difference is found.  The root
+pseudo-words are assumed identical, and are not included in the comparison.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.append" title="Permalink to this definition"></a></dt>
+<dd><p>Adds w (not a copy) to the list of words.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.form">
+<span class="sig-name descname"><span class="pre">form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.form" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the form of the <em>i</em>-th word.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.cat">
+<span class="sig-name descname"><span class="pre">cat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.cat" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the category of the <em>i</em>-th word.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.cpos">
+<span class="sig-name descname"><span class="pre">cpos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.cpos" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the coarse category of the <em>i</em>-th word.
+This signals an error if the sentence is not a CoNLL sentence.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.lemma">
+<span class="sig-name descname"><span class="pre">lemma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.lemma" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the lemma of the <em>i</em>-th word.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.morph">
+<span class="sig-name descname"><span class="pre">morph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.morph" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the morph of the <em>i</em>-th word.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.govr">
+<span class="sig-name descname"><span class="pre">govr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.govr" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the governor of the <em>i</em>-th word.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.role">
+<span class="sig-name descname"><span class="pre">role</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.role" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the role of the <em>i</em>-th word.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Sentence.column">
+<span class="sig-name descname"><span class="pre">column</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Sentence.column" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the column named <em>c</em>, which
+should be one of <code class="docutils literal notranslate"><span class="pre">'form'</span></code>, <code class="docutils literal notranslate"><span class="pre">'cat'</span></code>, <code class="docutils literal notranslate"><span class="pre">'lemma'</span></code>, <code class="docutils literal notranslate"><span class="pre">'morph'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'govr'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'role'</span></code>.  The column is a list of values, one
+for each word.  It includes the root pseudo-word.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.dep.Word">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.dep.</span></span><span class="sig-name descname"><span class="pre">Word</span></span><a class="headerlink" href="#selkie.dep.Word" title="Permalink to this definition"></a></dt>
+<dd><p>The members of <code class="docutils literal notranslate"><span class="pre">Word</span></code> are as follows:</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.dep.Word.index">
+<span class="sig-name descname"><span class="pre">index</span></span><a class="headerlink" href="#selkie.dep.Word.index" title="Permalink to this definition"></a></dt>
+<dd><p>The position of the word in the sentence; the
+root pseudo-word has index 0.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.dep.Word.form">
+<span class="sig-name descname"><span class="pre">form</span></span><a class="headerlink" href="#selkie.dep.Word.form" title="Permalink to this definition"></a></dt>
+<dd><p>The printed form of the word.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.dep.Word.cat">
+<span class="sig-name descname"><span class="pre">cat</span></span><a class="headerlink" href="#selkie.dep.Word.cat" title="Permalink to this definition"></a></dt>
+<dd><p>The part of speech.  In sentences read from a
+CoNLL-format file, the cat is a pair (<em>cpos, fpos</em>).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.dep.Word.lemma">
+<span class="sig-name descname"><span class="pre">lemma</span></span><a class="headerlink" href="#selkie.dep.Word.lemma" title="Permalink to this definition"></a></dt>
+<dd><p>The lemma, i.e., the key to use for lexical access.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.dep.Word.morph">
+<span class="sig-name descname"><span class="pre">morph</span></span><a class="headerlink" href="#selkie.dep.Word.morph" title="Permalink to this definition"></a></dt>
+<dd><p>Morphological information.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.dep.Word.govr">
+<span class="sig-name descname"><span class="pre">govr</span></span><a class="headerlink" href="#selkie.dep.Word.govr" title="Permalink to this definition"></a></dt>
+<dd><p>The index of the governor.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.dep.Word.role">
+<span class="sig-name descname"><span class="pre">role</span></span><a class="headerlink" href="#selkie.dep.Word.role" title="Permalink to this definition"></a></dt>
+<dd><p>The role with respect to the governor.</p>
+</dd></dl>
+
+<p>The methods of <code class="docutils literal notranslate"><span class="pre">Word</span></code> are:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Word.__lt__">
+<span class="sig-name descname"><span class="pre">__lt__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Word.__lt__" title="Permalink to this definition"></a></dt>
+<dd><p>Comparison is done by comparing
+attribute values in the order <code class="docutils literal notranslate"><span class="pre">form</span></code>, <code class="docutils literal notranslate"><span class="pre">cat</span></code>, <code class="docutils literal notranslate"><span class="pre">lemma</span></code>,
+<code class="docutils literal notranslate"><span class="pre">morph</span></code>, <code class="docutils literal notranslate"><span class="pre">govr</span></code>, <code class="docutils literal notranslate"><span class="pre">role</span></code>.  The attribute <code class="docutils literal notranslate"><span class="pre">index</span></code> is
+intentionally omitted, with the consequence that words at different positions in
+the sentence may be equal.  The attribute <code class="docutils literal notranslate"><span class="pre">cpos</span></code> is also
+omitted; it is assumed that <code class="docutils literal notranslate"><span class="pre">cpos</span></code>, if present, is uniquely
+determined by <code class="docutils literal notranslate"><span class="pre">cat</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.dep.Word.tagged_string">
+<span class="sig-name descname"><span class="pre">tagged_string</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.dep.Word.tagged_string" title="Permalink to this definition"></a></dt>
+<dd><p>Returns “form.cat”.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="conversion-to-sentence-stemma">
+<h2>Conversion to <code class="docutils literal notranslate"><span class="pre">Sentence</span></code> (stemma)<a class="headerlink" href="#conversion-to-sentence-stemma" title="Permalink to this heading"></a></h2>
+<p>A stemma is a list of <code class="docutils literal notranslate"><span class="pre">Word</span></code> objects, one for each word in
+the sentence.  The <code class="docutils literal notranslate"><span class="pre">Word</span></code> class represents a word as the
+dependent in a dependency link.  The function <code class="docutils literal notranslate"><span class="pre">stemma()</span></code> converts
+a dependency tree into a stemma.  For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.dep</span> <span class="kn">import</span> <span class="n">stemma</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">stemma</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="go">0 *root*   _    _ _    _</span>
+<span class="go">1 the      Det  _ _    2</span>
+<span class="go">2 dog      N    _ subj 3</span>
+<span class="go">3 chased   V    _ root 0</span>
+<span class="go">4 a        Det  _ _    5</span>
+<span class="go">5 cat      N    _ obj  3</span>
+<span class="go">6 quickly  Adv  _ mod  3</span>
+</pre></div>
+</div>
+<p>The columns are: index, word, part of speech, lemma, role, and
+governor.  The value for governor is the index of the governor, not
+the governor itself.</p>
+<p>One can access a stemma like a list:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">&lt;Word 2 dog/N:subj govr=3&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">role</span>
+<span class="go">&#39;subj&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">govr</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="go">&lt;Word 3 chased/V:root govr=0&gt;</span>
+</pre></div>
+</div>
+<p>The length of the stemma is the number of words in the sentence plus
+one for the root:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="go">7</span>
+</pre></div>
+</div>
+<p>The element at index 0 is a pseudo-word representing the root of the
+sentence.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">&lt;Word 0 *root*&gt;</span>
+</pre></div>
+</div>
+<p>The method <code class="docutils literal notranslate"><span class="pre">words()</span></code> returns a list of word forms (strings)
+excluding the root pseudo-word.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="o">.</span><span class="n">words</span><span class="p">()</span>
+<span class="go">[&#39;the&#39;, &#39;dog&#39;, &#39;chased&#39;, &#39;a&#39;, &#39;cat&#39;, &#39;quickly&#39;]</span>
+</pre></div>
+</div>
+</section>
+<section id="governor-array">
+<h2>Governor array<a class="headerlink" href="#governor-array" title="Permalink to this heading"></a></h2>
+<p>A very compact representation of a dependency tree is the
+<em>governor array</em>.  This is simply a list of numbers representing,
+for each word, the index of the governor of that word.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.dep</span> <span class="kn">import</span> <span class="n">governor_array</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">governor_array</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="go">[2, 3, 0, 5, 3, 3]</span>
+</pre></div>
+</div>
+<p>The argument to <code class="docutils literal notranslate"><span class="pre">governor_array()</span></code> may be either a stemma or
+something that can be converted to a stemma using the function <code class="docutils literal notranslate"><span class="pre">stemma()</span></code>.</p>
+</section>
+<section id="deplists">
+<h2><code class="docutils literal notranslate"><span class="pre">DepLists</span></code><a class="headerlink" href="#deplists" title="Permalink to this heading"></a></h2>
+<p>A <code class="docutils literal notranslate"><span class="pre">DepLists</span></code> object behaves as a list of lists.  It is indexed by
+word index <em>i</em>, and returns the list of indices of words dependent on
+<em>i</em>.  For example, in our example <code class="docutils literal notranslate"><span class="pre">Sentence</span> <span class="pre">s</span></code>, word 3 (<em>chased</em>)
+has dependents 2 (<em>dog</em>), 5 (<em>cat</em>), and 6
+(<em>quickly</em>).</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.dep</span> <span class="kn">import</span> <span class="n">DepLists</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">deps</span> <span class="o">=</span> <span class="n">DepLists</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">deps</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="go">[2, 5, 6]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">deps</span><span class="p">)</span>
+<span class="go">7</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">DepLists</span></code> object prints out readably:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">deps</span><span class="p">)</span>
+<span class="go">[0] *root*</span>
+<span class="go">        root: [3] chased</span>
+<span class="go">[1] the</span>
+<span class="go">[2] dog</span>
+<span class="go">        None: [1] the</span>
+<span class="go">[3] chased</span>
+<span class="go">        subj: [2] dog</span>
+<span class="go">        obj: [5] cat</span>
+<span class="go">        mod: [6] quickly</span>
+<span class="go">[4] a</span>
+<span class="go">[5] cat</span>
+<span class="go">        None: [4] a</span>
+<span class="go">[6] quickly</span>
+</pre></div>
+</div>
+<p>It contains a pointer to the original sentence, which can be used for
+access to the identity of the dependents, etc.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">deps</span><span class="o">.</span><span class="n">sentence</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">form</span>
+<span class="go">&#39;dog&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="lemmatization">
+<h2>Lemmatization<a class="headerlink" href="#lemmatization" title="Permalink to this heading"></a></h2>
+<p>The Sentence method <code class="docutils literal notranslate"><span class="pre">lemmatize()</span></code> sets the <code class="docutils literal notranslate"><span class="pre">lemma</span></code>, <code class="docutils literal notranslate"><span class="pre">cpos</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">morph</span></code> attributes for each word.
+The value for <code class="docutils literal notranslate"><span class="pre">lemma</span></code> is
+the lemmatized word.  The module <code class="docutils literal notranslate"><span class="pre">selkie.stemmer</span></code> is used.
+The value for <code class="docutils literal notranslate"><span class="pre">cpos</span></code> is the part of speech with inflection
+stripped.  The known inflected tags are
+<code class="docutils literal notranslate"><span class="pre">'VBZ'</span></code>, <code class="docutils literal notranslate"><span class="pre">'VBG'</span></code>, <code class="docutils literal notranslate"><span class="pre">'VBN'</span></code>, <code class="docutils literal notranslate"><span class="pre">'VBP'</span></code>, <code class="docutils literal notranslate"><span class="pre">'VBD'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'NN'</span></code>, <code class="docutils literal notranslate"><span class="pre">'NNS'</span></code>, and the lemmatized versions are <code class="docutils literal notranslate"><span class="pre">'V'</span></code> or
+<code class="docutils literal notranslate"><span class="pre">'N'</span></code>.
+The value for <code class="docutils literal notranslate"><span class="pre">morph</span></code> is set to one of:
+<code class="docutils literal notranslate"><span class="pre">'3s'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ing'</span></code>, <code class="docutils literal notranslate"><span class="pre">'en'</span></code>, <code class="docutils literal notranslate"><span class="pre">'pl'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ed'</span></code>, <code class="docutils literal notranslate"><span class="pre">'sg'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'pl'</span></code>.</p>
+<p>The method is destructive.  It
+only works for English.</p>
+</section>
+<section id="eliminating-epsilons">
+<h2>Eliminating epsilons<a class="headerlink" href="#eliminating-epsilons" title="Permalink to this heading"></a></h2>
+<p>The Sentence method <code class="docutils literal notranslate"><span class="pre">eliminate_epsilons()</span></code> eliminates empty words
+(those whose form is <code class="docutils literal notranslate"><span class="pre">None</span></code>).  It is possible for empty words to
+have dependents.  Suppose word <em>w</em> has governor <em>g</em>, which is empty.
+The new governor of <em>w</em> is defined to be its lowest non-empty
+ancestor, where <em>ancestor</em> means the transitive closure of
+<em>governor-of.</em></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">h</span> <span class="o">=</span> <span class="n">parse_tree</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="gp">... </span><span class="s1">  (VP (V:head thought)</span>
+<span class="gp">... </span><span class="s1">      (CP (C:head)</span>
+<span class="gp">... </span><span class="s1">          (S</span>
+<span class="gp">... </span><span class="s1">             (NP:subj (Name:head John))</span>
+<span class="gp">... </span><span class="s1">             (VP:head (V:head left)))))</span>
+<span class="gp">... </span><span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">stemma</span><span class="p">(</span><span class="n">dependency_tree</span><span class="p">(</span><span class="n">h</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="go">0 *root*  _    _ _    _</span>
+<span class="go">1 thought V    _ root 0</span>
+<span class="go">2 _       C    _ _    1</span>
+<span class="go">3 John    Name _ subj 4</span>
+<span class="go">4 left    V    _ _    2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">eliminate_epsilons</span><span class="p">())</span>
+<span class="go">0 *root*  _    _ _    _</span>
+<span class="go">1 thought V    _ root 0</span>
+<span class="go">2 John    Name _ subj 3</span>
+<span class="go">3 left    V    _ _    1</span>
+</pre></div>
+</div>
+</section>
+<section id="conll-format">
+<h2>CoNLL Format<a class="headerlink" href="#conll-format" title="Permalink to this heading"></a></h2>
+<p>To get the raw contents of a file in CoNLL dependency format, use
+<code class="docutils literal notranslate"><span class="pre">selkie.io.iter_record_blocks()</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">iter_record_blocks</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.data</span> <span class="kn">import</span> <span class="n">ex</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">iter_record_blocks</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;depsent1&#39;</span><span class="p">)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sent</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">[&#39;1&#39;, &#39;This&#39;, &#39;this&#39;, &#39;_&#39;, &#39;pron&#39;, &#39;_&#39;, &#39;2&#39;, &#39;subj&#39;, &#39;_&#39;, &#39;_&#39;]</span>
+</pre></div>
+</div>
+<p>The fields are: index, form, lemma, cpos, fpos, morph, head, rel,
+phead, prel.  The fields cpos, phead, and prel are considered
+“extra” information: they are optional, whereas fpos, head, and rel
+are obligatory.  (Head and rel are obligatory, but need not be
+projective; phead and rel are optional, but must be projective.)
+Missing fields are represented with a single underscore character.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="iter_sentences">
+<span class="sig-name descname"><span class="pre">iter_sentences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iter_sentences" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">iter_sentences()</span></code> reads a CoNLL-format file as a
+sequence of <code class="docutils literal notranslate"><span class="pre">selkie.dep.Sentence</span></code> instances.  It takes a filename as
+input, with an optional “<code class="docutils literal notranslate"><span class="pre">#proj</span></code>” or “<code class="docutils literal notranslate"><span class="pre">#std</span></code>” suffix.
+The function <code class="docutils literal notranslate"><span class="pre">conll_sents()</span></code> is a synonym.</p>
+<p>The mapping between
+the raw fields and the Sentence attributes is done as follows.  For
+each word, if both cpos and fpos are present, then the cat is fpos and
+<code class="docutils literal notranslate"><span class="pre">cpos</span></code> is added as an extra attribute.
+If only one is present, it becomes the cat.  If the
+filename ends in <code class="docutils literal notranslate"><span class="pre">#proj</span></code>, the phead and prel are used; otherwise,
+the head and rel are used.  (The suffix “<code class="docutils literal notranslate"><span class="pre">#std</span></code>” selects head
+and rel, but that is also the default.)</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.dep</span> <span class="kn">import</span> <span class="n">iter_sentences</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">iter_sentences</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;depsent1&#39;</span><span class="p">)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="go">&lt;Word 1 This/pron:subj (this) govr=2&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span>
+<span class="go">&#39;pron&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="load_sentences">
+<span class="sig-name descname"><span class="pre">load_sentences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#load_sentences" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list rather
+than an iteration.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="save_sentences">
+<span class="sig-name descname"><span class="pre">save_sentences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sents</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#save_sentences" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a list of sentences and a filename as input.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">tempfile</span> <span class="kn">import</span> <span class="n">TemporaryDirectory</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.dep</span> <span class="kn">import</span> <span class="n">save_sentences</span><span class="p">,</span> <span class="n">load_sentences</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">TemporaryDirectory</span><span class="p">()</span> <span class="k">as</span> <span class="n">dfn</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">fn</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">dfn</span><span class="p">,</span> <span class="s1">&#39;sents&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">save_sentences</span><span class="p">([</span><span class="n">s</span><span class="p">],</span> <span class="n">fn</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">sents</span> <span class="o">=</span> <span class="n">load_sentences</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">sents</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="gp">...</span>
+<span class="go">0 *root* _    _    _       _</span>
+<span class="go">1 This   pron this subj    2</span>
+<span class="go">2 is     vb   be   mv      0</span>
+<span class="go">3 a      dt   a    det     4</span>
+<span class="go">4 test   n    test prednom 2</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p>If one loads a sentence and then saves it, the result may differ from
+the original.  Namely, if the original records contain cpos but not
+fpos, the cpos will show up in the fpos position in the saved file.</p>
+</section>
+<section id="universal-postag-mapping">
+<h2>Universal postag mapping<a class="headerlink" href="#universal-postag-mapping" title="Permalink to this heading"></a></h2>
+<p>Das and Petrov (2011) [3145] introduced a set of universal
+part-of-speech tags that were subsequently used in the McDonald et
+al. delexicalized parsers.  Petrov, Das &amp; McDonald [3300]
+describe a set of tag tables, which are installed in <code class="docutils literal notranslate"><span class="pre">selkie.data</span></code>
+as <code class="docutils literal notranslate"><span class="pre">conll/2006/universal-pos-tags</span></code>.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="load_umap">
+<span class="sig-name descname"><span class="pre">load_umap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#load_umap" title="Permalink to this definition"></a></dt>
+<dd><p>Loads a tag map from a file, returning
+a dict.  (If given a relative pathname, it expands it relative to the
+<code class="docutils literal notranslate"><span class="pre">universal-pos-tags</span></code> directory.)</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.dep</span> <span class="kn">import</span> <span class="n">load_umap</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">map</span> <span class="o">=</span> <span class="n">load_umap</span><span class="p">(</span><span class="s1">&#39;da-ddt.map&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">map</span><span class="p">[</span><span class="s1">&#39;VA&#39;</span><span class="p">]</span>
+<span class="go">&#39;VERB&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="apply_umap">
+<span class="sig-name descname"><span class="pre">apply_umap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tagmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apply_umap" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a map and a sentence in which
+the word <code class="docutils literal notranslate"><span class="pre">cat</span></code> values are (<code class="docutils literal notranslate"><span class="pre">cpos,</span> <span class="pre">fpos</span></code>) pairs, and
+it changes the <code class="docutils literal notranslate"><span class="pre">cat</span></code> values to be <code class="docutils literal notranslate"><span class="pre">map[fpos]</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="umapped_sents">
+<span class="sig-name descname"><span class="pre">umapped_sents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tagmap</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#umapped_sents" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a filename and a map,
+and generates a sequence of sentences in which the map has been
+applied to the parts of speech.  It takes an optional flag
+<code class="docutils literal notranslate"><span class="pre">projective=True</span></code> whose meaning is the same as for <code class="docutils literal notranslate"><span class="pre">conll_sents()</span></code>.</p>
+<p>The following example assumes that one has downloaded the CoNLL
+2006 data and stored its location under the config key <code class="docutils literal notranslate"><span class="pre">data.conll</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.config</span> <span class="kn">import</span> <span class="n">config</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">expanduser</span><span class="p">,</span> <span class="n">join</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conll</span> <span class="o">=</span> <span class="n">expanduser</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;conll&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fn</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">conll</span><span class="p">,</span> <span class="s1">&#39;2006&#39;</span><span class="p">,</span> <span class="s1">&#39;danish&#39;</span><span class="p">,</span> <span class="s1">&#39;ddt&#39;</span><span class="p">,</span> <span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="s1">&#39;danish_ddt_train.conll&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.dep</span> <span class="kn">import</span> <span class="n">umapped_sents</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">umapped_sents</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="nb">map</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">form</span>
+<span class="go">&#39;Samme&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span>
+<span class="go">&#39;ADJ&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="head.html" class="btn btn-neutral float-left" title="selkie.head — Head marking" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="features.html" class="btn btn-neutral float-right" title="selkie.features — Non-recursive features" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

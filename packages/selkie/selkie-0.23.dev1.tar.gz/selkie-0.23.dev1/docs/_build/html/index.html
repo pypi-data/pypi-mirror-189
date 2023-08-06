@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selkie Developer’s Manual &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="To Do" href="todo.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nlp/index.html">The NLP pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Selkie Developer’s Manual</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-developer-s-manual">
+<h1>Selkie Developer’s Manual<a class="headerlink" href="#selkie-developer-s-manual" title="Permalink to this heading"></a></h1>
+<section id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyext/index.html">Python extensions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyext/config.html"><code class="docutils literal notranslate"><span class="pre">selkie.config</span></code> — Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyext/object.html"><code class="docutils literal notranslate"><span class="pre">selkie.object</span></code> — Types, reflexion, generic object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyext/string.html"><code class="docutils literal notranslate"><span class="pre">selkie.string</span></code> — Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyext/seq.html"><code class="docutils literal notranslate"><span class="pre">selkie.seq</span></code> — Sequences and iterators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyext/map.html"><code class="docutils literal notranslate"><span class="pre">selkie.map</span></code> — The Index class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyext/io.html"><code class="docutils literal notranslate"><span class="pre">selkie.io</span></code> — Input/output functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyext/newio.html"><code class="docutils literal notranslate"><span class="pre">selkie.newio</span></code> — New I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyext/fs.html"><code class="docutils literal notranslate"><span class="pre">selkie.fs</span></code> — File system convenience functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyext/com.html"><code class="docutils literal notranslate"><span class="pre">selkie.com</span></code> — Command invocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyext/scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="server/index.html">Web Application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="server/intro.html">The Selkie web server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server/webserver.html"><code class="docutils literal notranslate"><span class="pre">selkie.webserver</span></code> — Web server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server/disk.html"><code class="docutils literal notranslate"><span class="pre">selkie.disk</span></code> — Virtual disks, REST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server/store.html"><code class="docutils literal notranslate"><span class="pre">selkie.store</span></code> — Object store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server/old/index.html">The old version</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="server/old/app_toplevel.html">The Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="server/old/resources.html">Configuration and logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="server/old/sealapp.html">Requests and responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="server/old/server.html">The seal web server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="server/old/wsgi.html">WSGI adapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="server/old/python_servers.html">Appendix: The Python HTTP server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dev/index.html">General-purpose tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dev/manifest.html"><code class="docutils literal notranslate"><span class="pre">selkie.manifest</span></code> — Manifest of sizes, hashes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/ssh.html"><code class="docutils literal notranslate"><span class="pre">selkie.ssh</span></code> — Secure Shell (SSH)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/ipynb.html"><code class="docutils literal notranslate"><span class="pre">selkie.ipynb</span></code> — Extracting code from Jupyter notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/doctest.html"><code class="docutils literal notranslate"><span class="pre">selkie.doctest</span></code> — Extract doctest from HTML, tex</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="corpus/index.html">Corpus processing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="corpus/rom.html"><code class="docutils literal notranslate"><span class="pre">selkie.rom</span></code> — Romanizations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="corpus/xml.html"><code class="docutils literal notranslate"><span class="pre">selkie.xml</span></code> — XML files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="corpus/tok.html"><code class="docutils literal notranslate"><span class="pre">selkie.tok</span></code> — Tokenizer for Latin scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="corpus/pretts.html"><code class="docutils literal notranslate"><span class="pre">selkie.pretts</span></code> — Converting text to bare words</a></li>
+<li class="toctree-l2"><a class="reference internal" href="corpus/conc.html">Conc - move back conc.rst.safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="corpus/corpus.html"><code class="docutils literal notranslate"><span class="pre">selkie.corpus</span></code> — Simple text corpus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="corpus/drill.html">Drill</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nlp/index.html">The NLP pipeline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nlp/fsa.html"><code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> — Finite-state automata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/fst.html"><code class="docutils literal notranslate"><span class="pre">selkie.fst</span></code> — Finite-state transducers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/tree.html"><code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> — Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/stemmer.html"><code class="docutils literal notranslate"><span class="pre">selkie.stemmer</span></code> — English stemmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/head.html"><code class="docutils literal notranslate"><span class="pre">selkie.head</span></code> — Head marking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/dep.html"><code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> — Dependency conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/features.html"><code class="docutils literal notranslate"><span class="pre">selkie.features</span></code> — Non-recursive features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/avs.html"><code class="docutils literal notranslate"><span class="pre">selkie.avs</span></code> — Recursive feature structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/grammar.html"><code class="docutils literal notranslate"><span class="pre">selkie.grammar</span></code> — Constituent grammars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/gdev.html"><code class="docutils literal notranslate"><span class="pre">selkie.gdev</span></code> — Grammar development tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/gen.html"><code class="docutils literal notranslate"><span class="pre">selkie.gen</span></code> — Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/parser.html"><code class="docutils literal notranslate"><span class="pre">selkie.parser</span></code> — Constituent parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/expr.html"><code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code> — Predicate calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/interp.html"><code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> — Semantic interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/logic.html"><code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> — Automated reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nlp/bot.html"><code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> — Conversational agent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="speech/index.html">Speech</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="speech/textgrid.html"><code class="docutils literal notranslate"><span class="pre">selkie.textgrid</span></code> — Praat textgrid</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data/index.html">Datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data/data.html"><code class="docutils literal notranslate"><span class="pre">selkie.data</span></code> — The data directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/langdb.html">Ethnologue language listing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/corpora.html">Corpora and treebanks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/panlex.html">Panlex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/lexica.html">Other lexica and grammars</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="app_intro/index.html">Web Application Framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="app_intro/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_intro/running.html">Running CLD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_intro/modules.html">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="db/index.html">Persistent-object database</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="db/database.html">Files and directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="db/toplevel.html">Database toplevel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="db/files.html">Generic regular files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="db/substrate.html">Substrate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content/index.html">The Content Framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/framework.html">The SealApp framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/requests.html">Request processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/responses.html">Constructing a page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/elt.html">Interface elements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cld/index.html">The CLD application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cld/corpus.html">Application and corpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cld/export.html">Export files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cld/corpus_resources.html">Global resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cld/language.html">Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cld/lexicon.html">Lexicon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cld/text.html">Texts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cld/token.html">Tokenized text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cld/media.html">Recordings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cld/learn.html">Language-learning support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cld/glab.html">GLab</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uc/index.html">Universal Corpus</a></li>
+</ul>
+</div>
+</section>
+<section id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="todo.html" class="btn btn-neutral float-right" title="To Do" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

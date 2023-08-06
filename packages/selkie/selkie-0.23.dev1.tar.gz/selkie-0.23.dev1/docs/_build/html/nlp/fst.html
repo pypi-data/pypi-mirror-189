@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.fst — Finite-state transducers &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.tree — Trees" href="tree.html" />
+    <link rel="prev" title="selkie.fsa — Finite-state automata" href="fsa.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The NLP pipeline</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="fsa.html"><code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> — Finite-state automata</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.fst</span></code> — Finite-state transducers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tree.html"><code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> — Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemmer.html"><code class="docutils literal notranslate"><span class="pre">selkie.stemmer</span></code> — English stemmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="head.html"><code class="docutils literal notranslate"><span class="pre">selkie.head</span></code> — Head marking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dep.html"><code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> — Dependency conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html"><code class="docutils literal notranslate"><span class="pre">selkie.features</span></code> — Non-recursive features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avs.html"><code class="docutils literal notranslate"><span class="pre">selkie.avs</span></code> — Recursive feature structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grammar.html"><code class="docutils literal notranslate"><span class="pre">selkie.grammar</span></code> — Constituent grammars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gdev.html"><code class="docutils literal notranslate"><span class="pre">selkie.gdev</span></code> — Grammar development tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen.html"><code class="docutils literal notranslate"><span class="pre">selkie.gen</span></code> — Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parser.html"><code class="docutils literal notranslate"><span class="pre">selkie.parser</span></code> — Constituent parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expr.html"><code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code> — Predicate calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interp.html"><code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> — Semantic interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.html"><code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> — Automated reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bot.html"><code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> — Conversational agent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">The NLP pipeline</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.fst</span></code> — Finite-state transducers</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/nlp/fst.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-fst-finite-state-transducers">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.fst</span></code> — Finite-state transducers<a class="headerlink" href="#selkie-fst-finite-state-transducers" title="Permalink to this heading"></a></h1>
+<section id="intro">
+<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this heading"></a></h2>
+<p>A finite-state transducer (FST) has an input alphabet <em>Σ1</em> and output
+alphabet <em>Σ2</em>; a
+set of states <em>Q</em>, one of which is the initial state, and some number of
+which are final states; and a set of edges of form <em>(q1,α,β,q2)</em>
+with <em>q1,q2 in Q</em>, <em>α in Σ1*</em>, and <em>β in Σ2*</em>.
+An FST <em>T</em> defines a relation <em>R_T(α,β)</em> in
+<em>Σ1</em> cross Σ2**.  Two FSTs are defined to be equivalent
+just in case they define the same relation.</p>
+<p>For a transducer, an <em>empty edge</em> is one labeled <em>ε:ε</em>.</p>
+<p><strong>Rational transduction.</strong>  A <em>transduction</em> is a
+function from strings to sets of strings.  There is an obvious one-one
+correspondence between string relations <em>R</em> and transductions <em>f_R</em>, where:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fR</span><span class="p">(</span><span class="n">α</span><span class="p">)</span> <span class="o">=</span> <span class="p">{</span><span class="n">β</span> <span class="o">|</span> <span class="n">R</span><span class="p">(</span><span class="n">α</span><span class="p">,</span><span class="n">β</span><span class="p">)}</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>A transduction computable by an FST is called a <em>rational transduction.</em></p>
+<p><strong>Rational function.</strong>  A relation <em>R</em> is a function just in
+case any input that <em>R</em> associates with an output, it associates
+with a unique output.  We write <em>R(α)</em> for that unique output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">R</span><span class="p">(</span><span class="n">α</span><span class="p">)</span> <span class="o">=</span> <span class="n">β</span> <span class="k">if</span> <span class="o">*</span><span class="n">R</span><span class="p">(</span><span class="n">α</span><span class="p">,</span><span class="n">β</span><span class="p">)</span><span class="o">*</span><span class="p">,</span>
+<span class="n">undefined</span> <span class="k">if</span> <span class="o">*</span><span class="n">α</span><span class="o">*</span> <span class="ow">is</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">domain</span> <span class="n">of</span> <span class="o">*</span><span class="n">R</span><span class="o">*</span>
+</pre></div>
+</div>
+<p>An FST is <em>functional</em> if it computes a function.
+A <em>rational function</em> is a function computed by some FST.
+Note that a rational function is not a transduction: a rational
+function maps strings to strings, whereas a transduction maps strings
+to sets of strings.  But we have:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fR</span><span class="p">(</span><span class="n">α</span><span class="p">)</span> <span class="o">=</span> <span class="n">R</span><span class="p">(</span><span class="n">α</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="derived-fsas">
+<h2>Derived FSAs<a class="headerlink" href="#derived-fsas" title="Permalink to this heading"></a></h2>
+<p><strong>Underlying FSA.</strong>  The <em>underlying FSA</em> of an FST
+results from viewing edges <em>(q1,α,β,q2)</em> as FSA edges
+labeled with symbol pairs: <em>(q1, α:β, q2)</em>.</p>
+<p><strong>Projections.</strong>  The <em>first projection</em> is the FSA
+obtained by replacing transducer edges <em>(q1,α,β,q2)</em> with
+FSA edges <em>(q1,α,q2)</em>.  The <em>second projection</em> keeps
+<em>β</em> instead of <em>α</em>.</p>
+<p><strong>Letter transducer.</strong>
+Note that edges of an FST are labeled with <em>strings,</em> not single symbols.
+An FST whose edges are labeled with single symbols or ε
+is called a <em>letter transducer.</em>
+Any FST can be converted to an equivalent letter transducer, by
+replacing complex-string edges with sequences of letter edges.</p>
+<p><strong>Empty-edge elimination.</strong>
+Empty edges <em>ε:ε</em> can be eliminated by applying the
+ε-elimination algorithm to the underlying FSA.
+Edges labeled <em>α:ε</em> or <em>ε:β</em> for nonempty
+<em>α</em>, <em>β</em>, may still remain.</p>
+</section>
+<section id="basic-operations-on-fsts">
+<h2>Basic operations on FSTs<a class="headerlink" href="#basic-operations-on-fsts" title="Permalink to this heading"></a></h2>
+<p><strong>Union.</strong>  An FST computing the union of two FSTs <em>T1</em> and
+<em>T2</em> can be constructed by creating a new initial state with empty
+edges leading to the initial states of <em>T1</em> and <em>T2</em>.</p>
+<p><strong>Inversion.</strong>  Given an FST computing <em>T</em>, an FST computing
+<em>T^{-1}</em> can be constructed by interchanging the input and output
+labels on all edges.</p>
+<p><strong>Composition.</strong>  The <em>composition</em> <em>T1 compose T2</em> of
+two transductions is the function that maps <em>α</em> to <em>T2(T1(α))</em>.
+Given FSTs <em>T1</em> and <em>T2</em>, an FST <em>T3</em> that computes their composition can
+be constructed as follows.  First, convert each FST to a letter
+transducer and eliminate empty edges; let <em>T’1</em> and <em>T’2</em> be the results.
+We now construct an FST <em>T3</em> representing the composition.
+Its states are pairs <em>(q1,q2)</em> where <em>q1</em> is a state of <em>T’1</em> and
+<em>q2</em> is a state of <em>T’2</em>.
+We keep a to-do list of states needing expansion.
+The initial state of <em>T3</em> pairs the initial state
+of <em>T’1</em> with the initial state of <em>T’2</em>; it is the first entry in
+the to-do list.  Then, until the to-do list is empty,
+pop a state <em>(q1,q2)</em> off the to-do list and do the following, where
+<em>a, b, c != ε</em>.</p>
+<p>If <em>q1</em> and <em>q2</em> are both final states, add <em>(q1,q2)</em> to the list of
+final states for <em>T3</em>.
+For every <em>c</em> such that
+<em>(q1,a,c,r1)</em> is an edge of <em>T’1</em> and <em>(q2,c,b,r2)</em> is an edge of
+<em>T’2</em>, intern state <em>(r1,r2)</em> and
+add edge <em>((q1,q2), a,b,(r1,r2))</em>.
+For every edge <em>(q1,a,ε,r1)</em> in <em>T’1</em>, intern state
+<em>(r1,q2)</em> and add edge
+<em>((q1,q2),a,ε,(r1,q2))</em>.
+For every edge <em>(q2,ε,b,r2)</em> in <em>T’2</em>, intern state
+<em>(q1,r2)</em> and add edge
+<em>((q1,q2),ε,b,(q1,r2))</em>.</p>
+<p>To intern a state, do nothing if it is already present.  Otherwise,
+add it to <em>T3</em> and also add it to the to-do list.</p>
+</section>
+<section id="the-fst-class">
+<h2>The Fst class<a class="headerlink" href="#the-fst-class" title="Permalink to this heading"></a></h2>
+<p>The class <code class="docutils literal notranslate"><span class="pre">selkie.fst.Fst</span></code> inherits from <code class="docutils literal notranslate"><span class="pre">selkie.fsa.Fsa</span></code>.
+An Fst can be created from a file.  The format is similar to the Fsa
+format, except that there are two label columns instead of one.  For
+example, here
+are the contents of <code class="docutils literal notranslate"><span class="pre">fst1</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>       <span class="mi">2</span>       <span class="n">the</span>     <span class="n">d</span>
+<span class="mi">2</span>       <span class="mi">1</span>               <span class="n">er</span>
+<span class="mi">1</span>       <span class="mi">3</span>       <span class="n">big</span>     <span class="n">gross</span>
+<span class="mi">3</span>       <span class="mi">1</span>               <span class="n">e</span>
+<span class="mi">1</span>       <span class="mi">1</span>       <span class="n">dog</span>     <span class="n">Hund</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p>One can load it and examine it just as with an Fsa:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.fst</span> <span class="kn">import</span> <span class="n">Fst</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fst</span> <span class="o">=</span> <span class="n">Fst</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;fst1&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fst</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span>
+<span class="go">Fst:</span>
+<span class="go">  -&gt;0# [1]</span>
+<span class="go">    1  [2]</span>
+<span class="go">    2  [3]</span>
+<span class="go">    0 0 dog : Hund</span>
+<span class="go">    0 1 the : d</span>
+<span class="go">    0 2 big : gross</span>
+<span class="go">    1 0 : er</span>
+<span class="go">    2 0 : e</span>
+</pre></div>
+</div>
+<p>One can call the transducer as a function.  The output is a list of
+symbol sequences.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fst</span><span class="p">([</span><span class="s1">&#39;the&#39;</span><span class="p">,</span> <span class="s1">&#39;big&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">])</span>
+<span class="go">[[&#39;d&#39;, &#39;er&#39;, &#39;gross&#39;, &#39;e&#39;, &#39;Hund&#39;]]</span>
+</pre></div>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.fst.Fst">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.fst.</span></span><span class="sig-name descname"><span class="pre">Fst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fst.Fst" title="Permalink to this definition"></a></dt>
+<dd><p>A finite-state transducer.  Specializes selkie.fsa.Fsa.
+It overrides the implementations of <em>load()</em>, <em>accepts()</em>,
+<em>__iter__()</em>, <em>state_constructor()</em>, <em>typename()</em>.
+It changes the signature of <em>edge()</em>:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fst.Fst.edge">
+<span class="sig-name descname"><span class="pre">edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inlabel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outlabel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fst.Fst.edge" title="Permalink to this definition"></a></dt>
+<dd><p>Create a new edge.
+<em>Inlabel</em> and <em>outlabel</em> are optional.</p>
+</dd></dl>
+
+<p>It adds the following member and methods.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.fst.Fst.sigma">
+<span class="sig-name descname"><span class="pre">sigma</span></span><a class="headerlink" href="#selkie.fst.Fst.sigma" title="Permalink to this definition"></a></dt>
+<dd><p>The input vocabulary.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fst.Fst.initialize_from">
+<span class="sig-name descname"><span class="pre">initialize_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fsa</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fst.Fst.initialize_from" title="Permalink to this definition"></a></dt>
+<dd><p>Initialize from an fsa.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fst.Fst.inlabels">
+<span class="sig-name descname"><span class="pre">inlabels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fst.Fst.inlabels" title="Permalink to this definition"></a></dt>
+<dd><p>The set of input labels.  (Excludes epsilon.)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fst.Fst.outlabels">
+<span class="sig-name descname"><span class="pre">outlabels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fst.Fst.outlabels" title="Permalink to this definition"></a></dt>
+<dd><p>The set of output labels.  (Excludes epsilon.)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fst.Fst.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fst.Fst.__call__" title="Permalink to this definition"></a></dt>
+<dd><p>One may optionally specify <em>trace=True</em>.  If one provides
+<em>cutoff</em> as a keyword argument, an error is signalled if the
+number of output strings produced exceeds the cutoff.
+Returns a list of strings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fst.Fst.vocabulary">
+<span class="sig-name descname"><span class="pre">vocabulary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fst.Fst.vocabulary" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the set of labels.  One can specify <em>side=’left’</em> to get
+just the left vocabulary, <em>side=’right’</em> to get the right
+vocabulary, or <em>side=’both’</em> (the default) to get the union.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fst.Fst.globalize_wildcards">
+<span class="sig-name descname"><span class="pre">globalize_wildcards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vocab</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fst.Fst.globalize_wildcards" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new FST.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.fst.Fst.State">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.fst.Fst.</span></span><span class="sig-name descname"><span class="pre">State</span></span><a class="headerlink" href="#selkie.fst.Fst.State" title="Permalink to this definition"></a></dt>
+<dd><p>A state in an Fst, a specialization of Fsa.State.  Reimplements <em>typename()</em>
+Changes the signature of <em>edge()</em> and <em>__getitem__()</em>:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fst.Fst.State.edge">
+<span class="sig-name descname"><span class="pre">edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inlabel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outlabel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fst.Fst.State.edge" title="Permalink to this definition"></a></dt>
+<dd><p>Add a new edge.  <em>Inlabel</em> and <em>outlabel</em> are optional and
+default to None.  One may alternatively copy the label from an
+old edge by providing the old edge as the value of keyword
+<em>label_from</em>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fst.Fst.State.__getitem__">
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inlabel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fst.Fst.State.__getitem__" title="Permalink to this definition"></a></dt>
+<dd><p>One specifies the <em>inlabel</em>, not the full label pair.
+Returns a list of states.</p>
+</dd></dl>
+
+<p>Fst.State also adds the following methods:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fst.Fst.State.advance">
+<span class="sig-name descname"><span class="pre">advance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fst.Fst.State.advance" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a pair (r, out) where <em>r</em> is the next state, and <em>out</em> is
+the word whose last character was <em>c</em>.  Either <em>r</em> or <em>out</em> (or
+both) may be None.</p>
+<p>Signals an error if the automaton is not deterministic.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fst.Fst.State.mentioned">
+<span class="sig-name descname"><span class="pre">mentioned</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fst.Fst.State.mentioned" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the set of non-wildcard input labels on the edges out of this state.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.fst.Fst.Edge">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.fst.Fst.</span></span><span class="sig-name descname"><span class="pre">Edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inlabel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outlabel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fst.Fst.Edge" title="Permalink to this definition"></a></dt>
+<dd><p>Specializes Fsa.Edge.  <em>Inlabel</em> and <em>outlabel</em> are optional and
+default to None.  Reimplements <em>single_label()</em>, <em>label_pair()</em>,
+<em>__str__()</em>, <em>__repr__()</em>, and <em>write()</em>.
+The following members replace <em>label</em>:</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.fst.Fst.Edge.inlabel">
+<span class="sig-name descname"><span class="pre">inlabel</span></span><a class="headerlink" href="#selkie.fst.Fst.Edge.inlabel" title="Permalink to this definition"></a></dt>
+<dd><p>Its input label.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.fst.Fst.Edge.outlabel">
+<span class="sig-name descname"><span class="pre">outlabel</span></span><a class="headerlink" href="#selkie.fst.Fst.Edge.outlabel" title="Permalink to this definition"></a></dt>
+<dd><p>Its output label.</p>
+</dd></dl>
+
+<p>The meaning of the following changes:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.fst.Fst.Edge.is_epsilon">
+<span class="sig-name descname"><span class="pre">is_epsilon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.fst.Fst.Edge.is_epsilon" title="Permalink to this definition"></a></dt>
+<dd><p>Only true if both the input and output labels are epsilon.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="from_list">
+<span class="sig-name descname"><span class="pre">from_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sink</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;eos&gt;'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#from_list" title="Permalink to this definition"></a></dt>
+<dd><p>The <em>lst</em> need only be an iterable.  Its elements (“words”) should be
+fixed sequences, though, and the elements of the “words”
+(“characters”) must be immutable and must support comparison.</p>
+<p>A graph is created in which common word prefixes always lead to the
+same state.  The graph is deterministic in the sense that q[c]
+returns either the empty list or a list of edges of length one.</p>
+<p>If <strong>use_sink</strong> is False, the word is the outlabel of the edge whose
+inlabel is the word’s last letter.  If True, the last-letter edge leads to a
+state that has an outgoing edge whose inlabel is <strong>eos</strong> and whose
+outlabel is the word.</p>
+<p>To use the fst:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">q</span> <span class="o">=</span> <span class="n">fst</span><span class="o">.</span><span class="n">start</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">out</span><span class="p">)</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">advance</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When there is no transition, <em>r</em> is None.  When there is no
+output (yet), <em>out</em> is None.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="fsa.html" class="btn btn-neutral float-left" title="selkie.fsa — Finite-state automata" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tree.html" class="btn btn-neutral float-right" title="selkie.tree — Trees" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application and corpus &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Export files" href="export.html" />
+    <link rel="prev" title="The CLD application" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp/index.html">The NLP pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The CLD application</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Application and corpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export.html">Export files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="corpus_resources.html">Global resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="language.html">Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lexicon.html">Lexicon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text.html">Texts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token.html">Tokenized text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="media.html">Recordings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learn.html">Language-learning support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="glab.html">GLab</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">The CLD application</a></li>
+      <li class="breadcrumb-item active">Application and corpus</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/cld/corpus.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="application-and-corpus">
+<h1>Application and corpus<a class="headerlink" href="#application-and-corpus" title="Permalink to this heading"></a></h1>
+<p>foo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;h3 id=&quot;1.1&quot;&gt;Overview&lt;/h3&gt;
+&lt;p&gt;
+The object &lt;tt&gt;cld_app&lt;/tt&gt; (in seal.cld.core) is an instance of &lt;tt&gt;SealApp&lt;/tt&gt; that
+represents the CLD application.  Its contents are represented by the
+CLDRequestHandler class, which overrides only two methods of RequestHandler:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;open_file() - returns a Corpus&lt;/li&gt;
+&lt;li&gt;make_root() - returns a CorpusEditor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+The cld_app is used as the application function in a CLDManager.
+It can be invoked as:&lt;/p&gt;
+&lt;pre class=&quot;source&quot;&gt;
+$ cld corpus.cld
+&lt;/pre&gt;
+
+&lt;h3 id=&quot;1.2&quot;&gt;Manually instantiating the corpus&lt;/h3&gt;
+&lt;p&gt;
+The easiest way to get a Corpus instance is to use the CLDManager:&lt;/p&gt;
+&lt;pre class=&quot;python&quot;&gt;
+&gt;&gt;&gt; from seal.cld.toplevel import CLDManager
+&gt;&gt;&gt; mgr = CLDManager(&#39;/tmp/corpus.cld&#39;)
+&gt;&gt;&gt; corpus = mgr.corpus()
+&gt;&gt;&gt; corpus
+&amp;lt;Corpus /tmp/corpus.cld&gt;
+&lt;/pre&gt;
+
+&lt;h2 id=&quot;2&quot;&gt;Corpus and environment&lt;/h2&gt;
+&lt;p&gt;
+&lt;span class=&quot;todo&quot;&gt;Out of date&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2.1&quot;&gt;The Corpus class&lt;/h3&gt;
+&lt;p&gt;
+A &lt;a href=&quot;../seal/cld/corpus.html#Corpus&quot;&gt;&lt;tt&gt;Corpus&lt;/tt&gt;&lt;/a&gt; is a
+Structure with the following signature.&lt;/p&gt;
+&lt;table class=&quot;display&quot;&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;langs&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;&lt;tt&gt;LanguageList&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;list of mono-lingual subcorpora&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;users&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;&lt;tt&gt;UserList&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;a &lt;tt&gt;Collection&lt;/tt&gt; with child type &lt;tt&gt;User&lt;/tt&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;roms&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;&lt;tt&gt;Registry&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;the central registry of romanizations&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;glab&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;&lt;tt&gt;GLabDirectory&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;
+In addition, a corpus has a &lt;tt&gt;_meta&lt;/tt&gt; member containing a
+PropList with general information, and, like all Files,
+an &lt;tt&gt;env&lt;/tt&gt; member containing an Environment.&lt;/p&gt;
+
+&lt;h3 id=&quot;2.2&quot;&gt;The Environment&lt;/h3&gt;
+&lt;p&gt;
+The &lt;tt&gt;env&lt;/tt&gt; member is inherited from File, but it gets set by the
+Corpus, inasmuch as the Corpus is the root of the disk hierarchy.  See
+the section &lt;a href=&quot;toplevel.html#1&quot;&gt;Environment&lt;/a&gt; for general
+information on environments.  Corpus specializes Database,
+which specializes EnvRoot.&lt;/p&gt;
+&lt;p&gt;
+When one reaches a Language when descending the hierarchy, a new copy
+of the Environment is created that is specific to that language.  The
+new copy is used by the Language and its descendants.&lt;/p&gt;
+&lt;p&gt;
+An Environment instance has the following members:&lt;/p&gt;
+&lt;table class=&quot;display&quot;&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;corpus&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;A backlink to the Corpus.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;username&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;The authorized username, for the purpose of permissions&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;language&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;Set to the language, if within the scope of a language&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;parent&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;The original Environment, if this one belongs to a language.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;
+All Environments provide the following methods:&lt;/p&gt;
+&lt;table class=&quot;display&quot;&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;for_language(lang)&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;Create a copy associated with the given language.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;require_rom(name)&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;Returns the named
+    Romanization.  Signals an error if not found.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;find_rom(name)&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;Returns the named
+    Romanization, or None if not found.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;
+Language-specific Environments provide the following methods:&lt;/p&gt;
+&lt;table class=&quot;display&quot;&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;get_text(id)&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;Returns the text that has the
+    given ID.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;default_orthography()&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;Returns the default
+    orthography for this language.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;orthographies()&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;Returns the list of
+    available orthographies for this language.&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;romanization()&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;Returns the default orthography as a
+Romanization.&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;deref_parid(parid)&lt;/tt&gt;&lt;/td&gt; &lt;td&gt;Returns the paragraph with the
+    given paragraph ID.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;2.3&quot;&gt;Example&lt;/h3&gt;
+&lt;p&gt;
+An example of opening a corpus and accessing a couple of its members:&lt;/p&gt;
+&lt;pre class=&quot;source&quot;&gt;
+&gt;&gt;&gt; from seal.cld.corpus import Corpus
+&gt;&gt;&gt; corpus = Corpus(&#39;corpus.cld&#39;)
+&gt;&gt;&gt; corpus.media.filename()
+&#39;/Users/abney/git/cld/media&#39;
+&gt;&gt;&gt; corpus.langs[&#39;oji&#39;]
+&amp;lt;seal.cld.language.Language object at 0x10ac41fd0&gt;
+&lt;/pre&gt;
+
+&lt;h2 id=&quot;3&quot;&gt;User interface&lt;/h2&gt;
+
+&lt;h3 id=&quot;3.1&quot;&gt;Corpus UI&lt;/h3&gt;
+
+&lt;h3 id=&quot;3.2&quot;&gt;Metadata editor&lt;/h3&gt;
+
+&lt;h3 id=&quot;3.3&quot;&gt;Catalog of pages&lt;/h3&gt;
+&lt;p&gt;
+The relevant modules all belong to seal.cld.ui.&lt;/p&gt;
+&lt;table class=&quot;display&quot;&gt;
+&lt;tr&gt;
+&lt;th&gt;URL&lt;/th&gt;
+&lt;th&gt;Class (module)&lt;/th&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;/home&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;#2b.1&quot;&gt;CorpusEditor&lt;/a&gt; (corpus)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;/langs&lt;/td&gt;
+&lt;td&gt;LanguageListEditor (language)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;.../lang.xxx/home&lt;/td&gt;
+&lt;td&gt;LanguageEditor (language)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;.../texts/home&lt;/td&gt;
+&lt;td&gt;TocEditor (toc)
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;.../page/edit&lt;/td&gt;
+&lt;td&gt;PageEditor (page)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;.../audio/edit&lt;/td&gt;
+&lt;td&gt;AudioEditor (audio)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/table&gt;
+
+&lt;h2 id=&quot;4&quot;&gt;Corpus file format&lt;/h2&gt;
+&lt;p&gt;
+The following table gives the corpus file format.  The root type is
+&#39;Corpus.&#39;&lt;/p&gt;
+&lt;p&gt;
+All directories contain &lt;tt&gt;_children&lt;/tt&gt; and &lt;tt&gt;_perm&lt;/tt&gt;; they
+are not explicitly mentioned in the table.&lt;/p&gt;
+&lt;p&gt;
+All files are in tab-separated format.&lt;/p&gt;
+
+&lt;table class=&quot;display&quot;&gt;
+&lt;tr&gt;&lt;th&gt;Filename&lt;/th&gt; &lt;th&gt;Class&lt;/th&gt; &lt;th&gt;&lt;/th&gt; &lt;th&gt;Contents&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;_children&lt;/td&gt; &lt;td&gt;Children&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;&lt;i&gt;name suffix&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;_config&lt;/td&gt; &lt;td&gt;Config&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;&lt;i&gt;key value&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;_groups&lt;/td&gt; &lt;td&gt;GroupsFile&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;&lt;i&gt;usr grp&lt;/i&gt;[&lt;i&gt;(sp)grp*&lt;/i&gt;]&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;_info&lt;/td&gt; &lt;td&gt;PropDict&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;&lt;i&gt;key value&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;_meta&lt;/td&gt; &lt;td&gt;PropDict&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;&lt;i&gt;key value&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;_perm&lt;/td&gt; &lt;td&gt;Permissions&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;&lt;i&gt;mode role usr&lt;/i&gt;[&lt;i&gt;(sp)usr*&lt;/i&gt;]&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.cl&lt;/td&gt; &lt;td&gt;ClipsFile&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;&lt;i&gt;start end&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.cld&lt;/td&gt; &lt;td&gt;Corpus&lt;/td&gt; &lt;td&gt;D&lt;/td&gt; &lt;td&gt;_config _meta _groups&lt;br/&gt;glab.gd
+    langs.ll roms.reg users.ul&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.gd&lt;/td&gt; &lt;td&gt;GLabDirectory&lt;/td&gt; &lt;td&gt;D&lt;/td&gt; &lt;td&gt;&lt;i&gt;user&lt;/i&gt;.gl*&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.gl&lt;/td&gt; &lt;td&gt;Library&lt;/td&gt; &lt;td&gt;D&lt;/td&gt; &lt;td&gt;&lt;i&gt;n&lt;/i&gt;.gn*&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.gn&lt;/td&gt; &lt;td&gt;Notebook&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;(GLab notebook format)&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.lg&lt;/td&gt; &lt;td&gt;Language&lt;/td&gt; &lt;td&gt;D&lt;/td&gt; &lt;td&gt;_index _info lexicon.lx texts.toc&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.ll&lt;/td&gt; &lt;td&gt;LanguageList&lt;/td&gt; &lt;td&gt;D&lt;/td&gt; &lt;td&gt;&lt;i&gt;lang&lt;/i&gt;.lg*&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.lx&lt;/td&gt; &lt;td&gt;Lexicon&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;&lt;i&gt;form sno refs n=value*&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.mf&lt;/td&gt; &lt;td&gt;MediaFile&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;&lt;i&gt;usr&lt;/i&gt;/&lt;i&gt;name&lt;/i&gt;.&lt;i&gt;suf&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.mi&lt;/td&gt; &lt;td&gt;MediaIndex&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;&lt;i&gt;name&lt;/i&gt;.&lt;i&gt;suf tid&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.pd&lt;/td&gt; &lt;td&gt;PropDict&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;&lt;i&gt;key value&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.pp&lt;/td&gt; &lt;td&gt;ParagraphFile&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;&lt;i&gt;bool&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.reg&lt;/td&gt; &lt;td&gt;Registry&lt;/td&gt; &lt;td&gt;D&lt;/td&gt; &lt;td&gt;&lt;i&gt;name&lt;/i&gt;.rom&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.rom&lt;/td&gt; &lt;td&gt;Romanization&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;&lt;i&gt;ascii unicode&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.tf&lt;/td&gt; &lt;td&gt;TokenFile&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;&lt;i&gt;sentno&lt;/i&gt; |
+    nxid &lt;i&gt;n&lt;/i&gt; | &lt;i&gt;form sno lpunc rpunc&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.toc&lt;/td&gt; &lt;td&gt;Toc&lt;/td&gt; &lt;td&gt;D&lt;/td&gt; &lt;td&gt;&lt;i&gt;id&lt;/i&gt;.txt*&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.txt&lt;/td&gt; &lt;td&gt;Text&lt;/td&gt; &lt;td&gt;D&lt;/td&gt; &lt;td&gt;_info orig.tf trans.tr? |&lt;br/&gt;
+ _info media.mf xscript.xs? trans.tr? |&lt;br/&gt;_info toc.toc&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.xs&lt;/td&gt; &lt;td&gt;Transcription&lt;/td&gt; &lt;td&gt;D&lt;/td&gt; &lt;td&gt;clips.cl paras.pp transcript.tf&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.tr&lt;/td&gt; &lt;td&gt;Translation&lt;/td&gt; &lt;td&gt;F&lt;/td&gt; &lt;td&gt;&lt;i&gt;trans&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.ul&lt;/td&gt; &lt;td&gt;UserList&lt;/td&gt; &lt;td&gt;D&lt;/td&gt; &lt;td&gt;&lt;i&gt;name&lt;/i&gt;.usr*&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;*.usr&lt;/td&gt; &lt;td&gt;User&lt;/td&gt; &lt;td&gt;D&lt;/td&gt; &lt;td&gt;media.mi props.pd&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;5&quot;&gt;CLDManager&lt;/h2&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="The CLD application" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="export.html" class="btn btn-neutral float-right" title="Export files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GLab &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Universal Corpus" href="../uc/index.html" />
+    <link rel="prev" title="Language-learning support" href="learn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp/index.html">The NLP pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The CLD application</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="corpus.html">Application and corpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export.html">Export files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="corpus_resources.html">Global resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="language.html">Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lexicon.html">Lexicon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text.html">Texts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token.html">Tokenized text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="media.html">Recordings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learn.html">Language-learning support</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GLab</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">The CLD application</a></li>
+      <li class="breadcrumb-item active">GLab</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/cld/glab.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="glab">
+<h1>GLab<a class="headerlink" href="#glab" title="Permalink to this heading"></a></h1>
+<section id="about-glab">
+<h2>About GLab<a class="headerlink" href="#about-glab" title="Permalink to this heading"></a></h2>
+<p>GLab is a language for talking about languages.
+The seal.glab module
+provides an interpreter, which may be called interactively:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ glab
+[glab]
+</pre></div>
+</div>
+<p>Or it may be called on a file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ glab -g test.gn
+| a
+a
+</pre></div>
+</div>
+<p>A notebook-based web application is also provided with CLD.
+It displays <strong>notebooks</strong> consisting of
+alternating user-provided <strong>expressions</strong> of the GLab language
+(“inputs”), and the results of evaluating those expressions (“outputs”).
+The inputs are editable text blocks.  The outputs are not editable,
+but are automatically updated whenever an input is editted.</p>
+</section>
+<section id="tutorial">
+<h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this heading"></a></h2>
+<p>Start the interactive GLab interpreter simply by
+typing <code class="docutils literal notranslate"><span class="pre">glab</span></code>.</p>
+<section id="variables-and-symbols">
+<h3>Variables and symbols<a class="headerlink" href="#variables-and-symbols" title="Permalink to this heading"></a></h3>
+<p>An atom represents a symbol.  It evaluates to itself:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">a</span>
+<span class="n">a</span>
+</pre></div>
+</div>
+<p>Variables begin with underscore.  The operator <code class="docutils literal notranslate"><span class="pre">:=</span></code> is used to
+set the value of a variable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">_x</span> <span class="o">:=</span> <span class="n">hi</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">_x</span>
+<span class="n">hi</span>
+</pre></div>
+</div>
+<p>Note that <em>operator</em> is a specialization of <em>symbol,</em> so any
+“stray” operators that are not part
+of a well-formed operator expression are treated as symbol literals:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="o">*</span>
+<span class="o">&lt;</span><span class="n">Op</span> <span class="o">*&gt;</span>
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">=</span></code> is used for equality testing only, not assignment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">_x</span> <span class="o">=</span> <span class="n">lo</span>
+<span class="kc">False</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">_x</span>
+<span class="n">hi</span>
+</pre></div>
+</div>
+</section>
+<section id="sequences-strings-sets">
+<h3>Sequences, strings, sets<a class="headerlink" href="#sequences-strings-sets" title="Permalink to this heading"></a></h3>
+<p>A sequence literal is marked with angle brackets.  The elements may be
+separated by commas, though commas may be omitted if no ambiguity results.
+(Commas are generally optional wherever they occur.)
+Sequences evaluate to themselves:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">hi</span><span class="p">,</span> <span class="n">there</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">hi</span><span class="p">,</span> <span class="n">there</span><span class="o">&gt;</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">hi</span> <span class="n">there</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">hi</span><span class="p">,</span> <span class="n">there</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>A double-quoted string
+is interpreted as a sequence of symbols separated by whitespace.
+A single-quoted string is interpreted as a sequence of characters:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="s2">&quot;hi there&quot;</span>
+<span class="o">&lt;</span><span class="n">hi</span><span class="p">,</span> <span class="n">there</span><span class="o">&gt;</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="s1">&#39;hi&#39;</span>
+<span class="o">&lt;</span><span class="n">h</span><span class="p">,</span> <span class="n">i</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Braces introduce set literals:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="p">{</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">}</span>
+<span class="p">{</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="operator-expressions">
+<h3>Operator expressions<a class="headerlink" href="#operator-expressions" title="Permalink to this heading"></a></h3>
+<p>Dot is used for concatenation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">&gt;</span> <span class="o">.</span> <span class="o">&lt;</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The operator <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> is used for set membership:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">_S</span> <span class="o">:=</span> <span class="p">{</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">}</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">a</span> <span class="o">@</span> <span class="n">_S</span>
+<span class="kc">True</span>
+</pre></div>
+</div>
+<p>Plus is used for set union:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">_S</span> <span class="o">:=</span> <span class="p">{</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">}</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">_S</span> <span class="o">+</span> <span class="p">{</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">}</span>
+<span class="p">{</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="expressions">
+<h3>Expressions<a class="headerlink" href="#expressions" title="Permalink to this heading"></a></h3>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">_s</span> <span class="o">:=</span> <span class="p">{</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">}</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="o">|</span><span class="n">_s</span><span class="o">|</span>
+<span class="mi">3</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="o">|</span><span class="s2">&quot;dog&quot;</span><span class="o">|</span>
+<span class="mi">1</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="o">|</span><span class="s1">&#39;dog&#39;</span><span class="o">|</span>
+<span class="mi">3</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">_A</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b c&#39;</span><span class="p">,</span> <span class="s1">&#39;c a&#39;</span><span class="p">}</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="p">{</span><span class="n">_x</span> <span class="ow">in</span> <span class="n">_A</span> <span class="n">where</span> <span class="o">|</span><span class="n">_x</span><span class="o">|</span> <span class="o">=</span> <span class="mi">2</span><span class="p">}</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="p">(</span><span class="n">_A</span> <span class="n">x</span> <span class="n">_B</span><span class="p">)</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="p">(</span><span class="n">_A</span> <span class="o">.</span> <span class="n">_e_</span><span class="p">)</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">_B</span> <span class="o">:=</span> <span class="o">/</span><span class="n">a</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="n">o</span> <span class="o">+</span> <span class="n">u</span><span class="o">/</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">_C</span> <span class="o">:=</span> <span class="p">{</span><span class="n">a</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">u</span><span class="p">}</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">_B</span> <span class="o">=</span> <span class="n">_C</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="o">/</span><span class="n">g</span> <span class="o">.</span> <span class="n">o</span><span class="p">:</span><span class="n">e</span> <span class="o">.</span> <span class="n">o</span><span class="p">:</span><span class="n">e</span> <span class="o">.</span> <span class="n">s</span> <span class="o">.</span> <span class="n">e</span><span class="o">/</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="p">{{</span><span class="mi">0</span><span class="p">}}</span>
+</pre></div>
+</div>
+</section>
+<section id="finite-state-automata">
+<h3>Finite-state automata<a class="headerlink" href="#finite-state-automata" title="Permalink to this heading"></a></h3>
+<p>The function <code class="docutils literal notranslate"><span class="pre">new_fsa()</span></code> creates an FSA and makes it current:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">_a1</span> <span class="o">:=</span> <span class="n">new_fsa</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">E()</span></code> adds an edge to the current FSA:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">E</span><span class="p">(</span><span class="mi">1</span> <span class="n">the</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">E</span><span class="p">(</span><span class="mi">2</span> <span class="n">big</span> <span class="mi">3</span><span class="p">)</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">E</span><span class="p">(</span><span class="mi">2</span> <span class="n">red</span> <span class="mi">3</span><span class="p">)</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">E</span><span class="p">(</span><span class="mi">3</span> <span class="n">cat</span> <span class="mi">4</span><span class="p">)</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">E</span><span class="p">(</span><span class="mi">3</span> <span class="n">dog</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">F()</span></code> declares a state final:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">F</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>One may call an FSA as a function to determine whether it accepts a
+string:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">_a1</span>
+<span class="p">(</span><span class="n">An</span> <span class="n">FSA</span> <span class="n">containing</span> <span class="mi">4</span> <span class="n">states</span><span class="p">)</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">_a1</span><span class="p">(</span><span class="s2">&quot;the big cat&quot;</span><span class="p">)</span>
+<span class="kc">True</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">computation()</span></code> prints out the computation.
+[Currently buggy]:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">computation</span><span class="p">(</span><span class="n">_a1</span><span class="p">,</span> <span class="s2">&quot;the big cat&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="debugging">
+<h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this heading"></a></h3>
+<p>Debugging functions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">trace</span><span class="p">(</span><span class="n">syntax</span><span class="p">)</span>
+<span class="p">[</span><span class="n">glab</span><span class="p">]</span> <span class="n">untrace</span><span class="p">(</span><span class="n">syntax</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="the-glab-language">
+<h2>The GLab Language<a class="headerlink" href="#the-glab-language" title="Permalink to this heading"></a></h2>
+<section id="syntax">
+<h3>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading"></a></h3>
+<p>An <strong>atom</strong> is one of the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>An <strong>operator</strong>, as listed in the following table.  Example:
+<code class="docutils literal notranslate"><span class="pre">+</span></code>.</p></li>
+<li><p>A <strong>variable</strong>, which must begin with underscore.  Example: <code class="docutils literal notranslate"><span class="pre">_a1</span></code>.</p></li>
+<li><p>A <strong>string</strong> in single or double quotes.
+There is no significance to the choice between single quotes and double quotes, though the
+start and end quotes must of course match.  Example: <code class="docutils literal notranslate"><span class="pre">'foo</span> <span class="pre">bar'</span></code>.</p></li>
+<li><p>A <strong>symbol</strong> literal, which is any unquoted word that is not an
+operator or variable.  Example: <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p></li>
+</ul>
+</div></blockquote>
+<p>The following table lists the operators, from highest (1) to lowest (5) precedence
+classes.  Higher precedence operators “bind more tightly.”  Operators
+in the same precedence class group left to right.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">:</span></code></p></td>
+<td><p>Cross-product</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td><p>Kleene star (suffix operator)</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.</span></code></p></td>
+<td><p>Concatenation</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">x</span></code></p></td>
+<td><p>Cross-product</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">+</span></code></p></td>
+<td><p>Addition</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
+<td><p>Subtraction</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\</span></code></p></td>
+<td><p>Set difference</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">=</span></code></p></td>
+<td><p>Equality</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">in</span></code></p></td>
+<td><p>Set membership</p></td>
+</tr>
+</tbody>
+</table>
+<p>Note that there are two cross-product operators, differing only in
+precedence.  That is intentional.  The colon operator is for letter
+pairs in transductions, whereas the times operator forms the cross
+product of longer strings.</p>
+<p>Atoms are grouped into <strong>expressions</strong>.
+The following are the expression types:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><strong>Infix expression.</strong>  Two subexpressions with an infix operator between them,
+representing an operator expression with two operands.  Example:
+<code class="docutils literal notranslate"><span class="pre">a.b</span></code>.</p></li>
+<li><p><strong>Postfix expression.</strong>
+A subexpression followed by a postfix operator, representing an
+operator expression with one operand.  Example: <code class="docutils literal notranslate"><span class="pre">a*</span></code>.</p></li>
+<li><p><strong>Size expression.</strong>  A list of subexpressions in vertical bars.  Example: <code class="docutils literal notranslate"><span class="pre">|{a,b}|</span></code>.</p></li>
+<li><p><strong>Function call.</strong>  A symbol followed by a parenthesized list
+of subexpressions, separated optionally by commas.
+Example: <code class="docutils literal notranslate"><span class="pre">f(_x,</span> <span class="pre">_y)</span></code>.</p></li>
+<li><p><strong>Category literal.</strong>  A symbol followed by a bracketed list of subexpressions.
+Example: <code class="docutils literal notranslate"><span class="pre">VP[sg]</span></code>.</p></li>
+<li><p><strong>Sequence literal.</strong>  A list of subexpressions in angle brackets.
+Example: <code class="docutils literal notranslate"><span class="pre">&lt;c,a,t&gt;</span></code>.</p></li>
+<li><p><strong>Set literal.</strong>  A list of subexpressions in braces.
+Example: <code class="docutils literal notranslate"><span class="pre">{a,b}</span></code>.</p></li>
+<li><p><strong>Language literal.</strong>  A list of subexpressions in slashes.  Example: <code class="docutils literal notranslate"><span class="pre">/a</span> <span class="pre">.</span> <span class="pre">b/</span></code>.</p></li>
+</ol>
+</div></blockquote>
+<p>Semantically, expressions of types (1)-(4) represent functions
+applied to arguments.  The remaining expression
+types represent literal objects:
+categories, sequences, sets, or languages.</p>
+<p>A <strong>command statement</strong> consists of a <strong>command</strong> and some
+number of argument expressions.</p>
+<p>There are two types of
+command statement:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Prefix command statement.</strong>  The first expression is a symbol representing a prefix
+command, as listed in the top half of the following table,
+and the remaining expressions in the line are its arguments.</p></li>
+<li><p><strong>Infix command statement.</strong>  The second expression is an infix command, as listed in the
+bottom half of the following table.  The first expression, along
+with the third and following expressions, represent arguments of the
+command.</p></li>
+</ul>
+</div></blockquote>
+<p>Commands are designated symbols, as listed in the
+following table.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td colspan="2"><p><strong>Prefix commands</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">set</span></code></p></td>
+<td><p>Set the value of a variable</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">include</span></code></p></td>
+<td><p>Include another notebook</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">incr</span></code></p></td>
+<td><p>Increment a variable</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">show</span></code></p></td>
+<td><p>Show the value of a variable</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">parse</span></code></p></td>
+<td><p>Parse a sentence</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">trace</span></code></p></td>
+<td><p>Turn on tracing</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">good</span></code></p></td>
+<td><p>Mark a sentence as good</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bad</span></code></p></td>
+<td><p>Mark a sentence as bad</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">results</span></code></p></td>
+<td><p>Show the results of parsing</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p><strong>Infix commands</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-&gt;</span></code></p></td>
+<td><p>Define a grammar rule</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;-</span></code></p></td>
+<td><p>Define a lexical entry</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">=&gt;</span></code></p></td>
+<td><p>(I forget)</p></td>
+</tr>
+</tbody>
+</table>
+<p>At the highest level, a notebook consists of newline-terminated <strong>lines.</strong>
+A line beginning with <code class="docutils literal notranslate"><span class="pre">#</span></code> is a <strong>comment.</strong>  The title of the
+notebook must be the first line and begin with <code class="docutils literal notranslate"><span class="pre">#T</span></code> followed by a
+space and the actual title.  Every other line is a <strong>statement,</strong>
+which may be either a command statement or an expression.</p>
+</section>
+<section id="list-of-constants">
+<h3>List of constants<a class="headerlink" href="#list-of-constants" title="Permalink to this heading"></a></h3>
+<p>The constants are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">_0_</span></code> — the empty set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_e_</span></code> — the empty string</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_else_</span></code> — used in FSTs</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Top</span></code> — the top of a lattice</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Bottom</span></code> — the bottom of a lattice</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="global-variables">
+<h3>Global variables<a class="headerlink" href="#global-variables" title="Permalink to this heading"></a></h3>
+<p>The global variables are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">_fsa_</span></code> - the current FSA/FST</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_corpus_</span></code> - the current corpus</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*notebook-dir*</span></code> - the current notebook directory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*output*</span></code> - the current output stream</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*trace*</span></code> - a set of things to be traced</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="list-of-functions">
+<h3>List of functions<a class="headerlink" href="#list-of-functions" title="Permalink to this heading"></a></h3>
+<p>Functions have a minimum number of arguments, a maximum number of
+arguments, and a flag indicating whether or not they take the symtab
+as a hidden argument (ENV), in order to get the values of global
+variables.  A few of the functions have types associated
+with their parameters; that is not indicated in the table.
+All functions are built-in, in the sense that
+their implementation is provided by a Python function.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">=&gt;(*things)</span></code> — Expand</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apply(fsa,x,ENV)</span></code> — Applies an FSA to an input</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bad(s,ENV)</span></code> — Marks a sentence as bad</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">abs(x)</span></code> — Absolute value of number, or size of a container</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">accepts(fsa,seq)</span></code> — Whether or not an FSA accepts a sequence</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">check(x,ENV)</span></code> — Check something</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compose(fst1,fst2,ENV)</span></code> — Compose FSTs</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">computation(fsa,seq)</span></code> — Show the computation of an FSA on a sequence</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">concat(*fsas)</span></code> — Concatenate FSAs</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cross(*fsts)</span></code> — Take the cross product of FSTs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">E(src,dst,lab,[olab],ENV)</span></code> — Add an edge to the current FSA.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">equals(x,y)</span></code> — Equality</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ex(s,ENV)</span></code> — Add a sentence to the list of examples.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exp(x,y)</span></code> — Take x to the y</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">F(q,ENV)</span></code> — Declare state q final, in the current FSA</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">first(x)</span></code> — Return the first element</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fsa(*edges)</span></code> — Create an FSA.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">good(s,ENV)</span></code> — Declare a sentence to be good.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gt(x,y)</span></code> — Greater than</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">include(s,ENV)</span></code> — Include the notebook with the given name,
+searching in the current notebook directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">incr(x,amt)</span></code> — Increment x by an amt</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intersection(x,y)</span></code> — Intersect two sets</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">io(x,y)</span></code> — Not sure</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">islang(x)</span></code> — Whether x is something that can be used as a language</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ismember(x,y)</span></code> — Whether x is a member of y</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isstring(x)</span></code> — Whether x is a string</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">L(x)</span></code> — Convert x to a language</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lang(x,ENV)</span></code> — Print the language</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lt(x,y)</span></code> — Whether x is less than y</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">makecat(*ftrs)</span></code> — Turn a set of features into a category</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minus(x,y)</span></code> — Subtraction</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">new_fsa(ENV)</span></code> — Start a new FSA</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">new_grammar(ENV)</span></code> — Start a new grammar</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">new_union(ENV)</span></code> — Start a new union</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pair(x,y)</span></code> — Create a pair</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parse(s,ENV)</span></code> — Parse a sentence</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plus(x,y)</span></code> — Addition</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rel(fst,[n],ENV)</span></code> — List [at most <em>n</em> tuples from] the relation computed by an FST</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">results(ENV)</span></code> — Run regression tests</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seq(*elts)</span></code> — Create a sequence</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set(*elts)</span></code> — Create a set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">show(x,ENV)</span></code> — Print details</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size(x)</span></code> — The size of a container</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start(ENV)</span></code> — Get the start symbol</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trace(what,ENV)</span></code> — Turn tracing on</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type(x)</span></code> — The type of x</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">untrace(what,ENV)</span></code> — Turn tracing off</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="list-of-macros">
+<h3>List of macros<a class="headerlink" href="#list-of-macros" title="Permalink to this heading"></a></h3>
+<p>A genuine macro is a function that
+suppresses evaluation of its arguments and constructs a new expression
+that is evaluated in the place of the macro expression.  GLab does not
+support genuine macros, but it does permit functions to suppress
+evaluation of some or all of their arguments.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">makelexent(w,pos,ENV)</span></code> — Evaluates pos but not w.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">makerule(*cats,ENV)</span></code> — Cats are not evaluated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">new(type,ENV)</span></code> — Type is not evaluated.  May set a global variable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">regex(x,ENV)</span></code> — x is not evaluated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">quote(x)</span></code> — Suppresses evaluation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setvalue(var,val,ENV)</span></code> — Neither argument is evaluated.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="list-of-setters">
+<h3>List of setters<a class="headerlink" href="#list-of-setters" title="Permalink to this heading"></a></h3>
+<p>A “setter” is a function that can be placed on the left-hand side of
+an assignment.  There is only one: <code class="docutils literal notranslate"><span class="pre">start(fsa)</span> <span class="pre">=</span> <span class="pre">q</span></code> expands into
+Python as <code class="docutils literal notranslate"><span class="pre">set_start(fsa,q)</span></code>.</p>
+</section>
+</section>
+<section id="glab-implementation">
+<h2>GLab Implementation<a class="headerlink" href="#glab-implementation" title="Permalink to this heading"></a></h2>
+<section id="command-line-invocation">
+<h3>Command-line invocation<a class="headerlink" href="#command-line-invocation" title="Permalink to this heading"></a></h3>
+<p>GLab will use the current working directory as its working directory.
+If you create a notebook, it will be placed in a subdirectory whose
+name is your user name.  The subdirectory will be automatically
+created, if necessary.  To launch GLab:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m seal.glab
+</pre></div>
+</div>
+<p>To use it, visit <code class="docutils literal notranslate"><span class="pre">http://localhost:8000/</span></code>.</p>
+</section>
+<section id="wsgi-web-application">
+<h3>WSGI web application<a class="headerlink" href="#wsgi-web-application" title="Permalink to this heading"></a></h3>
+<p>To run GLab under a web server (e.g., Apache) as a WSGI application,
+create a file <code class="docutils literal notranslate"><span class="pre">glab.wsgi</span></code> along the lines of the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">site</span>
+<span class="n">site</span><span class="o">.</span><span class="n">addsitedir</span><span class="p">(</span><span class="s1">&#39;/home/me/mypython/lib/python2.6/site-packages&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">seal.glab</span>
+<span class="n">application</span> <span class="o">=</span> <span class="n">seal</span><span class="o">.</span><span class="n">glab</span><span class="o">.</span><span class="n">make_application</span><span class="p">(</span><span class="s1">&#39;/home/me/myglabdir&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The WSGI script must have permissions 744.</p>
+<p>This assumes that <code class="docutils literal notranslate"><span class="pre">/home/me/mypython</span></code> was created using
+virtualenv:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python virtualenv.py mypthon
+</pre></div>
+</div>
+<p>and that Seal was installed in <code class="docutils literal notranslate"><span class="pre">mypython</span></code>.</p>
+</section>
+<section id="cgi-web-application">
+<h3>CGI web application<a class="headerlink" href="#cgi-web-application" title="Permalink to this heading"></a></h3>
+<p>To run GLab as a CGI script, create a file called e.g. <code class="docutils literal notranslate"><span class="pre">glab</span></code> in
+the <code class="docutils literal notranslate"><span class="pre">cgi-bin</span></code> directory, with contents along the lines of the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/home/me/mypython/bin/python</span>
+<span class="kn">import</span> <span class="nn">site</span>
+<span class="n">site</span><span class="o">.</span><span class="n">addsitedir</span><span class="p">(</span><span class="s1">&#39;/home/me/seal-0.11.x/python&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">seal.glab</span>
+<span class="n">application</span> <span class="o">=</span> <span class="n">seal</span><span class="o">.</span><span class="n">glab</span><span class="o">.</span><span class="n">make_application</span><span class="p">(</span><span class="s1">&#39;/home/me/myglabdir&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">wsgiref.handlers</span> <span class="kn">import</span> <span class="n">CGIHandler</span>
+<span class="n">CGIHandler</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">application</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The CGI script should have permissions 744.</p>
+</section>
+<section id="batch-mode">
+<h3>Batch mode<a class="headerlink" href="#batch-mode" title="Permalink to this heading"></a></h3>
+<p>The first line of a <code class="docutils literal notranslate"><span class="pre">.gl</span></code> file is a notebook name prefixed with
+<code class="docutils literal notranslate"><span class="pre">#T</span></code>, and each subsequent line is a glab statement.
+For example, <code class="docutils literal notranslate"><span class="pre">ex.notebook.gl</span></code> contains:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#T My Notebook</span>
+<span class="nb">set</span> <span class="n">_x</span> <span class="o">&lt;</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="o">&gt;</span>
+<span class="n">_x</span> <span class="o">.</span> <span class="o">&lt;</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>It is interpreted as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">seal</span> <span class="kn">import</span> <span class="n">ex</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">interpret_file</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">notebook</span><span class="o">.</span><span class="n">gl</span><span class="p">,</span> <span class="n">show_syntax</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">| #T My Notebook</span>
+<span class="go">| _x := &lt;a,b,c&gt;</span>
+<span class="go">: setvalue(_x, seq(a, b, c))</span>
+<span class="go">| _x . &lt;b,a&gt;</span>
+<span class="go">: concat(_x, seq(b, a))</span>
+<span class="go">&lt;a, b, c, b, a&gt;</span>
+</pre></div>
+</div>
+<p>The original line of text is echoed with <code class="docutils literal notranslate"><span class="pre">|</span></code> as prompt, and
+the parsed expression is echoed with <code class="docutils literal notranslate"><span class="pre">:</span></code> as prompt.  Then any
+return value or error is printed.</p>
+<p>By default, echo is on, meaning that each statement and value is
+printed.  It also means that errors are printed instead of terminating
+processing.  Echo can be turned off by providing
+<code class="docutils literal notranslate"><span class="pre">echo=False</span></code>.  In that case, the only printing is what is
+explicitly done with <code class="docutils literal notranslate"><span class="pre">show</span></code> statements, and any exceptions
+immediately terminate processing.</p>
+</section>
+</section>
+<section id="parsing">
+<h2>Parsing<a class="headerlink" href="#parsing" title="Permalink to this heading"></a></h2>
+<section id="tokenization">
+<h3>Tokenization<a class="headerlink" href="#tokenization" title="Permalink to this heading"></a></h3>
+<p>The function <code class="docutils literal notranslate"><span class="pre">tokenize()</span></code> takes a string and returns an iteration
+containing tokens.
+Tokenize assumes that its input represents a
+single line of input.  If any newlines happen to be present, they are
+treated like spaces.
+The tokens in the iteration are instances
+of <code class="docutils literal notranslate"><span class="pre">Token</span></code>, which is a specialization
+of <code class="docutils literal notranslate"><span class="pre">str</span></code>.
+A Token has a member <code class="docutils literal notranslate"><span class="pre">type</span></code> giving its token type,
+and members <code class="docutils literal notranslate"><span class="pre">filename</span></code>, <code class="docutils literal notranslate"><span class="pre">line</span></code>, and <code class="docutils literal notranslate"><span class="pre">offset</span></code>,
+indicating exactly where the token occurred.  String tokens also have
+member <code class="docutils literal notranslate"><span class="pre">quotes</span></code> indicating the quote character:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">tok</span> <span class="ow">in</span> <span class="n">tokenize</span><span class="p">(</span><span class="s1">&#39;_a1 = foo(&quot;hi</span><span class="se">\\</span><span class="s1">tbye&quot;)</span><span class="se">\n</span><span class="s1">_a1+s&#39;</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:6}</span><span class="s1"> </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tok</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">tok</span><span class="p">)))</span>
+<span class="gp">...</span>
+<span class="go">word   &#39;_a1&#39;</span>
+<span class="go">=      &#39;=&#39;</span>
+<span class="go">word   &#39;foo&#39;</span>
+<span class="go">(      &#39;(&#39;</span>
+<span class="go">string &#39;hi\\tbye&#39;</span>
+<span class="go">)      &#39;)&#39;</span>
+<span class="go">word   &#39;_a1&#39;</span>
+<span class="go">+      &#39;+&#39;</span>
+<span class="go">word   &#39;s&#39;</span>
+</pre></div>
+</div>
+<p>In detail, the kinds of token are as follows:</p>
+<blockquote>
+<div><ul>
+<li><p><strong>Word.</strong>  A maximal sequence of word characters
+(alphanumerics plus underscore).  The value
+for <code class="docutils literal notranslate"><span class="pre">tok.type</span></code> is <code class="docutils literal notranslate"><span class="pre">'word'</span></code>.</p></li>
+<li><p><strong>String.</strong>  Surrounded by paired single quotes or
+double quotes.  The value for <code class="docutils literal notranslate"><span class="pre">tok.type</span></code> is <code class="docutils literal notranslate"><span class="pre">'string'</span></code>,
+and the value for <code class="docutils literal notranslate"><span class="pre">tok.quotes</span></code> is either a single quote or a
+double quote character.</p></li>
+<li><p><strong>Special.</strong>  The type of a special token is the token itself.
+There are two cases:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Multi-character special.</strong>  One
+of: <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code>, <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">:=</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;&gt;</span></code>.</p></li>
+<li><p><strong>Single-character special.</strong>  Any single character that is not
+a word character or whitespace.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>Whitespace is not returned as a token, but it
+does separate words.  Backslash is never interpreted as an escape
+character; it is treated like any other punctuation character.</p>
+</section>
+<section id="grouping">
+<h3>Grouping<a class="headerlink" href="#grouping" title="Permalink to this heading"></a></h3>
+<p>After tokenization, pairs of grouping characters are mated to create a
+syntactic skeleton.  After grouping, the atoms are still tokens
+(words, strings, or specials), but complex expressions belong to the
+following classes, which are subclasses of <code class="docutils literal notranslate"><span class="pre">tuple</span></code>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BracketExpr</span></code> — <code class="docutils literal notranslate"><span class="pre">[...]</span></code> (paired square brackets)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ParenExpr</span></code> — <code class="docutils literal notranslate"><span class="pre">(...)</span></code> (paired parentheses)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BraceExpr</span></code> — <code class="docutils literal notranslate"><span class="pre">{...}</span></code> (paired braces)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SeqExpr</span></code> — <code class="docutils literal notranslate"><span class="pre">&lt;...&gt;</span></code> (paired angle brackets)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AbsExpr</span></code> — <code class="docutils literal notranslate"><span class="pre">|...|</span></code> (paired vertical bars)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ToplevelExpr</span></code> — wrapped around the expression as a whole</p></li>
+</ul>
+</div></blockquote>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">exp</span> <span class="o">=</span> <span class="n">group</span><span class="p">(</span><span class="n">tokenize</span><span class="p">(</span><span class="s1">&#39;g.[f, {a,b}]&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">exp</span><span class="p">)</span>
+<span class="go">ToplevelExpr {</span>
+<span class="go">    g</span>
+<span class="go">    .</span>
+<span class="go">    BracketExpr {</span>
+<span class="go">        f</span>
+<span class="go">        ,</span>
+<span class="go">        BraceExpr {</span>
+<span class="go">            a</span>
+<span class="go">            ,</span>
+<span class="go">            b</span>
+<span class="go">        }</span>
+<span class="go">    }</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+</section>
+<section id="normalization">
+<h3>Normalization<a class="headerlink" href="#normalization" title="Permalink to this heading"></a></h3>
+<p>The function <code class="docutils literal notranslate"><span class="pre">normalize()</span></code> takes the output of grouping and
+converts it into a fully parsed expression.  It processes the skeletal
+expression recursively, bottoming out with the tokens.</p>
+<p>The auxiliary function <code class="docutils literal notranslate"><span class="pre">normalize_token()</span></code> handles the individual
+tokens.  It replaces the atoms with atoms of the following types,
+which are specializations of <code class="docutils literal notranslate"><span class="pre">str</span></code>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Var</span></code> — a variable.  Created from <code class="docutils literal notranslate"><span class="pre">word</span></code> tokens that begin with
+underscore.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Symbol</span></code> — a symbol.  Created from <code class="docutils literal notranslate"><span class="pre">word</span></code> tokens
+that do not begin with underscore.  Also, quoted strings are
+converted to sequences of symbols.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Op</span></code> — an operator.  Created from specials.
+There is a table of operators that is used to do the conversion.  If
+the token is not in the table, a <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> is signalled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SeqExpr</span></code> — Quoted strings are shorthands for angle-bracket
+expressions.  A double-quoted string is split at
+whitespace, and a single-quoted string is exploded into its
+characters.  The resulting list is converted to a
+<code class="docutils literal notranslate"><span class="pre">SeqExpr</span></code> containing <code class="docutils literal notranslate"><span class="pre">Symbol</span></code> instances.</p></li>
+</ul>
+</div></blockquote>
+<p>A complex expression (produced by grouping) is normalized as follows.
+First, each of the elements is normalized.
+Then the function <code class="docutils literal notranslate"><span class="pre">op_parse()</span></code>, which does
+operator-precedence parsing, is called on the
+normalized elements.  Finally, commas are deleted.  (They serve as
+lowest-precedence separators, if present.)
+Associated with each operator is a function name, and the combination
+of the operator with its arguments is replaced by a <code class="docutils literal notranslate"><span class="pre">Funcall</span></code>
+expression:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Funcall</span></code> — represents a function and its arguments</p></li>
+</ul>
+</div></blockquote>
+<p>Function calls of the usual sort are also recognized and replaced with
+<code class="docutils literal notranslate"><span class="pre">Funcall</span></code> expressions.  The arguments may be surrounded either by
+parentheses or by square brackets:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">group</span><span class="p">(</span><span class="n">tokenize</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;_x := {&quot;a b&quot;.&#39;!?&#39;}&#39;&#39;&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="go">ToplevelExpr {</span>
+<span class="go">    _x</span>
+<span class="go">    :=</span>
+<span class="go">    BraceExpr {</span>
+<span class="go">        a b</span>
+<span class="go">        .</span>
+<span class="go">        !?</span>
+<span class="go">    }</span>
+<span class="go">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="go">ToplevelExpr {</span>
+<span class="go">    Funcall {</span>
+<span class="go">        setvalue</span>
+<span class="go">        Var _x</span>
+<span class="go">        BraceExpr {</span>
+<span class="go">            Funcall {</span>
+<span class="go">                concat</span>
+<span class="go">                SeqExpr {</span>
+<span class="go">                    Symbol a</span>
+<span class="go">                    Symbol b</span>
+<span class="go">                }</span>
+<span class="go">                SeqExpr {</span>
+<span class="go">                    Funcall {</span>
+<span class="go">                        sym</span>
+<span class="go">                        33</span>
+<span class="go">                    }</span>
+<span class="go">                    Funcall {</span>
+<span class="go">                        sym</span>
+<span class="go">                        63</span>
+<span class="go">                    }</span>
+<span class="go">                }</span>
+<span class="go">            }</span>
+<span class="go">        }</span>
+<span class="go">    }</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+<p>Here are a few points to note:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The double-quoted string <code class="docutils literal notranslate"><span class="pre">&quot;a</span> <span class="pre">b&quot;</span></code> is treated as
+consisting of whitespace-separated symbols, whereas the single-quote
+string <code class="docutils literal notranslate"><span class="pre">'!?'</span></code> is treated as consisting of
+single-character symbols.</p></li>
+<li><p>The non-word symbols <code class="docutils literal notranslate"><span class="pre">!</span></code> and <code class="docutils literal notranslate"><span class="pre">?</span></code>
+are replaced with calls to the function <code class="docutils literal notranslate"><span class="pre">sym</span></code>.</p></li>
+<li><p>The operators have been replaced with function names: for
+example, <code class="docutils literal notranslate"><span class="pre">:=</span></code> has been replaced
+with <code class="docutils literal notranslate"><span class="pre">setvalue</span></code>.  A table of operators is given below,
+after we discuss operator-precedence parsing.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="operator-precedence-parsing">
+<h3>Operator-precedence parsing<a class="headerlink" href="#operator-precedence-parsing" title="Permalink to this heading"></a></h3>
+<p>Operator-precedence parsing does the real work of normalization.
+The operator-precedence parser works as follows.
+The input sequence consists of the contents of a single group
+expression, and consists of tokens and subexpressions.  Each element
+is assigned one or more categories, as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A comma token has category <code class="docutils literal notranslate"><span class="pre">,</span></code>.</p></li>
+<li><p>An operator has two categories: <code class="docutils literal notranslate"><span class="pre">O</span></code> (operator) and the
+syntactic type of the operator, which is either <code class="docutils literal notranslate"><span class="pre">I</span></code> (infix) or
+<code class="docutils literal notranslate"><span class="pre">S</span></code> (suffix).</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">Funcall</span></code> created by reducing an infinite-arity infix
+operator has categories <code class="docutils literal notranslate"><span class="pre">L</span></code> (list) and <code class="docutils literal notranslate"><span class="pre">A</span></code> (argument).</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">ParenExpr</span></code> has category <code class="docutils literal notranslate"><span class="pre">P</span></code> (parenthesized expression).</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">BracketExpr</span></code> has category <code class="docutils literal notranslate"><span class="pre">P</span></code>.</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">Symbol</span></code> has categories <code class="docutils literal notranslate"><span class="pre">A</span></code> (argument) and <code class="docutils literal notranslate"><span class="pre">Y</span></code>
+(function symbol)</p></li>
+<li><p>Everything else has category <code class="docutils literal notranslate"><span class="pre">A</span></code> (argument).</p></li>
+</ul>
+</div></blockquote>
+<p>The parser passes through the element sequence, applying the following
+rules.  The pattern is a sequence of categories, and the action is
+taken if the first <em>n</em> words have the categories given.  To “reduce”
+means to remove the indicated elements and replace them with a <code class="docutils literal notranslate"><span class="pre">Funcall</span></code>
+headed by the operator’s equivalent function, destructively changing
+the sequence of elements.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">AIAO</span></code>, then compare the precedence of the two operators
+(<code class="docutils literal notranslate"><span class="pre">I</span></code> and <code class="docutils literal notranslate"><span class="pre">O</span></code>).  If the second has higher precedence,
+temporarily shift two elements to the right.  Otherwise, reduce the
+first three elements.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">LAO</span></code>, do the same, but if a reduction is done, it
+consists in adding the A to the L’s argument list.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">AIAP</span></code>, then temporarily shift two elements to the
+right.  (The <code class="docutils literal notranslate"><span class="pre">AP</span></code> may be a function call, and function call
+has highest precedence.  <strong>[Shouldn’t this be AIYP?]</strong></p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">LAP</span></code>, then temporarily shift one element to the
+right.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">AIA</span></code>, then reduce the first three elements and
+terminate the most recent shift, if any.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">LA</span></code>, then add the A to the L’s argument list and
+terminate the most recent shift, if any.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">YP</span></code>, then reduce the first two elements and
+terminate the most recent shift, if any.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">AS</span></code>, then reduce the first two elements and
+terminate the most recent shift, if any.</p></li>
+<li><p>If none of the above rules apply, then cancel any temporary
+shifts, advance one element to the right, and restart.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="digesting">
+<h3>Digesting<a class="headerlink" href="#digesting" title="Permalink to this heading"></a></h3>
+<p>The function <code class="docutils literal notranslate"><span class="pre">digest()</span></code> simplifies the syntax by replacing all
+expressions, including complex literals, with <code class="docutils literal notranslate"><span class="pre">Funcall</span></code> objects.
+In particular, the expressions introduced by grouping that have not
+been previously eliminated are eliminated now:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BracketExpr</span></code> — Brackets that are not recognized as part of a
+function call are grouping brackets.  If there is only one sub-expression, it is
+returned.  Otherwise an error is signalled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ParenExpr</span></code> — Parentheses that are not recognized as part of a
+function call are grouping parentheses.  If there is only one sub-expression, it is
+returned.  Otherwise an error is signalled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BraceExpr</span></code> — The return is a <code class="docutils literal notranslate"><span class="pre">Funcall</span></code> whose function is
+<code class="docutils literal notranslate"><span class="pre">set</span></code> and whose arguments are the <code class="docutils literal notranslate"><span class="pre">BraceExpr</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SeqExpr</span></code> — The return is a <code class="docutils literal notranslate"><span class="pre">Funcall</span></code> whose function is
+<code class="docutils literal notranslate"><span class="pre">seq</span></code> and whose arguments are the <code class="docutils literal notranslate"><span class="pre">SeqExpr</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AbsExpr</span></code> — The return is a <code class="docutils literal notranslate"><span class="pre">Funcall</span></code> whose function is
+<code class="docutils literal notranslate"><span class="pre">abs</span></code> and whose arguments are the <code class="docutils literal notranslate"><span class="pre">AbsExpr</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ToplevelExpr</span></code> — If there is only one sub-expression, it is
+returned.  Otherwise an error is signalled.</p></li>
+</ul>
+</div></blockquote>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">digest</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="go">setvalue(_x, set(concat(seq(a, b), seq(sym(33), sym(63)))))</span>
+</pre></div>
+</div>
+<p>In the final result, the expression tree consists only of the
+following types: <code class="docutils literal notranslate"><span class="pre">Funcall</span></code>, <code class="docutils literal notranslate"><span class="pre">Var</span></code>, <code class="docutils literal notranslate"><span class="pre">Symbol</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
+</section>
+<section id="id1">
+<h3>Parsing<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>The function <code class="docutils literal notranslate"><span class="pre">parse()</span></code> performs the sequence of steps just
+discussed: tokenization, grouping, normalization, and digesting:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">expr</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="s1">&#39;_x := {&amp;lt;a&gt;.&amp;lt;b&gt;}&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
+<span class="go">setvalue(_x, set(concat(seq(a), seq(b))))</span>
+</pre></div>
+</div>
+</section>
+<section id="list-of-operators">
+<h3>List of Operators<a class="headerlink" href="#list-of-operators" title="Permalink to this heading"></a></h3>
+<p>The following is the complete list of operators, along with their
+precedence and the corresponding function
+name.  Infinite arity is represented by <code class="docutils literal notranslate"><span class="pre">...</span></code>.  The comma is
+“inert” in the sense that it never actually combines with arguments;
+it is only used as a separator.  Since commas
+are deleted after operator-precedence parsing, there is also no
+corresponding function.</p>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">:header-rows: 1</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Op</p></td>
+<td><p>Prec</p></td>
+<td><p>Function</p></td>
+</tr>
+<tr class="row-even"><td><p>x <code class="docutils literal notranslate"><span class="pre">:</span></code> y</p></td>
+<td><p>7</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pair</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>x <code class="docutils literal notranslate"><span class="pre">^</span></code> y</p></td>
+<td><p>6</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">exp</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>x <code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td><p>5</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">star</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>x <code class="docutils literal notranslate"><span class="pre">.</span></code> y</p></td>
+<td><p>4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">concat</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>a <code class="docutils literal notranslate"><span class="pre">x</span></code> b</p></td>
+<td><p>4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">cross</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>x <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> y</p></td>
+<td><p>4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">intersection</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>x <code class="docutils literal notranslate"><span class="pre">+</span></code> y</p></td>
+<td><p>3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">plus</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>x <code class="docutils literal notranslate"><span class="pre">-</span></code> y</p></td>
+<td><p>3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">minus</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>x <code class="docutils literal notranslate"><span class="pre">\</span></code> y</p></td>
+<td><p>3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">setdiff</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>x <code class="docutils literal notranslate"><span class="pre">%</span></code> y</p></td>
+<td><p>3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">compose</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>x <code class="docutils literal notranslate"><span class="pre">=</span></code> y</p></td>
+<td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">equals</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>x <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> y</p></td>
+<td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ismember</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>x <code class="docutils literal notranslate"><span class="pre">&#64;&lt;</span></code> y</p></td>
+<td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">lt</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>x <code class="docutils literal notranslate"><span class="pre">&#64;&gt;</span></code> y</p></td>
+<td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gt</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>x <code class="docutils literal notranslate"><span class="pre">:=</span></code> y</p></td>
+<td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">setvalue</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>x <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> …</p></td>
+<td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">makerule</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>x <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> …</p></td>
+<td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">makelexent</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">,</span></code></p></td>
+<td><p>0</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="evaluation">
+<h2>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this heading"></a></h2>
+<section id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h3>
+<p>There are four interrelated functions: <code class="docutils literal notranslate"><span class="pre">evaluate()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">apply()</span></code>, <code class="docutils literal notranslate"><span class="pre">symeval()</span></code>, and <code class="docutils literal notranslate"><span class="pre">setvalue()</span></code>.  All take an
+<code class="docutils literal notranslate"><span class="pre">env</span></code> argument, which is simply a dict mapping names to values.
+Variables, constants, and function names are all included in <code class="docutils literal notranslate"><span class="pre">env</span></code>.
+They are easy to tell apart because variables begin with underscore,
+constants are nonalphabetic, and function names are alphabetic.  The
+user can only change the values of variables.</p>
+<p>Of those four functions, the only one of any complexity is
+<code class="docutils literal notranslate"><span class="pre">apply()</span></code>.  It takes a function name and an argument list.  It
+goes through the following steps:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The function name is looked up in the environment to get the actual
+function <code class="docutils literal notranslate"><span class="pre">f</span></code>.  An error is signalled if the name is not
+found, or if its value is not a function.  It is also permissible for
+the function “name” to be an actual <code class="docutils literal notranslate"><span class="pre">Function</span></code>
+object, in which case no lookup is done.</p></li>
+<li><p>Checks are done to make sure that the argument list
+includes at least <code class="docutils literal notranslate"><span class="pre">f.min_narg</span></code> arguments, but not more than <code class="docutils literal notranslate"><span class="pre">f.max_narg</span></code>
+arguments.  (The latter may have the value <code class="docutils literal notranslate"><span class="pre">Unlimited</span></code>.)</p></li>
+<li><p>Each argument is evaluated, unless <code class="docutils literal notranslate"><span class="pre">f.eval</span></code> exists
+and has the value <code class="docutils literal notranslate"><span class="pre">False</span></code> for the argument position in question.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">f.types</span></code> exists, the types of the arguments are checked.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">f.envarg</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the environment itself is
+added to the argument list as a new final argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">f.implementation</span></code> is called on the argument list, and the
+result is returned.</p></li>
+</ul>
+</div></blockquote>
+<p>To get an environment populated with the standard functions, call <code class="docutils literal notranslate"><span class="pre">Environment()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">expr</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="s1">&#39;_x := {&lt;a&gt;.&lt;b&gt;}&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">evaluate</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">env</span><span class="p">))</span>
+<span class="go">None</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;_x&#39;</span><span class="p">]</span>
+<span class="go">{&lt;a, b&gt;}</span>
+</pre></div>
+</div>
+</section>
+<section id="interpreter">
+<h3>Interpreter<a class="headerlink" href="#interpreter" title="Permalink to this heading"></a></h3>
+<p><strong>Evaluator.</strong>
+An <code class="docutils literal notranslate"><span class="pre">Evaluator</span></code> instance behaves like a function with an internal
+environment.  It
+can be used to evaluate a sequence of statements:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">Evaluator</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span><span class="p">(</span><span class="s1">&#39;_x := &lt;a,b,c&gt;&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span><span class="p">(</span><span class="s1">&#39;_x&#39;</span><span class="p">)</span>
+<span class="go">&lt;a, b, c&gt;</span>
+</pre></div>
+</div>
+<p>When initialized, it uses <code class="docutils literal notranslate"><span class="pre">Environment()</span></code> to create an environment,
+and each time it is called it uses <code class="docutils literal notranslate"><span class="pre">parse()</span></code> to turn the string
+into an expression and <code class="docutils literal notranslate"><span class="pre">evaluate()</span></code> to evaluate it in the environment.</p>
+<p><strong>Interpreter.</strong>
+An <code class="docutils literal notranslate"><span class="pre">Interpreter</span></code> also evaluates statements.  Unlike an Evaluator,
+it traps exceptions and captures the output of commands that do direct
+printing, like <code class="docutils literal notranslate"><span class="pre">show</span></code>.  It also echoes the input statements, and
+if created with the setting <code class="docutils literal notranslate"><span class="pre">show_syntax=True</span></code>, it
+also echoes the parsed version of each input line (for debugging).
+The return value is a string containing all output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">Interpreter</span><span class="p">(</span><span class="n">echo</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="p">(</span><span class="s1">&#39;_x := &lt;d,o,g&gt;&#39;</span><span class="p">)</span>
+<span class="go">&#39;| _x := &lt;d,o,g&gt;\n&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="p">(</span><span class="s1">&#39;_x&#39;</span><span class="p">)</span>
+<span class="go">&#39;| _x\n&lt;d, o, g&gt;\n&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="p">(</span><span class="s1">&#39;_y&#39;</span><span class="p">)</span>
+<span class="go">&#39;| _y\nERROR: Unbound variable: _y\n&#39;</span>
+</pre></div>
+</div>
+<p>It can either be called with a single string (as in the examples just
+shown), or with an iteration over strings, such as an open file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">notebook</span><span class="o">.</span><span class="n">gl</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">(</span><span class="n">file</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">| #T My Notebook</span>
+<span class="go">| _x := &lt;a,b,c&gt;</span>
+<span class="go">| _x . &lt;b,a&gt;</span>
+<span class="go">&lt;a, b, c, b, a&gt;</span>
+</pre></div>
+</div>
+<p>The Interpreter calls two lower-level functions:</p>
+<dl class="simple">
+<dt>interpret_file(file,output,env)</dt><dd><p><em>File</em> may be a filename or an iterator over strings (e.g., an open file).
+The strings are parsed as input lines and evaluated.  Processing
+continues even if an exception is encountered.  All output is
+trapped and returned at the end as a string.</p>
+</dd>
+<dt>parse_file(strs)</dt><dd><p>This is used by <code class="docutils literal notranslate"><span class="pre">interpret_file()</span></code> to parse the
+input.  It takes an iterator over strings as input, and returns an
+iterator over triples, one for each input line.  If the input line is
+empty or a comment, the triple is (None, None, <em>line</em>).
+If there is an error during parsing, the triple is (None,
+<em>excep</em>, <em>line</em>).  Otherwise, the triple is (<em>expr</em>,
+None, <em>line</em>).</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="customization">
+<h2>Customization<a class="headerlink" href="#customization" title="Permalink to this heading"></a></h2>
+<section id="adding-an-operator">
+<h3>Adding an operator<a class="headerlink" href="#adding-an-operator" title="Permalink to this heading"></a></h3>
+<p>The operators are listed in <code class="docutils literal notranslate"><span class="pre">_operators</span></code>.  The key is the
+operator, and the value is a <code class="docutils literal notranslate"><span class="pre">makeop</span></code> expression.  The arguments
+to <code class="docutils literal notranslate"><span class="pre">makeop</span></code> are: the operator string (identical to the key), the
+precedence, the syntactic type (<code class="docutils literal notranslate"><span class="pre">I</span></code> for infix or <code class="docutils literal notranslate"><span class="pre">S</span></code> for
+suffix), and the name of the GLab function that the operator should be
+replaced with.  A named GLab function is a <code class="docutils literal notranslate"><span class="pre">Function</span></code> object that
+is the value of a key in the environment symtab; the key is the
+function’s name.</p>
+<p>To add a multi-character operator, one must also add the operator to the list of
+multi-character specials in the definition of <code class="docutils literal notranslate"><span class="pre">_syntax</span></code>.</p>
+</section>
+<section id="adding-a-function">
+<h3>Adding a function<a class="headerlink" href="#adding-a-function" title="Permalink to this heading"></a></h3>
+<p>Add an entry to the environment symtab whose value is a <code class="docutils literal notranslate"><span class="pre">Function</span></code>
+object.  The arguments to the <code class="docutils literal notranslate"><span class="pre">Function</span></code> constructor are as
+follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">imp</span></code> — a Python function that implements the GLab function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_nargs</span></code> — the minimum number of arguments
+that <code class="docutils literal notranslate"><span class="pre">imp</span></code> requires.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_nargs</span></code> — the maximum number of arguments
+that <code class="docutils literal notranslate"><span class="pre">imp</span></code> accepts.  <code class="docutils literal notranslate"><span class="pre">None</span></code> means that <code class="docutils literal notranslate"><span class="pre">imp</span></code> is declared
+<code class="docutils literal notranslate"><span class="pre">*args</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">types</span></code> — a list giving the required types for the first <em>n</em>
+arguments, where <em>n</em> is the length of <code class="docutils literal notranslate"><span class="pre">types</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eval</span></code> — a list of booleans indicating which arguments should
+be evaluated.  If None (the default), all arguments are evaluated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">envarg</span></code> — whether or not the Environment should be provided
+as a keyword argument.  The default is False.</p></li>
+</ul>
+</div></blockquote>
+<p>One must also define a Python function to serve as the
+implementation.  It will receive only positional arguments, with the
+exception of the keyword argument <code class="docutils literal notranslate"><span class="pre">env</span></code>, if <code class="docutils literal notranslate"><span class="pre">envarg</span></code> is True.
+Note that Python permits one to declare a function that accepts a variable
+number of positional arguments as well as an <code class="docutils literal notranslate"><span class="pre">env</span></code> keyword argument:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span> <span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span> <span class="o">...</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="learn.html" class="btn btn-neutral float-left" title="Language-learning support" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../uc/index.html" class="btn btn-neutral float-right" title="Universal Corpus" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

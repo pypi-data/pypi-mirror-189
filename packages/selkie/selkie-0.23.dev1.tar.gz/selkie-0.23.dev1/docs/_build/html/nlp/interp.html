@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.interp — Semantic interpretation &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.logic — Automated reasoning" href="logic.html" />
+    <link rel="prev" title="selkie.expr — Predicate calculus" href="expr.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The NLP pipeline</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="fsa.html"><code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> — Finite-state automata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fst.html"><code class="docutils literal notranslate"><span class="pre">selkie.fst</span></code> — Finite-state transducers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tree.html"><code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> — Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemmer.html"><code class="docutils literal notranslate"><span class="pre">selkie.stemmer</span></code> — English stemmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="head.html"><code class="docutils literal notranslate"><span class="pre">selkie.head</span></code> — Head marking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dep.html"><code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> — Dependency conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html"><code class="docutils literal notranslate"><span class="pre">selkie.features</span></code> — Non-recursive features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avs.html"><code class="docutils literal notranslate"><span class="pre">selkie.avs</span></code> — Recursive feature structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grammar.html"><code class="docutils literal notranslate"><span class="pre">selkie.grammar</span></code> — Constituent grammars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gdev.html"><code class="docutils literal notranslate"><span class="pre">selkie.gdev</span></code> — Grammar development tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen.html"><code class="docutils literal notranslate"><span class="pre">selkie.gen</span></code> — Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parser.html"><code class="docutils literal notranslate"><span class="pre">selkie.parser</span></code> — Constituent parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expr.html"><code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code> — Predicate calculus</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> — Semantic interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.html"><code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> — Automated reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bot.html"><code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> — Conversational agent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">The NLP pipeline</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> — Semantic interpretation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/nlp/interp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-interp-semantic-interpretation">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> — Semantic interpretation<a class="headerlink" href="#selkie-interp-semantic-interpretation" title="Permalink to this heading"></a></h1>
+<section id="steps-in-interpretation">
+<h2>Steps in interpretation<a class="headerlink" href="#steps-in-interpretation" title="Permalink to this heading"></a></h2>
+<p>The interpreter takes a parse tree as input and produces a
+predicate-calculus expression as output.  There are multiple steps:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Metavariable replacement.  Replace the “<code class="docutils literal notranslate"><span class="pre">&#64;</span></code>” metavariables in
+the semantic fragments in the parse tree.</p></li>
+<li><p>Quantifier raising.  This transforms the parse tree, and also
+eliminates the “<code class="docutils literal notranslate"><span class="pre">!qs</span></code>” and “<code class="docutils literal notranslate"><span class="pre">!q</span></code>” directives in the
+semantic attachments.</p></li>
+<li><p>Translation.  Fuse the semantic attachments, recursively, to
+produce an initial predicate-calculus expression.</p></li>
+<li><p>Gap replacement.  Interpret the “<code class="docutils literal notranslate"><span class="pre">$g</span></code>” and “<code class="docutils literal notranslate"><span class="pre">!g=</span></code>”
+directives.</p></li>
+<li><p>Macro replacement.  Replace macro calls with their
+definitions.</p></li>
+<li><p>Standardize variables.  Make sure every variable-binding operator
+is associated with a unique variable.  This is necessary in order to
+avoid accidental capture of variables during lambda reduction.</p></li>
+<li><p>Simplification (beta reduction).  Eliminate lambda applications.
+To be useful for reasoning, no lambda expressions should remain
+after simplification.</p></li>
+</ul>
+</div></blockquote>
+<dl class="py function">
+<dt class="sig sig-object py" id="replace_metavariables">
+<span class="sig-name descname"><span class="pre">replace_metavariables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#replace_metavariables" title="Permalink to this definition"></a></dt>
+<dd><p>Metavariables are used in grammars to stand in for variables.  A given
+grammar rule may be used several times in the course of parsing, and
+each time it is used, a new variable is created as instantiation of
+the metavariable.</p>
+<p>The symbol “<code class="docutils literal notranslate"><span class="pre">&#64;</span></code>” represents a metavariable.  The function
+<code class="docutils literal notranslate"><span class="pre">replace_metavariables()</span></code> replaces all occurrences of
+“<code class="docutils literal notranslate"><span class="pre">&#64;</span></code>” in a given expression with a new variable.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.expr</span> <span class="kn">import</span> <span class="n">parse_expr</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(lambda @ ($1 @ $2))&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.interp</span> <span class="kn">import</span> <span class="n">replace_metavariables</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vp</span> <span class="o">=</span> <span class="n">replace_metavariables</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vp</span>
+<span class="go">(lambda _1 ($1 _1 $2))</span>
+</pre></div>
+</div>
+<p>Note that, if we replace metavariables again, we get a different variable:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">replace_metavariables</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">(lambda _2 ($1 _2 $2))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tree_replace_metavariables">
+<span class="sig-name descname"><span class="pre">tree_replace_metavariables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tree_replace_metavariables" title="Permalink to this definition"></a></dt>
+<dd><p>Calls <code class="docutils literal notranslate"><span class="pre">replace_metavariables()</span></code> on the semantic expressions
+attached to each node in the tree.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="raise_quantifiers">
+<span class="sig-name descname"><span class="pre">raise_quantifiers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#raise_quantifiers" title="Permalink to this definition"></a></dt>
+<dd><p>The function is <code class="docutils literal notranslate"><span class="pre">raise_quantifiers()</span></code>.  First we create a tree to
+apply it to:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.data</span> <span class="kn">import</span> <span class="n">ex</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.parser</span> <span class="kn">import</span> <span class="n">Parser</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Parser</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;sg0a&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="p">(</span><span class="s1">&#39;every cat chases a dog&#39;</span><span class="p">)</span>
+<span class="go">[&lt;Tree S ...&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.interp</span> <span class="kn">import</span> <span class="n">tree_replace_metavariables</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tree_replace_metavariables</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="go">0   (S                     : (!qs ($2 $1))</span>
+<span class="go">1      (NP[sg]                : (!q $1 _3 ($2 _3))</span>
+<span class="go">2         (Det[sg] every)        : every</span>
+<span class="go">3         (N[sg] cat))           : cat</span>
+<span class="go">4      (VP[sg]                : (lambda _5 ($1 _5 $2))</span>
+<span class="go">5         (V[sg,t,0] chases)     : chase</span>
+<span class="go">6         (NP[sg]                : (!q $1 _4 ($2 _4))</span>
+<span class="go">7            (Det[sg] a)            : some</span>
+<span class="go">8            (N[sg] dog))))         : dog</span>
+</pre></div>
+</div>
+<p>Now we call <code class="docutils literal notranslate"><span class="pre">raise_quantifiers()</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.interp</span> <span class="kn">import</span> <span class="n">raise_quantifiers</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">raise_quantifiers</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="go">0   (NP[sg]                : ($1 _3 ($2 _3) $3)</span>
+<span class="go">1      (Det[sg] every)        : every</span>
+<span class="go">2      (N[sg] cat)            : cat</span>
+<span class="go">3      (NP[sg]                : ($1 _4 ($2 _4) $3)</span>
+<span class="go">4         (Det[sg] a)            : some</span>
+<span class="go">5         (N[sg] dog)            : dog</span>
+<span class="go">6         (S                     : ($2 $1)</span>
+<span class="go">7            (NP[sg])               : _3</span>
+<span class="go">8            (VP[sg]                : (lambda _5 ($1 _5 $2))</span>
+<span class="go">9               (V[sg,t,0] chases)     : chase</span>
+<span class="go">10              (NP[sg])))))           : _4</span>
+</pre></div>
+</div>
+<p>Quantifier raising is discussed in greater detail in the next section.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fuse">
+<span class="sig-name descname"><span class="pre">fuse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subexprs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fuse" title="Permalink to this definition"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">fuse()</span></code> function expands the variables “<code class="docutils literal notranslate"><span class="pre">$1</span></code>,”
+“<code class="docutils literal notranslate"><span class="pre">$2</span></code>,” etc.  It is given an expression and a list of child
+translations.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.interp</span> <span class="kn">import</span> <span class="n">fuse</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fuse</span><span class="p">(</span><span class="n">vp</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;chase&#39;</span><span class="p">,</span> <span class="s1">&#39;Fido&#39;</span><span class="p">])</span>
+<span class="go">(lambda _1 (chase _1 Fido))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="translation">
+<span class="sig-name descname"><span class="pre">translation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#translation" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">translation()</span></code> calls <code class="docutils literal notranslate"><span class="pre">fuse()</span></code> on each node of a
+tree, bottom-up, to convert the tree to a predicate calculus
+expression.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="p">(</span><span class="s1">&#39;Fido barks&#39;</span><span class="p">)</span>
+<span class="go">[&lt;Tree S ...&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="go">0   (S                   : (!qs ($2 $1))</span>
+<span class="go">1      (NP[sg]              : $1</span>
+<span class="go">2         (Name Fido))         : Fido</span>
+<span class="go">3      (VP[sg]              : $1</span>
+<span class="go">4         (V[sg,i,0] barks)))  : bark</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.interp</span> <span class="kn">import</span> <span class="n">translation</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">translation</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="go">(!qs (bark Fido))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="replace_gaps">
+<span class="sig-name descname"><span class="pre">replace_gaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#replace_gaps" title="Permalink to this definition"></a></dt>
+<dd><p>The operator <code class="docutils literal notranslate"><span class="pre">$g</span></code> is the gap metavariable, and the operator
+<code class="docutils literal notranslate"><span class="pre">!g=</span></code> sets its value to a regular variable.  For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(lambda x (!g= x (chase Max $g)))&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span>
+<span class="go">(lambda x (!g= x (chase Max $g)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.interp</span> <span class="kn">import</span> <span class="n">replace_gaps</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">replace_gaps</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">(lambda x (chase Max x))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.interp.Macros">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.interp.</span></span><span class="sig-name descname"><span class="pre">Macros</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.interp.Macros" title="Permalink to this definition"></a></dt>
+<dd><p>Macro replacement is done by calling an instance of <code class="docutils literal notranslate"><span class="pre">Macros</span></code> as a
+function.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.interp</span> <span class="kn">import</span> <span class="n">Macros</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">defs</span> <span class="o">=</span> <span class="n">Macros</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;sg0.defs&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(every d (dog d) (some c (cat c) (chase c d)))&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span>
+<span class="go">(every d (dog d) (some c (cat c) (chase c d)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">defs</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">(forall d (if (dog d) (exists c (and (cat c) (chase c d)))))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="standardize_variables">
+<span class="sig-name descname"><span class="pre">standardize_variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standardize_variables" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">standardize_variables()</span></code> takes an expression and
+returns an equivalent expression in which every variable-binding
+operator binds a unique variable, distinct from each other and from
+all globally free variables.  For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(forall x ((lambda y (exists x (g x y z))) x))&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.interp</span> <span class="kn">import</span> <span class="n">standardize_variables</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">standardize_variables</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">(forall _6 ((lambda _7 (exists _8 (g _8 _7 z))) _6))</span>
+</pre></div>
+</div>
+<p>Note that lambda reduction assumes that variables have been
+standardized.  It does not call <code class="docutils literal notranslate"><span class="pre">standardize_variables()</span></code>, but
+passing an expression to lambda reduction that has non-standardized
+variables can lead to incorrect results.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.interp.Symtab">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.interp.</span></span><span class="sig-name descname"><span class="pre">Symtab</span></span><a class="headerlink" href="#selkie.interp.Symtab" title="Permalink to this definition"></a></dt>
+<dd><p>Both <code class="docutils literal notranslate"><span class="pre">standardize_variables()</span></code> and <code class="docutils literal notranslate"><span class="pre">simplify()</span></code> make
+use of symbol tables.  The class <code class="docutils literal notranslate"><span class="pre">Symtab</span></code> is a specialization of
+<code class="docutils literal notranslate"><span class="pre">dict</span></code>.  It differs from <code class="docutils literal notranslate"><span class="pre">dict</span></code> in two ways.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>It returns <code class="docutils literal notranslate"><span class="pre">None</span></code> for an undefined key (instead of signalling an error).</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">None</span></code> is assigned to a key as value, the key is deleted
+from the table.</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="simplify">
+<span class="sig-name descname"><span class="pre">simplify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#simplify" title="Permalink to this definition"></a></dt>
+<dd><p>Simplification involves replacing <em>lambda applications</em> (the
+application of a lambda expression to arguments) with a simplified
+form in which the arguments are substituted into the body of the
+lambda expression.</p>
+<p>For example,
+suppose that we translate “chases Max” as the lambda expression:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">(</span><span class="n">chases</span> <span class="n">x</span> <span class="n">Max</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Applying that to “Fido” gives us the lambda application:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">(</span><span class="n">chases</span> <span class="n">x</span> <span class="n">Max</span><span class="p">))</span> <span class="n">Fido</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which simplifies, by beta reduction, to:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.interp</span> <span class="kn">import</span> <span class="n">simplify</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;((lambda x (chases x Max)) Fido)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">simplify</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">(chases Fido Max)</span>
+</pre></div>
+</div>
+<p>The implementation of simplification is discussed below in a
+separate section.</p>
+</dd></dl>
+
+</section>
+<section id="quantifier-raising">
+<h2>Quantifier raising<a class="headerlink" href="#quantifier-raising" title="Permalink to this heading"></a></h2>
+<p>We do quantifier raising (QR) <em>before</em> converting the tree to a
+predicate calculus expression.
+To understand the motivation for doing QR before translation, consider
+the following parse tree, for the sentence “every cat chases a dog”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(S                   : (!qs ($2 $1))
+  (NP[sg]              : (!q $1 @ ($2 @))
+    (Det[sg] every)      : every
+    (N[sg] cat))         : cat
+  (VP[sg]              : (lambda @ ($1 @ $2))
+    (V[sg,t,0] chases)   : chase
+    (NP[sg]              : (!q $1 @ ($2 @))
+      (Det[sg] a)          : some
+      (N[sg] dog))))       : dog
+</pre></div>
+</div>
+<p>If we convert the tree to a predicate-calculus expression before doing
+quantifier raising, we get:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(!qs ((lambda _2 (chase _2 (!q some _3 (dog _3))))
+      (!q every _1 (cat _1))))
+</pre></div>
+</div>
+<p>After beta-reduction, we have:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(!qs (chase (!q every _1 (cat _1))
+            (!q some _3 (dog _3))))
+</pre></div>
+</div>
+<p>The result is known as <strong>quasi-logical form</strong> (QLF).  It is not an
+interpretable predicate-calculus expression, but will become one after
+the quantifiers are raised to a scope position.</p>
+<p><strong>Quantifier raising</strong> maps from QLF to logical form (LF).  The
+first step is to excise each quantifier, leaving its variable behind.
+In this case, that leaves only:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">chase</span> <span class="n">_1</span> <span class="n">_3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then one wraps each quantifier in turn around the scope expression.
+(The scope expression becomes an additional argument for the quantifier):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">every</span> <span class="n">_1</span> <span class="p">(</span><span class="n">cat</span> <span class="n">_1</span><span class="p">)</span>
+  <span class="p">(</span><span class="n">some</span> <span class="n">_3</span> <span class="p">(</span><span class="n">dog</span> <span class="n">_3</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">chase</span> <span class="n">_1</span> <span class="n">_3</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>(Note that we have dropped the <code class="docutils literal notranslate"><span class="pre">!q</span></code> and <code class="docutils literal notranslate"><span class="pre">!qs</span></code> operators in
+the process.)</p>
+<p>One observation that will become important is this: each quantifier
+<em>must</em> have a distinct variable.  Consider what happens if the
+quantifiers share the same variable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(!qs (chase (!q every _1 (cat _1))
+            (!q some _1 (dog _1)))))
+</pre></div>
+</div>
+<p>After raising, we have:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">every</span> <span class="n">_1</span> <span class="p">(</span><span class="n">cat</span> <span class="n">_1</span><span class="p">)</span>
+  <span class="p">(</span><span class="n">some</span> <span class="n">_1</span> <span class="p">(</span><span class="n">dog</span> <span class="n">_1</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">chase</span> <span class="n">_1</span> <span class="n">_1</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>This is logically equivalent to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">some</span> <span class="n">_1</span> <span class="p">(</span><span class="n">dog</span> <span class="n">_1</span><span class="p">)</span> <span class="p">(</span><span class="n">chase</span> <span class="n">_1</span> <span class="n">_1</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>which is not at all the correct interpretation.</p>
+<p>Assuming that no rule explicitly creates multiple quantifiers that share a
+variable, each quantifier in the initial translation will have a distinct
+variable.  We need only assure that we do not create duplicates
+anywhere along the line.</p>
+<p>Now a dilemma arises concerning the ordering of quantifier raising
+with respect to lambda reduction.  In the example just given, we did
+lambda reduction first, but that can be problematic.  Specifically,
+doing beta-reduction before quantifier raising can create
+duplicate quantifiers.  Consider the example “some dog is a friendly slobberer.”
+The translation is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(!qs ((lambda _1 (and (friendly _1) (slobberer _1)))
+      (!q some _2 (dog _2))))
+</pre></div>
+</div>
+<p>After beta-reduction, we have:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(!qs (and (friendly (!q some _2 (dog _2)))
+          (slobberer (!q some _2 (dog _2)))))
+</pre></div>
+</div>
+<p>Lambda reduction has duplicated the quantifier.  To avoid erroneous
+interpretations, we have no choice but to rename one set of variables:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(!qs (and (friendly (!q some _2 (dog _2)))
+          (slobberer (!q some _3 (dog _3)))))
+</pre></div>
+</div>
+<p>But now, after quantifier raising, we end up with the wrong meaning:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">some</span> <span class="n">_2</span> <span class="p">(</span><span class="n">dog</span> <span class="n">_2</span><span class="p">)</span>
+  <span class="p">(</span><span class="n">some</span> <span class="n">_3</span> <span class="p">(</span><span class="n">dog</span> <span class="n">_3</span><span class="p">)</span>
+    <span class="p">(</span><span class="ow">and</span> <span class="p">(</span><span class="n">friendly</span> <span class="n">_2</span><span class="p">)</span>
+         <span class="p">(</span><span class="n">slobberer</span> <span class="n">_3</span><span class="p">))))</span>
+</pre></div>
+</div>
+<p>This says that there is a friendly dog, and there is a slobbering dog,
+but it does not imply that they are one and the same dog.</p>
+<p>The obvious conclusion is that we must do quantifier raising before
+doing lambda reduction.  But a problem arises that way as well.
+Consider the sentence “every cat chases a dog,” with
+translation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(!qs ((lambda _2 (chases _2 (!q some _3 (dog _3))))
+      (!q every _1 (cat _1))))
+</pre></div>
+</div>
+<p>When we raise quantifiers, they come out in the wrong order:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">some</span> <span class="n">_3</span> <span class="p">(</span><span class="n">dog</span> <span class="n">_3</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">every</span> <span class="n">_1</span> <span class="p">(</span><span class="n">cat</span> <span class="n">_1</span><span class="p">)</span>
+        <span class="p">((</span><span class="k">lambda</span> <span class="n">_2</span> <span class="p">(</span><span class="n">chases</span> <span class="n">_2</span> <span class="n">_3</span><span class="p">))</span> <span class="n">_1</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>This is a less devastating problem: the sentence is in fact ambiguous,
+and the interpretation we are getting is legitimate, but it is not the
+preferred interpretation.</p>
+<p>There is a third alternative, which is the one we adopt:
+do quantifier raising
+on the syntactic parse tree, before translation.
+We again consider “every cat chases some dog.”  After metavariable
+instantiation, we have:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(S                   : (!qs ($2 $1))
+  (NP[sg]              : (!q $1 _1 ($2 _1))
+    (Det[sg] every)      : every
+    (N[sg] cat))         : cat
+  (VP[sg]              : (lambda _2 ($1 _2 $2))
+    (V[sg,t,0] chases)   : chase
+    (NP[sg]              : (!q $1 _3 ($2 _3))
+      (Det[sg] a)          : some
+      (N[sg] dog))))       : dog
+</pre></div>
+</div>
+<p>The procedure for doing quantifier raising is basically the same, but
+we operate on the node plus semantic attachment, not just on the semantics.
+First, we excise the quantifier nodes, leaving behind an empty node
+whose translation is the variable.  The result is the body:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(S                   : (!qs ($2 $1))
+  (NP[sg])             : _1
+  (VP[sg]              : (lambda _2 ($1 _2 $2))
+    (V[sg,t,0] chases)   : chase
+    (NP[sg])))           : _3
+</pre></div>
+</div>
+<p>Then we wrap the quantifiers around the body.  Syntactically,
+the body becomes an additional child node, and we add a corresponding additional
+“$” variable to the translation.  We also
+drop the “<code class="docutils literal notranslate"><span class="pre">!q</span></code>” and “<code class="docutils literal notranslate"><span class="pre">!qs</span></code>” markers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(NP[sg]              : ($1 _1 ($2 _1) $3)
+  (Det[sg] every)      : every
+  (N[sg] cat)          : cat
+  (NP[sg]              : ($1 _3 ($2 _3) $3)
+    (Det[sg] a)          : some
+    (N[sg] dog)          : dog
+    (S                   : ($2 $1)
+      (NP[sg])             : _1
+      (VP[sg]              : (lambda _2 ($1 _2 $2))
+        (V[sg,t,0] chases)   : chase
+        (NP[sg])))))         : _3
+</pre></div>
+</div>
+<p>Only after quantifier raising do we fuse the semantic attachments.
+The result is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">every</span> <span class="n">_1</span> <span class="p">(</span><span class="n">cat</span> <span class="n">_1</span><span class="p">)</span>
+  <span class="p">(</span><span class="n">some</span> <span class="n">_3</span> <span class="p">(</span><span class="n">dog</span> <span class="n">_3</span><span class="p">)</span>
+    <span class="p">((</span><span class="k">lambda</span> <span class="n">_2</span> <span class="p">(</span><span class="n">chase</span> <span class="n">_2</span> <span class="n">_3</span><span class="p">))</span> <span class="n">_1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now beta-reduction is safe.</p>
+<p>Incidentally, there is an independent motivation for this approach.  Scope preferences
+often care about the particular English word used.  For example, “each” and
+“every” differ not in meaning, but in that “each” prefers wide
+scope and “every” prefers narrow scope.</p>
+</section>
+<section id="simplification">
+<h2>Simplification<a class="headerlink" href="#simplification" title="Permalink to this heading"></a></h2>
+<p>Simplification involves applying <strong>beta reduction</strong> to each
+lambda-expression application in the expression.
+The general form of a lambda application is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>((``lambda`` *params body*) *args*).
+</pre></div>
+</div>
+<p>Consider the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">(</span><span class="n">chases</span> <span class="n">x</span> <span class="n">Max</span><span class="p">))</span> <span class="n">Fido</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this case, <em>params</em> is <code class="docutils literal notranslate"><span class="pre">[x]</span></code> (a
+single-element list), <em>body</em> is
+<code class="docutils literal notranslate"><span class="pre">(chases</span> <span class="pre">x</span> <span class="pre">Max)</span></code>, and <em>args</em> is <code class="docutils literal notranslate"><span class="pre">[Fido]</span></code> (also a
+single-element list).
+In beta reduction, all occurrences of the parameters in the body are
+replaced with the corresponding arguments, yielding a simpler
+expression that is equivalent to the original.  In this case (as we
+have already seen), the result is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">chases</span> <span class="n">Fido</span> <span class="n">Max</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here are some more examples.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;((lambda (x y) (knows (mother y) x))</span>
+<span class="gp">... </span><span class="s1">                   Fido</span>
+<span class="gp">... </span><span class="s1">                   (the cat))&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">simplify</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">(knows (mother (the cat)) Fido)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;((lambda x (and (friendly x) (slobberer x)))</span>
+<span class="gp">... </span><span class="s1">                   Fido)&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">simplify</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">(and (friendly Fido) (slobberer Fido))</span>
+</pre></div>
+</div>
+<p>Beta reduction can be defined as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(λ x.t)s = t[x→s]
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">t[x→s]</span></code> means the expression <em>t</em> with all free
+occurrences of <em>x</em> replaced by <em>s</em>.  The result may be another lambda
+application, in which case it is necessary to reduce again.</p>
+<p>Substitution is defined more precisely as follows:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x[x→r]</span> <span class="pre">=</span> <span class="pre">r</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">y[x→r]</span> <span class="pre">=</span> <span class="pre">y</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(ts)[x→r]</span> <span class="pre">=</span> <span class="pre">(t[x→r])(s[x→r])</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(λ</span> <span class="pre">x.t)[x→r]</span> <span class="pre">=</span> <span class="pre">λ</span> <span class="pre">x.t</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(λ</span> <span class="pre">y.t)[x→r]</span> <span class="pre">=</span> <span class="pre">λ</span> <span class="pre">y.t[x→r]</span></code></p></li>
+</ol>
+</div></blockquote>
+<p>Here, <em>x</em> and <em>y</em> are (distinct) variables; <em>r</em>, <em>s</em>, and <em>t</em> are
+(possibly complex) terms.</p>
+<p>There is one caveat: in rule (5), the
+variable <em>y</em> must not occur free in <em>r</em>.  If it did, it would be
+invalidly captured by the lambda.  This is true for variable-binding
+operators more generally: the substitution:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>forall y.t[x→r]
+</pre></div>
+</div>
+<p>would also be invalid if <em>y</em> occurs free in <em>r</em>.</p>
+<p>We can prevent this happening by
+first renaming all variables involved in variable-binding expressions, so that
+every variable-binding operator has its own unique variable.  (The standard term
+for this renaming is <em>alpha conversion.</em>)
+Incidentally, doing so makes (d) moot.</p>
+<p>It is possible to construct pathological expressions for which
+beta-reduction never returns.  Consider:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">λ</span> <span class="n">x</span><span class="o">.</span><span class="n">xx</span><span class="p">)(</span><span class="n">λ</span> <span class="n">x</span><span class="o">.</span><span class="n">xx</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We apply the substitution <code class="docutils literal notranslate"><span class="pre">[x→λ</span> <span class="pre">x.xx]</span></code> to the term
+<em>xx</em>, with the result:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">λ</span> <span class="n">x</span><span class="o">.</span><span class="n">xx</span><span class="p">)(</span><span class="n">λ</span> <span class="n">x</span><span class="o">.</span><span class="n">xx</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>That is, we are right back where we started, and repeated reductions
+will never terminate.</p>
+<p>The current implementation does not attempt to prevent this.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="beta_reduce">
+<span class="sig-name descname"><span class="pre">beta_reduce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#beta_reduce" title="Permalink to this definition"></a></dt>
+<dd><p><em>Expr</em> must be a lambda application of form ((lambda params body) args).
+For convenience, we permit <em>params</em> to be either a Variable
+or a list of Variables.  If it is a Variable, treat it as a singleton list.</p>
+<p>Reduce each of the arguments using the current environment.
+Add the substitution param→arg to the environment,
+for each parameter-argument pair.  The value for the parameter is the
+argument after reduction.
+Reduce the body using the new substitution and return the result.</p>
+</dd></dl>
+
+<p>The function <code class="docutils literal notranslate"><span class="pre">beta_reduce()</span></code> assumes that variables have
+already been standardized.  We combine substitution and
+reduction into a single
+pass through an expression.  I.e., while applying a substitution to an
+expression, if the expression happens to be a lambda application, we
+reduce it, adding bindings to the substitution.  We assume that
+variables have already been standardized.
+The combined process can be summed up as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x[x→r|α] = r
+y[α] = y if *y* has no value in α
+((λ x.t)s)[α] = t[x→s[α]|α]
+(ts)[α] = (t[α])(s[α])
+(λ y.t)[α] = λ y.t[α]
+</pre></div>
+</div>
+<p>In detail, <code class="docutils literal notranslate"><span class="pre">simplify(expr)</span></code> is defined as follows.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">expr</span></code> is a bound variable, return its value.  If it is
+a free variable, return the variable itself.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">expr</span></code> is a constant (i.e., not an <code class="docutils literal notranslate"><span class="pre">Expr</span></code>), return it.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">expr</span></code> is a lambda application, return <code class="docutils literal notranslate"><span class="pre">beta_reduce(expr)</span></code>.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">expr</span></code> is headed by a variable-binding operator,
+return a new expression consisting of operator, parameter list, and
+the reduced body.</p></li>
+<li><p>Otherwise, return a new expression consisting of the reductions of
+all elements <code class="docutils literal notranslate"><span class="pre">expr</span></code>.</p></li>
+</ul>
+</div></blockquote>
+<p>However, if the return value is itself a lambda application, reduce it
+repeatedly until we obtain something that is not a lambda application.</p>
+<p>Here is an example.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;((lambda (x y) (foo (bar y) x)) (mother jack) (father jill))&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">simplify</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">(foo (bar (father jill)) (mother jack))</span>
+</pre></div>
+</div>
+<p>Here is a somewhat trickier example.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;((lambda (P x) (P x))</span>
+<span class="gp">... </span><span class="s1">                   (lambda y (forall z (f y z)))</span>
+<span class="gp">... </span><span class="s1">                   Fido)&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">simplify</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">(forall z (f Fido z))</span>
+</pre></div>
+</div>
+</section>
+<section id="the-interpreter">
+<h2>The interpreter<a class="headerlink" href="#the-interpreter" title="Permalink to this heading"></a></h2>
+<p>The interpreter is created from a grammar file name.  It creates and
+stores a parser for the grammar.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.interp</span> <span class="kn">import</span> <span class="n">Interpreter</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">interp</span> <span class="o">=</span> <span class="n">Interpreter</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;sg1a&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>It behaves as a function.  It takes a sentence as input, parses it,
+and interprets it.  The return value is a list of predicate-calculus
+expressions, one for each parse tree.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">interp</span><span class="p">(</span><span class="s1">&#39;every cat chases a dog&#39;</span><span class="p">)</span>
+<span class="go">[(forall _22 (if (cat _22) (exists _23 (and (dog _23) (chase _22 _23)))))]</span>
+</pre></div>
+</div>
+<p>One can see the results of each step of processing by providing the
+keyword argument <code class="docutils literal notranslate"><span class="pre">trace=True</span></code>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="expr.html" class="btn btn-neutral float-left" title="selkie.expr — Predicate calculus" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="logic.html" class="btn btn-neutral float-right" title="selkie.logic — Automated reasoning" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

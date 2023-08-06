@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.ssh — Secure Shell (SSH) &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.ipynb — Extracting code from Jupyter notebooks" href="ipynb.html" />
+    <link rel="prev" title="selkie.manifest — Manifest of sizes, hashes" href="manifest.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">General-purpose tools</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="manifest.html"><code class="docutils literal notranslate"><span class="pre">selkie.manifest</span></code> — Manifest of sizes, hashes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.ssh</span></code> — Secure Shell (SSH)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipynb.html"><code class="docutils literal notranslate"><span class="pre">selkie.ipynb</span></code> — Extracting code from Jupyter notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctest.html"><code class="docutils literal notranslate"><span class="pre">selkie.doctest</span></code> — Extract doctest from HTML, tex</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp/index.html">The NLP pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">General-purpose tools</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.ssh</span></code> — Secure Shell (SSH)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dev/ssh.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="module-selkie.ssh"></span><section id="selkie-ssh-secure-shell-ssh">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.ssh</span></code> — Secure Shell (SSH)<a class="headerlink" href="#selkie-ssh-secure-shell-ssh" title="Permalink to this heading"></a></h1>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
+<p>The module <code class="docutils literal notranslate"><span class="pre">selkie.ssh</span></code> provides a python interface to secure
+shell calls.  The main entry point is the function <code class="docutils literal notranslate"><span class="pre">connection()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ssh</span> <span class="kn">import</span> <span class="n">connection</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ssh</span> <span class="o">=</span> <span class="n">connection</span><span class="p">(</span><span class="s1">&#39;host123&#39;</span><span class="p">,</span> <span class="s1">&#39;me&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.ssh.connection">
+<span class="sig-prename descclassname"><span class="pre">selkie.ssh.</span></span><span class="sig-name descname"><span class="pre">connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.ssh.connection" title="Permalink to this definition"></a></dt>
+<dd><p>Three keyword arguments are available that affect the behavior of
+the connection:</p>
+<dl class="simple">
+<dt>show_progress</dt><dd><p>If true, progress information is printed about what the
+connection is doing.  Default: <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd>
+<dt>show_responses</dt><dd><p>If true, responses from the server are
+printed as they are received.  Default: <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd>
+<dt>return_responses</dt><dd><p>If true, responses are collected and returned as a single string
+when the call completes.  Default: <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>The ssh module maintains a table of remote SSH servers, each represented
+locally by a Server instance.  The password is stored in the Server
+instance, so that one only needs to enter it once, the first time one
+connects to the server.
+The information provided to <code class="docutils literal notranslate"><span class="pre">connection()</span></code> as keywords (degree of
+verbosity and what to return) is stored
+in the Connection rather than the Server.
+A server is identified by
+host and user name.  User name may be omitted if it is the same as
+one’s user name on the local machine.  Servers are cached in a table
+so that a new connection to the same host uses the same server instance.</p>
+<p>One may invoke the connection as a function to issue a shell command on
+the remote machine.  An SSH connection is created, the function is
+called, and the SSH connection is closed, but the Connection object
+persists:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">ssh</span><span class="p">(</span><span class="s1">&#39;ls&#39;</span><span class="p">)</span>
+<span class="go">[SSH: Fork completed, child pid=23496]</span>
+<span class="go">[SSH: Authenticate]</span>
+<span class="go">[SSH: Reading]</span>
+<span class="go">[SSH: Read b&#39;Password: &#39;]</span>
+<span class="go">Password: [SSH: Password request]</span>
+<span class="go">[SSH: Getting password from user]</span>
+<span class="go">Password for abney@login.itd.umich.edu:</span>
+<span class="go">[SSH: Sending password]</span>
+<span class="go">[SSH: Checking response, first read]</span>
+<span class="go">[SSH: Read b&#39;\r\n&#39;]</span>
+
+<span class="go">[SSH: Checking response, second read]</span>
+<span class="go">[SSH: Read b&#39;AppleVolumes\r\nbot\r\n...]</span>
+<span class="go">AppleVolumes</span>
+<span class="go">bot</span>
+<span class="go">cl</span>
+<span class="gp">...</span>
+<span class="go">seal</span>
+<span class="go">Shared</span>
+<span class="go">[SSH: Push back]</span>
+<span class="go">[SSH: Authentication complete]</span>
+<span class="go">[SSH: Reading response block]</span>
+<span class="go">[SSH: Reading response block]</span>
+<span class="go">[SSH: EOF]</span>
+<span class="go">[SSH: Response complete]</span>
+</pre></div>
+</div>
+<p>The trace messages “[SSH: …]” are displayed in magenta, and
+the strings read from the server are displayed in cyan.
+The return value does not include the prompt for the password:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[:</span><span class="mi">12</span><span class="p">]</span>
+<span class="go">&#39;AppleVolumes&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">connection()</span></code> function is actually an instance of ServerTable.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.ssh.ServerTable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.ssh.</span></span><span class="sig-name descname"><span class="pre">ServerTable</span></span><a class="headerlink" href="#selkie.ssh.ServerTable" title="Permalink to this definition"></a></dt>
+<dd><p>A table mapping a host name to a server that connects to that
+host.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.ssh.ServerTable.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">host[,</span> <span class="pre">user][,</span> <span class="pre">show_progress][,</span> <span class="pre">show_responses][,</span> <span class="pre">return_responses]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.ssh.ServerTable.__call__" title="Permalink to this definition"></a></dt>
+<dd><p>Fetch a server (creating it if it does not already exist), and
+return a new Connection with the given settings.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Server">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.ssh.</span></span><span class="sig-name descname"><span class="pre">Server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Server" title="Permalink to this definition"></a></dt>
+<dd><p>If user is None or not provided, it defaults to getpass.getuser().</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Server.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Server.user" title="Permalink to this definition"></a></dt>
+<dd><p>The user name (a string).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Server.host">
+<span class="sig-name descname"><span class="pre">host</span></span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Server.host" title="Permalink to this definition"></a></dt>
+<dd><p>The remote hostname (a string).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Server.password">
+<span class="sig-name descname"><span class="pre">password</span></span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Server.password" title="Permalink to this definition"></a></dt>
+<dd><p>The user will be prompted once for this, no matter how many
+times calls are placed to the server.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Server.hoststring">
+<span class="sig-name descname"><span class="pre">hoststring</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Server.hoststring" title="Permalink to this definition"></a></dt>
+<dd><p>Has the form “<a class="reference external" href="mailto:user&#37;&#52;&#48;host">user<span>&#64;</span>host</a>”.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Server.hostpath">
+<span class="sig-name descname"><span class="pre">hostpath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Server.hostpath" title="Permalink to this definition"></a></dt>
+<dd><p>Has the form “<a class="reference external" href="mailto:user&#37;&#52;&#48;host">user<span>&#64;</span>host</a>:path”.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Server.connection">
+<span class="sig-name descname"><span class="pre">connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">[show_progress]</span> <span class="pre">[,show_responses]</span> <span class="pre">[,return_responses]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Server.connection" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a new Connection.  Creating a Connection does not
+actually send anything to the server; it just stores the
+settings.  By default, all are on.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Connection">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.ssh.</span></span><span class="sig-name descname"><span class="pre">Connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">server</span> <span class="pre">[,show_progress]</span> <span class="pre">[,show_responses]</span> <span class="pre">[,return_responses]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Connection" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Connection.server">
+<span class="sig-name descname"><span class="pre">server</span></span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Connection.server" title="Permalink to this definition"></a></dt>
+<dd><p>The SSH Server.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Connection.show_progress">
+<span class="sig-name descname"><span class="pre">show_progress</span></span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Connection.show_progress" title="Permalink to this definition"></a></dt>
+<dd><p>Whether to show progress.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Connection.show_responses">
+<span class="sig-name descname"><span class="pre">show_responses</span></span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Connection.show_responses" title="Permalink to this definition"></a></dt>
+<dd><p>Whether to show responses from the server.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Connection.return_responses">
+<span class="sig-name descname"><span class="pre">return_responses</span></span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Connection.return_responses" title="Permalink to this definition"></a></dt>
+<dd><p>Whether to return responses.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Connection.child_pid">
+<span class="sig-name descname"><span class="pre">child_pid</span></span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Connection.child_pid" title="Permalink to this definition"></a></dt>
+<dd><p>The child process PID, when a request is in progress.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Connection.hoststring">
+<span class="sig-name descname"><span class="pre">hoststring</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Connection.hoststring" title="Permalink to this definition"></a></dt>
+<dd><p>Dispatches to the server.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Connection.hostpath">
+<span class="sig-name descname"><span class="pre">hostpath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Connection.hostpath" title="Permalink to this definition"></a></dt>
+<dd><p>Dispatches to the server.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.ssh.selkie.ssh.Connection.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.ssh.selkie.ssh.Connection.__call__" title="Permalink to this definition"></a></dt>
+<dd><p>Execute a remote command and return the value.
+It spawns a subprocess in which it logs in, sends the command,
+and gets the response.  It cleans up the subprocess and returns
+the response.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="manifest.html" class="btn btn-neutral float-left" title="selkie.manifest — Manifest of sizes, hashes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ipynb.html" class="btn btn-neutral float-right" title="selkie.ipynb — Extracting code from Jupyter notebooks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

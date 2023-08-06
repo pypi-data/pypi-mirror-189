@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.seq — Sequences and iterators &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.map — The Index class" href="map.html" />
+    <link rel="prev" title="selkie.string — Strings" href="string.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python extensions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html"><code class="docutils literal notranslate"><span class="pre">selkie.config</span></code> — Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object.html"><code class="docutils literal notranslate"><span class="pre">selkie.object</span></code> — Types, reflexion, generic object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html"><code class="docutils literal notranslate"><span class="pre">selkie.string</span></code> — Strings</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.seq</span></code> — Sequences and iterators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map.html"><code class="docutils literal notranslate"><span class="pre">selkie.map</span></code> — The Index class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html"><code class="docutils literal notranslate"><span class="pre">selkie.io</span></code> — Input/output functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="newio.html"><code class="docutils literal notranslate"><span class="pre">selkie.newio</span></code> — New I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fs.html"><code class="docutils literal notranslate"><span class="pre">selkie.fs</span></code> — File system convenience functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.html"><code class="docutils literal notranslate"><span class="pre">selkie.com</span></code> — Command invocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp/index.html">The NLP pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Python extensions</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.seq</span></code> — Sequences and iterators</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pyext/seq.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-seq-sequences-and-iterators">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.seq</span></code> — Sequences and iterators<a class="headerlink" href="#selkie-seq-sequences-and-iterators" title="Permalink to this heading"></a></h1>
+<section id="list-producing-functions">
+<h2>List-producing functions<a class="headerlink" href="#list-producing-functions" title="Permalink to this heading"></a></h2>
+<p>The functions <code class="docutils literal notranslate"><span class="pre">as_list()</span></code>, <code class="docutils literal notranslate"><span class="pre">repeatable()</span></code>, <code class="docutils literal notranslate"><span class="pre">concat()</span></code>, <code class="docutils literal notranslate"><span class="pre">unique()</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">cross_product()</span></code> produce lists as output.</p>
+<p><strong>As list.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">as_list()</span></code> converts any item <em>x</em> to a list.</p>
+<p>If <em>x</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, it returns the empty list.
+If <em>x</em> is a list, it returns <em>x</em> itself.
+If <em>x</em> is a sequence, it returns <code class="docutils literal notranslate"><span class="pre">list(*x*)</span></code>.
+If <em>x</em> is has attribute “<code class="docutils literal notranslate"><span class="pre">next</span></code>,” it takes <em>x</em> to be a
+generator and returns <code class="docutils literal notranslate"><span class="pre">list(*x*)</span></code>.
+Otherwise, it returns <code class="docutils literal notranslate"><span class="pre">[*x*]</span></code>.</p>
+<p><strong>Repeatable.</strong>
+A generator can only be used once, whereas iterables such as lists,
+tuples, sets, and dicts can be iterated over multiple times.
+The function <code class="docutils literal notranslate"><span class="pre">repeatable()</span></code> converts a generator into a list, but
+leaves other iterables alone.  It coerces <code class="docutils literal notranslate"><span class="pre">None</span></code> to the empty
+list, but otherwise signals an error if its input is not an iterable.
+It assumes that any object with a <code class="docutils literal notranslate"><span class="pre">next</span></code> attribute is a generator,
+and any object with an <code class="docutils literal notranslate"><span class="pre">__iter__</span></code>
+attribute is an iterable.</p>
+<p><strong>Unique.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">unique()</span></code> takes a list as input and produces a list
+with all duplicates removed.  The list does not need to be sorted, nor
+do duplicates need to be adjacent to each other.  The algorithm is
+naive (quadratic), so it is only appropriate for short lists.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.seq</span> <span class="kn">import</span> <span class="n">unique</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">unique</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="go">[4, 2, 1]</span>
+</pre></div>
+</div>
+<p><strong>Cross product.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">cross_product()</span></code> takes a single argument, a list of
+lists, and produces the cross product of those lists as output.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.seq</span> <span class="kn">import</span> <span class="n">cross_product</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cross_product</span><span class="p">([[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">42</span><span class="p">]])</span>
+<span class="go">[(&#39;a&#39;, 1, 42), (&#39;a&#39;, 2, 42), (&#39;b&#39;, 1, 42), (&#39;b&#39;, 2, 42)]</span>
+</pre></div>
+</div>
+</section>
+<section id="sorted-lists">
+<h2>Sorted lists<a class="headerlink" href="#sorted-lists" title="Permalink to this heading"></a></h2>
+<p>The functions <code class="docutils literal notranslate"><span class="pre">intersect</span></code>, <code class="docutils literal notranslate"><span class="pre">union</span></code>, and <code class="docutils literal notranslate"><span class="pre">difference</span></code>
+expect sorted lists as input.  Their behavior is unpredictable if they
+are given unsorted lists.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.seq</span> <span class="kn">import</span> <span class="n">intersect</span><span class="p">,</span> <span class="n">union</span><span class="p">,</span> <span class="n">difference</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">intersect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="go">[3, 7]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">union</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="go">[1, 2, 3, 4, 5, 6, 7, 8]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">difference</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="go">[1, 5, 6]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">difference</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="go">[2, 4, 8]</span>
+</pre></div>
+</div>
+</section>
+<section id="queue">
+<h2>Queue<a class="headerlink" href="#queue" title="Permalink to this heading"></a></h2>
+<p>A <code class="docutils literal notranslate"><span class="pre">Queue</span></code> is a first-in first-out queue.  The method <code class="docutils literal notranslate"><span class="pre">write()</span></code>
+inserts an element at the tail of the queue, and <code class="docutils literal notranslate"><span class="pre">read()</span></code> removes
+and returns the element at the head of the queue.</p>
+<p>It is implemented as a buffer with head and tail pointers.  Initially
+the buffer is empty.  If the tail is at the end of the buffer, new
+elements are appended to the buffer and the buffer grows.
+When the queue is empty, the head and tail are reset to 0.</p>
+<p>Space in the buffer before the head is “wasted” space.  If the
+wasted space exceeds a threshold (<code class="docutils literal notranslate"><span class="pre">maxwaste</span></code>), the contents of the
+queue are relocated so that the head is 0.  One can specify <code class="docutils literal notranslate"><span class="pre">maxwaste</span></code>
+when creating the queue; by default it is 10.  Setting <code class="docutils literal notranslate"><span class="pre">maxwaste</span></code>
+to <code class="docutils literal notranslate"><span class="pre">None</span></code> prevents the
+contents from being relocated (though the head and tail will still be
+reset to 0 if the queue becomes empty).</p>
+<p>The elements in the queue can be accessed and set by index.</p>
+</section>
+<section id="edit-distance">
+<h2>Edit distance<a class="headerlink" href="#edit-distance" title="Permalink to this heading"></a></h2>
+<p>Edit distance works with sequences generally, not just strings.
+To create and use an edit distance function:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.seq</span> <span class="kn">import</span> <span class="n">EditDistance</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">distance</span> <span class="o">=</span> <span class="n">EditDistance</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">distance</span><span class="p">(</span><span class="s1">&#39;testy&#39;</span><span class="p">,</span> <span class="s1">&#39;tezt&#39;</span><span class="p">)</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>By default, it uses the function <code class="docutils literal notranslate"><span class="pre">simple_distance()</span></code>, which
+imposes a cost of 1 for each insertion, substitution, or deletion.
+One can provide a new cost function when instantiating
+EditDistance.  A cost function should take two arguments, <em>x</em>
+and <em>y</em>, representing a deletion if <em>y</em> is None, and
+insertion if <em>x</em> is None, and a substitution, if neither is
+None.  The return value should be a number, possibly math.inf.</p>
+</section>
+<section id="generators">
+<h2>Generators<a class="headerlink" href="#generators" title="Permalink to this heading"></a></h2>
+<p>The following functions are provided that relate to generators:
+<code class="docutils literal notranslate"><span class="pre">chain()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">nth()</span></code>, <code class="docutils literal notranslate"><span class="pre">head()</span></code>, <code class="docutils literal notranslate"><span class="pre">tail()</span></code>, <code class="docutils literal notranslate"><span class="pre">more()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">product()</span></code>, <code class="docutils literal notranslate"><span class="pre">count()</span></code>, and <code class="docutils literal notranslate"><span class="pre">counts()</span></code>.</p>
+<p>For the purpose of illustration, let us define a little generator:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">pots</span> <span class="p">():</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">yield</span> <span class="mi">2</span><span class="o">**</span><span class="n">i</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">pots</span><span class="p">())</span>
+<span class="go">[1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]</span>
+</pre></div>
+</div>
+<p><strong>Chain.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">chain()</span></code> is imported from <code class="docutils literal notranslate"><span class="pre">itertools</span></code>.
+It concatenates multiple generators.</p>
+<p><strong>Nth.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">nth()</span></code> returns a particular item from an iterator.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.seq</span> <span class="kn">import</span> <span class="n">nth</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nth</span><span class="p">(</span><span class="n">pots</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>Remember that an iterable is consumed as one iterates through it.  In
+the example just given, we created a new generator by calling <code class="docutils literal notranslate"><span class="pre">pots()</span></code>.
+If we use its value, though, we need to be careful:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">iter</span> <span class="o">=</span> <span class="n">pots</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nth</span><span class="p">(</span><span class="nb">iter</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">iter</span><span class="p">)</span>
+<span class="go">[8, 16, 32, 64, 128, 256, 512, 1024]</span>
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">nth()</span></code> consumed the first three items.
+One use of <code class="docutils literal notranslate"><span class="pre">nth</span></code> is to jump to problematic cases in a large
+iteration.  An idiom for finding such cases in the first place is the
+following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">myiteration</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">isproblematic</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">i</span>
+</pre></div>
+</div>
+<p><strong>Head, tail.</strong>
+The functions <code class="docutils literal notranslate"><span class="pre">head()</span></code> and <code class="docutils literal notranslate"><span class="pre">tail()</span></code> are also provided for
+inspecting parts of a large iterable.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.seq</span> <span class="kn">import</span> <span class="n">head</span><span class="p">,</span> <span class="n">tail</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">head</span><span class="p">(</span><span class="n">pots</span><span class="p">())</span>
+<span class="go">[1, 2, 4, 8, 16]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tail</span><span class="p">(</span><span class="n">pots</span><span class="p">())</span>
+<span class="go">[64, 128, 256, 512, 1024]</span>
+</pre></div>
+</div>
+<p>An optional argument specifies how many items one would like to have:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">head</span><span class="p">(</span><span class="n">pots</span><span class="p">(),</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">[1, 2, 4]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tail</span><span class="p">(</span><span class="n">pots</span><span class="p">(),</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">[256, 512, 1024]</span>
+</pre></div>
+</div>
+<p>A more general function is <code class="docutils literal notranslate"><span class="pre">islice</span></code>, from the standard
+<code class="docutils literal notranslate"><span class="pre">itertools</span></code> module.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">islice</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">islice</span><span class="p">(</span><span class="n">pots</span><span class="p">(),</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="go">[4, 8, 16]</span>
+</pre></div>
+</div>
+<p><strong>More.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">more()</span></code> calls <code class="docutils literal notranslate"><span class="pre">print</span></code> on each item in turn,
+pausing after a pageful of items has been displayed.  Hitting return
+causes another page to be displayed, and hitting ‘q’ then enter causes
+<code class="docutils literal notranslate"><span class="pre">more()</span></code> to quit.</p>
+<p>One can adjust the pagesize by setting <code class="docutils literal notranslate"><span class="pre">more.pagesize</span></code>.  For
+example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">more</span><span class="o">.</span><span class="n">pagesize</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">more</span><span class="p">(</span><span class="n">pots</span><span class="p">())</span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">4</span>
+<span class="go">8</span>
+<span class="go">q</span>
+</pre></div>
+</div>
+<p><strong>Product.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">product()</span></code> is analogous to <code class="docutils literal notranslate"><span class="pre">sum()</span></code>.  It takes an
+iterable containing numbers, and returns the product of the numbers.</p>
+<p><strong>Count.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">count()</span></code> is analogous to <code class="docutils literal notranslate"><span class="pre">len()</span></code>, except that it
+works for generators as well as lists and other iterables.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.seq</span> <span class="kn">import</span> <span class="n">count</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">count</span><span class="p">(</span><span class="n">pots</span><span class="p">())</span>
+<span class="go">11</span>
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">count</span></code> is unrelated to <code class="docutils literal notranslate"><span class="pre">itertools.count()</span></code>.  The
+latter returns an infinite iterator that generates the natural
+numbers.</p>
+<p><strong>Counts.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">counts()</span></code> creates a table of counts of occurrences.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.seq</span> <span class="kn">import</span> <span class="n">counts</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tab</span> <span class="o">=</span> <span class="n">counts</span><span class="p">(</span><span class="s1">&#39;abracadabra&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">tab</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+<span class="go">[(&#39;a&#39;, 5), (&#39;b&#39;, 2), (&#39;c&#39;, 1), (&#39;d&#39;, 1), (&#39;r&#39;, 2)]</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="string.html" class="btn btn-neutral float-left" title="selkie.string — Strings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="map.html" class="btn btn-neutral float-right" title="selkie.map — The Index class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

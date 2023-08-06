@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.tree — Trees &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.stemmer — English stemmer" href="stemmer.html" />
+    <link rel="prev" title="selkie.fst — Finite-state transducers" href="fst.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The NLP pipeline</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="fsa.html"><code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> — Finite-state automata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fst.html"><code class="docutils literal notranslate"><span class="pre">selkie.fst</span></code> — Finite-state transducers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> — Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemmer.html"><code class="docutils literal notranslate"><span class="pre">selkie.stemmer</span></code> — English stemmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="head.html"><code class="docutils literal notranslate"><span class="pre">selkie.head</span></code> — Head marking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dep.html"><code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> — Dependency conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html"><code class="docutils literal notranslate"><span class="pre">selkie.features</span></code> — Non-recursive features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avs.html"><code class="docutils literal notranslate"><span class="pre">selkie.avs</span></code> — Recursive feature structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grammar.html"><code class="docutils literal notranslate"><span class="pre">selkie.grammar</span></code> — Constituent grammars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gdev.html"><code class="docutils literal notranslate"><span class="pre">selkie.gdev</span></code> — Grammar development tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen.html"><code class="docutils literal notranslate"><span class="pre">selkie.gen</span></code> — Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parser.html"><code class="docutils literal notranslate"><span class="pre">selkie.parser</span></code> — Constituent parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expr.html"><code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code> — Predicate calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interp.html"><code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> — Semantic interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.html"><code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> — Automated reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bot.html"><code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> — Conversational agent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">The NLP pipeline</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> — Trees</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/nlp/tree.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-tree-trees">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> — Trees<a class="headerlink" href="#selkie-tree-trees" title="Permalink to this heading"></a></h1>
+<section id="the-tree-class">
+<h2>The Tree class<a class="headerlink" href="#the-tree-class" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.tree.Tree">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.tree.</span></span><span class="sig-name descname"><span class="pre">Tree</span></span><a class="headerlink" href="#selkie.tree.Tree" title="Permalink to this definition"></a></dt>
+<dd><p>The nodes of a tree are represented by instances of the class
+<code class="docutils literal notranslate"><span class="pre">Tree</span></code>.  There is no
+separate node class: a node and the tree rooted at the node are both
+represented by a <code class="docutils literal notranslate"><span class="pre">Tree</span></code> instance.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.tree.Tree.word">
+<span class="sig-name descname"><span class="pre">word</span></span><a class="headerlink" href="#selkie.tree.Tree.word" title="Permalink to this definition"></a></dt>
+<dd><p>A string or None.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.tree.Tree.cat">
+<span class="sig-name descname"><span class="pre">cat</span></span><a class="headerlink" href="#selkie.tree.Tree.cat" title="Permalink to this definition"></a></dt>
+<dd><p>Category.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.tree.Tree.sem">
+<span class="sig-name descname"><span class="pre">sem</span></span><a class="headerlink" href="#selkie.tree.Tree.sem" title="Permalink to this definition"></a></dt>
+<dd><p>Semantic translation or None.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.tree.Tree.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#selkie.tree.Tree.id" title="Permalink to this definition"></a></dt>
+<dd><p>An identifier.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.tree.Tree.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#selkie.tree.Tree.parent" title="Permalink to this definition"></a></dt>
+<dd><p>The parent node, if <code class="docutils literal notranslate"><span class="pre">set_parents()</span></code> was done.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.tree.Tree.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.tree.Tree.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Members can be specified as keywords.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.tree.Tree.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.tree.Tree.copy" title="Permalink to this definition"></a></dt>
+<dd><p>Members can be specified as keywords.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.tree.Tree.__getitem__">
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.tree.Tree.__getitem__" title="Permalink to this definition"></a></dt>
+<dd><p>I-th node in preorder walk.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.tree.Tree.__iter__">
+<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.tree.Tree.__iter__" title="Permalink to this definition"></a></dt>
+<dd><p>Preorder walk.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.tree.Tree.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.tree.Tree.__str__" title="Permalink to this definition"></a></dt>
+<dd><p>Pretty-printed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="basic-node-types">
+<h2>Basic node types<a class="headerlink" href="#basic-node-types" title="Permalink to this heading"></a></h2>
+<p>We wish to accommodate the nodes that occur in three kinds of trees:
+unheaded phrase-structure trees, headed phrase-structure trees, and
+dependency trees.  The attributes <code class="docutils literal notranslate"><span class="pre">word</span></code>, <code class="docutils literal notranslate"><span class="pre">children</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">role</span></code> are used to distinguish among node types.</p>
+<p><strong>Interior and leaf.</strong>
+The <code class="docutils literal notranslate"><span class="pre">children</span></code> attribute distinguishes between <em>interior</em>
+nodes and <em>leaf</em> nodes.  The former have children; the latter do not.
+Governors and phrasal nodes are interior nodes.  An interior node is
+<em>headed</em> if one of its children has the role <code class="docutils literal notranslate"><span class="pre">'head'</span></code>, and it is
+<em>unheaded</em> otherwise.</p>
+<p><strong>Lexical and nonlexical.</strong>
+A node that has a (boolean True) value for <code class="docutils literal notranslate"><span class="pre">word</span></code> is <em>lexical</em>;
+otherwise the node is <em>nonlexical</em>.</p>
+<p>Taking the cross product yields the following five node types:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 13%" />
+<col style="width: 27%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" rowspan="2"></th>
+<th class="head" rowspan="2"><p>Leaf</p></th>
+<th class="head" colspan="2"><p>Interior</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>Headed</p></th>
+<th class="head"><p>Unheaded</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p><strong>Nonlexical</strong>:</p></td>
+<td><p>empty</p></td>
+<td><p>headed phrase</p></td>
+<td><p>unheaded phrase</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Lexical</strong>:</p></td>
+<td><p>word</p></td>
+<td colspan="2"><p>governor</p></td>
+</tr>
+</tbody>
+</table>
+<p>For a governor, a child with role <code class="docutils literal notranslate"><span class="pre">'head'</span></code> has no
+special status.</p>
+<p><strong>Terminal and nonterminal.</strong>
+The interior-leaf distinction is <em>not</em> the same as
+the terminal-nonterminal distinction.  The latter is a property of
+categories, as determined by a grammar.  Terminal categories are not
+allowed to appear on the lefthand side of a rewrite rule, whereas
+nonterminal categories that are not useless appear on the lefthand
+side of at least one rewrite rule.
+It is possible to have leaf
+nodes with nonterminal categories: such nodes are <em>null expansions.</em>
+A tree generated by a constituent-structure grammar cannot have
+interior nodes labeled with terminal categories, but dependency
+grammars make no terminal-nonterminal distinction, and permit trees in
+which interior nodes are labeled with parts of speech, which would be
+terminal categories in a constituent-structure grammar.</p>
+<p><strong>Leaf words and empty leaves.</strong>
+The <code class="docutils literal notranslate"><span class="pre">word</span></code> attribute distinguishes between leaf words and empty leaves.
+The former have a non-null value for <code class="docutils literal notranslate"><span class="pre">word</span></code>, and the latter do not.
+Note that the expression <em>leaf word</em> is not redundant in a
+dependency tree: leaf words contrast with <em>governors,</em> which are
+interior nodes with a value for <code class="docutils literal notranslate"><span class="pre">word</span></code>.  However, in a
+constituency tree, only leaf nodes have values for <code class="docutils literal notranslate"><span class="pre">word</span></code>, so in
+that context we can refer to leaf words simply as <em>words.</em></p>
+<p>Depending on the kind of category it has,
+an empty leaf may represent either a null terminal (like an
+empty complementizer) or a null expansion (corresponding to a rewrite
+rule with nothing on the right-hand side).  We are careful not to
+refer to null terminals as “words,” reserving the term <em>word</em>
+for a node with a non-null value for <code class="docutils literal notranslate"><span class="pre">word</span></code>.</p>
+<p><strong>Governor versus phrase.</strong>
+The <code class="docutils literal notranslate"><span class="pre">word</span></code> attribute also distinguishes between governors and phrases.
+Both are interior nodes; the former has a non-null value for
+<code class="docutils literal notranslate"><span class="pre">word</span></code>, while the latter does not.
+That is, a <em>governor</em> is a node that has non-null values for
+both <code class="docutils literal notranslate"><span class="pre">children</span></code> and <code class="docutils literal notranslate"><span class="pre">word</span></code>.  Governors are used in dependency
+trees; their children are called <em>dependents.</em>
+By contrast, a <em>phrase</em> or <em>phrasal node</em> has children but no word.
+Phrasal nodes are used in constituency trees.</p>
+<p><strong>Heads.</strong>
+We further subdivide phrasal nodes according to whether they have
+heads or not.  The head of a phrasal node is defined to be a
+child whose <code class="docutils literal notranslate"><span class="pre">role</span></code>
+is “<code class="docutils literal notranslate"><span class="pre">head</span></code>.”  A phrasal node with a head is a headed phrase,
+and a phrasal node without a head is an unheaded phrase.
+Governors and leaves are by definition headless.</p>
+</section>
+<section id="other-attributes">
+<h2>Other attributes<a class="headerlink" href="#other-attributes" title="Permalink to this heading"></a></h2>
+<p><strong>Number of left dependents.</strong>
+The <code class="docutils literal notranslate"><span class="pre">nld</span></code> attribute is relevant only for governors.
+It indicates the number of left dependents.  In the terminal
+string, the governor is ordered after its left dependents and before its right
+dependents.  If a phrasal node or leaf has a value for <code class="docutils literal notranslate"><span class="pre">nld</span></code>, the
+value is ignored.</p>
+<p><strong>Parent.</strong>
+The <code class="docutils literal notranslate"><span class="pre">parent</span></code> attribute is set by the function
+<code class="docutils literal notranslate"><span class="pre">set_parents()</span></code>.  It permits one to navigate not only down a
+tree, but also back up again.</p>
+<p><strong>Cat.</strong>
+The <code class="docutils literal notranslate"><span class="pre">cat</span></code> attribute represents the syntactic category of the tree.
+The category may be anything, though strings and <code class="docutils literal notranslate"><span class="pre">Category</span></code>
+instances are the commonest choices.</p>
+<p><strong>Role.</strong>
+The links in a dependency tree are often labeled.  The link label
+indicates the relationship between governor and dependent, such as
+“subject” or “object.”  The same relationship can be useful in
+constituent trees as indicating the <strong>role</strong> of a child relative to
+its parent (or the head of its parent).</p>
+<p>As already mentioned, the role “<code class="docutils literal notranslate"><span class="pre">head</span></code>” has a special status if
+the parent is a phrasal node.</p>
+<p><strong>ID.</strong>
+Nodes are sometimes assigned identifiers, such as the indices
+used to encode movement relations or control.</p>
+<p><strong>Sem.</strong>
+The value for <code class="docutils literal notranslate"><span class="pre">sem</span></code> is the semantic translation of the node.</p>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
+<p>Here is an example of constructing a tree manually, by constructing
+individual nodes.  The first two arguments to the constructor are the category and a
+list of children.  A word may be specified using the keyword “<code class="docutils literal notranslate"><span class="pre">word</span></code>.”</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">Tree</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">det</span> <span class="o">=</span> <span class="n">Tree</span><span class="p">(</span><span class="s1">&#39;Det&#39;</span><span class="p">,</span> <span class="n">word</span><span class="o">=</span><span class="s1">&#39;the&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span class="n">Tree</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="n">word</span><span class="o">=</span><span class="s1">&#39;dog&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span> <span class="o">=</span> <span class="n">Tree</span><span class="p">(</span><span class="s1">&#39;NP&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">det</span><span class="p">,</span> <span class="n">n</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Here are examples for the three main attributes.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">cat</span>
+<span class="go">&#39;NP&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">children</span>
+<span class="go">[&lt;Tree Det the&gt;, &lt;Tree N dog&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">word</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">det</span><span class="o">.</span><span class="n">word</span>
+<span class="go">&#39;the&#39;</span>
+</pre></div>
+</div>
+<p>One can set <code class="docutils literal notranslate"><span class="pre">role</span></code> and <code class="docutils literal notranslate"><span class="pre">id</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">det</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="s1">&#39;spec&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="s1">&#39;head&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">nld</span></code> attribute is only relevant for dependency trees: see
+below under “Dependents.”</p>
+<p>One can print out the tree rooted at a node using a <code class="docutils literal notranslate"><span class="pre">print</span></code> statement:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="p">)</span>
+<span class="go">0    (NP &amp;1</span>
+<span class="go">1       (Det:spec the)</span>
+<span class="go">2       (N:head dog))</span>
+</pre></div>
+</div>
+<p>Notice that nodes are numbered.  One can access them directly by
+number:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">&lt;Tree N dog&gt;</span>
+</pre></div>
+</div>
+<p>This is particularly useful for large trees.</p>
+</section>
+<section id="copy">
+<h2>Copy<a class="headerlink" href="#copy" title="Permalink to this heading"></a></h2>
+<p>The method <code class="docutils literal notranslate"><span class="pre">copy()</span></code> makes a shallow copy of a node.  If the
+original node has children, a fresh copy of the child list is made,
+but the child nodes themselves are not copied.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="ow">is</span> <span class="n">np</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span><span class="o">.</span><span class="n">children</span> <span class="ow">is</span> <span class="n">np</span><span class="o">.</span><span class="n">children</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span><span class="o">.</span><span class="n">children</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">children</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="n">np</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>One can modify any of the attributes <code class="docutils literal notranslate"><span class="pre">cat</span></code>, <code class="docutils literal notranslate"><span class="pre">children</span></code>,
+<code class="docutils literal notranslate"><span class="pre">word</span></code>, <code class="docutils literal notranslate"><span class="pre">nld</span></code>, <code class="docutils literal notranslate"><span class="pre">role</span></code>, or <code class="docutils literal notranslate"><span class="pre">id</span></code> when making the copy.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">children</span><span class="o">=</span><span class="p">[])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="go">0    (NP &amp;1)</span>
+</pre></div>
+</div>
+</section>
+<section id="node-functions">
+<h2>Node functions<a class="headerlink" href="#node-functions" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">Tree</span></code> class has few methods.  Instead, there is a large
+collection of functions that are intended to work
+with any object (though not all of them are fully general yet).</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="getcat">
+<span class="sig-name descname"><span class="pre">getcat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getcat" title="Permalink to this definition"></a></dt>
+<dd><p>Category or None.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getchildren">
+<span class="sig-name descname"><span class="pre">getchildren</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getchildren" title="Permalink to this definition"></a></dt>
+<dd><p>List or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getparent">
+<span class="sig-name descname"><span class="pre">getparent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getparent" title="Permalink to this definition"></a></dt>
+<dd><p>Node or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getword">
+<span class="sig-name descname"><span class="pre">getword</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getword" title="Permalink to this definition"></a></dt>
+<dd><p>String or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getnld">
+<span class="sig-name descname"><span class="pre">getnld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getnld" title="Permalink to this definition"></a></dt>
+<dd><p>Integer or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getrole">
+<span class="sig-name descname"><span class="pre">getrole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getrole" title="Permalink to this definition"></a></dt>
+<dd><p>Role or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getid">
+<span class="sig-name descname"><span class="pre">getid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getid" title="Permalink to this definition"></a></dt>
+<dd><p>ID or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getsem">
+<span class="sig-name descname"><span class="pre">getsem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getsem" title="Permalink to this definition"></a></dt>
+<dd><p>Semantic translation or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="is_interior">
+<span class="sig-name descname"><span class="pre">is_interior</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_interior" title="Permalink to this definition"></a></dt>
+<dd><p>Coerce children to boolean.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="is_leaf">
+<span class="sig-name descname"><span class="pre">is_leaf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_leaf" title="Permalink to this definition"></a></dt>
+<dd><p>Non-false <em>n</em> with boolean false children.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="is_governor">
+<span class="sig-name descname"><span class="pre">is_governor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_governor" title="Permalink to this definition"></a></dt>
+<dd><p>Non-false children, non-false word.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="is_phrase">
+<span class="sig-name descname"><span class="pre">is_phrase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_phrase" title="Permalink to this definition"></a></dt>
+<dd><p>Non-false children, boolean false word.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="is_headed_phrase">
+<span class="sig-name descname"><span class="pre">is_headed_phrase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_headed_phrase" title="Permalink to this definition"></a></dt>
+<dd><p>Phrase with head child.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="is_unheaded_phrase">
+<span class="sig-name descname"><span class="pre">is_unheaded_phrase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_unheaded_phrase" title="Permalink to this definition"></a></dt>
+<dd><p>Phrase with no head child.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="is_leaf_word">
+<span class="sig-name descname"><span class="pre">is_leaf_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_leaf_word" title="Permalink to this definition"></a></dt>
+<dd><p>Leaf, non-false word.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="is_empty_leaf">
+<span class="sig-name descname"><span class="pre">is_empty_leaf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_empty_leaf" title="Permalink to this definition"></a></dt>
+<dd><p>Leaf, boolean false word.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="is_unary">
+<span class="sig-name descname"><span class="pre">is_unary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_unary" title="Permalink to this definition"></a></dt>
+<dd><p>Phrase, one child.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nodetype">
+<span class="sig-name descname"><span class="pre">nodetype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nodetype" title="Permalink to this definition"></a></dt>
+<dd><p>String representing node type.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="head_child">
+<span class="sig-name descname"><span class="pre">head_child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#head_child" title="Permalink to this definition"></a></dt>
+<dd><p>A node or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="head_index">
+<span class="sig-name descname"><span class="pre">head_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#head_index" title="Permalink to this definition"></a></dt>
+<dd><p>An integer or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="child_index">
+<span class="sig-name descname"><span class="pre">child_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#child_index" title="Permalink to this definition"></a></dt>
+<dd><p>Integer; <em>c</em>’s index in children.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="left_dependents">
+<span class="sig-name descname"><span class="pre">left_dependents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#left_dependents" title="Permalink to this definition"></a></dt>
+<dd><p>List of nodes.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="right_dependents">
+<span class="sig-name descname"><span class="pre">right_dependents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#right_dependents" title="Permalink to this definition"></a></dt>
+<dd><p>List of nodes.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="expansion">
+<span class="sig-name descname"><span class="pre">expansion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#expansion" title="Permalink to this definition"></a></dt>
+<dd><p>List of nodes or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="delete_child">
+<span class="sig-name descname"><span class="pre">delete_child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delete_child" title="Permalink to this definition"></a></dt>
+<dd><p>Delete a child.</p>
+</dd></dl>
+
+</section>
+<section id="accessors">
+<h2>Accessors<a class="headerlink" href="#accessors" title="Permalink to this heading"></a></h2>
+<p>Instead of using the attributes directly, it is best to use the
+accessor functions <code class="docutils literal notranslate"><span class="pre">getword()</span></code>, <code class="docutils literal notranslate"><span class="pre">getchildren()</span></code>, <code class="docutils literal notranslate"><span class="pre">getnld()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">getrole()</span></code>, <code class="docutils literal notranslate"><span class="pre">getcat()</span></code>, <code class="docutils literal notranslate"><span class="pre">getsem()</span></code>, <code class="docutils literal notranslate"><span class="pre">getid()</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">getparent()</span></code>.  These functions can be applied
+to arbitrary objects, not just <code class="docutils literal notranslate"><span class="pre">Tree</span></code> instances.
+If called on something that
+lacks the attribute in question, they return <code class="docutils literal notranslate"><span class="pre">None</span></code>.  There is one
+exception: if a string is passed to <code class="docutils literal notranslate"><span class="pre">getword()</span></code>, it returns the
+string itself.  (Hence a string behaves like a leaf node that has a
+value for <code class="docutils literal notranslate"><span class="pre">word</span></code> but has no category.)</p>
+<p>Some examples:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">getcat</span><span class="p">,</span> <span class="n">getword</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">getcat</span><span class="p">(</span><span class="n">np</span><span class="p">)</span>
+<span class="go">&#39;NP&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">getcat</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">getword</span><span class="p">(</span><span class="n">det</span><span class="p">)</span>
+<span class="go">&#39;the&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">getword</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<span class="go">&#39;hi&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="predicates">
+<h2>Predicates<a class="headerlink" href="#predicates" title="Permalink to this heading"></a></h2>
+<p><strong>Basic predicates.</strong>
+The following functions are available to test
+for properties of a node:
+<code class="docutils literal notranslate"><span class="pre">is_interior()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">is_leaf()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">is_governor()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">is_phrase()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">is_headed_phrase()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">is_unheaded_phrase()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">is_leaf_word()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">is_empty_leaf()</span></code>,
+They have all been previously discussed.
+Some examples:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">is_interior</span><span class="p">,</span> <span class="n">is_leaf</span><span class="p">,</span> <span class="n">is_headed_phrase</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_interior</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_leaf</span><span class="p">(</span><span class="n">det</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_leaf</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_headed_phrase</span><span class="p">(</span><span class="n">np</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p><strong>Is empty.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">is_empty()</span></code> tests whether a node is empty or not.
+This is technically not a property of the node itself, but of
+the tree rooted at the node:
+a node is empty just in case
+neither it nor any of its descendants has a value for <code class="docutils literal notranslate"><span class="pre">word</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">is_empty</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_empty</span><span class="p">(</span><span class="n">Tree</span><span class="p">())</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_empty</span><span class="p">(</span><span class="n">Tree</span><span class="p">(</span><span class="s1">&#39;NP&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">Tree</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">)]))</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_empty</span><span class="p">(</span><span class="n">Tree</span><span class="p">(</span><span class="s1">&#39;NP&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">Tree</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="n">word</span><span class="o">=</span><span class="s1">&#39;dog&#39;</span><span class="p">)]))</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p><strong>Is unary.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">is_unary()</span></code> returns true just in case the node has
+exactly one child.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">is_unary</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_unary</span><span class="p">(</span><span class="n">np</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_unary</span><span class="p">(</span><span class="n">det</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_unary</span><span class="p">(</span><span class="n">Tree</span><span class="p">(</span><span class="s1">&#39;NP&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">Tree</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="n">word</span><span class="o">=</span><span class="s1">&#39;rice&#39;</span><span class="p">)]))</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p><strong>Node type.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">nodetype()</span></code> returns one of the
+following: <code class="docutils literal notranslate"><span class="pre">'leaf'</span></code>, <code class="docutils literal notranslate"><span class="pre">'governor'</span></code>, <code class="docutils literal notranslate"><span class="pre">'unheaded</span> <span class="pre">phrase'</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">'headed</span> <span class="pre">phrase'</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">nodetype</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nodetype</span><span class="p">(</span><span class="n">np</span><span class="p">)</span>
+<span class="go">&#39;headed phrase&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nodetype</span><span class="p">(</span><span class="n">det</span><span class="p">)</span>
+<span class="go">&#39;leaf&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nodetype</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<span class="go">&#39;leaf&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="structural-access">
+<h2>Structural access<a class="headerlink" href="#structural-access" title="Permalink to this heading"></a></h2>
+<p><strong>Head child.</strong>  The function <code class="docutils literal notranslate"><span class="pre">head_child()</span></code> returns the
+child whose role is “<code class="docutils literal notranslate"><span class="pre">head</span></code>,” if one exists.  (If there is more
+than one, it returns only the first.)</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">head_child</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">head_child</span><span class="p">(</span><span class="n">np</span><span class="p">)</span>
+<span class="go">&lt;Tree N dog&gt;</span>
+</pre></div>
+</div>
+<p><strong>Head index.</strong>  The function <code class="docutils literal notranslate"><span class="pre">head_index()</span></code> returns the
+head child’s index in the <code class="docutils literal notranslate"><span class="pre">children</span></code> list.  It returns <em>-1</em> if
+there is no head child.  Children are numbered from 0.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">head_index</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">head_index</span><span class="p">(</span><span class="n">np</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">head_index</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<span class="go">-1</span>
+</pre></div>
+</div>
+<p><strong>Child index.</strong>  The function <code class="docutils literal notranslate"><span class="pre">child_index()</span></code> takes two
+arguments, parent and child, and returns the index of the child in the
+parent’s <code class="docutils literal notranslate"><span class="pre">children</span></code> list.  It returns <em>-1</em> if the child is not found.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">child_index</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">child_index</span><span class="p">(</span><span class="n">np</span><span class="p">,</span> <span class="n">det</span><span class="p">)</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">child_index</span><span class="p">(</span><span class="n">np</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="go">-1</span>
+</pre></div>
+</div>
+<p><strong>Dependents.</strong>  If the node has a value for <code class="docutils literal notranslate"><span class="pre">nld</span></code>, the
+function <code class="docutils literal notranslate"><span class="pre">left_dependents()</span></code> returns all children up to, but not
+including, <code class="docutils literal notranslate"><span class="pre">nld</span></code>.  The function <code class="docutils literal notranslate"><span class="pre">right_dependents()</span></code> returns all remaining
+children.  If the node has no value for <code class="docutils literal notranslate"><span class="pre">nld</span></code>, but it does have a
+head child, then <code class="docutils literal notranslate"><span class="pre">left_dependents()</span></code> returns all children
+preceding the head child, and <code class="docutils literal notranslate"><span class="pre">right_dependents()</span></code> returns all children
+following the head child.  If the node has neither <code class="docutils literal notranslate"><span class="pre">nld</span></code> nor a
+head child, both functions signal an error.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">left_dependents</span><span class="p">,</span> <span class="n">right_dependents</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">left_dependents</span><span class="p">(</span><span class="n">np</span><span class="p">)</span>
+<span class="go">[&lt;Tree Det the&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">right_dependents</span><span class="p">(</span><span class="n">np</span><span class="p">)</span>
+<span class="go">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sbj</span> <span class="o">=</span> <span class="n">Tree</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="n">word</span><span class="o">=</span><span class="s1">&#39;dogs&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">v</span> <span class="o">=</span> <span class="n">Tree</span><span class="p">(</span><span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="n">word</span><span class="o">=</span><span class="s1">&#39;chase&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">Tree</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="n">word</span><span class="o">=</span><span class="s1">&#39;cats&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">v</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">sbj</span><span class="p">,</span> <span class="n">obj</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">v</span><span class="o">.</span><span class="n">nld</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">left_dependents</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="go">[&lt;Tree N dogs&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">right_dependents</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="go">[&lt;Tree N cats&gt;]</span>
+</pre></div>
+</div>
+<p><strong>Expansion.</strong>  If a node has children, the function
+<code class="docutils literal notranslate"><span class="pre">expansion()</span></code> returns a tuple consisting of the node’s category
+followed by the categories of its children.  Some of the categories
+may be <code class="docutils literal notranslate"><span class="pre">None</span></code>.  If the node has no children, the return value is
+<code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">expansion</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">expansion</span><span class="p">(</span><span class="n">np</span><span class="p">)</span>
+<span class="go">(&#39;NP&#39;, &#39;Det&#39;, &#39;N&#39;)</span>
+</pre></div>
+</div>
+</section>
+<section id="destructive">
+<h2>Destructive<a class="headerlink" href="#destructive" title="Permalink to this heading"></a></h2>
+<p>The function <code class="docutils literal notranslate"><span class="pre">delete_child()</span></code> takes a node and a child index, and
+deletes the child at that index.  The value for <code class="docutils literal notranslate"><span class="pre">nld</span></code> is adjusted,
+if necessary.  There is no return value.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">delete_child</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">delete_child</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">left_dependents</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="go">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">right_dependents</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="go">[&lt;Tree N cats&gt;]</span>
+</pre></div>
+</div>
+</section>
+<section id="trees">
+<h2>Trees<a class="headerlink" href="#trees" title="Permalink to this heading"></a></h2>
+<p>The functions that treat a <code class="docutils literal notranslate"><span class="pre">Tree</span></code> instance as representing a
+complete tree (rather than just a node) are summarized as
+follows.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="is_headed_tree">
+<span class="sig-name descname"><span class="pre">is_headed_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_headed_tree" title="Permalink to this definition"></a></dt>
+<dd><p>All interior nodes have heads</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="is_unheaded_tree">
+<span class="sig-name descname"><span class="pre">is_unheaded_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_unheaded_tree" title="Permalink to this definition"></a></dt>
+<dd><p>All interior nodes lack heads</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="is_dependency_tree">
+<span class="sig-name descname"><span class="pre">is_dependency_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_dependency_tree" title="Permalink to this definition"></a></dt>
+<dd><p>All interior nodes have words.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="treetype">
+<span class="sig-name descname"><span class="pre">treetype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#treetype" title="Permalink to this definition"></a></dt>
+<dd><p>A string representing the type.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="load_trees">
+<span class="sig-name descname"><span class="pre">load_trees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#load_trees" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of trees.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="parse_trees">
+<span class="sig-name descname"><span class="pre">parse_trees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parse_trees" title="Permalink to this definition"></a></dt>
+<dd><p>Same, but <em>s</em> is string.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="parse_tree">
+<span class="sig-name descname"><span class="pre">parse_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parse_tree" title="Permalink to this definition"></a></dt>
+<dd><p>Single tree, else error.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="iter_trees">
+<span class="sig-name descname"><span class="pre">iter_trees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iter_trees" title="Permalink to this definition"></a></dt>
+<dd><p>Iteration over trees.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tree_string">
+<span class="sig-name descname"><span class="pre">tree_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tree_string" title="Permalink to this definition"></a></dt>
+<dd><p>Pretty-printed.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="print_tree">
+<span class="sig-name descname"><span class="pre">print_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#print_tree" title="Permalink to this definition"></a></dt>
+<dd><p>Prints tree string.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="save_trees">
+<span class="sig-name descname"><span class="pre">save_trees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#save_trees" title="Permalink to this definition"></a></dt>
+<dd><p>Saves tree string to file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="load_tabular_trees">
+<span class="sig-name descname"><span class="pre">load_tabular_trees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#load_tabular_trees" title="Permalink to this definition"></a></dt>
+<dd><p>List of trees.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="iter_tabular_trees">
+<span class="sig-name descname"><span class="pre">iter_tabular_trees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iter_tabular_trees" title="Permalink to this definition"></a></dt>
+<dd><p>Iteration over trees.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="save_tabular_trees">
+<span class="sig-name descname"><span class="pre">save_tabular_trees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#save_tabular_trees" title="Permalink to this definition"></a></dt>
+<dd><p>Write to file.</p>
+</dd></dl>
+
+</section>
+<section id="tree-types">
+<h2>Tree types<a class="headerlink" href="#tree-types" title="Permalink to this heading"></a></h2>
+<p>The type of a tree is defined by the type of interior nodes it
+contains.</p>
+<p>A tree is an unheaded phrase-structure tree if all its interior
+nodes are unheaded phrasal nodes.
+A tree is a headed phrase-structure tree if all its interior nodes
+are headed phrasal nodes.
+A tree is a dependency tree if all its interior nodes are governors.</p>
+<p>A hybrid tree is one that satisfies none of these three definitions.</p>
+<p>All three types of tree contain identical leaf nodes.  They differ
+only in their interior nodes.  Technically, a tree containing no
+interior nodes (i.e.,
+consisting of a
+single terminal node) satisfies all three definitions.</p>
+<p>The following functions test tree types:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">is_headed_tree</span><span class="p">,</span> <span class="n">is_unheaded_tree</span><span class="p">,</span> <span class="n">is_dependency_tree</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_headed_tree</span><span class="p">(</span><span class="n">np</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_unheaded_tree</span><span class="p">(</span><span class="n">np</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_dependency_tree</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">treetype()</span></code> returns the tree type:
+<code class="docutils literal notranslate"><span class="pre">'headed</span> <span class="pre">phrase'</span></code>, <code class="docutils literal notranslate"><span class="pre">'unheaded</span> <span class="pre">phrase'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'governor'</span></code>
+(the lattermost for a dependency tree).  It returns <code class="docutils literal notranslate"><span class="pre">'leaf'</span></code> if
+the tree consists of a single leaf node, and <code class="docutils literal notranslate"><span class="pre">None</span></code> if the tree is
+hybrid.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">treetype</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">treetype</span><span class="p">(</span><span class="n">np</span><span class="p">)</span>
+<span class="go">&#39;headed phrase&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">treetype</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="go">&#39;governor&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">treetype</span><span class="p">(</span><span class="n">det</span><span class="p">)</span>
+<span class="go">&#39;leaf&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="load-and-parse">
+<h2>Load and parse<a class="headerlink" href="#load-and-parse" title="Permalink to this heading"></a></h2>
+<p><strong>Iter trees.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">iter_trees()</span></code> reads trees in a lisp-like format from a
+file or string.  Like all the load/save functions,
+<code class="docutils literal notranslate"><span class="pre">iter_trees()</span></code> takes its argument to name a file if it is a <code class="docutils literal notranslate"><span class="pre">Fn</span></code>, and to
+provide the contents, if it is a string.  Here is an example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.data</span> <span class="kn">import</span> <span class="n">ex</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">iter_trees</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span> <span class="o">=</span> <span class="n">iter_trees</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;tree2&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+<span class="go">&lt;Tree S ...&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+<span class="go">0    (S</span>
+<span class="go">1       (NP:subj &amp;1</span>
+<span class="go">           foo</span>
+<span class="go">2          (Det the)</span>
+<span class="go">3          (N dog))</span>
+<span class="go">4       (VP:head &amp;2</span>
+<span class="go">5          (V chased)</span>
+<span class="go">6          (NP:dobj</span>
+<span class="go">7             (Det the)</span>
+<span class="go">8             (N cat))))</span>
+</pre></div>
+</div>
+<p><strong>Load and parse.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">load_trees()</span></code> simply returns:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">iter_trees</span><span class="p">(</span><span class="n">fn</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">parse_trees()</span></code> also dispatches to <code class="docutils literal notranslate"><span class="pre">iter_trees()</span></code>,
+but it wraps its arguments in a <code class="docutils literal notranslate"><span class="pre">Contents</span></code>
+instance (from <code class="docutils literal notranslate"><span class="pre">selkie.io</span></code>) so that the argument is interpreted as a
+string representing a tree, rather than a filename.
+The function <code class="docutils literal notranslate"><span class="pre">parse_tree()</span></code> returns a single tree instead of a
+list of trees; it signals an error if its argument does not parse as a
+single tree.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">parse_tree</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">foo</span> <span class="o">=</span> <span class="n">parse_tree</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="gp">... </span><span class="s1">    (NP:subj&amp;1 foo</span>
+<span class="gp">... </span><span class="s1">        (Det the)</span>
+<span class="gp">... </span><span class="s1">        (N:head dog))</span>
+<span class="gp">... </span><span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+<span class="go">0    (NP:subj &amp;1</span>
+<span class="go">        foo</span>
+<span class="go">1       (Det the)</span>
+<span class="go">2       (N:head dog))</span>
+</pre></div>
+</div>
+</section>
+<section id="print-and-save">
+<h2>Print and save<a class="headerlink" href="#print-and-save" title="Permalink to this heading"></a></h2>
+<p><strong>Pretty-print string.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">tree_string()</span></code> takes a tree and returns a
+pretty-printed string.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">tree_string</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tree_string</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+<span class="go">&#39;0    (NP:subj &amp;1\n        foo\n1       (Det the)\n2       (N:head dog))&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+<span class="go">0    (NP:subj &amp;1</span>
+<span class="go">        foo</span>
+<span class="go">1       (Det the)</span>
+<span class="go">2       (N:head dog))</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">Tree</span></code> method <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> simply dispatches to
+<code class="docutils literal notranslate"><span class="pre">tree_string()</span></code>.</p>
+<p>One can suppress the node numbers by specifying <code class="docutils literal notranslate"><span class="pre">numerate=False</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">tree_string</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">numerate</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="go">(NP:subj &amp;1</span>
+<span class="go">   foo</span>
+<span class="go">   (Det the)</span>
+<span class="go">   (N:head dog))</span>
+</pre></div>
+</div>
+<p>The string-valued attributes (<code class="docutils literal notranslate"><span class="pre">word</span></code>, <code class="docutils literal notranslate"><span class="pre">cat</span></code>,
+<code class="docutils literal notranslate"><span class="pre">role</span></code>, <code class="docutils literal notranslate"><span class="pre">id</span></code>) are formatted without surrounding quotes unless
+they contain whitespace or one of the following special characters: left or right
+parenthesis, left or right square bracket, colon, or single or double quote.
+For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Tree</span><span class="p">(</span><span class="s1">&#39;Multi</span><span class="se">\x20</span><span class="s1">N&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;a/b&#39;</span><span class="p">,</span> <span class="n">word</span><span class="o">=</span><span class="s1">&#39;hors d</span><span class="se">\&#39;</span><span class="s1">oeuvre&#39;</span><span class="p">))</span>
+<span class="go">0    (&#39;Multi N&#39; &quot;hors d&#39;oeuvre&quot; &amp;a/b)</span>
+</pre></div>
+</div>
+<p><strong>Save trees.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">save_trees()</span></code> takes an iterator over trees and a
+filename, and prints the trees to the named file.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">tempfile</span> <span class="kn">import</span> <span class="n">TemporaryDirectory</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">load_string</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">save_trees</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">TemporaryDirectory</span><span class="p">()</span> <span class="k">as</span> <span class="n">dirname</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="n">fn</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="gp">... </span>   <span class="n">save_trees</span><span class="p">([</span><span class="n">foo</span><span class="p">],</span> <span class="n">fn</span><span class="p">)</span>
+<span class="gp">... </span>   <span class="nb">print</span><span class="p">(</span><span class="n">load_string</span><span class="p">(</span><span class="n">fn</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">(NP:subj &amp;1</span>
+<span class="go">   foo</span>
+<span class="go">   (Det the)</span>
+<span class="go">   (N:head dog))</span>
+</pre></div>
+</div>
+<p>As with all of the
+“save” functions, the filename is option; if omitted, it collects
+and returns its output as a string.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">save_trees</span><span class="p">([</span><span class="n">foo</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="go">(NP:subj &amp;1</span>
+<span class="go">   foo</span>
+<span class="go">   (Det the)</span>
+<span class="go">   (N:head dog))</span>
+</pre></div>
+</div>
+</section>
+<section id="tabular-tree-files">
+<h2>Tabular tree files<a class="headerlink" href="#tabular-tree-files" title="Permalink to this heading"></a></h2>
+<p>There is also a tabular format for representing trees in a file.  An
+example is provided by the file <code class="docutils literal notranslate"><span class="pre">t1</span></code>, whose contents are:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">contents</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;t1&#39;</span><span class="p">)),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="go">[       S</span>
+<span class="go">[       NP</span>
+<span class="go">+       Det     the</span>
+<span class="go">+       N       cat</span>
+<span class="go">]</span>
+<span class="go">[       VP</span>
+<span class="go">+       V       chased</span>
+<span class="go">[       NP</span>
+<span class="go">+       Det     the</span>
+<span class="go">+       N       dog</span>
+<span class="go">]</span>
+<span class="go">]</span>
+<span class="go">]</span>
+</pre></div>
+</div>
+<p>A record may contain up to six fields:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 22%" />
+<col style="width: 67%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Record type</p></td>
+<td><p>Left bracket for the beginning of a nonterminal node, right bracket for the
+end of a nonterminal node, and plus for a terminal node.</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Category</p></td>
+<td><p>Syntactic category.</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Word</p></td>
+<td><p>It may not contain a tab or newline, but any other
+character (including space) is allowed.</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Role</p></td>
+<td><p>A symbol representing the relation between the node and
+its parent or governor.</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Head</p></td>
+<td><p>A numeric index, identifying either a
+particular child, or a position among the children.</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>ID</p></td>
+<td><p>A numeric index for the node.</p></td>
+</tr>
+</tbody>
+</table>
+<p>None of the fields is obligatory.
+Additional fields beyond these six are also permitted, but ignored.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">iter_tabular_trees()</span></code> can be used to read a file
+in tabular tree format.  It is a generator over trees:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">iter_tabular_trees</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t1</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">iter_tabular_trees</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;t1&#39;</span><span class="p">)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span>
+<span class="go">0    (S</span>
+<span class="go">1       (NP</span>
+<span class="go">2          (Det the)</span>
+<span class="go">3          (N cat))</span>
+<span class="go">4       (VP</span>
+<span class="go">5          (V chased)</span>
+<span class="go">6          (NP</span>
+<span class="go">7             (Det the)</span>
+<span class="go">8             (N dog))))</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">load_tabular_trees()</span></code> converts the generator into a list.</p>
+<p>Conversely, the function <code class="docutils literal notranslate"><span class="pre">save_tabular_trees()</span></code>
+takes a tree iterator and a filename, and saves the trees in tabular format.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">save_tabular_trees</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">TemporaryDirectory</span><span class="p">()</span> <span class="k">as</span> <span class="n">dirname</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">fn</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">save_tabular_trees</span><span class="p">([</span><span class="n">foo</span><span class="p">],</span> <span class="n">fn</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">[       NP      foo     subj    0       1</span>
+<span class="go">+       Det     the</span>
+<span class="go">+       N       dog     head</span>
+<span class="go">]</span>
+</pre></div>
+</div>
+</section>
+<section id="drawing">
+<h2>Drawing<a class="headerlink" href="#drawing" title="Permalink to this heading"></a></h2>
+<p>The function <code class="docutils literal notranslate"><span class="pre">draw_tree()</span></code> draws a tree.  It requires the package
+“graphviz” to be installed.  It takes a second argument, which is
+the filename to write.  If the filename is omitted, a temp file is
+written and displayed to the screen.</p>
+</section>
+<section id="tree-iterations">
+<h2>Tree iterations<a class="headerlink" href="#tree-iterations" title="Permalink to this heading"></a></h2>
+<p>If one iterates directly over a tree, one iterates over its nodes in
+preorder.  The iteration functions and related functions are
+summarized as follows.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="preorder">
+<span class="sig-name descname"><span class="pre">preorder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#preorder" title="Permalink to this definition"></a></dt>
+<dd><p>An iteration over nodes.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="textorder">
+<span class="sig-name descname"><span class="pre">textorder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#textorder" title="Permalink to this definition"></a></dt>
+<dd><p>An iteration over nodes.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="iter_nodes">
+<span class="sig-name descname"><span class="pre">iter_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iter_nodes" title="Permalink to this definition"></a></dt>
+<dd><p>A preorder walk.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nodes">
+<span class="sig-name descname"><span class="pre">nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nodes" title="Permalink to this definition"></a></dt>
+<dd><p>A list, in preorder.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="iter_edges">
+<span class="sig-name descname"><span class="pre">iter_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iter_edges" title="Permalink to this definition"></a></dt>
+<dd><p>Parents in preorder, children in order.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="edges">
+<span class="sig-name descname"><span class="pre">edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#edges" title="Permalink to this definition"></a></dt>
+<dd><p>A list.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="subtrees">
+<span class="sig-name descname"><span class="pre">subtrees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#subtrees" title="Permalink to this definition"></a></dt>
+<dd><p>Highest nodes that satisfy <em>f</em> (list).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="iter_subtrees">
+<span class="sig-name descname"><span class="pre">iter_subtrees</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iter_subtrees" title="Permalink to this definition"></a></dt>
+<dd><p>Iteration.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="subtree">
+<span class="sig-name descname"><span class="pre">subtree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#subtree" title="Permalink to this definition"></a></dt>
+<dd><p>Error if not unique.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="paths">
+<span class="sig-name descname"><span class="pre">paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#paths" title="Permalink to this definition"></a></dt>
+<dd><p>Paths in tree as slash-joined cats.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="leaves">
+<span class="sig-name descname"><span class="pre">leaves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#leaves" title="Permalink to this definition"></a></dt>
+<dd><p>All leaves.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="words">
+<span class="sig-name descname"><span class="pre">words</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#words" title="Permalink to this definition"></a></dt>
+<dd><p>Non-empty leaves.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tagged_words">
+<span class="sig-name descname"><span class="pre">tagged_words</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tagged_words" title="Permalink to this definition"></a></dt>
+<dd><p>List of (word, cat) pairs.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="terminal_string">
+<span class="sig-name descname"><span class="pre">terminal_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#terminal_string" title="Permalink to this definition"></a></dt>
+<dd><p>Space-joined string.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="is_empty">
+<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_empty" title="Permalink to this definition"></a></dt>
+<dd><p>Yields empty string.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="is_efree_tree">
+<span class="sig-name descname"><span class="pre">is_efree_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_efree_tree" title="Permalink to this definition"></a></dt>
+<dd><p>All nodes have children or word.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="is_unaryfree_tree">
+<span class="sig-name descname"><span class="pre">is_unaryfree_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#is_unaryfree_tree" title="Permalink to this definition"></a></dt>
+<dd><p>No unary expansions.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="copy_tree">
+<span class="sig-name descname"><span class="pre">copy_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#copy_tree" title="Permalink to this definition"></a></dt>
+<dd><p>Deep copy.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="delete_nodes">
+<span class="sig-name descname"><span class="pre">delete_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delete_nodes" title="Permalink to this definition"></a></dt>
+<dd><p>Delete nodes with cat in <em>cs</em>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eliminate_epsilons">
+<span class="sig-name descname"><span class="pre">eliminate_epsilons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eliminate_epsilons" title="Permalink to this definition"></a></dt>
+<dd><p>Elminate empty nodes, destructive.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="set_parents">
+<span class="sig-name descname"><span class="pre">set_parents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#set_parents" title="Permalink to this definition"></a></dt>
+<dd><p>Detructive.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getroot">
+<span class="sig-name descname"><span class="pre">getroot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getroot" title="Permalink to this definition"></a></dt>
+<dd><p>Root above node.</p>
+</dd></dl>
+
+</section>
+<section id="preorder-and-text-order-walks">
+<h2>Preorder and text order walks<a class="headerlink" href="#preorder-and-text-order-walks" title="Permalink to this heading"></a></h2>
+<p>A walk is an iteration over the nodes of a tree.  Two different
+walks are defined: <code class="docutils literal notranslate"><span class="pre">preorder()</span></code> and <code class="docutils literal notranslate"><span class="pre">textorder()</span></code>.  In a preorder walk, one
+visits a node before any of its children.  For phrase-structure trees,
+text order is identical to preorder, but for dependency trees, they
+differ.  More precisely, in a text-order walk, any node that has a value for <code class="docutils literal notranslate"><span class="pre">nld</span></code>
+is visited after visiting its left dependents, but before visiting
+its right dependents.</p>
+<p>To illustrate, we create two trees.  The first is a
+headed phrasal tree:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">parse_tree</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">h</span> <span class="o">=</span> <span class="n">parse_tree</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;(S (NP (Det the) (N:head dog))</span>
+<span class="gp">... </span><span class="s1">                     (VP:head (V:head barked))</span>
+<span class="gp">... </span><span class="s1">                     (Adv loudly))&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+</pre></div>
+</div>
+<p>The second is a dependency tree:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">parse_tree</span><span class="p">(</span><span class="s1">&#39;(V (N (Det the) dog) barked (Adv loudly))&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can confirm that the preorder and text order walks for the phrasal
+tree are the same:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">preorder</span><span class="p">,</span> <span class="n">textorder</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">preorder</span><span class="p">(</span><span class="n">h</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">node</span><span class="p">))</span>
+<span class="gp">...</span>
+<span class="go">&lt;Tree S ...&gt;</span>
+<span class="go">&lt;Tree NP ...&gt;</span>
+<span class="go">&lt;Tree Det the&gt;</span>
+<span class="go">&lt;Tree N dog&gt;</span>
+<span class="go">&lt;Tree VP ...&gt;</span>
+<span class="go">&lt;Tree V barked&gt;</span>
+<span class="go">&lt;Tree Adv loudly&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">textorder</span><span class="p">(</span><span class="n">h</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">node</span><span class="p">))</span>
+<span class="gp">...</span>
+<span class="go">&lt;Tree S ...&gt;</span>
+<span class="go">&lt;Tree NP ...&gt;</span>
+<span class="go">&lt;Tree Det the&gt;</span>
+<span class="go">&lt;Tree N dog&gt;</span>
+<span class="go">&lt;Tree VP ...&gt;</span>
+<span class="go">&lt;Tree V barked&gt;</span>
+<span class="go">&lt;Tree Adv loudly&gt;</span>
+</pre></div>
+</div>
+<p>But they differ for the dependency tree:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">preorder</span><span class="p">(</span><span class="n">d</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">node</span><span class="p">))</span>
+<span class="gp">...</span>
+<span class="go">&lt;Tree V barked ...&gt;</span>
+<span class="go">&lt;Tree N dog ...&gt;</span>
+<span class="go">&lt;Tree Det the&gt;</span>
+<span class="go">&lt;Tree Adv loudly&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">textorder</span><span class="p">(</span><span class="n">d</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">node</span><span class="p">))</span>
+<span class="gp">...</span>
+<span class="go">&lt;Tree Det the&gt;</span>
+<span class="go">&lt;Tree N dog ...&gt;</span>
+<span class="go">&lt;Tree V barked ...&gt;</span>
+<span class="go">&lt;Tree Adv loudly&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="nodes-and-edges">
+<h2>Nodes and edges<a class="headerlink" href="#nodes-and-edges" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">__iter__()</span></code> method of a tree, and
+the function <code class="docutils literal notranslate"><span class="pre">iter_nodes()</span></code>, are both synonyms for <code class="docutils literal notranslate"><span class="pre">preorder()</span></code>.
+The function <code class="docutils literal notranslate"><span class="pre">nodes()</span></code> turns the generator into a list.</p>
+<p>An <em>edge</em> is a pair <em>(p,c)</em> where <em>p</em> is a parent node and <em>c</em>
+is one of its children.  The function <code class="docutils literal notranslate"><span class="pre">iter_edges()</span></code> returns an
+iteration over the edges in a tree.  The function <code class="docutils literal notranslate"><span class="pre">edges()</span></code> turns
+the iteration into a list.</p>
+</section>
+<section id="id1">
+<h2>Subtrees<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p><strong>Subtrees, iter subtrees.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">iter_subtrees()</span></code> returns an iteration over subtrees
+that satisfy a given predicate.  The function <code class="docutils literal notranslate"><span class="pre">subtrees()</span></code> turns
+the iteration into a list.</p>
+<p>The difference between these functions and
+simply filtering the output of <code class="docutils literal notranslate"><span class="pre">nodes()</span></code> is that <code class="docutils literal notranslate"><span class="pre">iter_subtrees()</span></code>
+terminates the recursion whenever it finds a node matching the
+predicate.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">subtrees</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">subtrees</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">is_leaf</span><span class="p">(</span><span class="n">head_child</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">[&lt;Tree NP ...&gt;, &lt;Tree VP ...&gt;]</span>
+</pre></div>
+</div>
+<p>If the second argument is a string, it is taken to be the desired
+node category.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">subtrees</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="s1">&#39;Adv&#39;</span><span class="p">)</span>
+<span class="go">[&lt;Tree Adv loudly&gt;]</span>
+</pre></div>
+</div>
+<p><strong>Subtree.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">subtree()</span></code> takes the list produced by <code class="docutils literal notranslate"><span class="pre">subtrees()</span></code> and
+returns its member, if there is exactly one.  It signals an error if
+the list is not a singleton list.</p>
+</section>
+<section id="paths-and-leaves">
+<h2>Paths and leaves<a class="headerlink" href="#paths-and-leaves" title="Permalink to this heading"></a></h2>
+<p><strong>Paths.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">paths()</span></code> returns the list of paths through the
+tree.  A path is represented by a string in which node categories are
+separted by “/.”  The categories in the path are ordered from root
+to leaf.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">paths</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">paths</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+<span class="go">[&#39;S/NP/Det&#39;, &#39;S/NP/N&#39;, &#39;S/VP/V&#39;, &#39;S/Adv&#39;]</span>
+</pre></div>
+</div>
+<p><strong>Leaves.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">leaves()</span></code> returns the list of leaf nodes in a tree.
+The leaves are listed in preorder.</p>
+<p><strong>Words.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">words()</span></code> differs from <code class="docutils literal notranslate"><span class="pre">leaves()</span></code> in two ways: it
+only includes leaves that have a value for <code class="docutils literal notranslate"><span class="pre">word</span></code>, and it uses a
+text-order walk.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">words</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">words</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+<span class="go">[&#39;the&#39;, &#39;dog&#39;, &#39;barked&#39;, &#39;loudly&#39;]</span>
+</pre></div>
+</div>
+<p><strong>Tagged words.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">tagged_words()</span></code> is like <code class="docutils literal notranslate"><span class="pre">words()</span></code>, except that
+it produces a list of pairs of form (<em>word, cat</em>).</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">tagged_words</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tagged_words</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+<span class="go">[(&#39;the&#39;, &#39;Det&#39;), (&#39;dog&#39;, &#39;N&#39;), (&#39;barked&#39;, &#39;V&#39;), (&#39;loudly&#39;, &#39;Adv&#39;)]</span>
+</pre></div>
+</div>
+<p><strong>Terminal string.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">terminal_string()</span></code> takes the output of
+<code class="docutils literal notranslate"><span class="pre">words()</span></code> and turns it into a string.  The words are separated by
+spaces.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">terminal_string</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">terminal_string</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+<span class="go">&#39;the dog barked loudly&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>Predicates<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p><strong>Is e-free.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">is_efree_tree()</span></code> returns true just in case the tree
+contains no empty nodes.</p>
+<p><strong>Is unary-free.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">is_unaryfree_tree()</span></code> returns true just in case
+there are no unary-branching nodes in the tree.</p>
+</section>
+<section id="copy-tree">
+<h2>Copy tree<a class="headerlink" href="#copy-tree" title="Permalink to this heading"></a></h2>
+<p>The function <code class="docutils literal notranslate"><span class="pre">copy_tree()</span></code> does a deep copy of a tree.  Unlike
+the node method <code class="docutils literal notranslate"><span class="pre">copy()</span></code>, <code class="docutils literal notranslate"><span class="pre">copy_tree()</span></code> does recurse through
+the whole tree, making copies of all nodes.</p>
+</section>
+<section id="transformations">
+<h2>Transformations<a class="headerlink" href="#transformations" title="Permalink to this heading"></a></h2>
+<p>The operations described in this section, as well as the
+transformations described in the chapters on head-marking and stemma
+conversion, are destructive.  To protect a tree, make a copy before
+applying destructive operations.</p>
+<p><strong>Delete nodes.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">delete_nodes()</span></code> deletes all nodes with a given
+category.  (However, it never deletes the root node.)</p>
+<p><strong>Eliminate epsilons.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">eliminate_epsilons()</span></code> eliminates all
+empty nodes from a tree.  If the tree was initially headed, any
+heads that are empty will get deleted.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">eliminate_epsilons</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">parse_tree</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="gp">... </span><span class="s1">  (S</span>
+<span class="gp">... </span><span class="s1">    (NP (N ))</span>
+<span class="gp">... </span><span class="s1">    (VP</span>
+<span class="gp">... </span><span class="s1">      (VBZ )</span>
+<span class="gp">... </span><span class="s1">      (RB surely)</span>
+<span class="gp">... </span><span class="s1">      (NP Fido)))</span>
+<span class="gp">... </span><span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">eliminate_epsilons</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">0    (S</span>
+<span class="go">1       (VP</span>
+<span class="go">2          (RB surely)</span>
+<span class="go">3          (NP Fido)))</span>
+</pre></div>
+</div>
+<p><strong>Set parents, get root.</strong>
+The function <code class="docutils literal notranslate"><span class="pre">set_parents()</span></code> destructively adds a <code class="docutils literal notranslate"><span class="pre">parent</span></code>
+attribute to every node in the tree, pointing back to the node’s
+parent.</p>
+<p>After parents have been set in a tree, one can use the
+function <code class="docutils literal notranslate"><span class="pre">getroot()</span></code> to go from any node to the root node.
+It follows parent links up the tree to the root node.</p>
+</section>
+<section id="tree-builder">
+<h2>Tree builder<a class="headerlink" href="#tree-builder" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.tree.TreeBuilder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.tree.</span></span><span class="sig-name descname"><span class="pre">TreeBuilder</span></span><a class="headerlink" href="#selkie.tree.TreeBuilder" title="Permalink to this definition"></a></dt>
+<dd><p>A stack-like data structure for constructing a tree.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.tree.TreeBuilder.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.tree.TreeBuilder.start" title="Permalink to this definition"></a></dt>
+<dd><p>Start a new interior node.  Cat, word, role, id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.tree.TreeBuilder.middle">
+<span class="sig-name descname"><span class="pre">middle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.tree.TreeBuilder.middle" title="Permalink to this definition"></a></dt>
+<dd><p>This is the head position.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.tree.TreeBuilder.end">
+<span class="sig-name descname"><span class="pre">end</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.tree.TreeBuilder.end" title="Permalink to this definition"></a></dt>
+<dd><p>Pop node.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.tree.TreeBuilder.leaf">
+<span class="sig-name descname"><span class="pre">leaf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.tree.TreeBuilder.leaf" title="Permalink to this definition"></a></dt>
+<dd><p>Create a leaf node.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.tree.TreeBuilder.trees">
+<span class="sig-name descname"><span class="pre">trees</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.tree.TreeBuilder.trees" title="Permalink to this definition"></a></dt>
+<dd><p>A list; error if not finished.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.tree.TreeBuilder.tree">
+<span class="sig-name descname"><span class="pre">tree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.tree.TreeBuilder.tree" title="Permalink to this definition"></a></dt>
+<dd><p>A tree; error if not finished and unique.</p>
+</dd></dl>
+
+</dd></dl>
+
+<p>Here is an example of use:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.tree</span> <span class="kn">import</span> <span class="n">TreeBuilder</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span> <span class="o">=</span> <span class="n">TreeBuilder</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s1">&#39;NP&#39;</span><span class="p">)</span>
+<span class="go">&lt;Tree NP&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span> <span class="o">=</span> <span class="n">TreeBuilder</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">)</span>
+<span class="go">&lt;Tree S&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s1">&#39;NP&#39;</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="s1">&#39;subj&#39;</span><span class="p">)</span>
+<span class="go">&lt;Tree NP&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">leaf</span><span class="p">(</span><span class="s1">&#39;Det&#39;</span><span class="p">,</span> <span class="s1">&#39;the&#39;</span><span class="p">)</span>
+<span class="go">&lt;Tree Det the&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">leaf</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">)</span>
+<span class="go">&lt;Tree N dog&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
+<span class="go">&lt;Tree NP ...&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s1">&#39;VP&#39;</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="s1">&#39;head&#39;</span><span class="p">)</span>
+<span class="go">&lt;Tree VP&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">leaf</span><span class="p">(</span><span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;barks&#39;</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="s1">&#39;head&#39;</span><span class="p">)</span>
+<span class="go">&lt;Tree V barks&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
+<span class="go">&lt;Tree VP ...&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
+<span class="go">&lt;Tree S ...&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">tree</span><span class="p">()</span>
+<span class="go">&lt;Tree S ...&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+<span class="go">0    (S</span>
+<span class="go">1       (NP:subj</span>
+<span class="go">2          (Det the)</span>
+<span class="go">3          (N dog))</span>
+<span class="go">4       (VP:head</span>
+<span class="go">5          (V:head barks)))</span>
+</pre></div>
+</div>
+<p>The methods for building a phrasal node are <code class="docutils literal notranslate"><span class="pre">start()</span></code> and
+<code class="docutils literal notranslate"><span class="pre">end()</span></code>.  Both return the node.</p>
+<p>To build a dependency node, one also uses the method <code class="docutils literal notranslate"><span class="pre">middle()</span></code> to
+mark the position at which the governor occurs.  For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="n">word</span><span class="o">=</span><span class="s1">&#39;chase&#39;</span><span class="p">)</span>
+<span class="go">&lt;Tree V chase&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">leaf</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;dogs&#39;</span><span class="p">)</span>
+<span class="go">&lt;Tree N dogs&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">middle</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">leaf</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;cats&#39;</span><span class="p">)</span>
+<span class="go">&lt;Tree N cats&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
+<span class="go">&lt;Tree V chase ...&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">tree</span><span class="p">()</span>
+<span class="go">&lt;Tree V chase ...&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+<span class="go">0    (V</span>
+<span class="go">1       (N dogs)</span>
+<span class="go">        chase</span>
+<span class="go">2       (N cats))</span>
+</pre></div>
+</div>
+<p>The builder allows one to construct multiple trees; it saves them on a
+list until one calls either <code class="docutils literal notranslate"><span class="pre">tree()</span></code> or <code class="docutils literal notranslate"><span class="pre">trees()</span></code>.  The latter
+returns the list of trees constructed.  The former returns a single
+tree, and signals an error if there is not exactly one tree on the
+list.  Both methods signal an error if there is an incomplete tree in
+progress.  Both methods restore the builder to its empty state.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="fst.html" class="btn btn-neutral float-left" title="selkie.fst — Finite-state transducers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="stemmer.html" class="btn btn-neutral float-right" title="selkie.stemmer — English stemmer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

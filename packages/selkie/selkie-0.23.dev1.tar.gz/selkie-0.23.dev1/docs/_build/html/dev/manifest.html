@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.manifest — Manifest of sizes, hashes &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.ssh — Secure Shell (SSH)" href="ssh.html" />
+    <link rel="prev" title="General-purpose tools" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">General-purpose tools</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.manifest</span></code> — Manifest of sizes, hashes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html"><code class="docutils literal notranslate"><span class="pre">selkie.ssh</span></code> — Secure Shell (SSH)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipynb.html"><code class="docutils literal notranslate"><span class="pre">selkie.ipynb</span></code> — Extracting code from Jupyter notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doctest.html"><code class="docutils literal notranslate"><span class="pre">selkie.doctest</span></code> — Extract doctest from HTML, tex</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp/index.html">The NLP pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">General-purpose tools</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.manifest</span></code> — Manifest of sizes, hashes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dev/manifest.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-manifest-manifest-of-sizes-hashes">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.manifest</span></code> — Manifest of sizes, hashes<a class="headerlink" href="#selkie-manifest-manifest-of-sizes-hashes" title="Permalink to this heading"></a></h1>
+<section id="executable">
+<h2>Executable<a class="headerlink" href="#executable" title="Permalink to this heading"></a></h2>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ manifest foo         # writes foo.sizes
+$ manifest -s foo      # writes foo.chksum
+$ manifest -h foo      # writes foo.hashes
+$ manifest -H foo      # writes foo.md5
+$ manifest -c foo  | diff - foo.sizes
+$ manifest -cs foo | diff - foo.chksum
+$ manifest -ch foo | diff - foo.hashes
+$ manifest -z foo -o foo.sizes
+$ manifest -s foo -o foo.chksum
+$ manifest -h foo -o foo.hashes
+$ manifest -Z foo.hashes | diff - foo.sizes
+$ manifest -l foo &gt; foo.dirs
+$ manifest foo.dirs
+$ manifest -d foo old.sizes  # writes to stdout
+$ manifest -d foo old.sizes -o foo.diffs
+$ manifest -e delta.tgz -d foo old.sizes
+$ manifest -e delta.tgz foo.diffs
+$ manifest -i delta.tgz
+</pre></div>
+</div>
+<section id="create-foo-sizes">
+<h3>Create foo.sizes<a class="headerlink" href="#create-foo-sizes" title="Permalink to this heading"></a></h3>
+<p>The script <code class="docutils literal notranslate"><span class="pre">manifest</span></code> creates a listing of the files in a directory
+hierarchy, recording their sizes, or their sizes and MD5 hash values.
+The basic usage is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ manifest foo
+</pre></div>
+</div>
+<p>This expects <code class="docutils literal notranslate"><span class="pre">foo</span></code> to exist and to be a directory.  It writes a
+file called <code class="docutils literal notranslate"><span class="pre">foo.sizes</span></code>, in which it records the pathnames and
+sizes of all files in the directory hierarchy under <code class="docutils literal notranslate"><span class="pre">foo</span></code>.
+One can then use <code class="docutils literal notranslate"><span class="pre">diff</span></code> to compare that listing to the listing
+created for another copy of <code class="docutils literal notranslate"><span class="pre">foo</span></code>.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ diff foo.sizes /Backups/foo.sizes
+</pre></div>
+</div>
+</section>
+<section id="create-and-check-foo-md5">
+<h3>Create and check foo.md5<a class="headerlink" href="#create-and-check-foo-md5" title="Permalink to this heading"></a></h3>
+<p>To compute an MD5 hash for each file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ manifest -H foo
+</pre></div>
+</div>
+<p>Computing the hash values is <em>much</em> slower than just getting the
+sizes.  For that reason, <code class="docutils literal notranslate"><span class="pre">-H</span></code>
+checkpoints foo.md5 every 2 seconds.  It writes first to a temp
+file, and replaces foo.md5 only if the temp file is successfully
+written.</p>
+<p>It prints out “Compute hash …” for each file when it computes the
+MD5 value, and it prints out “Writing …” each time it checkpoints
+the .md5 file.</p>
+<p>After computing hashes, one should save foo.md5 to a safe place.
+Subsequently, one can recompute foo.md5 and do a diff to the saved
+copy to determine whether any files have become corrupted.</p>
+</section>
+<section id="create-foo-hashes">
+<h3>Create foo.hashes<a class="headerlink" href="#create-foo-hashes" title="Permalink to this heading"></a></h3>
+<p>(Deprecated.)  This is an old version of <code class="docutils literal notranslate"><span class="pre">-H</span></code>, which does not do
+checkpointing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ manifest -h foo
+</pre></div>
+</div>
+<p>The listing is written to <code class="docutils literal notranslate"><span class="pre">foo.hashes</span></code>.</p>
+</section>
+<section id="creating-foo-chksum">
+<h3>Creating foo.chksum<a class="headerlink" href="#creating-foo-chksum" title="Permalink to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">-s</span></code> flag causes checksums to be produced.  This is still
+much slower than just a size listing, but it is about four times
+faster than hashes.  It is not crytographically secure, but is just as
+good at detecting changes that were not specifically intended to
+deceive.</p>
+</section>
+<section id="writing-to-stdout">
+<h3>Writing to stdout<a class="headerlink" href="#writing-to-stdout" title="Permalink to this heading"></a></h3>
+<p>One may use the <code class="docutils literal notranslate"><span class="pre">-c</span></code> flag to cause the sizes to be
+written to standard output instead of a file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ manifest -c foo | diff - foo.sizes
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">-c</span></code> flag may be combined with <code class="docutils literal notranslate"><span class="pre">-h</span></code> or <code class="docutils literal notranslate"><span class="pre">-s</span></code>.  When hashes are
+written to a file, progress messages are printed to standard error,
+but the progress messages are suppressed when <code class="docutils literal notranslate"><span class="pre">-c</span></code> is provided:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ manifest -ch foo | diff - foo.hashes
+</pre></div>
+</div>
+</section>
+<section id="extracting-sizes-from-foo-hashes-or-foo-chksum">
+<h3>Extracting sizes from foo.hashes or foo.chksum<a class="headerlink" href="#extracting-sizes-from-foo-hashes-or-foo-chksum" title="Permalink to this heading"></a></h3>
+<p>One may use the <code class="docutils literal notranslate"><span class="pre">-Z</span></code> flag to extract a size listing from a
+hashes or checksum.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ manifest -Z foo.hashes | diff - ~/Backups/foo.sizes
+$ manifest -Z foo.chksum | diff - ~/Backups/foo.sizes
+</pre></div>
+</div>
+</section>
+<section id="selecting-directories">
+<h3>Selecting directories<a class="headerlink" href="#selecting-directories" title="Permalink to this heading"></a></h3>
+<p>Finally, one may limit the listing to a subset of the directories.  To
+get a raw listing of the directories:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ manifest -l foo &gt; foo.dirs
+</pre></div>
+</div>
+<p>Then edit <code class="docutils literal notranslate"><span class="pre">foo.dirs</span></code> by hand to leave only the directories that
+should be included, and do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ manifest foo.dirs
+</pre></div>
+</div>
+<p>As a safety precaution, the filename must end in <code class="docutils literal notranslate"><span class="pre">.dirs</span></code>,
+otherwise an error is signalled.  The output is written to
+<code class="docutils literal notranslate"><span class="pre">foo.dirs.sizes</span></code>, so that it can be readily distinguished from
+<code class="docutils literal notranslate"><span class="pre">foo.sizes</span></code>, which includes all subdirectories.</p>
+</section>
+<section id="synchronizing-directories">
+<h3>Synchronizing directories<a class="headerlink" href="#synchronizing-directories" title="Permalink to this heading"></a></h3>
+<p>Suppose <code class="docutils literal notranslate"><span class="pre">foo</span></code> is a working version of a shared project.
+Before making any edits, create a manifest <code class="docutils literal notranslate"><span class="pre">old.sizes</span></code>.
+After making changes to <code class="docutils literal notranslate"><span class="pre">foo</span></code>, the following creates a list of
+all files that have been changed (added, modified, deleted):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ manifest -d foo old.sizes
+</pre></div>
+</div>
+<p>It prints out a list of actions that would need to be applied to the
+<em>old</em> version of <code class="docutils literal notranslate"><span class="pre">foo</span></code> to bring it in sync with its
+current state.  That is, it is a summary of the editing actions that
+have been taken since the manifest <code class="docutils literal notranslate"><span class="pre">old.sizes</span></code> was created.</p>
+<p>One can capture just the edits and apply them to other copies of <code class="docutils literal notranslate"><span class="pre">foo</span></code>.
+To create a tarfile containing the edits:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ manifest -e delta.tgz -d foo old.sizes
+</pre></div>
+</div>
+<p>To update an old version of <code class="docutils literal notranslate"><span class="pre">foo</span></code>, e.g., on another machine,
+copy <code class="docutils literal notranslate"><span class="pre">delta.tgz</span></code> to the other machine and do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ manifest -i delta.tgz
+</pre></div>
+</div>
+<p>The tarfile <code class="docutils literal notranslate"><span class="pre">delta.tgz</span></code> includes a listing of the diffs,
+containing relative pathnames; that is why one does not
+specify <code class="docutils literal notranslate"><span class="pre">foo</span></code> on the command line.</p>
+</section>
+</section>
+<section id="module">
+<h2>Module<a class="headerlink" href="#module" title="Permalink to this heading"></a></h2>
+<section id="toplevel-functions">
+<h3>Toplevel functions<a class="headerlink" href="#toplevel-functions" title="Permalink to this heading"></a></h3>
+<p>The command line versions translate to function calls as follows.
+First, flags translate into keyword-value settings.  Some flags take one or two
+arguments; their arguments are taken as the flags are encountered.  In
+the end, if any arguments remain, the null flag is imputed.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>z</p></td>
+<td><p>fnc=create, ifile=*arg*, otype=’z’</p></td>
+</tr>
+<tr class="row-even"><td><p>s</p></td>
+<td><p>fnc=create, ifile=*arg*, otype=’s’</p></td>
+</tr>
+<tr class="row-odd"><td><p>h</p></td>
+<td><p>fnc=create, ifile=*arg*, otype=’h’</p></td>
+</tr>
+<tr class="row-even"><td><p>c</p></td>
+<td><p>ofile=’-’</p></td>
+</tr>
+<tr class="row-odd"><td><p>o</p></td>
+<td><p>ofile=*arg*</p></td>
+</tr>
+<tr class="row-even"><td><p>Z</p></td>
+<td><p>fnc=extract_sizes, ifile=*arg*</p></td>
+</tr>
+<tr class="row-odd"><td><p>l</p></td>
+<td><p>fnc=list_directories, ifile=*arg*</p></td>
+</tr>
+<tr class="row-even"><td><p>d</p></td>
+<td><p>diff=(<em>arg1</em>, <em>arg2</em>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>e</p></td>
+<td><p>fnc=export, ofile=*arg*</p></td>
+</tr>
+<tr class="row-even"><td><p>i</p></td>
+<td><p>fnc=import_into, ifile=*arg*</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>null</em></p></td>
+<td><p>arg=*arg*</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following information is then supplied:</p>
+<p>If keyword ‘diff’ is provided, then <em>fnc</em> defaults to
+‘diff’.  Otherwise, <em>fnc</em> defaults to ‘create’.
+The keyword ‘arg’ gets replaced by:</p>
+<blockquote>
+<div><p>‘ifile’ if the fnc is ‘create’
+‘diff’ if the fnc is ‘export’
+‘dest’ if the fnc is ‘import’</p>
+</div></blockquote>
+<p>The calls at
+the top of the page translate as follows.  The supplied information is
+marked with brackets:</p>
+<p>manifest([fnc=’create’,] arg[ifile]=’foo’)
+manifest(fnc=’create’, ifile=’foo’, otype=’s’)
+manifest(fnc=’create’, ifile=’foo’, otype=’h’)
+manifest([fnc=’create’,] arg[ifile]=’foo’, ofile=’-‘)
+manifest(fnc=’create’, ifile=’foo’, otype=’s’, ofile=’-‘)
+manifest(fnc=’create’, ifile=’foo’, otype=’h’, ofile=’-‘)
+manifest(fnc=’create’, ifile=’foo’, otype=’z’, ofile=’foo.sizes’)
+manifest(fnc=’create’, ifile=’foo’, otype=’s’, ofile=’foo.chksum’)
+manifest(fnc=’create’, ifile=’foo’, otype=’h’, ofile=’foo.hashes’)
+manifest(fnc=’extract_sizes’, ifile=’foo.hashes’)
+manifest(fnc=’list_directories’, ifile=’foo’)
+manifest([fnc=’create’,] arg[ifile]=’foo.dirs’)
+manifest([fnc=’diff’,] diff=(‘foo’, ‘remote.sizes’))
+manifest([fnc=’diff’,] diff=(‘foo’, ‘remote.sizes’), ofile=’foo.diffs’)
+manifest(fnc=’export’, diff=(‘foo’, ‘remote.sizes’), ofile=’delta.tgz’)
+manifest(fnc=’export’, arg[diff]=’foo.diffs’, ofile=’delta.tgz’)
+manifest(fnc=’import_into’, ifile=’delta.tgz’, arg[dest]=’foo’)</p>
+<p>The functions that are dispatched to are as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">create(ifile,</span> <span class="pre">otype,</span> <span class="pre">ofile,</span> <span class="pre">update,</span> <span class="pre">trace,</span> <span class="pre">force)</span></code></p>
+<blockquote>
+<div><p><em>ifile</em> may end with ‘.dirs’, or it may name a directory.
+<em>otype</em> is one of ‘z’, ‘s’, or ‘h’.
+<em>ofile</em>, if provided, may be a filename, ‘-’, a list, a dict, or a file.
+It defaults to dir + a suffix depending on <em>otype</em>.
+If <em>update</em> is True, then otype, ofile, and force must be None.
+Otype is determined from the ifile suffix, ofile is set to
+ifile, and force is set to True.
+<em>trace</em> defaults to False for type ‘z’ and True for types ‘s’
+and ‘h’.
+<em>force</em> defaults to False.  If False, create will refuse to
+overwrite an existing ofile.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">extract_sizes(ifile)</span></code></p>
+<p>Ofile defaults to stdout</p>
+<p><code class="docutils literal notranslate"><span class="pre">list_directories(ifile)</span></code></p>
+<p>Ofile defaults to stdout</p>
+<p><code class="docutils literal notranslate"><span class="pre">difference(diff,</span> <span class="pre">ofile)</span></code>
+<em>ofile</em> defaults to stdout</p>
+<p><code class="docutils literal notranslate"><span class="pre">export_delta(diff,</span> <span class="pre">ofile)</span></code>
+<em>diff</em> may either be a filename containing diffs, or a pair
+consisting of directory and remote sizes listing.  The diffs specify
+what must be done (additions, replacements, deletions)
+to make the <strong>remote directory</strong> match the
+given directory.</p>
+<p><code class="docutils literal notranslate"><span class="pre">import_delta(dest,</span> <span class="pre">ifile)</span></code>
+<em>Dest</em> must be a directory and <em>ifile</em> must be a tarfile
+produced by export().</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="General-purpose tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ssh.html" class="btn btn-neutral float-right" title="selkie.ssh — Secure Shell (SSH)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

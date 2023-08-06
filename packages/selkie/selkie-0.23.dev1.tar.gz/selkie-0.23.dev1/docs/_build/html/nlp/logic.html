@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.logic — Automated reasoning &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.bot — Conversational agent" href="bot.html" />
+    <link rel="prev" title="selkie.interp — Semantic interpretation" href="interp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The NLP pipeline</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="fsa.html"><code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> — Finite-state automata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fst.html"><code class="docutils literal notranslate"><span class="pre">selkie.fst</span></code> — Finite-state transducers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tree.html"><code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> — Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemmer.html"><code class="docutils literal notranslate"><span class="pre">selkie.stemmer</span></code> — English stemmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="head.html"><code class="docutils literal notranslate"><span class="pre">selkie.head</span></code> — Head marking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dep.html"><code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> — Dependency conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html"><code class="docutils literal notranslate"><span class="pre">selkie.features</span></code> — Non-recursive features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avs.html"><code class="docutils literal notranslate"><span class="pre">selkie.avs</span></code> — Recursive feature structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grammar.html"><code class="docutils literal notranslate"><span class="pre">selkie.grammar</span></code> — Constituent grammars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gdev.html"><code class="docutils literal notranslate"><span class="pre">selkie.gdev</span></code> — Grammar development tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen.html"><code class="docutils literal notranslate"><span class="pre">selkie.gen</span></code> — Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parser.html"><code class="docutils literal notranslate"><span class="pre">selkie.parser</span></code> — Constituent parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expr.html"><code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code> — Predicate calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interp.html"><code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> — Semantic interpretation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> — Automated reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bot.html"><code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> — Conversational agent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">The NLP pipeline</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> — Automated reasoning</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/nlp/logic.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-logic-automated-reasoning">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> — Automated reasoning<a class="headerlink" href="#selkie-logic-automated-reasoning" title="Permalink to this heading"></a></h1>
+<p>The module <code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> provides a resolution-based theorem
+prover.</p>
+<section id="clausification">
+<h2>Clausification<a class="headerlink" href="#clausification" title="Permalink to this heading"></a></h2>
+<p>Reasoning is on the basis of <strong>clauses</strong>, but the output of parsing
+and interpretation is predicate-calculus expressions.  Accordingly,
+we must first convert a predicate calculus expression to
+a set of clauses.</p>
+<p>A clause is a set of literals, interpreted disjunctively.  For
+example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="p">(</span><span class="n">dog</span> <span class="n">Fido</span><span class="p">)</span> <span class="o">+</span><span class="p">(</span><span class="n">cat</span> <span class="n">Fido</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>is a clause interpreted as “either Fido is a dog or Fido is a cat.”
+The components of a clause are <strong>literals.</strong>  A literal is a
+<strong>term</strong> with a polarity.  A term is an expression containing only
+variables, constants, and function application.</p>
+<p>Both literals in the preceding example
+were positive.  Here is an example with mixed polarities:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="p">(</span><span class="n">human</span> <span class="n">Socrates</span><span class="p">)</span> <span class="o">+</span><span class="p">(</span><span class="n">mortal</span> <span class="n">Socrates</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This represents “either Socrates is not human, or Socrates is
+mortal,” which is equivalent to “if Socrates is human, then Socrates
+is mortal.”</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Literal">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Literal</span></span><a class="headerlink" href="#Literal" title="Permalink to this definition"></a></dt>
+<dd><p>The class <code class="docutils literal notranslate"><span class="pre">Literal</span></code> represents a literal.  Its attributes are
+<code class="docutils literal notranslate"><span class="pre">polarity</span></code> and <code class="docutils literal notranslate"><span class="pre">expr</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.expr</span> <span class="kn">import</span> <span class="n">parse_expr</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">Literal</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lit1</span> <span class="o">=</span> <span class="n">Literal</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(human Socrates)&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lit1</span>
+<span class="go">-(human Socrates)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lit1</span><span class="o">.</span><span class="n">polarity</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lit1</span><span class="o">.</span><span class="n">expr</span>
+<span class="go">(human Socrates)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Clause">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Clause</span></span><a class="headerlink" href="#Clause" title="Permalink to this definition"></a></dt>
+<dd><p>One creates a clause from a list of literals.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lit2</span> <span class="o">=</span> <span class="n">Literal</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(mortal Socrates)&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">Clause</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Clause</span><span class="p">([</span><span class="n">lit1</span><span class="p">,</span> <span class="n">lit2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="go">1. -(human Socrates) +(mortal Socrates)</span>
+</pre></div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Clause.answer_literal">
+<span class="sig-name descname"><span class="pre">answer_literal</span></span><a class="headerlink" href="#Clause.answer_literal" title="Permalink to this definition"></a></dt>
+<dd><p>A special literal whose predicate is <code class="docutils literal notranslate"><span class="pre">_Ans</span></code>, meaning “this is
+the answer”.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Clause.provenance">
+<span class="sig-name descname"><span class="pre">provenance</span></span><a class="headerlink" href="#Clause.provenance" title="Permalink to this definition"></a></dt>
+<dd><p>A tuple (cl1, i, cl2, j), meaning that this clause was deduced
+by canceling the i-th literal of <em>cl1</em> against the j-th literal
+of <em>cl2</em>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Clause.weight">
+<span class="sig-name descname"><span class="pre">weight</span></span><a class="headerlink" href="#Clause.weight" title="Permalink to this definition"></a></dt>
+<dd><p>When deciding which clause to prioritize for processing, choose
+the one with the greatest weight.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="conversion-to-clauses">
+<h2>Conversion to Clauses<a class="headerlink" href="#conversion-to-clauses" title="Permalink to this heading"></a></h2>
+<p>Let us consider an example that will illustrate the steps of conversion.
+This states that every animal lover is loved by someone.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.expr</span> <span class="kn">import</span> <span class="n">load_exprs</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.data</span> <span class="kn">import</span> <span class="n">ex</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">orig</span> <span class="o">=</span> <span class="n">load_exprs</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;cnf.expr&#39;</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">orig</span><span class="p">)</span>
+<span class="go">(forall x</span>
+<span class="go">   (if (forall y</span>
+<span class="go">          (if (animal y)</span>
+<span class="go">              (loves x y)))</span>
+<span class="go">       (exists y</span>
+<span class="go">          (loves y x))))</span>
+</pre></div>
+</div>
+<p>The conversion is effected by the following functions, applied in order.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="check_syntax">
+<span class="sig-name descname"><span class="pre">check_syntax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#check_syntax" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">check_syntax()</span></code> checks that a predicate-calculus
+expression is well-formed.  It checks that variable-binding operators
+have variables where expected, and that all logical operators have the
+right number of arguments.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">check_syntax</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">check_syntax</span><span class="p">(</span><span class="n">orig</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">check_syntax</span><span class="p">(</span><span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(forall Fido (woof))&#39;</span><span class="p">))</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">&quot;/cl/python/selkie/logic.py&quot;</span>, line <span class="m">135</span>, in <span class="n">check_syntax</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">,</span> <span class="s2">&quot;Expecting variable in: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
+<span class="gr">Exception</span>: <span class="n">Expecting variable in: (forall Fido (woof))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">standardize_variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>In the expression <code class="docutils literal notranslate"><span class="pre">orig</span></code>, there are two quantifiers that bind the variable <em>y</em>.
+After standardization, each quantifier binds a unique variable.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.interp</span> <span class="kn">import</span> <span class="n">standardize_variables</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">standardize_variables</span><span class="p">(</span><span class="n">orig</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">(forall _1</span>
+<span class="go">   (if (forall _2</span>
+<span class="go">          (if (animal _2)</span>
+<span class="go">              (loves _1 _2)))</span>
+<span class="go">       (exists _3</span>
+<span class="go">          (loves _3 _1))))</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">standardize_variables()</span></code> is imported from the module
+<code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code>.  It is called in the production of an expression
+from a parse tree, but <code class="docutils literal notranslate"><span class="pre">clausify()</span></code> calls it for the sake of
+expressions that are not produced by the interpreter.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="expand_query">
+<span class="sig-name descname"><span class="pre">expand_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#expand_query" title="Permalink to this definition"></a></dt>
+<dd><p>The next step is the replacement of
+question operators <code class="docutils literal notranslate"><span class="pre">wh</span></code> and
+<code class="docutils literal notranslate"><span class="pre">yn</span></code> with the answer predicate <code class="docutils literal notranslate"><span class="pre">_Ans</span></code>.  Our running example
+does not illustrate this; we give different examples.  An
+example with the <code class="docutils literal notranslate"><span class="pre">wh</span></code> operator is:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wh</span> <span class="o">=</span> <span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(wh x (criminal x))&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This expands to:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">expand_query</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">expand_query</span><span class="p">(</span><span class="n">wh</span><span class="p">)</span>
+<span class="go">(forall x (if (criminal x) (_Ans x)))</span>
+</pre></div>
+</div>
+<p>An example with the <code class="docutils literal notranslate"><span class="pre">yn</span></code> operator is:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">yn</span> <span class="o">=</span> <span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(yn (criminal West))&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This expands to:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">expand_query</span><span class="p">(</span><span class="n">yn</span><span class="p">))</span>
+<span class="go">(and (if (criminal West)</span>
+<span class="go">         (_Ans yes))</span>
+<span class="go">     (if (not (criminal West))</span>
+<span class="go">         (_Ans no)))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eliminate_implications">
+<span class="sig-name descname"><span class="pre">eliminate_implications</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eliminate_implications" title="Permalink to this definition"></a></dt>
+<dd><p>We replace all
+occurrences of <code class="docutils literal notranslate"><span class="pre">P</span> <span class="pre">&lt;-&gt;</span> <span class="pre">Q</span></code> with <code class="docutils literal notranslate"><span class="pre">(P</span> <span class="pre">-&gt;</span> <span class="pre">Q)</span> <span class="pre">v</span> <span class="pre">(Q</span> <span class="pre">-&gt;</span> <span class="pre">P)</span></code>, and then we
+replace all occurrences of <code class="docutils literal notranslate"><span class="pre">P</span> <span class="pre">-&gt;</span> <span class="pre">Q</span></code> with <code class="docutils literal notranslate"><span class="pre">-P</span> <span class="pre">v</span> <span class="pre">Q</span></code>.  Returning
+to our running example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">eliminate_implications</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">eliminate_implications</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">(forall _1</span>
+<span class="go">   (or (not (forall _2</span>
+<span class="go">               (or (not (animal _2))</span>
+<span class="go">                   (loves _1 _2))))</span>
+<span class="go">       (exists _3</span>
+<span class="go">          (loves _3 _1))))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lower_negation">
+<span class="sig-name descname"><span class="pre">lower_negation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lower_negation" title="Permalink to this definition"></a></dt>
+<dd><p>An expression of form “not forall” becomes “exists not”,
+“-(P &amp; Q)” becomes “-P v -Q”, etc.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">lower_negation</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">lower_negation</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">(forall _1</span>
+<span class="go">   (or (exists _2</span>
+<span class="go">          (and (animal _2)</span>
+<span class="go">               (not (loves _1 _2))))</span>
+<span class="go">       (exists _3</span>
+<span class="go">          (loves _3 _1))))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="skolemize">
+<span class="sig-name descname"><span class="pre">skolemize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#skolemize" title="Permalink to this definition"></a></dt>
+<dd><p>Skolemization eliminates “exists” by introducing functions called
+Skolem functions.  One can think of a <em>Skolem term</em> involving the
+application of a Skolem function to a universally-bound variable as
+a unique description of a particular (anonymous) individual.  A
+fuller explanation is given in the next section.</p>
+<p>Applied to our running example, Skolemization produces the following:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">skolemize</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">skolemize</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">(or (and (animal (_Sk1 _1))</span>
+<span class="go">         (not (loves _1</span>
+<span class="go">                 (_Sk1 _1))))</span>
+<span class="go">    (loves (_Sk2 _1)</span>
+<span class="go">           _1))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cnf">
+<span class="sig-name descname"><span class="pre">cnf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cnf" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">cnf()</span></code> distributes disjunctions over conjunctions,
+converting to conjunctive normal form.  The result is represented as a
+list of lists.  The outer list is a conjunction, and the inner lists
+are disjunctions.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">cnf</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">cnf</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">&lt;class &#39;list&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">e</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">[(animal (_Sk1 _1)), (loves (_Sk2 _1) _1)]</span>
+<span class="go">[(not (loves _1 (_Sk1 _1))), (loves (_Sk2 _1) _1)]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="clauses">
+<span class="sig-name descname"><span class="pre">clauses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lsts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#clauses" title="Permalink to this definition"></a></dt>
+<dd><p>The final step converts the list of lists to a list of clauses.  In
+the process, disjunctions and conjunctions containing “<code class="docutils literal notranslate"><span class="pre">True</span></code>” and
+“<code class="docutils literal notranslate"><span class="pre">False</span></code>” are simplified if possible, as are singleton
+disjunctions and conjunctions.  Also, the special operator <code class="docutils literal notranslate"><span class="pre">_Ans</span></code>
+is recognized as marking the answer literal.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">clauses</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">clauses</span><span class="p">(</span><span class="n">e</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">2. +(animal (_Sk1 _1)) +(loves (_Sk2 _1)</span>
+<span class="go">       _1)</span>
+<span class="go">3. -(loves _1 (_Sk1 _1)) +(loves (_Sk2 _1) _1)</span>
+</pre></div>
+</div>
+<p>The result is not immediately readable.  Here is how to make sense of it.
+First, <code class="docutils literal notranslate"><span class="pre">_Sk2</span></code> is one’s best/only friend: the person who loves you, if
+anyone does.  Hence the first clause states that either your only
+friend loves you, or <code class="docutils literal notranslate"><span class="pre">_Sk1</span></code> is an animal.  That is, if your only
+friend does <em>not</em> love you, then <code class="docutils literal notranslate"><span class="pre">_Sk1</span></code> is an animal.
+The second clause states: if your only friend does not love you, then
+you do not love <code class="docutils literal notranslate"><span class="pre">_Sk1</span></code>.
+Combining the two: if no one loves you, then there is an
+animal that you do not love.
+The counterpositive is: if you love every animal, then someone
+loves you.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="clausify">
+<span class="sig-name descname"><span class="pre">clausify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#clausify" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">clausify()</span></code> does the complete sequence of
+conversions from predicate-calculus expression to clause list.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">clausify</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">clausify</span><span class="p">(</span><span class="n">orig</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">4. +(animal (_Sk3 _4)) +(loves (_Sk4 _4) _4)</span>
+<span class="go">5. -(loves _4 (_Sk3 _4)) +(loves (_Sk4 _4) _4)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="skolemization">
+<h2>Skolemization<a class="headerlink" href="#skolemization" title="Permalink to this heading"></a></h2>
+<p>Skolemization is a technique for eliminating quantifiers; that is,
+replacing existentially-bound variables with names, leaving all
+remaining variables implicitly universally bound.</p>
+<p>We begin with two observations.  First,
+it is common in mathematics for free variables to be interpreted as
+universally bound.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>may be interpreted as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">forall</span> <span class="n">x</span> <span class="n">forall</span> <span class="n">y</span> <span class="p">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">x</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The second observation is that names
+might be interpreted as existentially bound variables.
+For example, consider “Fido is a dog.  Fido barks.  Fido does not like any cat.”
+We might treat this as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exists</span> <span class="n">Fido</span> <span class="p">[</span>
+    <span class="n">dog</span><span class="p">(</span><span class="n">Fido</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">barks</span><span class="p">(</span><span class="n">Fido</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">forall</span> <span class="n">c</span> <span class="p">[</span>
+        <span class="n">cat</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="o">-</span><span class="n">likes</span><span class="p">(</span><span class="n">Fido</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Note that the “name existential” <em>must</em> take wide scope
+over “real” quantifiers: we do not want a different Fido for each cat.</p>
+<p>We can use these observations to eliminate (some) quantifiers.
+Consider “a cat chases every dog”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exists</span> <span class="n">c</span> <span class="p">[</span>
+    <span class="n">cat</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">forall</span> <span class="n">d</span> <span class="p">[</span>
+        <span class="n">dog</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">chases</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>We can turn <em>c</em> into a name, and allow “forall d” to be implicit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span><span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">[</span> <span class="n">dog</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">chases</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">d</span><span class="p">)</span> <span class="p">]</span>
+</pre></div>
+</div>
+<p>Now of course there is a second reading for the sentence:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">forall</span> <span class="n">d</span> <span class="p">[</span>
+    <span class="n">dog</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">exists</span> <span class="n">c</span> <span class="p">[</span>
+        <span class="n">cat</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">chases</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>In this reading, there is a different cat for each dog.
+That is, the cat <em>C</em> is <strong>a function of</strong> <em>d</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dog</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cat</span><span class="p">(</span><span class="n">C</span><span class="p">(</span><span class="n">d</span><span class="p">))</span> <span class="o">&amp;</span> <span class="n">chases</span><span class="p">(</span><span class="n">C</span><span class="p">(</span><span class="n">d</span><span class="p">),</span> <span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is the key idea of Skolemization.</p>
+<p>The general rule is this:
+we replace each existentially bound variable <em>y</em> with a <strong>Skolem function</strong>
+<span class="math notranslate nohighlight">\(Y(x_1,\ldots,x_n)\)</span>,
+where <span class="math notranslate nohighlight">\(x_1,\ldots,x_n\)</span> are the universals that have wider scope than <em>y</em>.
+Then we can delete quantifiers.  All remaining variables are
+interpreted as universally bound.</p>
+</section>
+<section id="resolution-theorem-proving">
+<h2>Resolution theorem proving<a class="headerlink" href="#resolution-theorem-proving" title="Permalink to this heading"></a></h2>
+<p>Let us consider some common rules of inference.
+The first is modus ponens, which takes the following form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">forall</span> <span class="n">x</span> <span class="p">[</span><span class="n">human</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">mortal</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
+<span class="n">human</span><span class="p">(</span><span class="n">Socrates</span><span class="p">)</span>
+<span class="o">----------------</span>
+<span class="n">mortal</span><span class="p">(</span><span class="n">Socrates</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The second is modus tolens:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">forall</span> <span class="n">x</span> <span class="p">[</span><span class="n">human</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">mortal</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
+<span class="o">-</span><span class="n">mortal</span><span class="p">(</span><span class="n">Zeus</span><span class="p">)</span>
+<span class="o">----------------</span>
+<span class="o">-</span><span class="n">human</span><span class="p">(</span><span class="n">Zeus</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A third is reasoning by case:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">murderer</span><span class="p">(</span><span class="n">Jeeves</span><span class="p">)</span> <span class="n">v</span> <span class="n">murderer</span><span class="p">(</span><span class="n">Smith</span><span class="p">)</span>
+<span class="o">-</span><span class="n">murderer</span><span class="p">(</span><span class="n">Jeeves</span><span class="p">)</span>
+<span class="o">-----------------</span>
+<span class="n">murderer</span><span class="p">(</span><span class="n">Smith</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>All of these rules of inference (and many others) have a common form,
+which becomes even more explicit if we express them in
+<strong>conjunctive normal form</strong> (CNF).  In CNF, expressions are
+transformed to a conjunction of disjunctions, and variables are
+understood as universally bound:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">forall</span> <span class="n">x</span> <span class="p">[</span><span class="n">P</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Q</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="o">-&gt;</span> <span class="o">-</span><span class="n">P</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="n">v</span> <span class="n">Q</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In CNF, modus ponens has the form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">P</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="n">v</span> <span class="n">Q</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">P</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">------------</span>
+<span class="n">Q</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Modus tolens:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">P</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="n">v</span> <span class="n">Q</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="o">-</span><span class="n">Q</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">------------</span>
+<span class="o">-</span><span class="n">P</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Reasoning by case:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="n">v</span> <span class="n">Q</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">-</span><span class="n">P</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">------------</span>
+<span class="n">Q</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>All three are special cases of <strong>resolution</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-</span> <span class="n">P</span><span class="p">(</span><span class="n">α</span><span class="p">)</span> <span class="n">v</span> <span class="n">Q</span><span class="o">&lt;</span><span class="n">sub</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">sub</span><span class="o">&gt;</span> <span class="n">v</span> <span class="o">...</span> <span class="n">v</span> <span class="n">Q</span><span class="o">&lt;</span><span class="n">sub</span><span class="o">&gt;</span><span class="n">m</span><span class="o">&lt;/</span><span class="n">sub</span><span class="o">&gt;</span>
+<span class="o">-+</span> <span class="n">P</span><span class="p">(</span><span class="n">β</span><span class="p">)</span> <span class="n">v</span> <span class="n">R</span><span class="o">&lt;</span><span class="n">sub</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">sub</span><span class="o">&gt;</span> <span class="n">v</span> <span class="o">...</span> <span class="n">v</span> <span class="n">R</span><span class="o">&lt;</span><span class="n">sub</span><span class="o">&gt;</span><span class="n">n</span><span class="o">&lt;/</span><span class="n">sub</span><span class="o">&gt;</span>
+<span class="o">----------------------------------------------</span>
+<span class="n">Q</span><span class="s1">&#39;&lt;sub&gt;1&lt;/sub&gt; v ... v Q&#39;</span><span class="o">&lt;</span><span class="n">sub</span><span class="o">&gt;</span><span class="n">m</span><span class="o">&lt;/</span><span class="n">sub</span><span class="o">&gt;</span> <span class="n">v</span> <span class="sa">R</span><span class="s1">&#39;&lt;sub&gt;1&lt;/sub&gt; v ... v R&#39;</span><span class="o">&lt;</span><span class="n">sub</span><span class="o">&gt;</span><span class="n">n</span><span class="o">&lt;/</span><span class="n">sub</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Here, α and β need not be identical, but do need to be
+<strong>unifiable</strong>.  The <strong>unifier</strong>
+is the set of variable assignments that make them identical.  E.g.,
+the unifier of <em>x</em> and Socrates is: <em>x</em> = Socrates.
+Q’&lt;sub&gt;i&lt;/sub&gt; comes from Q&lt;sub&gt;i&lt;/sub&gt; by <strong>substituting</strong> the unifier.
+E.g., substituting (x = Socrates) into mortal(x)
+yields mortal(Socrates).
+The <em>Q</em>’s and <em>R</em>’s may be positive or negated, and
+the order of disjuncts is irrelevant.</p>
+<p>Let us consider a simple example of reasoning by resolution.
+The knowledge base consists of two clauses:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="o">-</span><span class="p">(</span><span class="n">human</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span><span class="p">(</span><span class="n">mortal</span> <span class="n">x</span><span class="p">)</span>
+<span class="mf">2.</span> <span class="o">+</span><span class="p">(</span><span class="n">human</span> <span class="n">Socrates</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Each clause is understood disjunctively.  For example, clause 1 states
+that either <em>x</em> is not human, or <em>x</em> is mortal.  (That is equivalent
+to: if <em>x</em> is human, then <em>x</em> is mortal.)  The knowledge base asserts
+the conjunction of the clauses.</p>
+<p>To answer the query “is Socrates mortal,” we try to prove that Socrates
+is mortal.  To do that, we assume that Socrates is <em>not</em> mortal,
+and deduce a contradiction.
+That is, we adopt the assumption:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="p">(</span><span class="n">mortal</span> <span class="n">Socrates</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This resolves with clause 1, with <em>x</em> = Socrates, yielding:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="p">(</span><span class="n">human</span> <span class="n">Socrates</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This in turn contradicts clause 2.  Resolving with clause 2
+yields the empty clause, which represents a contradiction.</p>
+<p>Now let us consider the query “who is mortal.”
+Assume that no one is mortal, and try to deduce a
+contradiction:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="p">(</span><span class="n">mortal</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This resolves with clause 1, with <em>x</em> = <em>y</em>, yielding:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="p">(</span><span class="n">human</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This resolves with clause 2, with <em>y</em> = Socrates, yielding the
+empty clause.</p>
+<p>That proves that someone is mortal, but it does not answer the
+question of <em>who</em> is mortal.
+To do so, we add an “answer literal” to our assumption:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="p">(</span><span class="n">mortal</span> <span class="n">y</span><span class="p">)</span> <span class="p">;</span> <span class="o">+</span><span class="p">(</span><span class="n">_Ans</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This can be read as “if <em>y</em> is mortal, then <em>y</em> is the answer.”
+Any substitutions of values for variables apply to the answer literal
+as to the other literals, but the answer literal is otherwise treated
+as an annotation rather than a contentful literal.  One does not use
+the answer literal for resolution, and the proof is complete when only
+the answer literal remains.</p>
+<p>The above assumption resolves with clause 1, yielding:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="p">(</span><span class="n">human</span> <span class="n">y</span><span class="p">)</span> <span class="p">;</span> <span class="o">+</span><span class="p">(</span><span class="n">_Ans</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This in turn resolves with clause 2, yielding:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span> <span class="o">+</span><span class="p">(</span><span class="n">_Ans</span> <span class="n">Socrates</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>At this point the proof is complete: there are no content literals left.
+The answer is: Socrates.</p>
+<p>Now let us consider a more complex example.
+The following sentences are input to the parser:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">every</span> <span class="n">American</span> <span class="n">who</span> <span class="n">sells</span> <span class="n">a</span> <span class="n">weapon</span> <span class="n">to</span> <span class="n">a</span> <span class="n">hostile</span> <span class="n">country</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">criminal</span>
+<span class="n">West</span> <span class="n">sells</span> <span class="n">Nono</span> <span class="n">every</span> <span class="n">missile</span> <span class="n">that</span> <span class="n">Nono</span> <span class="n">owns</span>
+<span class="n">every</span> <span class="n">enemy</span> <span class="n">of</span> <span class="n">America</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">hostile</span> <span class="n">country</span>
+<span class="n">every</span> <span class="n">missile</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">weapon</span>
+<span class="n">Nono</span> <span class="n">owns</span> <span class="n">a</span> <span class="n">missile</span>
+<span class="n">West</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">American</span>
+<span class="n">Nono</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">enemy</span> <span class="n">of</span> <span class="n">America</span>
+<span class="n">who</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">criminal</span>
+</pre></div>
+</div>
+<p>The interpreter converts them to the following predicate calculus
+expressions.  This is the contents of the file <code class="docutils literal notranslate"><span class="pre">crime.kb</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">forall</span> <span class="n">x7</span>
+  <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="ow">and</span> <span class="p">(</span><span class="n">American</span> <span class="n">x7</span><span class="p">)</span>
+           <span class="p">(</span><span class="n">exists</span> <span class="n">x1</span>
+             <span class="p">(</span><span class="ow">and</span> <span class="p">(</span><span class="n">weapon</span> <span class="n">x1</span><span class="p">)</span>
+                  <span class="p">(</span><span class="n">exists</span> <span class="n">x3</span>
+                    <span class="p">(</span><span class="ow">and</span> <span class="p">(</span><span class="ow">and</span> <span class="p">(</span><span class="n">hostile</span> <span class="n">x3</span><span class="p">)</span> <span class="p">(</span><span class="n">country</span> <span class="n">x3</span><span class="p">))</span>
+                         <span class="p">(</span><span class="n">sell</span> <span class="n">x7</span> <span class="n">x1</span> <span class="n">x3</span><span class="p">))))))</span>
+      <span class="p">(</span><span class="n">criminal</span> <span class="n">x7</span><span class="p">)))</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="p">(</span><span class="n">forall</span> <span class="n">x11</span>
+  <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="ow">and</span> <span class="p">(</span><span class="n">missile</span> <span class="n">x11</span><span class="p">)</span> <span class="p">(</span><span class="n">own</span> <span class="n">Nono</span> <span class="n">x11</span><span class="p">))</span>
+      <span class="p">(</span><span class="n">sell</span> <span class="n">West</span> <span class="n">x11</span> <span class="n">Nono</span><span class="p">)))</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="p">(</span><span class="n">forall</span> <span class="n">x14</span>
+  <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="n">enemy</span> <span class="n">x14</span> <span class="n">America</span><span class="p">)</span>
+      <span class="p">(</span><span class="ow">and</span> <span class="p">(</span><span class="n">hostile</span> <span class="n">x14</span><span class="p">)</span> <span class="p">(</span><span class="n">country</span> <span class="n">x14</span><span class="p">))))</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="p">(</span><span class="n">forall</span> <span class="n">x16</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="n">missile</span> <span class="n">x16</span><span class="p">)</span> <span class="p">(</span><span class="n">weapon</span> <span class="n">x16</span><span class="p">)))</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="p">(</span><span class="n">exists</span> <span class="n">x17</span> <span class="p">(</span><span class="ow">and</span> <span class="p">(</span><span class="n">missile</span> <span class="n">x17</span><span class="p">)</span> <span class="p">(</span><span class="n">own</span> <span class="n">Nono</span> <span class="n">x17</span><span class="p">)))</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="p">(</span><span class="n">American</span> <span class="n">West</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="p">(</span><span class="n">enemy</span> <span class="n">Nono</span> <span class="n">America</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The corresponding CNF clauses are shown when we call the solver:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">logic</span> <span class="kn">import</span> <span class="n">solve</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">solve</span><span class="p">(</span><span class="s1">&#39;(wh x (criminal x))&#39;</span><span class="p">,</span> <span class="s1">&#39;crime.kb&#39;</span><span class="p">,</span> <span class="n">trace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="go">KB</span>
+<span class="go">1. -(American _1) -(weapon _2) -(hostile _3) -(country _3)</span>
+<span class="go">   -(sell _1 _2 _3) +(criminal _1)</span>
+<span class="go">2. -(missile _4) -(own Nono _4) +(sell West _4 Nono)</span>
+<span class="go">3. -(enemy _5 America) +(hostile _5)</span>
+<span class="go">4. -(enemy _5 America) +(country _5)</span>
+<span class="go">5. -(missile _6) +(weapon _6)</span>
+<span class="go">6. +(missile _Sk1)</span>
+<span class="go">7. +(own Nono _Sk1)</span>
+<span class="go">8. +(American West)</span>
+<span class="go">9. +(enemy Nono America)&lt;/p&gt;</span>
+
+<span class="go">USABLE&lt;/p&gt;</span>
+
+<span class="go">SOS</span>
+<span class="go">10. [0] -(criminal _8) ; +(_Ans _8)&lt;/p&gt;</span>
+
+<span class="go">Resolve 10.1 + 1.6</span>
+<span class="go">12. [8] -(American _9) -(weapon _10) -(hostile _11) -(country _11)</span>
+<span class="go">        -(sell _9 _10 _11) ; +(_Ans _9)&lt;/p&gt;</span>
+
+<span class="go">Resolve 12.1 + 8.1</span>
+<span class="go">14. [6] -(weapon _12) -(hostile _13) -(country _13)</span>
+<span class="go">        -(sell West _12 _13) ; +(_Ans West)&lt;/p&gt;</span>
+
+<span class="go">Resolve 14.1 + 5.2</span>
+<span class="go">16. [6] -(missile _14) -(hostile _15) -(country _15)</span>
+<span class="go">        -(sell West _14 _15) ; +(_Ans West) &lt;/p&gt;</span>
+
+<span class="go">Resolve 16.1 + 6.1</span>
+<span class="go">18. [4] -(hostile _16) -(country _16) -(sell West _Sk1 _16)</span>
+<span class="go">        ; +(_Ans West)&lt;/p&gt;</span>
+
+<span class="go">Resolve 18.1 + 3.2</span>
+<span class="go">20. [4] -(enemy _17 America) -(country _17) -(sell West _Sk1 _17)</span>
+<span class="go">        ; +(_Ans West)&lt;/p&gt;</span>
+
+<span class="go">Resolve 20.1 + 9.1</span>
+<span class="go">22. [2] -(country Nono) -(sell West _Sk1 Nono) ; +(_Ans West) &lt;/p&gt;</span>
+
+<span class="go">Resolve 22.1 + 4.2</span>
+<span class="go">24. [2] -(enemy Nono America) -(sell West _Sk1 Nono) ; +(_Ans West)&lt;/p&gt;</span>
+
+<span class="go">Resolve 24.1 + 9.1</span>
+<span class="go">26. [1] -(sell West _Sk1 Nono) ; +(_Ans West)&lt;/p&gt;</span>
+
+<span class="go">Resolve 26.1 + 2.3</span>
+<span class="go">28. [2] -(missile _Sk1) -(own Nono _Sk1) ; +(_Ans West)&lt;/p&gt;</span>
+
+<span class="go">Resolve 28.1 + 6.1</span>
+<span class="go">30. [1] -(own Nono _Sk1) ; +(_Ans West)&lt;/p&gt;</span>
+
+<span class="go">Resolve 30.1 + 7.1</span>
+<span class="go">32. [0] ; +(_Ans West)&lt;/p&gt;</span>
+
+<span class="go">Resolve 32.</span>
+<span class="go">ANSWER 32.  ; +(_Ans West)</span>
+</pre></div>
+</div>
+<p>In outline, then, the prover goes through the following steps.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Clausification.  Convert the predicate calculus expressions to KB clauses.</p></li>
+<li><p>Convert the question to a clause to be <em>disproved.</em></p></li>
+<li><p>The question becomes the first <strong>active</strong> clause (“SOS” = “set
+of support”).  The KB clauses are the initial <strong>usable</strong> clauses.</p></li>
+<li><p>Resolve the smallest active clause <em>C</em> against a usable clause,
+where possible, yielding new clause <em>D</em>.  (We still need to discuss
+unification.)</p></li>
+<li><p>Move <em>C</em> to the usable list.  Add new clause <em>D</em> to the active list.</p></li>
+<li><p>Keep going until you reach a contradiction.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="knowledge-base">
+<h2>Knowledge Base<a class="headerlink" href="#knowledge-base" title="Permalink to this heading"></a></h2>
+<p>The input to the prover is a knowledge base.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="KB">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">KB</span></span><a class="headerlink" href="#KB" title="Permalink to this definition"></a></dt>
+<dd><p>The class <code class="docutils literal notranslate"><span class="pre">KB</span></code> represents a knowledge base, consisting of a list
+of clauses.  It may be loaded from a file:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">KB</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">kb</span> <span class="o">=</span> <span class="n">KB</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;curiosity.kb&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">kb</span><span class="p">)</span>
+<span class="go">6. +(animal (_Sk5 _7)) +(love (_Sk6 _7) _7)</span>
+<span class="go">7. -(love _7 (_Sk5 _7)) +(love (_Sk6 _7) _7)</span>
+<span class="go">8. -(animal _11) -(kill _10 _11) -(love _12 _10)</span>
+<span class="go">9. -(animal _13) +(love Jack _13)</span>
+<span class="go">10. +(kill Jack Tuna) +(kill Curiosity Tuna)</span>
+<span class="go">11. +(cat Tuna)</span>
+<span class="go">12. -(cat _14) +(animal _14)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="unification">
+<h2>Unification<a class="headerlink" href="#unification" title="Permalink to this heading"></a></h2>
+<p>Two literals are <strong>unifiable</strong> if they can be made identical by some
+choice of assignment of values to variables.  The relevant choice of
+values for variables is called the <strong>unifier</strong>.  Let us start with
+some examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">(</span><span class="n">knows</span> <span class="n">john</span>  <span class="n">x</span>  <span class="p">)</span>  <span class="n">x</span> <span class="o">=</span> <span class="n">jane</span>  <span class="n">OK</span>
+    <span class="p">(</span><span class="n">knows</span> <span class="n">john</span> <span class="n">jane</span><span class="p">)</span>
+
+<span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">(</span><span class="n">knows</span> <span class="n">john</span>  <span class="n">x</span>  <span class="p">)</span>  <span class="n">x</span> <span class="o">=</span> <span class="n">bill</span>  <span class="n">OK</span>
+    <span class="p">(</span><span class="n">knows</span>  <span class="n">y</span>   <span class="n">bill</span><span class="p">)</span>  <span class="n">y</span> <span class="o">=</span> <span class="n">john</span>
+
+<span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="p">(</span><span class="n">knows</span> <span class="n">john</span>      <span class="n">x</span>    <span class="p">)</span>  <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">mother</span> <span class="n">y</span><span class="p">)</span>  <span class="n">OK</span>
+    <span class="p">(</span><span class="n">knows</span> <span class="n">y</span>    <span class="p">(</span><span class="n">mother</span> <span class="n">y</span><span class="p">))</span>  <span class="n">y</span> <span class="o">=</span> <span class="n">john</span>
+</pre></div>
+</div>
+<dl class="py function">
+<dt class="sig sig-object py" id="unify">
+<span class="sig-name descname"><span class="pre">unify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expr1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expr2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">substs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unify" title="Permalink to this definition"></a></dt>
+<dd><p>Unify <em>expr1</em> and <em>expr2</em>, storing the unifier in <em>substs</em>, which
+should be an empty, freshly-created dict.</p>
+</dd></dl>
+
+<p>We confirm that the implementation behaves as intended:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">unify</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">test</span> <span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="gp">... </span>    <span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">unify</span><span class="p">(</span><span class="n">parse_expr</span><span class="p">(</span><span class="n">e1</span><span class="p">),</span> <span class="n">parse_expr</span><span class="p">(</span><span class="n">e2</span><span class="p">),</span> <span class="n">d</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+<span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+<span class="gp">... </span>    <span class="k">except</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Failure&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="p">(</span><span class="s1">&#39;(knows john x)&#39;</span><span class="p">,</span> <span class="s1">&#39;(knows john jane)&#39;</span><span class="p">)</span>
+<span class="go">x -&gt; jane</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="p">(</span><span class="s1">&#39;(knows john x)&#39;</span><span class="p">,</span> <span class="s1">&#39;(knows y bill)&#39;</span><span class="p">)</span>
+<span class="go">x -&gt; bill</span>
+<span class="go">y -&gt; john</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="p">(</span><span class="s1">&#39;(knows john x)&#39;</span><span class="p">,</span> <span class="s1">&#39;(knows y (mother y))&#39;</span><span class="p">)</span>
+<span class="go">x -&gt; (mother y)</span>
+<span class="go">y -&gt; john</span>
+</pre></div>
+</div>
+<p>There is one subtlety that arises.  It should be possible to
+substitute the unifier for the variables that it binds, and leave no
+occurrences of those variables.  The way this can fail to be true is
+if there is a cyclic dependency among variables.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="p">(</span><span class="n">knows</span>      <span class="n">x</span>     <span class="p">(</span><span class="n">mother</span> <span class="n">x</span><span class="p">))</span>  <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">mother</span> <span class="n">y</span><span class="p">)</span>  <span class="n">FAIL</span>
+    <span class="p">(</span><span class="n">knows</span> <span class="p">(</span><span class="n">mother</span> <span class="n">y</span><span class="p">)</span>      <span class="n">y</span>    <span class="p">)</span>  <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">mother</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this case, substitution essentially never terminates; or saying it
+another way, substituting the unifier would create infinite literals.
+Unification should fail in this case.  To recognize these examples, we
+must check whether there a variable-value chain leading
+from any variable <em>x</em> back to <em>x</em> again.
+That is known as the <strong>occurs check.</strong></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">test</span><span class="p">(</span><span class="s1">&#39;(knows x (mother x))&#39;</span><span class="p">,</span> <span class="s1">&#39;(knows y (mother y))&#39;</span><span class="p">)</span>
+<span class="go">Failure</span>
+</pre></div>
+</div>
+</section>
+<section id="standardizing-apart">
+<h2>Standardizing apart<a class="headerlink" href="#standardizing-apart" title="Permalink to this heading"></a></h2>
+<p>Unification constitutes the central step of resolution: we combine two
+clauses if there is a pair of literals whose polarity is opposite but
+whose contents are unifiable.  By setting values of variables, we
+unification affects all literals in both clauses.  We copy all
+remaining literals of both clauses to create a new clause, and then we
+do <code class="docutils literal notranslate"><span class="pre">revert()</span></code> to undo all changes.</p>
+<p>For safety, we also change all the variables to new variables, in the
+newly created clause.  This is called <strong>standardizing apart.</strong></p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">standardize_apart()</span></code> replaces all variables in a
+clause with
+new variables.  It optionally accepts a symbol table, in which the
+values of bound variables are used when creating the new clause.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">standardize_apart</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">standardize_apart</span><span class="p">(</span><span class="n">kb</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+<span class="go">13. -(animal _15) -(kill _16 _15) -(love _17 _16)</span>
+</pre></div>
+</div>
+<p>Let us consider an example.  We create clauses for “every human is
+mortal” and “Socrates is human”:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">parse_clause</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c1</span> <span class="o">=</span> <span class="n">parse_clause</span><span class="p">(</span><span class="s1">&#39;-(human x) +(mortal x)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c2</span> <span class="o">=</span> <span class="n">parse_clause</span><span class="p">(</span><span class="s1">&#39;+(human Socrates)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now we unify the expressions in the “mortal” literals.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">symtab</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c1</span><span class="o">.</span><span class="n">literals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">expr</span>
+<span class="go">(human x)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c2</span><span class="o">.</span><span class="n">literals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">expr</span>
+<span class="go">(human Socrates)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">unify</span><span class="p">(</span><span class="n">c1</span><span class="o">.</span><span class="n">literals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">expr</span><span class="p">,</span> <span class="n">c2</span><span class="o">.</span><span class="n">literals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">expr</span><span class="p">,</span> <span class="n">symtab</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The unifier is <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">Socrates</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">symtab</span>
+<span class="go">{x: &#39;Socrates&#39;}</span>
+</pre></div>
+</div>
+<p>We copy clause 1, in the context of the unifier:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c3</span> <span class="o">=</span> <span class="n">standardize_apart</span><span class="p">(</span><span class="n">c1</span><span class="p">,</span> <span class="n">symtab</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">c3</span><span class="p">)</span>
+<span class="go">16. -(human Socrates) +(mortal Socrates)</span>
+</pre></div>
+</div>
+<p>That is, we have deduced that Socrates is mortal if he is human.</p>
+</section>
+<section id="resolution">
+<h2>Resolution<a class="headerlink" href="#resolution" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="resolve">
+<span class="sig-name descname"><span class="pre">resolve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cl1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cl2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#resolve" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">resolve</span></code> implements resolution.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">resolve</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">resolve</span><span class="p">(</span><span class="n">c1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="go">18. +(mortal Socrates) 14.1+15.1</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Resolve</span></code> takes four arguments: <em>c1, i, c2, j,</em>
+and it resolves the <em>i</em>-th literal of <em>c1</em> with the <em>j</em>-th
+literal of <em>c2.</em></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="factor">
+<span class="sig-name descname"><span class="pre">factor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#factor" title="Permalink to this definition"></a></dt>
+<dd><p>There is also a function <code class="docutils literal notranslate"><span class="pre">factor</span></code>, which derives new clauses from
+a single input clause by identifying pairs of literals that can be
+unified.  For example, if everyone loves Harvey or else Mary loves
+everyone, we can conclude that Mary loves Harvey.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">parse_clause</span><span class="p">(</span><span class="s1">&#39;+(loves x Harvey) +(loves Mary y)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">factor</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span> <span class="o">=</span> <span class="n">factor</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">21. +(loves Mary Harvey) 19.1+19.2</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p>The combination of resolution and factoring yields a inferentially
+complete theorem prover.</p>
+</section>
+<section id="prover">
+<h2>Prover<a class="headerlink" href="#prover" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Prover">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Prover</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Prover" title="Permalink to this definition"></a></dt>
+<dd><p>The prover encapsulates a KB.  It also creates a resolver internally.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.logic</span> <span class="kn">import</span> <span class="n">Prover</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prover</span> <span class="o">=</span> <span class="n">Prover</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;curiosity.kb&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The argument may either be a KB object or a filename that is passed to
+the <code class="docutils literal notranslate"><span class="pre">KB()</span></code> constructor.</p>
+<p>The prover behaves as a function
+that takes a query and answers it using the KB.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">prover</span><span class="p">(</span><span class="s1">&#39;(wh x (kill x Tuna))&#39;</span><span class="p">)</span>
+<span class="go">[&#39;Curiosity&#39;]</span>
+</pre></div>
+</div>
+<p>The prover accepts two keyword arguments: <code class="docutils literal notranslate"><span class="pre">trace</span></code> and
+<code class="docutils literal notranslate"><span class="pre">maxsteps</span></code>.  By default, <code class="docutils literal notranslate"><span class="pre">maxsteps</span></code> is 200.  The “curiosity”
+proof requires 19 steps, though the search for additional solutions
+continues beyond 200.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="interp.html" class="btn btn-neutral float-left" title="selkie.interp — Semantic interpretation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bot.html" class="btn btn-neutral float-right" title="selkie.bot — Conversational agent" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

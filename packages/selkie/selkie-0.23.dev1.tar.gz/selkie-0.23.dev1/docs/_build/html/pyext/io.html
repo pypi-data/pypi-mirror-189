@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.io — Input/output functionality &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.newio — New I/O" href="newio.html" />
+    <link rel="prev" title="selkie.map — The Index class" href="map.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python extensions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html"><code class="docutils literal notranslate"><span class="pre">selkie.config</span></code> — Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object.html"><code class="docutils literal notranslate"><span class="pre">selkie.object</span></code> — Types, reflexion, generic object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html"><code class="docutils literal notranslate"><span class="pre">selkie.string</span></code> — Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seq.html"><code class="docutils literal notranslate"><span class="pre">selkie.seq</span></code> — Sequences and iterators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map.html"><code class="docutils literal notranslate"><span class="pre">selkie.map</span></code> — The Index class</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.io</span></code> — Input/output functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="newio.html"><code class="docutils literal notranslate"><span class="pre">selkie.newio</span></code> — New I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fs.html"><code class="docutils literal notranslate"><span class="pre">selkie.fs</span></code> — File system convenience functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.html"><code class="docutils literal notranslate"><span class="pre">selkie.com</span></code> — Command invocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp/index.html">The NLP pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Python extensions</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.io</span></code> — Input/output functionality</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pyext/io.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="module-selkie.io"></span><section id="selkie-io-input-output-functionality">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.io</span></code> — Input/output functionality<a class="headerlink" href="#selkie-io-input-output-functionality" title="Permalink to this heading"></a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">selkie.io</span></code> module contains functionality related to files and
+directories.</p>
+<section id="filenames">
+<h2>Filenames<a class="headerlink" href="#filenames" title="Permalink to this heading"></a></h2>
+<p>Selkie uses the Path objects of pathlib: see
+<a class="reference external" href="https://docs.python.org/3/library/pathlib.html">https://docs.python.org/3/library/pathlib.html</a> and the temporary-file
+facilities in tempfile (<a class="reference external" href="https://docs.python.org/3/library/tempfile.html">https://docs.python.org/3/library/tempfile.html</a>).</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.ispathlike">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">ispathlike</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.ispathlike" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True if <em>x</em> is something that can be passed to <code class="docutils literal notranslate"><span class="pre">open()</span></code>.
+To be precise, it returns True just in case <em>x</em> is a string or
+implements the method <code class="docutils literal notranslate"><span class="pre">__fspath__()</span></code>.</p>
+</dd></dl>
+
+<p><strong>Suffixes</strong> — A filename suffix is defined to be the empty string if the filename
+contains no dot, and the substring following the last dot, if it
+contains a dot.  (In the case of a pathname, we limit attention to the
+final pathname component.)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.get_suffix">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">get_suffix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.get_suffix" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a filename and returns the suffix (without dot), or <code class="docutils literal notranslate"><span class="pre">''</span></code>, if there is no dot.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.strip_suffix">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">strip_suffix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.strip_suffix" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a filename and returns it without the suffix, if any.  The dot is also stripped.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.split_suffix">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">split_suffix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.split_suffix" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a filename and returns a pair (<em>f</em>, <em>s</em>) where <em>f</em> is the
+filename without the suffix (if any), and <em>s</em> is the suffix
+(without the dot).  If there is no suffix, <em>s</em> is the empty string.</p>
+</dd></dl>
+
+</section>
+<section id="location">
+<h2>Location<a class="headerlink" href="#location" title="Permalink to this heading"></a></h2>
+<p>A <code class="docutils literal notranslate"><span class="pre">Location</span></code> generalizes over local and remote files.  It may be
+created from a string:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">Location</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f1</span> <span class="o">=</span> <span class="n">Location</span><span class="p">(</span><span class="s1">&#39;abney@login.itd.umich.edu:scratch/foo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It has three members: <code class="docutils literal notranslate"><span class="pre">user</span></code>, <code class="docutils literal notranslate"><span class="pre">host</span></code>, and <code class="docutils literal notranslate"><span class="pre">pathname</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f1</span><span class="o">.</span><span class="n">user</span>
+<span class="go">&#39;abney&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f1</span><span class="o">.</span><span class="n">host</span>
+<span class="go">&#39;login.itd.umich.edu&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f1</span><span class="o">.</span><span class="n">pathname</span>
+<span class="go">&#39;scratch/foo&#39;</span>
+</pre></div>
+</div>
+<p>A local file has value <code class="docutils literal notranslate"><span class="pre">None</span></code> for <code class="docutils literal notranslate"><span class="pre">user</span></code> and <code class="docutils literal notranslate"><span class="pre">host</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f2</span> <span class="o">=</span> <span class="n">Location</span><span class="p">(</span><span class="s1">&#39;/tmp/foo&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f2</span><span class="o">.</span><span class="n">user</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">f2</span><span class="o">.</span><span class="n">host</span> <span class="ow">is</span> <span class="kc">None</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f2</span><span class="o">.</span><span class="n">pathname</span>
+<span class="go">&#39;/tmp/foo&#39;</span>
+</pre></div>
+</div>
+<p>Alternatively, a <code class="docutils literal notranslate"><span class="pre">Location</span></code> may be created from <code class="docutils literal notranslate"><span class="pre">user</span></code>, <code class="docutils literal notranslate"><span class="pre">host</span></code>, and <code class="docutils literal notranslate"><span class="pre">pathname</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f3</span> <span class="o">=</span> <span class="n">Location</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;login.itd.umich.edu&#39;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s1">&#39;abney&#39;</span><span class="p">,</span> <span class="n">pathname</span><span class="o">=</span><span class="s1">&#39;scratch/bar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that tilde is expanded, though this only works for local files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">expanduser</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f4</span> <span class="o">=</span> <span class="n">Location</span><span class="p">(</span><span class="s1">&#39;~/scratch/test&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f4</span><span class="o">.</span><span class="n">pathname</span> <span class="o">==</span> <span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/scratch/test&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>There are several predefined locations:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Tmp</span></code></p></td>
+<td><p>The directory <code class="docutils literal notranslate"><span class="pre">/tmp</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Dest</span></code></p></td>
+<td><p>The directory where Selkie is installed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Bin</span></code></p></td>
+<td><p>The <code class="docutils literal notranslate"><span class="pre">bin</span></code> subdirectory of <code class="docutils literal notranslate"><span class="pre">Dest</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Examples</span></code></p></td>
+<td><p>The <code class="docutils literal notranslate"><span class="pre">examples</span></code> subdirectory of <code class="docutils literal notranslate"><span class="pre">Dest</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Data</span></code></p></td>
+<td><p>The <code class="docutils literal notranslate"><span class="pre">data</span></code> subdirectory of <code class="docutils literal notranslate"><span class="pre">Dest</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">Location</span></span><a class="headerlink" href="#selkie.io.selkie.io.Location" title="Permalink to this definition"></a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">Location</span></code> instance has a collection of methods for ease of
+examining and manipulating the file.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.join">
+<span class="sig-name descname"><span class="pre">join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.join" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a new location with an added pathname component.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.__div__">
+<span class="sig-name descname"><span class="pre">__div__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.__div__" title="Permalink to this definition"></a></dt>
+<dd><p>A synonym for <code class="docutils literal notranslate"><span class="pre">join()</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.__add__">
+<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.__add__" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a suffix.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.is_remote">
+<span class="sig-name descname"><span class="pre">is_remote</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.is_remote" title="Permalink to this definition"></a></dt>
+<dd><p>Whether the location is on a remote host.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.to_filename">
+<span class="sig-name descname"><span class="pre">to_filename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.to_filename" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the <code class="docutils literal notranslate"><span class="pre">pathname</span></code>, but signals an error if not local.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.parent" title="Permalink to this definition"></a></dt>
+<dd><p>Location representing the parent directory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.name" title="Permalink to this definition"></a></dt>
+<dd><p>The last component of the pathname.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.split">
+<span class="sig-name descname"><span class="pre">split</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.split" title="Permalink to this definition"></a></dt>
+<dd><p>Returns (parent directory, name).  The parent directory is a <code class="docutils literal notranslate"><span class="pre">Location</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.exists">
+<span class="sig-name descname"><span class="pre">exists</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.exists" title="Permalink to this definition"></a></dt>
+<dd><p>Whether the named file exists.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.is_mounted">
+<span class="sig-name descname"><span class="pre">is_mounted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.is_mounted" title="Permalink to this definition"></a></dt>
+<dd><p>Mac-specific.  If the pathname begins with <code class="docutils literal notranslate"><span class="pre">'/Volumes'</span></code>, it
+returns true just in case the toplevel directory under
+<code class="docutils literal notranslate"><span class="pre">'/Volumes'</span></code> exists.  If the pathname does not begin with
+<code class="docutils literal notranslate"><span class="pre">'/Volumes'</span></code>, it always returns true.  Signals an error for a
+remote location.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.islink">
+<span class="sig-name descname"><span class="pre">islink</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.islink" title="Permalink to this definition"></a></dt>
+<dd><p>Whether the named file is a symbolic link.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.isdir">
+<span class="sig-name descname"><span class="pre">isdir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.isdir" title="Permalink to this definition"></a></dt>
+<dd><p>Whether the named file is a directory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.size">
+<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.size" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the file size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.modtime">
+<span class="sig-name descname"><span class="pre">modtime</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.modtime" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the file modtime, a float representing seconds since the epoch.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.readable">
+<span class="sig-name descname"><span class="pre">readable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.readable" title="Permalink to this definition"></a></dt>
+<dd><p>Whether I can read it.  Optional arg <code class="docutils literal notranslate"><span class="pre">forwhom</span></code> may be <code class="docutils literal notranslate"><span class="pre">'me'</span></code>
+(the default), <code class="docutils literal notranslate"><span class="pre">'owner'</span></code>, <code class="docutils literal notranslate"><span class="pre">'group'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'other'</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.writable">
+<span class="sig-name descname"><span class="pre">writable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.writable" title="Permalink to this definition"></a></dt>
+<dd><p>Whether I can write it.  Optional arg <code class="docutils literal notranslate"><span class="pre">forwhom</span></code>
+may be <code class="docutils literal notranslate"><span class="pre">'me'</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">'owner'</span></code>, <code class="docutils literal notranslate"><span class="pre">'group'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'other'</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.executable">
+<span class="sig-name descname"><span class="pre">executable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.executable" title="Permalink to this definition"></a></dt>
+<dd><p>Whether I can execute it.  Optional arg <code class="docutils literal notranslate"><span class="pre">forwhom</span></code>
+may be <code class="docutils literal notranslate"><span class="pre">'me'</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">'owner'</span></code>, <code class="docutils literal notranslate"><span class="pre">'group'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'other'</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.permit">
+<span class="sig-name descname"><span class="pre">permit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.permit" title="Permalink to this definition"></a></dt>
+<dd><p>Change the permissions to allow <em>a</em>, which is a
+string which may contain <code class="docutils literal notranslate"><span class="pre">'r'</span></code>, <code class="docutils literal notranslate"><span class="pre">'w'</span></code>, and <code class="docutils literal notranslate"><span class="pre">'x'</span></code>.
+Optional second argument may be a string or list of strings, chosen from:
+<code class="docutils literal notranslate"><span class="pre">'owner'</span></code>, <code class="docutils literal notranslate"><span class="pre">'group'</span></code>, <code class="docutils literal notranslate"><span class="pre">'other'</span></code>, <code class="docutils literal notranslate"><span class="pre">'all'</span></code>, <code class="docutils literal notranslate"><span class="pre">'me'</span></code>.
+Default: <code class="docutils literal notranslate"><span class="pre">'me'</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.deny">
+<span class="sig-name descname"><span class="pre">deny</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.deny" title="Permalink to this definition"></a></dt>
+<dd><p>Change the permissions to disallow <em>a</em>.  Same second
+argument as <code class="docutils literal notranslate"><span class="pre">permit()</span></code>, but default is <code class="docutils literal notranslate"><span class="pre">'all'</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.md5">
+<span class="sig-name descname"><span class="pre">md5</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.md5" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the MD5 hash (a string).  Prints a message
+unless <code class="docutils literal notranslate"><span class="pre">silent=True</span></code> is specified.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.is_under">
+<span class="sig-name descname"><span class="pre">is_under</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.is_under" title="Permalink to this definition"></a></dt>
+<dd><p>Whether or not <em>d</em> (a <code class="docutils literal notranslate"><span class="pre">Location</span></code>) is an ancestor of this location.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.open">
+<span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">makedirs</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.open" title="Permalink to this definition"></a></dt>
+<dd><p>With no arguments, open for reading.
+with mode <code class="docutils literal notranslate"><span class="pre">'w'</span></code> and makedirs=True,
+open for writing, doing <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">-p</span></code> on the parent.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.tabular">
+<span class="sig-name descname"><span class="pre">tabular</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*m*</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.tabular" title="Permalink to this definition"></a></dt>
+<dd><p>The argument <em>m</em> is the mode for opening the
+file.  Keyword arguments <code class="docutils literal notranslate"><span class="pre">encoding</span></code> and <code class="docutils literal notranslate"><span class="pre">separator</span></code> are also
+accepted.  Should be called within a <code class="docutils literal notranslate"><span class="pre">with</span></code> clause.  If opened for
+reading, the file is an iterator over tuples of fields (strings), one
+per line.  If opened for writing, call its <code class="docutils literal notranslate"><span class="pre">write()</span></code> method; each
+argument is converted to a string and written as a field.  Default
+value for <code class="docutils literal notranslate"><span class="pre">separator</span></code> is tab.  Setting it to <code class="docutils literal notranslate"><span class="pre">None</span></code> causes any
+amount of whitespace to be a field separator, and trims leading and
+trailing whitespace.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.read" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the contents of the file.  Takes keyword
+argument <code class="docutils literal notranslate"><span class="pre">encoding</span></code>.  Value <code class="docutils literal notranslate"><span class="pre">'bytes'</span></code> causes the raw contents
+to be returned.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.listdir">
+<span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.listdir" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an iteration over the names in this
+directory.  If it does not exist, returns an empty iteration.  If it
+exists but is not a directory, signals an error.&lt;/dd&gt;</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.items">
+<span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.items" title="Permalink to this definition"></a></dt>
+<dd><p>Like <code class="docutils literal notranslate"><span class="pre">listdir()</span></code>, but returns pairs (<code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">loc</span></code>), where
+<code class="docutils literal notranslate"><span class="pre">loc</span></code> is the child <code class="docutils literal notranslate"><span class="pre">Location</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.__call__" title="Permalink to this definition"></a></dt>
+<dd><p>Calls <code class="docutils literal notranslate"><span class="pre">os.system()</span></code> on this file.  Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the
+system call returns 0, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+</dd></dl>
+
+<p>A <code class="docutils literal notranslate"><span class="pre">Location</span></code> instance also provides the following system
+calls.  These can be disabled by setting <code class="docutils literal notranslate"><span class="pre">DryRun</span> <span class="pre">=</span> <span class="pre">True</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.assure_parent">
+<span class="sig-name descname"><span class="pre">assure_parent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.assure_parent" title="Permalink to this definition"></a></dt>
+<dd><p>Create the parent directory if it does not exist.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.make_directory">
+<span class="sig-name descname"><span class="pre">make_directory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.make_directory" title="Permalink to this definition"></a></dt>
+<dd><p>Create a directory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.copy_to">
+<span class="sig-name descname"><span class="pre">copy_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.copy_to" title="Permalink to this definition"></a></dt>
+<dd><p>Copy this file to <em>t</em>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.copy_from">
+<span class="sig-name descname"><span class="pre">copy_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.copy_from" title="Permalink to this definition"></a></dt>
+<dd><p>Copy <em>s</em> to this file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.move_to">
+<span class="sig-name descname"><span class="pre">move_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.move_to" title="Permalink to this definition"></a></dt>
+<dd><p>Rename this file to <em>t</em>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.delete_file">
+<span class="sig-name descname"><span class="pre">delete_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.delete_file" title="Permalink to this definition"></a></dt>
+<dd><p>Delete this file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.delete_directory">
+<span class="sig-name descname"><span class="pre">delete_directory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.delete_directory" title="Permalink to this definition"></a></dt>
+<dd><p>Delete this empty directory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.delete_hierarchy">
+<span class="sig-name descname"><span class="pre">delete_hierarchy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.delete_hierarchy" title="Permalink to this definition"></a></dt>
+<dd><p>Nothing will be
+deleted outside of the “sandbox” directory <em>s</em>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.selkie.io.Location.make_writable">
+<span class="sig-name descname"><span class="pre">make_writable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.selkie.io.Location.make_writable" title="Permalink to this definition"></a></dt>
+<dd><p>Change permission to writable.  If
+this is a directory, applies recursively, unless <code class="docutils literal notranslate"><span class="pre">recurse=False</span></code>
+is specified.</p>
+</dd></dl>
+
+</dd></dl>
+
+<p>Some examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">Tmp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Tmp</span><span class="o">/</span><span class="s1">&#39;my&#39;</span>
+<span class="go">/tmp/my</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Tmp</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;my&#39;</span><span class="p">)</span>
+<span class="go">/tmp/my</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">foo</span> <span class="o">=</span> <span class="n">Tmp</span><span class="o">/</span><span class="s1">&#39;my&#39;</span><span class="o">/</span><span class="s1">&#39;foo&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">foo</span> <span class="o">+</span> <span class="s1">&#39;.txt&#39;</span>
+<span class="go">/tmp/my/foo.txt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f1</span><span class="o">.</span><span class="n">is_remote</span><span class="p">()</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">foo</span><span class="o">.</span><span class="n">is_remote</span><span class="p">()</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">foo</span><span class="o">.</span><span class="n">parent</span><span class="p">()</span>
+<span class="go">/tmp/my</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">Location</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>The file <code class="docutils literal notranslate"><span class="pre">make_repo_example</span></code> in the <code class="docutils literal notranslate"><span class="pre">Examples</span></code> directory
+is a shell script that creates a little example repository <code class="docutils literal notranslate"><span class="pre">/tmp/my/foo</span></code>,
+as well as the file <code class="docutils literal notranslate"><span class="pre">/tmp/config</span></code> and the empty directory <code class="docutils literal notranslate"><span class="pre">/tmp/cp</span></code>.
+Note that function call
+takes precedence over division, making the parentheses necessary in
+the second line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">Examples</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="n">Examples</span><span class="o">/</span><span class="s1">&#39;make_repo_example&#39;</span><span class="p">)()</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">foo</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">foo</span><span class="o">.</span><span class="n">isdir</span><span class="p">()</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file1</span> <span class="o">=</span> <span class="n">foo</span><span class="o">/</span><span class="s1">&#39;bar&#39;</span><span class="o">/</span><span class="s1">&#39;pkgex.pkg.sh&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file1</span>
+<span class="go">/tmp/my/foo/bar/pkgex.pkg.sh</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file1</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file1</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+<span class="go">161</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file1</span><span class="o">.</span><span class="n">md5</span><span class="p">()</span>
+<span class="go">Computing md5 hash for /tmp/my/foo/bar/pkgex.pkg.sh ... ok</span>
+<span class="go">&#39;69962bf31dd38a8e7f5ef9fc3858cc7c&#39;</span>
+</pre></div>
+</div>
+<p>The following is an example of using <code class="docutils literal notranslate"><span class="pre">tabular</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="p">(</span><span class="n">Tmp</span><span class="o">/</span><span class="s1">&#39;config&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">tabular</span><span class="p">()</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">[&#39;repo&#39;, &#39;foo&#39;, &#39;/tmp/my/foo&#39;, &#39;/tmp/cp/foo&#39;, &#39;/tmp/inst&#39;]</span>
+<span class="go">[&#39;active&#39;, &#39;foo&#39;, &#39;my.host.com:/home/me/foo&#39;]</span>
+</pre></div>
+</div>
+<section id="predefined-locations">
+<h3>Predefined locations<a class="headerlink" href="#predefined-locations" title="Permalink to this heading"></a></h3>
+<p>The following variables name fixed directories:</p>
+<dl class="simple">
+<dt>Dest</dt><dd><p>The destination directory in which Selkie is installed.</p>
+</dd>
+<dt>Bin</dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">bin</span></code> subdirectory.</p>
+</dd>
+<dt>Examples</dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">examples</span></code> subdirectory.</p>
+</dd>
+<dt>Data</dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">data</span></code> subdirectory.</p>
+</dd>
+<dt>Tmp</dt><dd><p>The directory <code class="docutils literal notranslate"><span class="pre">/tmp</span></code>.</p>
+</dd>
+</dl>
+<p>As a convenience shorthand, <code class="docutils literal notranslate"><span class="pre">L(*s*)</span></code> creates a local Location with
+pathname <em>s</em>.  One can use this to refer to the current working directory
+<code class="docutils literal notranslate"><span class="pre">L('.')</span></code>, the parent directory <code class="docutils literal notranslate"><span class="pre">L('..')</span></code>, and one’s home
+directory <code class="docutils literal notranslate"><span class="pre">L('~')</span></code>.</p>
+</section>
+</section>
+<section id="infiles-and-outfiles">
+<h2>Infiles and outfiles<a class="headerlink" href="#infiles-and-outfiles" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.infile">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">infile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.infile" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">infile()</span></code> returns an input stream.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">infile</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.misc</span> <span class="kn">import</span> <span class="n">as_ascii</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">as_ascii</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">infile</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">text1</span><span class="o">.</span><span class="n">utf8</span><span class="p">)]</span>
+<span class="go">[&#39;f{e1} f{e1}{nl}&#39;, &#39;ki{014b} ko{014b}{nl}&#39;]</span>
+</pre></div>
+</div>
+<p>Note that U+E1 is <em>a</em> with an acute, and U+014B is engma:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">unicodedata</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">unicodedata</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\u00e1</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="go">&#39;LATIN SMALL LETTER A WITH ACUTE&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">unicodedata</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\u014b</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="go">&#39;LATIN SMALL LETTER ENG&#39;</span>
+</pre></div>
+</div>
+<p>In addition to accepting a string as filename, some cases are treated specially:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If the argument is <code class="docutils literal notranslate"><span class="pre">'-'</span></code>, then the return value is <code class="docutils literal notranslate"><span class="pre">sys.stdin</span></code>.</p></li>
+<li><p>If the argument begins with letters (non-empty, only alphabetic)
+followed by a colon, it is interpreted as a URL.</p></li>
+<li><p>If the argument is an open file whose mode begins with <code class="docutils literal notranslate"><span class="pre">'r'</span></code>,
+or a <code class="docutils literal notranslate"><span class="pre">StringIO</span></code> instance, or an object with a <code class="docutils literal notranslate"><span class="pre">readline()</span></code>
+method, it is passed through.</p></li>
+</ul>
+</div></blockquote>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">ex</span></code> and its extensions, such as <code class="docutils literal notranslate"><span class="pre">ex.text1</span></code>, are of
+type <code class="docutils literal notranslate"><span class="pre">Fn</span></code>, which is a subclass of <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
+<p>To provide a string as contents, rather than filename, wrap it in <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">infile</span><span class="p">(</span><span class="n">StringIO</span><span class="p">(</span><span class="s1">&#39;This is a test.</span><span class="se">\n</span><span class="s1">Only a test.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)))</span>
+<span class="go">[&#39;This is a test.\n&#39;, &#39;Only a test.\n&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.outfile">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">outfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.outfile" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">outfile()</span></code> returns an output file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">outfile</span><span class="p">,</span> <span class="n">close</span><span class="p">,</span> <span class="n">contents</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fn</span> <span class="o">=</span> <span class="n">tmpfile</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">outfile</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">close</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">contents</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+<span class="go">&#39;Hello\n&#39;</span>
+</pre></div>
+</div>
+<p>Regarding the argument to <code class="docutils literal notranslate"><span class="pre">outfile()</span></code>, there are again some
+cases that are treated specially:</p>
+<blockquote>
+<div><ul>
+<li><p>The filename <code class="docutils literal notranslate"><span class="pre">Fn('-')</span></code> represents <code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code>.</p></li>
+<li><p>If the argument is omitted or is <code class="docutils literal notranslate"><span class="pre">None</span></code>, output is accumulated as a string, which
+can be retrieved using <code class="docutils literal notranslate"><span class="pre">getvalue()</span></code>.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">outfile</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;hi there</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="go">9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;bye</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+<span class="go">&#39;hi there\nbye\n&#39;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</section>
+<section id="load-and-save-functions">
+<h2>Load and save functions<a class="headerlink" href="#load-and-save-functions" title="Permalink to this heading"></a></h2>
+<section id="file-format">
+<h3>File Format<a class="headerlink" href="#file-format" title="Permalink to this heading"></a></h3>
+<p>The <cite>FileFormat</cite> class takes a read and write function, and provides
+<cite>load()</cite>, <cite>parse()</cite>, and <cite>save()</cite>.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.io.FileFormat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">FileFormat</span></span><a class="headerlink" href="#selkie.io.FileFormat" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__([name],</span> <span class="pre">[read],</span> <span class="pre">[write],</span> <span class="pre">[encoding]):</span></span></dt>
+<dd><p>The argument <em>read</em> is the read function and <em>write</em> is the write
+function.  The read function is given an open stream, and should
+return a JSON object.  The write function is given a JSON object
+and a stream open for writing, and should write the object in
+the format that the read function expects.  If <em>encoding</em> is
+False, the read and write streams are opened in binary mode.
+Otherwise, <em>encoding</em> is passed to <cite>open()</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.FileFormat.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.FileFormat.load" title="Permalink to this definition"></a></dt>
+<dd><p>Opens the named file, calls the read function on the open file,
+and returns the result.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.FileFormat.parse">
+<span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.FileFormat.parse" title="Permalink to this definition"></a></dt>
+<dd><p>The argument <em>s</em> is the string contents of a file.  Wraps a
+string reader around <em>s</em> and calls the read function on it,
+returning the result.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">save(x,</span> <span class="pre">fn):</span></span></dt>
+<dd><p>Opens <em>fn</em> for writing and calls the write function on <em>x</em> and
+the open file.</p>
+</dd></dl>
+
+</dd></dl>
+
+<p>The following file formats are currently available:</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="selkie.io.LineFormat">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">LineFormat</span></span><a class="headerlink" href="#selkie.io.LineFormat" title="Permalink to this definition"></a></dt>
+<dd><p>The read function returns a list of the lines of the file.
+Carriage return and newline are stripped from each line.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="selkie.io.TabularFormat">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">TabularFormat</span></span><a class="headerlink" href="#selkie.io.TabularFormat" title="Permalink to this definition"></a></dt>
+<dd><p>Each line of the file represents a record, with fields separated by
+tab.  The read function returns a list of records, where a record
+is a list of strings.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="selkie.io.KVIFormat">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">KVIFormat</span></span><a class="headerlink" href="#selkie.io.KVIFormat" title="Permalink to this definition"></a></dt>
+<dd><p>The <cite>read_kvi()</cite> and <cite>write_kvi()</cite> functions are used.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="selkie.io.JsonFormat">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">JsonFormat</span></span><a class="headerlink" href="#selkie.io.JsonFormat" title="Permalink to this definition"></a></dt>
+<dd><p>Reads and writes JSON format.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="selkie.io.BlockFormat">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">BlockFormat</span></span><a class="headerlink" href="#selkie.io.BlockFormat" title="Permalink to this definition"></a></dt>
+<dd><p>Uses <code class="docutils literal notranslate"><span class="pre">read_record_blocks()</span></code> and <code class="docutils literal notranslate"><span class="pre">write_record_blocks()</span></code>.</p>
+</dd></dl>
+
+</section>
+<section id="general">
+<h3>General<a class="headerlink" href="#general" title="Permalink to this heading"></a></h3>
+<p>There is a series of paired “load” and “save” functions for
+different kinds of contents.  They build on unicode input and output
+streams, and inherit the same conventions regarding their filename
+arguments.</p>
+<p>Where it makes sense, there is also an “iter” function corresponding
+to each “load” function.  The “iter” function returns a
+generator, and the “load” function returns a list.  However, there is no
+“iter” function corresponding to <code class="docutils literal notranslate"><span class="pre">load_string()</span></code> or <code class="docutils literal notranslate"><span class="pre">load_dict()</span></code>.</p>
+</section>
+<section id="close-unicode">
+<h3>Close unicode.<a class="headerlink" href="#close-unicode" title="Permalink to this heading"></a></h3>
+<p>The definitions of the “save” functions all have a similar outline:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">save_x</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">outfile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="o">...</span>
+    <span class="k">return</span> <span class="n">close</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">close_unicode()</span></code> will close the file <em>unless</em>
+it is <code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code>.  If the file was created with no filename,
+<code class="docutils literal notranslate"><span class="pre">close_unicode()</span></code> gets the string contents before closing the
+file, and its return value is the string contents.  Otherwise, the
+return value is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</section>
+<section id="strings">
+<h3>Strings<a class="headerlink" href="#strings" title="Permalink to this heading"></a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.load_string">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">load_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.load_string" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">load_string()</span></code> returns the entire contents of a
+file as a unicode string.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">load_string</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">load_string</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">text1</span><span class="p">)</span>
+<span class="go">&#39;This is a test.\nIt is only a test.\n&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.save_string">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">save_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.save_string" title="Permalink to this definition"></a></dt>
+<dd><p>The companion function <code class="docutils literal notranslate"><span class="pre">save_string()</span></code> does the opposite:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">save_string</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fn</span> <span class="o">=</span> <span class="n">tmpfile</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">save_string</span><span class="p">(</span><span class="s1">&#39;f</span><span class="se">\u00e1\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fn</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="lines">
+<h3>Lines<a class="headerlink" href="#lines" title="Permalink to this heading"></a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.load_lines">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">load_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.load_lines" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">load_lines()</span></code> returns the
+lines of a file, <em>without</em> the trailing newline characters.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">load_lines</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">load_lines</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">text1</span><span class="p">)</span>
+<span class="go">[&#39;This is a test.&#39;, &#39;It is only a test.&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.iter_lines">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">iter_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.iter_lines" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a generator instead of a list.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.save_lines">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">save_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lines</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.save_lines" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">save_lines()</span></code> takes an iterator over strings.  Each
+becomes a line of the file.  Newline characters are added.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">save_lines</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fn</span> <span class="o">=</span> <span class="n">tmpfile</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">save_lines</span><span class="p">([</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;f</span><span class="se">\u00e1</span><span class="s1">&#39;</span><span class="p">],</span> <span class="n">fn</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>One can then confirm the contents:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">as_ascii</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">infile</span><span class="p">(</span><span class="n">fn</span><span class="p">)]</span>
+<span class="go">[&#39;foo{nl}&#39;, &#39;f{e1}{nl}&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="records">
+<h3>Records<a class="headerlink" href="#records" title="Permalink to this heading"></a></h3>
+<p>A <strong>record</strong> is a list (more generally, a sequence) of strings
+representing field values.  On disk, each record is a line and
+field values are separated by tabs.  A file containing such records is a
+<strong>tabular file</strong>.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.load_records">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">load_records</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.load_records" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">load_records()</span></code> takes a filename and returns a list of records,
+representing the contents of the file.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">load_records</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">load_records</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">tab1</span><span class="o">.</span><span class="n">tab</span><span class="p">)</span>
+<span class="go">[[&#39;foo&#39;, &#39;42&#39;], [&#39;bar&#39;, &#39;15&#39;]]</span>
+</pre></div>
+</div>
+<p>Optionally, one can specify the field separator by providing the
+keyword argument <code class="docutils literal notranslate"><span class="pre">separator</span></code>.  The default separator is tab.  A
+value of <code class="docutils literal notranslate"><span class="pre">None</span></code> means that any amount of whitespace constitutes a
+separator, and leading and trailing whitespace are ignored.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.iter_records">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">iter_records</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.iter_records" title="Permalink to this definition"></a></dt>
+<dd><p>There is also a function <code class="docutils literal notranslate"><span class="pre">iter_records()</span></code> that returns a
+generator instead of a list.  It takes the same <code class="docutils literal notranslate"><span class="pre">separator</span></code>
+argument as <code class="docutils literal notranslate"><span class="pre">load_records()</span></code> does.
+In addition to the method <code class="docutils literal notranslate"><span class="pre">next()</span></code>,
+which all generators support, the <code class="docutils literal notranslate"><span class="pre">iter_records()</span></code> generator also
+supports the method <code class="docutils literal notranslate"><span class="pre">error()</span></code>, which takes an an error message and
+signals an error,
+indicating the filename and line number of the most recently read
+record.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.save_records">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">save_records</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">records</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.save_records" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">save_records()</span></code> takes an iterator over records
+and writes them to a file.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">save_records</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">recs</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;hi&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;lo&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;bye&#39;</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fn</span> <span class="o">=</span> <span class="n">tmpfile</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">save_records</span><span class="p">(</span><span class="n">recs</span><span class="p">,</span> <span class="n">fn</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">load_records</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+<span class="go">[[&#39;1&#39;, &#39;hi&#39;], [&#39;2&#39;, &#39;lo&#39;], [&#39;3&#39;, &#39;bye&#39;]]</span>
+</pre></div>
+</div>
+<p>One can optionally specify the <code class="docutils literal notranslate"><span class="pre">separator</span></code>.</p>
+</dd></dl>
+
+</section>
+<section id="dict">
+<h3>Dict<a class="headerlink" href="#dict" title="Permalink to this heading"></a></h3>
+<p>A dict is represented on disk as a tabular file with two columns: key
+and value.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.load_dict">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">load_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.load_dict" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">load_dict()</span></code> reads a dict from a tabular file.
+If there are duplicate keys in the file, only the last copy has any effect:
+earlier values get overwritten.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">load_dict</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">load_dict</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">tab1</span><span class="o">.</span><span class="n">tab</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="go">[&#39;bar&#39;, &#39;foo&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">]</span>
+<span class="go">&#39;42&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.save_dict">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">save_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.save_dict" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">save_dict()</span></code> takes a dict and writes it to a file.
+Keys and values must all be strings.</p>
+</dd></dl>
+
+</section>
+<section id="nested-dict">
+<h3>Nested dict<a class="headerlink" href="#nested-dict" title="Permalink to this heading"></a></h3>
+<p>A nested dict is specified with dotted keys and values.  One or more
+whitespace characters serve as separator between key and value.
+For example, the following is the contents of <code class="docutils literal notranslate"><span class="pre">ex.nivre.exp</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">command</span> <span class="n">selkie</span><span class="o">.</span><span class="n">dp</span><span class="o">.</span><span class="n">nivre</span>
+<span class="n">dataset</span> <span class="n">spa</span><span class="o">.</span><span class="n">orig</span>
+<span class="n">features</span> <span class="n">nivre</span><span class="o">-</span><span class="mi">2007</span>
+<span class="n">nulls</span> <span class="kc">True</span>
+<span class="n">split</span><span class="o">.</span><span class="n">feature</span> <span class="n">fpos</span><span class="o">.</span><span class="n">input</span><span class="mf">.0</span>
+<span class="n">split</span><span class="o">.</span><span class="n">cpt</span><span class="o">.</span><span class="n">s</span> <span class="mi">0</span>
+<span class="n">split</span><span class="o">.</span><span class="n">cpt</span><span class="o">.</span><span class="n">t</span> <span class="mi">1</span>
+<span class="n">split</span><span class="o">.</span><span class="n">cpt</span><span class="o">.</span><span class="n">d</span> <span class="mi">2</span>
+<span class="n">split</span><span class="o">.</span><span class="n">cpt</span><span class="o">.</span><span class="n">g</span> <span class="mf">0.2</span>
+<span class="n">split</span><span class="o">.</span><span class="n">cpt</span><span class="o">.</span><span class="n">c</span> <span class="mf">0.5</span>
+<span class="n">split</span><span class="o">.</span><span class="n">cpt</span><span class="o">.</span><span class="n">r</span> <span class="mi">0</span>
+<span class="n">split</span><span class="o">.</span><span class="n">cpt</span><span class="o">.</span><span class="n">e</span> <span class="mf">1.0</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">load_nested_dict()</span></code> creates a dict in which the
+keys are <code class="docutils literal notranslate"><span class="pre">'command'</span></code>, <code class="docutils literal notranslate"><span class="pre">'dataset'</span></code>, <code class="docutils literal notranslate"><span class="pre">'features'</span></code>, <code class="docutils literal notranslate"><span class="pre">'nulls'</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">'split'</span></code>.  The value for <code class="docutils literal notranslate"><span class="pre">'split'</span></code> is a subdict with
+keys <code class="docutils literal notranslate"><span class="pre">'feature'</span></code> and <code class="docutils literal notranslate"><span class="pre">'cpt'</span></code>, and within the subdict, the
+value for <code class="docutils literal notranslate"><span class="pre">'cpt'</span></code> is a sub-subdict.</p>
+</section>
+<section id="paragraphs">
+<h3>Paragraphs<a class="headerlink" href="#paragraphs" title="Permalink to this heading"></a></h3>
+<p>A paragraph is a maximal block of lines not containing an empty line.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.load_paragraphs">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">load_paragraphs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.load_paragraphs" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">load_paragraphs()</span></code> reads a file and returns a list
+of paragraphs.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">load_paragraphs</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">load_paragraphs</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">par1</span><span class="o">.</span><span class="n">txt</span><span class="p">)</span>
+<span class="go">[&#39;This is\na test.\n&#39;, &#39;It is only\na test.\n&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.save_paragraphs">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">save_paragraphs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paras</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.save_paragraphs" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">save_paragraphs()</span></code> takes an iterator over
+paragraphs and writes each to the named file.  An empty line is written as
+a separator before each paragraph except the first.</p>
+</dd></dl>
+
+</section>
+<section id="blocks">
+<h3>Blocks<a class="headerlink" href="#blocks" title="Permalink to this heading"></a></h3>
+<p>A block is a contiguous sequence of non-empty lines.  Separators
+between blocks consist of one or more empty lines.  A block is
+represented as a list of lines; carriage return and newline are
+stripped from the lines.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.iter_blocks">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">iter_blocks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.iter_blocks" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">iter_blocks()</span></code> reads a file and generates a sequence of
+blocks.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.load_blocks">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">load_blocks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.load_blocks" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">load_blocks()</span></code> converts the generator to a list.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">load_blocks</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">load_blocks</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">par1</span><span class="o">.</span><span class="n">txt</span><span class="p">)</span>
+<span class="go">[[&#39;This is&#39;, &#39;a test.&#39;], [&#39;It is only&#39;, &#39;a test.&#39;]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.save_blocks">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">save_blocks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blocks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.save_blocks" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">save_blocks()</span></code> takes an iterator over blocks (lists
+of lists of strings) and writes each to the named file.  An empty line
+is written as separator between each pair of blocks.</p>
+</dd></dl>
+
+</section>
+<section id="record-blocks">
+<h3>Record blocks<a class="headerlink" href="#record-blocks" title="Permalink to this heading"></a></h3>
+<p>A record block is a contiguous sequence of non-empty records.  One or
+more empty records (i.e., empty lines) separate record blocks.  A
+record block is represented as a list of lists, each record being a
+list of fields (strings).</p>
+</section>
+</section>
+<section id="tokens">
+<h2>Tokens<a class="headerlink" href="#tokens" title="Permalink to this heading"></a></h2>
+<p>Files that contain something comparable to code—for example, grammar
+files or files containing predicate-calculus expressions—are treated
+as sequences of tokens.</p>
+<section id="load-iterate-tokenize">
+<h3>Load, Iterate, Tokenize<a class="headerlink" href="#load-iterate-tokenize" title="Permalink to this heading"></a></h3>
+<p>A first step in processing natural-language text is to convert it to
+tokens.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.io.Token">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">Token</span></span><a class="headerlink" href="#selkie.io.Token" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.io.Token.type">
+<span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#selkie.io.Token.type" title="Permalink to this definition"></a></dt>
+<dd><p>The class <code class="docutils literal notranslate"><span class="pre">Token</span></code> is a specialization of <code class="docutils literal notranslate"><span class="pre">str</span></code>.  It has an
+additional attribute <code class="docutils literal notranslate"><span class="pre">type</span></code> whose value is <code class="docutils literal notranslate"><span class="pre">'word'</span></code>, <code class="docutils literal notranslate"><span class="pre">'eof'</span></code>,
+or one of the six delimiter characters <code class="docutils literal notranslate"><span class="pre">()[]{}</span></code>.
+No token whose type is <code class="docutils literal notranslate"><span class="pre">'eof'</span></code> is ever returned by the tokenizer, but
+it is used as an end-of-file sentinel.  Functions that test for types
+can also use the pseudo-type <code class="docutils literal notranslate"><span class="pre">'any'</span></code> which matches anything except
+<code class="docutils literal notranslate"><span class="pre">'eof'</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.io.Token.quotes">
+<span class="sig-name descname"><span class="pre">quotes</span></span><a class="headerlink" href="#selkie.io.Token.quotes" title="Permalink to this definition"></a></dt>
+<dd><p>Quoted strings are returned as independent tokens, but they are not
+distinguished in type from unquoted words: both quoted and unquoted strings
+have the type <code class="docutils literal notranslate"><span class="pre">'word'</span></code>.  One can tell the difference, however, by
+examining the attribute <code class="docutils literal notranslate"><span class="pre">.quotes</span></code>, whose value is either
+“’” or ‘&amp;quot;’ for a quoted string, and <code class="docutils literal notranslate"><span class="pre">None</span></code>,
+for an unquoted string.  Backslash is an
+escape character inside of a quoted string, but nowhere else.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.io.Token.line">
+<span class="sig-name descname"><span class="pre">line</span></span><a class="headerlink" href="#selkie.io.Token.line" title="Permalink to this definition"></a></dt>
+<dd><p>The line number, the first line of the file being line 1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.io.Token.offset">
+<span class="sig-name descname"><span class="pre">offset</span></span><a class="headerlink" href="#selkie.io.Token.offset" title="Permalink to this definition"></a></dt>
+<dd><p>The offset counted from the beginning of the line.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.Token.error">
+<span class="sig-name descname"><span class="pre">error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.Token.error" title="Permalink to this definition"></a></dt>
+<dd><p>Tokens support the method <code class="docutils literal notranslate"><span class="pre">error()</span></code>, which takes an error message
+and raises an exception in which line and offset are included in the
+message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.Token.warning">
+<span class="sig-name descname"><span class="pre">warning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.Token.warning" title="Permalink to this definition"></a></dt>
+<dd><p>Prints a warning instead of raising an exception.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.load_tokens">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">load_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.load_tokens" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">load_tokens</span></code> interprets a file (or string) as a list
+of tokens.  The default token definition is kept intentionally simple: quoted
+strings are recognized, the delimiters <code class="docutils literal notranslate"><span class="pre">()[]{}</span></code> are recognized as
+special characters, unquoted space separates tokens, and <code class="docutils literal notranslate"><span class="pre">#</span></code>
+begins a comment.  (It is possible to customize the syntax: see
+Syntax below.):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">load_string</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">tok1</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="go">12 + foo(bar=42.0, baz=&quot;hi there&quot;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">load_tokens</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">load_tokens</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">tok1</span><span class="p">)</span>
+<span class="go">[&#39;12&#39;, &#39;+&#39;, &#39;foo&#39;, &#39;(&#39;, &#39;bar=42.0,&#39;, &#39;baz=&#39;, &#39;hi there&#39;, &#39;)&#39;]</span>
+</pre></div>
+</div>
+<p>In addition to tokens, the file may contain whitespace and comments,
+which are discarded.
+Whitespace is anything that is deemed to be whitespace
+by <code class="docutils literal notranslate"><span class="pre">isspace()</span></code>.  Newlines are not treated specially.
+Comments begin with <code class="docutils literal notranslate"><span class="pre">#</span></code> and continue to the end of the
+line.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.iter_tokens">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">iter_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.iter_tokens" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">iter_tokens()</span></code> returns a tokenizer, which
+implements the standard <code class="docutils literal notranslate"><span class="pre">next()</span></code> method, but also provides
+finer-grained control.  See <a class="reference internal" href="#selkie.io.Tokenizer" title="selkie.io.Tokenizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tokenizer</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.tokenize">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">tokenize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.tokenize" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">tokenize(s)</span></code> simply converts its input to a
+pseudo-file (using <code class="docutils literal notranslate"><span class="pre">String.IO</span></code>) and calls <code class="docutils literal notranslate"><span class="pre">iter_tokens()</span></code>.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.io.Tokenizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">Tokenizer</span></span><a class="headerlink" href="#selkie.io.Tokenizer" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.Tokenizer.token">
+<span class="sig-name descname"><span class="pre">token</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.Tokenizer.token" title="Permalink to this definition"></a></dt>
+<dd><p>First, one can peek at the next token
+using the <code class="docutils literal notranslate"><span class="pre">token()</span></code> method.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">iter_tokens</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span> <span class="o">=</span> <span class="n">iter_tokens</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">tok1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">token</span><span class="p">()</span>
+<span class="go">&#39;12&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">type</span>
+<span class="go">&#39;word&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">line</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tok</span><span class="o">.</span><span class="n">offset</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<p>At the end of file, <code class="docutils literal notranslate"><span class="pre">toks.token()</span></code> will exist, but its type will be
+<code class="docutils literal notranslate"><span class="pre">'eof'</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.Tokenizer.has_next">
+<span class="sig-name descname"><span class="pre">has_next</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typ</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.Tokenizer.has_next" title="Permalink to this definition"></a></dt>
+<dd><p>The method <code class="docutils literal notranslate"><span class="pre">has_next()</span></code> can be used to test the type of the next
+token, without consuming it.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">has_next</span><span class="p">(</span><span class="s1">&#39;word&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">has_next</span><span class="p">(</span><span class="s1">&#39;eof&#39;</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>Calling <code class="docutils literal notranslate"><span class="pre">has_next()</span></code> with no argument is equivalent to calling it
+with the argument <code class="docutils literal notranslate"><span class="pre">'any'</span></code>.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">has_next</span><span class="p">(</span><span class="s1">&#39;any&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">has_next</span><span class="p">()</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">has_next()</span></code> method can also be used to test for a particular
+token string, by providing the keyword <code class="docutils literal notranslate"><span class="pre">string</span></code>.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">has_next</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;12&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>For a special-character token, the type and string are identical.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">toks</span><span class="p">)</span>
+<span class="go">&#39;12&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">toks</span><span class="p">)</span>
+<span class="go">&#39;+&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">toks</span><span class="p">)</span>
+<span class="go">&#39;foo&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">token</span><span class="p">()</span>
+<span class="go">&#39;(&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">token</span><span class="p">()</span><span class="o">.</span><span class="n">type</span>
+<span class="go">&#39;(&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">has_next</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.Tokenizer.__bool__">
+<span class="sig-name descname"><span class="pre">__bool__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.Tokenizer.__bool__" title="Permalink to this definition"></a></dt>
+<dd><p>The boolean value of the iterator is <code class="docutils literal notranslate"><span class="pre">True</span></code> if there are any
+tokens remaining, and <code class="docutils literal notranslate"><span class="pre">False</span></code> if it is at EOF.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">bool</span><span class="p">(</span><span class="n">toks</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">notoks</span> <span class="o">=</span> <span class="n">iter_tokens</span><span class="p">(</span><span class="n">StringIO</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">bool</span><span class="p">(</span><span class="n">notoks</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.Tokenizer.accept">
+<span class="sig-name descname"><span class="pre">accept</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typ</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.Tokenizer.accept" title="Permalink to this definition"></a></dt>
+<dd><p>The method <code class="docutils literal notranslate"><span class="pre">accept()</span></code> tests whether the next token has a given
+type; or, with the keyword <code class="docutils literal notranslate"><span class="pre">string</span></code>, it tests for the identity of
+the next token.  If the next token satisfies the specification, it is
+consumed from the stream and returned.  If not, <code class="docutils literal notranslate"><span class="pre">accept()</span></code> returns
+<code class="docutils literal notranslate"><span class="pre">None</span></code>.  For example,:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="s1">&#39;word&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
+<span class="go">&#39;(&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.Tokenizer.require">
+<span class="sig-name descname"><span class="pre">require</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typ</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.Tokenizer.require" title="Permalink to this definition"></a></dt>
+<dd><p>The method <code class="docutils literal notranslate"><span class="pre">require()</span></code> is like <code class="docutils literal notranslate"><span class="pre">accept()</span></code>, except that it
+signals an error if the specification is not satisfied.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">token</span><span class="p">()</span>
+<span class="go">&#39;bar=42.0,&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">Exception</span>: <span class="n">[.../examples/tok1 line 1 char 9] Expecting &#39;)&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="s1">&#39;word&#39;</span><span class="p">)</span>
+<span class="go">&#39;bar=42.0,&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">token</span><span class="p">()</span>
+<span class="go">&#39;baz=&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;baz=&#39;</span><span class="p">)</span>
+<span class="go">&#39;baz=&#39;</span>
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">require()</span></code> returns <code class="docutils literal notranslate"><span class="pre">None</span></code> if eof is required:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">notoks</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="s1">&#39;eof&#39;</span><span class="p">)</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="syntax">
+<h3>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading"></a></h3>
+<p>The tokenizer can be configured by supplying a <code class="docutils literal notranslate"><span class="pre">Syntax</span></code> object.
+For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">Syntax</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">syn</span> <span class="o">=</span> <span class="n">Syntax</span><span class="p">(</span><span class="n">special</span><span class="o">=</span><span class="s1">&#39;()[]</span><span class="si">{}</span><span class="s1">.,:=&#39;</span><span class="p">,</span> <span class="n">eol</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span> <span class="o">=</span> <span class="n">load_tokens</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">tok1</span><span class="p">,</span> <span class="n">syntax</span><span class="o">=</span><span class="n">syn</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+<span class="go">[&#39;bar&#39;, &#39;=&#39;, &#39;42&#39;, &#39;.&#39;, &#39;0&#39;, &#39;,&#39;]</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">Syntax</span></code> constructor takes the following keyword arguments.</p>
+<blockquote>
+<div><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">special</span></code>.
+We distinguish between the “hard” special characters
+<code class="docutils literal notranslate"><span class="pre">'&amp;quot;#</span></code> and the “soft” special characters <code class="docutils literal notranslate"><span class="pre">()[]{}</span></code>.
+The choice of hard special characters cannot be modified, but one can
+supply a different set of soft special characters.  The value should
+be either a string (interpreted as a set of characters) or <code class="docutils literal notranslate"><span class="pre">True</span></code>.  The value <code class="docutils literal notranslate"><span class="pre">True</span></code> means that all
+characters except alphanumerics are special.  (Underscore is
+considered to be an alphanumeric character.)
+If <code class="docutils literal notranslate"><span class="pre">special</span></code> is omitted, one gets the default soft special
+characters <code class="docutils literal notranslate"><span class="pre">()[]{}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eol</span></code>.  If the value is <code class="docutils literal notranslate"><span class="pre">True</span></code>, then
+newlines are returned as tokens.
+Only newlines at the end of non-empty lines are returned
+as tokens.  A line consisting solely of a comment is considered empty.
+The default value is <code class="docutils literal notranslate"><span class="pre">False</span></code>, in which case newline is treated
+simply as whitespace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">comments</span></code>.  The value may be <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default),
+something that is boolean false, or a string containing one or more
+characters that introduce comments.  A value of <code class="docutils literal notranslate"><span class="pre">True</span></code> is
+equivalent to <code class="docutils literal notranslate"><span class="pre">'\#'</span></code>, and a boolean false value is equivalent to
+<code class="docutils literal notranslate"><span class="pre">&amp;quot;</span></code>.  Comments begin with any comment character and continue to
+the end of the line.</p></li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">multi</span></code>.  The value should be <code class="docutils literal notranslate"><span class="pre">None</span></code> (the default) or a list of</dt><dd><p>strings.  If strings are provided, the tokenizer recognizes them as
+multi-character specials.  For example, one might specify:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">multi</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backslash</span></code>.  If the value is <code class="docutils literal notranslate"><span class="pre">True</span></code> (the default), then
+backslash escapes are recognized within quoted strings in the usual
+way.  If the value is <code class="docutils literal notranslate"><span class="pre">False</span></code>, there is no way to enter a string
+that contains both a single quote and a double quote within its
+contents.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">digits</span></code>.  If the value is <code class="docutils literal notranslate"><span class="pre">True</span></code>, a word beginning with
+a digit contains only digits, and its type is <code class="docutils literal notranslate"><span class="pre">'digit'</span></code>.  A
+minus sign followed by digits is also returned as a <code class="docutils literal notranslate"><span class="pre">'digit'</span></code>.
+If the
+value is <code class="docutils literal notranslate"><span class="pre">False</span></code> (the default), digit characters are treated
+like any other word character.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stringtype</span></code>.  The value should be a string to be used as
+the type for quoted strings.  The default is <code class="docutils literal notranslate"><span class="pre">'word'</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mlstrings</span></code>.  If the value is <code class="docutils literal notranslate"><span class="pre">True</span></code>, strings may extend
+over multiple lines.  Note: a multi-line string will contain just
+a single newline character at the end of each line, even if the input
+contains <code class="docutils literal notranslate"><span class="pre">'\r\n'</span></code>.  If the value is <code class="docutils literal notranslate"><span class="pre">False</span></code> (the default),
+then an error is signalled if a string does not terminate before the
+end of the line.</p></li>
+</ul>
+</div></blockquote>
+<p>One can change syntax while scanning.  The scanner returned by
+<code class="docutils literal notranslate"><span class="pre">iter_tokens()</span></code> has methods <code class="docutils literal notranslate"><span class="pre">push_syntax()</span></code> and
+<code class="docutils literal notranslate"><span class="pre">pop_syntax()</span></code>.  They may affect the value of methods like
+<code class="docutils literal notranslate"><span class="pre">has_next()</span></code> or <code class="docutils literal notranslate"><span class="pre">token()</span></code> that look ahead in the input: the
+lookahead token is rescanned after a change in syntax.</p>
+</section>
+<section id="writing-tokens">
+<h3>Writing tokens<a class="headerlink" href="#writing-tokens" title="Permalink to this heading"></a></h3>
+<p>There is no <code class="docutils literal notranslate"><span class="pre">save_tokens()</span></code> function.  The token stream is
+generally only an intermediate step in building a structured object
+such as a grammar.  The convention used with grammars and trees is to
+define a “loader” that can be used to scan a structured file,
+and to write an object to a file in a scanable form.  The loader
+generally has paired <code class="docutils literal notranslate"><span class="pre">scan</span></code> and <code class="docutils literal notranslate"><span class="pre">unscan</span></code> methods for each type
+of expression in the format.</p>
+<p>One piece of functionality is provided here as a convenience for
+unscan methods.  Syntax instances have a method <code class="docutils literal notranslate"><span class="pre">scanable_string()</span></code>
+that produces a version of a string that can
+be written to a file, and will produce the original string when
+scanned in by <code class="docutils literal notranslate"><span class="pre">iter_tokens()</span></code>, assuming that the same syntax is
+in use.  Specifically,
+<code class="docutils literal notranslate"><span class="pre">scanable_string()</span></code> returns a quoted version of the string if it
+contains a space or special character, and returns the string
+unchanged otherwise.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">syn</span><span class="o">.</span><span class="n">scanable_string</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="go">&#39;foo&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">syn</span><span class="o">.</span><span class="n">scanable_string</span><span class="p">(</span><span class="s1">&#39;foo:bar&#39;</span><span class="p">)</span>
+<span class="go">&quot;&#39;foo:bar&#39;&quot;</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">scanable_string</span></code> uses the default syntax.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">scanable_string</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fn</span> <span class="o">=</span> <span class="n">tmpfile</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span> <span class="o">=</span> <span class="n">outfile</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">scanable_string</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">))</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">scanable_string</span><span class="p">(</span><span class="s1">&#39;x + y&#39;</span><span class="p">))</span>
+<span class="go">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">scanable_string</span><span class="p">(</span><span class="s1">&#39;oh </span><span class="se">\u306e</span><span class="s1">!&#39;</span><span class="p">))</span>
+<span class="go">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">(</span><span class="n">fn</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="go">hi &#39;x + y&#39; &#39;oh \u306e!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">load_tokens</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+<span class="go">[&#39;hi&#39;, &#39;x + y&#39;, &#39;oh \u306e!&#39;]</span>
+</pre></div>
+</div>
+<p>Note: when writing non-word tokens, one should write them as they
+are.  The <code class="docutils literal notranslate"><span class="pre">scanable_string()</span></code> method converts its input to
+something that scans in as a <em>word</em> token.</p>
+</section>
+</section>
+<section id="indented-key-value-format-kvi">
+<span id="kvi"></span><h2>Indented key-value format (KVI)<a class="headerlink" href="#indented-key-value-format-kvi" title="Permalink to this heading"></a></h2>
+<p>Indented key-value (KVI) format is a format that is (almost) equivalent
+to JSON but is syntactically less cluttered.  Impressionistically, it
+is like markdown compared to XML.  Consider a file called <code class="docutils literal notranslate"><span class="pre">foo.kvi</span></code>
+with the following contents:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># A comment</span>
+<span class="n">lex</span> <span class="o">|</span><span class="n">lexicon</span><span class="o">.</span><span class="n">lx</span>
+<span class="n">texts</span> <span class="p">[]:</span>
+  <span class="p">{}:</span>
+    <span class="n">ti</span> <span class="o">|</span> <span class="n">Hi</span><span class="p">:</span> <span class="n">My</span> <span class="c1">#|@\ &quot;Adventures&quot;</span>
+    <span class="n">pgs</span> <span class="mi">238</span>
+  <span class="p">{}:</span>
+    <span class="n">au</span> <span class="o">|</span><span class="n">J</span><span class="o">.</span> <span class="n">Smith</span>
+    <span class="n">ti</span> <span class="o">|</span><span class="n">Bar</span>
+</pre></div>
+</div>
+<p>The keyword <code class="docutils literal notranslate"><span class="pre">[]:</span></code> begins a list, with each element starting a new
+line and at a consistent level of indentation.  <code class="docutils literal notranslate"><span class="pre">{}:</span></code> begins a dict.
+A dict contains keys and values, with one key-value pair per line.  A
+string value begins with <code class="docutils literal notranslate"><span class="pre">|</span></code> and goes to the end of the line.
+Thus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">load_kvi</span><span class="p">(</span><span class="s1">&#39;foo.kvi&#39;</span><span class="p">)</span>
+<span class="go">{&#39;lex&#39;: &#39;lexicon.lx&#39;,</span>
+<span class="go"> &#39;texts&#39;: [{&#39;ti&#39;: &#39; Hi: My #|@\\ &quot;Adventures&quot;&#39;, &#39;pgs&#39;: 238},</span>
+<span class="go">           {&#39;au&#39;: &#39;J. Smith&#39;, &#39;ti&#39;: &#39;Bar&#39;}]}</span>
+</pre></div>
+</div>
+<p>(The first text’s value for “ti” illustrates that leading whitespace
+and characters that are usually special are all preserved intact.)</p>
+<p>The type of container (dict versus list) can actually be determined
+from the types of the elements (key-value pairs versus bare values).
+For that reason, one is permitted to use a plain colon in place of
+either <code class="docutils literal notranslate"><span class="pre">{}:</span></code> or <code class="docutils literal notranslate"><span class="pre">[]:</span></code>.  For example, the following is exactly
+equivalent to the contents of <code class="docutils literal notranslate"><span class="pre">foo.kvi</span></code> given above:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># A comment</span>
+<span class="n">lex</span> <span class="o">|</span><span class="n">lexicon</span><span class="o">.</span><span class="n">lx</span>
+<span class="n">texts</span> <span class="p">:</span>
+  <span class="p">:</span>
+    <span class="n">ti</span> <span class="o">|</span> <span class="n">Hi</span><span class="p">:</span> <span class="n">My</span> <span class="c1">#|@\ &quot;Adventures&quot;</span>
+    <span class="n">pgs</span> <span class="mi">238</span>
+  <span class="p">:</span>
+    <span class="n">au</span> <span class="o">|</span><span class="n">J</span><span class="o">.</span> <span class="n">Smith</span>
+    <span class="n">ti</span> <span class="o">|</span><span class="n">Bar</span>
+</pre></div>
+</div>
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.load_kvi">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">load_kvi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.load_kvi" title="Permalink to this definition"></a></dt>
+<dd><p>Loads a KVI file and returns a dict or list.  If <cite>json=True</cite>, it
+makes sure that the return value is suitable input for <cite>json.dump()</cite>.
+The remaining keyword arguments are passed to <code class="docutils literal notranslate"><span class="pre">open()</span></code>.</p>
+<p>In detail,
+a KVI file consists of <em>keys</em> and <em>values</em>.
+The following restrictions are imposed:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A key must begin with a letter (a character that satisfies <code class="docutils literal notranslate"><span class="pre">isalpha()</span></code>).</p></li>
+<li><p>A key may not contain embedded whitespace.</p></li>
+<li><p>A value may not contain an embedded newline.</p></li>
+</ul>
+</div></blockquote>
+<p>Lines containing only whitespace or beginning with <code class="docutils literal notranslate"><span class="pre">#</span></code> (with
+optional leading whitespace) are ignored.</p>
+<p>Otherwise, each line of the file begins with indentation, followed either by a
+key-value pair (separated by whitespace), or just a value.
+Indentation consists exclusively of space characters.  Keys must begin
+with letters, and values never begin with letters, making it easy to
+distinguish between them.</p>
+<p>The interpretation of the value is determined by its form:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If the value begins with <code class="docutils literal notranslate"><span class="pre">|</span></code>, it represents a string, consisting of all
+characters after the <code class="docutils literal notranslate"><span class="pre">|</span></code>.  All characters are preserved as is.
+The only character that cannot occur in a string value is newline.</p></li>
+<li><p>If the value begins <code class="docutils literal notranslate"><span class="pre">/</span></code> or <code class="docutils literal notranslate"><span class="pre">.</span></code> or <code class="docutils literal notranslate"><span class="pre">~</span></code>, it is interpreted as a pathname.
+A legal pathname must be one of <code class="docutils literal notranslate"><span class="pre">/</span></code> <code class="docutils literal notranslate"><span class="pre">.</span></code> <code class="docutils literal notranslate"><span class="pre">..</span></code> <code class="docutils literal notranslate"><span class="pre">~</span></code> or must
+begin with one of <code class="docutils literal notranslate"><span class="pre">/</span></code> <code class="docutils literal notranslate"><span class="pre">./</span></code> <code class="docutils literal notranslate"><span class="pre">../</span></code> <code class="docutils literal notranslate"><span class="pre">~/</span></code>.
+If the pathname begins with <code class="docutils literal notranslate"><span class="pre">.</span></code>, it is interpreted relative to the
+directory in which the current file is located.</p></li>
+<li><p>If the value begins with a digit, possibly preceded by <code class="docutils literal notranslate"><span class="pre">+</span></code> or <code class="docutils literal notranslate"><span class="pre">-</span></code>, it must be
+parseable as a number.  If it contains <code class="docutils literal notranslate"><span class="pre">.</span></code> it is parsed as a
+float, and otherwise as an int.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:T</span></code> and <code class="docutils literal notranslate"><span class="pre">:F</span></code> represent True and False.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> represents None.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{}</span></code> is an empty dict, and <code class="docutils literal notranslate"><span class="pre">{}:</span></code> represents a dict whose key-value pairs come from the next line
+and subsequent lines at the same level of indentation, all of which
+must be key-value pairs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[]</span></code> is an empty list, and
+<code class="docutils literal notranslate"><span class="pre">[]:</span></code> is a list whose elements come from the next line and
+subsequent lines at the same level of indentation, all of which
+must be bare values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">{}:</span></code>, if the next line is a key-value pair,
+and it is equivalent to <code class="docutils literal notranslate"><span class="pre">[]:</span></code> if the next line is a bare value.</p></li>
+</ul>
+</div></blockquote>
+<p>If the first line (excluding comments) is a key-value pair,
+the file as a whole is interpreted as a dict.  If the first line
+contains a bare value, the file is interpreted as a list.
+(Those are the only two possibilities.)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.read_kvi">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">read_kvi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.read_kvi" title="Permalink to this definition"></a></dt>
+<dd><p>Just like <code class="docutils literal notranslate"><span class="pre">load_kvi()</span></code>, except it takes an open file instead of a filename.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.save_kvi">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">save_kvi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.save_kvi" title="Permalink to this definition"></a></dt>
+<dd><p>The object <em>x</em> must consist entirely of dicts, lists, strings,
+numbers, booleans, and None.  Any keyword arguments are passed to <code class="docutils literal notranslate"><span class="pre">open()</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.write_kvi">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">write_kvi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.write_kvi" title="Permalink to this definition"></a></dt>
+<dd><p>Just like <code class="docutils literal notranslate"><span class="pre">save_kvi()</span></code>, except it takes an open file instead of a filename.</p>
+</dd></dl>
+
+</section>
+<section id="formatting">
+<h2>Formatting<a class="headerlink" href="#formatting" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.io.Indenter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">Indenter</span></span><a class="headerlink" href="#selkie.io.Indenter" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.Indenter.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.Indenter.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">Indenter</span></code> class provides a Unicode output file that does
+automatic indentation.  The constructor accepts <code class="docutils literal notranslate"><span class="pre">filename</span></code> and
+<code class="docutils literal notranslate"><span class="pre">encoding</span></code> arguments.  If they are not provided, the
+<code class="docutils literal notranslate"><span class="pre">Indenter</span></code> behaves like <code class="docutils literal notranslate"><span class="pre">StringIO</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">Indenter</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span> <span class="o">=</span> <span class="n">Indenter</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.Indenter.begin_indent">
+<span class="sig-name descname"><span class="pre">begin_indent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.Indenter.begin_indent" title="Permalink to this definition"></a></dt>
+<dd><p>There is a prevailing indentation level, and indentation spaces are
+automatically inserted after each newline that is written to the
+formatter.  The level of indentation is increased
+using <code class="docutils literal notranslate"><span class="pre">begin_indent()</span></code> and decreased
+using <code class="docutils literal notranslate"><span class="pre">end_indent()</span></code>.  It is initially zero:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;hi there</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">begin_indent</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;foo</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">begin_indent</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;bar</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;baz</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">end_indent</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">end_indent</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.Indenter.end_indent">
+<span class="sig-name descname"><span class="pre">end_indent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.Indenter.end_indent" title="Permalink to this definition"></a></dt>
+<dd><p>Restore the previous level of indentation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.Indenter.off">
+<span class="sig-name descname"><span class="pre">off</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.Indenter.off" title="Permalink to this definition"></a></dt>
+<dd><p>An indenter may be turned on and off.  When it is off, writing commands are
+accepted but generate no output.  The indenter is initially on.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;invisible ink</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;blip</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">out</span><span class="o">.</span><span class="n">getvalue</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="go">hi there</span>
+<span class="go">   foo</span>
+<span class="go">      bar</span>
+<span class="go">      baz</span>
+<span class="go">blip</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.Indenter.on">
+<span class="sig-name descname"><span class="pre">on</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.Indenter.on" title="Permalink to this definition"></a></dt>
+<dd><p>Turn output back on after it has been turned off.</p>
+</dd></dl>
+
+</dd></dl>
+
+<section id="pprint">
+<h3><code class="docutils literal notranslate"><span class="pre">pprint</span></code><a class="headerlink" href="#pprint" title="Permalink to this heading"></a></h3>
+<p>The function <code class="docutils literal notranslate"><span class="pre">pprint()</span></code> is pretty much a replacement for
+<code class="docutils literal notranslate"><span class="pre">Indenter</span></code>, and usually more convenient.  It behaves like <code class="docutils literal notranslate"><span class="pre">print()</span></code>,
+except:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>It does indenting.  Whenever it prints a newline, even embedded
+inside of an argument, it prints indentation.</p></li>
+<li><p>It does not accept a <code class="docutils literal notranslate"><span class="pre">file</span></code> argument.  It prints only to
+<code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code>.  This is actually by design: otherwise it would
+break doctest or generally any tool that relies on redirecting
+<code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code>.</p></li>
+<li><p>If one of its arguments has a <code class="docutils literal notranslate"><span class="pre">__pprint__()</span></code> method, that
+method is called instead of printing the argument in the usual way.
+The <code class="docutils literal notranslate"><span class="pre">__pprint__()</span></code> method is called with no arguments, and is
+expected to place recursive calls to <code class="docutils literal notranslate"><span class="pre">pprint()</span></code>.</p></li>
+</ul>
+</div></blockquote>
+<p>To be precise, <code class="docutils literal notranslate"><span class="pre">pprint</span></code> is actually not a function but a callable
+object.  It provides the following additional methods:</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.io.pprint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">pprint</span></span><a class="headerlink" href="#selkie.io.pprint" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.pprint.indent">
+<span class="sig-name descname"><span class="pre">indent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.pprint.indent" title="Permalink to this definition"></a></dt>
+<dd><p>The indentation amount, <em>n</em>, is optional; it
+defaults to 2.  This should be called in a “<code class="docutils literal notranslate"><span class="pre">with</span></code>” clause.
+An example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">ex1</span> <span class="p">():</span>
+<span class="gp">... </span>    <span class="n">pprint</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">with</span> <span class="n">pprint</span><span class="o">.</span><span class="n">indent</span><span class="p">():</span>
+<span class="gp">... </span>        <span class="n">pprint</span><span class="p">(</span><span class="s1">&#39;lo&#39;</span><span class="p">,</span> <span class="s1">&#39;bob&#39;</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="n">pprint</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ex1</span><span class="p">()</span>
+<span class="go">hi</span>
+<span class="go">  lo bob</span>
+<span class="go">  foo</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.pprint.br">
+<span class="sig-name descname"><span class="pre">br</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.pprint.br" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><p>A “soft” newline that does nothing at beginning of line.
+To be precise, it sets the break flag.  Just before printing a non-newline
+character, the break flag is checked.  If the break flag is set and
+the output is not currently at beginning of line, a new line is
+produced first along with the associated indentation.</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.pprint.now">
+<span class="sig-name descname"><span class="pre">now</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.pprint.now" title="Permalink to this definition"></a></dt>
+<dd><p>Like <code class="docutils literal notranslate"><span class="pre">__call__()</span></code>, but it immediately flushes the
+output after printing even if not at end of line.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.pprint.start_indent">
+<span class="sig-name descname"><span class="pre">start_indent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.pprint.start_indent" title="Permalink to this definition"></a></dt>
+<dd><p>Increase the level of
+indentation.  It is better to use <code class="docutils literal notranslate"><span class="pre">indent()</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.io.pprint.end_indent">
+<span class="sig-name descname"><span class="pre">end_indent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.pprint.end_indent" title="Permalink to this definition"></a></dt>
+<dd><p>Decrease the level of
+indentation.  It is better to use <code class="docutils literal notranslate"><span class="pre">indent()</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="tabular-output">
+<h2>Tabular output<a class="headerlink" href="#tabular-output" title="Permalink to this heading"></a></h2>
+<p>The function <code class="docutils literal notranslate"><span class="pre">tabular()</span></code> takes a table, represented as an iterator
+over rows (lists), and produces a string representation with aligned
+columns.  It converts the table to a list (infinite generators will
+not work!) and sets the width of each column to the maximum width of
+the string representation of any object in the column.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">tabular</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">table</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;hi there&#39;</span><span class="p">,</span> <span class="mi">42</span><span class="p">],</span>
+<span class="gp">... </span>         <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+<span class="gp">... </span>         <span class="p">[</span><span class="s1">&#39;elephants&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">tabular</span><span class="p">(</span><span class="n">table</span><span class="p">))</span>
+<span class="go">hi there  42</span>
+<span class="go">foo       15</span>
+<span class="go">elephants 20</span>
+</pre></div>
+</div>
+</section>
+<section id="miscellany">
+<h2>Miscellany<a class="headerlink" href="#miscellany" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.srepr">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">srepr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.srepr" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">srepr()</span></code> returns the same as <code class="docutils literal notranslate"><span class="pre">repr()</span></code> except for
+dicts and sets.  In the case of dicts and sets, it prints the items or
+elements in sort order, so that the output is the same each time it is
+invoked.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.contents">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">contents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.contents" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">contents()</span></code> returns the raw contents of a file.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">contents</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">text1</span><span class="p">)</span>
+<span class="go">&#39;This is a test.\nIt is only a test.\n&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.tee">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">tee</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.tee" title="Permalink to this definition"></a></dt>
+<dd><p>The class <code class="docutils literal notranslate"><span class="pre">tee</span></code> is a file-like object that sends everything that
+is written to it both to a file and to stdout.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.sh</span> <span class="kn">import</span> <span class="n">rmrf</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;/tmp/foo&#39;</span><span class="p">):</span> <span class="n">rmrf</span><span class="p">(</span><span class="s1">&#39;/tmp/foo&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">tee</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">tee</span><span class="p">(</span><span class="s1">&#39;/tmp/foo&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+<span class="go">Hello</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">close</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">contents</span><span class="p">(</span><span class="s1">&#39;/tmp/foo&#39;</span><span class="p">)</span>
+<span class="go">&#39;Hello\n&#39;</span>
+<span class="go">&lt;/pre&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="s1">&#39;/tmp/foo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="selkie.io.null">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">null</span></span><a class="headerlink" href="#selkie.io.null" title="Permalink to this definition"></a></dt>
+<dd><p>The object <code class="docutils literal notranslate"><span class="pre">null</span></code> can be used as a null stream.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">null</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">null</span><span class="p">)</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.io.OutputList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">OutputList</span></span><a class="headerlink" href="#selkie.io.OutputList" title="Permalink to this definition"></a></dt>
+<dd><p>An <code class="docutils literal notranslate"><span class="pre">OutputList</span></code> is a specialization of <code class="docutils literal notranslate"><span class="pre">list</span></code> that
+behaves like an output stream.  That is, it implements
+a <code class="docutils literal notranslate"><span class="pre">write()</span></code> method.
+Strings not ending in newline constitute partial lines.  They
+are accumulated until a string ending with newline is written, at
+which point all partial lines to that point are concatenated, and the
+resulting line is appended to the list.  Trailing carriage returns and
+newlines are deleted.</p>
+<p>Here is an example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">OutputList</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">output</span> <span class="o">=</span> <span class="n">OutputList</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">],</span> <span class="n">file</span><span class="o">=</span><span class="n">output</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bye&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">output</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">output</span>
+<span class="go">[&#39;Hello [10, 20]&#39;, &#39;Bye&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">output</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">&#39;Hello [10, 20]&#39;</span>
+</pre></div>
+</div>
+<p>Two cautions are in order.
+(1) Embedded newlines are not detected.  (2) If the last thing written
+to the list did not end in newline, it will not appear in the list.
+It can, however, be accessed as <code class="docutils literal notranslate"><span class="pre">output.partial</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.wget">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">wget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.wget" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">wget()</span></code> is a shorthand for
+<code class="docutils literal notranslate"><span class="pre">urllib.urlretrieve()</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.io.redirect">
+<span class="sig-prename descclassname"><span class="pre">selkie.io.</span></span><span class="sig-name descname"><span class="pre">redirect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.io.redirect" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">redirect()</span></code> can be used in a with-clause to
+redirect output from sys.stdout to a file or string:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">redirect</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">redirect</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="n">pprint</span><span class="p">(</span><span class="s1">&#39;Line 1&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">with</span> <span class="n">pprint</span><span class="o">.</span><span class="n">indent</span><span class="p">():</span>
+<span class="gp">... </span>        <span class="n">pprint</span><span class="p">(</span><span class="s1">&#39;Line 2&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">redirect</span><span class="o">.</span><span class="n">output</span>
+<span class="go">&#39;Line 1\n    Line 2\n&#39;</span>
+</pre></div>
+</div>
+<p>To redirect to a stream, provide it as argument to <code class="docutils literal notranslate"><span class="pre">redirect()</span></code>.
+To open a file for output, provide a mode as second argument.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="map.html" class="btn btn-neutral float-left" title="selkie.map — The Index class" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="newio.html" class="btn btn-neutral float-right" title="selkie.newio — New I/O" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

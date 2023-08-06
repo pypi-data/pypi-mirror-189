@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.expr — Predicate calculus &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.interp — Semantic interpretation" href="interp.html" />
+    <link rel="prev" title="selkie.parser — Constituent parser" href="parser.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The NLP pipeline</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="fsa.html"><code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> — Finite-state automata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fst.html"><code class="docutils literal notranslate"><span class="pre">selkie.fst</span></code> — Finite-state transducers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tree.html"><code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> — Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemmer.html"><code class="docutils literal notranslate"><span class="pre">selkie.stemmer</span></code> — English stemmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="head.html"><code class="docutils literal notranslate"><span class="pre">selkie.head</span></code> — Head marking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dep.html"><code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> — Dependency conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html"><code class="docutils literal notranslate"><span class="pre">selkie.features</span></code> — Non-recursive features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avs.html"><code class="docutils literal notranslate"><span class="pre">selkie.avs</span></code> — Recursive feature structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grammar.html"><code class="docutils literal notranslate"><span class="pre">selkie.grammar</span></code> — Constituent grammars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gdev.html"><code class="docutils literal notranslate"><span class="pre">selkie.gdev</span></code> — Grammar development tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen.html"><code class="docutils literal notranslate"><span class="pre">selkie.gen</span></code> — Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parser.html"><code class="docutils literal notranslate"><span class="pre">selkie.parser</span></code> — Constituent parser</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code> — Predicate calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interp.html"><code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> — Semantic interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.html"><code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> — Automated reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bot.html"><code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> — Conversational agent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">The NLP pipeline</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code> — Predicate calculus</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/nlp/expr.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-expr-predicate-calculus">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code> — Predicate calculus<a class="headerlink" href="#selkie-expr-predicate-calculus" title="Permalink to this heading"></a></h1>
+<p>The module <code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code>
+contains the basic data structures for representing
+predicate calculus expressions.  It is separate from
+<code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> (which contains the semantic interpreter),
+because the grammar module requires <code class="docutils literal notranslate"><span class="pre">parse_expr()</span></code>.</p>
+<section id="variables-and-constants">
+<h2>Variables and constants<a class="headerlink" href="#variables-and-constants" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.expr.Variable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.expr.</span></span><span class="sig-name descname"><span class="pre">Variable</span></span><a class="headerlink" href="#selkie.expr.Variable" title="Permalink to this definition"></a></dt>
+<dd><p>Expressions are composed of variables (<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>) and constants
+(<code class="docutils literal notranslate"><span class="pre">forall</span></code>, <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">cat</span></code>).  We implement both as strings,
+but to distinguish them, we provide a subclass of <code class="docutils literal notranslate"><span class="pre">str</span></code> called
+<code class="docutils literal notranslate"><span class="pre">Variable</span></code>, and define anything that is not an <code class="docutils literal notranslate"><span class="pre">Expr</span></code> or a
+<code class="docutils literal notranslate"><span class="pre">Variable</span></code> to be a constant.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.expr</span> <span class="kn">import</span> <span class="n">Variable</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e1</span> <span class="o">=</span> <span class="s1">&#39;x&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e2</span> <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e1</span>
+<span class="go">&#39;x&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e2</span>
+<span class="go">x</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fresh_variable">
+<span class="sig-name descname"><span class="pre">fresh_variable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fresh_variable" title="Permalink to this definition"></a></dt>
+<dd><p>One may create an “anonymous” variable by calling the function
+<code class="docutils literal notranslate"><span class="pre">fresh_variable()</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.expr</span> <span class="kn">import</span> <span class="n">fresh_variable</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fresh_variable</span><span class="p">()</span>
+<span class="go">_1</span>
+</pre></div>
+</div>
+<p>There is a global count of anonymous variables, and it is incremented
+each time an anonymous variable is created:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fresh_variable</span><span class="p">()</span>
+<span class="go">_2</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p>When we parse a predicate calculus expression, we require some convention for
+distinguishing between constants and variables.  How do we
+know that “x” should be converted to a <code class="docutils literal notranslate"><span class="pre">Variable</span></code> instance, but
+“Fido” should be left as a string?  The Russell &amp; Norvig text uses
+the convention that variables are lowercase whereas names are
+uppercase.  Prolog and other automated reasoners use the opposite
+convention: variables are uppercase and names are lowercase.  The
+convention I will adopt is that variables consist of a single letter,
+such as “<code class="docutils literal notranslate"><span class="pre">x</span></code>” or “<code class="docutils literal notranslate"><span class="pre">P</span></code>,” whereas names contain at least
+two (or none).  To provide some
+flexibility, a variable may optionally begin with underscore (which
+does not count as a letter), and may optionally be suffixed with any
+number of digits.  Hence the following are recognized as variables:
+<code class="docutils literal notranslate"><span class="pre">_x</span></code>, <code class="docutils literal notranslate"><span class="pre">x10</span></code>, <code class="docutils literal notranslate"><span class="pre">_x10</span></code>; but not <code class="docutils literal notranslate"><span class="pre">_Sk10</span></code> (which
+contains two letters).</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="is_variable_symbol">
+<span class="sig-name descname"><span class="pre">is_variable_symbol</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#is_variable_symbol" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">is_variable_symbol()</span></code> distinguishes constants from
+variables:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.expr</span> <span class="kn">import</span> <span class="n">is_variable_symbol</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_variable_symbol</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_variable_symbol</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>Note that anonymous variables have names like <code class="docutils literal notranslate"><span class="pre">_1</span></code> that
+are not recognized as variables by <code class="docutils literal notranslate"><span class="pre">is_variable_symbol()</span></code>.  This is
+unproblematic: anonymous variables by definition never appear in
+string representations of expressions.</p>
+</dd></dl>
+
+</section>
+<section id="predicate-calculus-expressions">
+<h2>Predicate calculus expressions<a class="headerlink" href="#predicate-calculus-expressions" title="Permalink to this heading"></a></h2>
+<p>Let us begin with a couple of examples of
+predicate-calculus expressions.
+We will represent them in Lisp format: Polish prefix
+notation with obligatory grouping parentheses.
+Operator symbols like “-&gt;” are replaced with names (”<code class="docutils literal notranslate"><span class="pre">if</span></code>”):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">forall</span> <span class="n">x</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="n">cat</span> <span class="n">x</span><span class="p">)</span> <span class="p">(</span><span class="n">animal</span> <span class="n">x</span><span class="p">)))</span>
+<span class="p">(</span><span class="n">exists</span> <span class="n">y</span> <span class="p">(</span><span class="ow">and</span> <span class="p">(</span><span class="n">cat</span> <span class="n">y</span><span class="p">)</span> <span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">orange</span> <span class="n">y</span><span class="p">))))</span>
+<span class="p">((</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">(</span><span class="ow">or</span> <span class="p">(</span><span class="n">cat</span> <span class="n">x</span><span class="p">)</span> <span class="p">(</span><span class="n">dog</span> <span class="n">x</span><span class="p">)))</span> <span class="n">Max</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.expr.Expr">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.expr.</span></span><span class="sig-name descname"><span class="pre">Expr</span></span><a class="headerlink" href="#selkie.expr.Expr" title="Permalink to this definition"></a></dt>
+<dd><p>In keeping with our philosophy of simplicity, we implement expressions
+as tuples.  An expression such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">chases</span> <span class="n">Fido</span> <span class="p">(</span><span class="n">the</span> <span class="n">cat</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>is implemented as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;chases&#39;</span><span class="p">,</span> <span class="s1">&#39;Fido&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;the&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>For convenience of display, however, we use the same trick that we
+used for <code class="docutils literal notranslate"><span class="pre">Category</span></code>: we define a class <code class="docutils literal notranslate"><span class="pre">Expr</span></code> that is a
+specialization of <code class="docutils literal notranslate"><span class="pre">tuple</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.expr</span> <span class="kn">import</span> <span class="n">Expr</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">Expr</span><span class="p">([</span><span class="s1">&#39;chases&#39;</span><span class="p">,</span> <span class="s1">&#39;Fido&#39;</span><span class="p">,</span> <span class="n">Expr</span><span class="p">([</span><span class="s1">&#39;the&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">])])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span>
+<span class="go">(chases Fido (the cat))</span>
+</pre></div>
+</div>
+<p>The words (variables and constants) in an expression usually print out
+without quotes, as in the example just shown.  However, quotes are
+included if the word contains an embedded space.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Expr</span><span class="p">([</span><span class="s1">&#39;every&#39;</span><span class="p">,</span> <span class="s1">&#39;bird dog&#39;</span><span class="p">])</span>
+<span class="go">(every &#39;bird dog&#39;)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.expr.Expr.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.expr.Expr.__str__" title="Permalink to this definition"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method produces a pretty-printed
+form.  For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.expr</span> <span class="kn">import</span> <span class="n">parse_expr</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(if (forall x (loves x Fido)) (loves Fido Spot))&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">(if (forall x</span>
+<span class="go">       (loves x Fido))</span>
+<span class="go">    (loves Fido Spot))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="parse_expr">
+<span class="sig-name descname"><span class="pre">parse_expr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parse_expr" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">parse_expr()</span></code> that takes a string and
+converts it to an expression instance.  Here is an example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(and (dog x) (friendly x))&#39;</span><span class="p">)</span>
+<span class="go">(and (dog x) (friendly x))</span>
+</pre></div>
+</div>
+<p>Expression parsing uses <code class="docutils literal notranslate"><span class="pre">selkie.io.tokenize()</span></code> for tokenization.  This
+means that the delimiters <code class="docutils literal notranslate"><span class="pre">[]{}</span></code> are treated as stand-alone
+tokens, and quoted strings are recognized as single tokens.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(x[y])&#39;</span><span class="p">)</span>
+<span class="go">(x [ y ])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(hi&quot;there&quot;)&#39;</span><span class="p">)</span>
+<span class="go">(hi there)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scan_expr">
+<span class="sig-name descname"><span class="pre">scan_expr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">toks</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scan_expr" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">parse_expr()</span></code> dispatches to <code class="docutils literal notranslate"><span class="pre">scan_expr()</span></code>,
+which scans a single expression from a token stream.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">tokenize</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">toks</span> <span class="o">=</span> <span class="n">tokenize</span><span class="p">(</span><span class="s1">&#39;Fido (+ x y)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.expr</span> <span class="kn">import</span> <span class="n">scan_expr</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">scan_expr</span><span class="p">(</span><span class="n">toks</span><span class="p">)</span>
+<span class="go">&#39;Fido&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">scan_expr</span><span class="p">(</span><span class="n">toks</span><span class="p">)</span>
+<span class="go">(+ x y)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="load_exprs">
+<span class="sig-name descname"><span class="pre">load_exprs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#load_exprs" title="Permalink to this definition"></a></dt>
+<dd><p>The function <code class="docutils literal notranslate"><span class="pre">load_exprs()</span></code> reads a file that contains
+expressions.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.data</span> <span class="kn">import</span> <span class="n">ex</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.expr</span> <span class="kn">import</span> <span class="n">load_exprs</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">es</span> <span class="o">=</span> <span class="n">load_exprs</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;cnf.expr&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">es</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">(forall x</span>
+<span class="go">   (if (forall y</span>
+<span class="go">          (if (animal y)</span>
+<span class="go">              (loves x y)))</span>
+<span class="go">       (exists y</span>
+<span class="go">          (loves y x))))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="parser.html" class="btn btn-neutral float-left" title="selkie.parser — Constituent parser" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="interp.html" class="btn btn-neutral float-right" title="selkie.interp — Semantic interpretation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

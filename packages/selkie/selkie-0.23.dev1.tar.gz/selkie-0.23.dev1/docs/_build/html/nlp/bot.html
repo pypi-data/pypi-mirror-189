@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.bot — Conversational agent &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Speech" href="../speech/index.html" />
+    <link rel="prev" title="selkie.logic — Automated reasoning" href="logic.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The NLP pipeline</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="fsa.html"><code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> — Finite-state automata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fst.html"><code class="docutils literal notranslate"><span class="pre">selkie.fst</span></code> — Finite-state transducers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tree.html"><code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> — Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemmer.html"><code class="docutils literal notranslate"><span class="pre">selkie.stemmer</span></code> — English stemmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="head.html"><code class="docutils literal notranslate"><span class="pre">selkie.head</span></code> — Head marking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dep.html"><code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> — Dependency conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html"><code class="docutils literal notranslate"><span class="pre">selkie.features</span></code> — Non-recursive features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avs.html"><code class="docutils literal notranslate"><span class="pre">selkie.avs</span></code> — Recursive feature structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grammar.html"><code class="docutils literal notranslate"><span class="pre">selkie.grammar</span></code> — Constituent grammars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gdev.html"><code class="docutils literal notranslate"><span class="pre">selkie.gdev</span></code> — Grammar development tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen.html"><code class="docutils literal notranslate"><span class="pre">selkie.gen</span></code> — Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parser.html"><code class="docutils literal notranslate"><span class="pre">selkie.parser</span></code> — Constituent parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expr.html"><code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code> — Predicate calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interp.html"><code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> — Semantic interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.html"><code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> — Automated reasoning</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> — Conversational agent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">The NLP pipeline</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> — Conversational agent</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/nlp/bot.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-bot-conversational-agent">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> — Conversational agent<a class="headerlink" href="#selkie-bot-conversational-agent" title="Permalink to this heading"></a></h1>
+<section id="using-the-engine">
+<h2>Using the engine<a class="headerlink" href="#using-the-engine" title="Permalink to this heading"></a></h2>
+<p>The previous pages have described the various components of a
+conversational agent: parser, semantic
+interpreter, and resolution theorem prover.  The <code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> module
+encapsulates them in a conversational agent, represented by the class
+<code class="docutils literal notranslate"><span class="pre">NPC</span></code> (non-player character), and embeds the agent in a bare-bones
+environment, in the style of an interactive fiction engine.</p>
+<p>Here is an example of an interaction, with commentary:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m selkie.bot
+NPC enter
+&gt;
+</pre></div>
+</div>
+<p>The engine does provide an environment for multiple characters and
+event types, but it is a stub.  There are two characters: Player
+and Non-Player Character (NPC).  The only event type with any
+non-trivial implementation is “say.”  Anything typed at the prompt
+is converted to a “say” action whose agent is Player:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="nb">all</span> <span class="n">humans</span> <span class="n">are</span> <span class="n">mortal</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">OK</span>
+<span class="o">&gt;</span> <span class="n">Socrates</span> <span class="ow">is</span> <span class="n">human</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">OK</span>
+<span class="o">&gt;</span> <span class="n">who</span> <span class="ow">is</span> <span class="n">mortal</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">Socrates</span>
+<span class="o">&gt;</span> <span class="ow">is</span> <span class="n">Socrates</span> <span class="n">mortal</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">yes</span>
+<span class="o">&gt;</span> <span class="ow">is</span> <span class="n">Socrates</span> <span class="n">human</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">yes</span>
+<span class="o">&gt;</span> <span class="ow">is</span> <span class="n">Zeus</span> <span class="n">human</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">I</span> <span class="n">don</span><span class="s1">&#39;t know</span>
+<span class="o">&gt;</span> <span class="n">Zeus</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">mortal</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">OK</span>
+<span class="o">&gt;</span> <span class="ow">is</span> <span class="n">Zeus</span> <span class="n">human</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">no</span>
+</pre></div>
+</div>
+<p>Several debugging commands are available to examine the internal state
+of the conversational agent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="p">:</span><span class="n">kb</span>
+<span class="mf">1.</span> <span class="o">-</span><span class="p">(</span><span class="n">human</span> <span class="n">_2</span><span class="p">)</span> <span class="o">+</span><span class="p">(</span><span class="n">mortal</span> <span class="n">_2</span><span class="p">)</span>
+<span class="mf">2.</span> <span class="o">+</span><span class="p">(</span><span class="n">human</span> <span class="n">Socrates</span><span class="p">)</span>
+<span class="mf">27.</span> <span class="o">-</span><span class="p">(</span><span class="n">mortal</span> <span class="n">Zeus</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The KB contains three clauses.  “<code class="docutils literal notranslate"><span class="pre">_2</span></code>” is an anonymous
+variable; variables are interpreted as universally bound.  A clause
+consists of literals, which have a polarity (positive or negated), and
+are implicitly connected by disjunction.  Clauses are connected by
+conjunction.</p>
+<p>For example, clause 1 states that either <code class="docutils literal notranslate"><span class="pre">_2</span></code> is not human, or
+<code class="docutils literal notranslate"><span class="pre">_2</span></code> is mortal.  That is equivalent to “if <em>x</em> is human, then
+<em>x</em> is mortal.”  Clause 2 states that Socrates is human, and clause
+27 states that Zeus is not mortal.  All three clauses are asserted to
+be simultaneously true.</p>
+<p>Here is another example (adapted from Russell &amp;amp; Norvig, Chapter 9),
+illustrating case-based reasoning of the sort that a purely backward
+chaining reasoner does not support:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">either</span> <span class="n">Smith</span> <span class="n">killed</span> <span class="n">Tuna</span> <span class="ow">or</span> <span class="n">Curiosity</span> <span class="n">killed</span> <span class="n">Tuna</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">OK</span>
+<span class="o">&gt;</span> <span class="nb">any</span> <span class="n">one</span> <span class="n">who</span> <span class="n">loves</span> <span class="n">animals</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">kill</span> <span class="n">animals</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">OK</span>
+<span class="o">&gt;</span> <span class="n">Tuna</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">cat</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">OK</span>
+<span class="o">&gt;</span> <span class="n">every</span> <span class="n">cat</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">animal</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">OK</span>
+<span class="o">&gt;</span> <span class="n">Smith</span> <span class="n">loves</span> <span class="n">animals</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">OK</span>
+<span class="o">&gt;</span> <span class="n">does</span> <span class="n">Smith</span> <span class="n">love</span> <span class="n">Tuna</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">yes</span>
+<span class="o">&gt;</span> <span class="n">did</span> <span class="n">Smith</span> <span class="n">kill</span> <span class="n">Tuna</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">I</span> <span class="n">don</span><span class="s1">&#39;t know</span>
+</pre></div>
+</div>
+<p>It would seem NPC <em>ought</em> to know.  The problem is that “any
+one” is interpreted to mean “any <em>person,</em>” and NPC does not
+know that Smith is a person:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">Smith</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">person</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">OK</span>
+<span class="o">&gt;</span> <span class="n">did</span> <span class="n">Smith</span> <span class="n">kill</span> <span class="n">Tuna</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">no</span>
+<span class="o">&gt;</span> <span class="n">who</span> <span class="n">killed</span> <span class="n">Tuna</span>
+<span class="n">NPC</span> <span class="n">say</span> <span class="n">Curiosity</span>
+</pre></div>
+</div>
+<p>At this point, the KB contains the following clauses:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="p">:</span><span class="n">kb</span>
+<span class="mf">1.</span> <span class="o">-</span><span class="p">(</span><span class="n">human</span> <span class="n">_2</span><span class="p">)</span> <span class="o">+</span><span class="p">(</span><span class="n">mortal</span> <span class="n">_2</span><span class="p">)</span>
+<span class="mf">2.</span> <span class="o">+</span><span class="p">(</span><span class="n">human</span> <span class="n">Socrates</span><span class="p">)</span>
+<span class="mf">27.</span> <span class="o">-</span><span class="p">(</span><span class="n">mortal</span> <span class="n">Zeus</span><span class="p">)</span>
+<span class="mf">35.</span> <span class="o">+</span><span class="p">(</span><span class="n">kill</span> <span class="n">Smith</span> <span class="n">Tuna</span><span class="p">)</span> <span class="o">+</span><span class="p">(</span><span class="n">kill</span> <span class="n">Curiosity</span> <span class="n">Tuna</span><span class="p">)</span>
+<span class="mf">36.</span> <span class="o">-</span><span class="p">(</span><span class="n">person</span> <span class="n">_18</span><span class="p">)</span> <span class="o">+</span><span class="p">(</span><span class="n">animal</span> <span class="p">(</span><span class="n">_Sk1</span> <span class="n">_18</span><span class="p">))</span> <span class="o">-</span><span class="p">(</span><span class="n">animal</span> <span class="n">_20</span><span class="p">)</span> <span class="o">-</span><span class="p">(</span><span class="n">kill</span> <span class="n">_18</span> <span class="n">_20</span><span class="p">)</span>
+<span class="mf">37.</span> <span class="o">-</span><span class="p">(</span><span class="n">person</span> <span class="n">_18</span><span class="p">)</span> <span class="o">-</span><span class="p">(</span><span class="n">love</span> <span class="n">_18</span> <span class="p">(</span><span class="n">_Sk1</span> <span class="n">_18</span><span class="p">))</span> <span class="o">-</span><span class="p">(</span><span class="n">animal</span> <span class="n">_20</span><span class="p">)</span> <span class="o">-</span><span class="p">(</span><span class="n">kill</span> <span class="n">_18</span> <span class="n">_20</span><span class="p">)</span>
+<span class="mf">38.</span> <span class="o">+</span><span class="p">(</span><span class="n">cat</span> <span class="n">Tuna</span><span class="p">)</span>
+<span class="mf">39.</span> <span class="o">-</span><span class="p">(</span><span class="n">cat</span> <span class="n">_22</span><span class="p">)</span> <span class="o">+</span><span class="p">(</span><span class="n">animal</span> <span class="n">_22</span><span class="p">)</span>
+<span class="mf">40.</span> <span class="o">-</span><span class="p">(</span><span class="n">animal</span> <span class="n">_25</span><span class="p">)</span> <span class="o">+</span><span class="p">(</span><span class="n">love</span> <span class="n">Smith</span> <span class="n">_25</span><span class="p">)</span>
+<span class="mf">63.</span> <span class="o">+</span><span class="p">(</span><span class="n">person</span> <span class="n">Smith</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Backward-chaining systems like Prolog permit only Horn clauses
+(clauses containing exactly one positive literal).
+Clauses 35 and 37 are not Horn clauses; the reasoning illustrated here
+is not supported by Prolog.</p>
+<p>Additional debugging commands allow one to examine the most important
+intermediate representations.  The three main components are the
+parser, the interpreter, and the reasoner.  The parser takes a
+sentence and converts it to a parse tree.  The process can be seen
+using the <code class="docutils literal notranslate"><span class="pre">:chart</span></code> command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; who does every cat love
+NPC say I don&#39;t know
+&gt; :chart
+sent= &#39;who does every cat love&#39;
+Add Node [0 WhPron.sg 1] who WhPron.sg : wh
+Add Edge (WhNP.$0 -&gt; [0 WhPron.sg 1] * {sg})
+Add Node [0 WhNP.sg 1] (WhNP.$0 -&gt; [0 WhPron.sg 1] * {sg})
+Add Edge (WhInv -&gt; [0 WhNP.sg 1] * Aux.$0.$1 NP.$0 VP.$1.+ {* *})
+...
+Add Edge (Start -&gt; [0 Root 5] * {})
+Add Node [0 Start 5] (Start -&gt; [0 Root 5] * {})
+Add Edge (VP.$0.- -&gt; [4 V.base.t.0 5] * NP.* MP.$1 {base 0})
+Add Edge (VP.$0.+ -&gt; [4 V.base.t.0 5] * MP.$1 {base 0})
+Add Edge (VP.$0.$1 -&gt; [4 V.base.t.0 5] * NP.* SC.$2.$1 {base * 0})
+</pre></div>
+</div>
+<p>The interpreter takes the parse tree and converts it to a
+predicate-calculus expression.  This is accomplished in several steps,
+which are shown by the <code class="docutils literal notranslate"><span class="pre">:parse</span></code> command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; :parse
+sent= &#39;who does every cat love&#39;&lt;/p&gt;
+&lt;p&gt;
+who does every cat love
+#Tree:
+  Start : $1
+    Root : (wh _9 (!g= _9 $1))
+      WhInv : (!qs ($4 $3))
+        WhNP.sg : $1
+          WhPron.sg who : wh
+        Aux.sg.base does : None
+        NP.sg : (!q $1 _7 ($2 _7))
+          Det.sg every : every
+          N2.sg : $1
+            N1.sg : $1
+              N.sg cat : cat
+        VP.base.+ : (lambda _8 ($1 _8 !g))
+          V.base.t.0 love : love
+#Raise quantifiers:
+  Start : $1
+    Root : (wh _9 (!g= _9 $1))
+      NP.sg : ($1 _7 ($2 _7) $3)
+        Det.sg every : every
+        N2.sg : $1
+          N1.sg : $1
+            N.sg cat : cat
+        WhInv : ($4 $3)
+          WhNP.sg : $1
+            WhPron.sg who : wh
+          Aux.sg.base does : None
+          NP.sg : _7
+          VP.base.+ : (lambda _8 ($1 _8 !g))
+            V.base.t.0 love : love
+#Translation:
+  (wh _9 (!g= _9 (every _7 (cat _7) ((lambda _8 (love _8 !g)) _7))))
+#Replace gaps:
+  (wh _9 (every _7 (cat _7) ((lambda _8 (love _8 _9)) _7)))
+#Definitions:
+  (wh _9 (forall _7 (if (cat _7) ((lambda _8 (love _8 _9)) _7))))
+#Lambda reduction:
+  (wh _9 (forall _7 (if (cat _7) (love _7 _9))))
+</pre></div>
+</div>
+<p>Finally, the reasoner converts predicate calculus expressions to
+clauses, before doing inference proper.  The steps in the conversion
+can be seen by invoking the <code class="docutils literal notranslate"><span class="pre">:clause</span></code> command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="p">:</span><span class="n">clause</span>
+<span class="n">expr</span><span class="o">=</span> <span class="p">(</span><span class="n">wh</span> <span class="n">_3</span> <span class="p">(</span><span class="n">forall</span> <span class="n">_1</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="n">cat</span> <span class="n">_1</span><span class="p">)</span> <span class="p">(</span><span class="n">love</span> <span class="n">_1</span> <span class="n">_3</span><span class="p">))))</span>
+<span class="c1">#Standardize variables:</span>
+  <span class="p">(</span><span class="n">wh</span> <span class="n">_13</span> <span class="p">(</span><span class="n">forall</span> <span class="n">_14</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="n">cat</span> <span class="n">_14</span><span class="p">)</span> <span class="p">(</span><span class="n">love</span> <span class="n">_14</span> <span class="n">_13</span><span class="p">))))</span>
+<span class="c1">#Expand query:</span>
+  <span class="p">(</span><span class="n">forall</span> <span class="n">_13</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="n">forall</span> <span class="n">_14</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="n">cat</span> <span class="n">_14</span><span class="p">)</span> <span class="p">(</span><span class="n">love</span> <span class="n">_14</span> <span class="n">_13</span><span class="p">)))</span> <span class="p">(</span><span class="n">_Ans</span> <span class="n">_13</span><span class="p">)))</span>
+<span class="c1">#Eliminate implications:</span>
+  <span class="p">(</span><span class="n">forall</span> <span class="n">_13</span> <span class="p">(</span><span class="ow">or</span> <span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">forall</span> <span class="n">_14</span> <span class="p">(</span><span class="ow">or</span> <span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">cat</span> <span class="n">_14</span><span class="p">))</span> <span class="p">(</span><span class="n">love</span> <span class="n">_14</span> <span class="n">_13</span><span class="p">))))</span> <span class="p">(</span><span class="n">_Ans</span> <span class="n">_13</span><span class="p">)))</span>
+<span class="c1">#Lower negation:</span>
+  <span class="p">(</span><span class="n">forall</span> <span class="n">_13</span> <span class="p">(</span><span class="ow">or</span> <span class="p">(</span><span class="n">exists</span> <span class="n">_14</span> <span class="p">(</span><span class="ow">and</span> <span class="p">(</span><span class="n">cat</span> <span class="n">_14</span><span class="p">)</span> <span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">love</span> <span class="n">_14</span> <span class="n">_13</span><span class="p">))))</span> <span class="p">(</span><span class="n">_Ans</span> <span class="n">_13</span><span class="p">)))</span>
+<span class="c1">#Skolemize:</span>
+  <span class="p">(</span><span class="ow">or</span> <span class="p">(</span><span class="ow">and</span> <span class="p">(</span><span class="n">cat</span> <span class="p">(</span><span class="n">_Sk2</span> <span class="n">_13</span><span class="p">))</span> <span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">love</span> <span class="p">(</span><span class="n">_Sk2</span> <span class="n">_13</span><span class="p">)</span> <span class="n">_13</span><span class="p">)))</span> <span class="p">(</span><span class="n">_Ans</span> <span class="n">_13</span><span class="p">))</span>
+<span class="c1">#Conjunctive normal form:</span>
+  <span class="p">[[(</span><span class="n">cat</span> <span class="p">(</span><span class="n">_Sk2</span> <span class="n">_13</span><span class="p">)),</span> <span class="p">(</span><span class="n">_Ans</span> <span class="n">_13</span><span class="p">)],</span> <span class="p">[(</span><span class="ow">not</span> <span class="p">(</span><span class="n">love</span> <span class="p">(</span><span class="n">_Sk2</span> <span class="n">_13</span><span class="p">)</span> <span class="n">_13</span><span class="p">)),</span> <span class="p">(</span><span class="n">_Ans</span> <span class="n">_13</span><span class="p">)]]</span>
+<span class="c1">#Clauses:</span>
+  <span class="mf">4.</span> <span class="o">+</span><span class="p">(</span><span class="n">cat</span> <span class="p">(</span><span class="n">_Sk2</span> <span class="n">_13</span><span class="p">))</span> <span class="p">;</span> <span class="o">+</span><span class="p">(</span><span class="n">_Ans</span> <span class="n">_13</span><span class="p">)</span>
+  <span class="mf">5.</span> <span class="o">-</span><span class="p">(</span><span class="n">love</span> <span class="p">(</span><span class="n">_Sk2</span> <span class="n">_13</span><span class="p">)</span> <span class="n">_13</span><span class="p">)</span> <span class="p">;</span> <span class="o">+</span><span class="p">(</span><span class="n">_Ans</span> <span class="n">_13</span><span class="p">)</span>
+<span class="mf">4.</span> <span class="o">+</span><span class="p">(</span><span class="n">cat</span> <span class="p">(</span><span class="n">_Sk2</span> <span class="n">_13</span><span class="p">))</span> <span class="p">;</span> <span class="o">+</span><span class="p">(</span><span class="n">_Ans</span> <span class="n">_13</span><span class="p">)</span>
+<span class="mf">5.</span> <span class="o">-</span><span class="p">(</span><span class="n">love</span> <span class="p">(</span><span class="n">_Sk2</span> <span class="n">_13</span><span class="p">)</span> <span class="n">_13</span><span class="p">)</span> <span class="p">;</span> <span class="o">+</span><span class="p">(</span><span class="n">_Ans</span> <span class="n">_13</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The parser and interpreter are controlled by a grammar, a lexicon, and
+a set of defined symbols.  To give a sense of the contents, I give the
+first few lines of each section of the current default grammar,
+<code class="docutils literal notranslate"><span class="pre">sg2a.g</span></code>.  The rewrite rules:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Start -&gt; Root : $1
+Start -&gt; NP.* : $1
+Start -&gt; PP.* : $1
+Start -&gt; Greeting : ($1)
+
+# Clauses
+Root -&gt; S.-               : $1
+Root -&gt; YN                : (yn $1)
+Root -&gt; WhInv             : (wh @ (!g= @ $1))
+Root -&gt; Wh                : (wh @ (!g= @ $1))
+</pre></div>
+</div>
+<p>Each line is a grammar rule, which consists of a syntactic portion and
+a semantic attachment, separated by a colon.  The format is discussed
+in more detail below.</p>
+<p>The first few lines of the lexicon section are as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span>        <span class="n">Det</span><span class="o">.</span><span class="n">sg</span> <span class="p">:</span> <span class="n">some</span>
+<span class="n">a</span>        <span class="n">IndefArt</span>
+<span class="nb">all</span>      <span class="n">Det</span><span class="o">.</span><span class="n">pl</span>   <span class="p">:</span> <span class="n">every</span>
+<span class="n">am</span>       <span class="n">Aux</span><span class="mf">.1</span><span class="n">s</span><span class="o">.</span><span class="n">pred</span>
+<span class="n">am</span>       <span class="n">Aux</span><span class="mf">.1</span><span class="n">s</span><span class="o">.</span><span class="n">ing</span>
+<span class="n">am</span>       <span class="n">Aux</span><span class="mf">.1</span><span class="n">s</span><span class="o">.</span><span class="n">enp</span>
+</pre></div>
+</div>
+<p>The generalized quantifiers <code class="docutils literal notranslate"><span class="pre">some</span></code> and <code class="docutils literal notranslate"><span class="pre">every</span></code> are defined in
+terms of the basic quantifiers <code class="docutils literal notranslate"><span class="pre">forall</span></code> and <code class="docutils literal notranslate"><span class="pre">exists</span></code> in the
+macros section:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">every</span> <span class="n">x</span> <span class="n">R</span> <span class="n">S</span><span class="p">:</span> <span class="p">(</span><span class="n">forall</span> <span class="n">x</span> <span class="p">(</span><span class="k">if</span> <span class="n">R</span> <span class="n">S</span><span class="p">))</span>
+<span class="n">some</span> <span class="n">x</span> <span class="n">R</span> <span class="n">S</span><span class="p">:</span> <span class="p">(</span><span class="n">exists</span> <span class="n">x</span> <span class="p">(</span><span class="ow">and</span> <span class="n">R</span> <span class="n">S</span><span class="p">))</span>
+<span class="n">nsome</span> <span class="n">x</span> <span class="n">R</span> <span class="n">S</span><span class="p">:</span> <span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">exists</span> <span class="n">x</span> <span class="p">(</span><span class="ow">and</span> <span class="n">R</span> <span class="n">S</span><span class="p">)))</span>
+</pre></div>
+</div>
+</section>
+<section id="agents-events-engine">
+<h2>Agents, events, engine<a class="headerlink" href="#agents-events-engine" title="Permalink to this heading"></a></h2>
+<p>In our model, an <strong>agent</strong> is essentially a function that takes a
+percept and returns an action.  A percept is an <strong>event</strong>, which is
+the combination of an agent and an action.  An <strong>action</strong> is a tuple
+whose first element is a string representing the action type, and
+whose remaining elements are determined by the type.  Currently, the
+primary action type is <code class="docutils literal notranslate"><span class="pre">'say'</span></code>; it takes a single argument, which
+is a string representing the utterance.  Two other action types
+occur.  The system generates an <code class="docutils literal notranslate"><span class="pre">'enter'</span></code> action when the game
+begins, and the user generates a <code class="docutils literal notranslate"><span class="pre">'quit'</span></code> action by hitting
+control-D.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="Event">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Event" title="Permalink to this definition"></a></dt>
+<dd><p>The class <code class="docutils literal notranslate"><span class="pre">Event</span></code> represents an event.  It is created from an
+agent and action:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.bot</span> <span class="kn">import</span> <span class="n">Engine</span><span class="p">,</span> <span class="n">Event</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">eng</span> <span class="o">=</span> <span class="n">Engine</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">eng</span><span class="o">.</span><span class="n">player</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">Event</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;say&#39;</span><span class="p">,</span> <span class="s1">&#39;hi&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span><span class="o">.</span><span class="n">agent</span> <span class="o">==</span> <span class="n">p</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span><span class="o">.</span><span class="n">action</span>
+<span class="go">(&#39;say&#39;, &#39;hi&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="NPC">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NPC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#NPC" title="Permalink to this definition"></a></dt>
+<dd><p>The conversational agent is an instance of the class <code class="docutils literal notranslate"><span class="pre">NPC</span></code>
+(“non-player character”).  It requires a grammar:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.bot</span> <span class="kn">import</span> <span class="n">NPC</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.data</span> <span class="kn">import</span> <span class="n">ex</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">npc</span> <span class="o">=</span> <span class="n">NPC</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;sg2a&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>It creates an interpreter (which contains a parser), a KB, and a
+prover.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="NPC.interpreter">
+<span class="sig-name descname"><span class="pre">interpreter</span></span><a class="headerlink" href="#NPC.interpreter" title="Permalink to this definition"></a></dt>
+<dd><p>A selkie.interp.Interpreter instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="NPC.kb">
+<span class="sig-name descname"><span class="pre">kb</span></span><a class="headerlink" href="#NPC.kb" title="Permalink to this definition"></a></dt>
+<dd><p>A selkie.logic.KB instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="NPC.prover">
+<span class="sig-name descname"><span class="pre">prover</span></span><a class="headerlink" href="#NPC.prover" title="Permalink to this definition"></a></dt>
+<dd><p>A selkie.logic.Prover instance.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="NPC.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">percept</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#NPC.__call__" title="Permalink to this definition"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">__call__()</span></code> method accepts a percept.  The NPC responds only
+if the type is <code class="docutils literal notranslate"><span class="pre">'say'</span></code>.  Otherwise it returns <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">npc</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="go">(&#39;say&#39;, &#39;hello&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">npc</span><span class="p">(</span><span class="n">Event</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,)))</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<p>In the case of a <code class="docutils literal notranslate"><span class="pre">'say'</span></code> event, the argument of the event is the
+utterance.  The NPC applies the interpreter
+to the utterance to get a list of expressions.
+If the sentence does not parse, the NPC responds “I don’t
+understand.”</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">npc</span><span class="p">(</span><span class="n">Event</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;say&#39;</span><span class="p">,</span> <span class="s1">&#39;sdfsdf&#39;</span><span class="p">)))</span>
+<span class="go">(&#39;say&#39;, &quot;I don&#39;t understand&quot;)</span>
+</pre></div>
+</div>
+<p>If there are multiple interpretations, the NPC simply takes the
+first.  Then it calls <code class="docutils literal notranslate"><span class="pre">speech_act()</span></code> on the expression to
+classify it as <code class="docutils literal notranslate"><span class="pre">'ask'</span></code>, <code class="docutils literal notranslate"><span class="pre">'greet'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'inform'</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.expr</span> <span class="kn">import</span> <span class="n">parse_expr</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.bot</span> <span class="kn">import</span> <span class="n">speech_act</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">speech_act</span><span class="p">(</span><span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(greeting)&#39;</span><span class="p">))</span>
+<span class="go">&#39;greet&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">speech_act</span><span class="p">(</span><span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(wh x (human x))&#39;</span><span class="p">))</span>
+<span class="go">&#39;ask&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">speech_act</span><span class="p">(</span><span class="n">parse_expr</span><span class="p">(</span><span class="s1">&#39;(human Socrates)&#39;</span><span class="p">))</span>
+<span class="go">&#39;inform&#39;</span>
+</pre></div>
+</div>
+<p>In response to a greeting, the NPC says “hello.”  In response to a
+question, the NPC queries its KB and speaks the answer or answers.  If
+no answer is found, it says “I don’t know.”  Finally, in response to
+an inform, the NPC adds the expression to the KB and says “OK.”
+If anything throws an exception, the NPC traps the exception and says
+“Ugh, my brain hurts.”</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Player">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Player</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Player" title="Permalink to this definition"></a></dt>
+<dd><p>The class <code class="docutils literal notranslate"><span class="pre">Player</span></code> is an avatar of the user.  It is given access to the
+engine to allow the user to examine the internal state of the engine,
+including the internal state of the NPC, via
+the debugging commands described below.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.bot</span> <span class="kn">import</span> <span class="n">Player</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="n">eng</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The player is an agent, meaning
+that it has a <code class="docutils literal notranslate"><span class="pre">__call__()</span></code> method that expects a percept and
+returns an action.  It simply prints the percept, and then prompts the
+user to “say” something:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="p">(</span><span class="n">Event</span><span class="p">(</span><span class="n">npc</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;say&#39;</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">)))</span>
+<span class="go">NPC say hello</span>
+<span class="go">&gt;</span>
+</pre></div>
+</div>
+<p>Whatever the user types (a single line) is wrapped in a <code class="docutils literal notranslate"><span class="pre">'say'</span></code>
+action and returned:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="p">(</span><span class="n">Event</span><span class="p">(</span><span class="n">npc</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;say&#39;</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">)))</span>
+<span class="go">NPC say hello</span>
+<span class="go">&gt; hello</span>
+<span class="go">(&#39;say&#39;, &#39;hello&#39;)</span>
+</pre></div>
+</div>
+<p>The user’s input is “hello” (in boldface), and <code class="docutils literal notranslate"><span class="pre">('say',</span> <span class="pre">'hello')</span></code> is
+the return value from the original call.</p>
+<p>If the user types a line beginning with a colon, it is interpreted as
+a debugging command.  Debugging commands produce some output, and then
+a new prompt is generated.  However, the call to the player does not
+return until an utterance - a line not beginning with colon - is
+typed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="p">(</span><span class="n">Event</span><span class="p">(</span><span class="n">npc</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;enter&#39;</span><span class="p">,)))</span>
+<span class="go">NPC enter</span>
+<span class="go">&gt; :help</span>
+<span class="go">:? - this help message</span>
+<span class="go">:help - this help message</span>
+<span class="go">:clauses - show the clauses from the prev sent</span>
+<span class="go">:kb - show the knowledge base</span>
+<span class="go">:parse - show the parse &amp; interp of the prev sent</span>
+<span class="go">:reload - reload .g, .lex, .defs</span>
+<span class="go">:err - print the previous error</span>
+<span class="go">&gt; :kb</span>
+<span class="go">&gt; the dog barked</span>
+<span class="go">(&#39;say&#39;, &#39;the dog barked&#39;)</span>
+</pre></div>
+</div>
+<p>The debugging commands print out information about the internal state
+of the NPC: the parse tree and its interpretation, the mapping from
+expression to clauses, the KB, the identity of the error if an error
+was encountered.</p>
+<p>If the user presses control-D in response to the player prompt, the
+player returns the action <code class="docutils literal notranslate"><span class="pre">(quit,)</span></code>.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Engine">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Engine</span></span><a class="headerlink" href="#Engine" title="Permalink to this definition"></a></dt>
+<dd><p>The class <code class="docutils literal notranslate"><span class="pre">Engine</span></code> runs the simulation.  It creates an NPC and
+player, and an initial event, in which the NPC enters.  Then it enters
+a loop in which it alternates between agents.  It calls the current
+agent with the current event, and the combination of current agent and
+the action that it returns, constitutes the next event, which is
+passed to the other agent.  The loop continues until a <code class="docutils literal notranslate"><span class="pre">'quit'</span></code>
+action is encountered.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="logic.html" class="btn btn-neutral float-left" title="selkie.logic — Automated reasoning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../speech/index.html" class="btn btn-neutral float-right" title="Speech" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

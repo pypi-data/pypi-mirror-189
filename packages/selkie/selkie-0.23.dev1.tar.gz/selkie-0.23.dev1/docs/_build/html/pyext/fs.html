@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.fs — File system convenience functions &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.com — Command invocation" href="com.html" />
+    <link rel="prev" title="selkie.newio — New I/O" href="newio.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python extensions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html"><code class="docutils literal notranslate"><span class="pre">selkie.config</span></code> — Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object.html"><code class="docutils literal notranslate"><span class="pre">selkie.object</span></code> — Types, reflexion, generic object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html"><code class="docutils literal notranslate"><span class="pre">selkie.string</span></code> — Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seq.html"><code class="docutils literal notranslate"><span class="pre">selkie.seq</span></code> — Sequences and iterators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map.html"><code class="docutils literal notranslate"><span class="pre">selkie.map</span></code> — The Index class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html"><code class="docutils literal notranslate"><span class="pre">selkie.io</span></code> — Input/output functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="newio.html"><code class="docutils literal notranslate"><span class="pre">selkie.newio</span></code> — New I/O</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.fs</span></code> — File system convenience functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.html"><code class="docutils literal notranslate"><span class="pre">selkie.com</span></code> — Command invocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp/index.html">The NLP pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Python extensions</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.fs</span></code> — File system convenience functions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pyext/fs.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-fs-file-system-convenience-functions">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.fs</span></code> — File system convenience functions<a class="headerlink" href="#selkie-fs-file-system-convenience-functions" title="Permalink to this heading"></a></h1>
+<section id="creating-directories">
+<h2>Creating directories<a class="headerlink" href="#creating-directories" title="Permalink to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">mkdir</span></code> is imported from <code class="docutils literal notranslate"><span class="pre">os</span></code>.  <code class="docutils literal notranslate"><span class="pre">mkdirp</span></code> is equivalent to
+<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">-p</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.fs</span> <span class="kn">import</span> <span class="n">mkdirp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mkdirp</span><span class="p">(</span><span class="s1">&#39;/tmp/foo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">need_parent</span></code> can be used to assure that the parent
+directory exists for a filename.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.fs</span> <span class="kn">import</span> <span class="n">need_parent</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">need_parent</span><span class="p">(</span><span class="s1">&#39;/tmp/foo/myfile&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>is the same as <code class="docutils literal notranslate"><span class="pre">mkdirp</span> <span class="pre">/tmp/foo</span></code>.</p>
+</section>
+<section id="navigation">
+<h2>Navigation<a class="headerlink" href="#navigation" title="Permalink to this heading"></a></h2>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.fs</span> <span class="kn">import</span> <span class="n">pwd</span><span class="p">,</span> <span class="n">cd</span><span class="p">,</span> <span class="n">ls</span><span class="p">,</span> <span class="n">lsl</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cd</span><span class="p">(</span><span class="s1">&#39;/tmp/foo&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ls</span><span class="p">()</span>
+<span class="go">bar     baz     greet   text</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pwd</span><span class="p">()</span>
+<span class="go">&#39;/private/tmp/foo&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lsl</span><span class="p">()</span>
+<span class="go">total 16</span>
+<span class="go">-rw-r--r--  1 spa  wheel  4 Oct 14 17:35 bar</span>
+<span class="go">-rw-r--r--  1 spa  wheel  8 Oct 14 17:41 baz</span>
+</pre></div>
+</div>
+<p>The variations <code class="docutils literal notranslate"><span class="pre">lsd</span></code>, <code class="docutils literal notranslate"><span class="pre">lsld</span></code>, and <code class="docutils literal notranslate"><span class="pre">lslt</span></code> are also available.</p>
+</section>
+<section id="with-cwd">
+<h2>with Cwd()<a class="headerlink" href="#with-cwd" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.fs.Cwd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.fs.</span></span><span class="sig-name descname"><span class="pre">Cwd</span></span><a class="headerlink" href="#selkie.fs.Cwd" title="Permalink to this definition"></a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">Cwd</span></code> class protects against changes in working directory.
+On exit, it restores the working directory to what it was on entry:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">Cwd</span><span class="p">():</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="creating-files-touch-echo-cat">
+<h2>Creating files: <code class="docutils literal notranslate"><span class="pre">touch</span></code>, <code class="docutils literal notranslate"><span class="pre">echo</span></code>, <code class="docutils literal notranslate"><span class="pre">cat</span></code><a class="headerlink" href="#creating-files-touch-echo-cat" title="Permalink to this heading"></a></h2>
+<p>One can use <code class="docutils literal notranslate"><span class="pre">touch</span></code> to create a new file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cd</span><span class="p">(</span><span class="s1">&#39;/tmp/foo&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">touch</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">echo</span></code> takes an optional second argument which is a
+filename.  By default, the file is appended to, leaving any previous
+contents intact:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="s1">&#39;/tmp/greet&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;lo&#39;</span><span class="p">,</span> <span class="s1">&#39;/tmp/greet&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cat</span><span class="p">(</span><span class="s1">&#39;/tmp/greet&#39;</span><span class="p">)</span>
+<span class="go">hi</span>
+<span class="go">lo</span>
+</pre></div>
+</div>
+<p>One can prefix the filename with <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code> to
+explicitly specify overwriting versus appending:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;boo&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;/tmp/bar&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cat</span><span class="p">(</span><span class="s1">&#39;/tmp/bar&#39;</span><span class="p">)</span>
+<span class="go">boo</span>
+</pre></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">cat</span></code> behaves similarly.  With a single argument, it
+prints to stdout, and given multiple arguments, it takes the last as
+the output file name.  By default, the output file is created, but one
+may specify appending by prefixing the filename with <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cat</span><span class="p">(</span><span class="s1">&#39;/tmp/greet&#39;</span><span class="p">,</span> <span class="s1">&#39;/tmp/bar&#39;</span><span class="p">,</span> <span class="s1">&#39;/tmp/baz&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cat</span><span class="p">(</span><span class="s1">&#39;/tmp/baz&#39;</span><span class="p">)</span>
+<span class="go">hi</span>
+<span class="go">lo</span>
+<span class="go">boo</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cat</span><span class="p">(</span><span class="s1">&#39;/tmp/bar&#39;</span><span class="p">,</span> <span class="s1">&#39;/tmp/bar&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;1&#39;</span><span class="p">)</span>
+<span class="go">boo</span>
+<span class="go">boo</span>
+</pre></div>
+</div>
+</section>
+<section id="examining-files-more-od-wc">
+<h2>Examining files: <code class="docutils literal notranslate"><span class="pre">more</span></code>, <code class="docutils literal notranslate"><span class="pre">od</span></code>, <code class="docutils literal notranslate"><span class="pre">wc</span></code><a class="headerlink" href="#examining-files-more-od-wc" title="Permalink to this heading"></a></h2>
+<p>The function <code class="docutils literal notranslate"><span class="pre">cat</span></code> can also be used, of course.  The other
+functions (<code class="docutils literal notranslate"><span class="pre">more</span></code>, <code class="docutils literal notranslate"><span class="pre">od</span></code>, <code class="docutils literal notranslate"><span class="pre">wc</span></code>) simply use <code class="docutils literal notranslate"><span class="pre">os.system()</span></code>
+to call the Unix executables.  The type of datum for <code class="docutils literal notranslate"><span class="pre">od</span></code> can be
+specified using the <code class="docutils literal notranslate"><span class="pre">type</span></code> keyword.  Possible values are: <code class="docutils literal notranslate"><span class="pre">a</span></code>
+(named characters); <code class="docutils literal notranslate"><span class="pre">c</span></code>; $is$ where $i$ is one of <code class="docutils literal notranslate"><span class="pre">d</span></code>,
+<code class="docutils literal notranslate"><span class="pre">o</span></code>, <code class="docutils literal notranslate"><span class="pre">u</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code> and $s$ (optional) is one of <code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">S</span></code>, <code class="docutils literal notranslate"><span class="pre">I</span></code>,
+<code class="docutils literal notranslate"><span class="pre">L</span></code>, or a number of bytes; or <code class="docutils literal notranslate"><span class="pre">f</span></code> followed optionally by
+<code class="docutils literal notranslate"><span class="pre">F</span></code>, <code class="docutils literal notranslate"><span class="pre">D</span></code>, or <code class="docutils literal notranslate"><span class="pre">L</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">od</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="go">0000000    b   o   o  \n</span>
+<span class="go">0000004</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">od</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;xC&#39;</span><span class="p">)</span>
+<span class="go">0000000    62  6f  6f  0a</span>
+<span class="go">0000004</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;this is a test&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;it is only a test&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wc</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">)</span>
+<span class="go">       2       9      33 text</span>
+</pre></div>
+</div>
+</section>
+<section id="copying-cp-cpr-mv-ln">
+<h2>Copying: <code class="docutils literal notranslate"><span class="pre">cp</span></code>, <code class="docutils literal notranslate"><span class="pre">cpr</span></code>, <code class="docutils literal notranslate"><span class="pre">mv</span></code>, <code class="docutils literal notranslate"><span class="pre">ln</span></code><a class="headerlink" href="#copying-cp-cpr-mv-ln" title="Permalink to this heading"></a></h2>
+<p>The commands <code class="docutils literal notranslate"><span class="pre">cp</span></code>, <code class="docutils literal notranslate"><span class="pre">mv</span></code>, and <code class="docutils literal notranslate"><span class="pre">ln</span></code> behave as in the Unix shell.
+The command <code class="docutils literal notranslate"><span class="pre">cpr</span></code> does a recursive copy.  An error is signalled if
+the target already exists.  Symbolic links are copied as symbolic links.
+Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cp</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;bar2&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ls</span><span class="p">()</span>
+<span class="go">bar     bar2    baz</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mv</span><span class="p">(</span><span class="s1">&#39;bar2&#39;</span><span class="p">,</span> <span class="s1">&#39;bar3&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ls</span><span class="p">()</span>
+<span class="go">bar     bar3    baz</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ln</span><span class="p">(</span><span class="s1">&#39;bar3&#39;</span><span class="p">,</span> <span class="s1">&#39;bar4&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cat</span><span class="p">(</span><span class="s1">&#39;bar4&#39;</span><span class="p">)</span>
+<span class="go">boo</span>
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">ln</span></code> creates a symbolic link, not a hard link.  To
+create a hard link, use <code class="docutils literal notranslate"><span class="pre">link</span></code>.  (Both are imported from <code class="docutils literal notranslate"><span class="pre">os</span></code>.
+In <code class="docutils literal notranslate"><span class="pre">os</span></code>, <code class="docutils literal notranslate"><span class="pre">ln</span></code> is called <code class="docutils literal notranslate"><span class="pre">symlink</span></code>.)</p>
+</section>
+<section id="deletion-rm-rmrf-rmdir">
+<h2>Deletion: <code class="docutils literal notranslate"><span class="pre">rm</span></code>, <code class="docutils literal notranslate"><span class="pre">rmrf</span></code>, <code class="docutils literal notranslate"><span class="pre">rmdir</span></code><a class="headerlink" href="#deletion-rm-rmrf-rmdir" title="Permalink to this heading"></a></h2>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rm</span><span class="p">(</span><span class="s1">&#39;bar4&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ls</span><span class="p">()</span>
+<span class="go">bar     bar3    baz</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cd</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lsd</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="go">foo</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rmrf</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lsd</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="go">ls: foo: No such file or directory</span>
+</pre></div>
+</div>
+</section>
+<section id="misc-sh-pid-launch">
+<h2>Misc: <code class="docutils literal notranslate"><span class="pre">sh</span></code>, <code class="docutils literal notranslate"><span class="pre">pid</span></code>, <code class="docutils literal notranslate"><span class="pre">launch</span></code><a class="headerlink" href="#misc-sh-pid-launch" title="Permalink to this heading"></a></h2>
+<p>The functions <code class="docutils literal notranslate"><span class="pre">sh</span></code> and <code class="docutils literal notranslate"><span class="pre">pid</span></code> are just synonyms for
+<code class="docutils literal notranslate"><span class="pre">os.system</span></code> and <code class="docutils literal notranslate"><span class="pre">os.getpid</span></code>.  The function <code class="docutils literal notranslate"><span class="pre">launch</span></code>
+calls the executable <code class="docutils literal notranslate"><span class="pre">open</span></code>, which is Mac-specific.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="newio.html" class="btn btn-neutral float-left" title="selkie.newio — New I/O" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="com.html" class="btn btn-neutral float-right" title="selkie.com — Command invocation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.newio — New I/O &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.fs — File system convenience functions" href="fs.html" />
+    <link rel="prev" title="selkie.io — Input/output functionality" href="io.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python extensions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html"><code class="docutils literal notranslate"><span class="pre">selkie.config</span></code> — Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object.html"><code class="docutils literal notranslate"><span class="pre">selkie.object</span></code> — Types, reflexion, generic object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html"><code class="docutils literal notranslate"><span class="pre">selkie.string</span></code> — Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seq.html"><code class="docutils literal notranslate"><span class="pre">selkie.seq</span></code> — Sequences and iterators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="map.html"><code class="docutils literal notranslate"><span class="pre">selkie.map</span></code> — The Index class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html"><code class="docutils literal notranslate"><span class="pre">selkie.io</span></code> — Input/output functionality</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.newio</span></code> — New I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fs.html"><code class="docutils literal notranslate"><span class="pre">selkie.fs</span></code> — File system convenience functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.html"><code class="docutils literal notranslate"><span class="pre">selkie.com</span></code> — Command invocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html">Scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp/index.html">The NLP pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Python extensions</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.newio</span></code> — New I/O</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pyext/newio.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="module-selkie.newio"></span><section id="selkie-newio-new-i-o">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.newio</span></code> — New I/O<a class="headerlink" href="#selkie-newio-new-i-o" title="Permalink to this heading"></a></h1>
+<section id="files">
+<h2>Files<a class="headerlink" href="#files" title="Permalink to this heading"></a></h2>
+<p>The newio module defines a class of File objects that are associated with
+read/writeable locations.  The function <code class="docutils literal notranslate"><span class="pre">File()</span></code> creates one:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="s1">&#39;/tmp/foo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A File can be thought of as a view of the characters on disk as an
+iteration over objects, known as <strong>elements</strong> of the File.  The Files
+returned by <code class="docutils literal notranslate"><span class="pre">File</span></code> contain lines (a line being a string terminated
+with a newline character), but other Files may have other element
+types.</p>
+<p>There are two broad classes of File: <strong>iterable Files</strong> and <strong>singleton Files.</strong>
+An iterable File behaves as a two-way mapping from characters on disk
+to an iteration over elements.  A single-element File maps between
+characters on disk and a single element.</p>
+<p>To read an iterable file, one simply iterates over it.  To
+write it, one uses the method <code class="docutils literal notranslate"><span class="pre">store()</span></code>.  The argument to
+<code class="docutils literal notranslate"><span class="pre">store()</span></code> may be anything that behaves as an iteration over elements.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">store</span><span class="p">([</span><span class="s1">&#39;foo</span><span class="se">\t</span><span class="s1">bar</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;baz</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;  a</span><span class="se">\t</span><span class="s1">1</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;  b</span><span class="se">\t</span><span class="s1">2</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="go">[&#39;foo\tbar\n&#39;, &#39;baz\n&#39;, &#39;  a\t1\n&#39;, &#39;  b\t2\n&#39;]</span>
+</pre></div>
+</div>
+<p>To read a singleton file, one calls the method <code class="docutils literal notranslate"><span class="pre">load()</span></code>.  An example
+is given below, in the section on Singleton File Formats.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="selkie.newio.File">
+<span class="sig-prename descclassname"><span class="pre">selkie.newio.</span></span><span class="sig-name descname"><span class="pre">File</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.newio.File" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an object that inherits from <code class="docutils literal notranslate"><span class="pre">BaseFile</span></code>.
+Optional arguments are <code class="docutils literal notranslate"><span class="pre">encoding</span></code>, <code class="docutils literal notranslate"><span class="pre">binary</span></code>, <code class="docutils literal notranslate"><span class="pre">format</span></code>, and <code class="docutils literal notranslate"><span class="pre">contents</span></code>.
+<em>Binary</em> is boolean.  If <em>format</em> is provided, it is called on the
+file after opening it, and the result is returned.  The keyword
+<em>contents</em> is used to specify that the given string is to be
+interpreted as file contents rather than filename.  It is an error
+to provide both <em>filename</em> and <em>contents</em>.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.newio.BaseFile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.newio.</span></span><span class="sig-name descname"><span class="pre">BaseFile</span></span><a class="headerlink" href="#selkie.newio.BaseFile" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="selkie.newio.BaseFile.__iter__">
+<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.newio.BaseFile.__iter__" title="Permalink to this definition"></a></dt>
+<dd><p>Must be implemented by specializations.  Returns an iteration
+over the elements of the file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.newio.BaseFile.store">
+<span class="sig-name descname"><span class="pre">store</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contents</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.newio.BaseFile.store" title="Permalink to this definition"></a></dt>
+<dd><p>Must be implemented by specializations.  Saves <em>contents</em> to the
+file.  <em>Contents</em> should be an iteration over elements.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.newio.BaseFile.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.newio.BaseFile.load" title="Permalink to this definition"></a></dt>
+<dd><p>Iterates over the file and returns the results as a list of
+elements.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.newio.BaseFile.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contents</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.newio.BaseFile.save" title="Permalink to this definition"></a></dt>
+<dd><p>A synonym for <code class="docutils literal notranslate"><span class="pre">store(contents)</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.newio.SingletonFile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.newio.</span></span><span class="sig-name descname"><span class="pre">SingletonFile</span></span><a class="headerlink" href="#selkie.newio.SingletonFile" title="Permalink to this definition"></a></dt>
+<dd><p>Inherits from BaseFile.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.newio.SingletonFile.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.newio.SingletonFile.load" title="Permalink to this definition"></a></dt>
+<dd><p>Must be implemented by specializations.  Returns a single
+element.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.newio.SingletonFile.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contents</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.newio.SingletonFile.save" title="Permalink to this definition"></a></dt>
+<dd><p>Must be implemented by specializations.  <em>Contents</em> should be a
+single element.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.newio.SingletonFile.__iter__">
+<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#selkie.newio.SingletonFile.__iter__" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an iteration that contains just one element.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.newio.SingletonFile.store">
+<span class="sig-name descname"><span class="pre">store</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contents</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.newio.SingletonFile.store" title="Permalink to this definition"></a></dt>
+<dd><p>A synonym for <code class="docutils literal notranslate"><span class="pre">save(contents)</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="formats">
+<h2>Formats<a class="headerlink" href="#formats" title="Permalink to this heading"></a></h2>
+<p>One may create Files from other Files using a File Format.  A File
+Format is associated with elements of type <em>T</em>, for some choice of
+<em>T</em>.  The Format contains a <code class="docutils literal notranslate"><span class="pre">read</span></code> function that converts an iteration over
+lines into an iteration over elements of type <em>T</em>, and a <code class="docutils literal notranslate"><span class="pre">render</span></code>
+function that takes anything that can be treated as an iteration over
+elements of type <em>T</em>, and converts it to an iteration over lines.
+Applying the format to a line-based File yields a File over elements
+of type <em>T</em>.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">Nested</span><span class="p">(</span><span class="n">File</span><span class="p">(</span><span class="s1">&#39;/tmp/foo&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="go">[&#39;foo\tbar&#39;, &#39;baz&#39;, [&#39;a\t1&#39;, &#39;b\t2&#39;]]</span>
+</pre></div>
+</div>
+<p>(Nested lists are lists that contain a mix of strings and Nested
+lists.)</p>
+<p>File formats implicitly call <code class="docutils literal notranslate"><span class="pre">File()</span></code> if given an argument that is
+not already a <code class="docutils literal notranslate"><span class="pre">BaseFile</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">Nested</span><span class="p">(</span><span class="s1">&#39;/tmp/foo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.newio.FormattedFile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.newio.</span></span><span class="sig-name descname"><span class="pre">FormattedFile</span></span><a class="headerlink" href="#selkie.newio.FormattedFile" title="Permalink to this definition"></a></dt>
+<dd><p>A specialization of <code class="docutils literal notranslate"><span class="pre">BaseFile</span></code> that is produced by applying a
+<code class="docutils literal notranslate"><span class="pre">FileFormat</span></code> to a file.  It contains a base file and a
+format.  Iterating over it applies the format’s <code class="docutils literal notranslate"><span class="pre">read</span></code> function
+to the base file.  Saving <em>contents</em> to it applies the format’s
+<code class="docutils literal notranslate"><span class="pre">render</span></code> function to <em>contents</em> and then stores the resulting lines
+in the base file.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.newio.FileFormat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.newio.</span></span><span class="sig-name descname"><span class="pre">FileFormat</span></span><a class="headerlink" href="#selkie.newio.FileFormat" title="Permalink to this definition"></a></dt>
+<dd><p>A file format defines <em>elements</em> of a certain sort.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.newio.FileFormat.read">
+<span class="sig-name descname"><span class="pre">read</span></span><a class="headerlink" href="#selkie.newio.FileFormat.read" title="Permalink to this definition"></a></dt>
+<dd><p>The value is a function that takes an iteration over lines and
+returns an iteration over the elements.  Note
+that this is a <em>member</em> whose value is a function; it is not a
+bound method.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="selkie.newio.FileFormat.render">
+<span class="sig-name descname"><span class="pre">render</span></span><a class="headerlink" href="#selkie.newio.FileFormat.render" title="Permalink to this definition"></a></dt>
+<dd><p>The value is a function that is the inverse of <code class="docutils literal notranslate"><span class="pre">read()</span></code>.  It
+takes an iteration over elements and returns an
+iteration over lines.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.newio.FileFormat.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.newio.FileFormat.__call__" title="Permalink to this definition"></a></dt>
+<dd><p>Apply to <em>f</em>, which is an instance of <code class="docutils literal notranslate"><span class="pre">BaseFile</span></code>.  The return
+value is a <code class="docutils literal notranslate"><span class="pre">FormattedFile</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="iterable-file-formats">
+<h2>Iterable File Formats<a class="headerlink" href="#iterable-file-formats" title="Permalink to this heading"></a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="selkie.newio.Lines">
+<span class="sig-prename descclassname"><span class="pre">selkie.newio.</span></span><span class="sig-name descname"><span class="pre">Lines</span></span><a class="headerlink" href="#selkie.newio.Lines" title="Permalink to this definition"></a></dt>
+<dd><p>A file format whose elements are lines.  Its <code class="docutils literal notranslate"><span class="pre">read</span></code> and
+<code class="docutils literal notranslate"><span class="pre">render</span></code> functions are both identity functions.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="selkie.newio.Records">
+<span class="sig-prename descclassname"><span class="pre">selkie.newio.</span></span><span class="sig-name descname"><span class="pre">Records</span></span><a class="headerlink" href="#selkie.newio.Records" title="Permalink to this definition"></a></dt>
+<dd><p>A file format whose elements are <em>records</em>.  A record is a list
+of strings corresponding to the tab-separated fields of a line.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="selkie.newio.Tabular">
+<span class="sig-prename descclassname"><span class="pre">selkie.newio.</span></span><span class="sig-name descname"><span class="pre">Tabular</span></span><a class="headerlink" href="#selkie.newio.Tabular" title="Permalink to this definition"></a></dt>
+<dd><p>A synonym for <code class="docutils literal notranslate"><span class="pre">Records</span></code>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="selkie.newio.Blocks">
+<span class="sig-prename descclassname"><span class="pre">selkie.newio.</span></span><span class="sig-name descname"><span class="pre">Blocks</span></span><a class="headerlink" href="#selkie.newio.Blocks" title="Permalink to this definition"></a></dt>
+<dd><p>A file format whose elements are <em>blocks</em>.  A block is a list of
+records, corresponding to groups of lines separated by empty
+lines.  Multiple empty lines represent a single separator.  That
+is, blocks cannot be empty.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="selkie.newio.Dicts">
+<span class="sig-prename descclassname"><span class="pre">selkie.newio.</span></span><span class="sig-name descname"><span class="pre">Dicts</span></span><a class="headerlink" href="#selkie.newio.Dicts" title="Permalink to this definition"></a></dt>
+<dd><p>A file format whose elements are <em>dicts</em>.  The file contents are
+treated as blocks, and it is expected that each record contains
+exactly two fields (key and value); thus a block corresponds to a
+dict.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="selkie.newio.ILines">
+<span class="sig-prename descclassname"><span class="pre">selkie.newio.</span></span><span class="sig-name descname"><span class="pre">ILines</span></span><a class="headerlink" href="#selkie.newio.ILines" title="Permalink to this definition"></a></dt>
+<dd><p>A file format whose elements are <em>indented lines</em>.  An indented
+line is a pair (<em>indent</em>, <em>line</em>), in which <em>indent</em> is an int
+indicating the number of leading spaces, and <em>line</em> is the contents
+of the line without the leading spaces and without terminating
+return/newline.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="selkie.newio.Nested">
+<span class="sig-prename descclassname"><span class="pre">selkie.newio.</span></span><span class="sig-name descname"><span class="pre">Nested</span></span><a class="headerlink" href="#selkie.newio.Nested" title="Permalink to this definition"></a></dt>
+<dd><p>A file format whose elements are <em>nested blocks</em>.  A nested block
+is a list of contiguous lines at the same level of indentation.
+Leading spaces and terminating return/newline have been removed.
+A nested block also contains sublists representing nested blocks at
+deeper levels of indentation.</p>
+</dd></dl>
+
+</section>
+<section id="singleton-file-formats">
+<h2>Singleton File Formats<a class="headerlink" href="#singleton-file-formats" title="Permalink to this heading"></a></h2>
+<p>A singleton file uses the methods
+<code class="docutils literal notranslate"><span class="pre">load()</span></code> and <code class="docutils literal notranslate"><span class="pre">save()</span></code> instead of <code class="docutils literal notranslate"><span class="pre">__iter__()</span></code> and <code class="docutils literal notranslate"><span class="pre">store()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">NestedDict</span><span class="p">(</span><span class="s1">&#39;/tmp/foo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+<span class="go">{&#39;foo&#39;: &#39;bar&#39;, &#39;baz&#39;: {&#39;a&#39;: &#39;1&#39;, &#39;b&#39;: &#39;2&#39;}}</span>
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">load()</span></code> returns a single element.  The method
+<code class="docutils literal notranslate"><span class="pre">__iter__()</span></code> returns an iteration containing just that one element.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.newio.LoadableFile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.newio.</span></span><span class="sig-name descname"><span class="pre">LoadableFile</span></span><a class="headerlink" href="#selkie.newio.LoadableFile" title="Permalink to this definition"></a></dt>
+<dd><p>A specialization of <code class="docutils literal notranslate"><span class="pre">SingletonFile</span></code> that is produced by applying a
+<code class="docutils literal notranslate"><span class="pre">LoadableFormat</span></code> to a file.  It is like <code class="docutils literal notranslate"><span class="pre">FormattedFile</span></code>, except
+that <code class="docutils literal notranslate"><span class="pre">load()</span></code> and <code class="docutils literal notranslate"><span class="pre">save()</span></code> are taken to be basic.  The file is
+assumed to contain a single object, returned by <code class="docutils literal notranslate"><span class="pre">load()</span></code>.
+<code class="docutils literal notranslate"><span class="pre">__iter__()</span></code> yields the value of <code class="docutils literal notranslate"><span class="pre">load()</span></code>.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.newio.LoadableFormat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.newio.</span></span><span class="sig-name descname"><span class="pre">LoadableFormat</span></span><a class="headerlink" href="#selkie.newio.LoadableFormat" title="Permalink to this definition"></a></dt>
+<dd><p>Like <code class="docutils literal notranslate"><span class="pre">FileFormat</span></code>, except that its <code class="docutils literal notranslate"><span class="pre">read()</span></code> method should
+return (and its <code class="docutils literal notranslate"><span class="pre">render()</span></code> method accept) a single object, not an
+iteration.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="selkie.newio.NestedDict">
+<span class="sig-prename descclassname"><span class="pre">selkie.newio.</span></span><span class="sig-name descname"><span class="pre">NestedDict</span></span><a class="headerlink" href="#selkie.newio.NestedDict" title="Permalink to this definition"></a></dt>
+<dd><p>A format for a file containing a <em>nested dict</em>.  A nested dict is
+like a nested block, except that lines are parsed into key-value
+pairs separated by a whitespace character and the value is a dict
+rather than a list.  A subdict at a deeper level of indentation
+must be preceded by a line containing a key but no value.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="io.html" class="btn btn-neutral float-left" title="selkie.io — Input/output functionality" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fs.html" class="btn btn-neutral float-right" title="selkie.fs — File system convenience functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

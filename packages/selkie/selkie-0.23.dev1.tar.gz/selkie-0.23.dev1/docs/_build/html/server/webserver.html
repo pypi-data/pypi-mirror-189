@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.webserver — Web server &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.disk — Virtual disks, REST" href="disk.html" />
+    <link rel="prev" title="The Selkie web server" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Web Application</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">The Selkie web server</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.webserver</span></code> — Web server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disk.html"><code class="docutils literal notranslate"><span class="pre">selkie.disk</span></code> — Virtual disks, REST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="store.html"><code class="docutils literal notranslate"><span class="pre">selkie.store</span></code> — Object store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="old/index.html">The old version</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp/index.html">The NLP pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Web Application</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.webserver</span></code> — Web server</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/server/webserver.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-webserver-web-server">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.webserver</span></code> — Web server<a class="headerlink" href="#selkie-webserver-web-server" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="selkie.webserver.Backend">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">selkie.webserver.</span></span><span class="sig-name descname"><span class="pre">Backend</span></span><a class="headerlink" href="#selkie.webserver.Backend" title="Permalink to this definition"></a></dt>
+<dd><p>To implement the back end of a Selkie web application,
+specialize this class.  It behaves like a dict whose keys are
+strings.  A key must begin with a forward slash.
+The portion following the initial slash is split at slashes (if
+any).  The first field is the <em>type</em> and the remaining fields are
+<em>arguments</em>.  The method whose name is <code class="docutils literal notranslate"><span class="pre">get_</span></code> followed by the
+type is invoked, with the arguments as arguments, to determine the
+value.  A KeyError is signalled if no such method exists.</p>
+<p>Setting or deleting a key behaves similarly, except that the
+invoked methods have prefix <code class="docutils literal notranslate"><span class="pre">set_</span></code> or <code class="docutils literal notranslate"><span class="pre">del_</span></code>, respectively,
+instead of <code class="docutils literal notranslate"><span class="pre">get_</span></code>.  In the case of a set method, the value is
+added as final argument.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.webserver.Backend.__getitem__">
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uri</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.webserver.Backend.__getitem__" title="Permalink to this definition"></a></dt>
+<dd><p>Split the uri into type and args.  Invoke <code class="docutils literal notranslate"><span class="pre">get_</span></code> + type on args.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.webserver.Backend.__setitem__">
+<span class="sig-name descname"><span class="pre">__setitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uri</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.webserver.Backend.__setitem__" title="Permalink to this definition"></a></dt>
+<dd><p>Split the uri into type and args.  Invoke <code class="docutils literal notranslate"><span class="pre">get_</span></code> + type on
+args + [value].</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.webserver.Backend.__delitem__">
+<span class="sig-name descname"><span class="pre">__delitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uri</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.webserver.Backend.__delitem__" title="Permalink to this definition"></a></dt>
+<dd><p>Split the uri into type and args.  Invoke <code class="docutils literal notranslate"><span class="pre">del_</span></code> + type on
+args.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="selkie.webserver.Backend.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#selkie.webserver.Backend.run" title="Permalink to this definition"></a></dt>
+<dd><p>Start the web server.  It will listen for websocket connections
+on port 8844.  A request is translated to a method invocation
+and the return value is sent back to the client.</p>
+<p>This method never returns; use ctrl-C to interrupt it.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="intro.html" class="btn btn-neutral float-left" title="The Selkie web server" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="disk.html" class="btn btn-neutral float-right" title="selkie.disk — Virtual disks, REST" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

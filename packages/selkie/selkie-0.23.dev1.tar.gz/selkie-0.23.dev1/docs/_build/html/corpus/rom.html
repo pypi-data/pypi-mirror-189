@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.rom — Romanizations &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.xml — XML files" href="xml.html" />
+    <link rel="prev" title="Corpus processing" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Corpus processing</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.rom</span></code> — Romanizations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xml.html"><code class="docutils literal notranslate"><span class="pre">selkie.xml</span></code> — XML files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tok.html"><code class="docutils literal notranslate"><span class="pre">selkie.tok</span></code> — Tokenizer for Latin scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pretts.html"><code class="docutils literal notranslate"><span class="pre">selkie.pretts</span></code> — Converting text to bare words</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conc.html">Conc - move back conc.rst.safe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="corpus.html"><code class="docutils literal notranslate"><span class="pre">selkie.corpus</span></code> — Simple text corpus</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp/index.html">The NLP pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Corpus processing</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.rom</span></code> — Romanizations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/corpus/rom.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-rom-romanizations">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.rom</span></code> — Romanizations<a class="headerlink" href="#selkie-rom-romanizations" title="Permalink to this heading"></a></h1>
+<section id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this heading"></a></h2>
+<p>A <strong>romanization</strong> defines ASCII key sequences for entering
+non-ASCII characters.  It can be thought of as a keyboard for entering
+a non-roman script, or as an orthography.
+For example, using the Salish romanization, one can
+type <code class="docutils literal notranslate"><span class="pre">l**x&#64;c'</span></code> to obtain the character sequence ƛ̣̓xəc̓.</p>
+<p>In CLD, text stored in files is stored in romanized (ASCII) form.
+It is easiest if we can associate a unique romanization with a given
+language.  That is problematic in cases where different orthographies
+are in use.  For example, Ojibwe is sometimes written using Canadian
+syllabics.  We probably want to convert such texts to the “standard”
+orthography before analyzing them.  The alternative is to treat
+alternative orthographies as introducing variant forms of all words,
+not an attractive option.</p>
+<p>We store the romanizations in the toplevel directory <code class="docutils literal notranslate"><span class="pre">roms</span></code>.
+We need to be able to specify a separate registry.</p>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
+<p>Romanizations provide one-way codecs: they can be used to
+decode ASCII byte sequences, producing Unicode strings as output.  The
+reverse mappings are not currently provided.</p>
+<p>The romanizations currently defined are: <code class="docutils literal notranslate"><span class="pre">'gothic'</span></code>, <code class="docutils literal notranslate"><span class="pre">'gothic-student'</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">'salish'</span></code>.
+They are enabled when seal.nlp.rom is imported.
+One uses them as one uses any decoder.  For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">selkie.rom</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;c*a&#39;</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;salish&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.string</span> <span class="kn">import</span> <span class="n">unidescribe</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">unidescribe</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="go">0 0x10d LATIN SMALL LETTER C WITH CARON</span>
+<span class="go">1 0x61 LATIN SMALL LETTER A</span>
+</pre></div>
+</div>
+<p>The string prints out as “ča.”</p>
+<p>There is also a <code class="docutils literal notranslate"><span class="pre">decode()</span></code> function:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.rom</span> <span class="kn">import</span> <span class="n">decode</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s2</span> <span class="o">=</span> <span class="n">decode</span><span class="p">(</span><span class="s2">&quot;a&#39;tho:&quot;</span><span class="p">,</span> <span class="s1">&#39;gothic-student&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">unidescribe</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+<span class="go">0 0xe1 LATIN SMALL LETTER A WITH ACUTE</span>
+<span class="go">1 0xfe LATIN SMALL LETTER THORN</span>
+<span class="go">2 0x6f LATIN SMALL LETTER O</span>
+<span class="go">3 0x304 COMBINING MACRON</span>
+</pre></div>
+</div>
+<p>To convert the output to an ascii string containing HTML entities of
+form <code class="docutils literal notranslate"><span class="pre">&amp;#dddd;</span></code> for non-ascii characters:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.rom</span> <span class="kn">import</span> <span class="n">to_html</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">to_html</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+<span class="go">b&#39;&amp;#225;&amp;#254;o&amp;#772;&#39;</span>
+</pre></div>
+</div>
+<p>To see the graph:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">student</span><span class="o">.</span><span class="n">print_graph</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="decoder">
+<h2>Decoder<a class="headerlink" href="#decoder" title="Permalink to this heading"></a></h2>
+<p>A Decoder applies a romanization.  It is similar to the reader
+for a codec, but it maps text to text, not bytes to text.</p>
+<p>The romanization behaves as a dict mapping strings to strings.  It is
+interpreted as a prefix code.  At any point in the input
+stream, the longest matching key is used to determine the output string
+at that point.</p>
+<p>If no key matches, the unicoder checks whether the next thing in
+the input stream is one of the directives in the following table.  The first
+thirteen are identical to escapes allowed in Python.
+The symbol <em>d</em> represents any
+octal digit (0-7), and <em>h</em> represents any hex digit (0-7, a-f, A-F).</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>*newline*</p></td>
+<td><p>A backslash followed by newline produces no output.</p></td>
+</tr>
+<tr class="row-even"><td><p>\</p></td>
+<td><p>A literal backslash.</p></td>
+</tr>
+<tr class="row-odd"><td><p>a</p></td>
+<td><p>ASCII bell, U+0007.</p></td>
+</tr>
+<tr class="row-even"><td><p>b</p></td>
+<td><p>ASCII backspace, U+0008.</p></td>
+</tr>
+<tr class="row-odd"><td><p>f</p></td>
+<td><p>ASCII formfeed, U+000C.</p></td>
+</tr>
+<tr class="row-even"><td><p>n</p></td>
+<td><p>ASCII newline (line feed), U+000A.</p></td>
+</tr>
+<tr class="row-odd"><td><p>r</p></td>
+<td><p>ASCII carriage return, U+000D.</p></td>
+</tr>
+<tr class="row-even"><td><p>t</p></td>
+<td><p>ASCII tab, U+0009.</p></td>
+</tr>
+<tr class="row-odd"><td><p>v</p></td>
+<td><p>ASCII vertical tab, U+000B.</p></td>
+</tr>
+<tr class="row-even"><td><p>*ddd*</p></td>
+<td><p>The Unicode character whose codepoint, in octal,
+is <em>ddd.</em>  One to three digits may be given; the longest
+match will be taken up to three digits.</p></td>
+</tr>
+<tr class="row-odd"><td><p>x*hh*</p></td>
+<td><p>The Unicode character U+00*hh.*  Exactly two
+hex digits must be provided.</p></td>
+</tr>
+<tr class="row-even"><td><p>u*hhhh*</p></td>
+<td><p>The Unicode character U+*hhhh.*  Exactly
+four hex digits must be provided.
+The named codepoint is inserted.</p></td>
+</tr>
+<tr class="row-odd"><td><p>U*hhhhhhhh*</p></td>
+<td><p>The codepoint U+*hhhhhhhh* is inserted.
+Exactly eight hex digits must be provided.</p></td>
+</tr>
+<tr class="row-even"><td><p>.*name*</p></td>
+<td><p><em>Name</em> consists of any mix of letters, digits,
+and underscore.  The longest match is taken.  To force a shorter
+match, when the next intended character is a letter, digit, or underscore,
+one may terminate the name with <code class="docutils literal notranslate"><span class="pre">\.</span></code> (backslash period).
+The unicoder switches to the named romanization.</p></td>
+</tr>
+<tr class="row-odd"><td><p>[<em>name</em></p></td>
+<td><p>The unicoder switches to the named
+romanization, but pushes the old one on the stack.</p></td>
+</tr>
+<tr class="row-even"><td><p>]</p></td>
+<td><p>The unicoder pops the previous romanization off the
+stack and resumes using it.</p></td>
+</tr>
+<tr class="row-odd"><td><p>.</p></td>
+<td><p>Produces no output, can be used to terminate
+<em>name</em> or <em>ddd.</em></p></td>
+</tr>
+</tbody>
+</table>
+<p>If the next thing in the input is not one of the romanization’s keys,
+and not one of the directives in the table, then
+a single character is copied unmodified to the output.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">.rom</span></code> file is loaded using <code class="docutils literal notranslate"><span class="pre">load_dict()</span></code>
+of <code class="docutils literal notranslate"><span class="pre">seal.io</span></code>.  Keys may not be null.</p>
+<p>To get Unicode characters into the value part of a .rom file, use numeric
+escapes and pass it through Unicoder.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">decoder</span></code> produces a decoder for a given romanization,
+and the function <code class="docutils literal notranslate"><span class="pre">reader</span></code> produces an input stream.</p>
+<p>In Javascript, the coder
+accepts strings or single characters via <code class="docutils literal notranslate"><span class="pre">append()</span></code>.
+The input must consist of seven-bit ASCII, so characters and code
+points are the same.  There
+is no one-one correspondence between input characters and output characters, and in
+some cases, lookahead is required to determine what the output sequence should be.
+If the output sequence is still ambiguous, but no further input remains, one can
+force all pending output to be produced by calling <code class="docutils literal notranslate"><span class="pre">flush()</span></code>.</p>
+</section>
+<section id="catalog">
+<h2>Catalog<a class="headerlink" href="#catalog" title="Permalink to this heading"></a></h2>
+<p>To get a list of the defined romanizations:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.rom</span> <span class="kn">import</span> <span class="n">default_registry</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">default_registry</span><span class="p">)</span>
+<span class="go">[&#39;korean&#39;, &#39;otw-webkamigad&#39;, &#39;salish&#39;, &#39;gothic&#39;, &#39;gothic-student&#39;, &#39;otw-jones&#39;]</span>
+</pre></div>
+</div>
+<p>To get the romanization itself, access the registry like a dict:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">salish</span> <span class="o">=</span> <span class="n">default_registry</span><span class="p">[</span><span class="s1">&#39;salish&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The file in which the romanization resides is <code class="docutils literal notranslate"><span class="pre">salish.filename</span></code>.
+Calling <code class="docutils literal notranslate"><span class="pre">print(salish)</span></code> prints its contents.  One can also use
+<code class="docutils literal notranslate"><span class="pre">salish.items()</span></code> to get an iteration over the pairs.</p>
+</section>
+<section id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="load_rom">
+<span class="sig-name descname"><span class="pre">load_rom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#load_rom" title="Permalink to this definition"></a></dt>
+<dd><p>Opens the file in binary mode.  Returns an iteration over (key,
+value) pairs.  The values are not expanded.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Romanization">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Romanization</span></span><a class="headerlink" href="#Romanization" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="Romanization.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">]</span><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#Romanization.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Initialize.  If <em>fn</em> is provided, <cite>load_rom()</cite> is used to read
+it, and the values are decoded.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Romanization.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#Romanization.name" title="Permalink to this definition"></a></dt>
+<dd><p>The name.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Romanization.filename">
+<span class="sig-name descname"><span class="pre">filename</span></span><a class="headerlink" href="#Romanization.filename" title="Permalink to this definition"></a></dt>
+<dd><p>The filename.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Romanization.start">
+<span class="sig-name descname"><span class="pre">start</span></span><a class="headerlink" href="#Romanization.start" title="Permalink to this definition"></a></dt>
+<dd><p>The start state.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Romanization.__setitem__">
+<span class="sig-name descname"><span class="pre">__setitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Romanization.__setitem__" title="Permalink to this definition"></a></dt>
+<dd><p>Add a new association.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Romanization.items">
+<span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Romanization.items" title="Permalink to this definition"></a></dt>
+<dd><p>Calls <cite>load_rom()</cite> on its filename and returns the resulting
+iteration.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Romanization.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Romanization.__str__" title="Permalink to this definition"></a></dt>
+<dd><p>Prints the contents of the file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Romanization.print_graph">
+<span class="sig-name descname"><span class="pre">print_graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Romanization.print_graph" title="Permalink to this definition"></a></dt>
+<dd><p>Prints out the state graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Romanization.match">
+<span class="sig-name descname"><span class="pre">match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Romanization.match" title="Permalink to this definition"></a></dt>
+<dd><p>Finds the longest match in <em>input</em> beginning at index <em>i</em>.  The
+return value is a pair (j, value).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Romanization.decode">
+<span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'strict'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Romanization.decode" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a Decoder from itself and calls it on <em>input</em> and <em>output</em>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Corpus processing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="xml.html" class="btn btn-neutral float-right" title="selkie.xml — XML files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

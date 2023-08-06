@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.gdev — Grammar development tool &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.gen — Generation" href="gen.html" />
+    <link rel="prev" title="selkie.grammar — Constituent grammars" href="grammar.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The NLP pipeline</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="fsa.html"><code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> — Finite-state automata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fst.html"><code class="docutils literal notranslate"><span class="pre">selkie.fst</span></code> — Finite-state transducers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tree.html"><code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> — Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemmer.html"><code class="docutils literal notranslate"><span class="pre">selkie.stemmer</span></code> — English stemmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="head.html"><code class="docutils literal notranslate"><span class="pre">selkie.head</span></code> — Head marking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dep.html"><code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> — Dependency conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html"><code class="docutils literal notranslate"><span class="pre">selkie.features</span></code> — Non-recursive features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avs.html"><code class="docutils literal notranslate"><span class="pre">selkie.avs</span></code> — Recursive feature structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grammar.html"><code class="docutils literal notranslate"><span class="pre">selkie.grammar</span></code> — Constituent grammars</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.gdev</span></code> — Grammar development tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen.html"><code class="docutils literal notranslate"><span class="pre">selkie.gen</span></code> — Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parser.html"><code class="docutils literal notranslate"><span class="pre">selkie.parser</span></code> — Constituent parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expr.html"><code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code> — Predicate calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interp.html"><code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> — Semantic interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.html"><code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> — Automated reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bot.html"><code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> — Conversational agent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">The NLP pipeline</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.gdev</span></code> — Grammar development tool</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/nlp/gdev.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-gdev-grammar-development-tool">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.gdev</span></code> — Grammar development tool<a class="headerlink" href="#selkie-gdev-grammar-development-tool" title="Permalink to this heading"></a></h1>
+<p>The usual way to run gdev is from the shell:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m selkie.gdev
+</pre></div>
+</div>
+<p>When it starts up, it prints out the usage message, followed by a
+prompt (<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>).
+The commands are as follows.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 86%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ls</span></code></p></td>
+<td><p>List the existing grammars.  It looks in the directories on
+its grammar path for files with suffix “<code class="docutils literal notranslate"><span class="pre">.g</span></code>.”  The initial path
+includes the current directory, <code class="docutils literal notranslate"><span class="pre">/cl/examples</span></code>, and <code class="docutils literal notranslate"><span class="pre">/cl/data/eng</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">r</span></code></p></td>
+<td><p>Reload the grammar and sentence files, and reparse.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">n</span></code></p></td>
+<td><p>Next: go forward one sentence.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">p</span></code></p></td>
+<td><p>Previous: go back one sentence.</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>number</em></p></td>
+<td><p>Go to the sentence with that number.</p></td>
+</tr>
+<tr class="row-even"><td><p><em>grammar</em></p></td>
+<td><p>Load the grammar.</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>expr</em></p></td>
+<td><p>Evaluate the given semantic expression in the model.</p></td>
+</tr>
+<tr class="row-even"><td><p><em>sent</em></p></td>
+<td><p>Parse and evaluate a temporary sentence.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">c</span></code></p></td>
+<td><p>Print the current sentence.  Discard the temporary sentence, if any.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">g</span></code></p></td>
+<td><p>Print the grammar.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">m</span></code></p></td>
+<td><p>Print the model.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">s</span></code></p></td>
+<td><p>Print the sentences.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">t</span></code></p></td>
+<td><p>Save the translations to <code class="docutils literal notranslate"><span class="pre">NAME-trans.txt</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">h</span></code></p></td>
+<td><p>Print a help message.  Question mark or an empty command
+also cause the help message to be printed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">trace</span></code></p></td>
+<td><p>Takes zero or more arguments, from the following list:
+<code class="docutils literal notranslate"><span class="pre">on</span></code> turns tracing on (the default), <code class="docutils literal notranslate"><span class="pre">off</span></code> turns tracing
+off, <code class="docutils literal notranslate"><span class="pre">parse</span></code> affects tracing of parse-tree construction,
+<code class="docutils literal notranslate"><span class="pre">unif</span></code> affects tracing of unifications, <em>number</em>
+specifies a particular rule to trace.  If both <code class="docutils literal notranslate"><span class="pre">on</span></code> and <code class="docutils literal notranslate"><span class="pre">off</span></code>
+are specified, the one that comes later overrides the one that
+comes earlier.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">^D</span></code></p></td>
+<td><p>Quit.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="Dev">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Dev</span></span><a class="headerlink" href="#Dev" title="Permalink to this definition"></a></dt>
+<dd><p>When one calls <code class="docutils literal notranslate"><span class="pre">seal.gdev</span></code> from the shell, it instantiates the
+class <code class="docutils literal notranslate"><span class="pre">Dev</span></code> and calls its <code class="docutils literal notranslate"><span class="pre">run()</span></code> method.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Dev.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Dev.run" title="Permalink to this definition"></a></dt>
+<dd><p>Repeatedly reads a line from stdin and passes it to the
+<code class="docutils literal notranslate"><span class="pre">com()</span></code> method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Dev.com">
+<span class="sig-name descname"><span class="pre">com</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Dev.com" title="Permalink to this definition"></a></dt>
+<dd><p>Execute a command line.</p>
+</dd></dl>
+
+<p>Here is an example.  First we instantiate <code class="docutils literal notranslate"><span class="pre">Dev</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.gdev</span> <span class="kn">import</span> <span class="n">Dev</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">Dev</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Load grammar <code class="docutils literal notranslate"><span class="pre">g9</span></code>, along with its example sentences:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">com</span><span class="p">(</span><span class="s1">&#39;g9&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Show the sentences.  The numbers not in brackets indicate how many
+parses the grammar assigns to the sentence.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">com</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+<span class="go">[0]   1  a cat barks</span>
+<span class="go">[1]   0 *a dogs barks</span>
+<span class="go">[2]   1  the cat chases the dog</span>
+</pre></div>
+</div>
+<p>Show the parse tree(s) for the current sentence:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">com</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+
+<span class="go">[0]   a cat barks</span>
+<span class="go">#Parses: 1</span>
+<span class="go">Parse 0:</span>
+<span class="go">0   (S</span>
+<span class="go">1      (NP[sg,-]</span>
+<span class="go">2         (Det[sg] a)</span>
+<span class="go">3         (N[sg] cat))</span>
+<span class="go">4      (VP[sg]</span>
+<span class="go">5         (V[sg,i] barks)))</span>
+</pre></div>
+</div>
+<p>When the command is the name of a grammar file, <code class="docutils literal notranslate"><span class="pre">Dev</span></code> expects two files to exist:
+<code class="docutils literal notranslate"><span class="pre">NAME.g</span></code> should contain a grammar, and
+<code class="docutils literal notranslate"><span class="pre">NAME.sents</span></code> should contain a list of sentences.
+Each line of the sentence file is considered to be a sentence, except
+that empty lines and lines beginning with <code class="docutils literal notranslate"><span class="pre">#</span></code> are ignored.
+Leading and trailing whitespace is ignored.  If the first
+non-whitespace character is <code class="docutils literal notranslate"><span class="pre">*</span></code>, it indicates that the example is
+ungrammatical.  For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.data</span> <span class="kn">import</span> <span class="n">ex</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.io</span> <span class="kn">import</span> <span class="n">contents</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;g9.sents&#39;</span><span class="p">)),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="go"> a cat barks</span>
+<span class="go">*a dogs barks</span>
+<span class="go"> the cat chases the dog</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Dev</span></code> creates a parser from the grammar file, and uses it to parse
+each of the sentences in the sentence file.  The predicted label is
+<code class="docutils literal notranslate"><span class="pre">'OK'</span></code> if the parser deems the sentence to be grammatical, and
+<code class="docutils literal notranslate"><span class="pre">'*'</span></code> if the parser rejects it.  The predicted labels are compared
+to the true labels, and the results are printed out.</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="grammar.html" class="btn btn-neutral float-left" title="selkie.grammar — Constituent grammars" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gen.html" class="btn btn-neutral float-right" title="selkie.gen — Generation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

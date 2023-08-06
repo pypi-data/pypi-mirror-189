@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>selkie.gen — Generation &mdash; Selkie 0.22 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="selkie.parser — Constituent parser" href="parser.html" />
+    <link rel="prev" title="selkie.gdev — Grammar development tool" href="gdev.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Selkie
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyext/index.html">Python extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Web Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">General-purpose tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../corpus/index.html">Corpus processing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The NLP pipeline</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="fsa.html"><code class="docutils literal notranslate"><span class="pre">selkie.fsa</span></code> — Finite-state automata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fst.html"><code class="docutils literal notranslate"><span class="pre">selkie.fst</span></code> — Finite-state transducers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tree.html"><code class="docutils literal notranslate"><span class="pre">selkie.tree</span></code> — Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stemmer.html"><code class="docutils literal notranslate"><span class="pre">selkie.stemmer</span></code> — English stemmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="head.html"><code class="docutils literal notranslate"><span class="pre">selkie.head</span></code> — Head marking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dep.html"><code class="docutils literal notranslate"><span class="pre">selkie.dep</span></code> — Dependency conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html"><code class="docutils literal notranslate"><span class="pre">selkie.features</span></code> — Non-recursive features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avs.html"><code class="docutils literal notranslate"><span class="pre">selkie.avs</span></code> — Recursive feature structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grammar.html"><code class="docutils literal notranslate"><span class="pre">selkie.grammar</span></code> — Constituent grammars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gdev.html"><code class="docutils literal notranslate"><span class="pre">selkie.gdev</span></code> — Grammar development tool</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">selkie.gen</span></code> — Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parser.html"><code class="docutils literal notranslate"><span class="pre">selkie.parser</span></code> — Constituent parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expr.html"><code class="docutils literal notranslate"><span class="pre">selkie.expr</span></code> — Predicate calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interp.html"><code class="docutils literal notranslate"><span class="pre">selkie.interp</span></code> — Semantic interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.html"><code class="docutils literal notranslate"><span class="pre">selkie.logic</span></code> — Automated reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bot.html"><code class="docutils literal notranslate"><span class="pre">selkie.bot</span></code> — Conversational agent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../speech/index.html">Speech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../app_intro/index.html">Web Application Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../db/index.html">Persistent-object database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/index.html">The Content Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cld/index.html">The CLD application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uc/index.html">Universal Corpus</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Selkie</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">The NLP pipeline</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">selkie.gen</span></code> — Generation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/nlp/gen.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selkie-gen-generation">
+<h1><code class="docutils literal notranslate"><span class="pre">selkie.gen</span></code> — Generation<a class="headerlink" href="#selkie-gen-generation" title="Permalink to this heading"></a></h1>
+<p><em>This is currently broken.</em></p>
+<p>Random generation from a feature grammar is a little tricky.  It is
+not currently implemented, but the algorithm is described here.</p>
+<p>To do random generation with feature grammars, we require both a
+downward and upward pass, analogous to the upward chart-filling
+step followed by the downward unwinding step in parsing.  In parsing,
+we “enter” an expansion from the lower left corner (the first)
+child, and proceed from child to child, finally “exiting” at the
+top.  The “enter” steps involve unification of a node with a child
+category, and the “exit” step involves instantiation of the lefthand
+side category.  In generation, we enter from the top, unifying the
+parent node with the lefthand side category.</p>
+<p>In random generation, we fully instantiate rules as we generate a
+tree.  Full instantiation means eliminating not only variables but
+also disjunctions, leaving a unique value for each attribute.  The
+choice among disjuncts is made stochastically.</p>
+<p>We begin by fully instantiating the start
+category.  We create a root node for the start category, but leave the
+children as yet unspecified.</p>
+<p>Then, at each point, we have a parent node with a fully instantiated
+category, and we find the rules that could expand it.
+Rules are indexed by symbol in the grammar, not by complete
+feature sets, so we must scan through a candidate list to determine
+which ones actually match the given parent category.  The result of
+each successful match is an updated symbol table.  We make a list of
+the matching rules, and the symbol table for each.</p>
+<p>We make a stochastic choice among the rules that match the parent
+category.  We use the updated symbol table to fully instantiate each
+righthand-side category in turn, keeping track of further symbol-table
+updates as we go.  As we instantiate each child category, we create a
+node possessing the category and insert it into the parent’s child
+array.  Then we recursively expand each child in turn.</p>
+<p>It is possible for generation to fail.  For example, consider the
+following little grammar.</p>
+<p>S -&gt; A[f ?x] B[f ?x];
+S -&gt; A[f ?x];
+A[f 1] -&gt; foo;
+A[f 2] -&gt; bar;
+B[f 2] -&gt; baz;</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">f</span></code> attribute ranges over <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">2</span></code>; but if one
+choose the first expansion for <code class="docutils literal notranslate"><span class="pre">S</span></code>, then one must choose value
+<code class="docutils literal notranslate"><span class="pre">2</span></code>.  If one happens to choose <code class="docutils literal notranslate"><span class="pre">1</span></code>, though, the problem is
+not detected until one attempts to generate a subtree from
+<code class="docutils literal notranslate"><span class="pre">B[f</span> <span class="pre">1]</span></code>.</p>
+<section id="generation-algorithm">
+<h2>Generation algorithm<a class="headerlink" href="#generation-algorithm" title="Permalink to this heading"></a></h2>
+<p>A <strong>node</strong> represents the results of generating from a pair
+(<em>cat, sem</em>).  We may consider indexing nodes: a given node may
+well be needed multiple times, because many choices of first
+child may lead to the same requirements for the next child.
+The calling state is recorded with the node.  If additional states
+call for the same node, they will also be recorded as callers.</p>
+<p>To expand the node, we find all rules whose lhs is consistent with
+(<em>cat, sem</em>), and for each rule we create a new state.
+The node is passed along as states are expanded.</p>
+<p>A <strong>state</strong> is like a parser edge.  It represents a partial state of
+generating from a given rule.  The first <em>i</em> children have been
+generated.  Their categories have been merged into the current
+bindings, and their semantics has been unified into the rule
+semantics.</p>
+<p>To advance a state, we substitute the current bindings into the
+category of the next child, and we unify the appropriate sub-avs of
+the current one with the semantics of the next child.  Then we
+generate from that (<em>cat, sem</em>) pair.  The result is a list of
+trees.  For each tree, we create a new state in which the tree
+category is used to update the bindings, and the tree semantics is unified
+into the semantics of the previous state to create the new state’s semantics.</p>
+<p>When a state has generated all children for its rule, a new tree is
+created, whose category
+comes from substituting the bindings into the rule lhs, and whose
+semantics is the state’s semantics.  That tree is passed back to the
+node, which passes it to all of its callers.</p>
+<p>We keep a stack of active states.  The discipline is depth-first, so
+that we generate a complete tree as quickly as possible.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.data</span> <span class="kn">import</span> <span class="n">ex</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.grammar</span> <span class="kn">import</span> <span class="n">Grammar</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.parser</span> <span class="kn">import</span> <span class="n">Parser</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">selkie.gen</span> <span class="kn">import</span> <span class="n">Generator</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">Grammar</span><span class="p">(</span><span class="n">ex</span><span class="p">(</span><span class="s1">&#39;tinygen.g&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Parser</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts</span> <span class="o">=</span> <span class="n">p</span><span class="p">(</span><span class="s1">&#39;fido barks&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">ts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">0   (s              : [subj fido; type bark]</span>
+<span class="go">1      (np             : fido</span>
+<span class="go">2         (name fido))    : fido</span>
+<span class="go">3      (vp             : [type bark]</span>
+<span class="go">4         (vi barks)))    : [type bark]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sem</span> <span class="o">=</span> <span class="n">ts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sem</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gen</span> <span class="o">=</span> <span class="n">Generator</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">iter</span> <span class="o">=</span> <span class="n">gen</span><span class="p">(</span><span class="n">sem</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="nb">iter</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">t</span>
+<span class="go">0   (s              : [subj fido; type bark]</span>
+<span class="go">1      (np             : fido</span>
+<span class="go">2         (name fido))    : fido</span>
+<span class="go">3      (vp             : 6.0</span>
+<span class="go">4         (vi barks)))    : [type bark]</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gdev.html" class="btn btn-neutral float-left" title="selkie.gdev — Grammar development tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="parser.html" class="btn btn-neutral float-right" title="selkie.parser — Constituent parser" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steven Abney.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
