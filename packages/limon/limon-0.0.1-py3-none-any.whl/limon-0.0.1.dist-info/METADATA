@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: limon
+Version: 0.0.1
+Summary: Client of limon.sh monitoring system
+Author-email: Andrei Kliatsko <andrey.daraschenka@gmail.com>
+Project-URL: Homepage, https://github.com/limon-sh/python-client
+Requires-Python: >=2.7
+License-File: LICENSE
+
