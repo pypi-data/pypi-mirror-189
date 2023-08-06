@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: acltoolkit-ad
+Version: 0.2.2
+Summary: UNKNOWN
+Home-page: https://github.com/zblurx/acltoolkit
+Author: zblurx
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: asn1crypto (==1.5.1)
+Requires-Dist: dnspython (==2.3.0)
+Requires-Dist: impacket (==0.10.0)
+Requires-Dist: ldap3 (==2.9.1)
+Requires-Dist: pyasn1 (==0.4.8)
+Requires-Dist: pycryptodome (==3.17)
+
+README.md
+
