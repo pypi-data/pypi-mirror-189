@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: WhatsaPy
+Version: 0.0.1
+Summary: Unofficial python Wrapper for Whatsapp Businness API.
+Home-page: https://github.com/rahulps100/WhatsAppPy
+Author: Rahul P S
+Author-email: rahulps1000@gmail.com
+License: GPLv3
+Keywords: whatsapp api python businnes cloud unoffcial
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+
+# WhatsAppPy
+
+Unofficial python Wrapper for Whatsapp Businness API.
+
+## PROJECT UNDER DEVELOPEMENT
+
+This project is inspired from [heyoo](https://github.com/Neurotech-HQ/heyoo).
+
+My mission is to implement a library similar to [Pyrogram](https://github.com/pyrogram/pyrogram) with all methods available in [Whatsapp Businness API Documentaion](https://developers.facebook.com/docs/whatsapp/cloud-api/get-started).
+
+If you want to contribute to this project please conatct me via
+[Telegram](https://telegram.dog/MrUnknownProgrammer).

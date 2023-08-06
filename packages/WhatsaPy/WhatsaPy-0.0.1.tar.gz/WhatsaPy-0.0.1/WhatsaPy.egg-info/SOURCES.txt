@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.py
+WhatsaPy/__init__.py
+WhatsaPy/route.py
+WhatsaPy/whatsapp.py
+WhatsaPy.egg-info/PKG-INFO
+WhatsaPy.egg-info/SOURCES.txt
+WhatsaPy.egg-info/dependency_links.txt
+WhatsaPy.egg-info/not-zip-safe
+WhatsaPy.egg-info/requires.txt
+WhatsaPy.egg-info/top_level.txt
