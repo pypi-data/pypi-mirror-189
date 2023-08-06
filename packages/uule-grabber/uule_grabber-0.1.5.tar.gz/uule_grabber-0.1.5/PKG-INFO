@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: uule_grabber
+Version: 0.1.5
+Summary: Generates UULE codes for Google Search
+Home-page: https://github.com/ogun/uule_grabber
+Download-URL: https://github.com/ogun/uule_grabber/archive/v0.1.5.tar.gz
+Author: Kemal Ogun Isik
+Author-email: ogunisik@gmail.com
+License-File: LICENSE
+
+Generates UULE codes for Google Search
