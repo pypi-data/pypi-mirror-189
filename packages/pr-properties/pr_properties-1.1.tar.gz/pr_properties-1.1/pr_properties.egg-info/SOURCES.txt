@@ -1,0 +1,8 @@
+README.md
+license.txt
+setup.py
+pr_properties.egg-info/PKG-INFO
+pr_properties.egg-info/SOURCES.txt
+pr_properties.egg-info/dependency_links.txt
+pr_properties.egg-info/top_level.txt
+properties_utils/property_utils.py
