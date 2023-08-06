@@ -1,0 +1,10 @@
+
+[packaging]
+twine
+
+[testing]
+fakeredis
+flake8
+mypy
+pytest
+pytest-cov
