@@ -1,0 +1,2 @@
+[console_scripts]
+pysweep = pysweep.__main__:main
