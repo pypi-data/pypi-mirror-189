@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: BoatBuddy
+Version: 0.0.1
+Summary: A suite of tools to help collecting NMEA0183 and other marine metrics in a digital logbook format
+Project-URL: Homepage, https://github.com/joezeitouny/BoatBuddy
+Project-URL: Bug Tracker, https://github.com/joezeitouny/BoatBuddy/issues
+Author-email: Joe Zeitouny <joezeitouny@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: events~=0.4
+Requires-Dist: geopy~=2.3.0
+Requires-Dist: gpxpy~=1.5.0
+Requires-Dist: latloncalc~=1.5.3
+Requires-Dist: openpyxl~=3.0.10
+Requires-Dist: pymodbustcp~=0.2.0
+Description-Content-Type: text/markdown
+
+# BoatBuddy
+A suite of tools to help collecting NMEA0183 and other marine metrics in a digital logbook format.
