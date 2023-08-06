@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: scaled
+Version: 0.1
+Summary: Large Scale Distribution Toolkit
+Author-email: Zhuo Yin <zhuoyin@gmail.com>
+License: GPL Version 3
+Project-URL: Home, https://github.com/yzard/scaled
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Scaled
+This project is aiming the target that provides simple and efficient and reliable way for distributing computing 
+framework, centralized scheduler and stable protocol when client and worker talking to scheduler
+
+# Introduction
+The goal for this project should be as simple as possible
+- It built on top of zmq
+- it has ready python version of Client, Scheduler, Worker
+- I will provide golang or Rust version of Scheduler, the goal for the Scheduler should be completely computer language 
+  agnostic, which means they follow the same protocol
+- Scheduler might support function based computing tree in the future
