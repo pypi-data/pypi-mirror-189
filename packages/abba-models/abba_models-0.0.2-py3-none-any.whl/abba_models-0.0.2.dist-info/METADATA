@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: abba-models
+Version: 0.0.2
+Summary: abba model
+Home-page: UNKNOWN
+Author: ABBA
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: cffi (==1.15.1)
+Requires-Dist: cryptography (==39.0.0)
+Requires-Dist: getmac (==0.9.1)
+Requires-Dist: pycparser (==2.21)
+
+UNKNOWN
+
+
