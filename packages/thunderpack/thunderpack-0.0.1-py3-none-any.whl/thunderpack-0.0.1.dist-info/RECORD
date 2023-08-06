@@ -1,0 +1,12 @@
+thunderpack/__init__.py,sha256=tC_vvArQMh6_-3ecQ9ej3R-US0dGndeVfCVIGZR7Ta4,275
+thunderpack/common.py,sha256=r8E_z7Ii9C5HWF2D0Mc3xnMUZ1IwPtoNC7BlOaDwP8Y,3098
+thunderpack/compression.py,sha256=bzZ917o5liSKkmxZsHBdXSpZz8vzSCGOgYLqM03_X5Y,4005
+thunderpack/formats.py,sha256=T-3OBL7_gdRog4FfpN7NvOO8AyFtgOwDN7u_ZBtDP4Y,9755
+thunderpack/supported.py,sha256=p20jTLFu8urpK7EVcPTiV0OPVmU8_Jx-UW636ZcjnZ0,2426
+thunderpack/thunder.py,sha256=pVSvRJ2j7WQDsxp7yipp5Y18qsEB_A7jNv2v6qP0fME,5422
+thunderpack/torch.py,sha256=hdoqdQb-Y3HqKeEKSOgTXvsHpm3wj05HaI-bQuxijgU,918
+thunderpack-0.0.1.dist-info/LICENSE,sha256=dfeVyEWXZzDK3staibnhT8QQLKsdL_uhek_NV8UUbEY,1068
+thunderpack-0.0.1.dist-info/METADATA,sha256=rmo0GpXslUbk_DtuDN2A2i3jhTPPfwv7byCgJHRe2t0,2469
+thunderpack-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+thunderpack-0.0.1.dist-info/top_level.txt,sha256=b8xZxMY4LYzuVLNYts-cQlW1LkefRu2nIDGPk84QXFc,12
+thunderpack-0.0.1.dist-info/RECORD,,
