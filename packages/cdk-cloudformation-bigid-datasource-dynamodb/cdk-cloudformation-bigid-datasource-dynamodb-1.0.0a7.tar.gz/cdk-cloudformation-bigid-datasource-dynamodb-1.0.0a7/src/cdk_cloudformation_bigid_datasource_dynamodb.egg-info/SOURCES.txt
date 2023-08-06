@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cdk_cloudformation_bigid_datasource_dynamodb/__init__.py
+src/cdk_cloudformation_bigid_datasource_dynamodb/py.typed
+src/cdk_cloudformation_bigid_datasource_dynamodb.egg-info/PKG-INFO
+src/cdk_cloudformation_bigid_datasource_dynamodb.egg-info/SOURCES.txt
+src/cdk_cloudformation_bigid_datasource_dynamodb.egg-info/dependency_links.txt
+src/cdk_cloudformation_bigid_datasource_dynamodb.egg-info/requires.txt
+src/cdk_cloudformation_bigid_datasource_dynamodb.egg-info/top_level.txt
+src/cdk_cloudformation_bigid_datasource_dynamodb/_jsii/__init__.py
+src/cdk_cloudformation_bigid_datasource_dynamodb/_jsii/bigid-datasource-dynamodb@1.0.0-alpha.7.jsii.tgz
