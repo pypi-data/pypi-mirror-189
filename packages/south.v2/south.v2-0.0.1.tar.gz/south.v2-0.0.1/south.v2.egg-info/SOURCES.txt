@@ -1,0 +1,5 @@
+setup.py
+south.v2.egg-info/PKG-INFO
+south.v2.egg-info/SOURCES.txt
+south.v2.egg-info/dependency_links.txt
+south.v2.egg-info/top_level.txt
