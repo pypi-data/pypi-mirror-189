@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+openacli/__init__.py
+openacli/openacli.py
+openacli.egg-info/PKG-INFO
+openacli.egg-info/SOURCES.txt
+openacli.egg-info/dependency_links.txt
+openacli.egg-info/entry_points.txt
+openacli.egg-info/not-zip-safe
+openacli.egg-info/requires.txt
+openacli.egg-info/top_level.txt

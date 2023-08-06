@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: openacli
+Version: 0.1
+Summary: OpenAI CLI Interface
+Home-page: https://github.com/cdrew3/openacli
+Author: Chris Drew
+Author-email: chris.drew.cd@gmail.com
+License: MIT
+License-File: LICENSE
