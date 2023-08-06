@@ -1,0 +1,236 @@
+<h1>Italian Tweets Analyzer</h1>
+
+Italian tweets analyzer is a tool created for the thesis work at the University of Bari “Aldo Moro” of the course 
+“Methods for the information retrieval”, that can perform analysis on Italian tweets and it provides several features. 
+This project is an upgraded version of the tool: Hate-Tweet-Map. The main features of the program are described below. 
+
+<h2>Tweets extraction</h2>
+
+This program allows to define a query with the information you want to request from Twitter, then the request is sent to 
+Twitter and the information obtained is saved in the database (MongoDB). To modify the request you want to send to 
+Twitter, you need to edit the configuration file called “search_tweets.config”. This file contains some fields that 
+require values, while others are optional. The mandatory fields are (at least one of them must be filled): 
+<ul>
+<li>Keyword: keyword on which the search for tweets will be based. In fact, those tweets that contain the indicated keyword 
+will be found. You can set multiple keywords and use logical operators like AND and OR. 
+For example: “Joe Biden”, “Biden OR Trump”, “(Biden OR Trump) whitehouse” 
+(the last query means “(Biden OR Trump) AND whitehouse”).</li>
+</ul>
+<ul>
+<li>User: In this field you can specify the user username or user’s ID. It is possible to insert multiple users. 
+If this field and the keyword field are set, then will be find that contains the keyword specified from the user 
+specified.</li>
+</ul>
+<ul>
+<li>User_mentioned: in this field you can enter the username of a specific user to search for tweets that mention him.</li>
+</ul>
+<ul>
+<li>Hashtag: in this field you can enter a specific hashtag for search tweets that contain it.</li>
+</ul>
+The optional fields are:
+<ul>
+<li>Lang: this field indicates the language of the tweets that you want to retrieve. The values that this field accepts 
+are those reported by ISO 639-1 code. An example values: it, en, pt, es.</li>
+</ul>
+<ul>
+<li>Context_annotations: this field indicates to twitter to include or not the context annotation for the tweet that 
+have it. If this field is set to True, the field n_result will be set automatically to 100. 
+Possible values are True/False.</li>
+</ul>
+<ul>
+<li>N_results: this field indicates to twitter to how many tweets the response should contain. Twitter allows to search 
+for minimum 10 tweets to maximum 500 tweets for request. So if the value entered in this field is less than 10, this 
+field will be automatically set to 10; if the value entered is greater than 500, more requests will be send to Twitter.
+Possible values: any int number.</li>
+</ul>
+<ul>
+<li>All_tweets: this fields indicates to twitter to find all possible tweets. If this field is True, n_result will be set
+to 500. Possible values: True/False.
+</li>
+</ul>
+<ul>
+<li>Time: this field allows to search tweets in a specific range of time. This field has two sub-fields: start_time and 
+end_time. The values in this fields must be in the ISO 8601/RFC 3339 format, so like: YYYY-MM-DDTHH:mm:ss+Z. 
+The configurations that can be made are: 
+</li>
+<ul>
+<li>Only start_time is specified: end_time will be assumed to be current time (-30 sec).</li>
+</ul>
+<ul>
+<li>Only end_time is specified: start_time will be assumed 30 days before the end_time specified.</li>
+</ul>
+<ul>
+<li>Both are specified: the tweets in the range time will be found.</li>
+</ul>
+<ul>
+<li>None: by default, a request will return tweets from up to 30 days ago.</li>
+</ul>
+</ul>
+<ul>
+<li>Geo: in this section is possible to set the geographical parameters, in this way it is possible to filter the tweets 
+based on their geographical origin. This field has several sub-fields and only one of them must be set:</li> 
+<ul>
+<li>Place: matches tweets tagged with the specified location on twitter place ID. Multi-word place names (“New York City”,
+“Palo Alto”) should be enclosed in quotes. Possible values: any name of city, enclosed in quotes if the place name 
+consists of several words.</li>
+</ul>
+<ul>
+<li>Place_country: attaches tweets where the country code associated with a tagged place/location matches the given ISO 
+alpha-2 character code. Possible values: any name of country in ISO_3166-1_alpha-2 format.</li>
+</ul>
+<ul>
+<li>Bounding_box: matches against the place.geo.coordinates object of the tweet when present, and in Twitter against a 
+place geo polygon, where the place polygon is fully contained within the defined region. The coordinate values are 
+indicated in the following fields: west_long, south_lat, east_long, north_lat.</li>
+</ul>
+<ul>
+<li>Point_radius: matches again the place.geo.coordinates object of the tweet when present, and in twitter, against a 
+place geo polygon, where the place polygon is fully contained within the defined region. The coordinate values are 
+indicated in the following fields: longitude, latitude, radius.</li>
+</ul>
+</ul>
+<ul>
+<li>Filter_retweet: this field indicates to Twitter to include or not the retweet in the response. If it is True, Twitter
+response could contain also retweets; if false not. Possible values: True/False.</li>
+</ul>
+<ul>
+<li>Filter_images: this field indicates to find tweets that contain an image URL. For example, entering the hashtag 
+#covid in the configuration file and setting True to this field, you will get all tweets with that particular hashtag 
+that contain an image. Possible values are: True/False.</li>
+</ul>
+
+In the configuration file you can also edit the name of the database where the tweets will be saved.
+
+<h2>Find information about Twitter users</h2>
+
+The program explores the collection of tweets in the database and goes to find information on users who have published 
+these posts. In the configuration file: “search_users.config”, you can edit the fields that indicate where to get the 
+tweets and where to go to save the information of the users who have published those tweets.
+
+<h2>Process Tweets</h2>
+
+This program allows you to perform different types of analysis on the tweets collected. The possible analyses are:  
+<ul>
+<li>Entity Linker: uses the TagMe service to find entities in the text of the tweet and to connect these with the 
+respective Wikipedia page.</li> 
+</ul>
+<ul>
+<li>Geo: uses the geographic information in the tweet to find the coordinates of the place where the tweets have been 
+posted. This process uses Open Street Map service. (This operation could be time expensive cause OSM allows to send only
+one request per second)</li>
+</ul>
+<ul>
+<li>Natural Language Processing: uses spacy model to lemmatize the text of the tweet. In addition
+save the POS and the Morphological information and the entities found by spacy in the text.</li>
+</ul>
+<ul>
+<li>Sentiment Analysis: uses three different services: sent-it, feel-it and hate_speech_it to perform sentiment analysis 
+of the tweets collected in the database.</li>
+</ul>
+<ul>
+<li>Genre classification: posts are categorized according to their textual content. The model used for the classification
+is xml-roberta.</li>
+</ul>
+<ul>
+<li>Image to text: the semantic of tweet image is written and saved within the database. The model used for image 
+captioning is vit-gpt2-image-captioning.</li> 
+</ul>
+From the configuration file called “process_tweets.config” you can indicate 
+which analysis perform on tweets. In the configuration file there are the following fields:
+<ul>
+<li>TagMe</li>
+<ul>
+<li>Enabled: enable or disable this phase. Possible values are True/False.</li>
+</ul>
+<ul>
+<li>Token: the token obtained from TagMe to send the requests. Possible values: a valid TagMe token.</li>
+</ul>
+<ul>
+<li>Is_tweet: indicate to TagMe service if the text given is a tweet or not. Possible values are True/False.</li> 
+</ul>
+<ul>
+<li>Rho_value: estimates the confidence in the annotation. The threshold should be chosen in the interval [0,1].
+A reasonable threshold is between 0.1 and 0.3. Possible values: any number between 0 and 1.</li>
+</ul>
+</ul>
+<ul>
+<li>Sentiment_analyze</li>
+<ul>
+<li>Sent_it: enable or disable sent-it phase (true/false).</li>
+<li>Feel_it: enable or disable feel-it phase (true/false).</li>
+<li>Hate_speech_it: enable or disable hate_speech_it phase (true/false).</li>
+</ul>
+</ul>
+<ul>
+<li>Geocoding: this section enables or disables the geocoding phase using Open Street Map service. 
+Possible values are tru/false.</li>
+</ul>
+<ul>
+<li>Genre_classification</li>
+<ul>
+<li>Roberta: enable or disable the classification of tweets with Roberta (true/false).</li>
+</ul>
+</ul>
+<ul>
+<li>Image_to_text</li>
+<ul>
+<li>Image_captioning: enable or disable the image captioning with the vit-gpt2-image-captioning</li>
+</ul>
+</ul>
+<ul>
+<li>Analyze_all_tweets: there are two mode to select the tweets to analyze: all the tweets in the collection or only the 
+tweets that have not yet been passed to the Natural Language Phase. To choose the first mode just set the 
+analyze_all_tweets to True, otherwise to False.</li>
+</ul>
+<h2>Manage Tweets</h2>
+
+The program allows you to: 
+<ul>
+<li>extract tweets from the database and save them on .json or .csv file;</li> 
+<li>delete some tweets.</li>
+</ul>
+The criteria to select the tweets to extract/delete are defined in the manage_tweets.config file. Is possible to modify 
+that file to set the criteria. The configuration file has the following fields: 
+<ul>
+<li>mode: the mode indicates what the script have to do: extract and save the tweets in a file or delete them. 
+Possible values are: extract/delete. This field is mandatory to set.</li>
+</ul>
+<ul>
+<li>Criteria:sentiment: by setting this field it’s possible to retrieve tweets with a specific sentiment, in particular 
+choosing between neutral, positive or negative sentiment. Possible values are: negative/positive/neutral.</li>
+</ul>
+<ul>
+<li>Keywords: setting this field it’s possible to retrieve tweets that contains specific words.</li>
+</ul>
+<ul>
+<li>Words: a list of words to search separated by a comma. Example: sun,sea,island</li>
+<li>Path: the path to a .txt file that contains the words to search. The .txt file must contain each word to search in a 
+different line and just one word in a line. Possible values: a valid path to a .txt file.</li>
+</ul>
+</ul>
+<ul>
+<li>Postag: by setting this field it’s possible to retrieve tweets that contains a word with a specific POS tag. 
+Possible values: any valid POS value.</li>
+<ul>
+<li>for generic understanding:</li>
+<li>Italian spacy’s POS values:</li>
+<li>English spacy’s POS values:</li>
+</ul>
+</ul>
+<ul>
+<li>Morph: by setting this field it’s possible to retrieve tweets that contains a word with a specific morphology. 
+Possible values are any valid morph value.</li>
+<ul>
+<li>for generic understanding:</li>
+<li>Italian spacy’s POS values:</li>
+<li>English spacy’s POS values:</li>
+</ul>
+</ul>
+<ul>
+<li>Raw_query: by setting this field it’s possible to write an own query. The query must be a mongodb query and must take
+in account the fields of the tweet saved in the collection. Possible values: any valid mongodb query.</li>
+</ul>
+<ul>
+<li>Logical_operator: if more than one criteria are set, it’s necessary to define how logically connect the crierias are. 
+Possible values: or/and</li>
+</ul>
