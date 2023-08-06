@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: markdown-sitegen
+Version: 0.0.1
+Summary: Markdown site generator
+Home-page: UNKNOWN
+Author: Steve G
+Author-email: steve@pagekeytech.com
+License: UNKNOWN
+Project-URL: Source Code, https://github.com/pagekeytech/markdown-sitegen
+Platform: UNKNOWN
+Requires-Dist: jinja2
+Requires-Dist: markdown
+Requires-Dist: python-frontmatter
+
+UNKNOWN
+
+
