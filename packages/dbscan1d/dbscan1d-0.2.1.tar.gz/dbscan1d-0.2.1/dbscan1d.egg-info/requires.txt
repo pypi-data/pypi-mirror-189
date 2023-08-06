@@ -1,0 +1,9 @@
+numpy>=1.13.0
+
+[dev]
+dbscan1d[test]
+
+[test]
+pytest
+pre-commit
+scikit-learn
