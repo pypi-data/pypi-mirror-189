@@ -1,0 +1,3 @@
+[console_scripts]
+greyScale = greyscale_pack.greyscale:main
+
