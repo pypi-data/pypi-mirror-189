@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: stopPhishing
+Version: 0.0.1
+Summary: A simple python library to check if a url is a phishing link or not.
+Author-email: kings <info@kings.com>
+License: GPL-3.0-only
+Project-URL: Homepage, https://github.com/Burn-One-Studios/stop-discord-phishingPy
+Project-URL: Discord, https://discord.gg/yKyN9Q3Vmy
+Project-URL: Donate, https://ko-fi.com/kingzscripts
+Keywords: Phishing Detection,Anti Phishing,discord,discordpy,disnake,pycord,nextcord
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# stop-discord-phishingPy
+A pipy Package that has useful utilitis to stop the massive phishing link spam on Discord
