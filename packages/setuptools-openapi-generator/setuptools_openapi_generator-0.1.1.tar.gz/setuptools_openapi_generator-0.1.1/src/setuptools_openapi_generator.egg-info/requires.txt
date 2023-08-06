@@ -1,0 +1,15 @@
+openapi-python-client
+
+[:python_version < "3.11"]
+tomli>=1.0.0
+
+[dev]
+black
+mypy
+flake8-isort
+Flake8-pyproject
+pipdeptree
+pre-commit
+pytest-cov
+tox-direct
+types-mock

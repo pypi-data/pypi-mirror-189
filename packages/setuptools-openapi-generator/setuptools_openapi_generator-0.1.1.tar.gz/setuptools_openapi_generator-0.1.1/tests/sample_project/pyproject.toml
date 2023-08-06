@@ -1,0 +1,19 @@
+[build-system]
+requires = [
+    "setuptools>=64",
+    "setuptools_scm[toml]>=6.2",
+    "wheel",
+    "setuptools_openapi_generator @ file:../..",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sample_project"
+dynamic = ["version"]
+
+[tool.setuptools_openapi_generator]
+basedir = "src/sample_project/apis/"
+sources = [
+    "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/link-example.json",
+    "api_definitions/petstore.json",
+]
