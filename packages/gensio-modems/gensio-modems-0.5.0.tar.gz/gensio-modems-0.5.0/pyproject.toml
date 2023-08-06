@@ -1,0 +1,29 @@
+[build-system]
+requires = [
+    "setuptools>=61",
+    "setuptools_scm[toml]>=6.2",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gensio-modems"
+description = "python-based ham-radio modem utilities (ax25, kiss, vara) built using gensio"
+authors = [
+    {name = "Masen Furer KF7HVM", email = "kf7hvm@0x26.net"},
+]
+dependencies = [
+    "gensio-binary >= 2.5.5",
+]
+readme = "README.md"
+classifiers = [
+]
+keywords=[
+    'Ham Radio', 'KISS', "AX.25"
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/masenf/gensio-modems"
+
+[tool.setuptools_scm]
