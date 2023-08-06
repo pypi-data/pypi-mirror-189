@@ -1,0 +1,9 @@
+txl_remote_kernels/__init__.py,sha256=z0zCHFTcKSR0tJ6h5qrpNmRVP21QIPP8N0p7quCnnm0,23
+txl_remote_kernels/components.py,sha256=qFeMPQiQOtLtAa2XHez-Kvoukf-PDuCGDADK0gklo6A,1038
+txl_remote_kernels/driver.py,sha256=Vl611mzw-v9g8UMPKqhbfOl8DnE84KLnUou-9iYDpcE,3579
+txl_remote_kernels/message.py,sha256=LFnWYE54DwVwTGZdzOvLnSwqQNm6GoCGSEXbchm_u80,916
+txl_remote_kernels-0.1.10.dist-info/METADATA,sha256=erul7oABT3xpK2tJBLbHt1y1qJXzLiG7pYpS1DJHuEs,853
+txl_remote_kernels-0.1.10.dist-info/WHEEL,sha256=hKi7AIIx6qfnsRbr087vpeJnrVUuDokDHZacPPMW7-Y,87
+txl_remote_kernels-0.1.10.dist-info/entry_points.txt,sha256=f1f766bzsQvZfD1q55LBIfzgvy0AFi3Q2-y-33IWWzs,67
+txl_remote_kernels-0.1.10.dist-info/licenses/LICENSE.txt,sha256=su0IgzSHZ9tMFeCQ_IaCji5Q4VrZSOqDsEFi7lPduc8,1106
+txl_remote_kernels-0.1.10.dist-info/RECORD,,
