@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: TestSimpleComplexCalculator
+Version: 0.0.1
+Summary: TestSimpleComplexCalculator est un package     permmetant de faire des tests sur les principe de packaging en Python
+Author: Perrichet Théotime
+License: GNU GPLv3
+Requires-Python: >=3.4
+
