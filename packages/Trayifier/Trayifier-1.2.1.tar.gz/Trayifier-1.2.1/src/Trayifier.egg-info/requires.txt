@@ -1,0 +1,4 @@
+pywin32
+PySimpleGUIWx
+icoextract
+tomli

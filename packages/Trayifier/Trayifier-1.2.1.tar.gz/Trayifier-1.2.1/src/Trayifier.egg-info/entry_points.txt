@@ -1,0 +1,5 @@
+[console_scripts]
+trayifydbg = trayifier.__main__:main
+
+[gui_scripts]
+trayify = trayifier.__main__:main
