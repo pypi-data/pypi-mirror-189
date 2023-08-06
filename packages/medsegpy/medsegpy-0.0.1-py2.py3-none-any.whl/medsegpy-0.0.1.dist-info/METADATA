@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: medsegpy
+Version: 0.0.1
+Summary: MedSegPy is a framework for research on medical image segmentation.
+Home-page: https://github.com/ad12/MedSegPy
+Author: Arjun Desai
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: Pillow
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: mock
+Requires-Dist: fvcore
+Requires-Dist: pydot
+Requires-Dist: pandas
+Requires-Dist: medpy
+Requires-Dist: numpy
+Requires-Dist: h5py
+Requires-Dist: natsort
+Requires-Dist: scipy
+Requires-Dist: scikit-image
+Requires-Dist: simpleitk
+Requires-Dist: configparser
+Requires-Dist: resnet
+Requires-Dist: more-itertools
+Provides-Extra: all
+Requires-Dist: shapely ; extra == 'all'
+Requires-Dist: psutil ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: flake8 (==4.0.1) ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: black (==22.8.0) ; extra == 'dev'
+Requires-Dist: flake8-bugbear ; extra == 'dev'
+Requires-Dist: flake8-comprehensions ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Requires-Dist: nbsphinx ; extra == 'dev'
+Requires-Dist: recommonmark ; extra == 'dev'
+
+UNKNOWN
+
+
