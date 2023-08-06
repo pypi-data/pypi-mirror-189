@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kaspian"
+version = "0.0.1"
+authors = [
+  { name="Kaspian Team", email="dev@kaspian.io" },
+]
+description = "Python SDK for Kaspian"
+readme = "README.md"
+requires-python = ">=3.5"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Kaspian-Inc/kaspian"
+"Bug Tracker" = "https://github.com/Kaspian-Inc/kaspian/issues"
