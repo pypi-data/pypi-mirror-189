@@ -1,0 +1,3 @@
+pip==23.0
+hatch==1.6.3
+pip-deepfreeze==1.0.0
