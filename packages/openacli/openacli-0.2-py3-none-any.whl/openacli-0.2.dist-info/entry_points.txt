@@ -1,0 +1,2 @@
+[console_scripts]
+oacli = openacli.openacli:main
