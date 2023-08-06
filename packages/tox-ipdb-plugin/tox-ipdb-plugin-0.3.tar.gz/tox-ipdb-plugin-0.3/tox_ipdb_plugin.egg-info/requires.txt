@@ -1,0 +1,9 @@
+tox>=3.0
+
+[quality]
+bandit
+doc8
+flake8
+isort
+mypy
+pydocstyle
