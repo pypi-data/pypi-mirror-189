@@ -1,0 +1,535 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Probability Distributions &#8212; repliclust 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'distributions';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Cluster Overlap Control" href="overlap.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">repliclust 0.0.1 documentation</p>
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="install.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="user_guide.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="reference.html">
+                        Reference
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="install.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="user_guide.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="reference.html">
+                        Reference
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Section navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">
+    Section Navigation
+  </p>
+  <div class="bd-toc-item navbar-nav">
+    <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="base.html">Core Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maxmin.html">Max-Min Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overlap.html">Cluster Overlap Control</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Probability Distributions</a></li>
+</ul>
+
+  </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <section id="probability-distributions">
+<h1>Probability Distributions<a class="headerlink" href="#probability-distributions" title="Permalink to this heading">#</a></h1>
+<section id="module-repliclust.distributions">
+<span id="repliclust-distributions"></span><h2>repliclust.distributions<a class="headerlink" href="#module-repliclust.distributions" title="Permalink to this heading">#</a></h2>
+<p>This module implements probability distributions for individual
+clusters, as well as distribution mixes that assign probability
+distributions to the clusters in a mixture model.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="repliclust.distributions.DistributionFromNumPy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">repliclust.distributions.</span></span><span class="sig-name descname"><span class="pre">DistributionFromNumPy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repliclust.distributions.DistributionFromNumPy" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#repliclust.base.SingleClusterDistribution" title="repliclust.base.SingleClusterDistribution"><code class="xref py py-class docutils literal notranslate"><span class="pre">SingleClusterDistribution</span></code></a></p>
+<p>Allows arbitrary method from Generator class in numpy.random.
+The method must take the argument ‘size’ for selecting the number
+of samples.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="repliclust.distributions.DistributionFromPDF">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">repliclust.distributions.</span></span><span class="sig-name descname"><span class="pre">DistributionFromPDF</span></span><a class="headerlink" href="#repliclust.distributions.DistributionFromPDF" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#repliclust.base.SingleClusterDistribution" title="repliclust.base.SingleClusterDistribution"><code class="xref py py-class docutils literal notranslate"><span class="pre">SingleClusterDistribution</span></code></a></p>
+<p>Sample from arbitrary probability density function.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="repliclust.distributions.Exponential">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">repliclust.distributions.</span></span><span class="sig-name descname"><span class="pre">Exponential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repliclust.distributions.Exponential" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#repliclust.base.SingleClusterDistribution" title="repliclust.base.SingleClusterDistribution"><code class="xref py py-class docutils literal notranslate"><span class="pre">SingleClusterDistribution</span></code></a></p>
+<p>Draw exponentially distributed data for a single cluster.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="repliclust.distributions.FixedProportionMix">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">repliclust.distributions.</span></span><span class="sig-name descname"><span class="pre">FixedProportionMix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distributions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[('normal',</span> <span class="pre">1.0,</span> <span class="pre">{})]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repliclust.distributions.FixedProportionMix" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#repliclust.base.DistributionMix" title="repliclust.base.DistributionMix"><code class="xref py py-class docutils literal notranslate"><span class="pre">DistributionMix</span></code></a></p>
+<p>Assign probability distributions to clusters according to fixed
+proportions. For example, you may choose that 50% of clusters have
+a multivariate normal distribution and 50% have an exponential
+distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>distributions</strong> (<em>list of tuple</em>) – List of distributions to mix. Each distribution appears as
+a tuple (name, proportion, params), where name is a string
+giving the distribution name; proportion is a number giving
+the desired proportion of clusters with the named
+distribution, and params is a dict whose (key, value) pairs
+are the names and values of distributional parameters.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">assign_distributions(self,</span> <span class="pre">n_clusters):</span></span></dt>
+<dd><p>Assign probability distributions to clusters.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="repliclust.distributions.FixedProportionMix._distributions">
+<span class="sig-name descname"><span class="pre">_distributions</span></span><a class="headerlink" href="#repliclust.distributions.FixedProportionMix._distributions" title="Permalink to this definition">#</a></dt>
+<dd><p>List of probability distributions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="repliclust.distributions.FixedProportionMix._proportions">
+<span class="sig-name descname"><span class="pre">_proportions</span></span><a class="headerlink" href="#repliclust.distributions.FixedProportionMix._proportions" title="Permalink to this definition">#</a></dt>
+<dd><p>Desired proportion of clusters having the corresponding
+distribution. The i-th entry corresponds to the i-th element
+in _distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="repliclust.distributions.FixedProportionMix.assign_distributions">
+<span class="sig-name descname"><span class="pre">assign_distributions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_clusters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repliclust.distributions.FixedProportionMix.assign_distributions" title="Permalink to this definition">#</a></dt>
+<dd><p>Assign probability distributions to all the clusters of a
+probabilistic mixture model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n_clusters</strong> (<em>int</em>) – The number of clusters for which to assign probability
+distributions.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>distributions</strong> – Probability distributions for the clusters of a
+probabilistic mixture model.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of <code class="xref py py-class docutils literal notranslate"><span class="pre">SingleClusterDistribution</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="repliclust.distributions.Normal">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">repliclust.distributions.</span></span><span class="sig-name descname"><span class="pre">Normal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repliclust.distributions.Normal" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#repliclust.base.SingleClusterDistribution" title="repliclust.base.SingleClusterDistribution"><code class="xref py py-class docutils literal notranslate"><span class="pre">SingleClusterDistribution</span></code></a></p>
+<p>Draw multivariate normal data for a single cluster.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="repliclust.distributions.StandardT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">repliclust.distributions.</span></span><span class="sig-name descname"><span class="pre">StandardT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repliclust.distributions.StandardT" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#repliclust.base.SingleClusterDistribution" title="repliclust.base.SingleClusterDistribution"><code class="xref py py-class docutils literal notranslate"><span class="pre">SingleClusterDistribution</span></code></a></p>
+<p>Draw t-distributed data for a single cluster.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="repliclust.distributions.parse_distribution">
+<span class="sig-prename descclassname"><span class="pre">repliclust.distributions.</span></span><span class="sig-name descname"><span class="pre">parse_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distr_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#repliclust.distributions.parse_distribution" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the <code class="xref py py-class docutils literal notranslate"><span class="pre">SingleClusterDistribution</span></code> object
+corresponding to the probability distribution with name
+<cite>distr_name</cite>.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="overlap.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Cluster Overlap Control</p>
+      </div>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-repliclust.distributions">
+   repliclust.distributions
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+<div class="tocsection sourcelink">
+    <a href="_sources/distributions.rst.txt">
+        <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+</div>
+
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2022, repliclust.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>
