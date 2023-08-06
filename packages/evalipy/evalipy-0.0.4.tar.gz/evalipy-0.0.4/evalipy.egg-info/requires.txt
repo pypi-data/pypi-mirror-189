@@ -1,0 +1,14 @@
+joblib
+matplotlib
+numpy
+pandas
+scikit-learn
+scipy
+seaborn
+
+[dev]
+black
+bumpver
+isort
+pip-tools
+pytest

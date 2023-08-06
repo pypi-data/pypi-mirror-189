@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.MD
+pyproject.toml
+evalipy/__init__.py
+evalipy/__main__.py
+evalipy/comparator.py
+evalipy/metrics.py
+evalipy/model.py
+evalipy/report.py
+evalipy.egg-info/PKG-INFO
+evalipy.egg-info/SOURCES.txt
+evalipy.egg-info/dependency_links.txt
+evalipy.egg-info/entry_points.txt
+evalipy.egg-info/requires.txt
+evalipy.egg-info/top_level.txt
