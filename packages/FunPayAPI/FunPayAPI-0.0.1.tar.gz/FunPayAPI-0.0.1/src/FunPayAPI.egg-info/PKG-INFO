@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: FunPayAPI
+Version: 0.0.1
+Summary: Простой, но эффективный пакет для создания скриптов для FunPay.
+Author-email: Woopertail <woopertail@gmail.com>
+Project-URL: Homepage, https://github.com/woopertail/FunPayAPI
+Project-URL: Bug Tracker, https://github.com/woopertail/FunPayAPI/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# todo
