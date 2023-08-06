@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+discordreq99/__init__.py
+discordreq99/discord.py
+discordreq99.egg-info/PKG-INFO
+discordreq99.egg-info/SOURCES.txt
+discordreq99.egg-info/dependency_links.txt
+discordreq99.egg-info/top_level.txt
