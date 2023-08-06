@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: kamaqi
+Version: 0.1.0
+Summary: A comand line app
+License: MIT
+Author: Mitchell Mirano
+Author-email: mitchellmirano25@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: Jinja2 (>=3.1.2,<4.0.0)
+Requires-Dist: typer[all] (>=0.7.0,<0.8.0)
+Description-Content-Type: text/markdown
+
+A comand line app to FastAPI inspired in Artisan from Laravel and manage.py from Django
