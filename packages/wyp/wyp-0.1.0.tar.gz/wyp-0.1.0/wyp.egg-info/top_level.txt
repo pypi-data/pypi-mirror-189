@@ -1,0 +1,6 @@
+dist
+new
+node_modules
+src
+static
+wyp
