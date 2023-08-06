@@ -1,0 +1,3 @@
+[console_scripts]
+gum=ray_chunkit_chung_gum_gum_pistol.main:app
+
