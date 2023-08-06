@@ -1,0 +1,141 @@
+Metadata-Version: 2.1
+Name: vecgl
+Version: 0.0.5
+Summary: VecGL is a 3D rendering engine with vector output
+Author-email: Frederik Gossen <frederik.gossen@gmail.com>
+License: Copyright 2022 Frederik Gossen
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of 
+        this software and associated documentation files (the "Software"), to deal in 
+        the Software without restriction, including without limitation the rights to 
+        use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies 
+        of the Software, and to permit persons to whom the Software is furnished to do 
+        so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all 
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+        SOFTWARE.
+        
+        
+Keywords: rendering,rendering engine,3D engine,vector graphics,graphics library,3D
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Multimedia :: Graphics :: 3D Rendering
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# VecGL
+
+[![CI](https://github.com/frgossen/vecgl/actions/workflows/ci.yml/badge.svg)](https://github.com/frgossen/vecgl/actions/workflows/ci.yml)
+
+__*VecGL* is a 3D rendering engine with vector output.__
+It is inspired by OpenGL with the key difference that the rendering result is a
+set of points, lines, and triangles - not a pixelated image. These geometric
+primitives can be used to generate vector graphics or to drive
+[pen plotters](https://www.generativehut.com/post/axidraw).
+
+## Getting started
+
+The VecGL package is available through `pip`.
+
+```
+$ python3 -m pip install vecgl
+```
+
+Let's create and render a simple model.
+Here's the complete example for a sphere.
+
+```py
+from math import pi
+
+from vecgl.export import write_svg
+from vecgl.linalg import (get_frustum_mat4, get_rotate_x_mat4,
+                          get_rotate_y_mat4, get_translate_mat4, mul_mat4)
+from vecgl.modellib import get_sphere_model
+from vecgl.rendering import render
+from vecgl.viewer import perspective_update_fn, show, show_interactively
+
+# Get a predefined sphere model and choose nice colors.
+# The sphere will span from -1.0 to 1.0 in all dimensions.
+sphere = get_sphere_model(16, 32, "lightblue", "black")
+
+# Look at the model interactively.
+show_interactively(sphere, perspective_update_fn())
+
+# Define the view and the projection transforms.
+view_mat4 = mul_mat4(
+    get_translate_mat4(0.0, 0.0, -2.0),
+    get_rotate_x_mat4(-0.2 * pi),
+    get_rotate_y_mat4(0.15 * pi),
+)
+projection_mat4 = get_frustum_mat4(-1.0, 1.0, -1.0, 1.0, 1.0, 100.0)
+
+# Transform our sphere model and bring it to the clip space.
+transform_mat4 = mul_mat4(projection_mat4, view_mat4)
+sphere_in_ndc = sphere.transform(transform_mat4)
+
+# Render, display, and export the model.
+rendered = render(sphere_in_ndc)
+show(rendered)
+write_svg(rendered, "sphere.svg")
+
+# You can access the vector-based rendering result through the rendered model.
+for ln in rendered.lines:
+    print(ln)
+```
+
+VecGL will render and display the sphere and print the vector-based rendering
+result to stdout.
+
+![This is an image](./sphere.svg)
+
+## Build and run tests
+
+Clone the repository.
+
+```
+$ git clone git@github.com:frgossen/vecgl.git
+$ cd vecgl
+```
+
+Create a virtual environment and activate it (recommended).
+
+```
+$ python3 -m venv .venv
+$ source .venv/bin/activate
+```
+
+Install all requirements in the virtual environment.
+
+```
+$ python3 -m pip install -r requirements.txt
+```
+
+Install the `vecgl` package in editable mode.
+This makes the package (and your changes) available when running the tests.
+
+```
+$ python3 -m pip install --editable .
+```
+
+You're all set for contributing back to the project.
+Run the tests with ...
+
+```
+$ python3 -m pytest --benchmark-skip
+```
+
+... and the benchmarks with ...
+
+```sh
+$ python3 -m pytest --benchmark-only
+```
