@@ -1,0 +1,13 @@
+app/addressbook.py,sha256=sy4vL5BEc4zqMMeSua7f0ahH_i1lLEZoGkXW5bhXLLo,11821
+app/information.py,sha256=xHZeibAW3MYElYGNZr_5NBH3J7KLYT2SrkFp1qiwaX0,2532
+app/menu.py,sha256=-TchpMFvQFXwIaum5q_gEZQebD1oddcvMF54dEBzDMQ,942
+app/notes.py,sha256=Hjhhbg_ujTK_roA6E1RTmKI_cw9uE_-muTkOumeDmCc,6131
+app/prompt_tool_ab.py,sha256=AcEw56PpCapCzIurzS1GY7XpoV-iBnm0LDPcnMmdtH0,1044
+app/prompt_tool_nb.py,sha256=NO3P_hc8iZL5M6ISJE3zqwP9B4UoaPBX30S8ZA5_EQg,837
+app/sort.py,sha256=d3AWVmm1M-kva3ex7KvtkQVLvOJAxBx2Srdn3nvuqg8,5128
+Chatbot_by_IE-0.1.8.dist-info/LICENSE,sha256=LNO5yrevcwwHib1V5hNnNCx3OP3Wtl-0tQoOy3yd4sg,1096
+Chatbot_by_IE-0.1.8.dist-info/METADATA,sha256=cQ9D-bGz1En57iFXnIb_usugQAwcD7UJqBDkxaU1saI,584
+Chatbot_by_IE-0.1.8.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+Chatbot_by_IE-0.1.8.dist-info/entry_points.txt,sha256=yjSt7qvLpmVixv14fIEGPu4uH1mbSYmu6bNAi4fw0rk,42
+Chatbot_by_IE-0.1.8.dist-info/top_level.txt,sha256=io9g7LCbfmTG1SFKgEOGXmCFB9uMP2H5lerm0HiHWQE,4
+Chatbot_by_IE-0.1.8.dist-info/RECORD,,
