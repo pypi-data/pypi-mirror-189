@@ -1,0 +1,5 @@
+[console_scripts]
+nb2all = jlabdev.main:notebook2all
+nb2doc = jlabdev.main:notebook2doc
+nb2py = jlabdev.main:notebook2py
+py2nb = jlabdev.main:python2nb
