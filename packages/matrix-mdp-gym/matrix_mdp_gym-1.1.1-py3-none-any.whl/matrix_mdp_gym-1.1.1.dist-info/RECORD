@@ -1,0 +1,8 @@
+matrix_mdp/__init__.py,sha256=PhPJmMmmeeSt62LQi8zFIQmfYnxSZC5gOaYTBpALw_w,170
+matrix_mdp/envs/__init__.py,sha256=Qau27dwpNOCvmwosQ0lAQHFkjzCcoobsHfDeBfZu068,51
+matrix_mdp/envs/matrix_mdp.py,sha256=7hDgwpMfSrxSjAejTcvaBp_Vii3M4BX_D9_4sH2ypy0,6315
+matrix_mdp_gym-1.1.1.dist-info/LICENSE,sha256=pnBGeFOufbSk7zytQo2Xm1pJ30PrnMOozmpBAI2pzUU,1067
+matrix_mdp_gym-1.1.1.dist-info/METADATA,sha256=-6pksd4bUjOnrE18p9QngonJB0JQnXb5Epqmq3Genfo,3639
+matrix_mdp_gym-1.1.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+matrix_mdp_gym-1.1.1.dist-info/top_level.txt,sha256=nqLvmqxiJjsVgvjEr4Dw6e3hEmAxfMUMIB247s3MFt4,11
+matrix_mdp_gym-1.1.1.dist-info/RECORD,,
