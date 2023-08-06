@@ -1,0 +1,10 @@
+optipack/__init__.py,sha256=63nlmCaN1efJI3Mt7LdtMd_8zOHQFtyM9xWhVXl3_1M,44
+optipack/__main__.py,sha256=jlDSOOQINwTuBi02Gs-VI8jija9m2Dci9luboz4k-YY,611
+optipack/sdk/__init__.py,sha256=H8ja5HDfzTva43VQOt6vfPG1u-9NOYKoMOA9Uo2L0EA,32
+optipack/sdk/optipack_init.py,sha256=u03n8ZTzWrsqq2BEis8nvFZ3Ucl1Ww6HfSbNghQxiY4,1321
+optipack/util.py,sha256=ygLloxzMPdkRPCnVchEkwihpwX8OKY7EHGgBg_qrGYQ,130
+optipack-0.0.5.dist-info/LICENSE,sha256=RmgLlI0R61vCtABiF4LIE2GExMxGb5vbfCfoaICCCHA,1072
+optipack-0.0.5.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+optipack-0.0.5.dist-info/entry_points.txt,sha256=XS-NjYIAxy30a6G2wSDQyfyAS20Y4Hn9pe2NwBUKzrA,50
+optipack-0.0.5.dist-info/METADATA,sha256=txZ3RAkD_QTxmVIBKsTHI98_PHg5my4w6raRXt9sSG4,588
+optipack-0.0.5.dist-info/RECORD,,
