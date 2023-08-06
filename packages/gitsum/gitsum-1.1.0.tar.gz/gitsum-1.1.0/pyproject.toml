@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitsum"
+description = "Summarize the status of multiple Git repositories."
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+requires-python = ">=3.8"
+keywords = ["git"]
+dependencies = [
+	"pygit2"
+]
+dynamic = ["version"]
+authors = [
+	{name = "Louis Hildebrand", email = "louis.hildebrand@mail.mcgill.ca"}
+]
+
+[project.urls]
+"Bug Tracker" = "https://github.com/louis-hildebrand/gitsum/issues"
+Changelog = "https://github.com/louis-hildebrand/gitsum/blob/main/CHANGELOG.md"
+Source = "https://github.com/louis-hildebrand/gitsum"
+
+[project.scripts]
+gitsum = "gitsum.cli:main"
+
+[tool.setuptools.dynamic]
+# Get the version number from __init__.py
+version = {attr = "gitsum.__version__"}
+
+# Want to exclude dev_main.py from the release
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["gitsum"]
