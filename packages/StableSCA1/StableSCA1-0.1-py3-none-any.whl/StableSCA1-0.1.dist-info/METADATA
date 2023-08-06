@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: StableSCA1
+Version: 0.1
+Summary: An in-line smart contract audit tool
+Author: Stabel
+Author-email: support@stabel.tech
+Requires-Dist: requests
+Requires-Dist: web3
+
