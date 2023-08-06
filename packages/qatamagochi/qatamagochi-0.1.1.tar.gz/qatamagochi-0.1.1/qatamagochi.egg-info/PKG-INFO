@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: qatamagochi
+Version: 0.1.1
+Summary: Testing a package can call another package inside
+Home-page: https://github.com/danielmen-mx/qatamagochi
+Author: Daniel Mendez
+Author-email: pablomen1131@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# qatamagochi
+
+### Install qatamagochi from PyPi.
+```bash
+pip install qatamagochi
+```
+
+#### Example
+```python
+  # Import library
+  from qatamagochi import Qatamagochi
+  # Initialize
+  model = Qatamagochi(name='Daniel', tamagochi_name='Dinosaurio')
+  # Run the model
+  model.speak()
+```
