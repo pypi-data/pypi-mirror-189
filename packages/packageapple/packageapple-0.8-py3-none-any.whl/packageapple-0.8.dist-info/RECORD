@@ -1,0 +1,12 @@
+packageapple/__init__.py,sha256=kfeOyt3rUJnHURZds4dP78dmfXLpvFiMIA85zafLVls,58
+packageapple/math/__init__.py,sha256=EtcxBNQ4k2FgOCBA7G9aKxCGwsChKRPViddOpzfc62c,17
+packageapple/math/_a.py,sha256=rysf-GzlnisU2Uoc3qCda6z8YWRELip8PBjTBUZoMnU,153
+packageapple/math/setup.py,sha256=qYQW6RzOXwOhRsuQGrWjITar2fkdt2OUaZIJQWQzKzc,534
+packageapple/mysubpackage1/__init__.py,sha256=pNWlhxNFrj34pGddIIfte6xNRVJPj4WefMVTjgyfTrw,19
+packageapple/mysubpackage1/basic.py,sha256=6GFuW9QshjHYwZ8SdCWLaGz5GeegFOG6_aGXgDAE6aI,68
+packageapple/mysubpackage2/__init__.py,sha256=qPQVsmQmvgXFMG7UkGpo4qYawQEGU2T2OpgCIgtCxBg,20
+packageapple/mysubpackage2/basic.py,sha256=swBenE4NlvHVCCJ_ce8gW-sJvXQBNHLr0vIr1lDbW3s,71
+packageapple-0.8.dist-info/METADATA,sha256=3ZIKhJMMvyydx-7t5zei1UAH7x3Dnl7pyx2Kd5et5B0,116
+packageapple-0.8.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+packageapple-0.8.dist-info/top_level.txt,sha256=nhoiIuyQdbtljjGmWnHiqbYAUTzBpWJ66HJY0JWRMw8,13
+packageapple-0.8.dist-info/RECORD,,
