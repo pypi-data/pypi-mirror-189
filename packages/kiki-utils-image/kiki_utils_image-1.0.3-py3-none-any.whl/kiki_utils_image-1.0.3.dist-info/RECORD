@@ -1,0 +1,10 @@
+kikiutils_image/__init__.py,sha256=L94qwmYONkNZlIZUukJlvL-b-BrT0e0JBA6pCUkIVcM,39
+kikiutils_image/aio.py,sha256=zxz4NykpMRtZP_BtAtcub-UCR2C55thjEPD4VuRwHY0,511
+kikiutils_image/sync.py,sha256=S-UVpe9wRluQZH_-4SoBBSKmLM3OFc9Uv4gKIVL1YM8,1300
+kikiutils_image/typehint.py,sha256=GVoF91cAhZDZhxkEQ5MH_hvAQg8ZpCKxbwT_D3d8q6w,55
+kiki_utils_image-1.0.3.dist-info/LICENSE.txt,sha256=44b-vTY24N3ceU0dOUgyn24TtON5bW0tO0uRpSrTD3M,1066
+kiki_utils_image-1.0.3.dist-info/METADATA,sha256=FYGK6jO0XN-r0f2ZSypOfaIFIzB291B6HxdfoV0mDNY,354
+kiki_utils_image-1.0.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+kiki_utils_image-1.0.3.dist-info/top_level.txt,sha256=HwIhh-UiRCbsn8pgKt7OycnpAQi-9WLWTHptWSir4uY,16
+kiki_utils_image-1.0.3.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+kiki_utils_image-1.0.3.dist-info/RECORD,,
