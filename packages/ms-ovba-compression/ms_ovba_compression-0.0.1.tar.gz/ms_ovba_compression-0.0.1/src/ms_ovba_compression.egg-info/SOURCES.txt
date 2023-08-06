@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/ms_ovba_compression/__init__.py
+src/ms_ovba_compression/compressor.py
+src/ms_ovba_compression/decompressor.py
+src/ms_ovba_compression/helpers.py
+src/ms_ovba_compression.egg-info/PKG-INFO
+src/ms_ovba_compression.egg-info/SOURCES.txt
+src/ms_ovba_compression.egg-info/dependency_links.txt
+src/ms_ovba_compression.egg-info/top_level.txt
