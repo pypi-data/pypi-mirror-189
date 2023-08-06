@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+woocatpacnew/__init__.py
+woocatpacnew/core.py
+woocatpacnew/web.py
+woocatpacnew.egg-info/PKG-INFO
+woocatpacnew.egg-info/SOURCES.txt
+woocatpacnew.egg-info/dependency_links.txt
+woocatpacnew.egg-info/entry_points.txt
+woocatpacnew.egg-info/top_level.txt
