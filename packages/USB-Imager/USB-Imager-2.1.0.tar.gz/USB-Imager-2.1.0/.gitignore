@@ -1,0 +1,18 @@
+# General
+.directory
+
+# Developer
+.spyproject
+TODO*
+test*
+ui_to_py.sh
+
+# Distribution / packaging
+dist*
+build*
+*.egg*
+debian
+
+# Compiled python modules.
+__pycache__/
+*.pyc
