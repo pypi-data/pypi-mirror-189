@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+limpdf/__init__.py
+limpdf/pdf2image.py
+limpdf/pdf2text.py
+limpdf.egg-info/PKG-INFO
+limpdf.egg-info/SOURCES.txt
+limpdf.egg-info/dependency_links.txt
+limpdf.egg-info/top_level.txt
