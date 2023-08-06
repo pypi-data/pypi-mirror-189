@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: hostcheck
+Version: 0.0.3
+Summary: A tool for checking host for work: http, tcp, ping
+Home-page: https://github.com/mishakorzik/hostcheck
+Author: MishaKorzhik_He1Zen
+Author-email: developer.mishakorzhik@gmail.com
+License: Apache 2.0
+Project-URL: Bug Tracker, https://github.com/mishakorzik/hostcheck/issues
+Project-URL: Sponsor, https://www.buymeacoffee.com/misakorzik
+Keywords: host,ip,tcp,http,ping,python,pypi,check-host,checkhost,check,info,domain,address,tools
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+## Usage
+
+**A good tool for checking host, has 24+ servers from different countries to check. Using check-host.net**
+
+
+### Save as file
+```python
+#save ping server data (ex. www.google.com)
+>>> from hostcheck import *
+>>> host.ping("www.google.com")
+saved as: check-host.json
+>>> 
+
+#save http server data (ex. www.google.com)
+>>> from hostcheck import *
+>>> host.http("www.google.com")
+saved as: check-host.json
+>>> 
+
+#save tcp server data (ex. 3.125.102.39:13352)
+>>> from hostcheck import *
+>>> host.tcp("3.125.102.39:13352")
+saved as: check-host.json
+>>> 
+
+#save dns server data (ex. 1.1.1.1)
+>>> from hostcheck import *
+>>> host.dns("1.1.1.1")
+saved as: check-host.json
+>>>
+
+```
+
+### Preview data
+
+```python
+
+#view ping server data (ex. www.google.com)
+>>> from hostcheck import *
+>>> host.ping("www.google.com", True)
+
+#view http server data (ex. www.google.com)
+>>> from hostcheck import *
+>>> host.http("www.google.com", True)
+
+#view tcp server data (ex. 3.125.102.39:13352)
+>>> from hostcheck import *
+>>> host.tcp("3.125.102.39:13352", True)
+
+how to view server data
+video: https://youtu.be/DlUiGR1HfTU
+
+```
+
+**all results are automatically saved to the check-host file in json format.  You can read it using the json module.**
+
+## Installation
+
+```basb
+pip install hostcheck
+
+```
+
+## Maybe will be in new versions
+
+ - dns checker 
+ - udp checker
+
