@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+v0.1.4
+------
+
+* Raise exception when a file does not exists
