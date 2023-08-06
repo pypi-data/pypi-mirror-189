@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+pyudm.egg-info/PKG-INFO
+pyudm.egg-info/SOURCES.txt
+pyudm.egg-info/dependency_links.txt
+pyudm.egg-info/entry_points.txt
+pyudm.egg-info/requires.txt
+pyudm.egg-info/top_level.txt
+udm/__init__.py
+udm/commandline.py
+udm/configs.py
+udm/dependency.py
+udm/main.py
+udm/py.typed
