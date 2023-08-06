@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ezpgz"
+version = "0.0.3"
+authors = [
+  { name="Necrownyx", email="Necrownyx@outlook.com" },
+]
+description = "Example"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "pgzero>=1.2",
+]
+[project.urls]
+"Homepage" = "https://github.com/Necrownyx/pgez"
+"Bug Tracker" = "https://github.com/Necrownyx/pgez/issues"
