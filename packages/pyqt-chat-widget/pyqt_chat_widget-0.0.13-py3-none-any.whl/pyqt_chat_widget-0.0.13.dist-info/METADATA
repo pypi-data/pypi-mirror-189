@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pyqt-chat-widget
+Version: 0.0.13
+Summary: PyQt widget for chatting app
+Home-page: https://github.com/yjg30737/pyqt-chat-widget.git
+Author: Jung Gyu Yoon
+Author-email: yjg30737@gmail.com
+License: MIT
+License-File: LICENSE
+Requires-Dist: PyQt5
+
