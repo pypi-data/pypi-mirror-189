@@ -1,0 +1,2 @@
+[console_scripts]
+dwavetikz = dwavetikz.cli:main
