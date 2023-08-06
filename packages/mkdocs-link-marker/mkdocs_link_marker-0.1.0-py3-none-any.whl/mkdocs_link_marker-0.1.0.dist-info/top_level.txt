@@ -1,0 +1,2 @@
+mkdocs_external-link-marker_plugin
+mkdocs_link_marker_plugin
