@@ -1,0 +1,8 @@
+setup.py
+asyncdiscord/__init__.py
+asyncdiscord/asyncdiscord.py
+asyncdiscord.egg-info/PKG-INFO
+asyncdiscord.egg-info/SOURCES.txt
+asyncdiscord.egg-info/dependency_links.txt
+asyncdiscord.egg-info/requires.txt
+asyncdiscord.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: asyncdiscord
+Version: 1.0.1
+Summary: Асинхронный клиент для дискорд вебхуков, написанный на python 3.9
+Home-page: https://github.com/itskekoff/discord-webhooks
+Author: itskekoff
+Author-email: itskekoff@gmail.com
+License: Apache-2.0 license
