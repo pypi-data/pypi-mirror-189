@@ -1,0 +1,10 @@
+orderbot/__init__.py,sha256=TjsSRFrcQljpz6B3nvozc2H-hSyZceiLRTHB8h6XLRU,70
+orderbot/db_classes.py,sha256=bvLVdbeZqW3DFPMltMLFZPSqTW4FvSgeN3glAXgM0OY,1512
+orderbot/order.py,sha256=GY81xoZ4qeDYCz07RidW00Q0dbG_22pyBrEL2AlFHT8,5741
+orderbot/order_parser.py,sha256=VHdGW4QUxJ8ldaoDmqFRtBUDkS3LmO8f1dE0srBcFQw,33790
+orderbot/orderbot.py,sha256=vC44m8NR_xfmLmapulRxZz8ztD6JsfY3neVjsktuw6o,7658
+orderbot/util.py,sha256=1jB5lMlv2Y_j-Jb626om0t6aDD5oR_3VlPT8CurFvGQ,6254
+Matrix_OrderBot-0.1.1.dist-info/entry_points.txt,sha256=9NJPqY-waf98CADpATotcL7g1YgNiA000ByvXasyBos,51
+Matrix_OrderBot-0.1.1.dist-info/WHEEL,sha256=_tUZrwPtr100-R0q5G_f5lOII6s0lN3q8n5zAHueCvs,87
+Matrix_OrderBot-0.1.1.dist-info/METADATA,sha256=tO__kqzJ-HUM7vXt8Ey4POSiSWKGLkizdIYsMvaKFR4,2927
+Matrix_OrderBot-0.1.1.dist-info/RECORD,,
