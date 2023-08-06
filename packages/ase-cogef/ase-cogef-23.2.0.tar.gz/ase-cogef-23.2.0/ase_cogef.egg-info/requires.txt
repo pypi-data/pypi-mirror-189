@@ -1,0 +1,7 @@
+ase
+numpy
+
+[docs]
+matplotlib
+sphinx
+sphinx_rtd_theme
