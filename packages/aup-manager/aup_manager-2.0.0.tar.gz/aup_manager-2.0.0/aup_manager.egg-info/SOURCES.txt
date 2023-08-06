@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+aup_manager.egg-info/PKG-INFO
+aup_manager.egg-info/SOURCES.txt
+aup_manager.egg-info/dependency_links.txt
+aup_manager.egg-info/requires.txt
+aup_manager.egg-info/top_level.txt
+aup_manager/connectors/ConnectorInterface.py
+aup_manager/connectors/MongodbConnector.py
+aup_manager/connectors/PerunConnector.py
+aup_manager/connectors/__init__.py
+aup_manager/db/DatabaseInterface.py
+aup_manager/db/MongodbDatabase.py
+aup_manager/db/__init__.py
