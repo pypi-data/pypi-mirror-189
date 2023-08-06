@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mypackage_ddhjy
+Version: 0.2
+Summary: A short description of the package
+Home-page: https://github.com/ddhjy/mypackage_ddhjy
+Author: Your Name
+Author-email: your.email@example.com
+License: UNKNOWN
+Description: A longer description of the package
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

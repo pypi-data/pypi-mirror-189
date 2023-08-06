@@ -1,0 +1,5 @@
+setup.py
+mypackage_ddhjy.egg-info/PKG-INFO
+mypackage_ddhjy.egg-info/SOURCES.txt
+mypackage_ddhjy.egg-info/dependency_links.txt
+mypackage_ddhjy.egg-info/top_level.txt
