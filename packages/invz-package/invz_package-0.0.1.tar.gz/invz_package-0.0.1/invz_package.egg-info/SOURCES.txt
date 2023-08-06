@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+invz_pack/__init__.py
+invz_pack/idextractor/__init__.py
+invz_pack/idextractor/main.py
+invz_pack/idextractor/nets.py
+invz_pack/utils/__init__.py
+invz_pack/utils/download.py
+invz_pack/utils/input.py
+invz_package.egg-info/PKG-INFO
+invz_package.egg-info/SOURCES.txt
+invz_package.egg-info/dependency_links.txt
+invz_package.egg-info/requires.txt
+invz_package.egg-info/top_level.txt
