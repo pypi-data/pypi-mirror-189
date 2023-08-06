@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: maya-rig-operation-graph
+Version: 0.1.2
+Summary: maya计算图的实现
+Home-page: https://github.com/cpcgskill/maya-rig-operation-graph
+Author: ('cpcgskill',)
+Author-email: cpcgskill@outlook.com
+License: Apache Software License (Apache 2.0)
+Project-URL: Bug Tracker, https://github.com/cpcgskill/maya-rig-operation-graph/issues
+Requires-Dist: maya-rig-core (>=0.2)
+
+# maya-rig-operation-graph
+
+
