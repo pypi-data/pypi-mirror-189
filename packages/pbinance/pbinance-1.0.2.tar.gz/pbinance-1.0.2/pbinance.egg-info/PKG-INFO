@@ -1,0 +1,451 @@
+Metadata-Version: 2.1
+Name: pbinance
+Version: 1.0.2
+Summary: Binance API
+Home-page: https://github.com/pyted/pbinance
+Author: pyted
+Author-email: pyted@outlook.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+
+
+# pbinance
+
+## 1. 介绍
+
+pbinance是对币安基础API接口的封装，包含：
+
+- 币币交易
+- 杠杆交易
+- U本位合约
+- 币本位合约
+- 欧式期权
+- 子母账户
+- 钱包
+- 币安宝
+- 矿池
+- 杠杆代币
+- 币安挖矿
+- 法币
+- C2C
+- VIP借币
+- 质押借币
+- Pay
+- 闪兑
+- 返佣
+- NFT
+- 币安码 等
+
+## 2. 安装
+
+```cmd
+pip3 install pbinance
+```
+
+## 3. 例子
+
+### 3.1 币币行情数据
+
+```python
+import pbinance
+
+# SPOT行情数据除了"查询历史成交"均可不填写key和secret
+key = ''
+secret = ''
+
+binance = pbinance.Binance(key=key, secret=secret)
+
+# 测试服务器连通性
+print(binance.spot.market.get_ping())
+# >> {'code': 200, 'data': {}, 'msg': ''}
+
+# 获取服务器时间
+print(binance.spot.market.get_time())
+# >> {'code': 200, 'data': {'serverTime': 1670030553529}, 'msg': ''}
+
+# 交易规范信息
+print(binance.spot.market.get_exchangeInfo(symbol='BTCUSDT'))
+# >> {'code': 200, 'data': {'timezone': 'UTC', 'serverTime': 1670030553604, 'rateLimits': ...
+
+# 深度信息
+print(binance.spot.market.get_depth(symbol='BTCUSDT'))
+# >> {'code': 200, 'data': {'lastUpdateId': 28557496692, 'bids': [['17033.80000000', '0.00952000'], ...
+
+# 近期成交列表
+print(binance.spot.market.get_trades(symbol='BTCUSDT'))
+# >> {'code': 200, 'data': [{'id': 2280551047, 'price': '17030.51000000', 'qty': '0.00081000', ...
+
+# 查询历史成交（需要填写key）
+print(binance.spot.market.get_historicalTrades(symbol='BTCUSDT'))
+# >> {'code': 200, 'data': [{'id': 2280551047, 'price': '17030.51000000', 'qty': '0.00081000', ...
+
+# 近期成交(归集)
+print(binance.spot.market.get_aggTrades(symbol='BTCUSDT'))
+# >> {'code': 200, 'data': [{'a': 1952282520, 'p': '17030.45000000', 'q': '0.03157000', ...
+
+# K线数据
+print(binance.spot.market.get_klines(symbol='BTCUSDT', interval='1m'))
+# >> {'code': 200, 'data': [[1670000580000, '16939.99000000', '16945.02000000', '16939.55000000', ...
+
+# 当前平均价格
+print(binance.spot.market.get_avgPrice(symbol='BTCUSDT'))
+# >> {'code': 200, 'data': {'mins': 5, 'price': '17031.47108335'}, 'msg': ''}
+
+# UIK线数据
+print(binance.spot.market.get_avgPrice(symbol='BTCUSDT'))
+# >> {'code': 200, 'data': {'mins': 5, 'price': '17031.47676163'}, 'msg': ''}
+
+# 24hr 价格变动情况
+print(binance.spot.market.get_ticker_24hr(symbol='BTCUSDT'))
+# >> {'code': 200, 'data': {'symbol': 'BTCUSDT', 'priceChange': '45.01000000', 'priceChangePercent': '0.265', ...
+
+# 最新价格
+print(binance.spot.market.get_ticker_24hr(symbol='BTCUSDT'))
+# >> {'code': 200, 'data': {'symbol': 'BTCUSDT', 'priceChange': '44.90000000', 'priceChangePercent': '0.264', ...
+
+# 当前最优挂单
+print(binance.spot.market.get_ticker_bookTicker(symbol='BTCUSDT'))
+# >> {'code': 200, 'data': {'symbol': 'BTCUSDT', 'bidPrice': '17033.80000000', 'bidQty': '0.00306000', ...
+
+# 滚动窗口价格变动统计
+print(binance.spot.market.get_ticker(symbol='BTCUSDT'))
+# >> {'code': 200, 'data': {'symbol': 'BTCUSDT', 'priceChange': '44.31000000', 'priceChangePercent': '0.261', ...
+```
+
+### 3.2 U本位合约行情数据
+
+```python
+import pbinance
+
+key = ''
+secret = ''
+binance = pbinance.Binance(key=key, secret=secret)
+
+# 测试服务器连通性 PING
+ping = binance.um.market.get_ping()
+print(ping)
+# >> {'code': 200, 'data': {}, 'msg': ''}
+
+# 获取服务器时间
+time = binance.um.market.get_time()
+print(time)
+# >> {'code': 200, 'data': {'serverTime': 1670063632636}, 'msg': ''}
+
+# 获取交易规则和交易对
+exchangeInfo = binance.um.market.get_exchangeInfo(symbol='BTCUSDT')
+print(exchangeInfo)
+# >> {'code': 200, 'data': {'timezone': 'UTC', 'serverTime': 1670061611072, 'futuresType': 'U_MARGINED',  ...
+
+# 深度信息
+depth = binance.um.market.get_depth(symbol='BTCUSDT')
+print(depth)
+# >> {'code': 200, 'data': {'lastUpdateId': 2226839856259, 'E': 1670063632819, 'T': 1670063632812, 'bids' ...
+
+# 近期成交
+trades = binance.um.market.get_trades(symbol='BTCUSDT')
+print(trades)
+# >> {'code': 200, 'data': [{'id': 3119099191, 'price': '16962.70', 'qty': '0.001', 'quoteQty': '16.96',  ...
+
+# 查询历史成交（需要填写key和secret）
+historicalTrades = binance.um.market.get_historicalTrades(symbol='BTCUSDT')
+print(historicalTrades)
+# >> {'code': 200, 'data': [{'id': 3119099191, 'price': '16962.70', 'qty': '0.001', 'quoteQty': '16.96',  ...
+
+# 近期成交(归集)
+aggTrades = binance.um.market.get_aggTrades(symbol='BTCUSDT')
+print(aggTrades)
+# >> {'code': 200, 'data': [{'a': 1543052423, 'p': '16962.80', 'q': '0.119', 'f': 3119098112, 'l': 311909 ...
+
+# K线数据
+klines = binance.um.market.get_klines(symbol='BTCUSDT', interval='1m')
+print(klines)
+# >> {'code': 200, 'data': [[1670033640000, '17008.00', '17010.00', '17006.50', '17009.60', '149.877', 16 ...
+
+# 连续合约K线数据
+continuousKlines = binance.um.market.get_klines(symbol='BTCUSDT', interval='1m')
+print(continuousKlines)
+# >> {'code': 200, 'data': [[1670033640000, '17008.00', '17010.00', '17006.50', '17009.60', '149.877', 16 ...
+
+# 价格指数K线数据
+continuousKlines = binance.um.market.get_continuousKlines(pair='BTCUSDT', contractType='PERPETUAL', interval='1m')
+print(continuousKlines)
+# >> {'code': 200, 'data': [[1670033640000, '17008.00', '17010.00', '17006.50', '17009.60', '149.877', 16 ...
+
+# 标记价格K线数据
+markPriceKlines = binance.um.market.get_markPriceKlines(symbol='BTCUSDT', interval='1m')
+print(markPriceKlines)
+# >> {'code': 200, 'data': [[1670033640000, '17008.10000000', '17010', '17006.50000000', '17009.70000000' ...
+
+# 最新标记价格和资金费率
+premiumIndex = binance.um.market.get_premiumIndex(symbol='BTCUSDT')
+print(premiumIndex)
+# >> {'code': 200, 'data': {'symbol': 'BTCUSDT', 'markPrice': '16961.01753736', 'indexPrice': '16969.3940 ...
+
+# 查询资金费率历史
+fundingRate = binance.um.market.get_fundingRate(symbol='BTCUSDT')
+print(fundingRate)
+# >> {'code': 200, 'data': [{'symbol': 'BTCUSDT', 'fundingTime': 1667203200000, 'fundingRate': '0.0000384 ...
+
+# 24hr价格变动情况
+ticker_24hr = binance.um.market.get_ticker_24hr(symbol='BTCUSDT')
+print(ticker_24hr)
+# >> {'code': 200, 'data': {'symbol': 'BTCUSDT', 'priceChange': '23.60', 'priceChangePercent': '0.139', ' ...
+
+# 最新价格
+price = binance.um.market.get_ticker_price(symbol='BTCUSDT')
+print(price)
+# >> {'code': 200, 'data': {'symbol': 'BTCUSDT', 'price': '16961.00', 'time': 1670063632690}, 'msg': ''}
+
+# 当前最优挂单
+bookTicker = binance.um.market.get_ticker_bookTicker(symbol='BTCUSDT')
+print(bookTicker)
+# >> {'code': 200, 'data': {'symbol': 'BTCUSDT', 'bidPrice': '16961.00', 'bidQty': '11.901', 'askPrice':  ...
+
+# 获取未平仓合约数
+openInterest = binance.um.market.get_openInterest(symbol='BTCUSDT')
+print(openInterest)
+# >> {'code': 200, 'data': {'symbol': 'BTCUSDT', 'openInterest': '129466.712', 'time': 1670063626684}, 'm ...
+
+# 合约持仓量
+openInterestHist = binance.um.market.get_openInterestHist(symbol='BTCUSDT', period='5m')
+print(openInterestHist)
+# >> {'code': 200, 'data': [{'symbol': 'BTCUSDT', 'sumOpenInterest': '129600.08800000', 'sumOpenInterestV ...
+
+# 大户账户数多空比
+topLongShortAccountRatio = binance.um.market.get_topLongShortAccountRatio(symbol='BTCUSDT', period='5m')
+print(topLongShortAccountRatio)
+# >> {'code': 200, 'data': [{'symbol': 'BTCUSDT', 'longAccount': '0.5729', 'longShortRatio': '1.3414', 's ...
+
+# 大户持仓量多空比
+topLongShortPositionRatio = binance.um.market.get_topLongShortPositionRatio(symbol='BTCUSDT', period='5m')
+print(topLongShortPositionRatio)
+# >> {'code': 200, 'data': [{'symbol': 'BTCUSDT', 'longAccount': '0.5227', 'longShortRatio': '1.0951', 's ...
+
+# 多空持仓人数比
+globalLongShortAccountRatio = binance.um.market.get_globalLongShortAccountRatio(symbol='BTCUSDT', period='5m')
+print(globalLongShortAccountRatio)
+# >> {'code': 200, 'data': [{'symbol': 'BTCUSDT', 'longAccount': '0.5453', 'longShortRatio': '1.1993', 's ...
+
+# 合约主动买卖量
+takerlongshortRatio = binance.um.market.get_takerlongshortRatio(symbol='BTCUSDT', period='5m')
+print(takerlongshortRatio)
+# >> {'code': 200, 'data': [{'buySellRatio': '0.7684', 'sellVol': '434.0850', 'buyVol': '333.5620', 'time ...
+
+# 杠杆代币历史净值K线
+lvtKlines = binance.um.market.get_lvtKlines(symbol='BTCDOWN', interval='1m')
+print(lvtKlines)
+# >> {'code': 200, 'data': [[1670033640000, '0.04267954', '0.04268769', '0.04266922', '0.04267085', '2.16 ...
+
+# 综合指数交易对信息
+indexInfo = binance.um.market.get_indexInfo()
+print(indexInfo)
+# >> {'code': 200, 'data': [{'symbol': 'METAVERSEUSDT', 'time': 1670063634000, 'component': 'baseAsset',  ...
+
+# 多资产模式资产汇率指数
+assetIndex = binance.um.market.get_assetIndex()
+print(assetIndex)
+# >> {'code': 200, 'data': [{'symbol': 'ADAUSD', 'time': 1670063634005, 'index': '0.32285770', 'bidBuffer ...
+```
+
+### 3.3 币本位合约行情数据
+
+```python
+import pbinance
+
+key = ''
+secret = ''
+binance = pbinance.Binance(key=key, secret=secret)
+
+# 测试服务器连通性 PING
+ping = binance.cm.market.get_ping()
+print(ping)
+# >> {'code': 200, 'data': {}, 'msg': ''}
+
+# 获取服务器时间
+time = binance.cm.market.get_time()
+print(time)
+# >> {'code': 200, 'data': {'serverTime': 1670065080566}, 'msg': ''}
+
+# 获取交易规则和交易对
+exchangeInfo = binance.cm.market.get_exchangeInfo(symbol='BTCUSD_PERP')
+print(exchangeInfo)
+# >> {'code': 200, 'data': {'timezone': 'UTC', 'serverTime': 1670061611079, 'rateLimits': [{'rateLimitTyp ...
+
+# 深度信息
+depth = binance.cm.market.get_depth(symbol='BTCUSD_PERP')
+print(depth)
+# >> {'code': 200, 'data': {'lastUpdateId': 610975582809, 'E': 1670065080733, 'T': 1670065080719, 'symbol ...
+
+# 近期成交
+trades = binance.cm.market.get_trades(symbol='BTCUSD_PERP')
+print(trades)
+# >> {'code': 200, 'data': [{'id': 563232920, 'price': '16951.3', 'qty': '9', 'baseQty': '0.05309327', 't ...
+
+# 查询历史成交（需要填写key和secret）
+historicalTrades = binance.cm.market.get_historicalTrades(symbol='BTCUSD_PERP')
+print(historicalTrades)
+# >> {'code': 200, 'data': [{'id': 563232920, 'price': '16951.3', 'qty': '9', 'baseQty': '0.05309327', 't ...
+
+# 近期成交(归集)
+aggTrades = binance.cm.market.get_aggTrades(symbol='BTCUSD_PERP')
+print(aggTrades)
+# >> {'code': 200, 'data': [{'a': 233404200, 'p': '16977.8', 'q': '1', 'f': 563231896, 'l': 563231896, 'T ...
+
+# 最新现货指数价格和Mark Price
+premiumIndex = binance.cm.market.get_premiumIndex(symbol='BTCUSD_PERP')
+print(premiumIndex)
+# >> {'code': 200, 'data': [{'symbol': 'BTCUSD_PERP', 'pair': 'BTCUSD', 'markPrice': '16958.86458545', 'i ...
+
+# 查询永续合约资金费率历史
+fundingRate = binance.cm.market.get_fundingRate(symbol='BTCUSD_PERP')
+print(fundingRate)
+# >> {'code': 200, 'data': [{'symbol': 'BTCUSD_PERP', 'fundingTime': 1667203200002, 'fundingRate': '0.000 ...
+
+# K线数据
+klines = binance.cm.market.get_klines(symbol='BTCUSD_PERP', interval='1m')
+print(klines)
+# >> {'code': 200, 'data': [[1670035140000, '17019.5', '17022.0', '17019.5', '17022.0', '5505', 167003519 ...
+
+# 连续合约K线数据
+continuousKlines = binance.cm.market.get_klines(symbol='BTCUSD_PERP', interval='1m')
+print(continuousKlines)
+# >> {'code': 200, 'data': [[1670035140000, '17019.5', '17022.0', '17019.5', '17022.0', '5505', 167003519 ...
+
+# 价格指数K线数据
+continuousKlines = binance.cm.market.get_continuousKlines(pair='BTCUSD', contractType='PERPETUAL', interval='1m')
+print(continuousKlines)
+# >> {'code': 200, 'data': [[1670035140000, '17019.5', '17022.0', '17019.5', '17022.0', '5505', 167003519 ...
+
+# 标记价格K线数据
+markPriceKlines = binance.cm.market.get_markPriceKlines(symbol='BTCUSD_PERP', interval='1m')
+print(markPriceKlines)
+# >> {'code': 200, 'data': [[1670035140000, '17019.60000000', '17023.11973783', '17019.60000000', '17022' ...
+
+# 24hr价格变动情况
+ticker_24hr = binance.cm.market.get_ticker_24hr(symbol='BTCUSD_PERP')
+print(ticker_24hr)
+# >> {'code': 200, 'data': [{'symbol': 'BTCUSD_PERP', 'pair': 'BTCUSD', 'priceChange': '1.5', 'priceChang ...
+
+# 最新价格
+price = binance.cm.market.get_ticker_price(symbol='BTCUSD_PERP')
+print(price)
+# >> {'code': 200, 'data': [{'symbol': 'BTCUSD_PERP', 'ps': 'BTCUSD', 'price': '16958.4', 'time': 1670064 ...
+
+# 当前最优挂单
+bookTicker = binance.cm.market.get_ticker_bookTicker(symbol='BTCUSD_PERP')
+print(bookTicker)
+# >> {'code': 200, 'data': [{'symbol': 'BTCUSD_PERP', 'pair': 'BTCUSD', 'bidPrice': '16958.3', 'bidQty':  ...
+
+# 获取未平仓合约数
+openInterest = binance.cm.market.get_openInterest(symbol='BTCUSD_PERP')
+print(openInterest)
+# >> {'code': 200, 'data': {'symbol': 'BTCUSD_PERP', 'pair': 'BTCUSD', 'openInterest': '3447344', 'contra ...
+
+# 合约持仓量
+openInterestHist = binance.cm.market.get_openInterestHist(pair='BTCUSD', period='5m')
+print(openInterestHist)
+# >> {'code': 200, 'data': [{'contractType': 'ALL', 'sumOpenInterest': '4795479.00000000', 'sumOpenIntere ...
+
+# 大户账户数多空比
+topLongShortAccountRatio = binance.cm.market.get_topLongShortAccountRatio(pair='BTCUSD', period='5m')
+print(topLongShortAccountRatio)
+# >> {'code': 200, 'data': [{'longAccount': '0.6837', 'longShortRatio': '2.1616', 'shortAccount': '0.3163 ...
+
+# 大户持仓量多空比
+topLongShortPositionRatio = binance.cm.market.get_topLongShortPositionRatio(pair='BTCUSD', period='5m')
+print(topLongShortPositionRatio)
+# >> {'code': 200, 'data': [{'shortPosition': '0.4584', 'longShortRatio': '1.1814', 'longPosition': '0.54 ...
+
+# 多空持仓人数比
+globalLongShortAccountRatio = binance.cm.market.get_globalLongShortAccountRatio(pair='BTCUSD', period='5m')
+print(globalLongShortAccountRatio)
+# >> {'code': 200, 'data': [{'longAccount': '0.6794', 'longShortRatio': '2.1192', 'shortAccount': '0.3206 ...
+
+# 合约主动买卖量
+takerBuySellVol = binance.cm.market.get_takerBuySellVol(pair='BTCUSD', contractType='ALL', period='5m')
+print(takerBuySellVol)
+# >> {'code': 200, 'data': [{'takerBuyVolValue': '100.9618', 'contractType': 'ALL', 'takerSellVol': '2329 ...
+
+# 基差
+basis = binance.cm.market.get_basis(pair='BTCUSD', contractType='CURRENT_QUARTER', period='5m')
+print(basis)
+# >> {'code': 200, 'data': [{'indexPrice': '16934.73628571', 'contractType': 'CURRENT_QUARTER', 'basisRat ...
+```
+
+### 3.4 欧式期权行情数据
+
+```python
+import pbinance
+
+key = ''
+secret = ''
+binance = pbinance.Binance(key=key, secret=secret)
+
+# 测试服务器连通性 PING
+ping = binance.eo.market.get_ping()
+print(ping)
+# >> {'code': 200, 'data': {}, 'msg': ''}
+
+# 获取服务器时间
+time = binance.eo.market.get_time()
+print(time)
+# >> {'code': 200, 'data': {'serverTime': 1670067616609}, 'msg': ''}
+
+# 获取交易规则和交易对
+exchangeInfo = binance.eo.market.get_exchangeInfo(symbol='BTC-221209-13000-C')
+print(exchangeInfo)
+# >> {'code': 200, 'data': {'timezone': 'UTC', 'serverTime': 1670067612238, 'optionContracts': [{'id': 1, ...
+
+# 深度信息
+depth = binance.eo.market.get_depth(symbol='BTC-221209-13000-C')
+print(depth)
+# >> {'code': 200, 'data': {'bids': [['4038', '0.01'], ['213', '0.75'], ['113', '0.05'], ['13', '0.07'],  ...
+
+# 近期成交
+trades = binance.eo.market.get_trades(symbol='BTC-221209-13000-C')
+print(trades)
+# >> {'code': 200, 'data': [{'id': 1, 'symbol': 'BTC-221209-13000-C', 'price': '3984', 'qty': '1.00', 'qu ...
+
+# 查询历史成交（需要填写key和secret）
+historicalTrades = binance.eo.market.get_historicalTrades(symbol='BTC-221209-13000-C')
+print(historicalTrades)
+# >> {'code': 200, 'data': [{'id': 1125899906843678597, 'tradeId': 1, 'price': '3984.00000000', 'qty': '1 ...
+
+# K线数据
+klines = binance.eo.market.get_klines(symbol='BTC-221209-13000-C', interval='1m')
+print(klines)
+# >> {'code': 200, 'data': [{'open': '3984', 'high': '3984', 'low': '3984', 'close': '3984', 'volume': '0 ...
+
+# 查询期权标记价格
+mark = binance.eo.market.get_mark(symbol='BTC-221209-13000-C')
+print(mark)
+# >> {'code': 200, 'data': [{'symbol': 'BTC-221209-13000-C', 'markPrice': '4105', 'bidIV': '1.46137238',  ...
+
+# 24hr价格变动情况
+ticker_24hr = binance.eo.market.get_ticker_24hr(symbol='BTC-221209-13000-C')
+print(ticker_24hr)
+# >> {'code': 200, 'data': [{'symbol': 'BTC-221209-13000-C', 'priceChange': '568', 'priceChangePercent':  ...
+
+# 标的最新价格
+price = binance.eo.market.get_index(underlying='BTCUSDT')
+print(price)
+# >> {'code': 200, 'data': {'indexPrice': '16944.66528572', 'time': 1670067616000}, 'msg': ''}
+
+# 历史行权记录
+exerciseHistory = binance.eo.market.get_exerciseHistory()
+print(exerciseHistory)
+# >> {'code': 200, 'data': [{'symbol': 'ETH-221203-1400-P', 'strikePrice': '1400', 'realStrikePrice': '12 ...
+
+# 合约持仓量
+openInterest = binance.eo.market.get_openInterest(underlyingAsset='BTC', expiration='2212225')
+print(openInterest)
+# >> {'code': -6010, 'msg': 'open interest error data.'}
+```
+
