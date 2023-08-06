@@ -1,0 +1,5 @@
+setup.py
+sklearn.datasets.egg-info/PKG-INFO
+sklearn.datasets.egg-info/SOURCES.txt
+sklearn.datasets.egg-info/dependency_links.txt
+sklearn.datasets.egg-info/top_level.txt
