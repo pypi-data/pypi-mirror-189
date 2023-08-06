@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: todoist-conv
+Version: 0.1.0
+Summary: Convert Todoist generated CSVs to/from other formats
+License: MIT
+Author: Ygor Mutti
+Author-email: ygormutti@gmail.com
+Requires-Python: ==3.10.4
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: chardet (>=5.1.0,<6.0.0)
+Requires-Dist: click (>=8.1.3,<9.0.0)
+Requires-Dist: pydantic (>=1.9.1,<2.0.0)
