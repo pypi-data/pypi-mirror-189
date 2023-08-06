@@ -1,0 +1,6 @@
+pyproject.toml
+setup.cfg
+src/FatalWebScraper.egg-info/PKG-INFO
+src/FatalWebScraper.egg-info/SOURCES.txt
+src/FatalWebScraper.egg-info/dependency_links.txt
+src/FatalWebScraper.egg-info/top_level.txt
