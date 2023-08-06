@@ -1,0 +1,2 @@
+[console_scripts]
+topsis = Topsis_Deepankar_Varma_102003431.Deepankar_Varma_102003431:main
