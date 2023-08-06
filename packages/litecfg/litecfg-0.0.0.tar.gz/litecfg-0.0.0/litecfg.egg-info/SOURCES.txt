@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+lfg/__init__.py
+litecfg.egg-info/PKG-INFO
+litecfg.egg-info/SOURCES.txt
+litecfg.egg-info/dependency_links.txt
+litecfg.egg-info/top_level.txt
