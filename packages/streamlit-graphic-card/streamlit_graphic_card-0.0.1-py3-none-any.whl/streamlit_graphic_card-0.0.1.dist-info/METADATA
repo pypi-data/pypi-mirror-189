@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: streamlit-graphic-card
+Version: 0.0.1
+Summary: Graphic card component
+Home-page: UNKNOWN
+Author: victorC97
+Author-email: victor.cour@telecomnancy.net
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/plain
+Requires-Dist: streamlit (>=0.63)
+
+Given a dataframe and two column of it, display a graphic card with a graph dataviz and statistics over it.
+
+
