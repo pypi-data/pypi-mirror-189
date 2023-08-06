@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "a13e"
+version = "0.0.1"
+authors = [
+  {name="Nattsu0514", email="nattsu0514@outlook.com"},
+]
+description = "Simple and extensible audio recognition package."
+readme = "README.md"
+license = {file="LICENSE"}
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux"
+]
+dependencies = [
+        "eyed3>=0.9.7",
+        "requests>=2.28.1",
+        "importlib-resources; python_version<'3.9'",
+        "typing_extensions>=4.4.0; python_version < '3.10'",
+    ]
+
+[project.urls]
+"Homepage" = "https://github.com/Nattsu0514/a13e"
+
+[project.scripts]
+a13e = "a13e:__main__.main"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+include = ["a13e*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+a13e = ["binary/*"]

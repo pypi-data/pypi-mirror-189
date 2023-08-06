@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: a13e
+Version: 0.0.1
+Summary: Simple and extensible audio recognition package.
+Author-email: Nattsu0514 <nattsu0514@outlook.com>
+License: MIT License
+        
+        Copyright (c) 2023 Nattsu0514
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/Nattsu0514/a13e
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# a13e
+
+一个简单且可扩展的听歌识曲包，目前仅支持网易云音乐chromium插件API
+
+## 快速使用
+```shell
+pip install a13e
+a13e -h
+```
+
+## 作为python模块使用
+```python
+from pathlib import Path
+import a13e
+
+audio_fp = Path('aaa.mp3')
+a13e.recognize(audio_fp) #调用所有的识别器并返回结果
+
+result = a13e.random_recognize(audio_fp) # 调用所有的识别器并随机返回一个结果
+a13e.set_tag(audio_fp, result) # 将返回的结果设置为MP3标签
+```
+
+## 编写识别器
+```
+myproject
+│  main.py #程序入口
+│
+└─plugins
+        __init__.py #必须
+        new_recognizer.py
+```
+```python
+#myproject/main.py
+from importlib import import_module
+from a13e.plugin import PluginRegister
+
+PluginRegister(import_module('plugins'))
+```
+```python
+#myproject/plugins/new_recognizer.py
+from a13e.plugin import PluginRegister
+from a13e.recognizer import BaseRecognizer
+
+@PluginRegister.register
+class NewRecognizer(BaseRecognizer):
+    ...
+```
+
+## 目前支持的平台
+| 平台    | 识别器名称               | 额外参数 | 描述                                                                                                                                            |
+|-------|---------------------|------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| 网易云音乐 | `NeteaseCloudMusic` | 没有   | 本API来自[网易云音乐听歌识曲插件](https://chrome.google.com/webstore/detail/%E4%BA%91%E9%9F%B3%E4%B9%90%E5%90%AC%E6%AD%8C/kemcalcncfhmdkgglekijclbomdoohkp) |
+
+## 参考
+<https://github.com/akinazuki/NeteaseCloudMusic-Audio-Recognize>
