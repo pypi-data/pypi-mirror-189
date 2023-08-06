@@ -1,0 +1,12 @@
+apiclient/__init__.py,sha256=bbxIpHvyjmQ7rurNoHxaNsyM9VsejGReBKXb5YZLFK4,4250
+apiclient/api.py,sha256=H-JDRw0kn5OXxDmzkdqNjAGcdcxOFr7LbUZGUE9LLJ8,1852
+apiclient/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apiclient/types.py,sha256=YQZgdGbwm5V0OJ-hRp0S_sXlK9EGI6S2VMm4QoZWmMY,478
+apiclient/backends/__init__.py,sha256=n-uHdsV0vhNxqYOL5-Z1ulC6tidEhERmk7z_PJRfdLE,1841
+apiclient/backends/_aiohttp.py,sha256=zR1lkp3p0KCVHktGkWD52PYBu8T_SKZMXM8O15tGLMc,2649
+apiclient/backends/_httpx.py,sha256=rCoj3Ahk36tjXQ0nbqILWDAt4E1WezaZDbyk2F3BDKQ,2390
+aio_apiclient-1.7.0.dist-info/LICENSE,sha256=ytogAgYcPT6gWj8aRc-cZwhSq9Y3wOzG-4KteKCyQOw,1070
+aio_apiclient-1.7.0.dist-info/METADATA,sha256=TU8q8O4ffZ09KBnvmzdkqVbAA-2eN8Vgq8RoqaeCkl0,6033
+aio_apiclient-1.7.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+aio_apiclient-1.7.0.dist-info/top_level.txt,sha256=CNL4yr8OrNw2YMoKsuFme2txKhQ3YQC61464soKjmNk,10
+aio_apiclient-1.7.0.dist-info/RECORD,,
