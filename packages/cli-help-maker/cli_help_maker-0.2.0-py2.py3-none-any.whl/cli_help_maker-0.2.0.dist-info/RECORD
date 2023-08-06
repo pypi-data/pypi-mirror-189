@@ -1,0 +1,10 @@
+cli_help_maker/__init__.py,sha256=kh84CC6l9-DciyHwtViKTFnz99OvjubnJkj5tBPUAgk,58
+cli_help_maker/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli_help_maker/generator.py,sha256=q7sl_8G335ga8uS82bzGK-g69tYwuYMQScml6sT457g,39545
+cli_help_maker/main.py,sha256=bXLi_H_lWaE7mTkVmsBDuRuKQFKfAPw02my_buZjf-E,10388
+cli_help_maker/utils.py,sha256=iKBZed3WS023d_mynb1RurU26gpcwg4KmUKAnXXlda4,20097
+cli_help_maker-0.2.0.dist-info/entry_points.txt,sha256=yMMhCdIBzkAcWT0rbQtENUUoAsAqv8B5ASedc2nAncg,58
+cli_help_maker-0.2.0.dist-info/LICENSE,sha256=x-didH8gJ-Tr6ez5h8CPW1Xg4p5tHGDFR5fgUaXpbso,1061
+cli_help_maker-0.2.0.dist-info/WHEEL,sha256=kdeDBNPvBI0w3meLKPoGgAnEr54n1jzrZWUoaLmGzVY,99
+cli_help_maker-0.2.0.dist-info/METADATA,sha256=RAlRyA8UOmCHkzh5bYEyc-SrDqNfEHhCNr_gsym_TF8,6708
+cli_help_maker-0.2.0.dist-info/RECORD,,
