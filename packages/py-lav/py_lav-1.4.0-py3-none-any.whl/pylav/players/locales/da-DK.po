@@ -1,0 +1,167 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pylav\n"
+"POT-Creation-Date: 2023-02-03 19:54+0000\n"
+"PO-Revision-Date: 2023-02-03 20:03\n"
+"Last-Translator: \n"
+"Language-Team: Danish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: pylav\n"
+"X-Crowdin-Project-ID: 535244\n"
+"X-Crowdin-Language: da\n"
+"X-Crowdin-File: /lib/pylav/players/locales/messages.pot\n"
+"X-Crowdin-File-ID: 3701\n"
+"Language: da_DK\n"
+
+#: pylav/players/manager.py:259
+msgid "There are no nodes available currently."
+msgstr "Der er ingen noder tilgængelige i øjeblikket."
+
+#: pylav/players/manager.py:350
+msgid "Music in {number_of_servers_variable_do_not_translate} servers"
+msgstr "Musik i {number_of_servers_variable_do_not_translate} Servere"
+
+#: pylav/players/player.py:1175
+msgid "There are no tracks currently in the player history."
+msgstr "Der er ingen spor i øjeblikket i spillerhistorikken."
+
+#: pylav/players/player.py:1868
+msgid "Current node has the volume filter feature disabled."
+msgstr "Aktuel node har volumenfilterfunktionen deaktiveret."
+
+#: pylav/players/player.py:1890 pylav/players/player.py:2066
+#: pylav/players/player.py:2121
+msgid "Current node has the equalizer feature disabled."
+msgstr "Aktuel node har equalizer-funktionen deaktiveret."
+
+#: pylav/players/player.py:1910
+msgid "Current node has the karaoke feature disabled"
+msgstr "Nuværende knude har karaoke-funktionen deaktiveret"
+
+#: pylav/players/player.py:1930 pylav/players/player.py:2068
+#: pylav/players/player.py:2123
+msgid "Current node has the timescale feature disabled."
+msgstr "Aktuel node har tidsskalafunktionen deaktiveret."
+
+#: pylav/players/player.py:1950
+msgid "Current node has the tremolo feature disabled."
+msgstr "Nuværende node har tremolo-funktionen deaktiveret."
+
+#: pylav/players/player.py:1970
+msgid "Current node has the vibrato feature disabled."
+msgstr "Nuværende node har vibratofunktionen deaktiveret."
+
+#: pylav/players/player.py:1990
+msgid "Current node has the rotation feature disabled."
+msgstr "Aktuel node har rotationsfunktionen deaktiveret."
+
+#: pylav/players/player.py:2010
+msgid "Current node has the distortion feature disabled."
+msgstr "Aktuel node har forvrængningsfunktionen deaktiveret."
+
+#: pylav/players/player.py:2030
+msgid "Current node has the low-pass feature disabled."
+msgstr "Nuværende node har low-pass-funktionen deaktiveret."
+
+#: pylav/players/player.py:2050
+msgid "Current node has the echo feature disabled."
+msgstr "Nuværende knude har ekkofunktionen deaktiveret."
+
+#: pylav/players/player.py:2180
+msgid "Current node has the channel-mix feature disabled."
+msgstr "Aktuel node har kanalmixfunktionen deaktiveret."
+
+#: pylav/players/player.py:2440 pylav/players/player.py:2487
+#: pylav/players/player.py:2502
+msgid "LIVE"
+msgstr "LEVE"
+
+#: pylav/players/player.py:2453
+msgid "Now Playing in {server_name_variable_do_not_translate}"
+msgstr "Spiller nu ind {server_name_variable_do_not_translate}"
+
+#: pylav/players/player.py:2473 pylav/players/player.py:2610
+msgid "Currently livestreaming"
+msgstr "I øjeblikket livestreaming"
+
+#: pylav/players/player.py:2475
+msgid "Playing: "
+msgstr "Afspilning: "
+
+#: pylav/players/player.py:2478 pylav/players/player.py:2494
+#: pylav/players/player.py:2509 pylav/players/player.py:2616
+msgid "Requester"
+msgstr "Anmoder"
+
+#: pylav/players/player.py:2490 pylav/players/player.py:2505
+msgid "Duration"
+msgstr "Varighed"
+
+#: pylav/players/player.py:2496
+msgid "Previous Track"
+msgstr "Forrige Spor"
+
+#: pylav/players/player.py:2511
+msgid "Next Track"
+msgstr "Næste Spor"
+
+#: pylav/players/player.py:2520
+msgid "1 track, {queue_total_duration_variable_do_not_translate} remaining\n"
+msgstr "1 spor, {queue_total_duration_variable_do_not_translate} resterende\n"
+
+#: pylav/players/player.py:2524
+msgid "0 tracks, {queue_total_duration_variable_do_not_translate} remaining\n"
+msgstr "0 spor, {queue_total_duration_variable_do_not_translate} resterende\n"
+
+#: pylav/players/player.py:2528
+msgid "{track_count_variable_do_not_translate} tracks, {queue_total_duration_variable_do_not_translate} remaining\n"
+msgstr "{track_count_variable_do_not_translate} spor {queue_total_duration_variable_do_not_translate} resterende\n"
+
+#: pylav/players/player.py:2535 pylav/players/player.py:2658
+msgid "Repeating"
+msgstr "Gentagelse"
+
+#: pylav/players/player.py:2537 pylav/players/player.py:2660
+msgid "Auto Play"
+msgstr "Automatisk Afspil"
+
+#: pylav/players/player.py:2541 pylav/players/player.py:2664
+msgid "{volume_variable_do_not_translate}%"
+msgstr "{volume_variable_do_not_translate}%"
+
+#: pylav/players/player.py:2542 pylav/players/player.py:2665
+msgid "Volume"
+msgstr "Lydstyrke"
+
+#: pylav/players/player.py:2582
+msgid "Recently Played for {server_name_variable_do_not_translate}"
+msgstr "Senest spillet for {server_name_variable_do_not_translate}"
+
+#: pylav/players/player.py:2588
+msgid "Queue for {server_name_variable_do_not_translate}"
+msgstr "Kø til {server_name_variable_do_not_translate}"
+
+#: pylav/players/player.py:2613
+msgid "Playing"
+msgstr "Afspiller"
+
+#: pylav/players/player.py:2629
+msgid "Queue order will change every time a track is added due to auto shuffle being enabled."
+msgstr "Kørækkefølgen ændres, hver gang et spor tilføjes, fordi automatisk blanding er aktiveret."
+
+#: pylav/players/player.py:2640
+msgid "Page 1 / 1 | 1 track, {queue_total_duration_variable_do_not_translate} remaining\n"
+msgstr "Side 1 / 1 | 1 spor, {queue_total_duration_variable_do_not_translate} resterende\n"
+
+#: pylav/players/player.py:2644
+msgid "Page 1 / 1 | 0 tracks, {queue_total_duration_variable_do_not_translate} remaining\n"
+msgstr "Side 1 / 1 | 0 spor, {queue_total_duration_variable_do_not_translate} resterende\n"
+
+#: pylav/players/player.py:2648
+msgid "Page {current_page_variable_do_not_translate} / {total_pages_variable_do_not_translate} | {track_number_variable_do_not_translate} tracks, {queue_total_duration_variable_do_not_translate} remaining\n"
+msgstr "Side {current_page_variable_do_not_translate} / {total_pages_variable_do_not_translate} | {track_number_variable_do_not_translate} spor {queue_total_duration_variable_do_not_translate} resterende\n"
+

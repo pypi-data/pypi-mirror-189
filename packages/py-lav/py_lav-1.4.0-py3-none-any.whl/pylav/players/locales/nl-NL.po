@@ -1,0 +1,167 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pylav\n"
+"POT-Creation-Date: 2023-02-03 19:54+0000\n"
+"PO-Revision-Date: 2023-02-03 20:03\n"
+"Last-Translator: \n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: pylav\n"
+"X-Crowdin-Project-ID: 535244\n"
+"X-Crowdin-Language: nl\n"
+"X-Crowdin-File: /lib/pylav/players/locales/messages.pot\n"
+"X-Crowdin-File-ID: 3701\n"
+"Language: nl_NL\n"
+
+#: pylav/players/manager.py:259
+msgid "There are no nodes available currently."
+msgstr "Er zijn momenteel geen knooppunten beschikbaar."
+
+#: pylav/players/manager.py:350
+msgid "Music in {number_of_servers_variable_do_not_translate} servers"
+msgstr "Muziek in {number_of_servers_variable_do_not_translate} Servers"
+
+#: pylav/players/player.py:1175
+msgid "There are no tracks currently in the player history."
+msgstr "Er zijn momenteel geen tracks in de geschiedenis van de speler."
+
+#: pylav/players/player.py:1868
+msgid "Current node has the volume filter feature disabled."
+msgstr "De volumefilterfunctie is uitgeschakeld voor het huidige knooppunt."
+
+#: pylav/players/player.py:1890 pylav/players/player.py:2066
+#: pylav/players/player.py:2121
+msgid "Current node has the equalizer feature disabled."
+msgstr "Op het huidige knooppunt is de equalizerfunctie uitgeschakeld."
+
+#: pylav/players/player.py:1910
+msgid "Current node has the karaoke feature disabled"
+msgstr "Huidig knooppunt heeft de karaoke-functie uitgeschakeld"
+
+#: pylav/players/player.py:1930 pylav/players/player.py:2068
+#: pylav/players/player.py:2123
+msgid "Current node has the timescale feature disabled."
+msgstr "De functie tijdschaal is uitgeschakeld voor het huidige knooppunt."
+
+#: pylav/players/player.py:1950
+msgid "Current node has the tremolo feature disabled."
+msgstr "Het huidige knooppunt heeft de tremolo-functie uitgeschakeld."
+
+#: pylav/players/player.py:1970
+msgid "Current node has the vibrato feature disabled."
+msgstr "De huidige node heeft de vibratofunctie uitgeschakeld."
+
+#: pylav/players/player.py:1990
+msgid "Current node has the rotation feature disabled."
+msgstr "De rotatiefunctie van het huidige knooppunt is uitgeschakeld."
+
+#: pylav/players/player.py:2010
+msgid "Current node has the distortion feature disabled."
+msgstr "De vervormingsfunctie van het huidige knooppunt is uitgeschakeld."
+
+#: pylav/players/player.py:2030
+msgid "Current node has the low-pass feature disabled."
+msgstr "Het huidige knooppunt heeft de low-pass-functie uitgeschakeld."
+
+#: pylav/players/player.py:2050
+msgid "Current node has the echo feature disabled."
+msgstr "De echofunctie is op de huidige knooppunt uitgeschakeld."
+
+#: pylav/players/player.py:2180
+msgid "Current node has the channel-mix feature disabled."
+msgstr "De functie channel-mix is uitgeschakeld voor het huidige knooppunt."
+
+#: pylav/players/player.py:2440 pylav/players/player.py:2487
+#: pylav/players/player.py:2502
+msgid "LIVE"
+msgstr "Live"
+
+#: pylav/players/player.py:2453
+msgid "Now Playing in {server_name_variable_do_not_translate}"
+msgstr "Nu spelen in {server_name_variable_do_not_translate}"
+
+#: pylav/players/player.py:2473 pylav/players/player.py:2610
+msgid "Currently livestreaming"
+msgstr "Momenteel livestreaming"
+
+#: pylav/players/player.py:2475
+msgid "Playing: "
+msgstr "Afspelen: "
+
+#: pylav/players/player.py:2478 pylav/players/player.py:2494
+#: pylav/players/player.py:2509 pylav/players/player.py:2616
+msgid "Requester"
+msgstr "Aanvrager"
+
+#: pylav/players/player.py:2490 pylav/players/player.py:2505
+msgid "Duration"
+msgstr "Duur"
+
+#: pylav/players/player.py:2496
+msgid "Previous Track"
+msgstr "Vorige track"
+
+#: pylav/players/player.py:2511
+msgid "Next Track"
+msgstr "Volgende track"
+
+#: pylav/players/player.py:2520
+msgid "1 track, {queue_total_duration_variable_do_not_translate} remaining\n"
+msgstr "1 spoor, {queue_total_duration_variable_do_not_translate} overig\n"
+
+#: pylav/players/player.py:2524
+msgid "0 tracks, {queue_total_duration_variable_do_not_translate} remaining\n"
+msgstr "0 sporen, {queue_total_duration_variable_do_not_translate} overig\n"
+
+#: pylav/players/player.py:2528
+msgid "{track_count_variable_do_not_translate} tracks, {queue_total_duration_variable_do_not_translate} remaining\n"
+msgstr "{track_count_variable_do_not_translate} Tracks {queue_total_duration_variable_do_not_translate} overig\n"
+
+#: pylav/players/player.py:2535 pylav/players/player.py:2658
+msgid "Repeating"
+msgstr "Herhalende"
+
+#: pylav/players/player.py:2537 pylav/players/player.py:2660
+msgid "Auto Play"
+msgstr "Automatisch spelen"
+
+#: pylav/players/player.py:2541 pylav/players/player.py:2664
+msgid "{volume_variable_do_not_translate}%"
+msgstr "{volume_variable_do_not_translate}%"
+
+#: pylav/players/player.py:2542 pylav/players/player.py:2665
+msgid "Volume"
+msgstr "Volume"
+
+#: pylav/players/player.py:2582
+msgid "Recently Played for {server_name_variable_do_not_translate}"
+msgstr "Onlangs gespeeld voor {server_name_variable_do_not_translate}"
+
+#: pylav/players/player.py:2588
+msgid "Queue for {server_name_variable_do_not_translate}"
+msgstr "Wachtrij voor {server_name_variable_do_not_translate}"
+
+#: pylav/players/player.py:2613
+msgid "Playing"
+msgstr "Afspelen"
+
+#: pylav/players/player.py:2629
+msgid "Queue order will change every time a track is added due to auto shuffle being enabled."
+msgstr "De wachtrijvolgorde verandert telkens wanneer een track wordt toegevoegd omdat automatisch shuffle is ingeschakeld."
+
+#: pylav/players/player.py:2640
+msgid "Page 1 / 1 | 1 track, {queue_total_duration_variable_do_not_translate} remaining\n"
+msgstr "Pagina 1 / 1 | 1 spoor, {queue_total_duration_variable_do_not_translate} overig\n"
+
+#: pylav/players/player.py:2644
+msgid "Page 1 / 1 | 0 tracks, {queue_total_duration_variable_do_not_translate} remaining\n"
+msgstr "Pagina 1 / 1 | 0 sporen, {queue_total_duration_variable_do_not_translate} overig\n"
+
+#: pylav/players/player.py:2648
+msgid "Page {current_page_variable_do_not_translate} / {total_pages_variable_do_not_translate} | {track_number_variable_do_not_translate} tracks, {queue_total_duration_variable_do_not_translate} remaining\n"
+msgstr "Bladzijde {current_page_variable_do_not_translate} / {total_pages_variable_do_not_translate} | {track_number_variable_do_not_translate} Tracks {queue_total_duration_variable_do_not_translate} overig\n"
+
