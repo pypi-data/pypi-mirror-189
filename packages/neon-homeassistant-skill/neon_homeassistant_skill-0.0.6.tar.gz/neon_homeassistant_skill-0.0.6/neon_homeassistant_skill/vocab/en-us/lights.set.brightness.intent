@@ -1,0 +1,3 @@
+(set|change) (|the) brightness of {entity} to {brightness} (|percent)
+(set|change) {entity} brightness to {brightness} (|percent)
+(set|change) {entity} to {brightness} (|percent)
