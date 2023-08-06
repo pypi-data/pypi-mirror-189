@@ -1,0 +1,5 @@
+setup.py
+twisted.python.egg-info/PKG-INFO
+twisted.python.egg-info/SOURCES.txt
+twisted.python.egg-info/dependency_links.txt
+twisted.python.egg-info/top_level.txt
