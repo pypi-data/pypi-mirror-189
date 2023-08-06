@@ -1,0 +1,40 @@
+1. Use!
+2. import pandas as pd
+3. import adgs
+4. from adgs import Syndbox
+5. df=pd.read_excel('/content/filename.xlsx')
+6. df1=Syndbox.TESI(df, Equation='Euc_p1', start=0.01, augmentation_factor=10)
+7.                             
+8. df1.pd_frame(save=True)
+9. df1.arr()
+10. 
+11. 
+12. Parameters 
+13. start: (float): default=0.01: The starting value of the angle sequence.
+14. stop: (int): default=1: The end value of the angle's sines vector. Should be always 1 because the angle's max sine is 1. 
+15. augmentation_factor: (int): default (0.01): The number of times the data is augmented. Should be from 0 to infinity.
+16. Equation: default='Euc_p1': Either the Euclidean or the following transformed Euclidean formulas.
+
+17. 'Euc_p1': The linear polynomial.
+18. 'Euc_p2': The quadratic polynomial.
+19. 'Euc_p3': The cubic polynomial.
+20. 'Euc_Log': The log-transformed euclidian formula.
+21. 
+22. Documentation
+22. The detailed description can be found in the paper entitled: 
+24. ''Trigonometric-Euclidean-Smoother Interpolator (TESI) for continuous time-series and non-time-series data augmentation for deep neural network applications in agriculture''. 
+25. NOTE: PLEASE CITE THE PAPER. 
+26. 
+27. Publisher name: Elsevier
+28. Journal: Computers and Electronics in Agriculture
+29. Volume: 206
+30. Issue: March 2023
+31. Pages: 107646
+32. DOI: https://doi.org/10.1016/j.compag.2023.107646
+
+ 
+ 
+ 
+ 
+ 
+ 

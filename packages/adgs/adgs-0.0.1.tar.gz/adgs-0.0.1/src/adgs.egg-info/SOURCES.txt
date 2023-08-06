@@ -1,0 +1,9 @@
+LICENSE,txt
+README.md
+pyproject.toml
+src/adgs/Syndbox.py
+src/adgs/__init__.py
+src/adgs.egg-info/PKG-INFO
+src/adgs.egg-info/SOURCES.txt
+src/adgs.egg-info/dependency_links.txt
+src/adgs.egg-info/top_level.txt
