@@ -1,0 +1,10 @@
+clip_jax/__init__.py,sha256=4Ddz4VIkT31HN9j10e_m9VgiB2jFUVTtcnlbguImsY0,145
+clip_jax/configuration_clip.py,sha256=H7ronUAUqtYVK8XzcJjADbmA1rxXtezFM1sCebGJoaQ,16816
+clip_jax/data.py,sha256=lQhqHUtJs1bmkVq8GVvywTgsAoPcPklP_1lf2b23wxw,9659
+clip_jax/modeling.py,sha256=rH2xdMaQGQ4qRxVltrazB2hJFG1dC-TZyzjH0cPNq8Y,55532
+clip_jax/partitions.py,sha256=EIrx8CrzQlIjbyKIsjnp6daNJ-GW9-5jOhgQKBQlC5k,8249
+clip_jax/utils.py,sha256=fzzvXH2vlHOHCBLFfRoZmlwB-He-YXNdIme0ktOLoXI,1767
+clip_jax-0.0.1.dist-info/METADATA,sha256=iwgmTkGi96pR4qIn31G_CZyvfIRuwjo6RRwcCB7pVSg,1050
+clip_jax-0.0.1.dist-info/WHEEL,sha256=3c4nLKpREKE5rhHFpZb1Uq66zgxvSvplqeRLQYroJ9M,105
+clip_jax-0.0.1.dist-info/licenses/LICENSE.md,sha256=NHdnngp-AU4ebNqmqwtQC4hcLpamPC1iCwav_fYK46Y,11354
+clip_jax-0.0.1.dist-info/RECORD,,
